@@ -5,14 +5,39 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^4.2.0",
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.10",
+    "@fortawesome/fontawesome-free-solid": "^5.0.10",
+    "@fortawesome/react-fontawesome": "^0.0.18",
+    "@zeit/next-sass": "^0.1.2",
+    "axios": "^0.18.0",
+    "babel-plugin-inline-react-svg": "^0.5.2",
+    "color": "^3.0.0",
+    "config": "^1.30.0",
+    "countdown": "^2.6.0",
+    "font-awesome": "^4.7.0",
+    "material-ui": "^0.20.0",
+    "moment": "^2.22.0",
+    "next": "^5.1.0",
+    "next-compose-plugins": "^1.0.3",
+    "next-config": "^0.0.2",
+    "next-images": "^0.10.1",
+    "node-sass": "^4.8.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  }
+    "react-beautiful-dnd": "^7.0.0",
+    "react-countdown-timer": "^1.0.3",
+    "react-cursor-position": "^2.4.1",
+    "react-dom": "^16.2.0",
+    "react-draggable": "^3.0.5",
+    "react-transitions": "^1.0.0"
+  },
+  "devDependencies": {}
 }

@@ -1,0 +1,75 @@
+
+.block-accordion {
+    padding: 0;
+    &__header {
+        position: relative;
+        cursor: pointer;
+        padding-bottom: 0.5em;
+        padding: 1em;
+        &:hover .block-text__title {
+            color: #f4511e;
+        }
+    }
+    &.contacts {
+        .block-accordion__header {
+            padding: 0;
+        }
+    }
+    &__body {
+        max-height: 0;
+        padding: 0 1.09em;
+        transition: all .5s linear;
+    }
+    .block-text__title {
+        transition: all .4s;
+    }
+    &__arrow {
+        font-size: 1em;
+        width: .875em;
+        height: .875em;
+        border: solid .0625em #f4511e;
+        border-radius: 50%;
+        position: absolute;
+        top: 35%;
+        margin-top: -.4375em;
+        right: 1em;
+        div {
+            font-size: 1em;
+            width: .3125em;
+            height: .3125em;
+            border-right: .0625em solid #f4511e;
+            border-bottom: .0625em solid #f4511e;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -.1875em;
+            margin-left: -.155em;
+        }
+    }
+    .big-btn {
+        margin-top: .625em;
+    }
+    .block-text__par {
+        transition: all .4s;
+        &:hover {
+            color: #f4511e;
+        }
+    }
+}
+
+.big-btn {
+    display: block;
+    width: calc(100% + 2.18em);
+    text-align: center;
+    font-size: 1em;
+    padding: 1.31em 0;
+    color: #fff;
+    text-decoration: none;
+    margin: 1.56em 0 0 -1.09em;
+    background-color: #f4511e;
+    transition: all .4s;
+    &:hover {
+        background-color: #922d0e;
+    }
+}

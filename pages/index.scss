@@ -1,0 +1,160 @@
+@import '../components/common/ProfitsBlockSlider';
+@import '../components/common/ReviewBlockSlider';
+@import '../components/common/Title';
+@import '../components/common/ImageBlock';
+@import '../components/common/VideoBlock';
+@import '../components/common/OrderForm'; 
+@import '../components/common/LinksBlock'; 
+@import '../components/common/NotFind';
+@import '../components/common/MapBlock';
+@import '../components/common/MessagersBlock';
+@import '../components/common/InfoBlock';
+@import '../components/common/BlockForm';
+@import '../components/common/Timer';
+
+@import '../components/main/components/NavBlock';
+@import '../components/main/components/TextBlock';
+@import '../components/main/components/Serviceblock';
+@import '../components/Pricing/components/Accordion';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+*::before, *::after{
+    box-sizing:border-box;
+}
+
+.wrapper {
+    font-family: "Ubuntu", sans-serif;
+    background-color: #eceff1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 0;
+    padding-top: 105px;
+    overflow: hidden;
+    position: relative;
+    &.main {
+        background-image: url(../img/bg.jpg);
+        background-size: 100% 100vh;
+        background-attachment: fixed;
+    }
+    &.contacts,
+    &.pricing,
+    &.guarantees,
+    &.about,
+    &.dissertation,
+    &.candidate,
+    &.diplome,
+    &.masters,
+    &.course {
+
+        @media (max-width: 660px) {
+            padding-top: 70px;
+        }
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 21em;
+            background-color: #87bce7;
+            z-index: 0;
+
+        }    
+    }
+    &.pricing::before {
+        background-color: #857a95;
+    }
+    &.guarantees::before {
+        background-color: #25b9a9;
+    }
+    &.dissertation::before,
+    &.candidate::before,
+    &.diplome::before,
+    &.masters::before,
+    &.course::before {
+        background-size: cover;
+        background-position: center 0;
+    }
+    &.dissertation::before {
+        background-image: url(../img/dissertation/dissertation-bg.jpg);
+    }
+    &.candidate::before {
+        background-image: url(../img/candidate/candidate-bg.jpg);
+    }
+    &.diplome::before {
+        background-image: url(../img/diplome/diplome-bg.jpg);
+    }
+    &.masters::before {
+        background-image: url(../img/masters/masters-bg.jpg);
+    }
+    &.course::before {
+        background-image: url(../img/course/course-bg.jpg);
+    }
+
+}
+
+.inner {
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
+    @media (max-width: 900px) {
+        width: calc(100% - 30px);
+        max-width: none;
+    }
+}
+
+
+ul {
+    list-style: none;
+}

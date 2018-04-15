@@ -1,0 +1,91 @@
+.block-form {
+    font-size: 2em;
+    width: 17em;
+    margin: 1.56em auto 0;
+    background-color: #fff;
+    border: solid 2px #f4511e;
+    padding: 1.56em 2.3em;
+    position: relative;
+    z-index: 1;
+    &.block-form2 {
+        border: none;
+        .block-form__title {
+            color: #4a4a4a;
+        }
+        .block-form__more-info {
+            margin: 1.25em 0 2.25em;
+        }
+    }
+    &__title {
+        font-size: 1em;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: bold;
+        line-height: 1.19;
+        text-align: center;
+        color: #f4511e;
+        margin-bottom: .625em;
+        letter-spacing: -1px;
+    }
+    @media (max-width: 660px) {
+        width: 100%;
+        padding: 1.56em .5em;
+    }
+    &__item {
+        margin-bottom: .31em;
+        &-flex {
+            display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            justify-content: space-between;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            .block-form__item {
+                max-width: 48%;
+            }
+        }
+    }
+    label {
+        font-size: .5em;
+        color: #4a4a4a;
+        display: block;
+        margin-bottom: .16em;
+        font-family: "Ubuntu", sans-serif;
+    }
+    input {
+        display: block;
+        font-size: .44em;
+        width: 100%;
+        height: 3.21em;
+        padding: 0 .31em;
+        border-radius: 2px;
+        background-color: #f5f5f5;
+        border: solid 0.5px #dadada;
+        &:focus {
+            border: 1px solid #f4511e;
+        }
+    }
+    &__more-info {
+        display: block;
+        text-align: center;
+        font-size: .5em;
+        color: #f4511e;
+        margin-top: .31em;
+    }
+    &__btn {
+        font-size: .56em;
+        display: block;
+        margin: 2.78em auto 0;
+        width: 11.38em;
+        height: 2.78em;
+        background-color: #f4511e;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: all .4s;
+        &:hover {
+            background-color: #922d0e;
+        }
+    }
+}

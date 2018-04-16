@@ -89,8 +89,10 @@ class Block extends Component{
 
 const renderBlocks = (shift, clearInterval, profitBlockConfig) => {
 
-    return profitBlockConfig.map((item) => (
-        <Block shift={shift} 
+    return profitBlockConfig.map((item, index) => (
+        <Block 
+               key={index}
+               shift={shift} 
                clearInterval={clearInterval} 
                imageSrc={item.imageSrc} 
                profit={item.profit} 

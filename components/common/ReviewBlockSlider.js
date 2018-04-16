@@ -100,8 +100,10 @@ class Block extends Component {
 
 const renderBlocks = (props) =>{
     const { reviewBlockConfig } = props;
-    return reviewBlockConfig.map((item)=>(
-            <Block  faceImg={item.faceImg}
+    return reviewBlockConfig.map((item, index)=>(
+            <Block  
+                    key={index}
+                    faceImg={item.faceImg}
                     faceImgBot={item.faceImgBot}
                     reviewText={item.reviewText}
                     reviewTextBot={item.reviewTextBot}

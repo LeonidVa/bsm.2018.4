@@ -37,6 +37,7 @@
     "react-cursor-position": "^2.4.1",
     "react-dom": "^16.2.0",
     "react-draggable": "^3.0.5",
+    "react-modal": "^3.3.2",
     "react-transitions": "^1.0.0"
   },
   "devDependencies": {}

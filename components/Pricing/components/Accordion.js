@@ -47,12 +47,12 @@ class Accordion extends Component{
                     {introduction}
                     </p>
                     <table>
-                        <tr>
-                            <th>Вид работы</th>
-                            <th>Цена,руб</th>
-                        </tr>
                         <tbody>
-                            {this.tableRows(tableNames, tablePrices)}
+                            <tr>
+                                <th>Вид работы</th>
+                                <th>Цена,руб</th>
+                            </tr>
+                                {this.tableRows(tableNames, tablePrices)}
                         </tbody>
                     </table>
 

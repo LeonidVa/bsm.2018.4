@@ -2,22 +2,21 @@ import Head from 'next/head'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Contacts from '../components/Contacts'
-
+import Candidate from '../components/Candidate'
 import './index.scss'
 
-const ContactPage = () => (
+const CandidatePage = () => (
     <div>
         <Head>
-            <title>BeSmarter - Контакты</title>
+            <title>BeSmarter - Кандидатская диссертация</title>
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         </Head>
-        <div className="wrapper contacts">
+        <div className="wrapper candidate">
             <Header />
-                <Contacts />
+                <Candidate />
             <Footer />
         </div>
     </div>
 )
 
-export default ContactPage
+export default CandidatePage

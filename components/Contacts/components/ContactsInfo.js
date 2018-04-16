@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const ContactsInfo = () => (
+const ContactsInfo = (props) => (
     <section className="block-text">
         <h2 className="block-text__title">
             Офис
@@ -46,9 +46,11 @@ const ContactsInfo = () => (
             <Link href="#">   
                 <a className="block-not-find__button">Задать вопрос</a>
             </Link>
-            <Link href="#">
-                <a className="block-not-find__button to-modal__order-call">Заказать звонок</a>
-            </Link>
+     
+            <a className="block-not-find__button to-modal__order-call"
+               onClick={props.openModal}
+            >Заказать звонок</a>
+    
         </div>
     </section>
 )

@@ -31,7 +31,10 @@ class Header extends Component{
 
         this.setState({ saleModalIsOpen: false })
     }
-
+    openModal = () =>{
+            this.setState({modalIsOpen: true})
+    }
+    
     render(){
         return(
                 <div>

@@ -10,6 +10,7 @@ import Work from '../common/Work'
 import Service from '../common/Service'
 import LinksBlock from '../common/LinksBlock'
 import ReviewBlockSlider from '../common/ReviewBlockSlider'
+import OrderCall from '../Header/components/OrderCallModal';
 
 import { formConfig } from '../config/formConfig';
 import reviewBlockConfig from '../config/reviewBlockConfig';
@@ -22,19 +23,34 @@ import Address from './components/Address'
 
 class Index extends Component {
     state = {
-        display: false
+        display: false,
+        modalIsOpen: false,
     }
 
-    handleMaps = () => {
-        this.setState({display: false})
+
+    handleMobMenu = () => {
+
+        this.setState({ showMenuMob: !this.state.showMenuMob })
+    }
+
+    closeModal = () => {
+
+        this.setState({ modalIsOpen: false })
+    }
+    openModal = () => {
+
+        this.setState({ modalIsOpen: true })
     }
     render() {
-  
+
         const { display } = this.state
         return (
             <div>
+                
                 <Title name="Контакты" />
-                <ContactsInfo />
+                <OrderCall closeModal={this.closeModal}
+                    display={this.state.modalIsOpen ? 'block' : 'none'} />
+                <ContactsInfo openModal={this.openModal}/>
                 <MapBlock />
                 <section className="block-text">
                     <h2 className="block-text__title">

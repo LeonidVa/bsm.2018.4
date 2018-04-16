@@ -10,7 +10,6 @@ import Work from '../common/Work'
 import Service from '../common/Service'
 import LinksBlock from '../common/LinksBlock'
 import ReviewBlockSlider from '../common/ReviewBlockSlider'
-import NotFind from '../common/NotFind';
 
 import { formConfig } from '../config/formConfig';
 import reviewBlockConfig from '../config/reviewBlockConfig';
@@ -93,8 +92,7 @@ class Index extends Component {
                         <Service serviceName="Диплом МВА" cost="от 4 500 ₽" time="от 2 недель" />
                     </div>
                 </section>
-                <LinksBlock links={links} />
-                <NotFind />     
+                <LinksBlock links={links} />    
             </div>
         )
     }

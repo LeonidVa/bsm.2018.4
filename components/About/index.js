@@ -8,7 +8,6 @@ import OrderForm from '../common/OrderForm';
 import Work from '../common/Work';
 import Service from '../common/Service';
 import LinksBlock from '../common/LinksBlock';
-import NotFind from '../common/NotFind';
 
 import { formConfig } from '../config/formConfig'
 import { profitBlockConfigShort } from '../config/profitBlockConfig';
@@ -105,7 +104,6 @@ const Index = () => (
             </div>
         </section>
         <LinksBlock links={links} />
-        <NotFind />
     </div>
 )
 

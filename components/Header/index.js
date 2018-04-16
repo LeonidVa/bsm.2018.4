@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import Link from 'next/link';
-import OrderCall from './components/OrderCallModal'
+import OrderCall from './components/OrderCallModal';
+import SaleModal from './components/SaleModal'
 import MenuMob from './components/MenuMob'
 import Modal from 'react-modal';
 
@@ -12,7 +13,8 @@ class Header extends Component{
     
     state = {
         modalIsOpen: false,
-        showMenuMob: false
+        showMenuMob: false,
+        saleModalIsOpen: false
     };
 
     handleMobMenu = () => {
@@ -21,8 +23,13 @@ class Header extends Component{
     }
 
     closeModal = () => {
-        console.log('close modal')
+
         this.setState({modalIsOpen: false})
+    }
+
+    closeSaleModal = () => {
+
+        this.setState({ saleModalIsOpen: false })
     }
 
     render(){
@@ -78,7 +85,15 @@ class Header extends Component{
                     </div>
                     <OrderCall closeModal={this.closeModal} 
                                display={ this.state.modalIsOpen ? 'block' : 'none' }/>
+
                     <MenuMob showMenu={this.state.showMenuMob}/>
+
+                    <SaleModal  display={this.state.saleModalIsOpen ? 'block' : 'none'}
+                                closeSaleModal={this.closeSaleModal} 
+                                className="modal-sale1"
+                                bonus="10%" 
+                                message="поздравляем"
+                                text="Напишите номер и мы с вами свяжемся"/>
                 </div>
         )
     }

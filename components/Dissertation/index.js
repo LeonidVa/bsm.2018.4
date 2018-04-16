@@ -14,7 +14,6 @@ import OrderForm from '../common/OrderForm';
 import Work from '../common/Work';
 import Service from '../common/Service';
 import LinksBlock from '../common/LinksBlock';
-import NotFind from '../common/NotFind';
 
 import infoBlockConfig from '../config/infoBlockConfig'
 import reviewBlockConfig from '../config/reviewBlockConfig'
@@ -196,7 +195,7 @@ const Index = () => (
             </div>
         </section>
         <LinksBlock links={links} />
-        <NotFind />
+
     </div>
 )
 

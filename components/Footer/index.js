@@ -5,11 +5,15 @@ import foxLogo from '../../img/fox-logo.svg'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import brands from '@fortawesome/fontawesome-free-brands'
 
+import NotFind from '../common/NotFind'
 
 const { faTwitter, faFacebookF, faTumblr } = brands
 
 export default (props) => (
-    <footer className="footer">
+  <div>
+    <NotFind />
+
+    <div className="footer">
         <div className="inner">
             <div className="footer__logo">
                 <img src={foxLogo} alt="" />
@@ -68,5 +72,6 @@ export default (props) => (
                 <span>Большой Кисловский переулок, д. 1 стр. 2, офис 211
 				ИНН 7725765120 ОГРН 1127746632276</span>
             </p>
-	</footer>
+	</div>
+  </div>
 )

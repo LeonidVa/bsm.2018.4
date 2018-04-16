@@ -1,19 +1,19 @@
-@import '../components/common/ProfitsBlockSlider';
-@import '../components/common/ReviewBlockSlider';
-@import '../components/common/Title';
-@import '../components/common/ImageBlock';
-@import '../components/common/VideoBlock';
-@import '../components/common/OrderForm'; 
-@import '../components/common/LinksBlock'; 
-@import '../components/common/NotFind';
-@import '../components/common/MapBlock';
-@import '../components/common/MessagersBlock';
-@import '../components/common/InfoBlock';
-@import '../components/common/BlockForm';
-@import '../components/common/Timer';
+@import '../components/common/ProfitsBlockSlider/ProfitsBlockSlider';
+@import '../components/common/ReviewBlockSlider/ReviewBlockSlider';
+@import '../components/common/Title/Title';
+@import '../components/common/ImageBlock/ImageBlock';
+@import '../components/common/VideoBlock/VideoBlock';
+@import '../components/common/OrderForm/OrderForm'; 
+@import '../components/common/OrderForm/BlockForm';
+@import '../components/common/LinksBlock/LinksBlock'; 
+@import '../components/common/NotFind/NotFind';
+@import '../components/common/MapBlock/MapBlock';
+@import '../components/common/MessagersBlock/MessagersBlock';
+@import '../components/common/InfoBlock/InfoBlock';
+@import '../components/common/Timer/Timer';
+@import '../components/common/TextBlock';
 
 @import '../components/main/components/NavBlock';
-@import '../components/main/components/TextBlock';
 @import '../components/main/components/Serviceblock';
 @import '../components/Pricing/components/Accordion';
 

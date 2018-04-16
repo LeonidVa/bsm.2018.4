@@ -1,9 +1,6 @@
 import Link from 'next/link';
 
 
-//import './TextBlock.scss'
-
-
 const TextBlock = () => (
     <section className="block-text">
         <h2 className="block-text__title">

@@ -9,7 +9,7 @@ import Work from '../common/Work'
 import Service from '../common/Service'
 import LinksBlock from '../common/LinksBlock'
 import ReviewBlockSlider from '../common/ReviewBlockSlider'
-import NotFind from '../common/NotFind';
+
 
 import { formConfig } from '../config/formConfig';
 import { profitBlockConfigShort } from '../config/profitBlockConfig';
@@ -79,7 +79,6 @@ class Index extends Component {
                     </div>
                 </section>
                 <LinksBlock links={links}/>
-                <NotFind />
             </div>
     )
   }

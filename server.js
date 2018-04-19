@@ -23,14 +23,14 @@ app.prepare()
                 var transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
-                        user: 'bigcheeseh@gmail.com',
+                        user: process.env.EMAIL,
                         pass: process.env.PASSWORD
                     }
                     });
 
                     var mailOptions = {
                         from: 'no_reply@besmarter.ru',
-                        to: 'bigcheeseh@gmail.com',
+                        to: process.env.EMAIL,
                         subject: 'besmarter ',
                         html:`
                             <div>
@@ -43,9 +43,9 @@ app.prepare()
                             </ul>
                         </div>`,
                         attachments: [{
-                                        'filename': req.body.file[1], 
-                                        'content': Buffer.from(req.body.file[0], 'base64'),
-                                        'contentType': req.body.file[2]
+                                        'filename': req.body.file[1] || '', 
+                                        'content': Buffer.from(req.body.file[0], 'base64') || '',
+                                        'contentType': req.body.file[2] || ''
                                      }]
                     };
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'next/link';
-import Timer from '../../common/Timer'
-import Service from '../../common/Service' 
-import Work from '../../common/Work' 
+import Timer from '../Timer'
+import Service from '../Service' 
+import Work from '../Work' 
 
 
 const ServiceBlock=()=>{

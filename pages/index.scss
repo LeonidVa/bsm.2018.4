@@ -10,11 +10,12 @@
 @import '../components/common/MapBlock/MapBlock';
 @import '../components/common/MessagersBlock/MessagersBlock';
 @import '../components/common/InfoBlock/InfoBlock';
+@import '../components/common/NavRow/NavRow';
 @import '../components/common/Timer/Timer';
-@import '../components/common/TextBlock';
+@import '../components/common/TextBlock/TextBlock';
+@import '../components/common/Serviceblock/Serviceblock';
 
-@import '../components/main/components/NavBlock';
-@import '../components/main/components/Serviceblock';
+// @import '../components/main/components/NavBlock';
 @import '../components/Pricing/components/Accordion';
 
 html, body, div, span, applet, object, iframe,
@@ -22,7 +23,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i,#form-sale center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -37,9 +38,7 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {

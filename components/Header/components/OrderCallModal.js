@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
 
 import './OrderCallModal.scss';
 
@@ -27,14 +25,21 @@ class OrderCall extends Component{
         }
     }
 
+    handleClickOutside =(event) =>{
+        if (event.target.className === 'modal__order-call') {
+
+            this.props.closeModal()
+        }
+    }
+
+
     render(){
         const { name, phone, display } = this.state;
         return(
-            <div className="modal__order-call" style={{display: display}}>
+            <div className="modal__order-call" 
+                 style={{ display: display }} onClick={this.handleClickOutside}>
                 <div className="block-form block-form2 modal-form">
-                    <div className="close__modal" onClick={() => this.props.closeModal()}>
-                        <FontAwesomeIcon icon={close} />
-                    </div>
+                   
                     <h2 className="block-form__title">Заказать звонок</h2>
                     <form className="block-form__form" onSubmit={this.handleForm}>
                         <div className="block-form__item">

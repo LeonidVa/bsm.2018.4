@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
-
 import './SaleModal.scss';
 
 class SaleModal extends Component {
@@ -19,10 +16,20 @@ class SaleModal extends Component {
         this.props.closeModal()
     }
 
+    handleClickOutside() {
+       //console.log('click outside')
+    }
+    
     componentWillReceiveProps = (nextProps, nextState) => {
 
         if (nextProps.display !== this.state.display) {
             this.setState({ display: nextProps.display })
+        }
+    }
+
+    handleClickOutside = (event) => {
+        if (event.target.id === 'modal_sale') {
+            this.props.closeSaleModal()
         }
     }
 
@@ -31,11 +38,12 @@ class SaleModal extends Component {
         const { className, bonus, message, text} = this.props;
         return (
             // className - "modal-sale1" or "modal-sale2" or "modal-sale3" or "modal-sale4"
-            <div className={`modal-sale ${className}`} style={{ display: display }}>
+            <div id="modal_sale" 
+                 className={`modal-sale ${className}`} 
+                 style={{ display: display }}
+                 onClick={this.handleClickOutside}>
                 <div className="modal-sale__body">
-                    <div className="close__modal" onClick={() => this.props.closeSaleModal()}>
-                        <FontAwesomeIcon icon={close} />
-                    </div>
+                    
                     <div className="modal-sale__top">
                         <span className="percent">{bonus}</span>
                         <span className="top-text">

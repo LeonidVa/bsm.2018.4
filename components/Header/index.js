@@ -14,7 +14,7 @@ class Header extends Component{
     state = {
         modalIsOpen: false,
         showMenuMob: false,
-        saleModalIsOpen: false
+        saleModalIsOpen: true
     };
 
     handleMobMenu = () => {

@@ -1,8 +1,14 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Main from '../components/Main'
+
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+// import Main from '../components/Main'
+
+import NavRow from '../components/common/NavRow';
+import MessBlock from '../components/common/MessagersBlock';
+import ServiceBlock from '../components/common/ServiceBlock';
+import TextBlock from '../components/common/TextBlock';
 
 import './index.scss'
 
@@ -14,7 +20,14 @@ const Index = () => (
     </Head>
     <div className="wrapper main">
       <Header />
-        <Main />
+        <section className="block-nav">
+            <NavRow action="Заказать работу" url='#' />
+            <NavRow action="Услуги и цены" url='pricing' />
+            <NavRow action="Контакты" url='contacts' />
+        </section>
+        <MessBlock />
+        <ServiceBlock />
+        <TextBlock />
       <Footer />
     </div>
   </div>

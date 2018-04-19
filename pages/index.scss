@@ -1,22 +1,22 @@
-@import '../components/common/ProfitsBlockSlider/ProfitsBlockSlider';
-@import '../components/common/ReviewBlockSlider/ReviewBlockSlider';
-@import '../components/common/Title/Title';
-@import '../components/common/ImageBlock/ImageBlock';
-@import '../components/common/VideoBlock/VideoBlock';
-@import '../components/common/OrderForm/OrderForm'; 
-@import '../components/common/OrderForm/BlockForm';
-@import '../components/common/LinksBlock/LinksBlock'; 
-@import '../components/common/NotFind/NotFind';
-@import '../components/common/MapBlock/MapBlock';
-@import '../components/common/MessagersBlock/MessagersBlock';
-@import '../components/common/InfoBlock/InfoBlock';
-@import '../components/common/NavRow/NavRow';
-@import '../components/common/Timer/Timer';
-@import '../components/common/TextBlock/TextBlock';
-@import '../components/common/Serviceblock/Serviceblock';
+@import './components/common/ProfitsBlockSlider/ProfitsBlockSlider';
+@import './components/common/ReviewBlockSlider/ReviewBlockSlider';
+@import './components/common/Title/Title';
+@import './components/common/ImageBlock/ImageBlock';
+@import './components/common/VideoBlock/VideoBlock';
+@import './components/common/OrderForm/OrderForm'; 
+@import './components/common/OrderForm/BlockForm';
+@import './components/common/LinksBlock/LinksBlock'; 
+@import './components/common/NotFind/NotFind';
+@import './components/common/MapBlock/MapBlock';
+@import './components/common/MessagersBlock/MessagersBlock';
+@import './components/common/InfoBlock/InfoBlock';
+@import './components/common/NavRow/NavRow';
+@import './components/common/Timer/Timer';
+@import './components/common/TextBlock/TextBlock';
+@import './components/common/Serviceblock/Serviceblock';
 
 // @import '../components/main/components/NavBlock';
-@import '../components/Pricing/components/Accordion';
+@import './components/Pricing/Accordion';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

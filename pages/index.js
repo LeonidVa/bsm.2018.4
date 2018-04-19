@@ -1,14 +1,14 @@
 import Head from 'next/head';
 
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-// import Main from '../components/Main'
+import Header from './components/Header';
+import Footer from './components/Footer';
+// import Main from './components/Main'
 
-import NavRow from '../components/common/NavRow';
-import MessBlock from '../components/common/MessagersBlock';
-import ServiceBlock from '../components/common/ServiceBlock';
-import TextBlock from '../components/common/TextBlock';
+import NavRow from './components/common/NavRow';
+import MessBlock from './components/common/MessagersBlock';
+import ServiceBlock from './components/common/ServiceBlock';
+import TextBlock from './components/common/TextBlock';
 
 import './index.scss'
 

@@ -1,4 +1,4 @@
-import face from '../../img/reviews/face.jpg'
+import face from '../../../img/reviews/face.jpg'
 
 const reviewBlockConfig = [
     {   faceImg: face,

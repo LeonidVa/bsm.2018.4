@@ -7,6 +7,7 @@
     padding: 1.56em 2.3em;
     position: relative;
     z-index: 1;
+    transition: all .4s;
     &.block-form2 {
         border: none;
         .block-form__title {
@@ -32,6 +33,7 @@
     }
     &__item {
         margin-bottom: .31em;
+        transition: all .4s;
         &-flex {
             display: flex;
             display: -webkit-box;
@@ -45,7 +47,13 @@
                 max-width: 48%;
             }
         }
+        &__file {
+            opacity: 0;
+            height: 0;     
+        }
+
     }
+    &
     label {
         font-size: .5em;
         color: #4a4a4a;
@@ -72,6 +80,9 @@
         font-size: .5em;
         color: #f4511e;
         margin-top: .31em;
+        position: relative; 
+        z-index: 100;
+        cursor: pointer;
     }
     &__btn {
         font-size: .56em;

@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import OrderCall from './components/Header/components/OrderCallModal';
+import OrderCall from './components/Header/components/OrderCallModal'
 
 import Link from 'next/link';
 import Title from './components/common/Title'
@@ -45,7 +45,7 @@ class ContactPage extends Component {
         this.setState({ modalIsOpen: false })
     }
     openModal = () => {
-
+  
         this.setState({ modalIsOpen: true })
     }
     render() {

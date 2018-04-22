@@ -46,10 +46,10 @@ const ContactsInfo = (props) => (
             <Link href="#">   
                 <a className="block-not-find__button">Задать вопрос</a>
             </Link>
-     
-            <a className="block-not-find__button to-modal__order-call"
-               onClick={props.openModal}
-            >Заказать звонок</a>
+            <a className="block-not-find__button"
+                   onClick={props.openModal}>
+                   Заказать звонок
+            </a>
     
         </div>
     </section>

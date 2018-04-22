@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
 import Link from 'next/link';
-import OrderCall from '../../Header/components/OrderCallModal';
-//import './NotFind.scss'
 
+
+import OrderCall from '../../Header/components/OrderCallModal';
 
 
 class Header extends Component {
@@ -12,22 +11,16 @@ class Header extends Component {
         modalIsOpen: false,
     };
 
-    handleMobMenu = () => {
-
-        this.setState({ showMenuMob: !this.state.showMenuMob })
-    }
-
     closeModal = () => {
 
         this.setState({ modalIsOpen: false })
     }
 
-
     render() {
         return (
             <div>
                 <OrderCall closeModal={this.closeModal}
-                            display={this.state.modalIsOpen ? 'block' : 'none'} />
+                    display={this.state.modalIsOpen ? 'block' : 'none'} />
                 <section className="block-not-find">
                     <div className="inner">
                         <h2 className="block-not-find__title">Не нашли что искали?</h2>
@@ -37,9 +30,9 @@ class Header extends Component {
                             </Link>
                    
                             <a className="block-not-find__button to-modal__order-call"
-                               onClick={() => this.setState({ modalIsOpen: true })} >
-                               
-                               Заказать звонок
+                                onClick={() => this.setState({ modalIsOpen: true })} >
+
+                                Заказать звонок
                             </a>
                    
                         </div>

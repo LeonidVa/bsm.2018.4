@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { isMobile, isTablet } from 'react-device-detect';
 
 import Link from 'next/link';
 import OrderCall from './components/OrderCallModal';
 import SaleModal from './components/SaleModal'
 import MenuMob from './components/MenuMob'
-import Modal from 'react-modal';
+
+import OrderCallButton from '../common/OrderCallButton'
+
+
 
 import './index.scss';
 
@@ -14,7 +18,8 @@ class Header extends Component{
     state = {
         modalIsOpen: false,
         showMenuMob: false,
-        saleModalIsOpen: true
+        saleModalIsOpen: false,
+        dontShowSaleModalInThisSession: false
     };
 
     handleMobMenu = () => {
@@ -23,18 +28,19 @@ class Header extends Component{
     }
 
     closeModal = () => {
-
-        this.setState({modalIsOpen: false})
+        this.setState({ modalIsOpen: false })
     }
-
     closeSaleModal = () => {
 
         this.setState({ saleModalIsOpen: false })
     }
-    openModal = () =>{
-            this.setState({modalIsOpen: true})
+
+    componentWillReceiveProps = (nextProps, nextState) => {
+        if (nextProps.showSaleModal && nextProps.showSaleModal !== this.state.saleModalIsOpen && !this.state.dontShowSaleModalInThisSession){
+            this.setState({ saleModalIsOpen: true, dontShowSaleModalInThisSession: true})
+        }
     }
-    
+
     render(){
         return(
                 <div>
@@ -61,22 +67,28 @@ class Header extends Component{
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/contacts">
-                                                <a>Контакты</a>
-                                            </Link>
-                                        </li>
-                                        <li>
                                             <Link href="/about">
                                                 <a>О нас</a>
                                             </Link>
                                         </li>
+                                        <li>
+                                            <Link href="/contacts">
+                                                <a>Контакты</a>
+                                            </Link>
+                                        </li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
                                     <div className="header__right">
-                                        <span className="header__tel">+7 495 772 40 90</span>
-                                    <a onClick={() => this.setState({ modalIsOpen: true })} 
-                                       className="header__order-tel to-modal__order-call">Заказать звонок</a>
+                                    <span className="header__tel">
+                                        { isMobile || isTablet ? 
+                                            <a className="header__telanckor" href="tel:+1-495-772-4090">+7 495 772 40 90</a>
+                                            :
+                                            <a className="header__telanckor" onClick={() => this.setState({ modalIsOpen: true })}>+7 495 772 40 90</a>
+                                        }
+                                    </span>
+                                        <OrderCallButton />
                                     </div>
                             </div>
                             <div className="menu-mob__close" 

@@ -16,11 +16,15 @@ const messegers = (messegersList) => (
     <div className="block-mess__list">
         {messegersList.map((messegerItem, index)=>{
                 return(
-                        <Link href="/#" key={index}>
-                                <a className="block-mess__item" style={{ background: color.darken(index / 10).string()}}>
+                  
+                        <a  href="/#" 
+                            target="_blank"
+                            key={index} 
+                            className="block-mess__item" 
+                            style={{ background: color.darken(index / 10).string()}}>
                                     <img src={messegerItem} alt="" />
-                                </a>
-                        </Link>
+                        </a>
+                        
                     )
                 }
             )

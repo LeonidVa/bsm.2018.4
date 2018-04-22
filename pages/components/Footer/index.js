@@ -48,7 +48,7 @@ export default (props) => (
                     </nav>
                 </div>
 
-                <div className="footer__socials">
+                {/* <div className="footer__socials">
                     <Link href="#">
                         <a>
                             <FontAwesomeIcon icon={faTwitter} />
@@ -64,7 +64,7 @@ export default (props) => (
                             <FontAwesomeIcon icon={faTumblr} />
                         </a>
                     </Link>
-                </div>
+                </div> */}
             </div>
             <p className="copyright">
                 119019, Москва

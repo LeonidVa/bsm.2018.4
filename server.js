@@ -20,6 +20,8 @@ app.prepare()
 
             server.post('/api/form_data', (req, res)=>{
 
+                const { name, tel, email, subject, file } = req.body
+
                 var transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
@@ -38,15 +40,15 @@ app.prepare()
                                 <ul>
                                 <li><h4>Имя: ${req.body.name}</h4></li>
                                 <li><h4>Телевон:${req.body.tel}.</h4></li>
-                                <li><h4>Email: ${req.body.email}</h4></li>
-                                <li><p>Я хочу заказать товар: <b>"${req.body.subject}"</b></li>
+                                <li><h4>Email: ${email ? email : 'не указано'}</h4></li>
+                                <li><p>Я хочу заказать товар: <b>"${subject ? subject : 'не указано'}"</b></li>
                             </ul>
                         </div>`,
-                        attachments: [{
-                                        'filename': req.body.file[1] || '', 
-                                        'content': Buffer.from(req.body.file[0], 'base64') || '',
-                                        'contentType': req.body.file[2] || ''
-                                     }]
+                        attachments: file ? [{
+                                              'filename': file && file[1] ? file[1] : '', 
+                                              'content': Buffer.from(file[0], 'base64'),
+                                              'contentType': file && file[2] ? file[2] : ''
+                                            }] : null
                     };
 
                     transporter.sendMail(mailOptions, function(error, info){

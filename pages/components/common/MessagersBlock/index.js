@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Color from 'color';
 
 import messeger from '../../../../img/messegers/messeger.svg'

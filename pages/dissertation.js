@@ -3,14 +3,13 @@ import Head from 'next/head'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-import Link from 'next/link';
 import Title from './components/common/Title';
 
 import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
 
 import NavRow from './components/common/NavRow';
-import MessBlock from './components/common/MessagersBlock';
-import InfoBlock from './components/common/InfoBlock';
+// import MessBlock from './components/common/MessagersBlock';
+// import InfoBlock from './components/common/InfoBlock';
 import ProfitsBlockSlider from './components/common/ProfitsBlockSlider';
 import ReviewBlockSlider from './components/common/ReviewBlockSlider';
 import ImageBlock from './components/common/ImageBlock';
@@ -30,7 +29,7 @@ import disImageSrc from '../img/dissertation/1.jpg'
 import disImageSrc2 from '../img/dissertation/2.jpg'
 
 import { Link as ScrollLink } from 'react-scroll';
-import { DirectLink, Element, Events, animateScroll } from 'react-scroll';
+import { Element } from 'react-scroll';
 
 const DissertationPage = () => (
     <div>
@@ -44,8 +43,8 @@ const DissertationPage = () => (
                         <section className="block-nav">
                             <NavRow action="Заказать работу" url='#' />
                         </section>
-                        <MessBlock />
-                        <InfoBlock infoBlockConfig={ infoBlockConfig }/>
+                        {/* <MessBlock /> */}
+                        {/* <InfoBlock infoBlockConfig={ infoBlockConfig }/> */}
                         <section className="block-form3">
                             <h2 className="block-form3__title">Воспользуйся пока не поздно</h2>
 

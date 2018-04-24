@@ -4,7 +4,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 
-import Link from 'next/link';
 import Title from './components/common/Title';
 import Timer from './components/common/Timer';
 import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'

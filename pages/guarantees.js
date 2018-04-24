@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-import Link from 'next/link';
 import Title from './components/common/Title';
 import ProfitsBlockSlider from './components/common/ProfitsBlockSlider';
 import ReviewBlockSlider from './components/common/ReviewBlockSlider';

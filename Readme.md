@@ -14,6 +14,8 @@ npm run dev
 
 ## Для запуска в продакшен сборке 
 
-npm run build 
+npm run build
 
-npm start
+set NODE_ENV=production
+
+node server.js

@@ -10,7 +10,6 @@ import MessBlock from './components/common/MessagersBlock';
 import ServiceBlock from './components/common/ServiceBlock';
 import TextBlock from './components/common/TextBlock';
 
-import './index.scss'
 
 class Index extends Component {
 

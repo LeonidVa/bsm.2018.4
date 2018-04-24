@@ -26,7 +26,7 @@ import ContactsInfo from './components/contacts/ContactsInfo'
 import Address from './components/contacts/Address'
 
 
-import './index.scss'
+//import './index.scss'
 
 class ContactPage extends Component {
     state = {

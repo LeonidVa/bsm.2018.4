@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 
 import Link from 'next/link';
 import Title from './components/common/Title';
-import Timer from './components/common/Timer';
+
 import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
 
 import NavRow from './components/common/NavRow';
@@ -25,12 +25,12 @@ import reviewBlockConfig from './components/config/reviewBlockConfig'
 import { profitBlockConfigShort, profitBlockConfigLong } from './components/config/profitBlockConfig';
 import { formConfig, formConfigSecond } from './components/config/formConfig'
 import links from './components/config/linksBlockConfig'
-import contactImageSrc from '../img/contacts/1.jpg';
-import aboutImageSrc from '../img/about/1.jpg';
-import courseImageSrc from '../img/candidate/1.jpg'
-import courseImageSrc2 from '../img/candidate/2.jpg'
 
-import './index.scss'
+
+import courseImageSrc from '../img/candidate/1.jpg'
+
+
+//import './index.scss'
 
 const CoursePage = () => (
     <div>

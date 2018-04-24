@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 
 import Link from 'next/link';
 import Title from './components/common/Title';
-import Timer from './components/common/Timer';
+
 import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
 
 import NavRow from './components/common/NavRow';
@@ -26,13 +26,11 @@ import { profitBlockConfigShort, profitBlockConfigLong } from './components/conf
 import { formConfig, formConfigSecond } from './components/config/formConfig'
 import links from './components/config/linksBlockConfig'
 import contactImageSrc from '../img/contacts/1.jpg';
-import aboutImageSrc from '../img/about/1.jpg';
 import disImageSrc from '../img/dissertation/1.jpg'
 import disImageSrc2 from '../img/dissertation/2.jpg'
 
 import { Link as ScrollLink } from 'react-scroll';
 import { DirectLink, Element, Events, animateScroll } from 'react-scroll';
-import './index.scss'
 
 const DissertationPage = () => (
     <div>

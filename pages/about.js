@@ -21,7 +21,7 @@ import links from './components/config/linksBlockConfig'
 import imageSrc from '../img/contacts/1.jpg';
 import aboutImageSrc from '../img/about/1.jpg';
 
-import './index.scss'
+//import './index.scss'
 
 const AboutPage = () => (
     <div>

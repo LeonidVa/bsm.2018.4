@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 import './index.scss';
 import foxLogo from '../../../img/fox-logo.svg'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import brands from '@fortawesome/fontawesome-free-brands'
+// import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+// import brands from '@fortawesome/fontawesome-free-brands'
 
 import NotFind from '../common/NotFind'
 
-const { faTwitter, faFacebookF, faTumblr } = brands
+// const { faTwitter, faFacebookF, faTumblr } = brands
 
 export default (props) => (
   <div>

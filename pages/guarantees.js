@@ -20,7 +20,6 @@ import reviewBlockConfig from './components/config/reviewBlockConfig';
 import links from './components/config/linksBlockConfig'
 import imageSrc from '../img/contacts/1.jpg';
 
-import './index.scss'
 
 const GuaranteesPage = () => (
     <div>

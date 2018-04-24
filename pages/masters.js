@@ -26,11 +26,9 @@ import reviewBlockConfig from './components/config/reviewBlockConfig'
 import { profitBlockConfigShort, profitBlockConfigLong } from './components/config/profitBlockConfig';
 import { formConfig, formConfigSecond } from './components/config/formConfig'
 import links from './components/config/linksBlockConfig'
-import contactImageSrc from '../img/contacts/1.jpg';
-import aboutImageSrc from '../img/about/1.jpg';
+
 import condImageSrc from '../img/candidate/1.jpg'
-import condImageSrc2 from '../img/candidate/2.jpg'
-import './index.scss'
+
 
 const MastersPage = () => (
     <div>

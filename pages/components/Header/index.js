@@ -10,7 +10,8 @@ import OrderCallButton from '../common/OrderCallButton'
 
 
 
-import './index.scss';
+import './header.scss';
+import '../../index.scss';
 
 
 class Header extends Component{

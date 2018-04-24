@@ -22,7 +22,6 @@ import links from './components/config/linksBlockConfig';
 import imageSrc from '../img/contacts/1.jpg';
 
 import Accordion from './components/pricing/Accordion'
-import './index.scss'
 
 class PricingPage extends Component {
     state = {

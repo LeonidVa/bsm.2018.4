@@ -34,6 +34,7 @@
     .inner {
         width: 100%;
         max-width: 17em;
+        font-weight: 500;
         @media (max-width: 900px) {
             width: 70%;
             min-width: 273px;

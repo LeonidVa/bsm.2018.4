@@ -39,17 +39,16 @@
         display: block;
     }
     &__title {
-        //color: #4A4A4A;
-        color: #f4511e;
+        color: #333333;
         font-weight: 500;
         margin-bottom: 3px;
-        transition: all .4s;
+        transition: all .25s;
     }
     &__subtitle {
         color: #9b9b9b;
         font-size: .5em;
     }
-    .fas {
+    .arrow {
         //color: #4a4a4a;
         color: #f4511e;
         font-size: .700em;

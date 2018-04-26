@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import './index.scss';
-import foxLogo from '../../../img/fox-logo.svg'
+import foxLogo from '../../../img/fox-logo.png'
 // import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 // import brands from '@fortawesome/fontawesome-free-brands'
 

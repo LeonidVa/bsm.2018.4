@@ -25,6 +25,11 @@ export const profitBlockConfigShort = [
         profit: "Успех на защите",
         description: "Получите сертификат качества и смело идите к преподавателю. С нашей курсовой работой Вы спокойно и успешно защититесь!"
     },
+    {
+        imageSrc: profit_2,
+        profit: "Уникальность",
+        description: "Ваша курсовая легко пройдет строгие проверки текста в АП, АП.вуз, Etxt, Advego до нужного процента! "
+    },
 
 ]
 export const profitBlockConfigLong = [
@@ -57,5 +62,5 @@ export const profitBlockConfigLong = [
         imageSrc: slideProfit_6,
         profit: "Уникальность",
         description: "Ваша курсовая легко пройдет строгие проверки текста в АП, АП.вуз, Etxt, Advego до нужного процента! "
-    },
+    }
 ]

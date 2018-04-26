@@ -79,7 +79,7 @@
         text-align: center;
         font-size: .5em;
         color: #f4511e;
-        margin-top: .31em;
+        margin-top: 1.2em;
         position: relative; 
         z-index: 100;
         cursor: pointer;
@@ -100,5 +100,22 @@
         &:hover {
             background-color: #922d0e;
         }
+    }
+
+    &__close {
+        margin-left: 5px; 
+        color: #f4511e;
+        cursor: pointer;
+    }
+}
+
+.dropzone {
+    div {
+        border: none !important;
+        text-decoration: underline;
+        height: 40px !important;
+        color: #f4511e;
+        cursor: pointer;
+        font-weight: 500;
     }
 }

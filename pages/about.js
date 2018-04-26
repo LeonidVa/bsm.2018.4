@@ -18,10 +18,7 @@ import { formConfig } from './components/config/formConfig'
 import { profitBlockConfigShort } from './components/config/profitBlockConfig';
 import reviewBlockConfig from './components/config/reviewBlockConfig';
 import links from './components/config/linksBlockConfig'
-import imageSrc from '../img/contacts/1.jpg';
-import aboutImageSrc from '../img/about/1.jpg';
 
-//import './index.scss'
 
 const AboutPage = () => (
     <div>
@@ -46,8 +43,8 @@ const AboutPage = () => (
                     Методист требует хоть какую-то часть дипломной работы, на носу сложные экзамены, предстоит подготовка к выпускному? Если вам знакома любая из этих ситуаций, но совсем нет времени на изучение источников и написание диплома, не волнуйтесь. С вашим высшим образованием все будет в порядке, если вовремя обратиться к нам.
 			</p>
             </section>
-            <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort} />
-            <ImageBlock imageSrc={aboutImageSrc} />
+            <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort }/>
+            <ImageBlock imageSrc={require('../img/contacts/1.jpg')} />
             <section className="block-text">
                 <h2 className="block-text__title">
                     Почему именно BeSmarter?
@@ -104,7 +101,7 @@ const AboutPage = () => (
                     Нас выбирают студенты, для которых качество всегда стоит на первом месте. Обращайтесь, и будете уверены в успешной защите дипломного проекта!
 			</p>
             </section>
-            <ImageBlock imageSrc={imageSrc} />
+            <ImageBlock imageSrc={require('../img/about/1.jpg')} />
             <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
             <section className="block-service diplom-work-serv">

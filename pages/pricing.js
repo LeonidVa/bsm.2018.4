@@ -18,7 +18,6 @@ import { profitBlockConfigShort } from './components/config/profitBlockConfig';
 import reviewBlockConfig from './components/config/reviewBlockConfig';
 import links from './components/config/linksBlockConfig';
 
-import imageSrc from '../img/contacts/1.jpg';
 
 import Accordion from './components/pricing/Accordion'
 
@@ -76,7 +75,7 @@ class PricingPage extends Component {
                             tablePrices={["от 50", "от 50", "от 50", "от 50", "от 50", "от 150 т.р.", "от 150 т.р."]}
                         />
                         <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort} />
-                        <ImageBlock imageSrc={imageSrc} />
+                        <ImageBlock imageSrc={require('../img/contacts/1.jpg')} />
                         <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
                         <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
                         <section className="block-service diplom-work-serv">

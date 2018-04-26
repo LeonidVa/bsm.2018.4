@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import Link from 'next/link';
-import moment from 'moment'
 import countdown from 'countdown';
 
 class Timer extends Component {
@@ -15,7 +13,9 @@ class Timer extends Component {
         const that = this;
 
         this.timerLoop = setInterval(() => {
-            let timer = countdown(null, moment().endOf('day')._d)
+            const time = new Date()
+            const endOfDay =  time.getTime() + ((24 * 1000 * 60 * 60) - (time.getHours() * 1000 * 60 * 60 + time.getMinutes() * 1000 * 60 + time.getSeconds() * 1000 + time.getMilliseconds()))
+            let timer = countdown(null, endOfDay) 
 
             that.setState({
                 hoursLeft: timer.hours,

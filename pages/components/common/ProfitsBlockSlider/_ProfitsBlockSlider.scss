@@ -1,20 +1,14 @@
 .block-slider {
-    display: flex;
     margin: 1.56em auto 0;
     font-size: 2em;
-    position: relative;
-    z-index: 3;
-    max-width: 60%;
-    overflow-x: hidden;
+
     
     .slick3 {
-        display: flex;
+
         width: 27.94em;
         width: 100%;
         margin: 0 auto;
-        justify-content: center;
         @media (max-width: 1023px) {
-            width: 100%;
             max-width: 100%;
             margin: 1.56em auto 0;
         }
@@ -27,7 +21,7 @@
 
     .block-slider__slide {
         font-size: 1em;
-        width: 308px;
+
         margin: 0 auto;
         padding: 0 0.5em;
         display: flex;

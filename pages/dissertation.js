@@ -1,15 +1,15 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 import Title from './components/common/Title';
 
 import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
 
 import NavRow from './components/common/NavRow';
-// import MessBlock from './components/common/MessagersBlock';
-// import InfoBlock from './components/common/InfoBlock';
+import MessBlock from './components/common/MessagersBlock';
+import InfoBlock from './components/common/InfoBlock';
 import ProfitsBlockSlider from './components/common/ProfitsBlockSlider';
 import ReviewBlockSlider from './components/common/ReviewBlockSlider';
 import ImageBlock from './components/common/ImageBlock';
@@ -19,14 +19,11 @@ import Work from './components/common/Work';
 import Service from './components/common/Service';
 import LinksBlock from './components/common/LinksBlock';
 
-import infoBlockConfig from './components/config/infoBlockConfig'
-import reviewBlockConfig from './components/config/reviewBlockConfig'
+import infoBlockConfig from './components/config/infoBlockConfig';
+import reviewBlockConfig from './components/config/reviewBlockConfig';
 import { profitBlockConfigShort, profitBlockConfigLong } from './components/config/profitBlockConfig';
-import { formConfig, formConfigSecond } from './components/config/formConfig'
-import links from './components/config/linksBlockConfig'
-import contactImageSrc from '../img/contacts/1.jpg';
-import disImageSrc from '../img/dissertation/1.jpg'
-import disImageSrc2 from '../img/dissertation/2.jpg'
+import { formConfig, formConfigSecond } from './components/config/formConfig';
+import links from './components/config/linksBlockConfig';
 
 import { Link as ScrollLink } from 'react-scroll';
 import { Element } from 'react-scroll';
@@ -43,8 +40,8 @@ const DissertationPage = () => (
                         <section className="block-nav">
                             <NavRow action="Заказать работу" url='#' />
                         </section>
-                        {/* <MessBlock /> */}
-                        {/* <InfoBlock infoBlockConfig={ infoBlockConfig }/> */}
+                        <MessBlock />
+                        <InfoBlock infoBlockConfig={ infoBlockConfig }/>
                         <section className="block-form3">
                             <h2 className="block-form3__title">Воспользуйся пока не поздно</h2>
 
@@ -52,7 +49,7 @@ const DissertationPage = () => (
                         </section>
                         <ProfitsBlockSlider profitBlockConfig={ profitBlockConfigLong } />
                         <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true}/>
-                        <ImageBlock imageSrc={disImageSrc}/>
+                        <ImageBlock imageSrc={require('../img/dissertation/1.jpg')}/>
                         <section className="block-text no-bottom-padd">
                             <h2 className="block-text__title">
                                 Докторская диссертация на заказ
@@ -102,7 +99,7 @@ const DissertationPage = () => (
                                 </li>
                             </ol>
                         </section>
-                        <ImageBlock imageSrc={disImageSrc2} />
+                        <ImageBlock imageSrc={require('../img/dissertation/2.jpg')} />
                         <section className="block-text">
 
                             <h2 className="block-text__title">
@@ -180,7 +177,7 @@ const DissertationPage = () => (
                                 Во время написания докторской диссертации мы одновременно подготовим также ряд статей ВАК для докторской диссертации и опубликуем их в научных журналах.
                             </p>
                         </section>
-                        <ImageBlock imageSrc={contactImageSrc}/>
+                        <ImageBlock imageSrc={require('../img/contacts/1.jpg')}/>
                         <section className="block-text">
                             <h2 className="block-text__title">
                                 Сколько стоит докторская диссертация

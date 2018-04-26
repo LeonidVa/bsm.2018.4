@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import React, { Component } from 'react';
+import Dropzone from 'react-dropzone';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
+
 import axios from 'axios';
 
 class OrderForm extends Component{
@@ -10,7 +14,7 @@ class OrderForm extends Component{
         work: '',
         subject: '',
         topic: '',
-        file: '',
+        files: [],
         fileName: 'Добавить файл',
         fieldOpacity: 0,
         fieldHeight: 0
@@ -20,28 +24,33 @@ class OrderForm extends Component{
    
         axios.post('/api/form_data', this.state)
     }
+    onDrop(files) {
 
-    handleFile = (e) => {
-        //console.log(e.target.files[0], 'handleFile')
         const that = this;
 
-        const file = e.target.files[0]
+        const file = files[0]
         const reader  = new FileReader();
         reader.addEventListener("load", function () {
             //console.log(reader.result.split(',')[1])
 
-            that.setState({file:[reader.result.split(',')[1], file.name, file.type], fileName: file.name});
+            that.setState( {files:[...that.state.files, {url:reader.result.split(',')[1], name:file.name, type:file.type}] })
         }, false);
-
-        if(file){
-            reader.readAsDataURL(file);
+            if(file){
+                reader.readAsDataURL(file);
         }
-
+            
+     
     }
+
+    removeFile(index){
+
+        this.setState({files: [...this.state.files.slice(0, index), ...this.state.files.slice(index+1, this.state.files.length)] });
+    }
+   
 
     showFullForm = () => {  
         const { fieldOpacity, fieldHeight } = this.state
-        this.setState({ fieldOpacity: fieldOpacity===0 ? 1 : 0, fieldHeight: fieldHeight===0 ? '100px' : 0})
+        this.setState({ fieldOpacity: fieldOpacity===0 ? 1 : 0, fieldHeight: fieldHeight===0 ? '1000px' : 0})
     }
 
     renderForm = () => {
@@ -75,18 +84,24 @@ class OrderForm extends Component{
                               maxHeight: field.required ? '100px' : this.state.fieldHeight,
                             //   display: !field.required && !this.state.fieldOpacity ? 'none' : 'block'
                            }}>
-                        <label htmlFor={field.id}>{field.label}</label>
-                        <input onClick={()=>this.inputfile.click()}
-                               placeholder={this.state.fileName}
+                       
 
-                        />
-                        <input type={field.type} 
-                               name="" 
-                               id={field.id}    
-                               required={field.required} 
-                               onChange={ (e)=>this.handleFile(e)} 
-                               className="block-form__item__file"
-                               ref={(input)=>this.inputfile = input}/>
+                        <div className="dropzone" style={{fontSize: '14px'}}>
+                            <Dropzone 
+                                onDrop={this.onDrop.bind(this)}
+                                multiple={true}>
+                                <a>Добавить файл</a>
+                            </Dropzone>
+                        </div>
+                      
+                            <ul>
+                                {
+                                this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.name}
+                                    <FontAwesomeIcon icon={close} className="block-form__close" onClick={()=>this.removeFile(i)}/>
+                                </li>)
+                                }
+                            </ul>
+                       
                     </div>
                 )
             }

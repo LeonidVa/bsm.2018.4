@@ -26,11 +26,6 @@ import { formConfig, formConfigSecond } from './components/config/formConfig'
 import links from './components/config/linksBlockConfig'
 
 
-import courseImageSrc from '../img/candidate/1.jpg'
-
-
-//import './index.scss'
-
 const CoursePage = () => (
     <div>
         <Head>
@@ -52,7 +47,7 @@ const CoursePage = () => (
             </section>
             <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong} />
             <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true} />
-            <ImageBlock imageSrc={courseImageSrc} />
+            <ImageBlock imageSrc={require('../img/candidate/1.jpg')} />
             <section className="block-text">
                 <h2 className="block-text__title">
                     Курсовая работа на заказ.

@@ -26,10 +26,6 @@ import { formConfig, formConfigSecond } from './components/config/formConfig'
 import links from './components/config/linksBlockConfig'
 
 
-import condImageSrc from '../img/candidate/1.jpg'
-import condImageSrc2 from '../img/candidate/2.jpg'
-
-//import './index.scss'
 
 const CandidatePage = () => (
     <div>
@@ -52,7 +48,7 @@ const CandidatePage = () => (
                     </section>
                     <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong} />
                     <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true} />
-                    <ImageBlock imageSrc={condImageSrc} />
+                    <ImageBlock imageSrc={require('../img/candidate/1.jpg')} />
                 
                     <section className="block-text">
                         <h2 className="block-text__title">
@@ -123,7 +119,7 @@ const CandidatePage = () => (
                         <p className="block-text__par">Здесь Вам будет удобно уточнить все тонкости и детали нашей будущей совместной работы.</p>
                     </section>
 
-                    <ImageBlock imageSrc={condImageSrc2} />
+                    <ImageBlock imageSrc={require('../img/candidate/1.jpg')} />
 
                     <section className="block-text">
                         <h2 className="block-text__title">

@@ -5,7 +5,6 @@ import Footer from './components/Footer'
 
 
 import Title from './components/common/Title';
-import Timer from './components/common/Timer';
 import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
 
 import NavRow from './components/common/NavRow';
@@ -25,8 +24,6 @@ import reviewBlockConfig from './components/config/reviewBlockConfig'
 import { profitBlockConfigShort, profitBlockConfigLong } from './components/config/profitBlockConfig';
 import { formConfig, formConfigSecond } from './components/config/formConfig'
 import links from './components/config/linksBlockConfig'
-
-import condImageSrc from '../img/candidate/1.jpg'
 
 
 const MastersPage = () => (
@@ -50,7 +47,7 @@ const MastersPage = () => (
             </section>
             <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong} />
             <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true} />
-            <ImageBlock imageSrc={condImageSrc} />
+            <ImageBlock imageSrc={require('../img/candidate/1.jpg')} />
 
             <section className="block-text">
                 <h2 className="block-text__title">

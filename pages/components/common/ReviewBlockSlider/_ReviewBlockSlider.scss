@@ -1,8 +1,6 @@
 .slick{
-        display: flex;
         width: 100%;
         margin: 0 auto;
-        justify-content: space-around;
 
         @media (max-width: 1023px) {
             width: 100%;
@@ -74,12 +72,10 @@
     }
 
     .block-slider__slide.review{
-        padding: 32px !important;
-        width: 358px !important;
         max-width: 100% !important;
-        position: relative ;
-        z-index:3  ;
-        overflow-x: hidden;
+        // position: relative ;
+        // z-index:3  ;
+
     }
 
     .block-slider.review{

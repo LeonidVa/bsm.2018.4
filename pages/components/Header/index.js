@@ -43,17 +43,13 @@ class Header extends Component{
     }
 
     render(){
+        const { showMenuMob } = this.state;
         return(
                 <div>
                     <div className="header">
                         <div className="inner">
                             <div className="header__left">
-                                
-                                    <a className="humburger" onClick={() => this.handleMobMenu()}>
-                                        <div className="humburger__line"></div>
-                                        <div className="humburger__line"></div>
-                                        <div className="humburger__line"></div>
-                                    </a>
+                                  
                                 
                                 <Link href="/">
                                     <a className="header__logo">
@@ -91,13 +87,19 @@ class Header extends Component{
                                     </span>
                                         <OrderCallButton />
                                     </div>
+                                <div id="nav-icon3"
+                                    className={`humburger ${showMenuMob ? 'open' : ''}`}
+                                    onClick={() => this.handleMobMenu()}>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </div>
-                            <div className="menu-mob__close" 
-                                 style={{ display: this.state.showMenuMob ? 'block' : 'none'}}
-                                 onClick={()=>this.setState({showMenuMob: false})}>
-                                <div className="menu-mob__line"></div>
-                                <div className="menu-mob__line"></div>
-                            </div>
+                           
+                    
+
+                            
                     </div>
                     <OrderCall closeModal={this.closeModal} 
                                display={ this.state.modalIsOpen ? 'block' : 'none' }/>

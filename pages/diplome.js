@@ -25,9 +25,6 @@ import { profitBlockConfigShort, profitBlockConfigLong } from './components/conf
 import { formConfig, formConfigSecond } from './components/config/formConfig'
 import links from './components/config/linksBlockConfig'
 
-import courseImageSrc2 from '../img/candidate/2.jpg'
-
-//import './index.scss'
 
 const DiplomePage = () => (
     <div>
@@ -50,7 +47,7 @@ const DiplomePage = () => (
                 </section>
                 <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong} />
                 <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true} />
-                <ImageBlock imageSrc={courseImageSrc2} />
+                <ImageBlock imageSrc={require('../img/candidate/2.jpg')} />
                 <section class="block-text">
                     <h2 class="block-text__title">
                         Дипломная работа на заказ

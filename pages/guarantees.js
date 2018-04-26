@@ -17,8 +17,6 @@ import { formConfig } from './components/config/formConfig'
 import { profitBlockConfigShort } from './components/config/profitBlockConfig';
 import reviewBlockConfig from './components/config/reviewBlockConfig';
 import links from './components/config/linksBlockConfig'
-import imageSrc from '../img/contacts/1.jpg';
-
 
 const GuaranteesPage = () => (
     <div>
@@ -127,7 +125,7 @@ const GuaranteesPage = () => (
                         Нас выбирают студенты, для которых качество всегда стоит на первом месте. Обращайтесь, и будете уверены в успешной защите дипломного проекта!
                 </p>
                 </section>
-                <ImageBlock imageSrc={imageSrc} />
+                <ImageBlock imageSrc={require('../img/contacts/1.jpg')} />
                 <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
                 <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
                 <section className="block-service diplom-work-serv">

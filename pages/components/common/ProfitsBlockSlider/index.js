@@ -1,165 +1,90 @@
 
 import React, {Component } from 'react';
 import Link from 'next/link';
+import Slider from "react-slick";
+import { isMobile } from 'react-device-detect';
 
+import '../slick.scss'
 
+const Block = (props)=>{
 
-class Block extends Component{
-    state = {
-        shiftLeft: 0,
-        shift: 0
-    }
-
-    shift = () => {
-        const that = this;
-        this.sliderLoop = setInterval(function(){
-            if(that.state.shiftLeft > -308 * that.props.blocksCount - 1){
-                
-                that.setState({shiftLeft: that.state.shiftLeft - 308})
-            }
-        }, 5000)
-
-    }
-    shouldComponentUpdate = (nextProps, nextState) => {
-        if (nextState.shiftLeft < -308 * this.props.blocksCount - 1){
-            this.setState({ shiftLeft: 0})
-
-            return false
-        }
-
-        return true
-    }
-
-    componentWillReceiveProps =(nextProps)=>{
-        if(nextProps.shift !== this.props.shift){
- 
-            let rate = Math.floor(nextProps.shift / 308)
-            if (Math.abs(rate) < 1 && Math.abs(rate) >-1){
-                this.setState({ shiftLeft: 0})
-            }else if(rate > 0){
-                this.setState({ shiftLeft: this.state.shiftLeft + 308})
-            } else if (rate < 0) {
-                this.setState({ shiftLeft: this.state.shiftLeft - 308 })
-            }
-        }
-
-        if(nextProps.clearInterval){
-            clearInterval(this.sliderLoop);
-        }
-
-        if(!nextProps.clearInterval && this.props.clearInterval !== nextProps.clearInterval){
-            this.shift()
-        }
-    }
-    componentDidMount = () => {
-        this.shift()
-    }
-
-    componentWillUnmount = () => {
-        clearInterval(this.sliderLoop);
-    }
-
-
-    render(){
-        const { imageSrc, profit, description } = this.props;
+        const { imageSrc, profit, description } = props;
 
         return(
   
-                <div className="block-slider__slide"
-                     style= {{ 
-                                transform: `translate(${this.state.shiftLeft}px, 0)`,
-                                transition: this.state.shiftLeft !== 0 ? 'transform 0.6s' : null
-                            }}>
-                    <Link href="#">
+                <div className="block-slider__slide">
+               
                         <a className="block-profits__item">
-                            <img src={imageSrc} alt="profit" />
+                            <img src={imageSrc} alt="profit" style={{objectFit: 'contain'}}/>
                             <h3 className="block-profits__title">{profit}</h3>
                             <p className="block-profits__par">
                                 {description}   
                             </p>
                         </a>
-                    </Link>
+                 
                 </div>
 
 
         )
-    }
 }
 
 
-const renderBlocks = (shift, clearInterval, profitBlockConfig) => {
+const renderBlocks = (profitBlockConfig) => {
 
     return profitBlockConfig.map((item, index) => (
         <Block 
-               key={index}
-               shift={shift} 
-               clearInterval={clearInterval} 
+               key={index} 
                imageSrc={item.imageSrc} 
                profit={item.profit} 
                description={item.description}
                blocksCount={profitBlockConfig.length} />
     ))
 }
-const ProfitBlock = ({shift, clearInterval, profitBlockConfig}) => (
-
-        <div style={{display: 'flex'}}>
-           {renderBlocks(shift, clearInterval, profitBlockConfig)}
-        </div>
-)
-
 
 
 class ProfitSlider extends Component{
 
-    state = {
-        clickPoint: false,
-        shift: 0,
-        beginPoint: 0,
-        positionChanged: 0,
-        clearInterval: false
 
-    }
-    
-    handleDragEnd = (e) => {
-        //console.log('click', this.state.beginPoint, e.clientX);
-        const {blocksCount, blockWidth, beginPoint } = this.state;
-
-        this.setState({ clickPoint: false, shift: 0, positionChanged: e.clientX - beginPoint, clearInterval: false})
-       
-    }
-
-    handleDrag = (e) => {
-        //console.log(e.clientX, this.state.clickPoint)
-        if(!this.state.clickPoint){
-            this.setState({ clickPoint: e.clientX, beginPoint: e.clientX, clearInterval: true})
-        }else{
-            if(this.state.clickPoint > e.clientX){
-                this.setState({ shift: this.state.shift - (this.state.clickPoint - e.clientX), clickPoint: e.clientX})
-            }
-            if (this.state.clickPoint < e.clientX) {
-                this.setState({ shift: this.state.shift + (e.clientX - this.state.clickPoint), clickPoint: e.clientX})
-            }
-        }
-    }
     render(){
         const { profitBlockConfig } = this.props
-        return(
-            <section className="block-slider" style={profitBlockConfig.length > 3 ? { maxWidth: '100%' } : {}}>
-                    
-                        <div className="slick3"
-                            onDragEnd={(e) => this.handleDragEnd(e)}
-                            onDrag={(e) => this.handleDrag(e)}
-                            style={{ transform: `translate(${this.state.shift}px, 0)`}}
-                            >           
-                            <ProfitBlock profitBlockConfig={profitBlockConfig} shift={this.state.positionChanged} clearInterval={this.state.clearInterval}/>
-                            {/* clone allprofitBlockConfig={profitBlockConfig}  blocks for illusion of infinite loop */}
-                            <ProfitBlock profitBlockConfig={profitBlockConfig} shift={this.state.positionChanged} clearInterval={this.state.clearInterval}/>
-                            {/* clone allprofitBlockConfig={profitBlockConfig}  blocks for illusion of infinite loop */}
-                            <ProfitBlock profitBlockConfig={profitBlockConfig} shift={this.state.positionChanged} clearInterval={this.state.clearInterval} />
-                    
-                        </div>
+        var settings = {
+            dots: false,
+            infinite: true,
+            slidesToShow: profitBlockConfig.length - 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            arrows: !isMobile,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {    
+                        slidesToShow: 1,           
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: profitBlockConfig.length - 3,
+                    }
+                },
+                {
+                    breakpoint: 1300,
+                    settings: {
+                        slidesToShow: profitBlockConfig.length - 2,
+                    }
+                },
                
-
+            ]
+        };
+        return(
+            <section className="block-slider" style={{ maxWidth: profitBlockConfig.length < 5 ? '60%' : '100%'}}>        
+                <div className="slick3">
+                    <Slider {...settings}>           
+                        {renderBlocks(profitBlockConfig)}
+                    </Slider>
+                </div>
             </section>
         )
     }

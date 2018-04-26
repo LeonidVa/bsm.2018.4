@@ -20,8 +20,8 @@ app.prepare()
 
             server.post('/api/form_data', (req, res)=>{
 
-                const { name, tel, email, subject, file } = req.body
-
+                const { name, tel, email, subject, files } = req.body
+                console.log(files)
                 var transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
@@ -44,11 +44,12 @@ app.prepare()
                                 <li><p>Я хочу заказать товар: <b>"${subject ? subject : 'не указано'}"</b></li>
                             </ul>
                         </div>`,
-                        attachments: file ? [{
-                                              'filename': file && file[1] ? file[1] : '', 
-                                              'content': Buffer.from(file[0], 'base64'),
-                                              'contentType': file && file[2] ? file[2] : ''
-                                            }] : null
+                        attachments: files ? files.map(file =>({
+                                                        'filename': file.name ? file.name : '', 
+                                                        'content': Buffer.from(file.url, 'base64'),
+                                                        'contentType': file.type ? file.type : ''
+                                                      })
+                                                    ): null
                     };
 
                     transporter.sendMail(mailOptions, function(error, info){

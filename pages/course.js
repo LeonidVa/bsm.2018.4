@@ -1,7 +1,4 @@
-import Head from 'next/head'
-
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Wrapper from './components/Wrapper';
 
 import Title from './components/common/Title';
 
@@ -27,13 +24,8 @@ import links from './components/config/linksBlockConfig'
 
 
 const CoursePage = () => (
-    <div>
-        <Head>
-            <title>BeSmarter - Курсовая диссертация</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        </Head>
+    <Wrapper title="BeSmarter - Курсовая диссертация">
         <div className="wrapper course">
-            <Header />
             <Title name="Курсовая диссертация" />
             <section className="block-nav">
                 <NavRow action="Оценить работу" url='#' />
@@ -147,9 +139,8 @@ const CoursePage = () => (
                 </div>
             </section>
             <LinksBlock links={links} />
-            <Footer />
         </div>
-    </div>
+    </Wrapper>
 )
 
 export default CoursePage

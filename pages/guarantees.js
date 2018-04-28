@@ -1,7 +1,4 @@
-import Head from 'next/head'
-
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Wrapper from './components/Wrapper';
 
 import Title from './components/common/Title';
 import ProfitsBlockSlider from './components/common/ProfitsBlockSlider';
@@ -19,14 +16,9 @@ import reviewBlockConfig from './components/config/reviewBlockConfig';
 import links from './components/config/linksBlockConfig'
 
 const GuaranteesPage = () => (
-    <div>
-        <Head>
-            <title>BeSmarter - Гарантии</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        </Head>
+    <Wrapper title="BeSmarter - Гарантии">
         
         <div className="wrapper guarantees">
-            <Header />
                 <Title name="Гарантии" />
                 <section className="block-text">
                     <h2 className="block-text__title">
@@ -137,9 +129,9 @@ const GuaranteesPage = () => (
                     </div>
                 </section>
                 <LinksBlock links={links} />
-            <Footer />
+        
         </div>
-    </div>
+    </Wrapper>
 )
 
 export default GuaranteesPage

@@ -1,7 +1,4 @@
-import Head from 'next/head'
-
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Wrapper from './components/Wrapper';
 
 import Title from './components/common/Title';
 
@@ -27,13 +24,8 @@ import links from './components/config/linksBlockConfig'
 
 
 const DiplomePage = () => (
-    <div>
-        <Head>
-            <title>BeSmarter - Дипломная диссертация</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        </Head>
-        <div className="wrapper diplome">
-            <Header />
+        <Wrapper title="BeSmarter - Дипломная диссертация">
+            <div className="wrapper diplome">
                 <Title name="Дипломная диссертация" />
                 <section className="block-nav">
                     <NavRow action="Оценить работу" url='#' />
@@ -141,9 +133,8 @@ const DiplomePage = () => (
                     </div>
                 </section>
                 <LinksBlock links={links} />
-            <Footer />
-        </div>
-    </div>
+            </div>
+        </Wrapper>
 )
 
 export default DiplomePage

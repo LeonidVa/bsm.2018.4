@@ -1,8 +1,4 @@
-import Head from 'next/head'
-
-import Header from './components/Header'
-import Footer from './components/Footer'
-
+import Wrapper from './components/Wrapper';
 
 import Title from './components/common/Title';
 import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
@@ -27,13 +23,9 @@ import links from './components/config/linksBlockConfig'
 
 
 const MastersPage = () => (
-    <div>
-        <Head>
-            <title>BeSmarter - Магистерская диссертация</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        </Head>
+    <Wrapper title="BeSmarter - Магистерская диссертация">
+       
         <div className="wrapper masters">
-            <Header />
             <Title name="Магистерская диссертация" />
             <section className="block-nav">
                 <NavRow action="Оценить работу" url='#' />
@@ -121,9 +113,9 @@ const MastersPage = () => (
                 </div>
             </section>
             <LinksBlock links={links} />
-            <Footer />
+           
         </div>
-    </div>
+    </Wrapper>
 )
 
 export default MastersPage

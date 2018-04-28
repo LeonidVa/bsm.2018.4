@@ -44,7 +44,7 @@ class Timer extends Component {
     render() {
         const { hoursLeft, minutesLeft, secondsLeft } = this.state;
         return(
-            <div className="timer" style={{fontSize: `${this.props.size}em`, display: 'flex'}}>
+            <div className="timer" style={{ fontSize: `${this.props.size}em`, display: 'flex', color: this.props.timerColor}}>
                 <div className="timer-numbers">
                     {hoursLeft}
                 </div>

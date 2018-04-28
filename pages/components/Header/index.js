@@ -19,8 +19,7 @@ class Header extends Component{
     state = {
         modalIsOpen: false,
         showMenuMob: false,
-        saleModalIsOpen: false,
-        dontShowSaleModalInThisSession: false
+        saleModalIsOpen: false
     };
 
     handleMobMenu = () => {
@@ -37,7 +36,7 @@ class Header extends Component{
     }
 
     componentWillReceiveProps = (nextProps, nextState) => {
-        if (nextProps.showSaleModal && nextProps.showSaleModal !== this.state.saleModalIsOpen && !this.state.dontShowSaleModalInThisSession){
+        if (nextProps.showSaleModal && nextProps.showSaleModal !== this.state.saleModalIsOpen){
             this.setState({ saleModalIsOpen: true, dontShowSaleModalInThisSession: true})
         }
     }

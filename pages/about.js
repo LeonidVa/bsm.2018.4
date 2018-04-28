@@ -1,7 +1,5 @@
-import Head from 'next/head'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Wrapper from './components/Wrapper';
 
 import Link from 'next/link';
 import Title from './components/common/Title';
@@ -20,14 +18,11 @@ import reviewBlockConfig from './components/config/reviewBlockConfig';
 import links from './components/config/linksBlockConfig'
 
 
+
 const AboutPage = () => (
-    <div>
-        <Head>
-            <title>BeSmarter - О нас</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        </Head>
+
+    <Wrapper title="BeSmarter - О нас">
         <div className="wrapper about">
-            <Header />
             <Title name="О нас" />
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -113,9 +108,9 @@ const AboutPage = () => (
                 </div>
             </section>
             <LinksBlock links={links} />
-            <Footer />
+     
         </div>
-    </div>
+    </Wrapper>
 )
 
 export default AboutPage

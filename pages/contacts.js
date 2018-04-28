@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
+import Wrapper from './components/Wrapper';
 
-import Head from 'next/head'
-
-import Header from './components/Header'
-import Footer from './components/Footer'
 import OrderCall from './components/Header/components/OrderCallModal'
 
 import Link from 'next/link';
@@ -50,13 +47,8 @@ class ContactPage extends Component {
 
         const { display } = this.state
         return (
-            <div>
-                <Head>
-                    <title>BeSmarter - Контакты</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-                </Head>
+            <Wrapper title="BeSmarter - Контакты">
                  <div className="wrapper contacts">
-                    <Header />
                     <Title name="Контакты" />
                     <OrderCall closeModal={this.closeModal}
                         display={this.state.modalIsOpen ? 'block' : 'none'} />
@@ -119,9 +111,8 @@ class ContactPage extends Component {
                         </div>
                     </section>
                     <LinksBlock links={links} />
-                    <Footer />
                 </div>
-            </div>
+            </Wrapper>
         )
     }
 }

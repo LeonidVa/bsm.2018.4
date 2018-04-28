@@ -1,7 +1,4 @@
-import Head from 'next/head'
-
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Wrapper from './components/Wrapper';
 
 import Title from './components/common/Title';
 
@@ -28,13 +25,8 @@ import links from './components/config/linksBlockConfig'
 
 
 const CandidatePage = () => (
-    <div>
-        <Head>
-            <title>BeSmarter - Кандидатская диссертация</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        </Head>
+    <Wrapper title="BeSmarter - Кандидатская диссертация">
         <div className="wrapper candidate">
-            <Header />
                 <Title name="Кандидатская диссертация" />
                     <section className="block-nav">
                         <NavRow action="Оценить работу" url='#' />
@@ -182,10 +174,9 @@ const CandidatePage = () => (
                             <Service serviceName="Диплом МВА" cost="от 4 500 ₽" time="от 2 недель" />
                         </div>
                     </section>
-                <LinksBlock links={links} />
-            <Footer />
-        </div>
-    </div>
+                <LinksBlock links={links} />           
+            </div>
+        </Wrapper>
 )
 
 export default CandidatePage

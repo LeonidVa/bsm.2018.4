@@ -1,8 +1,3 @@
-import React, { Component } from 'react';
-import Head from 'next/head';
-
-// import Header from './components/Header';
-// import Footer from './components/Footer';
 import Wrapper from './components/Wrapper';
 
 import NavRow from './components/common/NavRow';
@@ -10,15 +5,7 @@ import MessBlock from './components/common/MessagersBlock';
 import ServiceBlock from './components/common/ServiceBlock';
 import TextBlock from './components/common/TextBlock';
 
-class Index extends Component {
-
-  state = {
-    showSaleModal: false
-  }
-
-  render(){
-
-    return(
+const Index =()=>(
       <Wrapper title="BeSmarter - Главная">
         <div className="wrapper main">
               <section className="block-nav">
@@ -27,13 +14,11 @@ class Index extends Component {
                   <NavRow action="Контакты" url='contacts' />
               </section>
               <MessBlock />
-              <ServiceBlock />
+              <ServiceBlock timerColor='#ff5722'/>
               <TextBlock />
           </div>
       </Wrapper>
- 
-    )
-  }
-}
+)
+
 
 export default Index

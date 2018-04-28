@@ -1,7 +1,4 @@
-import Head from 'next/head';
-
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Wrapper from './components/Wrapper';
 
 import Title from './components/common/Title';
 
@@ -29,13 +26,8 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Element } from 'react-scroll';
 
 const DissertationPage = () => (
-    <div>
-        <Head>
-            <title>BeSmarter - Докторская диссертация</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        </Head>
-        <div className="wrapper dissertation">
-            <Header />
+                <Wrapper title="BeSmarter - Докторская диссертация">
+                    <div className="wrapper dissertation">
                        <Title name="Оценить диссертацию" />
                         <section className="block-nav">
                             <NavRow action="Заказать работу" url='#' />
@@ -215,9 +207,9 @@ const DissertationPage = () => (
                             </div>
                         </section>
                         <LinksBlock links={links} />
-            <Footer />
-        </div>
-    </div>
+            
+                </div>
+            </Wrapper>
 )
 
 export default DissertationPage

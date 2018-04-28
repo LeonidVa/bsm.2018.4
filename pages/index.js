@@ -10,7 +10,6 @@ import MessBlock from './components/common/MessagersBlock';
 import ServiceBlock from './components/common/ServiceBlock';
 import TextBlock from './components/common/TextBlock';
 
-
 class Index extends Component {
 
   state = {
@@ -20,8 +19,8 @@ class Index extends Component {
   render(){
 
     return(
-       <Wrapper title="BeSmarter - Главная">
-          <div className="wrapper main" >
+      <Wrapper title="BeSmarter - Главная">
+        <div className="wrapper main">
               <section className="block-nav">
                   <NavRow action="Заказать работу" url='#' />
                   <NavRow action="Услуги и цены" url='pricing' />
@@ -31,7 +30,7 @@ class Index extends Component {
               <ServiceBlock />
               <TextBlock />
           </div>
-        </Wrapper>
+      </Wrapper>
  
     )
   }

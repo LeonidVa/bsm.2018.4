@@ -4,18 +4,23 @@ import countdown from 'countdown';
 class Timer extends Component {
 
     state = {
-        hoursLeft: 88,
-        minutesLeft: 88,
-        secondsLeft: 88
+        hoursLeft: '88',
+        minutesLeft: '88',
+        secondsLeft: '88'
     }
 
     setCountdown = () => {
         const that = this;
 
         this.timerLoop = setInterval(() => {
-            const time = new Date()
-            const endOfDay =  time.getTime() + ((24 * 1000 * 60 * 60) - (time.getHours() * 1000 * 60 * 60 + time.getMinutes() * 1000 * 60 + time.getSeconds() * 1000 + time.getMilliseconds()))
-            let timer = countdown(null, endOfDay) 
+            let endOfTimer = window.localStorage.getItem("timer");
+            let time = new Date()
+            
+            let timer = { hours: '00', minutes: '00', seconds: '00' }
+            
+            if (time.getTime() <= endOfTimer){
+                timer = countdown(null, endOfTimer)
+            }
 
             that.setState({
                 hoursLeft: timer.hours,
@@ -24,7 +29,12 @@ class Timer extends Component {
             })
         }, 1000)
     }
+ 
     componentDidMount = () => {
+        if (!window.localStorage.getItem("timer")) {
+            const time = new Date()                          //часы, минуты, секунды, милисекунды
+            window.localStorage.setItem("timer", time.getTime() + (2 * 60 * 60 * 1000))
+        }
         this.setCountdown()
     }
 

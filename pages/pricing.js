@@ -27,6 +27,14 @@ class PricingPage extends Component {
     handleAccordions = () => {
         this.setState({ display: false })
     }
+
+    shouldComponentUpdate = (nextProps, nextState)=> {
+        if(nextState.display !== this.props.display){
+            return true
+        }
+
+        return false
+    }
     render() {
 
         const { display } = this.state

@@ -37,9 +37,11 @@ class Header extends Component{
 
     componentWillReceiveProps = (nextProps, nextState) => {
         if (nextProps.showSaleModal && nextProps.showSaleModal !== this.state.saleModalIsOpen){
-            this.setState({ saleModalIsOpen: true, dontShowSaleModalInThisSession: true})
+            this.setState({ saleModalIsOpen: true })
         }
     }
+
+    
 
     render(){
         const { showMenuMob } = this.state;

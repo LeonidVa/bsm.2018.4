@@ -1,7 +1,21 @@
+const fs = require('fs')
+var uniqid = require('uniqid');
+
 const express = require('express');
 const next = require('next');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser').json({limit:'100mb'});;
+const bodyParser = require('body-parser').json({ limit: '100mb' });;
+
+var mysql = require('mysql');
+// var connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'me',
+//     password: process.env.secret,
+//     database: 'my_db'
+// })
+
+// connection.connect();
+
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -9,64 +23,130 @@ const handle = app.getRequestHandler()
 
 app.prepare()
     .then(() => {
-            const server = express()
-            
-            server.use(bodyParser);
+        const server = express()
 
-            
-            server.get('*', (req, res) => {
-                return handle(req, res)
+        server.use(bodyParser);
+
+
+        server.get('*', (req, res) => {
+            return handle(req, res)
+        })
+
+        server.post('/api/form_data', (req, res) => {
+
+            const { name, tel, email, work, subject, topic, files } = req.body
+
+            fs.writeFile(`userData/${name+uniqid()}.txt`,
+                'Имя: '           + name    + '\n'  + 
+                'Телефон: '       + tel     + '\n'  + 
+                'Email: '         + email   + '\n'  +
+                'Вид работы: '    + work    + '\n'  +
+                'Предмет: '       + subject + '\n'  +
+                'Тема работы: '   + topic   + '\n',
+                (err) => {
+                // throws an error, you could also catch it here
+                if (err) throw err;
+
+                // success case, the file was saved
+                
             })
 
-            server.post('/api/form_data', (req, res)=>{
+            var transporter = nodemailer.createTransport(`smtps://${process.env.GMAIL_LOGIN}%40gmail.com:${process.env.GMAIL_PASSWORD}@smtp.gmail.com`);
 
-                const { name, tel, email, subject, files } = req.body
-                console.log(files)
-                var transporter = nodemailer.createTransport({
-                    service: 'gmail',
-                    auth: {
-                        user: process.env.EMAIL,
-                        pass: process.env.PASSWORD
-                    }
-                    });
-
-                    var mailOptions = {
-                        from: 'no_reply@besmarter.ru',
-                        to: process.env.EMAIL,
-                        subject: 'besmarter ',
-                        html:`
+            var mailOptions = {
+                from: 'no_reply@besmarter.ru',
+                to: `${process.env.EMAIL_1}, ${process.env.EMAIL_2}`,
+                subject: 'besmarter ',
+                html: `
                             <div>
                                 <h2 style='margin-left: 15%'>Новый заказ!</h2>
                                 <ul>
                                 <li><h4>Имя: ${req.body.name}</h4></li>
                                 <li><h4>Телевон:${req.body.tel}.</h4></li>
                                 <li><h4>Email: ${email ? email : 'не указано'}</h4></li>
-                                <li><p>Я хочу заказать товар: <b>"${subject ? subject : 'не указано'}"</b></li>
+                                <li><h4>Вид работы: ${work ? work : 'не указано'}</h4></li>
+                                <li><h4>Предмет: ${subject ? subject : 'не указано'}"</h4></li>
+                                <li><h4>Тема работы: ${topic ? topic : 'не указано'}"</h4></li>
                             </ul>
                         </div>`,
-                        attachments: files ? files.map(file =>({
-                                                        'filename': file.name ? file.name : '', 
-                                                        'content': Buffer.from(file.url, 'base64'),
-                                                        'contentType': file.type ? file.type : ''
-                                                      })
-                                                    ): null
-                    };
+                // attachments: files ? files.map(file => ({
+                //     'filename': file.name ? file.name : '',
+                //     'content': Buffer.from(file.url, 'base64'),
+                //     'contentType': file.type ? file.type : ''
+                // })
+                // ) : null
+            };
 
-                    transporter.sendMail(mailOptions, function(error, info){
-                        if (error) {
-                            console.log(error);
+            if(email){
+                var mailOptionsClient = {
+                    from: 'no_reply@besmarter.ru',
+                    to: email,
+                    subject: 'besmarter ',
+                    html: `
+                            <div>
+                                  <p>Здравствуйте!</p>
+                                  <br/>
+                                  <p<p>Вашу заявку мы получили. В ближайшее время с Вами свяжется наш менеджер и ответит на все интересующие Вас вопросы.</p>
+                                  <br/>
+                                  <p>Мы работаем для Вас:</p>
+                                  <p>Понедельник - пятница:</p>
+                                  <p>с 10:00 до 19:30</p>
+                                  <p>Суббота, воскресенье -  с 10:00 до 18:30</p>
+                                  <p>НАШ ТЕЛЕФОН РАБОТАЕТ ЕЖЕДНЕВНО</p>
+                                  <p>с 8:00 до 24:00</p>
+                                  <br/>
+                                  <p>Если у Вас возникнут дополнительные вопросы, пожалуйста, обязательно пишите или звоните нам, мы всегда рады Вам помочь!</p>
+                                  <p>С уважением, - компания BeSmarter!</p>
+                                  <br/>
+                                  <p>Наши телефоны: 8 (495) 772-40-90, 8 (495) 772-90-40</p>
+                                  <p>Наша почта: zakaz@besmarter.ru</p>
+                                  <p>Наш сайт: BeSmarter.ru</p>
+                        </div>`
+                }
+            }
 
-                        } else {
-                            console.log('Email sent: ' + info.response);
-                    }
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    console.log(error);
+
+                } else {
+                    console.log('Email sent: ' + info.response);
+                }
             });
-                console.log(req.body, 'post')
-            })
-            server.listen(3000, (err) => {
-                if (err) throw err
-                console.log('> Ready on http://localhost:3000')
-            })
+
+            transporter.sendMail(mailOptionsClient, function (error, info) {
+                if (error) {
+                    console.log(error);
+
+                } else {
+                    console.log('Email sent: ' + info.response);
+                }
+            });
+
+
+            console.log(req.body, 'post')
         })
+
+        server.post('/api/save_to_db', (req, res) => {
+
+
+            for (var key in req.body) {
+                // var post = { id: 1, title: 'Hello MySQL' };
+                var query = connection.query(`INSERT INTO ${key} SET ?`, req.body[key], function (error, results, fields) {
+                    if (error) throw error;
+                    // Neat!
+                });
+                console.log(query.sql);
+            }
+
+        })
+
+        server.listen(3000, (err) => {
+            if (err) throw err
+            console.log('> Ready on http://localhost:3000')
+        })
+    })
+   
     .catch((ex) => {
         console.error(ex.stack)
         process.exit(1)

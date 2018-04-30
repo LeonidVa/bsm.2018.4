@@ -2,11 +2,13 @@
 
 npm install
 
-## Для отправки формы и файлов на email в консоли перед запуском надо прописать
+## Для отправки формы на email и обратного письма юзеру в консоли перед запуском надо прописать
 
-set EMAIL=email
+set GMAIL_LOGIN=your_gmail_login
+set GMAIL_PASSWORD=your_gmail_password
 
-set PASSWORD=password
+set MAIL_1='your_mail'
+set MAIL_2='another_mail'
 
 ## Для запуска приложения в дев моде
 

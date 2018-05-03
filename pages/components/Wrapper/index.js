@@ -16,7 +16,7 @@ class Wrapper extends Component{
         //показываем окно скидки один раз и ставим на коллдаун
         if (!window.localStorage.getItem("showSaleModal")) {
                                                                     //часы, минуты, секунды, милисекунды
-            window.localStorage.setItem("showSaleModal", time.getTime() + (1000))
+            window.localStorage.setItem("showSaleModal", time.getTime() + (2*60*60*1000))
 
             this.setState({ showSaleModal: true })
 
@@ -25,7 +25,7 @@ class Wrapper extends Component{
         if (Number(window.localStorage.getItem("showSaleModal")) < time.getTime()){
             this.setState({ showSaleModal: true })
             // обновляем коллдаун
-            window.localStorage.setItem("showSaleModal", time.getTime() + (1000))
+            window.localStorage.setItem("showSaleModal", time.getTime() + (2*60*60*1000))
         }
         
     }

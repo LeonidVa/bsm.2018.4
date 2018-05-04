@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import OrderCall from '../../Header/components/OrderCallModal';
+import OrderCall from 'components/Header/components/OrderCallModal';
 
 class OrderCallButton extends Component{
     state = {

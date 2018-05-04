@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'next/link';
-import Timer from '../Timer'
-import Service from '../Service' 
-import Work from '../Work' 
+import Timer from 'components/common/Timer'
+import Service from 'components/common/Service'
+import Work from 'components/common/Work'
 
 
 const ServiceBlock=({timerColor})=>{

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Timer from '../Timer'
+import Timer from 'components/common/Timer'
 
 class CallMeFormWithTimer extends Component{
 

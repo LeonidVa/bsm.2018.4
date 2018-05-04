@@ -6,12 +6,12 @@ import OrderCall from './components/OrderCallModal';
 import SaleModal from './components/SaleModal'
 import MenuMob from './components/MenuMob'
 
-import OrderCallButton from '../common/OrderCallButton'
+import OrderCallButton from 'components/common/OrderCallButton'
 
 
 
 import './header.scss';
-import '../../index.scss';
+import 'components/index.scss';
 
 
 class Header extends Component{

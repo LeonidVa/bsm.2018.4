@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Link from 'next/link';
 
 
-import OrderCall from '../../Header/components/OrderCallModal';
+import OrderCall from 'components/Header/components/OrderCallModal';
 
 
 class Header extends Component {

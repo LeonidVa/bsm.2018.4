@@ -1,26 +1,26 @@
-import Wrapper from './components/Wrapper';
+import Wrapper from 'components/Wrapper';
 
-import Title from './components/common/Title';
+import Title from 'components/common/Title';
 
-import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
+import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer'
 
-import NavRow from './components/common/NavRow';
-import MessBlock from './components/common/MessagersBlock';
-import InfoBlock from './components/common/InfoBlock';
-import ProfitsBlockSlider from './components/common/ProfitsBlockSlider';
-import ReviewBlockSlider from './components/common/ReviewBlockSlider';
-import ImageBlock from './components/common/ImageBlock';
-import VideoBlock from './components/common/VideoBlock';
-import OrderForm from './components/common/OrderForm';
-import Work from './components/common/Work';
-import Service from './components/common/Service';
-import LinksBlock from './components/common/LinksBlock';
+import NavRow from 'components/common/NavRow';
+import MessBlock from 'components/common/MessagersBlock';
+import InfoBlock from 'components/common/InfoBlock';
+import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
+import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
+import ImageBlock from 'components/common/ImageBlock';
+import VideoBlock from 'components/common/VideoBlock';
+import OrderForm from 'components/common/OrderForm';
+import Work from 'components/common/Work';
+import Service from 'components/common/Service';
+import LinksBlock from 'components/common/LinksBlock';
 
-import infoBlockConfig from './components/config/infoBlockConfig';
-import reviewBlockConfig from './components/config/reviewBlockConfig';
-import { profitBlockConfigShort, profitBlockConfigLong } from './components/config/profitBlockConfig';
-import { formConfig, formConfigSecond } from './components/config/formConfig';
-import links from './components/config/linksBlockConfig';
+import infoBlockConfig from 'components/config/infoBlockConfig';
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
+import { profitBlockConfigShort, profitBlockConfigLong } from 'components/config/profitBlockConfig';
+import { formConfig, formConfigSecond } from 'components/config/formConfig';
+import links from 'components/config/linksBlockConfig';
 
 import { Link as ScrollLink } from 'react-scroll';
 import { Element } from 'react-scroll';
@@ -41,7 +41,7 @@ const DissertationPage = () => (
                         </section>
                         <ProfitsBlockSlider profitBlockConfig={ profitBlockConfigLong } />
                         <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true}/>
-                        <ImageBlock imageSrc={require('../img/dissertation/1.jpg')}/>
+                        <ImageBlock imageSrc={require('img/dissertation/1.jpg')}/>
                         <section className="block-text no-bottom-padd">
                             <h2 className="block-text__title">
                                 Докторская диссертация на заказ
@@ -91,7 +91,7 @@ const DissertationPage = () => (
                                 </li>
                             </ol>
                         </section>
-                        <ImageBlock imageSrc={require('../img/dissertation/2.jpg')} />
+                        <ImageBlock imageSrc={require('img/dissertation/2.jpg')} />
                         <section className="block-text">
 
                             <h2 className="block-text__title">
@@ -169,7 +169,7 @@ const DissertationPage = () => (
                                 Во время написания докторской диссертации мы одновременно подготовим также ряд статей ВАК для докторской диссертации и опубликуем их в научных журналах.
                             </p>
                         </section>
-                        <ImageBlock imageSrc={require('../img/contacts/1.jpg')}/>
+                        <ImageBlock imageSrc={require('img/contacts/1.jpg')}/>
                         <section className="block-text">
                             <h2 className="block-text__title">
                                 Сколько стоит докторская диссертация

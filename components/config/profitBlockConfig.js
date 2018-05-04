@@ -1,13 +1,13 @@
-import profit_1 from '../../../img/profits/profit-1.svg';
-import profit_2 from '../../../img/profits/profit-2.svg';
-import profit_3 from '../../../img/profits/profit-3.svg';
+import profit_1 from 'img/profits/profit-1.svg';
+import profit_2 from 'img/profits/profit-2.svg';
+import profit_3 from 'img/profits/profit-3.svg';
 
-import slideProfit_1 from '../../../img/slide-profits/1.svg';
-import slideProfit_2 from '../../../img/slide-profits/2.svg'
-import slideProfit_3 from '../../../img/slide-profits/3.svg'
-import slideProfit_4 from '../../../img/slide-profits/4.svg'
-import slideProfit_5 from '../../../img/slide-profits/5.svg'
-import slideProfit_6 from '../../../img/slide-profits/6.svg'
+import slideProfit_1 from 'img/slide-profits/1.svg';
+import slideProfit_2 from 'img/slide-profits/2.svg'
+import slideProfit_3 from 'img/slide-profits/3.svg'
+import slideProfit_4 from 'img/slide-profits/4.svg'
+import slideProfit_5 from 'img/slide-profits/5.svg'
+import slideProfit_6 from 'img/slide-profits/6.svg'
 
 export const profitBlockConfigShort = [
     { 

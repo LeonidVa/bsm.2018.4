@@ -70,7 +70,7 @@ app.prepare()
                 })
 
                 function saveAndSend(id){
-                    fs.writeFile(`userData/${name}__${id ? id : uniqid()}.txt`,
+                    fs.writeFile(`userData/${id ? id : uniqid()}.txt`,
                         'Номер заявки: '  + id      + '\n'  + 
                         'Имя: '           + name    + '\n'  + 
                         'Телефон: '       + tel     + '\n'  + 

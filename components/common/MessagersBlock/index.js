@@ -1,10 +1,10 @@
 import Color from 'color';
 
-import messeger from '../../../../img/messegers/messeger.svg'
-import telegram from '../../../../img/messegers/telegram.svg'
-import viber from '../../../../img/messegers/viber.svg'
-import wechat from '../../../../img/messegers/wechat.svg'
-import whatsup from '../../../../img/messegers/whatsup.svg'
+import messeger from 'img/messegers/messeger.svg'
+import telegram from 'img/messegers/telegram.svg'
+import viber from 'img/messegers/viber.svg'
+import wechat from 'img/messegers/wechat.svg'
+import whatsup from 'img/messegers/whatsup.svg'
 
 
 //import './MessagersBlock.scss'

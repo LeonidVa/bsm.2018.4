@@ -4,7 +4,6 @@ import Dropzone from 'react-dropzone';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
 import Dropdown from 'react-dropdown'
-import 'react-dropdown/style.scss'
 import Recaptcha from "react-google-recaptcha";
 
 

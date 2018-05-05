@@ -70,7 +70,36 @@ class OrderForm extends Component {
             if (field.required) {
                 rlabel = <span title="Обязательное поле">*</span>
             }
-            if (field.name !== 'file') {
+            if (field.name === 'file') {
+                return (
+                    <div className="block-form__item"
+                         key={field.id}
+                         style={{
+                             opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
+                             maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
+                             visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
+                             height: "auto",
+                         }}>
+
+                        <div className="dropzone" style={{fontSize: '14px'}}>
+                            <Dropzone
+                                onDrop={this.onDrop.bind(this)}
+                                multiple={true}>
+                                <a>Добавить файл</a>
+                            </Dropzone>
+                        </div>
+
+                        <ul>
+                            {
+                                this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.name}
+                                    <FontAwesomeIcon icon={close} className="block-form__close" onClick={() => this.removeFile(i)}/>
+                                </li>)
+                            }
+                        </ul>
+
+                    </div>
+                )
+            } else {
                 if (field.name === 'work') {
                     return (
                         <div key={field.id}
@@ -155,34 +184,7 @@ class OrderForm extends Component {
                         </div>
                     )
                 }
-            } else {
-                return (
-                    <div className="block-form__item"
-                         key={field.id}
-                         style={{
-                             opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
-                             maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
-                             visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
-                         }}>
 
-                        <div className="dropzone" style={{fontSize: '14px'}}>
-                            <Dropzone
-                                onDrop={this.onDrop.bind(this)}
-                                multiple={true}>
-                                <a>Добавить файл</a>
-                            </Dropzone>
-                        </div>
-
-                        <ul>
-                            {
-                                this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.name}
-                                    <FontAwesomeIcon icon={close} className="block-form__close" onClick={() => this.removeFile(i)}/>
-                                </li>)
-                            }
-                        </ul>
-
-                    </div>
-                )
             }
         })
     }

@@ -1,12 +1,12 @@
 const fs = require('fs')
-var uniqid = require('uniqid');
+let uniqid = require('uniqid');
 const express = require('express');
 const next = require('next');
 const bodyParser = require('body-parser').json({limit: '100mb'});
 const nodemailer = require('nodemailer');
 const requestIp = require('request-ip');
-var axios = require('axios')
-var mysql = require('mysql');
+let axios = require('axios')
+let mysql = require('mysql');
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
 const handle = app.getRequestHandler()

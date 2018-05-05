@@ -8,7 +8,7 @@ const nextConfig = {
         config.resolve.alias.components = __dirname + '/components/';
         return config
     },
-    assetPrefix: 'https://cdn.mydomain.com',
+    //assetPrefix: 'https://cdn.mydomain.com',
 };
 
 

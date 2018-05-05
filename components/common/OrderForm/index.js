@@ -9,13 +9,18 @@ import Recaptcha from "react-google-recaptcha";
 
 import axios from 'axios';
 
+
+/* fields are stored in /components/config/formConfig.js */
 class OrderForm extends Component {
     state = {
         name: '',
-        tel: '',
+        phone: '',
         email: '',
-        work: 'Укажите тип работы',
-        subject: '',
+        theme: '',
+        worktype: 'Укажите тип работы',
+        discipline: '',
+        deadline: '',
+        size: '',
         topic: '',
         files: [],
         fileName: 'Добавить файл',
@@ -60,16 +65,22 @@ class OrderForm extends Component {
     }
 
     handleWork = (e) => {
-        this.setState({work: e.value})
+
+
+        console.log(e)
+        console.log(this)
+        this.setState({worktype: e.value})
     }
+
 
     renderForm = () => {
         const {formConfig} = this.props
-        return formConfig.map((field) => {
+        return formConfig.map((field, index) => {
             let rlabel = ""
             if (field.required) {
                 rlabel = <span title="Обязательное поле">*</span>
             }
+            field.id = 'field-' + index + '-' + field.name
             if (field.name === 'file') {
                 return (
                     <div className="block-form__item"
@@ -100,67 +111,19 @@ class OrderForm extends Component {
                     </div>
                 )
             } else {
-                if (field.name === 'work') {
+                if (field.type === 'dropdown') {
                     return (
-                        <div key={field.id}
+                        <div className="block-form__item"
+                             key={field.id}
                              style={{
                                  opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
                                  maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
                                  visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
                              }}>
-                            <label htmlFor={field.id}>{field.label}</label>
+                            <label htmlFor={field.id}>{field.label}{rlabel}</label>
                             <Dropdown
-                                placeholder="form-field"
-                                className="block-form__item"
-                                value={this.state.work}
-                                onChange={(e) => this.handleWork(e)}
-                                options={[
-                                    {value: "Дипломная работа", label: "Дипломная работа"},
-                                    {value: "Дипломный проект", label: "Дипломный проект"},
-                                    {value: "Магистерская диссертация", label: "Магистерская диссертация"},
-                                    {value: "Диплом МВА", label: "Диплом МВА"},
-                                    {value: "Кейс Мва", label: "Кейс Мва"},
-                                    {value: "Курсовая работа теоретическая", label: "Курсовая работа теоретическая"},
-                                    {value: "Курсовая работа практическая", label: "Курсовая работа практическая"},
-                                    {value: "Курсовой проект", label: "Курсовой проект"},
-                                    {value: "Доработка диплома", label: "Доработка диплома"},
-                                    {value: "Доработка курсового", label: "Доработка курсового"},
-                                    {value: "Отчёт по производственной практике", label: "Отчёт по производственной практике"},
-                                    {value: "Отчет по преддипломной практике", label: "Отчет по преддипломной практике"},
-                                    {value: "Реферат", label: "Реферат"},
-                                    {value: "Контрольная работа", label: "Контрольная работа"},
-                                    {value: "Решение задач", label: "Решение задач"},
-                                    {value: "Аналитический отчет", label: "Аналитический отчет"},
-                                    {value: "Статья", label: "Статья"},
-                                    {value: "Тесты", label: "Тесты"},
-                                    {value: "Ответы на вопросы", label: "Ответы на вопросы"},
-                                    {value: "Онлайн тесты", label: "Онлайн тесты"},
-                                    {value: "Эссе", label: "Эссе"},
-                                    {value: "Бизнес план", label: "Бизнес план"},
-                                    {value: "Перевод текста", label: "Перевод текста"},
-                                    {value: "Материлы к защите", label: "Материлы к защите"},
-                                    {value: "Отзыв", label: "Отзыв"},
-                                    {value: "Рецензия", label: "Рецензия"},
-                                    {value: "Аннотация", label: "Аннотация"},
-                                    {value: "Иная работа", label: "Иная работа"},
-                                    {value: "Чертежи", label: "Чертежи"},
-                                    {value: "Асп реферат", label: "Асп реферат"},
-                                    {value: "Диссертация", label: "Диссертация"},
-                                    {value: "Докторская", label: "Докторская"},
-                                    {value: "Cтатья ВАК", label: "Cтатья ВАК"},
-                                    {value: "Презентация", label: "Презентация"},
-                                    {value: "Отчет по практике", label: "Отчет по практике"},
-                                    {value: "Речь/доклад", label: "Речь/доклад"},
-                                    {value: "Слайды", label: "Слайды"},
-                                    {value: "Раздаток", label: "Раздаток"},
-                                    {value: "Плакаты А2, А3", label: "Плакаты А2, А3"},
-                                    {value: "Титульный лист", label: "Титульный лист"},
-                                    {value: "Последний лист", label: "Последний лист"},
-                                    {value: "АП проверка", label: "АП проверка"},
-                                    {value: "АП сертификат", label: "АП сертификат"},
-                                    {value: "Шпаргалки", label: "Шпаргалки"},
-                                    {value: "Корректура", label: "Корректура"}
-                                ]}
+                                onChange={(e) => this.setState({[field.name]: e.value, placeholder: e.label, label: e.label})}
+                                options={field.options}
                             />
                         </div>
                     )

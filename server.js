@@ -1,12 +1,12 @@
-const fs = require('fs')
-let uniqid = require('uniqid');
+const fs = require('fs');
+const path = require('path');
+const uniqid = require('uniqid');
 const express = require('express');
 const next = require('next');
 const bodyParser = require('body-parser').json({limit: '100mb'});
 const nodemailer = require('nodemailer');
 const requestIp = require('request-ip');
-let axios = require('axios')
-let mysql = require('mysql');
+const axios = require('axios')
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
 const handle = app.getRequestHandler()
@@ -21,86 +21,89 @@ app.prepare()
             return handle(req, res)
         });
         server.post('/api/form_data', (req, res) => {
-            const {name, tel, email, work, subject, topic, files, verified} = req.body
+            const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, verified} = req.body
             if (verified) {
-                axios.post('site.com/api/orders/new',
-                    JSON.stringify(
-                        {
+                axios.post('https://orders.besma.ru/api/orders/new', {
+                        data: {
                             source: "site",
                             brand: "besmarter",
                             remote_addr: requestIp.getClientIp(req),
-                            name, tel, email, work, subject, topic,
+                            name, phone, email, theme, worktype, discipline, deadline, size, comment,
                             files: files.map(file => file.name)
                         }
-                    )
-                ).then((res) => {
-                    if (res && !res.error) {
-
-                        saveAndSend(res.id)
-                        res.send({error: false, id, msg: 'заявка успешно отправлена'})
-                    } else if (res && res.error) {
-
-                        saveAndSend()
-                        res.send({error: true, msg: res.msg})
                     }
-
+                ).then((reply) => {
+                    console.log(reply.data);
+                    //console.log(reply.data.message)
+                    if (reply) {
+                        if (reply.data.error) {
+                            saveAndSend();
+                            res.send({error: true, msg: reply.data.msg})
+                        } else {
+                            saveAndSend(reply.id);
+                            res.send({error: false, id: reply.data.id, msg: 'заявка успешно отправлена'})
+                        }
+                    }
                 }).catch((error) => {
-
+                    console.log(error)
                     saveAndSend()
                     res.send({error: true, msg: error})
                 })
 
                 function saveAndSend(id) {
-                    fs.writeFile(`userData/${id ? id : uniqid()}.txt`,
+                    let orderLog = "";
+                    if (typeof id === "undefined") {
+                        id = "НЕТ";
+                        orderLog = uniqid()
+                    } else {
+                        orderLog = id
+                    }
+                    orderLog = String(Math.floor(new Date() / 1000)) + "-" + orderLog;
+                    let text = '' +
                         'Номер заявки: ' + id + '\n' +
                         'Имя: ' + name + '\n' +
-                        'Телефон: ' + tel + '\n' +
+                        'Телефон: ' + phone + '\n' +
                         'Email: ' + email + '\n' +
-                        'Вид работы: ' + work + '\n' +
-                        'Предмет: ' + subject + '\n' +
-                        'Тема работы: ' + topic + '\n',
+                        'Тема: ' + theme + '\n' +
+                        'Предмет: ' + discipline + '\n' +
+                        'Срок сдачи: ' + deadline + '\n' +
+                        'Объём: ' + size + '\n' +
+                        'Комментарии: ' + comment + '\n';
+                    fs.writeFile(`userData/` + orderLog + `.txt`,
+                        text,
                         (err) => {
                             // throws an error, you could also catch it here
                             if (err) throw err;
-
                             // success case, the file was saved
-
-                        })
-
+                        });
                     if (files) {
-
-                        files.map(file => {
-                            fs.writeFile(`userData/${name}__${id ? id : uniqid()}__${file.name}`,
+                        /*create folder to store files*/
+                        let dir = `userData/files/` + orderLog;
+                        if (!fs.existsSync(dir)) {
+                            fs.mkdirSync(dir);
+                        }
+                        files.map((file, index) => {
+                            if (file.name === undefined) {
+                                file.name = 'file-' + index
+                            }
+                            if (file.url === undefined) {
+                                file.url = ''
+                            }
+                            fs.writeFile(dir + '/' + path.basename(file.name),
                                 Buffer.from(file.url, 'base64'),
                                 (err) => {
                                     // throws an error, you could also catch it here
                                     if (err) throw err;
-
                                     // success case, the file was saved
-
                                 })
-
                         });
                     }
-
-                    var transporter = nodemailer.createTransport(`smtps://${process.env.GMAIL_LOGIN}%40gmail.com:${process.env.GMAIL_PASSWORD}@smtp.gmail.com`);
-
-                    var mailOptions = {
-                        from: 'no_reply@besmarter.ru',
+                    let transporter = nodemailer.createTransport(`smtps://${process.env.GMAIL_LOGIN}%40gmail.com:${process.env.GMAIL_PASSWORD}@smtp.gmail.com`);
+                    let mailManagerOptions = {
+                        from: 'noreply@besmarter.ru',
                         to: `${process.env.EMAIL_1}, ${process.env.EMAIL_2}`,
-                        subject: 'besmarter ',
-                        html: `
-                                    <div>
-                                        <h2 style='margin-left: 15%'>Новый заказ!</h2>
-                                        <ul>
-                                        <li><h4>Имя: ${req.body.name}</h4></li>
-                                        <li><h4>Телевон:${req.body.tel}.</h4></li>
-                                        <li><h4>Email: ${email ? email : 'не указано'}</h4></li>
-                                        <li><h4>Вид работы: ${work ? work : 'не указано'}</h4></li>
-                                        <li><h4>Предмет: ${subject ? subject : 'не указано'}"</h4></li>
-                                        <li><h4>Тема работы: ${topic ? topic : 'не указано'}"</h4></li>
-                                    </ul>
-                                </div>`,
+                        subject: 'besmarter',
+                        text: text,
                         // attachments: files ? files.map(file => ({
                         //     'filename': file.name ? file.name : '',
                         //     'content': Buffer.from(file.url, 'base64'),
@@ -108,17 +111,26 @@ app.prepare()
                         // })
                         // ) : null
                     };
+                    // transporter.sendMail(mailManagerOptions, function (error, info) {
+                    //     if (error) {
+                    //         console.log(error);
+
+                    //     } else {
+                    //         console.log('Email sent: ' + info.response);
+                    //     }
+                    // });
 
                     if (email) {
-                        var mailOptionsClient = {
-                            from: 'no_reply@besmarter.ru',
+                        /* if user sent us an email address - send our email to user's email :D */
+                        let mailClientOptions = {
+                            from: 'noreply@besmarter.ru',
                             to: email,
-                            subject: 'besmarter ',
+                            subject: 'besmarter',
                             html: `
                                     <div>
                                         <p>Здравствуйте!</p>
                                         <br/>
-                                        <p<p>Вашу заявку мы получили. В ближайшее время с Вами свяжется наш менеджер и ответит на все интересующие Вас вопросы.</p>
+                                        <p>Вашу заявку мы получили. В ближайшее время с Вами свяжется наш менеджер и ответит на все интересующие Вас вопросы.</p>
                                         <br/>
                                         <p>Мы работаем для Вас:</p>
                                         <p>Понедельник - пятница:</p>
@@ -135,35 +147,25 @@ app.prepare()
                                         <p>Наш сайт: BeSmarter.ru</p>
                                 </div>`
                         }
+                        // transporter.sendMail(mailClientOptions, function (error, info) {
+                        //     if (error) {
+                        //         console.log(error);
+
+                        //     } else {
+                        //         console.log('Email sent: ' + info.response);
+                        //     }
+                        // });
                     }
-
-                    // transporter.sendMail(mailOptions, function (error, info) {
-                    //     if (error) {
-                    //         console.log(error);
-
-                    //     } else {
-                    //         console.log('Email sent: ' + info.response);
-                    //     }
-                    // });
-
-                    // transporter.sendMail(mailOptionsClient, function (error, info) {
-                    //     if (error) {
-                    //         console.log(error);
-
-                    //     } else {
-                    //         console.log('Email sent: ' + info.response);
-                    //     }
-                    // });
                 }
             }
-
-            console.log(req.body, 'post')
+            //console.log(req.body, 'post')
         });
-        server.listen(3000, (err) => {
+        let port = 3000;
+        server.listen(port, (err) => {
             if (err) {
                 throw err;
             }
-            console.log('> Ready on http://localhost:3000')
+            console.log('> Ready on http://localhost:' + port)
         })
     })
     .catch((ex) => {

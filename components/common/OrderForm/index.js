@@ -189,7 +189,7 @@ class OrderForm extends Component {
             return (
                 <div className="block-form" style={{border: 'none'}}>
                     <img width="100%" src={require('img/form_sended.jpg') }/>
-                    <p className="block-text__par">Номер заявки: {this.state.formSended.number}</p>
+                    <p className="block-text__par">{this.state.formSended.number ? `Номер заявки: ${this.state.formSended.number}`: ''}</p>
                
                 </div>
             )

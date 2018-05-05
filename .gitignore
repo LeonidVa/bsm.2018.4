@@ -3,4 +3,5 @@
 node_modules
 *.log
 yarn.lock
+userData
 **/Thumbs.db

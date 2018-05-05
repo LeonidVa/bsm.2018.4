@@ -1,94 +1,75 @@
 const fs = require('fs')
 var uniqid = require('uniqid');
-
 const express = require('express');
 const next = require('next');
-const bodyParser = require('body-parser').json({ limit: '100mb' });;
-
+const bodyParser = require('body-parser').json({limit: '100mb'});
 const nodemailer = require('nodemailer');
 const requestIp = require('request-ip');
 var axios = require('axios')
 var mysql = require('mysql');
-// var connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'me',
-//     password: process.env.secret,
-//     database: 'my_db'
-// })
-
-// connection.connect();
-
-
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const app = next({dev})
 const handle = app.getRequestHandler()
+const compression = require('compression')
 
 app.prepare()
     .then(() => {
-        const server = express()
-
+        const server = express();
         server.use(bodyParser);
-
+        server.use(compression())
         server.get('*', (req, res) => {
             return handle(req, res)
-        })
-
+        });
         server.post('/api/form_data', (req, res) => {
-
-
-
-
-            const { name, tel, email, work, subject, topic, files, verified } = req.body
- 
-            if(verified){
-
-                axios.post('site.com/api/orders/new', 
+            const {name, tel, email, work, subject, topic, files, verified} = req.body
+            if (verified) {
+                axios.post('site.com/api/orders/new',
                     JSON.stringify(
-                        { 
-                          source: "site", 
-                          brand: "besmarter", 
-                          remote_addr: requestIp.getClientIp(req), 
-                          name, tel, email, work, subject, topic, 
-                          files: files.map(file=>file.name) 
+                        {
+                            source: "site",
+                            brand: "besmarter",
+                            remote_addr: requestIp.getClientIp(req),
+                            name, tel, email, work, subject, topic,
+                            files: files.map(file => file.name)
                         }
                     )
-                ).then((res)=>{
-                    if(res && !res.error){
-                        
+                ).then((res) => {
+                    if (res && !res.error) {
+
                         saveAndSend(res.id)
                         res.send({error: false, id, msg: 'заявка успешно отправлена'})
-                    }else if(res && res.error){
+                    } else if (res && res.error) {
 
                         saveAndSend()
                         res.send({error: true, msg: res.msg})
                     }
-                   
-                }).catch((error)=>{
+
+                }).catch((error) => {
 
                     saveAndSend()
                     res.send({error: true, msg: error})
                 })
 
-                function saveAndSend(id){
+                function saveAndSend(id) {
                     fs.writeFile(`userData/${id ? id : uniqid()}.txt`,
-                        'Номер заявки: '  + id      + '\n'  + 
-                        'Имя: '           + name    + '\n'  + 
-                        'Телефон: '       + tel     + '\n'  + 
-                        'Email: '         + email   + '\n'  +
-                        'Вид работы: '    + work    + '\n'  +
-                        'Предмет: '       + subject + '\n'  +
-                        'Тема работы: '   + topic   + '\n',
+                        'Номер заявки: ' + id + '\n' +
+                        'Имя: ' + name + '\n' +
+                        'Телефон: ' + tel + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Вид работы: ' + work + '\n' +
+                        'Предмет: ' + subject + '\n' +
+                        'Тема работы: ' + topic + '\n',
                         (err) => {
-                        // throws an error, you could also catch it here
-                        if (err) throw err;
+                            // throws an error, you could also catch it here
+                            if (err) throw err;
 
-                        // success case, the file was saved
-                        
-                    })
+                            // success case, the file was saved
 
-                    if(files){
+                        })
 
-                        files.map(file=>{
+                    if (files) {
+
+                        files.map(file => {
                             fs.writeFile(`userData/${name}__${id ? id : uniqid()}__${file.name}`,
                                 Buffer.from(file.url, 'base64'),
                                 (err) => {
@@ -98,8 +79,8 @@ app.prepare()
                                     // success case, the file was saved
 
                                 })
-                                
-                            });
+
+                        });
                     }
 
                     var transporter = nodemailer.createTransport(`smtps://${process.env.GMAIL_LOGIN}%40gmail.com:${process.env.GMAIL_PASSWORD}@smtp.gmail.com`);
@@ -128,7 +109,7 @@ app.prepare()
                         // ) : null
                     };
 
-                    if(email){
+                    if (email) {
                         var mailOptionsClient = {
                             from: 'no_reply@besmarter.ru',
                             to: email,
@@ -177,17 +158,15 @@ app.prepare()
             }
 
             console.log(req.body, 'post')
-        })
-
-        
-
+        });
         server.listen(3000, (err) => {
-            if (err) throw err
+            if (err) {
+                throw err;
+            }
             console.log('> Ready on http://localhost:3000')
         })
     })
-   
     .catch((ex) => {
-        console.error(ex.stack)
+        console.error(ex.stack);
         process.exit(1)
-    })
+    });

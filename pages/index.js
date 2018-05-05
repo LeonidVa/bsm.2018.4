@@ -1,9 +1,9 @@
-import Wrapper from './components/Wrapper';
+import Wrapper from 'components/Wrapper';
 
-import NavRow from './components/common/NavRow';
-import MessBlock from './components/common/MessagersBlock';
-import ServiceBlock from './components/common/ServiceBlock';
-import TextBlock from './components/common/TextBlock';
+import NavRow from 'components/common/NavRow';
+import MessBlock from 'components/common/MessagersBlock';
+import ServiceBlock from 'components/common/ServiceBlock';
+import TextBlock from 'components/common/TextBlock';
 
 
 const Index =()=>(

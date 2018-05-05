@@ -1,0 +1,121 @@
+
+.block-form3,
+.block-form4 {
+    font-size: 2em;
+    width: 30.94em;
+    max-width: 100%;
+    margin: 1.56em auto 0;
+    position: relative;
+    z-index: 1;
+    background-image: url(~img/form2-bg.jpg);
+    background-size: cover;
+    background-position: right top;
+    padding: 3.56em 2.688em 3.25em;
+    color: #fff;
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+    @media (max-width: 660px) {
+        font-size: 1.375em;
+        padding: 1em 0.75em 1.56em;
+    }
+    &__title {
+        font-size: 1em;
+        margin-bottom: .56em;
+    }
+    &__timer {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        justify-content: space-between;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        font-size: 1em;
+        width: 14.9em;
+        margin-bottom: .875em;
+        @media (max-width: 660px) {
+            display: block;
+        }
+        .timer {
+            @media (max-width: 660px) {
+                display: inline-block;
+                margin-bottom: 5px;
+                height: 41px;
+            }
+            #timer-number-value-38e9b0596ba7d6aee1536869e6ec8a9b-hours,
+            #timer-number-value-38e9b0596ba7d6aee1536869e6ec8a9b-minutes,
+            #timer-number-value-38e9b0596ba7d6aee1536869e6ec8a9b-secundes,
+            #timer-number-value-330221abbef6d25e10a8dfe18a9c5460-hours,
+            #timer-number-value-330221abbef6d25e10a8dfe18a9c5460-minutes,
+            #timer-number-value-330221abbef6d25e10a8dfe18a9c5460-secundes {
+                font-size: 48px;
+                @media (max-width: 660px) {
+                    font-size: 41px;
+                }
+            }
+            .timer-separator {
+                font-size: 42px !important;
+                @media (max-width: 660px) {
+                    font-size: 34px;
+                }
+            }
+        }
+        p {
+            font-size: .688em;
+            line-height: normal;
+            width: 11.62em;
+        }
+    }
+    form {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        justify-content: space-between;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        font-size: 1em;
+        width: 14.9em;
+        input {
+            font-size: .469em;
+            width: 14.73em;
+            height: 3em;
+            padding: 0 .67em;
+            color: #4a4a4a;
+            border: none;
+            &:focus {
+                border: 1px solid #f4511e;
+            }
+            @media (max-width: 660px) {
+                display: none;
+            }
+        }
+        button {
+            font-size: .56em;
+            width: 12.28em;
+            height: 2.78em;
+            color: #fff;
+            border: none;
+            background-color: #f4511e;
+            cursor: pointer;
+            transition: all .4s;
+            &:hover {
+                background-color: #922d0e;
+            }
+            @media (max-width: 660px) {
+                font-size: .81em;
+            }
+        }
+    }
+}

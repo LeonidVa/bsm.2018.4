@@ -1,19 +1,19 @@
-import Wrapper from './components/Wrapper';
+import Wrapper from 'components/Wrapper';
 
-import Title from './components/common/Title';
-import ProfitsBlockSlider from './components/common/ProfitsBlockSlider';
-import ReviewBlockSlider from './components/common/ReviewBlockSlider';
-import ImageBlock from './components/common/ImageBlock';
-import OrderForm from './components/common/OrderForm';
-import Work from './components/common/Work';
-import Service from './components/common/Service';
-import LinksBlock from './components/common/LinksBlock';
+import Title from 'components/common/Title';
+import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
+import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
+import ImageBlock from 'components/common/ImageBlock';
+import OrderForm from 'components/common/OrderForm';
+import Work from 'components/common/Work';
+import Service from 'components/common/Service';
+import LinksBlock from 'components/common/LinksBlock';
 
 
-import { formConfig } from './components/config/formConfig'
-import { profitBlockConfigShort } from './components/config/profitBlockConfig';
-import reviewBlockConfig from './components/config/reviewBlockConfig';
-import links from './components/config/linksBlockConfig'
+import { formConfig } from 'components/config/formConfig'
+import { profitBlockConfigShort } from 'components/config/profitBlockConfig';
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
+import links from 'components/config/linksBlockConfig'
 
 const GuaranteesPage = () => (
     <Wrapper title="BeSmarter - Гарантии">
@@ -117,7 +117,7 @@ const GuaranteesPage = () => (
                         Нас выбирают студенты, для которых качество всегда стоит на первом месте. Обращайтесь, и будете уверены в успешной защите дипломного проекта!
                 </p>
                 </section>
-                <ImageBlock imageSrc={require('../img/contacts/1.jpg')} />
+                <ImageBlock imageSrc={require('img/contacts/1.jpg')} />
                 <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
                 <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
                 <section className="block-service diplom-work-serv">

@@ -1,143 +1,109 @@
-const fs = require('fs')
-var uniqid = require('uniqid');
-
+const fs = require('fs');
+const path = require('path');
+const uniqid = require('uniqid');
 const express = require('express');
 const next = require('next');
-const bodyParser = require('body-parser').json({ limit: '100mb' });;
-
+const bodyParser = require('body-parser').json({limit: '100mb'});
 const nodemailer = require('nodemailer');
 const requestIp = require('request-ip');
-var axios = require('axios')
-var mysql = require('mysql');
-// var connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'me',
-//     password: process.env.secret,
-//     database: 'my_db'
-// })
-
-// connection.connect();
-
-
+const axios = require('axios')
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const app = next({dev})
 const handle = app.getRequestHandler()
+const compression = require('compression')
 
 app.prepare()
     .then(() => {
-        const server = express()
-
+        const server = express();
         server.use(bodyParser);
-
+        server.use(compression())
         server.get('*', (req, res) => {
             return handle(req, res)
-        })
-
+        });
         server.post('/api/form_data', (req, res) => {
-
-
-
-
-            const { name, tel, email, work, subject, topic, files, verified } = req.body
- 
-            if(verified){
-
-                axios.post('site.com/api/orders/new', 
-                    JSON.stringify(
-                        { 
-                          source: "site", 
-                          brand: "besmarter", 
-                          remote_addr: requestIp.getClientIp(req), 
-                          name, tel, email, work, subject, topic, 
-                          files: files.map(file=>file.name) 
-                        }
-                    )
-                ).then((res)=>{
-                    if(res && !res.error){
-                        
-                        saveAndSend(res.id)
-                        res.send({error: false, id, msg: 'заявка успешно отправлена'})
-                    }else if(res && res.error){
-
-                        saveAndSend()
-                        res.send({error: true, msg: res.msg})
-                    }
-                   
-                }).catch((error)=>{
-
-                    saveAndSend()
-                    res.send({error: true, msg: error})
-                })
-
-                function saveAndSend(id){
-                    fs.writeFile(`userData/${name}__${id ? id : uniqid()}.txt`,
-                        'Номер заявки: '  + id      + '\n'  + 
-                        'Имя: '           + name    + '\n'  + 
-                        'Телефон: '       + tel     + '\n'  + 
-                        'Email: '         + email   + '\n'  +
-                        'Вид работы: '    + work    + '\n'  +
-                        'Предмет: '       + subject + '\n'  +
-                        'Тема работы: '   + topic   + '\n',
-                        (err) => {
+            const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, verified} = req.body
+            
+            function saveAndSend(response, id) {
+                let orderLog = "";
+                if (typeof id === "undefined") {
+                    id = "НЕТ";
+                    orderLog = uniqid()
+                } else {
+                    orderLog = id
+                }
+                orderLog = String(Math.floor(new Date() / 1000)) + "-" + orderLog;
+                let text = '' +
+                    'Номер заявки: ' + id + '\n' +
+                    'Имя: ' + name + '\n' +
+                    'Телефон: ' + phone + '\n' +
+                    'Email: ' + email + '\n' +
+                    'Тема: ' + theme + '\n' +
+                    'Предмет: ' + discipline + '\n' +
+                    'Срок сдачи: ' + deadline + '\n' +
+                    'Объём: ' + size + '\n' +
+                    'Комментарии: ' + comment + '\n';
+                fs.writeFile(`userData/` + orderLog + `.txt`,
+                    text,
+                    (err) => {
                         // throws an error, you could also catch it here
                         if (err) throw err;
-
                         // success case, the file was saved
-                        
-                    })
-
-                    if(files){
-
-                        files.map(file=>{
-                            fs.writeFile(`userData/${name}__${id ? id : uniqid()}__${file.name}`,
-                                Buffer.from(file.url, 'base64'),
-                                (err) => {
-                                    // throws an error, you could also catch it here
-                                    if (err) throw err;
-
-                                    // success case, the file was saved
-
-                                })
-                                
-                            });
+                    });
+                if (files) {
+                    /*create folder to store files*/
+                    let dir = `userData/files/` + orderLog;
+                    if (!fs.existsSync(dir)) {
+                        fs.mkdirSync(dir);
                     }
+                    files.map((file, index) => {
+                        if (file.name === undefined) {
+                            file.name = 'file-' + index
+                        }
+                        if (file.url === undefined) {
+                            file.url = ''
+                        }
+                        fs.writeFile(dir + '/' + path.basename(file.name),
+                            Buffer.from(file.url, 'base64'),
+                            (err) => {
+                                // throws an error, you could also catch it here
+                                if (err) throw err;
+                                // success case, the file was saved
+                            })
+                    });
+                }
+                let transporter = nodemailer.createTransport(`smtps://${process.env.GMAIL_LOGIN}%40gmail.com:${process.env.GMAIL_PASSWORD}@smtp.gmail.com`);
+                let mailManagerOptions = {
+                    from: 'noreply@besmarter.ru',
+                    to: `${process.env.EMAIL_1}, ${process.env.EMAIL_2}`,
+                    subject: 'besmarter',
+                    text: text,
+                    // attachments: files ? files.map(file => ({
+                    //     'filename': file.name ? file.name : '',
+                    //     'content': Buffer.from(file.url, 'base64'),
+                    //     'contentType': file.type ? file.type : ''
+                    // })
+                    // ) : null
+                };
+                // transporter.sendMail(mailManagerOptions, function (error, info) {
+                //     if (error) {
+                //         console.log(error);
 
-                    var transporter = nodemailer.createTransport(`smtps://${process.env.GMAIL_LOGIN}%40gmail.com:${process.env.GMAIL_PASSWORD}@smtp.gmail.com`);
+                //     } else {
+                //         console.log('Email sent: ' + info.response);
+                //     }
+                // });
 
-                    var mailOptions = {
-                        from: 'no_reply@besmarter.ru',
-                        to: `${process.env.EMAIL_1}, ${process.env.EMAIL_2}`,
-                        subject: 'besmarter ',
+                if (email) {
+                    /* if user sent us an email address - send our email to user's email :D */
+                    let mailClientOptions = {
+                        from: 'noreply@besmarter.ru',
+                        to: email,
+                        subject: 'besmarter',
                         html: `
-                                    <div>
-                                        <h2 style='margin-left: 15%'>Новый заказ!</h2>
-                                        <ul>
-                                        <li><h4>Имя: ${req.body.name}</h4></li>
-                                        <li><h4>Телевон:${req.body.tel}.</h4></li>
-                                        <li><h4>Email: ${email ? email : 'не указано'}</h4></li>
-                                        <li><h4>Вид работы: ${work ? work : 'не указано'}</h4></li>
-                                        <li><h4>Предмет: ${subject ? subject : 'не указано'}"</h4></li>
-                                        <li><h4>Тема работы: ${topic ? topic : 'не указано'}"</h4></li>
-                                    </ul>
-                                </div>`,
-                        // attachments: files ? files.map(file => ({
-                        //     'filename': file.name ? file.name : '',
-                        //     'content': Buffer.from(file.url, 'base64'),
-                        //     'contentType': file.type ? file.type : ''
-                        // })
-                        // ) : null
-                    };
-
-                    if(email){
-                        var mailOptionsClient = {
-                            from: 'no_reply@besmarter.ru',
-                            to: email,
-                            subject: 'besmarter ',
-                            html: `
                                     <div>
                                         <p>Здравствуйте!</p>
                                         <br/>
-                                        <p<p>Вашу заявку мы получили. В ближайшее время с Вами свяжется наш менеджер и ответит на все интересующие Вас вопросы.</p>
+                                        <p>Вашу заявку мы получили. В ближайшее время с Вами свяжется наш менеджер и ответит на все интересующие Вас вопросы.</p>
                                         <br/>
                                         <p>Мы работаем для Вас:</p>
                                         <p>Понедельник - пятница:</p>
@@ -153,19 +119,8 @@ app.prepare()
                                         <p>Наша почта: zakaz@besmarter.ru</p>
                                         <p>Наш сайт: BeSmarter.ru</p>
                                 </div>`
-                        }
                     }
-
-                    // transporter.sendMail(mailOptions, function (error, info) {
-                    //     if (error) {
-                    //         console.log(error);
-
-                    //     } else {
-                    //         console.log('Email sent: ' + info.response);
-                    //     }
-                    // });
-
-                    // transporter.sendMail(mailOptionsClient, function (error, info) {
+                    // transporter.sendMail(mailClientOptions, function (error, info) {
                     //     if (error) {
                     //         console.log(error);
 
@@ -174,20 +129,50 @@ app.prepare()
                     //     }
                     // });
                 }
+
+
             }
 
-            console.log(req.body, 'post')
-        })
+            // console.log(req.body, 'post')
+            let answer;
+            if (verified) {
+                const res = axios.post('https://orders.besma.ru/api/orders/new', {
+                        data: {
+                            source: "site",
+                            brand: "besmarter",
+                            remote_addr: requestIp.getClientIp(req),
+                            name, phone, email, theme, worktype, discipline, deadline, size, comment,
+                            files: files.map(file => file.name)
+                        }
+                    }
+                ).then((reply) => {
+                    if (reply) {
+                        if (reply.data.error) {
+                            saveAndSend();
+                            answer = { error: false, id: reply.data.id, msg: 'заявка успешно отправлена' };
+                        } else {
+                            saveAndSend(reply.id);
+                            answer = { error: false, id: reply.data.id, msg: 'заявка успешно отправлена' }
+                        }
+                    }
+                }).catch(async(error) => {
+                    await saveAndSend()
+                    answer = { error: true, msg: error }
+                    res.write(answer)
+                })
+            }
+            
+        });
 
-        
-
-        server.listen(3000, (err) => {
-            if (err) throw err
-            console.log('> Ready on http://localhost:3000')
+        let port = 3000;
+        server.listen(port, (err) => {
+            if (err) {
+                throw err;
+            }
+            console.log('> Ready on http://localhost:' + port)
         })
     })
-   
     .catch((ex) => {
-        console.error(ex.stack)
+        console.error(ex.stack);
         process.exit(1)
-    })
+    });

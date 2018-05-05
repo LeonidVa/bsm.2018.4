@@ -1,26 +1,26 @@
-import Wrapper from './components/Wrapper';
+import Wrapper from 'components/Wrapper';
 
-import Title from './components/common/Title';
+import Title from 'components/common/Title';
 
-import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
+import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer'
 
-import NavRow from './components/common/NavRow';
-import MessBlock from './components/common/MessagersBlock';
-import InfoBlock from './components/common/InfoBlock';
-import ProfitsBlockSlider from './components/common/ProfitsBlockSlider';
-import ReviewBlockSlider from './components/common/ReviewBlockSlider';
-import ImageBlock from './components/common/ImageBlock';
-import VideoBlock from './components/common/VideoBlock';
-import OrderForm from './components/common/OrderForm';
-import Work from './components/common/Work';
-import Service from './components/common/Service';
-import LinksBlock from './components/common/LinksBlock';
+import NavRow from 'components/common/NavRow';
+import MessBlock from 'components/common/MessagersBlock';
+import InfoBlock from 'components/common/InfoBlock';
+import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
+import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
+import ImageBlock from 'components/common/ImageBlock';
+import VideoBlock from 'components/common/VideoBlock';
+import OrderForm from 'components/common/OrderForm';
+import Work from 'components/common/Work';
+import Service from 'components/common/Service';
+import LinksBlock from 'components/common/LinksBlock';
 
-import infoBlockConfig from './components/config/infoBlockConfig'
-import reviewBlockConfig from './components/config/reviewBlockConfig'
-import { profitBlockConfigShort, profitBlockConfigLong } from './components/config/profitBlockConfig';
-import { formConfig, formConfigSecond } from './components/config/formConfig'
-import links from './components/config/linksBlockConfig'
+import infoBlockConfig from 'components/config/infoBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import { profitBlockConfigShort, profitBlockConfigLong } from 'components/config/profitBlockConfig';
+import { formConfig, formConfigSecond } from 'components/config/formConfig'
+import links from 'components/config/linksBlockConfig'
 
 
 
@@ -40,7 +40,7 @@ const CandidatePage = () => (
                     </section>
                     <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong} />
                     <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true} />
-                    <ImageBlock imageSrc={require('../img/candidate/1.jpg')} />
+                    <ImageBlock imageSrc={require('img/candidate/1.jpg')} />
                 
                     <section className="block-text">
                         <h2 className="block-text__title">
@@ -111,7 +111,7 @@ const CandidatePage = () => (
                         <p className="block-text__par">Здесь Вам будет удобно уточнить все тонкости и детали нашей будущей совместной работы.</p>
                     </section>
 
-                    <ImageBlock imageSrc={require('../img/candidate/1.jpg')} />
+                    <ImageBlock imageSrc={require('img/candidate/1.jpg')} />
 
                     <section className="block-text">
                         <h2 className="block-text__title">

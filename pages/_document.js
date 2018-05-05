@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-// import foxLogo from '../img/bg.jpg'
+// import foxLogo from 'img/bg.jpg'
+
 
 
 export default class MyDocument extends Document {
@@ -15,7 +16,7 @@ export default class MyDocument extends Document {
                 </Head>
                 <body>     
                     <Main/>
-                    <NextScript />    
+                    <NextScript/>
                 </body>
             </html>
         )

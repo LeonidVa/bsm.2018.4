@@ -1,26 +1,26 @@
-import Wrapper from './components/Wrapper';
+import Wrapper from 'components/Wrapper';
 
-import Title from './components/common/Title';
+import Title from 'components/common/Title';
 
-import CallMeFormWithTimer from './components/common/CallMeFormWithTimer'
+import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer'
 
-import NavRow from './components/common/NavRow';
-import MessBlock from './components/common/MessagersBlock';
-import InfoBlock from './components/common/InfoBlock';
-import ProfitsBlockSlider from './components/common/ProfitsBlockSlider';
-import ReviewBlockSlider from './components/common/ReviewBlockSlider';
-import ImageBlock from './components/common/ImageBlock';
-import VideoBlock from './components/common/VideoBlock';
-import OrderForm from './components/common/OrderForm';
-import Work from './components/common/Work';
-import Service from './components/common/Service';
-import LinksBlock from './components/common/LinksBlock';
+import NavRow from 'components/common/NavRow';
+import MessBlock from 'components/common/MessagersBlock';
+import InfoBlock from 'components/common/InfoBlock';
+import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
+import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
+import ImageBlock from 'components/common/ImageBlock';
+import VideoBlock from 'components/common/VideoBlock';
+import OrderForm from 'components/common/OrderForm';
+import Work from 'components/common/Work';
+import Service from 'components/common/Service';
+import LinksBlock from 'components/common/LinksBlock';
 
-import infoBlockConfig from './components/config/infoBlockConfig'
-import reviewBlockConfig from './components/config/reviewBlockConfig'
-import { profitBlockConfigShort, profitBlockConfigLong } from './components/config/profitBlockConfig';
-import { formConfig, formConfigSecond } from './components/config/formConfig'
-import links from './components/config/linksBlockConfig'
+import infoBlockConfig from 'components/config/infoBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import { profitBlockConfigShort, profitBlockConfigLong } from 'components/config/profitBlockConfig';
+import { formConfig, formConfigSecond } from 'components/config/formConfig'
+import links from 'components/config/linksBlockConfig'
 
 
 const DiplomePage = () => (
@@ -39,39 +39,39 @@ const DiplomePage = () => (
                 </section>
                 <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong} />
                 <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true} />
-                <ImageBlock imageSrc={require('../img/candidate/2.jpg')} />
-                <section class="block-text">
-                    <h2 class="block-text__title">
+                <ImageBlock imageSrc={require('img/candidate/2.jpg')} />
+                <section className="block-text">
+                    <h2 className="block-text__title">
                         Дипломная работа на заказ
                 </h2>
-                    <p class="block-text__par">
+                    <p className="block-text__par">
                         Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
                 </p>
-                    <p class="block-text__par">
+                    <p className="block-text__par">
                         Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
                 </p>
-                    <p class="block-text__par">
+                    <p className="block-text__par">
                         Планируете заказать диплом в Москве с выгодным предложением в соотношении цены и качества?
                 </p>
-                    <p class="block-text__par">
+                    <p className="block-text__par">
                         Наша компания BeSmarter! на протяжении многих лет специализируется на изготовлении студенческих, контрольных и научных работ.
                 </p>
-                    <p class="block-text__par">
+                    <p className="block-text__par">
                         Наши профессионалы с удовольствием возьмутся за разработку темы любой сложности и специфики.
                 </p>
-                    <p class="block-text__par">
+                    <p className="block-text__par">
                         Дипломная работа на заказ разрабатывается на основании большого количества литературных сведений, а также практической базе и реальных исследований на действующих предприятиях соответствующего направления.
                 </p>
-                    <p class="block-text__par">
+                    <p className="block-text__par">
                         Вы платите деньги исключительно за положительный результат, поэтому сотрудники общаются с вами вплоть до момента успешной защиты.
                 </p>
                 </section>
                 <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort} />
-                <section class="block-text">
-                    <h2 class="block-text__title">
+                <section className="block-text">
+                    <h2 className="block-text__title">
                         Почему стоит заказать диплом именно у нас?
                 </h2>
-                    <ul class="block-text__list2">
+                    <ul className="block-text__list2">
                         <li>
                             У нас работают исключительно высококвалифицированные специалисты с многолетним опытом работы и соответствующим образованием.
                     </li>
@@ -96,29 +96,29 @@ const DiplomePage = () => (
                         <CallMeFormWithTimer timerSize={1.6} />
                     </div>
                 </section>
-                <section class="block-text">
-                    <h2 class="block-text__title">
+                <section className="block-text">
+                    <h2 className="block-text__title">
                         Как проходит заказ диплома?
                 </h2>
-                    <p class="block-text__par">Для начала вам необходимо связаться с нашими менеджерами по одному из указанных номеров телефона, либо заполнить онлайн-форму.</p>
+                    <p className="block-text__par">Для начала вам необходимо связаться с нашими менеджерами по одному из указанных номеров телефона, либо заполнить онлайн-форму.</p>
 
-                    <p class="block-text__par">Наши консультанты с удовольствием ответят на все возникающие у вас вопросы, помогут определиться с выбором темы, обсудят с вами детальные подробности и нюансы предстоящей работы, и заключают соответствующий договор, имеющий официальную юридическую силу.</p>
+                    <p className="block-text__par">Наши консультанты с удовольствием ответят на все возникающие у вас вопросы, помогут определиться с выбором темы, обсудят с вами детальные подробности и нюансы предстоящей работы, и заключают соответствующий договор, имеющий официальную юридическую силу.</p>
 
-                    <p class="block-text__par">Для того, чтобы вы могли вживую пообщаться с авторами, которые пишут дипломные работы на заказ в городе Москва, открыт комфортабельный офис, расположенный в центре столицы</p>
+                    <p className="block-text__par">Для того, чтобы вы могли вживую пообщаться с авторами, которые пишут дипломные работы на заказ в городе Москва, открыт комфортабельный офис, расположенный в центре столицы</p>
                 </section>
                 <VideoBlock />
 
-                <section class="block-text">
-                    <h2 class="block-text__title">
+                <section className="block-text">
+                    <h2 className="block-text__title">
                         Заказать дипломную работу в Москве - реальность, а не мечта!
                 </h2>
-                    <p class="block-text__par">Мы придерживаемся оптимальной ценовой политики, что позволяет сделать заказ дипломов без существенных финансовых потерь.</p>
+                    <p className="block-text__par">Мы придерживаемся оптимальной ценовой политики, что позволяет сделать заказ дипломов без существенных финансовых потерь.</p>
 
-                    <p class="block-text__par">При постоянном сотрудничестве с нашими специалистами вы можете рассчитывать на существенную скидку.</p>
+                    <p className="block-text__par">При постоянном сотрудничестве с нашими специалистами вы можете рассчитывать на существенную скидку.</p>
 
-                    <p class="block-text__par">Заказ дипломной работы является абсолютно анонимным, поэтому вы можете не беспокоиться о том, что ваше обращение в нашу фирму скажется на отношении преподавателей к вашей защите.</p>
+                    <p className="block-text__par">Заказ дипломной работы является абсолютно анонимным, поэтому вы можете не беспокоиться о том, что ваше обращение в нашу фирму скажется на отношении преподавателей к вашей защите.</p>
 
-                    <p class="block-text__par">Диплом на заказ в Москве в компании BeSmarter – это отличный вариант успешно защитить свой диплом!</p>
+                    <p className="block-text__par">Диплом на заказ в Москве в компании BeSmarter – это отличный вариант успешно защитить свой диплом!</p>
                 </section>
 
 

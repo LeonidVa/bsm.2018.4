@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
-import Wrapper from './components/Wrapper';
+import Wrapper from 'components/Wrapper';
 
-import OrderCall from './components/Header/components/OrderCallModal'
+import OrderCall from 'components/Header/components/OrderCallModal'
 
 import Link from 'next/link';
-import Title from './components/common/Title'
-import MapBlock from './components/common/MapBlock';
-import ImageBlock from './components/common/ImageBlock'
-import OrderForm from './components/common/OrderForm'
-import Work from './components/common/Work'
-import Service from './components/common/Service'
-import LinksBlock from './components/common/LinksBlock'
-import ReviewBlockSlider from './components/common/ReviewBlockSlider'
+import Title from 'components/common/Title'
+import MapBlock from 'components/common/MapBlock';
+import ImageBlock from 'components/common/ImageBlock'
+import OrderForm from 'components/common/OrderForm'
+import Work from 'components/common/Work'
+import Service from 'components/common/Service'
+import LinksBlock from 'components/common/LinksBlock'
+import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 
-import { formConfig } from './components/config/formConfig';
-import reviewBlockConfig from './components/config/reviewBlockConfig';
-import links from './components/config/linksBlockConfig';
-import imageSrc from '../img/contacts/1.jpg';
-import schemaSrc from '../img/contacts/how-to-go.jpg';
+import { formConfig } from 'components/config/formConfig';
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
+import links from 'components/config/linksBlockConfig';
+import imageSrc from 'img/contacts/1.jpg';
+import schemaSrc from 'img/contacts/how-to-go.jpg';
 
-import ContactsInfo from './components/contacts/ContactsInfo'
-import Address from './components/contacts/Address'
+import ContactsInfo from 'components/contacts/ContactsInfo'
+import Address from 'components/contacts/Address'
 
 
 class ContactPage extends Component {

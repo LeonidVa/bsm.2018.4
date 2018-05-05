@@ -5,6 +5,7 @@ import MessBlock from './components/common/MessagersBlock';
 import ServiceBlock from './components/common/ServiceBlock';
 import TextBlock from './components/common/TextBlock';
 
+
 const Index =()=>(
       <Wrapper title="BeSmarter - Главная">
         <div className="wrapper main">

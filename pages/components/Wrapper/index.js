@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 
+this.dirname = 'dirname'
+
 class Wrapper extends Component{
 
     state = {

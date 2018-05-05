@@ -14,7 +14,7 @@ class OrderForm extends Component{
         name: '',
         tel: '',
         email: '',
-        work: 'Дипломная работа',
+        work: '',
         subject: '',
         topic: '',
         files: [],
@@ -90,7 +90,7 @@ class OrderForm extends Component{
                                      }}>
                                 <label htmlFor={field.id}>{field.label}</label>
                                 <Dropdown
-                                    placeholder="form-field"
+                                    placeholder="test"
                                     className="block-form__item"
                                     value={this.state.work}
                                     onChange={(e)=>this.handleWork(e)}

@@ -23,7 +23,7 @@ app.prepare()
         server.post('/api/form_data', (req, res) => {
             const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, verified} = req.body
             
-            function saveAndSend(response, id) {
+            function saveAndSend (response, id) {
                 let orderLog = "";
                 if (typeof id === "undefined") {
                     id = "НЕТ";
@@ -49,6 +49,7 @@ app.prepare()
                         if (err) throw err;
                         // success case, the file was saved
                     });
+
                 if (files) {
                     /*create folder to store files*/
                     let dir = `userData/files/` + orderLog;
@@ -130,6 +131,8 @@ app.prepare()
                     // });
                 }
 
+            
+                res.send(answer)
 
             }
 
@@ -148,21 +151,27 @@ app.prepare()
                 ).then((reply) => {
                     if (reply) {
                         if (reply.data.error) {
-                            saveAndSend();
                             answer = { error: false, id: reply.data.id, msg: 'заявка успешно отправлена' };
+                            saveAndSend();
                         } else {
-                            saveAndSend(reply.id);
                             answer = { error: false, id: reply.data.id, msg: 'заявка успешно отправлена' }
+                            saveAndSend(reply.id);
                         }
                     }
-                }).catch(async(error) => {
-                    await saveAndSend()
+                }).catch((error) => {
                     answer = { error: true, msg: error }
-                    res.write(answer)
+                    saveAndSend()
+                    
                 })
             }
             
         });
+
+        server.get('/form_route', (req, res)=>{
+            console.log('this is new route')
+
+            res.send('hallo!!!!!')
+        })
 
         let port = 3000;
         server.listen(port, (err) => {

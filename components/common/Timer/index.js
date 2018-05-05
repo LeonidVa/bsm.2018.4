@@ -31,9 +31,13 @@ class Timer extends Component {
     }
  
     componentDidMount = () => {
-        if (!window.localStorage.getItem("timer")) {
+        const { timerDuration } = this.props;
+        if (window.localStorage.getItem("timer")) {
             const time = new Date()                          //часы, минуты, секунды, милисекунды
-            window.localStorage.setItem("timer", time.getTime() + (2 * 60 * 60 * 1000))
+            timerDuration ?
+                window.localStorage.setItem("timer", time.getTime() + (Number(timerDuration))) :
+                window.localStorage.setItem("timer", time.getTime() + (2*60*60*1000))
+
         }
         this.setCountdown()
     }

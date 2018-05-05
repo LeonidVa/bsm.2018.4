@@ -5,7 +5,7 @@ import Service from 'components/common/Service'
 import Work from 'components/common/Work'
 
 
-const ServiceBlock=({timerColor})=>{
+const ServiceBlock = ({ timerColor, timerDuration})=>{
         return(
             <div>
                 <section className="block-service presentation-serv">
@@ -15,7 +15,7 @@ const ServiceBlock=({timerColor})=>{
                             <p className="block-service__par">
                                 Успей что-нибудь сделать или заказать пока не кочилось время на таймере снизу
                             </p>
-                                <Timer size={1.8} timerColor={timerColor}/>
+                                <Timer size={1.8} timerColor={timerColor} timerDuration={timerDuration}/>
                             <p className="block-service__par">
                                 Успей защитить диплом
                             </p>

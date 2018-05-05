@@ -17,7 +17,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import links from 'components/config/linksBlockConfig'
 
 
-const AboutPage = (props) => {
+const AboutPage = (props) => (
 
   <Wrapper title="BeSmarter - О нас">
     <div className="wrapper about">

@@ -26,7 +26,7 @@ class OrderForm extends Component {
         fileName: 'Добавить файл',
         Extended: false,
         verified: false,
-        formSended: false
+        formSended: {bool: false, number: '', error: false}
     }
     verifyCallback = (value) => {
         if (value) {
@@ -42,8 +42,9 @@ class OrderForm extends Component {
             return
         }
         axios.post('/api/form_data', { name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, topic, files, fileName, Extended, verified})
-            
-        this.setState({ formSended: true })
+             .then(res => this.setState({ formSended: { bool: true, number: res.data.id, error: false } }))
+             .catch(err => this.setState({ formSended: { bool: true, number: '', error: err } }))
+        
 
     }
 
@@ -159,7 +160,7 @@ class OrderForm extends Component {
 
     render() {
         const {title, form2} = this.props
-        if(!this.state.formSended){
+        if(!this.state.formSended.bool){
             return (
                 <section className={`block-form ${form2 ? 'block-form2' : ''}`}>
                     <h2 className="block-form__title">{title}</h2>
@@ -186,8 +187,10 @@ class OrderForm extends Component {
             )
         }else {
             return (
-                <div className="block-form">
+                <div className="block-form" style={{border: 'none'}}>
                     <img width="100%" src={require('img/form_sended.jpg') }/>
+                    <p className="block-text__par">Номер заявки: {this.state.formSended.number}</p>
+               
                 </div>
             )
         }

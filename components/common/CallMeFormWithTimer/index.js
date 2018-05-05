@@ -13,12 +13,12 @@ class CallMeFormWithTimer extends Component{
     }
 
     render(){
-        const { timerSize } = this.props
+        const { timerSize, timerDuration } = this.props
         return(
             <div>
                 <div className="block-form3__timer">
                     <div className="timer">
-                        <Timer size={timerSize} />
+                        <Timer size={timerSize} timerDuration={timerDuration}/>
                     </div>
                     <p>Написание диссертаций специализированными докторами наук</p>
                 </div>

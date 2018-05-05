@@ -15,7 +15,7 @@ const Index =()=>(
                   <NavRow action="Контакты" url='contacts' />
               </section>
               <MessBlock />
-              <ServiceBlock timerColor='#ff5722'/>
+              <ServiceBlock timerColor='#ff5722' timerDuration={4*60*60*1000}/>
               <TextBlock />
           </div>
       </Wrapper>

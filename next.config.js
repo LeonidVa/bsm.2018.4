@@ -7,7 +7,8 @@ const nextConfig = {
         config.resolve.alias.img = __dirname + '/img/';
         config.resolve.alias.components = __dirname + '/components/';
         return config
-    }
+    },
+    assetPrefix: 'https://cdn.mydomain.com',
 };
 
 

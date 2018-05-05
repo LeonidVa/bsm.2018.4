@@ -22,8 +22,8 @@ app.prepare()
         });
         server.post('/api/form_data', (req, res) => {
             const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, verified} = req.body
-            
-            function saveAndSend (response, id) {
+
+            function saveAndSend(response, id) {
                 let orderLog = "";
                 if (typeof id === "undefined") {
                     id = "НЕТ";
@@ -131,7 +131,7 @@ app.prepare()
                     // });
                 }
 
-            
+
                 res.send(answer)
 
             }
@@ -139,35 +139,39 @@ app.prepare()
             // console.log(req.body, 'post')
             let answer;
             if (verified) {
+                let filelist = [];
+                if (files !== undefined && files.length > 0) {
+                    filelist = files.map(file => file.name)
+                }
                 const res = axios.post('https://orders.besma.ru/api/orders/new', {
                         data: {
                             source: "site",
                             brand: "besmarter",
                             remote_addr: requestIp.getClientIp(req),
                             name, phone, email, theme, worktype, discipline, deadline, size, comment,
-                            files: files.map(file => file.name)
+                            files: filelist
                         }
                     }
                 ).then((reply) => {
                     if (reply) {
                         if (reply.data.error) {
-                            answer = { error: false, id: reply.data.id, msg: 'заявка успешно отправлена' };
+                            answer = {error: false, id: reply.data.id, msg: 'заявка успешно отправлена'};
                             saveAndSend();
                         } else {
-                            answer = { error: false, id: reply.data.id, msg: 'заявка успешно отправлена' }
+                            answer = {error: false, id: reply.data.id, msg: 'заявка успешно отправлена'}
                             saveAndSend(reply.id);
                         }
                     }
                 }).catch((error) => {
-                    answer = { error: true, msg: error }
+                    answer = {error: true, msg: error}
                     saveAndSend()
-                    
+
                 })
             }
-            
+
         });
 
-        server.get('/form_route', (req, res)=>{
+        server.get('/form_route', (req, res) => {
             console.log('this is new route')
 
             res.send('hallo!!!!!')

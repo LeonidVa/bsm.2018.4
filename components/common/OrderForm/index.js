@@ -21,7 +21,7 @@ class OrderForm extends Component {
         discipline: '',
         deadline: '',
         size: '',
-        topic: '',
+        comment: '',
         files: [],
         fileName: 'Добавить файл',
         Extended: false,
@@ -34,18 +34,16 @@ class OrderForm extends Component {
         }
     }
 
-    handleSubmit = async(e) => {
+    handleSubmit = async (e) => {
         e.preventDefault()
-        const { name, phone, email, theme, worktype, discipline, deadline, size, topic, files, fileName, Extended, verified} = this.state
+        const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state
         if (!this.state.verified) {
             window.alert('Пожалуйста, пройдите каптчу')
             return
         }
-        axios.post('/api/form_data', { name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, topic, files, fileName, Extended, verified})
-             .then(res => this.setState({ formSended: { bool: true, number: res.data.id, error: false } }))
-             .catch(err => this.setState({ formSended: { bool: true, number: '', error: err } }))
-        
-
+        axios.post('/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
+            .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
+            .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))
     }
 
     onDrop(files) {
@@ -79,7 +77,7 @@ class OrderForm extends Component {
 
 
     renderForm = () => {
-        const {formConfig} = this.props
+        const {formConfig, buttonText} = this.props
         return formConfig.map((field, index) => {
             let rlabel = ""
             if (field.required) {
@@ -159,15 +157,20 @@ class OrderForm extends Component {
     }
 
     render() {
-        const {title, form2} = this.props
-        if(!this.state.formSended.bool){
+        let {title, buttonLabel, redForm} = this.props;
+        console.log('buttonLabel before', buttonLabel)
+        if (buttonLabel === undefined || buttonLabel === "") {
+            buttonLabel = "Заказать работу"
+        }
+        console.log('buttonLabel after', buttonLabel)
+        if (!this.state.formSended.bool) {
             return (
-                <section className={`block-form ${form2 ? 'block-form2' : ''}`}>
+                <section className={`block-form ${redForm ? 'form-red' : ''}`}>
                     <h2 className="block-form__title">{title}</h2>
                     <form onSubmit={this.handleSubmit} className="block-form__form">
                         {this.renderForm()}
                         <a className="block-form__more-info"
-                        onClick={() => this.showFullForm()}>
+                           onClick={() => this.showFullForm()}>
                             {this.state.Extended ? 'Cкрыть дополнительные поля' : 'Дополнительная информация'}
                         </a>
                         <div style={{display: 'flex', justifyContent: 'center', margin: '0.75em'}}>
@@ -177,20 +180,15 @@ class OrderForm extends Component {
                                 sitekey="6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS"
                             />
                         </div>
-                        {form2 ?
-                            <button type="submit" className="block-form__btn">Узнать стоимость</button>
-                            : <button type="submit" className="block-form__btn">Заказать работу</button>
-                        }
-
+                        <button type="submit" className="block-form__btn">{buttonLabel}</button>
                     </form>
                 </section>
             )
-        }else {
+        } else {
             return (
                 <div className="block-form" style={{border: 'none'}}>
-                    <img width="100%" src={require('img/form_sended.jpg') }/>
+                    <img width="100%" src={require('img/form_sended.jpg')}/>
                     <p className="block-text__par">Номер заявки: {this.state.formSended.number}</p>
-               
                 </div>
             )
         }

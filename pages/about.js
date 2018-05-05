@@ -97,7 +97,7 @@ const AboutPage = (props) => (
         </p>
       </section>
       <ImageBlock imageSrc={require('img/about/1.jpg')}/>
-      <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig}/>
+      <OrderForm title="Оценить работу" buttonLabel="Оценить" redForm={true} formConfig={formConfig}/>
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
       <section className="block-service diplom-work-serv">
         <Work url="diplome" workName="Дипломная работа" workDescription="Поможем написать дипломную работу на заказ" cost="от 1 500 ₽" time="от 1 дня"/>

@@ -19,7 +19,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import infoBlockConfig from 'components/config/infoBlockConfig';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import { profitBlockConfigShort, profitBlockConfigLong } from 'components/config/profitBlockConfig';
-import { formConfig, formConfigSecond } from 'components/config/formConfig';
+import { formConfig } from 'components/config/formConfig';
 import links from 'components/config/linksBlockConfig';
 
 import { Link as ScrollLink } from 'react-scroll';

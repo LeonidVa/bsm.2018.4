@@ -34,9 +34,9 @@ class OrderForm extends Component {
         }
     }
 
-    handleSubmit = async (e) => {
+    handleSubmit = async(e) => {
         e.preventDefault()
-        const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state
+        const { name, phone, email, theme, worktype, discipline, deadline, size, topic, files, fileName, Extended, verified} = this.state
         if (!this.state.verified) {
             window.alert('Пожалуйста, пройдите каптчу')
             return
@@ -187,8 +187,9 @@ class OrderForm extends Component {
         } else {
             return (
                 <div className="block-form" style={{border: 'none'}}>
-                    <img width="100%" src={require('img/form_sended.jpg')}/>
-                    <p className="block-text__par">Номер заявки: {this.state.formSended.number}</p>
+                    <img width="100%" src={require('img/form_sended.jpg') }/>
+                    <p className="block-text__par">{this.state.formSended.number ? `Номер заявки: ${this.state.formSended.number}`: ''}</p>
+               
                 </div>
             )
         }

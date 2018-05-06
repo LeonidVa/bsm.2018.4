@@ -85,21 +85,12 @@ table {
     overflow: hidden;
     position: relative;
     &.main {
-        background-image: url(../img/bg.jpg);
+        background-image: url(~img/header/bg.jpg);
         background-size: 100% 100vh;
         background-attachment: fixed;
         padding-bottom: 50px;
     }
-    &.contacts,
-    &.pricing,
-    &.guarantees,
-    &.about,
-    &.dissertation,
-    &.candidate,
-    &.diplome,
-    &.masters,
-    &.course {
-
+    &.bg {
         @media (max-width: 660px) {
             padding-top: 70px;
         }
@@ -112,37 +103,35 @@ table {
             height: 21em;
             background-color: #87bce7;
             z-index: 0;
-
         }    
     }
-    &.pricing::before {
+    &.bg-c1::before {
         background-color: #857a95;
     }
-    &.guarantees::before {
+    &.bg-c2::before {
+        background-color: #87bce7;
+    }
+    &.bg-c3::before {
         background-color: #25b9a9;
     }
-    &.dissertation::before,
-    &.candidate::before,
-    &.diplome::before,
-    &.masters::before,
-    &.course::before {
+    &.bg-img::before {
         background-size: cover;
         background-position: center 0;
     }
-    &.dissertation::before {
-        background-image: url(../img/dissertation/dissertation-bg.jpg);
+    &.bg-img1::before {
+        background-image: url(~img/header/bg1.jpg);
     }
-    &.candidate::before {
-        background-image: url(../img/candidate/candidate-bg.jpg);
+    &.bg-img2::before {
+        background-image: url(~img/header/bg2.jpg);
     }
-    &.diplome::before {
-        background-image: url(../img/diplome/diplome-bg.jpg);
+    &.bg-img3::before {
+        background-image: url(~img/header/bg3.jpg);
     }
-    &.masters::before {
-        background-image: url(../img/masters/masters-bg.jpg);
+    &.bg-img4::before {
+        background-image: url(~img/header/bg4.jpg);
     }
-    &.course::before {
-        background-image: url(../img/course/course-bg.jpg);
+    &.bg-img5::before {
+        background-image: url(~img/header/bg5.jpg);
     }
 
 }

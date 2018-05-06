@@ -18,7 +18,7 @@ import links from 'components/config/linksBlockConfig'
 const GuaranteesPage = () => (
     <Wrapper title="BeSmarter - Гарантии">
         
-        <div className="wrapper guarantees">
+        <div className="wrapper bg bg-c1 bg-img bg-img4">
                 <Title name="Гарантии" />
                 <section className="block-text">
                     <h2 className="block-text__title">
@@ -117,7 +117,7 @@ const GuaranteesPage = () => (
                         Нас выбирают студенты, для которых качество всегда стоит на первом месте. Обращайтесь, и будете уверены в успешной защите дипломного проекта!
                 </p>
                 </section>
-                <ImageBlock imageSrc={require('img/contacts/1.jpg')} />
+                <ImageBlock imageSrc={require('img/block/2.jpg')} />
                 <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
                 <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
                 <section className="block-service diplom-work-serv">

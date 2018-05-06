@@ -196,14 +196,14 @@
     }
     &.presentation-serv {
         .block-service__top {
-            background-image: url(../img/services/presentation-bg.jpg);  
+            background-image: url(~img/services/presentation-bg.jpg);
             background-color: #c5d2e3;
         }
     }
     &.course-work-serv,
     &.dissertation-serv {
         .block-service__top {
-            background-image: url(../img/services/course-work-bg.jpg);  
+            background-image: url(~img/services/course-work-bg.jpg);
             padding: 1.56em 1.56em .82em;
             background-color: #c24976;
         }
@@ -221,7 +221,7 @@
     }
     &.diplom-work-serv {
         .block-service__top {
-            background-image: url(../img/services/diplom-work-bg.jpg);  
+            background-image: url(~img/services/diplom-work-bg.jpg);
             padding: 1.56em 1.56em 1.6em;
             background-color: #fdd100;
         }
@@ -234,7 +234,7 @@
     }
     &.dissertation-serv {
         .block-service__top {
-            background-image: url(../img/services/dissertation-bg.jpg);  
+            background-image: url(~img/services/dissertation-bg.jpg);
             background-color: #028ac6;
         }
     }
@@ -248,7 +248,7 @@
     margin: 1.56em auto 0;
     position: relative;
     z-index: 1;
-    background-image: url(../img/form2-bg.jpg);
+    background-image: url(~img/form2-bg.jpg);
     background-size: cover;
     background-position: right top;
     padding: 3.56em 2.688em 3.25em;
@@ -361,7 +361,7 @@
     }
 }
 .block-form4 {
-    background-image: url(../img/candidate/form-bg.jpg);
+    background-image: url(~img/block/1.jpg);
     padding: 2.25em 0;
     .inner {
         width: 17.09em;
@@ -375,5 +375,5 @@
 .diplome .block-form4,
 .masters .block-form4,
 .course .block-form4 {
-    background-image: url(../img/diplome/form-bg.jpg);
+    background-image: url(~img/block/1.jpg);
 }

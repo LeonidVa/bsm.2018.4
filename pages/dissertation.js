@@ -27,7 +27,7 @@ import { Element } from 'react-scroll';
 
 const DissertationPage = () => (
                 <Wrapper title="BeSmarter - Докторская диссертация">
-                    <div className="wrapper dissertation">
+                    <div className="wrapper bg bg-c2 bg-img bg-img4">
                        <Title name="Оценить диссертацию" />
                         <section className="block-nav">
                             <NavRow action="Заказать работу" url='#' />
@@ -41,7 +41,7 @@ const DissertationPage = () => (
                         </section>
                         <ProfitsBlockSlider profitBlockConfig={ profitBlockConfigLong } />
                         <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true}/>
-                        <ImageBlock imageSrc={require('img/dissertation/1.jpg')}/>
+                        <ImageBlock imageSrc={require('img/block/2.jpg')}/>
                         <section className="block-text no-bottom-padd">
                             <h2 className="block-text__title">
                                 Докторская диссертация на заказ
@@ -91,7 +91,7 @@ const DissertationPage = () => (
                                 </li>
                             </ol>
                         </section>
-                        <ImageBlock imageSrc={require('img/dissertation/2.jpg')} />
+                        <ImageBlock imageSrc={require('img/block/2.jpg')} />
                         <section className="block-text">
 
                             <h2 className="block-text__title">
@@ -169,7 +169,7 @@ const DissertationPage = () => (
                                 Во время написания докторской диссертации мы одновременно подготовим также ряд статей ВАК для докторской диссертации и опубликуем их в научных журналах.
                             </p>
                         </section>
-                        <ImageBlock imageSrc={require('img/contacts/1.jpg')}/>
+                        <ImageBlock imageSrc={require('img/block/2.jpg')}/>
                         <section className="block-text">
                             <h2 className="block-text__title">
                                 Сколько стоит докторская диссертация

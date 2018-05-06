@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import Wrapper from 'components/Wrapper';
 
 import OrderCall from 'components/Header/components/OrderCallModal'
@@ -13,10 +13,10 @@ import Service from 'components/common/Service'
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 
-import { formConfig } from 'components/config/formConfig';
+import {formConfig} from 'components/config/formConfig';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import links from 'components/config/linksBlockConfig';
-import imageSrc from 'img/contacts/1.jpg';
+import imageSrc from 'img/block/2.jpg';
 import schemaSrc from 'img/contacts/how-to-go.jpg';
 
 import ContactsInfo from 'components/contacts/ContactsInfo'
@@ -32,28 +32,29 @@ class ContactPage extends Component {
 
     handleMobMenu = () => {
 
-        this.setState({ showMenuMob: !this.state.showMenuMob })
+        this.setState({showMenuMob: !this.state.showMenuMob})
     }
 
     closeModal = () => {
 
-        this.setState({ modalIsOpen: false })
+        this.setState({modalIsOpen: false})
     }
     openModal = () => {
-  
-        this.setState({ modalIsOpen: true })
+
+        this.setState({modalIsOpen: true})
     }
+
     render() {
 
-        const { display } = this.state
+        const {display} = this.state
         return (
             <Wrapper title="BeSmarter - Контакты">
-                 <div className="wrapper contacts">
-                    <Title name="Контакты" />
+                <div className="wrapper bg bg-c2 bg-img bg-img5">
+                    <Title name="Контакты"/>
                     <OrderCall closeModal={this.closeModal}
-                        display={this.state.modalIsOpen ? 'block' : 'none'} />
-                    <ContactsInfo openModal={this.openModal} />
-                    <MapBlock />
+                               display={this.state.modalIsOpen ? 'block' : 'none'}/>
+                    <ContactsInfo openModal={this.openModal}/>
+                    <MapBlock/>
                     <section className="block-text">
                         <h2 className="block-text__title">
                             Как пройти
@@ -99,18 +100,18 @@ class ContactPage extends Component {
                             officeRoute="Мимо охраны на второй этаж направо. Комната 211 с лисёнком – это уже мы. Рады видеть Вас!"
                         />
                     </section>
-                    <ImageBlock imageSrc={imageSrc} />
-                    <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
-                    <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
+                    <ImageBlock imageSrc={imageSrc}/>
+                    <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig}/>
+                    <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
                     <section className="block-service diplom-work-serv">
-                        <Work url="diplome" workName="Дипломная работа" workDescription="Поможем написать дипломную работу на заказ" cost="от 1 500 ₽" time="от 1 дня" />
+                        <Work url="diplome" workName="Дипломная работа" workDescription="Поможем написать дипломную работу на заказ" cost="от 1 500 ₽" time="от 1 дня"/>
                         <div className="block-service__list list-big">
-                            <Service serviceName="Презентация" />
-                            <Service serviceName="Диплом" cost="от 2 500 ₽" />
-                            <Service serviceName="Диплом МВА" cost="от 4 500 ₽" time="от 2 недель" />
+                            <Service serviceName="Презентация"/>
+                            <Service serviceName="Диплом" cost="от 2 500 ₽"/>
+                            <Service serviceName="Диплом МВА" cost="от 4 500 ₽" time="от 2 недель"/>
                         </div>
                     </section>
-                    <LinksBlock links={links} />
+                    <LinksBlock links={links}/>
                 </div>
             </Wrapper>
         )

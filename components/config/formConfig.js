@@ -55,7 +55,7 @@ export const formConfig = [
     {label: 'Предмет', name: "discipline", type: 'text', placeholder: 'Предмет или дисциплина', required: false},
     {label: 'Срок сдачи', name: "deadline", type: 'text', placeholder: 'Укажите срок сдачи работы', required: false},
     {label: 'Объём', name: "size", type: 'text', placeholder: 'Требуемый объём', required: false},
-    {label: 'Комментарии', name: "comment", type: 'text', placeholder: 'Ваши комментарии', required: false},
+    {label: 'Комментарии', name: "comment", type: 'textarea', placeholder: 'Ваши комментарии', required: false},
     {label: 'Прикрепить Файл', name: "file", type: 'file', placeholder: 'Добавить файл', required: false}
 ]
 

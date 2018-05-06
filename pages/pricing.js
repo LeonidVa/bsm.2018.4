@@ -41,7 +41,7 @@ class PricingPage extends Component {
 
         return (
             <Wrapper title="BeSmarter - Услуги и цены">
-                <div className="wrapper pricing">
+                <div className="wrapper bg bg-c2 bg-img bg-img2">
                         <Title name="Цены и сроки" />
                         <section className="block-text">
                             <h2 className="block-text__title">
@@ -76,7 +76,7 @@ class PricingPage extends Component {
                             tablePrices={["от 50", "от 50", "от 50", "от 50", "от 50", "от 150 т.р.", "от 150 т.р."]}
                         />
                         <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort} />
-                        <ImageBlock imageSrc={require('img/contacts/1.jpg')} />
+                        <ImageBlock imageSrc={require('img/block/2.jpg')} />
                         <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
                         <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
                         <section className="block-service diplom-work-serv">

@@ -25,7 +25,7 @@ import links from 'components/config/linksBlockConfig'
 
 const CoursePage = () => (
     <Wrapper title="BeSmarter - Курсовая диссертация">
-        <div className="wrapper course">
+        <div className="wrapper bg bg-c1 bg-img bg-img3">
             <Title name="Курсовая диссертация" />
             <section className="block-nav">
                 <NavRow action="Оценить работу" url='#' />
@@ -39,7 +39,7 @@ const CoursePage = () => (
             </section>
             <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong} />
             <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true} />
-            <ImageBlock imageSrc={require('img/candidate/1.jpg')} />
+            <ImageBlock imageSrc={require('img/block/2.jpg')} />
             <section className="block-text">
                 <h2 className="block-text__title">
                     Курсовая работа на заказ.

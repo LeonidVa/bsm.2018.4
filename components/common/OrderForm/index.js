@@ -34,9 +34,9 @@ class OrderForm extends Component {
         }
     }
 
-    handleSubmit = async(e) => {
+    handleSubmit = async (e) => {
         e.preventDefault()
-        const { name, phone, email, theme, worktype, discipline, deadline, size, topic, files, fileName, Extended, verified} = this.state
+        const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state
         if (!this.state.verified) {
             window.alert('Пожалуйста, пройдите каптчу')
             return
@@ -68,13 +68,10 @@ class OrderForm extends Component {
     }
 
     handleWork = (e) => {
-
-
         console.log(e)
         console.log(this)
         this.setState({worktype: e.value})
     }
-
 
     renderForm = () => {
         const {formConfig, buttonText} = this.props
@@ -83,77 +80,104 @@ class OrderForm extends Component {
             if (field.required) {
                 rlabel = <span title="Обязательное поле">*</span>
             }
+            field.rlabel = rlabel
             field.id = 'field-' + index + '-' + field.name
-            if (field.name === 'file') {
-                return (
-                    <div className="block-form__item"
-                         key={field.id}
-                         style={{
-                             opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
-                             maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
-                             visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
-                             height: "auto",
-                         }}>
-
-                        <div className="dropzone" style={{fontSize: '14px'}}>
-                            <Dropzone
-                                onDrop={this.onDrop.bind(this)}
-                                multiple={true}>
-                                <a>Добавить файл</a>
-                            </Dropzone>
-                        </div>
-
-                        <ul>
-                            {
-                                this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.name}
-                                    <FontAwesomeIcon icon={close} className="block-form__close" onClick={() => this.removeFile(i)}/>
-                                </li>)
-                            }
-                        </ul>
-
-                    </div>
-                )
-            } else {
-                if (field.type === 'dropdown') {
-                    return (
-                        <div className="block-form__item"
-                             key={field.id}
-                             style={{
-                                 opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
-                                 maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
-                                 visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
-                             }}>
-                            <label htmlFor={field.id}>{field.label}{rlabel}</label>
-                            <Dropdown
-                                onChange={(e) => this.setState({[field.name]: e})}
-                                value={this.state.worktype.label}
-                                options={field.options}
-                            />
-                        </div>
-                    )
-                } else {
-                    return (
-                        <div className="block-form__item"
-                             key={field.id}
-                             style={{
-                                 opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
-                                 maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
-                                 visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
-                             }}>
-                            <label htmlFor={field.id}>{field.label}{rlabel}</label>
-                            <input type={field.type}
-                                   name=""
-                                   id={field.id}
-                                   placeholder={field.placeholder}
-                                   required={field.required}
-                                   value={this.state[field.name]}
-                                   onChange={(e) => this.setState({[field.name]: e.target.value})}/>
-                        </div>
-                    )
-                }
-
+            switch (field.type) {
+                case "textarea":
+                     return this.nptTextarea(field);
+                case "dropdown":
+                    return this.nptDropDown(field);
+                    break;
+                case "file":
+                    return this.nptFile(field);
+                    break;
+                default:
+                    return this.nptText(field);
             }
         })
+    }
+
+    nptText(field) {
+        return <div className="block-form__item"
+                    key={field.id}
+                    style={{
+                        opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
+                        maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
+                        visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
+                    }}>
+            <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
+            <input type={field.type}
+                   name=""
+                   id={field.id}
+                   placeholder={field.placeholder}
+                   required={field.required}
+                   value={this.state[field.name]}
+                   onChange={(e) => this.setState({[field.name]: e.target.value})}/>
+        </div>
+    }
+
+    nptTextarea(field) {
+        return <div className="block-form__item textarea"
+                    key={field.id}
+                    style={{
+                        opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
+                        maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
+                        visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
+                    }}>
+            <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
+            <textarea type={field.type}
+                   name=""
+                   id={field.id}
+                   placeholder={field.placeholder}
+                   required={field.required}
+                   value={this.state[field.name]}
+                   onChange={(e) => this.setState({[field.name]: e.target.value})}/>
+        </div>
+    }
+    nptDropDown(field) {
+        return <div className="block-form__item"
+                    key={field.id}
+                    style={{
+                        opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
+                        maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
+                        visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
+                    }}>
+            <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
+            <Dropdown
+                onChange={(e) => this.setState({[field.name]: e})}
+                value={this.state.worktype.label}
+                options={field.options}
+            />
+        </div>
+    }
+
+
+    nptFile(field) {
+        return <div className="block-form__item"
+                    key={field.id}
+                    style={{
+                        opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
+                        maxHeight: field.required ? '1000px' : (this.state.Extended ? "1000px" : "0"),
+                        visibility: field.required ? "visible" : (this.state.Extended ? "visible" : "hidden"),
+                        height: "auto",
+                    }}>
+
+            <div className="dropzone" style={{fontSize: '14px'}}>
+                <Dropzone
+                    onDrop={this.onDrop.bind(this)}
+                    multiple={true}>
+                    <a>Добавить файл</a>
+                </Dropzone>
+            </div>
+
+            <ul>
+                {
+                    this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.name}
+                        <FontAwesomeIcon icon={close} className="block-form__close" onClick={() => this.removeFile(i)}/>
+                    </li>)
+                }
+            </ul>
+        </div>
     }
 
     render() {
@@ -187,9 +211,9 @@ class OrderForm extends Component {
         } else {
             return (
                 <div className="block-form" style={{border: 'none'}}>
-                    <img width="100%" src={require('img/form_sended.jpg') }/>
-                    <p className="block-text__par">{this.state.formSended.number ? `Номер заявки: ${this.state.formSended.number}`: ''}</p>
-               
+                    <img width="100%" src={require('img/fox-logo.png')}/>
+                    <p className="block-text__par">{this.state.formSended.number ? `Номер заявки: ${this.state.formSended.number}` : ''}</p>
+
                 </div>
             )
         }

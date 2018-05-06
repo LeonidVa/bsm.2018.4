@@ -20,7 +20,7 @@ import links from 'components/config/linksBlockConfig'
 const AboutPage = (props) => (
 
   <Wrapper title="BeSmarter - О нас">
-    <div className="wrapper about">
+    <div className="wrapper bg bg-c1 bg-img bg-img1">
       <Title name="О нас"/>
       <section className="block-text">
         <h2 className="block-text__title">
@@ -37,7 +37,7 @@ const AboutPage = (props) => (
         </p>
       </section>
       <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort}/>
-      <ImageBlock imageSrc={require('img/contacts/1.jpg')}/>
+      <ImageBlock imageSrc={require('img/block/2.jpg')}/>
       <section className="block-text">
         <h2 className="block-text__title">
           Почему именно BeSmarter?
@@ -96,7 +96,7 @@ const AboutPage = (props) => (
           Нас выбирают студенты, для которых качество всегда стоит на первом месте. Обращайтесь, и будете уверены в успешной защите дипломного проекта!
         </p>
       </section>
-      <ImageBlock imageSrc={require('img/about/1.jpg')}/>
+      <ImageBlock imageSrc={require('img/block/2.jpg')}/>
       <OrderForm title="Оценить работу" buttonLabel="Оценить" redForm={true} formConfig={formConfig}/>
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
       <section className="block-service diplom-work-serv">

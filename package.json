@@ -35,8 +35,6 @@
     "fine-uploader": "^5.16.2",
     "fine-uploader-wrappers": "^1.1.0",
     "font-awesome": "^4.7.0",
-    "fs": "^0.0.1-security",
-    "mysql": "^2.15.0",
     "next": "^6.0.0",
     "next-compose-plugins": "^1.0.3",
     "next-config": "^0.0.2",
@@ -65,7 +63,11 @@
     "request-ip": "^2.0.2",
     "sendmail": "^1.4.1",
     "slick-carousel": "^1.8.1",
-    "uniqid": "^4.1.1"
+    "svg-inline-loader": "^0.8.0",
+    "svg-loader": "^0.0.2",
+    "svg-url-loader": "^2.3.2",
+    "uniqid": "^4.1.1",
+    "url-loader": "^1.0.1"
   },
   "devDependencies": {}
 }

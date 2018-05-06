@@ -9,7 +9,7 @@ const requestIp = require('request-ip');
 const axios = require('axios')
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
-const handle = app.getRequestHandler()
+const handler = app.getRequestHandler()
 const compression = require('compression')
 
 app.prepare()
@@ -18,7 +18,7 @@ app.prepare()
         server.use(bodyParser);
         server.use(compression())
         server.get('*', (req, res) => {
-            return handle(req, res)
+            return handler(req, res)
         });
         server.post('/api/form_data', (req, res) => {
             const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, verified} = req.body

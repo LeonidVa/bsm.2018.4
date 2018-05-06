@@ -117,7 +117,7 @@ const GuaranteesPage = () => (
                         Нас выбирают студенты, для которых качество всегда стоит на первом месте. Обращайтесь, и будете уверены в успешной защите дипломного проекта!
                 </p>
                 </section>
-                <ImageBlock imageSrc={require('img/block/2.jpg')} />
+                <ImageBlock imageSrc={require('img/block/e.jpg')} />
                 <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
                 <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
                 <section className="block-service diplom-work-serv">

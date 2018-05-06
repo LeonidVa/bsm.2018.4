@@ -1,33 +1,15 @@
 const withPlugins = require('next-compose-plugins');
 const withSass = require('@zeit/next-sass');
+const withImages = require('next-images');
 
 const nextConfig = {
-    assetPrefix: 'https://cdn.mydomain.com',
+    //assetPrefix: 'https://static.besmarter.ru',
     webpack: (config, {dev}) => {
         config.resolve.alias.img = __dirname + '/img/';
         config.resolve.alias.components = __dirname + '/components/';
-        config.module.rules.push({
-                test: /\.(png|jpg|jpeg|gif)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 8192
-                        }
-                    }
-                ]
-            }, {
-                test: /\.svg/,
-                use: {
-                    loader: 'svg-url-loader',
-                    options: {
-                        stripdeclarations: false,
-                        iesafe: false,
-                        noquotes: true,
-                        encoding: "base64",
-                    }
-                }
-            }
+        //console.log(config)
+        config.plugins = config.plugins.filter(
+            (plugin) => (plugin.constructor.name !== 'UglifyJsPlugin')
         );
         return config
     },
@@ -36,4 +18,5 @@ const nextConfig = {
 
 module.exports = withPlugins([
     withSass,
+    withImages,
 ], nextConfig);

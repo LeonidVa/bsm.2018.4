@@ -76,7 +76,7 @@ class PricingPage extends Component {
                             tablePrices={["от 50", "от 50", "от 50", "от 50", "от 50", "от 150 т.р.", "от 150 т.р."]}
                         />
                         <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort} />
-                        <ImageBlock imageSrc={require('img/block/2.jpg')} />
+                        <ImageBlock imageSrc={require('img/block/g.jpg')} />
                         <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig} />
                         <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig} />
                         <section className="block-service diplom-work-serv">

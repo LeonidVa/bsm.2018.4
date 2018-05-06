@@ -39,7 +39,7 @@ const DiplomePage = () => (
             </section>
             <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong}/>
             <OrderForm title="Оценить работу" formConfig={formConfig}/>
-            <ImageBlock imageSrc={require('img/block/2.jpg')}/>
+            <ImageBlock imageSrc={require('img/block/a.jpg')}/>
             <section className="block-text">
                 <h2 className="block-text__title">
                     Дипломная работа на заказ

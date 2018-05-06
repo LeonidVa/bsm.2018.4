@@ -37,7 +37,7 @@ const AboutPage = (props) => (
         </p>
       </section>
       <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort}/>
-      <ImageBlock imageSrc={require('img/block/2.jpg')}/>
+      <ImageBlock imageSrc={require('img/block/c.jpg')}/>
       <section className="block-text">
         <h2 className="block-text__title">
           Почему именно BeSmarter?
@@ -96,7 +96,7 @@ const AboutPage = (props) => (
           Нас выбирают студенты, для которых качество всегда стоит на первом месте. Обращайтесь, и будете уверены в успешной защите дипломного проекта!
         </p>
       </section>
-      <ImageBlock imageSrc={require('img/block/2.jpg')}/>
+      <ImageBlock imageSrc={require('img/block/d.jpg')}/>
       <OrderForm title="Оценить работу" buttonLabel="Оценить" redForm={true} formConfig={formConfig}/>
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
       <section className="block-service diplom-work-serv">
@@ -108,7 +108,6 @@ const AboutPage = (props) => (
         </div>
       </section>
       <LinksBlock links={links}/>
-
     </div>
   </Wrapper>
 )

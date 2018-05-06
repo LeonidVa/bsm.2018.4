@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import Wrapper from 'components/Wrapper';
-
 import OrderCall from 'components/Header/components/OrderCallModal'
-
 import Link from 'next/link';
 import Title from 'components/common/Title'
 import MapBlock from 'components/common/MapBlock';
@@ -12,13 +10,10 @@ import Work from 'components/common/Work'
 import Service from 'components/common/Service'
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
-
 import {formConfig} from 'components/config/formConfig';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import links from 'components/config/linksBlockConfig';
-import imageSrc from 'img/block/2.jpg';
 import schemaSrc from 'img/contacts/how-to-go.jpg';
-
 import ContactsInfo from 'components/contacts/ContactsInfo'
 import Address from 'components/contacts/Address'
 
@@ -100,7 +95,7 @@ class ContactPage extends Component {
                             officeRoute="Мимо охраны на второй этаж направо. Комната 211 с лисёнком – это уже мы. Рады видеть Вас!"
                         />
                     </section>
-                    <ImageBlock imageSrc={imageSrc}/>
+                    <ImageBlock imageSrc={require('img/block/f.jpg')}/>
                     <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig}/>
                     <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
                     <section className="block-service diplom-work-serv">

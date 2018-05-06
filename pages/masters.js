@@ -39,7 +39,7 @@ const MastersPage = () => (
             </section>
             <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong} />
             <OrderForm title="Оценить работу" formConfig={formConfigSecond} form2={true} />
-            <ImageBlock imageSrc={require('img/block/2.jpg')} />
+            <ImageBlock imageSrc={require('img/block/f.jpg')} />
 
             <section className="block-text">
                 <h2 className="block-text__title">

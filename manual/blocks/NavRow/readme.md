@@ -7,16 +7,19 @@
 
 ## Параметры
 **title** *строка*
+
 Крупный текст, основной текст ссылки.
 
 **description** *строка*
+
 Пояснение к ссылке.
 
 **url** *строка*
+
 куда ведёт ссылка.
 
 ### Пример использования
-```js
+```jsx harmony
 import NavRow from 'components/common/NavRow';
 
 <section className="block-nav">

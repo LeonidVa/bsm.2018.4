@@ -57,13 +57,13 @@ app.prepare()
                         fs.mkdirSync(dir);
                     }
                     files.map((file, index) => {
-                        if (file.name === undefined) {
-                            file.name = 'file-' + index
+                        if (file.text === undefined) {
+                            file.text = 'file-' + index
                         }
                         if (file.url === undefined) {
                             file.url = ''
                         }
-                        fs.writeFile(dir + '/' + path.basename(file.name),
+                        fs.writeFile(dir + '/' + path.basename(file.text),
                             Buffer.from(file.url, 'base64'),
                             (err) => {
                                 // throws an error, you could also catch it here
@@ -141,14 +141,14 @@ app.prepare()
             if (verified) {
                 let filelist = [];
                 if (files !== undefined && files.length > 0) {
-                    filelist = files.map(file => file.name)
+                    filelist = files.map(file => file.text)
                 }
                 const res = axios.post('https://orders.besma.ru/api/orders/new', {
                         data: {
                             source: "site",
                             brand: "besmarter",
                             remote_addr: requestIp.getClientIp(req),
-                            name, phone, email, theme, worktype, discipline, deadline, size, comment,
+                            text: name, phone, email, theme, worktype, discipline, deadline, size, comment,
                             files: filelist
                         }
                     }

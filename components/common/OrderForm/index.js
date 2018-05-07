@@ -41,7 +41,7 @@ class OrderForm extends Component {
             window.alert('Пожалуйста, пройдите каптчу')
             return
         }
-        axios.post('/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
+        axios.post('/api/form_data', {text: name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
             .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
             .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))
     }
@@ -52,7 +52,7 @@ class OrderForm extends Component {
         const reader = new FileReader();
         reader.addEventListener("load", function () {
             //console.log(reader.result.split(',')[1])
-            that.setState({files: [...that.state.files, {url: reader.result.split(',')[1], name: file.name, type: file.type}]})
+            that.setState({files: [...that.state.files, {url: reader.result.split(',')[1], text: file.text, type: file.type}]})
         }, false);
         if (file) {
             reader.readAsDataURL(file);
@@ -81,7 +81,7 @@ class OrderForm extends Component {
                 rlabel = <span title="Обязательное поле">*</span>
             }
             field.rlabel = rlabel
-            field.id = 'field-' + index + '-' + field.name
+            field.id = 'field-' + index + '-' + field.text
             switch (field.type) {
                 case "textarea":
                      return this.nptTextarea(field);
@@ -111,8 +111,8 @@ class OrderForm extends Component {
                    id={field.id}
                    placeholder={field.placeholder}
                    required={field.required}
-                   value={this.state[field.name]}
-                   onChange={(e) => this.setState({[field.name]: e.target.value})}/>
+                   value={this.state[field.text]}
+                   onChange={(e) => this.setState({[field.text]: e.target.value})}/>
         </div>
     }
 
@@ -130,8 +130,8 @@ class OrderForm extends Component {
                    id={field.id}
                    placeholder={field.placeholder}
                    required={field.required}
-                   value={this.state[field.name]}
-                   onChange={(e) => this.setState({[field.name]: e.target.value})}/>
+                   value={this.state[field.text]}
+                   onChange={(e) => this.setState({[field.text]: e.target.value})}/>
         </div>
     }
     nptDropDown(field) {
@@ -144,7 +144,7 @@ class OrderForm extends Component {
                     }}>
             <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
             <Dropdown
-                onChange={(e) => this.setState({[field.name]: e})}
+                onChange={(e) => this.setState({[field.text]: e})}
                 value={this.state.worktype.label}
                 options={field.options}
             />
@@ -172,7 +172,7 @@ class OrderForm extends Component {
 
             <ul>
                 {
-                    this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.name}
+                    this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.text}
                         <FontAwesomeIcon icon={close} className="block-form__close" onClick={() => this.removeFile(i)}/>
                     </li>)
                 }
@@ -182,11 +182,9 @@ class OrderForm extends Component {
 
     render() {
         let {title, buttonLabel, redForm} = this.props;
-        console.log('buttonLabel before', buttonLabel)
         if (buttonLabel === undefined || buttonLabel === "") {
             buttonLabel = "Заказать работу"
         }
-        console.log('buttonLabel after', buttonLabel)
         if (!this.state.formSended.bool) {
             return (
                 <section className={`block-form ${redForm ? 'form-red' : ''}`}>

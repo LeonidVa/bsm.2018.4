@@ -5,7 +5,7 @@ const renderLinks=(links)=>(
         return (
             <li key={index}>
                 <Link href={item.url}>
-                    <a>{item.name}</a>
+                    <a>{item.text}</a>
                 </Link>
             </li>
         )

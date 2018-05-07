@@ -61,41 +61,6 @@
             }
         }
     }
-    .reviews-author {
-        display: flex;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        justify-content: flex-start;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: justify;
-        align-items: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        img {
-            font-size: 1em;
-            width: 1.72em;
-            height: 1.72em;
-            margin-right: .31em;
-        }
-        .reviews-name {
-            display: block;
-            font-size: .59em;
-            color: #191919;
-            line-height: normal;
-        }
-        .reviews-job {
-            display: block;
-            font-size: .5em;
-            color: #c0c0c0;
-            line-height: normal;
-            &.job-orange {
-                color: #f4511e;
-            }
-        }
-    }
     .block-profits__item {
         width: 8.59em;
         padding: 1em;

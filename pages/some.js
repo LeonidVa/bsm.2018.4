@@ -13,7 +13,6 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import ImageBlock from 'components/common/ImageBlock';
 import VideoBlock from 'components/common/VideoBlock';
 import OrderForm from 'components/common/OrderForm';
-import Service from 'components/common/Service';
 import LinksBlock from 'components/common/LinksBlock';
 
 import infoBlockConfig from 'components/config/infoBlockConfig'
@@ -23,7 +22,7 @@ import {formConfig} from 'components/config/formConfig'
 import links from 'components/config/linksBlockConfig'
 
 
-const DiplomePage = () => (
+const page = () => (
     <Wrapper title=":тут title который в head:">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
             <Title name="Заголовок страницы"/>
@@ -33,12 +32,16 @@ const DiplomePage = () => (
             </section>
             <MessBlock/>
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
-            <section className="block-form3">
-                <h2 className="block-form3__title">Воспользуйся пока не поздно</h2>
-                <CallMeFormWithTimer timerSize={1.6} timerDuration={10000}>
+
+            <ImageBlock imageSrc={require('img/block/a.jpg')}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url("+require('img/block/h.jpg')+")"}}>
+                <h2 className="block-form-timer__title">Воспользуйся пока не поздно</h2>
+                <CallMeFormWithTimer timerDuration={75000}>
                     <p>Написание диссертаций специализированными докторами наук</p>
                 </CallMeFormWithTimer>
             </section>
+
             <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong}/>
             <OrderForm title="Оценить работу" formConfig={formConfig}/>
             <ImageBlock imageSrc={require('img/block/a.jpg')}/>
@@ -91,13 +94,6 @@ const DiplomePage = () => (
                     </li>
                 </ul>
             </section>
-            <section className="block-form4">
-                <div className="inner">
-                    <h2 className="block-form3__title">Воспользуйся пока не поздно</h2>
-
-                    <CallMeFormWithTimer timerSize={1.6}/>
-                </div>
-            </section>
             <section className="block-text">
                 <h2 className="block-text__title">
                     Как проходит заказ диплома?
@@ -126,9 +122,50 @@ const DiplomePage = () => (
             <OrderForm title="Узнайте стоимость Вашей работы прямо сейчас!" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-            <section className="block-service diplom-work-serv">
+            <section className="block-service">
+                {/* Блок с объявлением. */}
                 <Link href="/diplom">
-                    <a className="block-service__top">
+                    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/services/course-work-bg.jpg') + ")"}}>
+                        <style dangerouslySetInnerHTML={{__html: `.block-service__title.cc1::after { background-color: blue; }`}}/>
+                        <span className="block-service__title cc1" style={{color: "#FFFFFF"}}>Дипломная работа</span>
+                        <p className="block-service__par">
+                            Поможем написать дипломную работу на заказ
+                        </p>
+                        <p className="block-service__par">
+                            от 10 500 ₽<br/>
+                            от 10 дня
+                        </p>
+                    </div>
+                </Link>
+                {/* Блок с кнопками. В классе "list-n" n доложно соответствовать числу кнопок. */}
+                <div className="block-service__list list-3">
+                    <Link href="/">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Курсовая</span>
+                            <p>от 4 500 ₽</p>
+                            <p>от 2 недель</p>
+                        </div>
+                    </Link>
+                    <Link href="/">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Курсовая</span>
+                            <p>от 4 500 ₽</p>
+                            <p>от 2 недель</p>
+                        </div>
+                    </Link>
+                    <Link href="/">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Курсовая</span>
+                            <p>от 4 500 ₽</p>
+                            <p>от 2 недель</p>
+                        </div>
+                    </Link>
+                </div>
+            </section>
+
+            <section className="block-service">
+                <Link href="/diplom">
+                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
                         <span className="block-service__title">Дипломная работа</span>
                         <p className="block-service__par">
                             Поможем написать дипломную работу на заказ
@@ -137,18 +174,22 @@ const DiplomePage = () => (
                             от 10 500 ₽<br/>
                             от 10 дня
                         </p>
-                    </a>
+                    </div>
                 </Link>
-                <div className="block-service__list list-big">
-                    <Service serviceName="Презентация"/>
-                    <Service serviceName="Диплом" cost="от 2 500 ₽"/>
-                    <Service serviceName="Диплом МВА" cost="от 4 500 ₽" time="от 2 недель"/>
+                <div className="block-service__list list-1">
+                    <Link href="/">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Курсовая</span>
+                            <p>от 4 500 ₽</p>
+                            <p>от 2 недель</p>
+                        </div>
+                    </Link>
                 </div>
             </section>
 
             <LinksBlock links={links}/>
         </div>
     </Wrapper>
-)
+);
 
-export default DiplomePage
+export default page

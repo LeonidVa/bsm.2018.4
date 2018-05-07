@@ -6,7 +6,7 @@
 ![ProfitsBlockSlider image](./ProfitsBlockSlider.png)
 
 ### Параметры
-**profitBlockConfig**
+###profitBlockConfig
 infoBlockConfig это массив объектов с полями imageSrc для икноки, title для главного текста и description для дополнительного.
 
 Формат простой:

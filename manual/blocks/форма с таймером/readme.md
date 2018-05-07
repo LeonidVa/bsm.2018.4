@@ -5,23 +5,28 @@
 ## Пример
 ![timer form image](./timerform.png)
 
+## Элементы
+### Картинка
+Картинка устанавливается через `style` контейнера. См. пример.
+
 ## Параметры
+**timerDuration** *integer*
+
+Длительность таймера.
+
 **timerSize** *float*
 
 Размер шрифта таймера. Использовать не обязательно вовсе.
 
-**timerDuration** *integer*
-
-Длительность таймера. В данный момент не работает.
 
 
 ### Пример использования
-```js
-import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer'
+```jsx harmony
+import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-<section className="block-form3">
-    <h2 className="block-form3__title">Воспользуйся пока не поздно</h2>
-    <CallMeFormWithTimer timerSize={1.6} timerDuration={10000}>
+<section className="block-form-timer" style={{backgroundImage: "url("+require('img/block/h.jpg')+")"}}>
+    <h2 className="block-form-timer__title">Воспользуйся пока не поздно</h2>
+    <CallMeFormWithTimer timerDuration={75000} timerSize={1.6}>
         <p>Написание диссертаций специализированными докторами наук</p>
     </CallMeFormWithTimer>
 </section>

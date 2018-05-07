@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Slider from "react-slick";
 import { isMobile } from 'react-device-detect';
 
-import '../slick.scss'
+//import '../slick.scss'
 
 const Review = ({ faceImg, reviewText, bottom, name, prof }) => (
 
@@ -15,7 +15,7 @@ const Review = ({ faceImg, reviewText, bottom, name, prof }) => (
                 <img src={faceImg} alt="" />
                 <div className="reviews-author__data">
                     <span className="reviews-name">{name}</span>
-                    <span className="reviews-job job-orange">{prof}</span>
+                    <span className={`reviews-job ${bottom ? 'job-orange': ''}`}>{prof}</span>
                 </div>
             </div>
         </div>
@@ -25,20 +25,19 @@ const Review = ({ faceImg, reviewText, bottom, name, prof }) => (
 
 const Block = (props)=> {
   
-        const { faceImg, reviewText, name, prof, faceImgBot, reviewTextBot, nameBot, profBot } = props;
+        const { client, manager } = props;
         return (
                 <div className="block-slider__slide review">
-                    
                         <div className="block-slider__reviews-block">
-                            <Review faceImg={faceImg} 
-                                    reviewText={reviewText} 
-                                    name={name} 
-                                    prof={prof} 
+                            <Review faceImg={client.avatar}
+                                    reviewText={client.text}
+                                    name={client.name}
+                                    prof={client.prof}
                                     bottom={false}/>
-                            <Review faceImg={faceImgBot} 
-                                    reviewText={reviewTextBot} 
-                                    name={nameBot} 
-                                    prof={profBot} 
+                            <Review faceImg={manager.avatar}
+                                    reviewText={manager.text}
+                                    name={manager.name}
+                                    prof={manager.prof}
                                     bottom={true}/>     
                         </div>
                 </div>
@@ -52,14 +51,8 @@ const renderBlocks = (reviewBlockConfig) =>{
     return reviewBlockConfig.map((item, index)=>(
             <Block  
                     key={index}
-                    faceImg={item.faceImg}
-                    faceImgBot={item.faceImgBot}
-                    reviewText={item.reviewText}
-                    reviewTextBot={item.reviewTextBot}
-                    name={item.name}
-                    nameBot={item.nameBot}
-                    prof={item.prof}
-                    profBot={item.profBot}
+                    client={item.client}
+                    manager={item.manager}
                     blocksCount={reviewBlockConfig.length} />
     ))
 }
@@ -70,10 +63,10 @@ class ReviewSlider extends Component{
 
     render(){
         const { reviewBlockConfig } = this.props;
-        var settings = {
+        const settings = {
             dots: false,
             infinite: true,
-            slidesToShow: reviewBlockConfig.length - 1,
+            slidesToShow: 7,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,
@@ -89,13 +82,25 @@ class ReviewSlider extends Component{
                 {
                     breakpoint: 992,
                     settings: {
-                        slidesToShow: reviewBlockConfig.length - 3,
+                        slidesToShow: 2,
                     }
                 },
                 {
                     breakpoint: 1300,
                     settings: {
-                        slidesToShow: reviewBlockConfig.length - 2,
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 1920,
+                    settings: {
+                        slidesToShow: 5,
                     }
                 },
 

@@ -9,7 +9,7 @@ const nextConfig = {
         config.resolve.alias.components = __dirname + '/components/';
         //console.log(config)
         config.plugins = config.plugins.filter(
-            (plugin) => (plugin.constructor.name !== 'UglifyJsPlugin')
+            (plugin) => (plugin.constructor.text !== 'UglifyJsPlugin')
         );
         return config
     },

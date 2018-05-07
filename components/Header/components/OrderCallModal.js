@@ -20,8 +20,8 @@ class OrderCall extends Component {
 
     componentWillReceiveProps = (nextProps, nextState) => {
 
-        if (nextProps.display !== this.state.display) {
-            this.setState({display: nextProps.display})
+        if (nextProps.open !== this.state.open) {
+            this.setState({open: nextProps.open})
         }
     }
 

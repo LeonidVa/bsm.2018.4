@@ -45,6 +45,13 @@
             left: 50%;
             margin-top: -.1875em;
             margin-left: -.155em;
+            transition: all 0.4s ease-out;
+        }
+        &.up {
+            div {
+                transform: rotate(225deg);
+                margin-top: -.09em;
+            }
         }
     }
     .big-btn {
@@ -57,14 +64,13 @@
         }
     }
 }
-
 .big-btn {
     display: block;
     width: calc(100% + 2.18em);
     text-align: center;
     font-size: 1em;
     padding: 1.31em 0;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     margin: 1.56em 0 0 -1.09em;
     background-color: #f4511e;

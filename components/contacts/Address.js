@@ -6,12 +6,12 @@ class Address extends Component{
     }
     handleClick = () =>{
         const { handleMaps } = this.props
-        this.setState({ display: !this.state.display })
+        this.setState({ open: !this.state.open })
         handleMaps()
     }
     componentWillReceiveProps = (nextProps, nextState) => {
-        if(nextProps.display !== this.state.display){
-            this.setState({ display: nextProps.display })
+        if(nextProps.open !== this.state.open){
+            this.setState({ open: nextProps.open })
         }
     }
     render(){
@@ -23,7 +23,7 @@ class Address extends Component{
                         {metro}
                     </p>
                 </div>
-                <div className="block-accordion__body active" style={{ opacity: this.state.display ? 1 : 0, maxHeight: this.state.display ? "1000px" : "0" }}>
+                <div className="block-accordion__body active" style={{ opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "1000px" : "0" }}>
                     <img src={schema} alt="how-to-go" />
                     <p className="block-text__par">
                         {metro}<br />

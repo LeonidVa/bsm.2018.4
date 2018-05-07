@@ -1,10 +1,7 @@
 import Wrapper from 'components/Wrapper';
-
 import Title from 'components/common/Title';
-
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer'
 import Link from 'next/link';
-
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessagersBlock';
 import InfoBlock from 'components/common/InfoBlock';
@@ -14,6 +11,7 @@ import ImageBlock from 'components/common/ImageBlock';
 import VideoBlock from 'components/common/VideoBlock';
 import OrderForm from 'components/common/OrderForm';
 import LinksBlock from 'components/common/LinksBlock';
+
 
 import infoBlockConfig from 'components/config/infoBlockConfig'
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
@@ -25,23 +23,19 @@ import links from 'components/config/linksBlockConfig'
 const page = () => (
     <Wrapper title=":тут title который в head:">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
-                <section className="breadcrumbs">
-                    <div className="inner">
-                        <Link href="/pricing">
-                            <a>Услуги</a>
-                        </Link>
-                        <span> / </span>
-                        <Link href="/course">
-                            <a>Курсовая работа</a>
-                        </Link>
-                    </div>
-                </section>
-
-            <section className="main-title">
+            <section className="breadcrumbs">
                 <div className="inner">
-                    <h1>Заголовок страницы</h1>
+                    <Link href="/pricing">
+                        <a>Услуги</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="/course">
+                        <a>Курсовая работа</a>
+                    </Link>
                 </div>
             </section>
+
+            <Title>Заголовок тут</Title>
 
             <section className="block-nav">
                 <NavRow title="Оценить работу" description="Узнайте сроки и цену вашей работы" url='#'/>

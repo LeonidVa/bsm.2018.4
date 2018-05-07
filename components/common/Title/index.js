@@ -1,27 +1,13 @@
-import Link from 'next/link';
-// import './Title.scss';
+import React, {Component} from 'react';
 
-const Title = ({name}) => (
-    <div>
-        <section className="breadcrumbs">
+class Title extends Component {
+    render() {
+        return <section className="main-title">
             <div className="inner">
-                <Link href="/pricing">
-                    <a>Услуги</a>
-                </Link>
-                <span> / </span>
-                <Link href="/course">
-                    <a>Курсовая работа</a>
-                </Link>
+                <h1>{this.props.children}</h1>
             </div>
         </section>
+    };
+}
 
-        <section className="main-title">
-            <div className="inner">
-                <h1>{name}</h1>
-            </div>
-        </section>
-
-    </div>
-)
-
-export default Title;
+export default Title

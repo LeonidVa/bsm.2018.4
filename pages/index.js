@@ -2,24 +2,22 @@ import Wrapper from 'components/Wrapper';
 
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessagersBlock';
-import ServiceBlock from 'components/common/ServiceBlock';
 import TextBlock from 'components/common/TextBlock';
 
 
-const Index =()=>(
-      <Wrapper title="BeSmarter - Главная">
+const Index = () => (
+    <Wrapper title="BeSmarter - Главная">
         <div className="wrapper main">
-              <section className="block-nav">
-                  <NavRow action="Заказать работу" url='#' />
-                  <NavRow action="Услуги и цены" url='pricing' />
-                  <NavRow action="Контакты" url='contacts' />
-              </section>
-              <MessBlock />
-              <ServiceBlock timerColor='#ff5722' timerDuration={4*60*60*1000}/>
-              <TextBlock />
-          </div>
-      </Wrapper>
-)
+            <section className="block-nav">
+                <NavRow url='#' title="Заказать работу" description="dfdfd fkajf ldfj dkl"/>
+                <NavRow url='pricing' title="Услуги и цены" description="dfdfd fkajf ldfj dkl"/>
+                <NavRow url='contacts' title="Контакты" description="dfdfd fkajf ldfj dkl"/>
+            </section>
+            <MessBlock/>
+            <TextBlock/>
+        </div>
+    </Wrapper>
+);
 
 
 export default Index

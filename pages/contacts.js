@@ -6,8 +6,6 @@ import Title from 'components/common/Title'
 import MapBlock from 'components/common/MapBlock';
 import ImageBlock from 'components/common/ImageBlock'
 import OrderForm from 'components/common/OrderForm'
-import Work from 'components/common/Work'
-import Service from 'components/common/Service'
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 import {formConfig} from 'components/config/formConfig';
@@ -45,7 +43,7 @@ class ContactPage extends Component {
         return (
             <Wrapper title="BeSmarter - Контакты">
                 <div className="wrapper bg bg-c2 bg-img bg-img5">
-                    <Title name="Контакты"/>
+                    <Title>Контакты</Title>
                     <OrderCall closeModal={this.closeModal}
                                display={this.state.modalIsOpen ? 'block' : 'none'}/>
                     <ContactsInfo openModal={this.openModal}/>
@@ -98,12 +96,28 @@ class ContactPage extends Component {
                     <ImageBlock imageSrc={require('img/block/f.jpg')}/>
                     <OrderForm title="Скидка 10% на докторскую диссертацию" formConfig={formConfig}/>
                     <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-                    <section className="block-service diplom-work-serv">
-                        <Work url="diplome" workName="Дипломная работа" workDescription="Поможем написать дипломную работу на заказ" cost="от 1 500 ₽" time="от 1 дня"/>
-                        <div className="block-service__list list-big">
-                            <Service serviceName="Презентация"/>
-                            <Service serviceName="Диплом" cost="от 2 500 ₽"/>
-                            <Service serviceName="Диплом МВА" cost="от 4 500 ₽" time="от 2 недель"/>
+
+                    <section className="block-service">
+                        <Link href="/diplom">
+                            <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
+                                <span className="block-service__title">Дипломная работа</span>
+                                <p className="block-service__par">
+                                    Поможем написать дипломную работу на заказ
+                                </p>
+                                <p className="block-service__par">
+                                    от 10 500 ₽<br/>
+                                    от 10 дня
+                                </p>
+                            </div>
+                        </Link>
+                        <div className="block-service__list list-1">
+                            <Link href="/">
+                                <div className="block-service__list-item">
+                                    <span className="block-service__list-title">Курсовая</span>
+                                    <p>от 4 500 ₽</p>
+                                    <p>от 2 недель</p>
+                                </div>
+                            </Link>
                         </div>
                     </section>
                     <LinksBlock links={links}/>

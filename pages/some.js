@@ -25,7 +25,24 @@ import links from 'components/config/linksBlockConfig'
 const page = () => (
     <Wrapper title=":тут title который в head:">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
-            <Title name="Заголовок страницы"/>
+                <section className="breadcrumbs">
+                    <div className="inner">
+                        <Link href="/pricing">
+                            <a>Услуги</a>
+                        </Link>
+                        <span> / </span>
+                        <Link href="/course">
+                            <a>Курсовая работа</a>
+                        </Link>
+                    </div>
+                </section>
+
+            <section className="main-title">
+                <div className="inner">
+                    <h1>Заголовок страницы</h1>
+                </div>
+            </section>
+
             <section className="block-nav">
                 <NavRow title="Оценить работу" description="Узнайте сроки и цену вашей работы" url='#'/>
                 <NavRow title="Почесать репу" description="Почеши сейчас совершенно бесплатно" url='/'/>
@@ -35,7 +52,7 @@ const page = () => (
 
             <ImageBlock imageSrc={require('img/block/a.jpg')}/>
 
-            <section className="block-form-timer" style={{backgroundImage: "url("+require('img/block/h.jpg')+")"}}>
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">Воспользуйся пока не поздно</h2>
                 <CallMeFormWithTimer timerDuration={75000}>
                     <p>Написание диссертаций специализированными докторами наук</p>
@@ -120,13 +137,14 @@ const page = () => (
             </section>
 
             <OrderForm title="Узнайте стоимость Вашей работы прямо сейчас!" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-service">
                 {/* Блок с объявлением. */}
                 <Link href="/diplom">
                     <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/services/course-work-bg.jpg') + ")"}}>
-                        <style dangerouslySetInnerHTML={{__html: `.block-service__title.cc1::after { background-color: blue; }`}}/>
+                        <style dangerouslySetInnerHTML={{__html: `.block-service__title.cc1::after { background-color: #ffffff; }`}}/>
                         <span className="block-service__title cc1" style={{color: "#FFFFFF"}}>Дипломная работа</span>
                         <p className="block-service__par">
                             Поможем написать дипломную работу на заказ

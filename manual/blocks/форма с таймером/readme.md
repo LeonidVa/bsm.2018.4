@@ -21,7 +21,7 @@
 
 
 ### Пример использования
-```jsx harmony
+```jsx
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
 <section className="block-form-timer" style={{backgroundImage: "url("+require('img/block/h.jpg')+")"}}>

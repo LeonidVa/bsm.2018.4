@@ -44,7 +44,7 @@
 * dropdown
 * file
 
-```jsx harmony
+```jsx
 [
     {label: 'Имя', name: "name", type: 'text', placeholder: 'Ваше имя', required: true},
     {label: 'Тема', name: "theme", type: 'text', placeholder: 'Тема работы', required: false},
@@ -55,7 +55,7 @@
 ```
 
 ## Пример использования
-```jsx harmony
+```jsx
 import OrderForm from 'components/common/OrderForm';
 import {formConfig} from 'components/config/formConfig';
 

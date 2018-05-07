@@ -9,7 +9,7 @@
 ## Параметры
 ### links
 Массив ссылок
-```jsx harmony
+```jsx
 [
     { url: "#", text: "Где можно заказать дипломную работу" },
     { url: "#", text: "Помощь в написании диплома" },
@@ -18,7 +18,7 @@
 ```
 
 ### Пример использования
-```jsx harmony
+```jsx
 import links from 'components/config/linksBlockConfig';
 <LinksBlock links={links}/>
 ```

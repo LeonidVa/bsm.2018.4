@@ -21,7 +21,7 @@
 `<section className="block-service">`
 ### Блок с объявлением
 Пример с дефолтными настройками
-```jsx harmony
+```jsx
 <Link href="/diplom">
     <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
         <span className="block-service__title">Дипломная работа</span>
@@ -37,7 +37,7 @@
 ```
 
 Подробный пример полного кода со всеми настройками 
-```jsx harmony
+```jsx
 <Link href="/diplom">
     <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/services/course-work-bg.jpg') + ")"}}>
         <style dangerouslySetInnerHTML={{__html: `.block-service__title.cc1::after { background-color: blue; }`}}/>
@@ -70,7 +70,7 @@
 Доступные значения `n` с 1 по 5.
 
 #### Кнопка
-```jsx harmony
+```jsx
 <Link href="/">
     <div className="block-service__list-item">
         <span className="block-service__list-title">Курсовая</span>
@@ -81,7 +81,7 @@
 ```
 
 ### Пример использования
-```jsx harmony
+```jsx
 <section className="block-service">
     <Link href="/diplom">
         <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
@@ -107,7 +107,8 @@
 </section>
 ```
 ### Подробный пример
-```jsx harmony
+
+```jsx
 <section className="block-service">
     {/* Блок с объявлением. */}
     <Link href="/diplom">

@@ -19,7 +19,7 @@
 куда ведёт ссылка.
 
 ### Пример использования
-```jsx harmony
+```jsx
 import NavRow from 'components/common/NavRow';
 
 <section className="block-nav">

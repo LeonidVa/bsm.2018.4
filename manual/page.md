@@ -16,7 +16,7 @@
 Код страницы требует подклчения используемых компонентов, а также
 требует определённых контейнеров для нормального отображения.
 
-```jsx harmony
+```jsx
 import Wrapper from 'components/Wrapper';
 import Title from 'components/common/Title';
 import NavRow from 'components/common/NavRow';
@@ -73,7 +73,7 @@ const page = () => (
 
 ### Breadcrumbs
 Хлебные крошки идут над заголовком.
-```jsx harmony
+```jsx
 <section className="breadcrumbs">
     <div className="inner">
         <Link href="/pricing">
@@ -89,7 +89,7 @@ const page = () => (
 
 ### Заголовок
 Заголовок идёт после breadcumbs, если они есть.
-```jsx harmony
+```jsx
 <section className="main-title">
     <div className="inner">
         <h1>Заголовок страницы</h1>

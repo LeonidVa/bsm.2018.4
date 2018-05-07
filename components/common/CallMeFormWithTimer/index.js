@@ -20,7 +20,7 @@ class CallMeFormWithTimer extends Component{
                     <div className="timer">
                         <Timer size={timerSize} timerDuration={timerDuration}/>
                     </div>
-                    <p>Написание диссертаций специализированными докторами наук</p>
+                    {this.props.children}
                 </div>
 
                 <form onSubmit={this.handleSubmit}>

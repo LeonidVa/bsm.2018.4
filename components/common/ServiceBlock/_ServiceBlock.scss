@@ -5,7 +5,6 @@
     margin: 1.56em auto 0;
     position: relative;
     z-index: 1;
-
     @media (max-width: 900px) {
         max-width: 100%;
     }
@@ -13,6 +12,8 @@
         font-size: 2em;
     }
     &__top {
+        min-height: 18rem;
+        height: auto;
         display: block;
         padding: 1.56em 1.56em .75em;
         background-size: cover;
@@ -39,15 +40,15 @@
         display: inline-block;
         font-weight: bold;
         text-decoration: none;
-        color: #333;
-        margin-bottom: .31em;
+        color: #333333;
+        margin-bottom: 1rem;
         position: relative;
         &::after {
             content: "";
             position: absolute;
             width: 0%;
             height: 1px;
-            background-color: #333;
+            background-color: #333333;
             left: 50%;
             top: 100%;
             transition: all .4s;
@@ -60,19 +61,19 @@
     &__par {
         font-size: .68em;
         max-width: 17.09em;
-        color: #333;
+        color: #333333;
         line-height: normal;
+        margin-bottom: 1rem;
         @media (max-width: 660px) {
             display: none;
         }
     }
-    
     &__list {
         display: flex;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
-        color: #fff;
+        color: #ffffff;
         text-align: center;
         @media (max-width: 660px) {
             display: block;
@@ -131,7 +132,7 @@
             display: block;
             padding: 1.75em .6em;
             text-decoration: none;
-            color: #fff;
+            color: #ffffff;
             cursor: pointer;
             transition: all .3s;
             &:nth-child(1) {
@@ -172,7 +173,7 @@
             display: inline-block;
             font-size: .75em;
             margin-bottom: .31em;
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             position: relative;
             &::after {
@@ -180,7 +181,7 @@
                 position: absolute;
                 width: 0%;
                 height: 1px;
-                background-color: #fff;
+                background-color: #ffffff;
                 left: 50%;
                 top: 100%;
                 transition: all .4s;
@@ -194,52 +195,37 @@
             }
         }
     }
+    /************* todo: перенести в параметры картинку и цвет шрифта *************************/
     &.presentation-serv {
         .block-service__top {
             background-image: url(~img/services/presentation-bg.jpg);
-            background-color: #c5d2e3;
         }
     }
     &.course-work-serv,
     &.dissertation-serv {
         .block-service__top {
             background-image: url(~img/services/course-work-bg.jpg);
-            padding: 1.56em 1.56em .82em;
-            background-color: #c24976;
         }
         .block-service__title {
-            color: #fff;
-            margin-bottom: .625em;
-            &::after {
-                background-color: #fff;
-            }
+            color: #ffffff;
         }
         .block-service__par {
-            color: #fff;
-            margin-bottom: .625rem;
+            color: #ffffff;
         }
     }
     &.diplom-work-serv {
         .block-service__top {
             background-image: url(~img/services/diplom-work-bg.jpg);
-            padding: 1.56em 1.56em 1.6em;
-            background-color: #fdd100;
-        }
-        .block-service__title {
-            margin-bottom: .625em;
-        }
-        .block-service__par {
-            margin-bottom: .625rem;
         }
     }
     &.dissertation-serv {
         .block-service__top {
             background-image: url(~img/services/dissertation-bg.jpg);
-            background-color: #028ac6;
         }
     }
+    /*******************************/
 }
-
+/* todo: отделить, формам с таймером задавать картинку в коде, а не в стилях */
 .block-form3,
 .block-form4 {
     font-size: 2em;
@@ -252,7 +238,7 @@
     background-size: cover;
     background-position: right top;
     padding: 3.56em 2.688em 3.25em;
-    color: #fff;
+    color: #ffffff;
     @media (max-width: 900px) {
         width: 100%;
     }
@@ -346,7 +332,7 @@
             font-size: .56em;
             width: 12.28em;
             height: 2.78em;
-            color: #fff;
+            color: #ffffff;
             border: none;
             background-color: #f4511e;
             cursor: pointer;
@@ -371,7 +357,6 @@
         background-color: rgba(0, 0, 0, 0.6);
     }
 }
-
 .diplome .block-form4,
 .masters .block-form4,
 .course .block-form4 {

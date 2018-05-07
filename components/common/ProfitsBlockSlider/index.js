@@ -8,7 +8,7 @@ import '../slick.scss'
 
 const Block = (props)=>{
 
-        const { imageSrc, profit, description } = props;
+        const { imageSrc, title, description } = props;
 
         return(
   
@@ -16,7 +16,7 @@ const Block = (props)=>{
                
                         <a className="block-profits__item">
                             <img src={imageSrc} alt="profit" style={{objectFit: 'contain'}}/>
-                            <h3 className="block-profits__title">{profit}</h3>
+                            <h3 className="block-profits__title">{title}</h3>
                             <p className="block-profits__par">
                                 {description}   
                             </p>
@@ -35,7 +35,7 @@ const renderBlocks = (profitBlockConfig) => {
         <Block 
                key={index} 
                imageSrc={item.imageSrc} 
-               profit={item.profit} 
+               title={item.title}
                description={item.description}
                blocksCount={profitBlockConfig.length} />
     ))

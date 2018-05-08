@@ -14,7 +14,7 @@ class OrderCall extends Component {
         e.preventDefault()
 
         console.log('позвоните мне ' + phone + ', ' + name)
-        axios.post('/api/form_data', {text: name, phone, verified: true})
+        axios.post('/api/form_data', {name, phone, verified: true})
         this.props.closeModal()
     }
 

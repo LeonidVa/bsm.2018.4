@@ -25,38 +25,62 @@ class OrderForm extends Component {
         files: [],
         fileName: 'Добавить файл',
         Extended: false,
-        verified: false,
-        formSended: {bool: false, number: '', error: false}
-    }
+        verified: "",
+        formSended: {bool: false, number: '', error: false},
+    };
+
+
     verifyCallback = (value) => {
-        if (value) {
-            this.setState({verified: true})
-        }
-    }
+        this.setState({verified: value})
+    };
 
     handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state
         if (!this.state.verified) {
-            window.alert('Пожалуйста, пройдите каптчу')
+            window.alert('Пожалуйста, пройдите каптчу');
             return
         }
-        axios.post('/api/form_data', {text: name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
-            .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
-            .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))
-    }
+        let formData = new FormData();
+        formData.set('name', name);
+        formData.set('phone', phone);
+        formData.set('email', email);
+        formData.set('theme', theme);
+        formData.set('worktype', worktype.value);
+        formData.set('discipline', discipline);
+        formData.set('deadline', deadline);
+        formData.set('size', size);
+        formData.set('comment', comment);
+        files.forEach(file => {
+            formData.append('files', file);
+        });
+        formData.set('verified', verified);
+        axios({
+            method: 'POST',
+            url: 'http://localhost:3001/api/form_data',
+            data: formData,
+            config: {headers: {'Content-Type': 'multipart/form-data'}}
+        })
+            .then(function (response) {
+                //handle success
+                console.log(response);
+            })
+            .catch(function (response) {
+                //handle error
+                console.log(response);
+            });
+
+
+        /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
+                    .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
+                    .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))*/
+    };
 
     onDrop(files) {
-        const that = this;
-        const file = files[0]
-        const reader = new FileReader();
-        reader.addEventListener("load", function () {
-            //console.log(reader.result.split(',')[1])
-            that.setState({files: [...that.state.files, {url: reader.result.split(',')[1], text: file.text, type: file.type}]})
-        }, false);
-        if (file) {
-            reader.readAsDataURL(file);
+        if (files.length === 0) {
+            return
         }
+        files.map((file) => this.setState({files: [...this.state.files, file]}))
     }
 
     removeFile(index) {
@@ -81,10 +105,10 @@ class OrderForm extends Component {
                 rlabel = <span title="Обязательное поле">*</span>
             }
             field.rlabel = rlabel
-            field.id = 'field-' + index + '-' + field.text
+            field.id = 'field-' + index + '-' + field.name
             switch (field.type) {
                 case "textarea":
-                     return this.nptTextarea(field);
+                    return this.nptTextarea(field);
                 case "dropdown":
                     return this.nptDropDown(field);
                     break;
@@ -111,8 +135,8 @@ class OrderForm extends Component {
                    id={field.id}
                    placeholder={field.placeholder}
                    required={field.required}
-                   value={this.state[field.text]}
-                   onChange={(e) => this.setState({[field.text]: e.target.value})}/>
+                   value={this.state[field.name]}
+                   onChange={(e) => this.setState({[field.name]: e.target.value})}/>
         </div>
     }
 
@@ -126,14 +150,15 @@ class OrderForm extends Component {
                     }}>
             <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
             <textarea type={field.type}
-                   name=""
-                   id={field.id}
-                   placeholder={field.placeholder}
-                   required={field.required}
-                   value={this.state[field.text]}
-                   onChange={(e) => this.setState({[field.text]: e.target.value})}/>
+                      name=""
+                      id={field.id}
+                      placeholder={field.placeholder}
+                      required={field.required}
+                      value={this.state[field.name]}
+                      onChange={(e) => this.setState({[field.name]: e.target.value})}/>
         </div>
     }
+
     nptDropDown(field) {
         return <div className="block-form__item"
                     key={field.id}
@@ -144,7 +169,7 @@ class OrderForm extends Component {
                     }}>
             <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
             <Dropdown
-                onChange={(e) => this.setState({[field.text]: e})}
+                onChange={(e) => this.setState({[field.name]: e})}
                 value={this.state.worktype.label}
                 options={field.options}
             />
@@ -172,7 +197,7 @@ class OrderForm extends Component {
 
             <ul>
                 {
-                    this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.text}
+                    this.state.files.map((f, i) => <li style={{fontSize: '14px', display: 'flex', marginBottom: '5px'}} key={i}>{f.name}
                         <FontAwesomeIcon icon={close} className="block-form__close" onClick={() => this.removeFile(i)}/>
                     </li>)
                 }

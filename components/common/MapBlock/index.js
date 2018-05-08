@@ -1,7 +1,44 @@
+import {YMaps, Map, Placemark} from 'react-yandex-maps';
+
+import React from 'react';
+
+
+const mapState = {center: [55.753710, 37.605719], zoom: 17};
+
+class FillContainer extends React.Component {
+    state = {width: '100%', height: '100%'};
+
+    render() {
+        const {width, height} = this.state;
+        return (
+            <YMaps>
+                <Map state={mapState} width={width} height={height}>
+                    <Placemark
+                        geometry={{
+                            coordinates: [55.753710, 37.605719]
+                        }}
+                        properties={{
+                            hintContent: 'Собственный значок метки',
+                            balloonContent: 'Это красивая метка'
+                        }}
+                        options={{
+                            iconLayout: 'default#image',
+                            iconImageHref: require('img/fox-logo.128.png'),
+                            iconImageSize: [48, 48],
+                            iconImageOffset: [-24, -24]
+                        }}
+                    />
+                </Map>
+            </YMaps>
+        );
+    }
+}
+
+
 const MapBlock = () => (
     <section className="block-map">
-        <span>карта</span>
+        <FillContainer/>
     </section>
-)
+);
 
 export default MapBlock;

@@ -3,20 +3,20 @@ const withSass = require('@zeit/next-sass');
 const withImages = require('next-images');
 
 const nextConfig = {
-    //assetPrefix: 'https://static.besmarter.ru',
+    assetPrefix: 'https://static.besmarter.ru',
     webpack: (config, {dev}) => {
         config.resolve.alias.img = __dirname + '/img/';
         config.resolve.alias.components = __dirname + '/components/';
-        //console.log(config)
-        config.plugins = config.plugins.filter(
-            (plugin) => (plugin.constructor.text !== 'UglifyJsPlugin')
-        );
         return config
     },
 };
 
 
+module.exports = withImages(withSass(nextConfig));
+
+
+/*
 module.exports = withPlugins([
     withSass,
     withImages,
-], nextConfig);
+], nextConfig);*/

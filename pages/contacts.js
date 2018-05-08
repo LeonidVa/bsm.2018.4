@@ -16,7 +16,7 @@ import ContactsInfo from 'components/contacts/ContactsInfo'
 import Address from 'components/contacts/Address'
 
 
-class ContactPage extends Component {
+class page extends Component {
     state = {
         display: false,
         modalIsOpen: false,
@@ -128,4 +128,4 @@ class ContactPage extends Component {
 }
 
 
-export default ContactPage
+export default page

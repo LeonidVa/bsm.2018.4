@@ -5,7 +5,7 @@ import MessBlock from 'components/common/MessagersBlock';
 import TextBlock from 'components/common/TextBlock';
 
 
-const Index = () => (
+const page = () => (
     <Wrapper title="BeSmarter - Главная">
         <div className="wrapper main">
             <section className="block-nav">
@@ -20,4 +20,4 @@ const Index = () => (
 );
 
 
-export default Index
+export default page

@@ -1,5 +1,4 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-// import foxLogo from 'img/bg.jpg'
 
 
 

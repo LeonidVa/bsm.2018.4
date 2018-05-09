@@ -9,5 +9,6 @@ services:
 
 all_tests:
   script:
+  - node -v
    - yarn install
    - yarn build

@@ -1,0 +1,13 @@
+image: node:latest
+
+cache:
+  paths:
+  - node_modules/
+
+services:
+  #- postgres:9.5.0
+
+all_tests:
+  script:
+   - yarn install
+   - yarn build

@@ -55,8 +55,7 @@
             height: 4.33em;
         }
     }
-    &
-    label {
+    & label {
         line-height: 1.33em;
         font-size: .5em;
         color: #4a4a4a;
@@ -104,6 +103,7 @@
         cursor: pointer;
     }
     &__btn {
+        font-family: "Ubuntu", sans-serif;
         font-size: .56em;
         display: block;
         margin: 1.33em auto 0;
@@ -120,11 +120,15 @@
             background-color: #922d0e;
         }
     }
-
     &__close {
         margin-left: 5px;
         color: #f4511e;
         cursor: pointer;
+    }
+    &__agree {
+        display: block;
+        text-align: center;
+        font-size: 0.33em;
     }
 }
 .dropzone {

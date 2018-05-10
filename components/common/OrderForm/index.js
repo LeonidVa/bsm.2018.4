@@ -227,6 +227,7 @@ class OrderForm extends Component {
                                 sitekey="6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS"
                             />
                         </div>
+                        <span className="block-form__agree">Отправляя эти данные, я принимаю <Link href="/politika-konfidentsialnosti"><a>Политику конфиденциальности</a></Link></span>
                         <button type="submit" className="block-form__btn">{buttonLabel}</button>
                     </form>
                 </section>

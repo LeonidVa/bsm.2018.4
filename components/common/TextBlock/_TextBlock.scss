@@ -2,14 +2,11 @@
     font-size: 2em;
     width: 17em;
     margin: 1.56em auto 0;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 1.56em 1.09em .94em;
     color: #4a4a4a;
     position: relative;
     z-index: 1;
-    &.no-bottom-padd {
-        padding-bottom: 0;
-    }
 
     @media (max-width: 900px) {
         width: 70%;
@@ -17,7 +14,11 @@
     }
     @media (max-width: 660px) {
         width: 100%;
-        padding: 1.56em .78em .94em;
+        padding: 0.5em .78em .94em;
+    }
+
+    &.no-bottom-padd {
+        padding-bottom: 0;
     }
     &__title {
         font-family: "Ubuntu", sans-serif;
@@ -114,8 +115,8 @@
             font-family: "Ubuntu", sans-serif;
             font-weight: bold;
             font-size: .56em;
-            text-align: left; 
-            padding-bottom: 1.55em;         
+            text-align: left;
+            padding-bottom: 1.55em;
             &:last-child {
                 text-align: right;
             }

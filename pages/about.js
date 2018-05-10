@@ -15,7 +15,7 @@ import LinksBlock from 'components/common/LinksBlock';
 
 import infoBlockConfig from 'components/config/infoBlockConfig'
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
-import {profitBlockConfigShort, profitBlockConfigLong} from 'components/config/profitBlockConfig';
+import dopy from 'components/config/dopraboty';
 import {formConfig} from 'components/config/formConfig'
 import links from 'components/config/linksBlockConfig'
 
@@ -53,7 +53,7 @@ const page = () => (
                 </CallMeFormWithTimer>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong}/>
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
             <OrderForm title="Оценить работу" formConfig={formConfig}/>
             <ImageBlock imageSrc={require('img/block/a.jpg')}/>
             <section className="block-text">
@@ -82,7 +82,7 @@ const page = () => (
                     Вы платите деньги исключительно за положительный результат, поэтому сотрудники общаются с вами вплоть до момента успешной защиты.
                 </p>
             </section>
-            <ProfitsBlockSlider profitBlockConfig={profitBlockConfigShort}/>
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
             <section className="block-text">
                 <h2 className="block-text__title">
                     Почему стоит заказать диплом именно у нас?
@@ -137,7 +137,7 @@ const page = () => (
             <section className="block-service">
                 {/* Блок с объявлением. */}
                 <Link href="/diplom">
-                    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/services/course-work-bg.jpg') + ")"}}>
+                    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
                         <style dangerouslySetInnerHTML={{__html: `.block-service__title.cc1::after { background-color: #ffffff; }`}}/>
                         <span className="block-service__title cc1" style={{color: "#FFFFFF"}}>Дипломная работа</span>
                         <p className="block-service__par">
@@ -177,7 +177,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom">
-                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
+                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/i.jpg') + ")"}}>
                         <span className="block-service__title">Дипломная работа</span>
                         <p className="block-service__par">
                             Поможем написать дипломную работу на заказ

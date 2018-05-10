@@ -46,7 +46,7 @@ const workTypeOptions = [
     {value: "korrektura", label: "Корректура"}
 ];
 
-export const formConfig = [
+export default  [
     {label: 'Имя', name: "name", type: 'text', placeholder: 'Ваше имя', required: true},
     {label: 'Телефон', name: "phone", type: 'text', placeholder: 'Ваш телефон', required: true},
     {label: 'Почта', name: "email", type: 'email', placeholder: 'email', required: false},
@@ -58,13 +58,3 @@ export const formConfig = [
     {label: 'Комментарии', name: "comment", type: 'textarea', placeholder: 'Ваши комментарии', required: false},
     {label: 'Прикрепить Файл', name: "file", type: 'file', placeholder: 'Добавить файл', required: false}
 ]
-
-export const formConfigSecond = [
-    {label: 'Вид работы', name: "worktype", type: 'text', id: 'form-worktype', placeholder: '', required: true},
-    {label: 'Предмет', name: "subject", type: 'text', id: 'form-subject', placeholder: '', required: true},
-    {label: 'Тема работы', name: "topic", type: 'text', id: 'form-topic', placeholder: '', required: true},
-    {label: 'Имя', name: "name", type: 'text', id: 'form-name', placeholder: 'Ваше имя', required: false},
-    {label: 'Телефон', name: "phone", type: 'text', id: 'form-phone', placeholder: 'Ваш телефон', required: false},
-    {label: 'Почта', name: "email", type: 'email', id: 'form-email', placeholder: 'email', required: false},
-]
- 

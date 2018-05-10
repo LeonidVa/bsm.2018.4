@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Timer from 'components/common/Timer'
 
-class CallMeFormWithTimer extends Component{
+class CallMeFormWithTimer extends Component {
 
-    state={
+    state = {
         phone: ''
     }
 
@@ -12,9 +12,9 @@ class CallMeFormWithTimer extends Component{
         console.log('позвоните мне на номер ' + this.state.phone + ' по-поводу диссертации')
     }
 
-    render(){
-        const { timerSize=1.6, timerDuration } = this.props
-        return(
+    render() {
+        const {timerSize = 1.6, timerDuration} = this.props
+        return (
             <div>
                 <div className="block-form-timer__timer">
                     <div className="timer">
@@ -24,12 +24,12 @@ class CallMeFormWithTimer extends Component{
                 </div>
 
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" 
-                           name="phone" 
-                           placeholder="+7 123 456 78 90" 
-                           required="" 
+                    <input type="text"
+                           name="phone"
+                           placeholder="+7 123 456 7890"
+                           required=""
                            value={this.state.phone}
-                           onChange={(e)=>this.setState({phone: e.target.value})}/>
+                           onChange={(e) => this.setState({phone: e.target.value})}/>
                     <button type="submit">Позвоните мне!</button>
                 </form>
             </div>

@@ -11,7 +11,7 @@ const nextConfig = {
 
         /* Fix for missing styles */
         const {isServer} = options;
-        if (!isServer) {
+        if (!isServer &&false) {
             const MergeFilesPlugin = require('merge-files-webpack-plugin');
             // Override next-css configuration
             options.extractCSSPlugin.filename = 'static/[name].css';

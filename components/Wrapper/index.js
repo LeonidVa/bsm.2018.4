@@ -39,7 +39,7 @@ class Wrapper extends Component {
         return (
             <div onMouseLeave={() => this.handleSaleModal()}>
                 <Head>
-                    <title>{this.props.title}</title>
+                    <title>BeSmarter! - {this.props.title}</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
                 </Head>
                 <Header showSaleModal={this.state.showSaleModal}/>

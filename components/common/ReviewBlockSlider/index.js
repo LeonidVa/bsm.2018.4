@@ -66,7 +66,7 @@ class ReviewSlider extends Component{
         const settings = {
             dots: false,
             infinite: true,
-            slidesToShow: 7,
+            slidesToShow: 6,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 5000,

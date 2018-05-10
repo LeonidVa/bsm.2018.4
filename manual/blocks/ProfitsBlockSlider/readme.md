@@ -8,6 +8,7 @@
 ### Параметры
 ###profitBlockConfig
 infoBlockConfig это массив объектов с полями imageSrc для икноки, title для главного текста и description для дополнительного.
+Параметр **url** является необязательным.
 
 Формат простой:
 ```js
@@ -16,6 +17,7 @@ infoBlockConfig это массив объектов с полями imageSrc д
         imageSrc: slideProfit_1,
         title: "Высокое качество",
         description: "Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
+        url: "/dfdfdfdf",
     },
     {
         imageSrc: slideProfit_2,
@@ -26,6 +28,7 @@ infoBlockConfig это массив объектов с полями imageSrc д
         imageSrc: slideProfit_3,
         title: "Высокое качество",
         description: "Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
+        url: "/dfdfdfdf",
     },
     {
         imageSrc: slideProfit_4,

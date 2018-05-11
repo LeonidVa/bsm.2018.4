@@ -65,9 +65,7 @@ const page = () => (
                 </div>
             </section>
 
-
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-text">
                 <h2 className="block-text__title">Работа по твоим требованиям</h2>
@@ -81,6 +79,45 @@ const page = () => (
                 </p>
             </section>
 
+            <section className="block-service">
+                <Link href="/diplom-na-zakaz">
+                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('img/block/k.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-black">
+                            <span className="block-service__title">Диссертационные работы</span>
+                            <p className="block-service__par">Написание и оформление</p>
+                            <p className="block-service__par">Публикации</p>
+                            <p className="block-service__par">Строго конфиденциально</p>
+                            <p className="block-service__par">Индивидуально</p>
+                        </div>
+                    </div>
+                </Link>
+                <div className="block-service__list list-4">
+                    <Link href="/zakazat-diplomnyj-proekt">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Аспирантские работы</span>
+                            <p>От поступления<br/>до защиты</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Статьи</span>
+                            <p>Написание и размещение</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Кандидатская диссертация</span>
+                            <p>Автор на связи</p>
+                        </div>
+                    </Link>
+                    <Link href="/mba-na-zakaz">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Докторская диссертация</span>
+                            <p>Конфиденциально</p>
+                        </div>
+                    </Link>
+                </div>
+            </section>
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">

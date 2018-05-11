@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Link from 'next/link';
-import './Accordion.scss'
 
 class Accordion extends Component {
 
@@ -13,7 +12,15 @@ class Accordion extends Component {
             return ""
         }
         return rows.map((row, index) => {
-            let cells = row.map((cell, ck) => (<td key={ck}>{cell}</td>));
+            if (row === undefined) {
+                return ""
+            }
+            let cells = null;
+            if (row.length === 1) {
+                cells = <td className="single" colSpan={2}>{row[0]}</td>;
+            } else {
+                cells = row.map((cell, ck) => (<td key={ck}>{cell}</td>));
+            }
             return (<tr key={index}>{cells}</tr>)
         })
     };
@@ -38,7 +45,7 @@ class Accordion extends Component {
                         <div></div>
                     </div>
                 </div>
-                <div className="block-accordion__body" style={{opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "1000px" : "0"}}>
+                <div className="block-accordion__body" style={{opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "100000px" : "0"}}>
                     <p className="block-text__par">{this.props.children}</p>
                     <table>
                         <tbody>

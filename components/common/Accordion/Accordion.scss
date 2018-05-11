@@ -19,9 +19,13 @@
         max-height: 0;
         padding: 0 1.09em;
         transition: all .5s linear;
+        td:last-child.single{
+                text-align: left;
+        }
     }
     .block-text__title {
         transition: all .4s;
+        width: 90%;
     }
     &__arrow {
         font-size: 1em;

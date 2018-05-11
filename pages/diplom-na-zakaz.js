@@ -1,32 +1,224 @@
-import Wrapper from 'components/Wrapper';
-import Title from 'components/common/Title';
 import Link from 'next/link';
+import Wrapper from 'components/Wrapper';
+
+import Title from 'components/common/Title';
+
+import NavRow from 'components/common/NavRow';
+import MessBlock from 'components/common/MessagersBlock';
+
+import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
+import dopy from 'components/config/dopraboty'
+
+import OrderForm from 'components/common/OrderForm';
+import formConfig from 'components/config/formConfig'
+
+import InfoBlock from 'components/common/InfoBlock';
+import infoBlockConfig from 'components/config/infoBlockConfig'
+
+import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
+
+import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
+
+import LinksBlock from 'components/common/LinksBlock';
+import links from 'components/config/linksBlockConfig'
 
 
 const page = () => (
-    <Wrapper title=":тут title который в head:">
-        <div className="wrapper bg bg-c1 bg-img bg-img1">
+    <Wrapper title="Главная">
+        <div className="wrapper bg bg-c2 bg-img bg-img3">
+
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/pricing">
-                        <a>AAAAAAAAAA</a>
+                        <a>Главная </a>
                     </Link>
                     <span> / </span>
                     <Link href="/course">
-                        <a>AAAAAAAAAAAAAAA</a>
+                        <a>Дипломная работа</a>
                     </Link>
                 </div>
             </section>
 
-            <Title>ЭТО СТРАНИЦА-ЗАГЛУШКА</Title>
+            <section className="block-nav">
+                <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
+            </section>
+            <MessBlock/>
 
-            <section className="block-text">
-                <h2 className="block-text__title">Диплом</h2>
-                <p className="block-text__par">Тут должна быть страница про диплом. На старом сайте есть страница с таким же адресом.</p>
+            <section className="block-service">
+                <Link href="/diplom-na-zakaz">
+                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Дипломная работа</span>
+                            <p className="block-service__par">Быстро и качественно!</p>
+                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
+                            <p className="block-service__par">От 14 000 руб.</p>
+                            <p className="block-service__par">Срочно от 2 часов</p>
+                        </div>
+                    </div>
+                </Link>
+                <div className="block-service__list list-3">
+                    <Link href="/zakazat-diplomnyj-proekt">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Дипломный проект</span>
+                            <p>от 21 000 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Магистерская диссертация</span>
+                            <p>от 23 000 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/mba-na-zakaz">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Диплом MBA</span>
+                            <p>от <b>25 000</b> руб.</p>
+                        </div>
+                    </Link>
+                </div>
             </section>
 
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+
+            <section className="block-service">
+                <Link href="/diplom-na-zakaz">
+                    <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('img/block/l.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-black">
+                            <span className="block-service__title">Материалы для успешной защиты</span>
+                            <p className="block-service__par">Не парься сам – доверься нам!</p>
+                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+                            <p className="block-service__par">Доступные цены</p>
+                            <p className="block-service__par">Срочно от 2 часов</p>
+                        </div>
+                    </div>
+                </Link>
+                <div className="block-service__list list-4">
+                    <Link href="/zakazat-diplomnyj-proekt">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
+                            <p>от 5 000 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Доклад</span>
+                            <p>от 1 500 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Оригинальность текста</span>
+                            <p>Во всех системах</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Ответы к защите</span>
+                            <p>от 200 руб.</p>
+                        </div>
+                    </Link>
+                </div>
+                <div className="block-service__list list-5">
+                    <Link href="/zakazat-diplomnyj-proekt">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
+                            <p>от 2 000 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Получение по главам</span>
+                            <p>Гибкие условия</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
+                            <p>от 1 200 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Слайды</span>
+                            <p>от 350 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Распечатка Переплеты</span>
+                            <p>от 1 200 руб.</p>
+                        </div>
+                    </Link>
+                </div>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Дипломная работа на заказ
+                </h2>
+                <p className="block-text__par">
+                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                </p>
+                <p className="block-text__par">
+                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                </p>
+            </section>
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
+                <h2 className="block-form-timer__title">
+                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
+                    Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
+                </h2>
+                <CallMeFormWithTimer timerDuration={155555}>
+                    <p>при одновременном заказе вместе с работой</p>
+                </CallMeFormWithTimer>
+            </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Дипломная работа на заказ
+                </h2>
+                <p className="block-text__par">
+                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                </p>
+                <p className="block-text__par">
+                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                </p>
+                <p className="block-text__par">
+                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                </p>
+                <p className="block-text__par">
+                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                </p>
+                <p className="block-text__par">
+                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                </p>
+                <p className="block-text__par">
+                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                </p>
+                <p className="block-text__par">
+                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                </p>
+                <p className="block-text__par">
+                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                </p>
+            </section>
+
+            <a name="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+
+            <LinksBlock links={links}/>
         </div>
     </Wrapper>
 );
+
 
 export default page

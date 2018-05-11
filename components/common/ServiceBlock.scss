@@ -31,6 +31,10 @@
             color: #ffffff;
             .block-service__title::after { background-color: #ffffff; }
         }
+        &.color-red {
+            color: #ff5722;
+            .block-service__title::after { background-color: #ff5722; }
+        }
         &:hover {
             transform: scale(1.03);
             .block-service__title::after {

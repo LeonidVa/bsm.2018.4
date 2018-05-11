@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import SaleModal from 'components/Header/components/SaleModal'
 
 
 class Wrapper extends Component {
@@ -11,40 +12,22 @@ class Wrapper extends Component {
         showSaleModal: false
     };
 
-    handleSaleModal = () => {
-        const time = new Date();
-
-        //показываем окно скидки один раз и ставим на коллдаун
-        if (!window.localStorage.getItem("showSaleModal")) {
-            //часы, минуты, секунды, милисекунды
-            window.localStorage.setItem("showSaleModal", time.getTime() + (2 * 60 * 60 * 1000))
-
-            this.setState({showSaleModal: true})
-
-        }
-
-        if (Number(window.localStorage.getItem("showSaleModal")) < time.getTime()) {
-            this.setState({showSaleModal: true});
-            // обновляем коллдаун
-            window.localStorage.setItem("showSaleModal", time.getTime() + (2 * 60 * 60 * 1000))
-        }
-
-    };
-
-    shouldComponentUpdate = (nextProps, nextState) => {
-        return nextState.showSaleModal !== this.state.showSaleModal
-    };
-
     render() {
+        console.log('Wrapper.render() ', this.state.showSaleModal)
         return (
-            <div onMouseLeave={() => this.handleSaleModal()}>
+            <div onMouseLeave={() => this.setState({showSaleModal: true})}>
                 <Head>
                     <title>BeSmarter! - {this.props.title}</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
                 </Head>
-                <Header showSaleModal={this.state.showSaleModal}/>
+                <Header/>
                 {this.props.children}
                 <Footer/>
+                <SaleModal show={this.state.showSaleModal}
+                           className="modal-sale1"
+                           bonus="10%"
+                           message="поздравляем"
+                           text="Напишите номер и мы с вами свяжемся"/>
             </div>
         )
     }

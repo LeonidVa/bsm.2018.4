@@ -1,69 +1,58 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './SaleModal.scss';
+
+const lastExitSalePopupWas = 'LKjyGTFDd';
 
 class SaleModal extends Component {
 
     state = {
         phone: '',
-        display: 'none'
-    }
-    handleForm = (e) => {
-        const { phone } = this.state;
-        e.preventDefault()
+        show: false,
+    };
 
-        console.log('позвоните мне ' + phone)
-
-        this.props.closeModal()
-    }
-
-    handleClickOutside() {
-       //console.log('click outside')
-    }
-    
-    componentWillReceiveProps = (nextProps, nextState) => {
-
-        if (nextProps.open !== this.state.open) {
-            this.setState({ open: nextProps.open })
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.show === true && nextProps.show !== prevState.show) {
+            const lastWasShown = window.localStorage.getItem(lastExitSalePopupWas);
+            const now = new Date().getTime();
+            prevState.show = !(lastWasShown !== null && (Number(lastWasShown) + 10000) > now)
         }
+        return prevState;
     }
 
-    handleClickOutside = (event) => {
-        if (event.target.id === 'modal_sale') {
-            this.props.closeSaleModal()
-        }
+
+    onClose() {
+        this.setState({show: false});
+        window.localStorage.setItem(lastExitSalePopupWas, new Date().getTime())
     }
 
     render() {
-        const { phone, display } = this.state;
-        const { className, bonus, message, text} = this.props;
+        if (!this.state.show) {
+            return null;
+        }
+        const {className, bonus, message, text} = this.props;
         return (
             // className - "modal-sale1" or "modal-sale2" or "modal-sale3" or "modal-sale4"
-            <div id="modal_sale" 
-                 className={`modal-sale ${className}`} 
-                 style={{ display: display }}
-                 onClick={this.handleClickOutside}>
-                <div className="modal-sale__body">
-                    
+            <div id="modal_sale"
+                 className={`modal-sale ${className}`}
+                 style={{display: 'block'}}
+                 onClick={() => this.onClose()}
+            >
+                <div className="modal-sale__body" onClick={(e) =>{console.log(e);e.stopPropagation();}}>
                     <div className="modal-sale__top">
                         <span className="percent">{bonus}</span>
-                        <span className="top-text">
-                            {message}
-				        </span>
+                        <span className="top-text">{message}</span>
                     </div>
-                    <p>
-                        {text}
-			        </p>
-                    <form  onSubmit={this.handleForm}>
-   
-                            <input type="text"
-                                name=""
-                                id="form-phone"
-                                placeholder="Ваш телефон"
-                                required
-                                value={phone}
-                                onChange={(e) => this.setState({ phone: e.target.value })} />
-     
-                        <button type="submit" >Заказать звонок</button>
+                    <p>{text}</p>
+                    <form>
+                        <input type="text"
+                               name=""
+                               id="form-phone"
+                               placeholder="Ваш телефон"
+                               required
+                               value={this.state.phone}
+                               onChange={(e) => this.setState({phone: e.target.value})}
+                        />
+                        <button type="submit">Заказать звонок</button>
                     </form>
                 </div>
             </div>

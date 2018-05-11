@@ -10,15 +10,17 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import ImageBlock from 'components/common/ImageBlock';
 import VideoBlock from 'components/common/VideoBlock';
 import OrderForm from 'components/common/OrderForm';
-import LinksBlock from 'components/common/LinksBlock';
+
 
 
 import infoBlockConfig from 'components/config/infoBlockConfig'
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import {profitBlockConfigShort, profitBlockConfigLong} from 'components/config/profitBlockConfig';
 import {formConfig} from 'components/config/formConfig'
-import links from 'components/config/linksBlockConfig'
 
+
+import LinksBlock from 'components/common/LinksBlock';
+import links from 'components/config/linksBlockConfig'
 
 const page = () => (
     <Wrapper title=":тут title который в head:">

@@ -21,7 +21,7 @@ class Wrapper extends Component {
                 if (process.browser) {
                     const lastWasShown = window.localStorage.getItem(lastExitSalePopupWas);
                     const now = new Date().getTime();
-                    const shouldShow = !(lastWasShown !== null && (Number(lastWasShown) + 10000) > now);
+                    const shouldShow = !(lastWasShown !== null && (Number(lastWasShown) + 120000) > now);
                     if (!shouldShow) {
                         return null;
                     }

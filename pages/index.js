@@ -17,6 +17,9 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
+import LinksBlock from 'components/common/LinksBlock';
+import links from 'components/config/linksBlockConfig'
+
 
 const page = () => (
     <Wrapper title="Главная">
@@ -27,7 +30,6 @@ const page = () => (
                 <NavRow url='/contacts' title="Контакты" description="Ты знаешь, где нас найти"/>
             </section>
             <MessBlock/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -63,7 +65,22 @@ const page = () => (
                 </div>
             </section>
 
+
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+
+            <section className="block-text">
+                <h2 className="block-text__title">Работа по твоим требованиям</h2>
+                <p className="block-text__par">
+                    Дипломная работа на заказ будет выполняться согласно пожеланиям
+                    твоего научного руководителя. При написании дипломной работы пожелания
+                    твоего научного руководителя учитываются до самой защиты.
+                    Получая работу, написанную согласно всем требованиям,
+                    твой научный руководитель обязательно
+                    будет доволен и высоко ее оценит.
+                </p>
+            </section>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -172,6 +189,7 @@ const page = () => (
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
+            <LinksBlock links={links}/>
         </div>
     </Wrapper>
 );

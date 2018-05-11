@@ -8,7 +8,7 @@ import ImageBlock from 'components/common/ImageBlock'
 import OrderForm from 'components/common/OrderForm'
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
-import {formConfig} from 'components/config/formConfig';
+import formConfig from 'components/config/formConfig';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import links from 'components/config/linksBlockConfig';
 import schemaSrc from 'img/contacts/how-to-go.jpg';
@@ -99,18 +99,34 @@ class page extends Component {
 
                     <section className="block-service">
                         <Link href="/diplom">
-                            <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
-                                <span className="block-service__title">Дипломная работа</span>
-                                <p className="block-service__par">
-                                    Поможем написать дипломную работу на заказ
-                                </p>
-                                <p className="block-service__par">
-                                    от 10 500 ₽<br/>
-                                    от 10 дня
-                                </p>
+                            <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")"}}>
+                                <div className="block-service__text gradient-l-white">
+                                    <span className="block-service__title">Дипломная работа</span>
+                                    <p className="block-service__par">
+                                        Поможем написать дипломную работу на заказ
+                                    </p>
+                                    <p className="block-service__par">
+                                        от 10 500 ₽<br/>
+                                        от 10 дня
+                                    </p>
+                                </div>
                             </div>
                         </Link>
-                        <div className="block-service__list list-1">
+                        <div className="block-service__list list-3">
+                            <Link href="/">
+                                <div className="block-service__list-item">
+                                    <span className="block-service__list-title">Курсовая</span>
+                                    <p>от 4 500 ₽</p>
+                                    <p>от 2 недель</p>
+                                </div>
+                            </Link>
+                            <Link href="/">
+                                <div className="block-service__list-item">
+                                    <span className="block-service__list-title">Курсовая</span>
+                                    <p>от 4 500 ₽</p>
+                                    <p>от 2 недель</p>
+                                </div>
+                            </Link>
                             <Link href="/">
                                 <div className="block-service__list-item">
                                     <span className="block-service__list-title">Курсовая</span>

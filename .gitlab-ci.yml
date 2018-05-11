@@ -4,11 +4,14 @@ cache:
   paths:
   - node_modules/
 
-services:
-  #- postgres:9.5.0
+stages:
+  - build
 
-all_tests:
+build_job:
+  stage: build
   script:
   - node -v
-   - yarn install
-   - yarn build
+  - yarn install
+  - yarn build
+
+  

@@ -34,7 +34,7 @@ class Timer extends Component {
             window.localStorage.setItem(timerCountFrom, tcfValue)
         }
         const {timerDuration} = this.props;
-        let endOfTimer = parseInt(tcfValue) + parseInt(timerDuration);
+        let endOfTimer = parseInt(tcfValue) + parseInt(timerDuration) * 1000;
         this.setCountdown(endOfTimer)
     };
 

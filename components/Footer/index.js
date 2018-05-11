@@ -5,13 +5,13 @@ import foxLogo from 'img/fox-logo.png'
 // import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 // import brands from '@fortawesome/fontawesome-free-brands'
 
-import NotFind from 'components/common/NotFind'
+import BottomHelper from 'components/common/BottomHelper'
 
 // const { faTwitter, faFacebookF, faTumblr } = brands
 
 export default (props) => (
   <div>
-    <NotFind />
+    <BottomHelper />
 
     <div className="footer">
         <div className="inner">

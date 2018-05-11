@@ -3,7 +3,6 @@ import { isMobile, isTablet } from 'react-device-detect';
 
 import Link from 'next/link';
 import OrderCall from './components/OrderCallModal';
-import SaleModal from './components/SaleModal'
 import MenuMob from './components/MenuMob'
 
 import OrderCallButton from 'components/common/OrderCallButton'
@@ -107,12 +106,6 @@ class Header extends Component{
 
                     <MenuMob showMenu={this.state.showMenuMob}/>
 
-                    <SaleModal  display={this.state.saleModalIsOpen ? 'block' : 'none'}
-                                closeSaleModal={this.closeSaleModal} 
-                                className="modal-sale1"
-                                bonus="10%" 
-                                message="поздравляем"
-                                text="Напишите номер и мы с вами свяжемся"/>
                 </div>
         )
     }

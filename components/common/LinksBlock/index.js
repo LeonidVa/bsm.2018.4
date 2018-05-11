@@ -2,6 +2,9 @@ import Link from 'next/link';
 
 const renderLinks=(links)=>(
     links.map((item, index)=>{
+        if (item.url === undefined ){
+            item.url = ""
+        }
         return (
             <li key={index}>
                 <Link href={item.url}>

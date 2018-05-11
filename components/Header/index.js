@@ -59,7 +59,7 @@ class Header extends Component{
                                 <nav className="nav">
                                     <ul>
                                         <li>
-                                            <Link href="/pricing">
+                                            <Link href="/price">
                                                 <a>Услуги и цены</a>
                                             </Link>
                                         </li>

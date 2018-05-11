@@ -12,9 +12,8 @@ class BottomHelper extends Component {
     };
 
     closeModal = () => {
-
         this.setState({modalIsOpen: false})
-    }
+    };
 
     render() {
         return (

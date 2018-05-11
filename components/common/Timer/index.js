@@ -2,14 +2,32 @@ import React, {Component} from 'react'
 import countdown from 'countdown';
 
 class Timer extends Component {
+    constructor(props) {
+        super(props);
 
-    state = {
-        hoursLeft: 12,
-        minutesLeft: 12,
-        secondsLeft: 12
-    };
+        this.state = {
+            hoursLeft: 0,
+            minutesLeft: 0,
+            secondsLeft: 0,
+            size: 1.6,
+            duration: 0,
+            color: "#fffff",
+        };
 
-    setCountdown = (endOfTimer) => {
+        if (props.size !== undefined && props.size !== null) {
+            this.state.size = props.size
+        }
+        if (props.duration !== undefined && props.duration !== null) {
+            this.state.duration = props.duration
+        }
+        if (props.color !== undefined && props.color !== null) {
+            this.state.color = props.color
+        }
+
+    }
+
+
+    setCountdown(endOfTimer) {
         const that = this;
         this.timerLoop = setInterval(() => {
             let time = new Date();
@@ -25,7 +43,7 @@ class Timer extends Component {
         }, 1000)
     };
 
-    componentDidMount = () => {
+    componentDidMount() {
         const timerCountFrom = 'WP3C8HmqrW';
         let tcfValue = window.localStorage.getItem(timerCountFrom);
         if (!tcfValue) {
@@ -33,25 +51,24 @@ class Timer extends Component {
             tcfValue = time.getTime();
             window.localStorage.setItem(timerCountFrom, tcfValue)
         }
-        const {timerDuration} = this.props;
-        let endOfTimer = parseInt(tcfValue) + parseInt(timerDuration) * 1000;
+        let endOfTimer = parseInt(tcfValue) + parseInt(this.state.duration) * 1000;
         this.setCountdown(endOfTimer)
     };
 
-    componentWillUnmount = () => {
+    componentWillUnmount() {
         clearInterval(this.timerLoop);
     };
 
     render() {
         const {hoursLeft, minutesLeft, secondsLeft} = this.state;
         if (hoursLeft === 0 && minutesLeft === 0 && secondsLeft === 0) {
-            return (<div className="timer" style={{fontSize: `${this.props.size}em`, display: 'flex', color: this.props.timerColor}}>Сейчас!</div>)
+            return (<div className="timer" style={{fontSize: `${this.state.size}em`, display: 'flex', color: this.state.color}}>Сейчас!</div>)
         } else {
             const h = hoursLeft < 10 ? "0" + hoursLeft : hoursLeft;
             const m = minutesLeft < 10 ? "0" + minutesLeft : minutesLeft;
             const s = secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
             return (
-                <div className="timer" style={{fontSize: `${this.props.size}em`, display: 'flex', color: this.props.timerColor}}>
+                <div className="timer" style={{fontSize: `${this.state.size}em`, display: 'flex', color: this.state.color}}>
                     <div className="timer-numbers">{h}</div>
                     <div className="timer-separator">:</div>
                     <div className="timer-numbers">{m}</div>

@@ -28,6 +28,7 @@ const page = () => (
             </section>
             <MessBlock/>
 
+
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")",}}>
@@ -131,14 +132,12 @@ const page = () => (
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
                     Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
                 </h2>
-                <CallMeFormWithTimer timerDuration={3600} timerSize={1.6}>
+                <CallMeFormWithTimer timerDuration={155555}>
                     <p>при одновременном заказе вместе с работой</p>
                 </CallMeFormWithTimer>
             </section>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
-
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -169,7 +168,6 @@ const page = () => (
                     Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
                 </p>
             </section>
-
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>

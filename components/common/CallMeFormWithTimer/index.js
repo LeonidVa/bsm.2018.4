@@ -13,16 +13,19 @@ class CallMeFormWithTimer extends Component {
     }
 
     render() {
-        const {timerSize = 1.6, timerDuration} = this.props
+        const {timerSize = 1.6, timerDuration} = this.props;
+        let abc = <div className="block-form-timer__message">{this.props.children}</div>;
+        if (timerDuration !== undefined && timerDuration !== null && Number(timerDuration) > 0) {
+            abc = <div className="block-form-timer__timer">
+                <div className="timer">
+                    <Timer size={timerSize} duration={timerDuration}/>
+                </div>
+                {this.props.children}
+            </div>;
+        }
         return (
             <div>
-                <div className="block-form-timer__timer">
-                    <div className="timer">
-                        <Timer size={timerSize} timerDuration={timerDuration}/>
-                    </div>
-                    {this.props.children}
-                </div>
-
+                {abc}
                 <form onSubmit={this.handleSubmit}>
                     <input type="text"
                            name="phone"

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Link from 'next/link';
 
 
-import OrderCall from 'components/Header/components/OrderCallModal';
 
 
 class BottomHelper extends Component {
@@ -18,7 +17,6 @@ class BottomHelper extends Component {
     render() {
         return (
             <div>
-                <OrderCall closeModal={this.closeModal} display={this.state.modalIsOpen ? 'block' : 'none'}/>
                 <section className="block-not-find">
                     <div className="inner">
                         <h2 className="block-not-find__title">Остались вопросы?</h2>

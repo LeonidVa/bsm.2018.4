@@ -2,13 +2,9 @@ import React, {Component} from 'react';
 import {isMobile, isTablet} from 'react-device-detect';
 
 import Link from 'next/link';
-import OrderCall from './components/OrderCallModal';
 import MenuMob from './components/MenuMob'
 
-import OrderCallButton from 'components/common/OrderCallButton'
-
-import {exitPopupContext} from 'components/modals/contexts'
-
+import {ToggleCallPopup} from "components/modals/Call"
 
 import './header.scss';
 import 'components/index.scss';
@@ -58,7 +54,7 @@ class Header extends Component {
                             <nav className="nav">
                                 <ul>
                                     <li>
-                                        <Link href="/pricing">
+                                        <Link href="/price">
                                             <a>Услуги и цены</a>
                                         </Link>
                                     </li>
@@ -79,12 +75,13 @@ class Header extends Component {
                         <div className="header__right">
                                     <span className="header__tel">
                                         {isMobile || isTablet ?
-                                            <a className="header__telanckor" href="tel:+1-495-772-4090">+7 495 772 40 90</a>
+                                            <a className="header__telanckor" href="tel:+74957724090">+7 495 772 40 90</a>
                                             :
-                                            <a className="header__telanckor" onClick={() => this.setState({modalIsOpen: true})}>+7 495 772 40 90</a>
+                                            <ToggleCallPopup><a className="header__telanckor">+7 495 772 40 90</a></ToggleCallPopup>
+                                            //<OrderCallButton><a className="header__telanckor">+7 495 772 40 90</a></OrderCallButton>
                                         }
                                     </span>
-                            <OrderCallButton/>
+                            <ToggleCallPopup><a className="header__order-tel to-modal__order-call">Заказать звонок</a></ToggleCallPopup>
                         </div>
                         <div id="nav-icon3"
                              className={`humburger ${showMenuMob ? 'open' : ''}`}
@@ -97,11 +94,7 @@ class Header extends Component {
                     </div>
 
                 </div>
-                <OrderCall closeModal={this.closeModal}
-                           display={this.state.modalIsOpen ? 'block' : 'none'}/>
-
                 <MenuMob showMenu={this.state.showMenuMob}/>
-
             </div>
         )
     }

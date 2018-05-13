@@ -16,7 +16,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import infoBlockConfig from 'components/config/infoBlockConfig'
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import dopy from 'components/config/dopraboty';
-import {formConfig} from 'components/config/formConfig'
+import formConfig from 'components/config/formConfig'
 import links from 'components/config/linksBlockConfig'
 
 

@@ -5,7 +5,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 
-import ExitPopup, {exitPopupContext} from 'components/modals/ExitPopup'
+import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/ExitPopup'
 
 const lastExitSalePopupWas = 'LKjyGTFDd';
 
@@ -17,35 +17,38 @@ class Wrapper extends Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.state.exitPopupState = {
-            phone: '',
-            isShown: false,
-            show: () => {
-                if (process.browser) {
-                    const lastWasShown = window.localStorage.getItem(lastExitSalePopupWas);
-                    const now = new Date().getTime();
-                    const shouldShow = !(lastWasShown !== null && (Number(lastWasShown) + 120000) > now);
-                    if (!shouldShow) {
-                        return null;
-                    }
-                    window.localStorage.setItem(lastExitSalePopupWas, now);
-                    this.setState({exitPopupState: {...this.state.exitPopupState, isShown: true}})
-                }
-            },
-            hide: () => {
-                this.setState({exitPopupState: {...this.state.exitPopupState, isShown: false}})
-            },
-        };
+        this.state.exitPopupState = exitPopupState;
         this.state.callPopupState = callPopupState;
     }
 
     componentDidMount() {
         this.state.callPopupState.show = () => {
-            this.setState({callPopupState: {...this.state.callPopupState, isShown: true}})
+            this.setState({callPopupState: {...this.state.callPopupState, isShown: true, question: false}})
+        };
+        this.state.callPopupState.showWithQuestion = () => {
+            this.setState({callPopupState: {...this.state.callPopupState, isShown: true, question: true}})
         };
         this.state.callPopupState.hide = () => {
             this.setState({callPopupState: {...this.state.callPopupState, isShown: false}})
         };
+        this.state.exitPopupState.show = () => {
+            if (process.browser) {
+                const lastWasShown = window.localStorage.getItem(lastExitSalePopupWas);
+                const now = new Date().getTime();
+                const shouldShow = !(lastWasShown !== null && (Number(lastWasShown) + 120000) > now);
+                if (!shouldShow) {
+                    return null;
+                }
+                window.localStorage.setItem(lastExitSalePopupWas, now);
+                this.setState({exitPopupState: {...this.state.exitPopupState, isShown: true}})
+            }
+        };
+        this.state.exitPopupState.hide = () => {
+            this.setState({exitPopupState: {...this.state.exitPopupState, isShown: false}})
+            if (process.browser) {
+                window.localStorage.setItem(lastExitSalePopupWas, new Date().getTime());
+            }
+        }
     }
 
 

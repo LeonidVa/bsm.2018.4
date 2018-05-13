@@ -1,18 +1,18 @@
 import React, {Component, createContext} from 'react';
 import './style.scss';
 
-export const exitPopupContext = createContext(
-    {
-        phone: '',
-        isShown: false,
-        show: () => {
-        },
-        hide: () => {
-        },
-        toggle: () => {
-        },
-    }
-);
+const exitPopupState = {
+    phone: '',
+    isShown: false,
+    show: () => {
+    },
+    hide: () => {
+    },
+    toggle: () => {
+    },
+};
+
+const exitPopupContext = createContext(exitPopupState);
 
 
 class ExitPopup extends Component {
@@ -20,10 +20,7 @@ class ExitPopup extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            phone: '',
-            isShown: false,
-        };
+        this.state = exitPopupState
     }
 
     render() {
@@ -71,5 +68,30 @@ class ExitPopup extends Component {
         )
     }
 }
+
+
+class ToggleExitPopup extends Component {
+    render() {
+        return (
+            <exitPopupContext.Consumer>
+                {(context) => {
+                    console.log('toggleCallPopup callPopupContext', context, this.state);
+                    if (context === undefined || context === null) {
+                        return null
+                    }
+                    let oncl = context.show;
+                    if (context.isShown) {
+                        oncl = context.hide;
+                    }
+                    return <div onClick={oncl}>{this.props.children}</div>
+                }}
+            </exitPopupContext.Consumer>
+        )
+    }
+}
+
+
+export {ToggleExitPopup, exitPopupState, exitPopupContext}
+
 
 export default ExitPopup

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
-
-
+import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 
 
 class BottomHelper extends Component {
@@ -21,11 +20,8 @@ class BottomHelper extends Component {
                     <div className="inner">
                         <h2 className="block-not-find__title">Остались вопросы?</h2>
                         <div className="block-not-find__buttons">
-                            <Link href="#"><a className="block-not-find__button">Задать вопрос</a></Link>
-                            <a className="block-not-find__button to-modal__order-call"
-                               onClick={() => this.setState({modalIsOpen: true})}>
-                                Заказать звонок
-                            </a>
+                            <ToggleQuestionPopup><a className="block-not-find__button">Задать вопрос</a></ToggleQuestionPopup>
+                            <ToggleCallPopup><a className="block-not-find__button to-modal__order-call">Заказать звонок</a></ToggleCallPopup>
                         </div>
                     </div>
                 </section>

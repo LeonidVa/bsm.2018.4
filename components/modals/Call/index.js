@@ -4,6 +4,7 @@ import './style.scss';
 const callPopupState = {
     phone: '',
     name: '',
+    question: '',
     isShown: false,
     show: () => {
     },
@@ -11,25 +12,19 @@ const callPopupState = {
     },
 };
 
+const callPopupContext = createContext(callPopupState);
+
 
 class CallPopup extends Component {
-
+    MyFunc() {
+    }
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            phone: '',
-            name: '',
-            isShown: false,
-            handleForm: () => {
-                console.log('should send some data')
-            }
-        };
+        this.state = callPopupState
     }
 
     render() {
-        const {className, bonus, message, text} = this.props;
         return (
             <callPopupContext.Consumer>
                 {(context) => {
@@ -48,7 +43,7 @@ class CallPopup extends Component {
                                 e.stopPropagation();
                             }}>
 
-                                <h2 className="block-form__title">Заказать звонок</h2>
+                                <h2 className="block-form__title">{context.question ? 'Задать вопрос' : 'Заказать звонок'}</h2>
                                 <form className="block-form__form" onSubmit={this.handleForm}>
                                     <div className="block-form__item">
                                         <label htmlFor="form-name">Имя*</label>
@@ -71,7 +66,18 @@ class CallPopup extends Component {
                                                value={this.state.phone}
                                                onChange={(e) => this.setState({phone: e.target.value})}/>
                                     </div>
-
+                                    {context.question ? (
+                                        <div className="block-form__item">
+                                            <label htmlFor="form-phone">Вопрос</label>
+                                            <textarea
+                                                type="textarea"
+                                                name="comment"
+                                                placeholder="Ваш вопрос"
+                                                value={this.state.question}
+                                                onChange={(e) => this.setState({question: e.target.value})}
+                                            />
+                                        </div>
+                                    ) : ''}
                                     <button type="submit" className="block-form__btn">Позвоните мне!</button>
                                 </form>
                             </div>
@@ -93,10 +99,6 @@ class ToggleCallPopup extends Component {
                     if (context === undefined || context === null) {
                         return null
                     }
-                    let buttonEP = <span onClick={context.show}>show</span>;
-                    if (context.isShown) {
-                        buttonEP = <span onClick={context.hide}>hide</span>
-                    }
                     let oncl = context.show;
                     if (context.isShown) {
                         oncl = context.hide;
@@ -108,9 +110,27 @@ class ToggleCallPopup extends Component {
     }
 }
 
-const callPopupContext = createContext(
-    callPopupState
-);
 
-export {ToggleCallPopup, callPopupState, callPopupContext}
+class ToggleQuestionPopup extends Component {
+    render() {
+        return (
+            <callPopupContext.Consumer>
+                {(context) => {
+                    console.log('toggleCallPopup callPopupContext', context, this.state);
+                    if (context === undefined || context === null) {
+                        return null
+                    }
+                    let oncl = context.showWithQuestion;
+                    if (context.isShown) {
+                        oncl = context.hide;
+                    }
+                    return <div onClick={oncl}>{this.props.children}</div>
+                }}
+            </callPopupContext.Consumer>
+        )
+    }
+}
+
+
+export {ToggleCallPopup, ToggleQuestionPopup, callPopupState, callPopupContext}
 export default CallPopup

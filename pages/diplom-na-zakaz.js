@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
 
-import Title from 'components/common/Title';
-
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
@@ -13,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import formConfig from 'components/config/formConfig'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlockConfig'
+import infoBlockConfig from 'components/config/infoBlock/diplom'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -30,11 +28,11 @@ const page = () => (
 
             <section className="breadcrumbs">
                 <div className="inner">
-                    <Link href="/pricing">
-                        <a>Главная </a>
+                    <Link href="/">
+                        <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/course">
+                    <Link href="/diplom-na-zakaz">
                         <a>Дипломная работа</a>
                     </Link>
                 </div>

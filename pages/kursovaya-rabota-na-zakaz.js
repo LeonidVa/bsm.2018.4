@@ -22,18 +22,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
 
+
 const page = () => (
     <Wrapper title="Главная">
-        <div className="wrapper bg bg-c2 bg-img bg-img3">
+        <div className="wrapper bg bg-c2 bg-img bg-img1">
 
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">
-                        <a>Главная </a>
+                        <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a>Магистерская диссертация</a>
+                    <Link href="/kursovaya-rabota-na-zakaz">
+                        <a>Курсовая работа</a>
                     </Link>
                 </div>
             </section>
@@ -43,35 +44,49 @@ const page = () => (
             </section>
             <MessBlock/>
 
+
+
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Магистерская диссертация</span>
-                            <p className="block-service__par">Быстро и качественно!</p>
-                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-                            <p className="block-service__par">От 23 000 руб.</p>
+                    <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('img/block/i.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-black">
+                            <span className="block-service__title">Курсовая работа</span>
+                            <p className="block-service__par">Не парься сам – доверься нам!</p>
+                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+                            <p className="block-service__par">От 4 000 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </div>
                 </Link>
-                <div className="block-service__list list-3">
+                <div className="block-service__list list-5">
                     <Link href="/zakazat-diplomnyj-proekt">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Диссертация<br/>под ключ</span>
-                            <p>Берем заботы на себя</p>
-                        </div>
-                    </Link>
-                    <Link href="/mba-na-zakaz">
-                        <div className="block-service__list-item">
-                            <span className="block-service__list-title">Консультация автора</span>
-                            <p>Прямая связь</p>
+                            <span className="block-service__list-title">Отчет по практике</span>
+                            <p>от 3 000 руб.</p>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Сопровождение<br/>до защиты</span>
-                            <p>Надежно, спокойно</p>
+                            <span className="block-service__list-title">Реферат</span>
+                            <p>от 1 500 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Эссе Контрольная</span>
+                            <p>от 1 500 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/mba-na-zakaz">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Экзамены Тесты</span>
+                            <p>от 200 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/mba-na-zakaz">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Курсовой проект</span>
+                            <p>от 8 000 руб.</p>
                         </div>
                     </Link>
                 </div>

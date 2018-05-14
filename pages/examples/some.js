@@ -13,7 +13,7 @@ import OrderForm from 'components/common/OrderForm';
 
 
 
-import infoBlockConfig from 'components/config/infoBlockConfig'
+import infoBlockConfig from 'components/config/infoBlock/diplom'
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import {profitBlockConfigShort, profitBlockConfigLong} from 'components/config/profitBlockConfig';
 import {formConfig} from 'components/config/formConfig'

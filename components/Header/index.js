@@ -59,11 +59,6 @@ class Header extends Component {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/about">
-                                            <a>О нас</a>
-                                        </Link>
-                                    </li>
-                                    <li>
                                         <Link href="/contacts">
                                             <a>Контакты</a>
                                         </Link>

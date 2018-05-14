@@ -4,7 +4,7 @@ import Link from 'next/link';
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlockConfig';
+import infoBlockConfig from 'components/config/infoBlock/diplom';
 import icon_1 from "img/info/1.svg"
 import icon_2 from "img/info/2.svg"
 import icon_3 from "img/info/3.svg"

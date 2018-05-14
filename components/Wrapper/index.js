@@ -68,9 +68,16 @@ class Wrapper extends Component {
                         <Footer/>
                         <ExitPopup isShown={true}
                                    className="modal-sale1"
-                                   bonus="10%"
-                                   message="поздравляем"
-                                   text="Напишите номер и мы с вами свяжемся"/>
+                                   bonus={<div style={{position: "relative"}}>500<span
+                                       style={{
+                                           fontSize: "20%",
+                                           position: "absolute",
+                                           bottom: "0.5em",
+                                           right: "-1.7em",
+                                       }}>руб.</span></div>}
+                                   message={<span style={{marginLeft:"4em", lineHeight:"1.33"}}>Лови бонус при заказе прямо сейчас!</span>}
+                                   text="При сумме заказа от 2 000 рублей"
+                        />
                         <CallPopup/>
                     </div>
                 </exitPopupContext.Provider>

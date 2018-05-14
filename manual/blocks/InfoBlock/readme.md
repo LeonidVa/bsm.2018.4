@@ -25,9 +25,9 @@ infoBlockConfig это массив объектов с полями icon для
 ```
 
 ### Пример использования
-```js
+```babel
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlockConfig'
+import infoBlockConfig from 'components/config/infoBlock/diplom'
 
 <InfoBlock infoBlockConfig={infoBlockConfig}/>
 ```

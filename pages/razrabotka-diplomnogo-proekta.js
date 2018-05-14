@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
 
+
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
@@ -11,7 +12,7 @@ import OrderForm from 'components/common/OrderForm';
 import formConfig from 'components/config/formConfig'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/diplomnyproekt'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -29,11 +30,11 @@ const page = () => (
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">
-                        <a>Главная </a>
+                        <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a>Магистерская диссертация</a>
+                    <Link href="/razrabotka-diplomnogo-proekta">
+                        <a>Дипломный проект</a>
                     </Link>
                 </div>
             </section>
@@ -47,31 +48,31 @@ const page = () => (
                 <Link href="/diplom-na-zakaz">
                     <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Магистерская диссертация</span>
+                            <span className="block-service__title">Дипломный проект</span>
                             <p className="block-service__par">Быстро и качественно!</p>
                             <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-                            <p className="block-service__par">От 23 000 руб.</p>
+                            <p className="block-service__par">От 21 000 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </div>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/diplom-na-zakaz">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Диссертация<br/>под ключ</span>
-                            <p>Берем заботы на себя</p>
-                        </div>
-                    </Link>
-                    <Link href="/mba-na-zakaz">
-                        <div className="block-service__list-item">
-                            <span className="block-service__list-title">Консультация автора</span>
-                            <p>Прямая связь</p>
+                            <span className="block-service__list-title">Дипломная работа</span>
+                            <p>от 14 000 руб.</p>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Сопровождение<br/>до защиты</span>
-                            <p>Надежно, спокойно</p>
+                            <span className="block-service__list-title">Магистерская диссертация</span>
+                            <p>от 23 000 руб.</p>
+                        </div>
+                    </Link>
+                    <Link href="/mba-na-zakaz">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Диплом MBA</span>
+                            <p>от <b>25 000</b> руб.</p>
                         </div>
                     </Link>
                 </div>
@@ -155,9 +156,7 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
-                    Дипломная работа на заказ
-                </h2>
+                <h2 className="block-text__title">ПОМЕНЯТЬ</h2>
                 <p className="block-text__par">
                     Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
                 </p>
@@ -181,9 +180,7 @@ const page = () => (
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
-                    ПОМЕНЯТЬ Дипломная работа на заказ
-                </h2>
+                <h2 className="block-text__title">ПОМЕНЯТЬ</h2>
                 <p className="block-text__par">
                     Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
                 </p>

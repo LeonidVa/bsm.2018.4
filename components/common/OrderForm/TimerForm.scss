@@ -42,6 +42,7 @@
             display: block;
         }
     }
+
     &__timer {
         display: flex;
         display: -webkit-box;
@@ -64,25 +65,6 @@
         .timer {
             @media (max-width: 660px) {
                 display: inline-block;
-                margin-bottom: 5px;
-                height: 41px;
-            }
-            #timer-number-value-38e9b0596ba7d6aee1536869e6ec8a9b-hours,
-            #timer-number-value-38e9b0596ba7d6aee1536869e6ec8a9b-minutes,
-            #timer-number-value-38e9b0596ba7d6aee1536869e6ec8a9b-secundes,
-            #timer-number-value-330221abbef6d25e10a8dfe18a9c5460-hours,
-            #timer-number-value-330221abbef6d25e10a8dfe18a9c5460-minutes,
-            #timer-number-value-330221abbef6d25e10a8dfe18a9c5460-secundes {
-                font-size: 48px;
-                @media (max-width: 660px) {
-                    font-size: 41px;
-                }
-            }
-            .timer-separator {
-                font-size: 42px !important;
-                @media (max-width: 660px) {
-                    font-size: 34px;
-                }
             }
         }
         p {

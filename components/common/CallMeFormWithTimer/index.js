@@ -8,12 +8,12 @@ class CallMeFormWithTimer extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         console.log('позвоните мне на номер ' + this.state.phone + ' по-поводу диссертации')
     }
 
     render() {
-        const {timerSize = 1.6, timerDuration} = this.props;
+        const {timerSize = 1.6, timerDuration, buttonText = "Позвоните мне!"} = this.props;
         let abc = <div className="block-form-timer__message">{this.props.children}</div>;
         if (timerDuration !== undefined && timerDuration !== null && Number(timerDuration) > 0) {
             abc = <div className="block-form-timer__timer">
@@ -33,7 +33,7 @@ class CallMeFormWithTimer extends Component {
                            required=""
                            value={this.state.phone}
                            onChange={(e) => this.setState({phone: e.target.value})}/>
-                    <button type="submit">Позвоните мне!</button>
+                    <button type="submit">{buttonText}</button>
                 </form>
             </div>
         )

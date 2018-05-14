@@ -41,9 +41,12 @@ class ExitPopup extends Component {
                                  context.hide()
                              }}
                         >
-                            <div className="modal-sale__body" onClick={(e) => {
-                                e.stopPropagation();
-                            }}>
+                            <div className="modal-sale__body"
+                                 onClick={(e) => {
+                                     e.stopPropagation();
+                                 }}
+                                 //style={{backgroundImage: 'url(' + require('img/modal/1.jpg') + ')'}}
+                            >
                                 <div className="modal-sale__top">
                                     <span className="percent">{bonus}</span>
                                     <span className="top-text">{message}</span>
@@ -58,7 +61,7 @@ class ExitPopup extends Component {
                                            value={this.state.phone}
                                            onChange={(e) => this.setState({phone: e.target.value})}
                                     />
-                                    <button type="submit">Заказать звонок</button>
+                                    <button type="submit">Хочу получить!</button>
                                 </form>
                             </div>
                         </div>

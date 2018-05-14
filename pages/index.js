@@ -10,7 +10,7 @@ import OrderForm from 'components/common/OrderForm';
 import formConfig from 'components/config/formConfig'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlockConfig'
+import infoBlockConfig from 'components/config/infoBlock/diplom'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -82,7 +82,7 @@ const page = () => (
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('img/block/k.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
+                        <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Диссертационные работы</span>
                             <p className="block-service__par">Написание и оформление</p>
                             <p className="block-service__par">Публикации</p>
@@ -186,7 +186,7 @@ const page = () => (
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
                     Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
                 </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
+                <CallMeFormWithTimer timerDuration={155555} buttonText="Получить скидку">
                     <p>при одновременном заказе вместе с работой</p>
                 </CallMeFormWithTimer>
             </section>

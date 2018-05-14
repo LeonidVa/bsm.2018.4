@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import formConfig from 'components/config/formConfig'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/disser'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -32,8 +32,8 @@ const page = () => (
                         <a>Главная </a>
                     </Link>
                     <span> / </span>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a>Магистерская диссертация</a>
+                    <Link href="/dissertaciya-na-zakaz">
+                        <a>Кандидатская диссертация</a>
                     </Link>
                 </div>
             </section>
@@ -45,33 +45,73 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")",}}>
+                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('img/block/k.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Магистерская диссертация</span>
-                            <p className="block-service__par">Быстро и качественно!</p>
-                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-                            <p className="block-service__par">От 23 000 руб.</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
+                            <span className="block-service__title">Кандидатская диссертация</span>
+                            <p className="block-service__par">Написание и оформление</p>
+                            <p className="block-service__par">Публикации</p>
+                            <p className="block-service__par">Строго конфиденциально</p>
+                            <p className="block-service__par">Индивидуально</p>
+                        </div>
+                    </div>
+                </Link>
+                <div className="block-service__list list-4">
+                    <Link href="/zakazat-diplomnyj-proekt">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Аспирантские работы</span>
+                            <p>От поступления<br/>до защиты</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Статьи</span>
+                            <p>Написание и размещение</p>
+                        </div>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Автореферат</span>
+                            <p>Строго по ГОСТу</p>
+                        </div>
+                    </Link>
+                    <Link href="/mba-na-zakaz">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Апробация</span>
+                            <p>Реальные эксперименты</p>
+                        </div>
+                    </Link>
+                </div>
+            </section>
+
+            <section className="block-service">
+                <Link href="/diplom-na-zakaz">
+                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Докторская диссертация</span>
+                            <p className="block-service__par">Актуальность и научная новизна</p>
+                            <p className="block-service__par">Ваши и наши данные</p>
+                            <p className="block-service__par">Строго конфиденциально</p>
+                            <p className="block-service__par">Индивидуально</p>
                         </div>
                     </div>
                 </Link>
                 <div className="block-service__list list-3">
                     <Link href="/zakazat-diplomnyj-proekt">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Диссертация<br/>под ключ</span>
-                            <p>Берем заботы на себя</p>
-                        </div>
-                    </Link>
-                    <Link href="/mba-na-zakaz">
-                        <div className="block-service__list-item">
-                            <span className="block-service__list-title">Консультация автора</span>
-                            <p>Прямая связь</p>
+                            <span className="block-service__list-title">Прямая связь с автором</span>
+                            <p>Постоянный контроль</p>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Сопровождение<br/>до защиты</span>
-                            <p>Надежно, спокойно</p>
+                            <span className="block-service__list-title">Публикации</span>
+                            <p>Журналы ВАК и иностранные</p>
+                        </div>
+                    </Link>
+                    <Link href="/mba-na-zakaz">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Обзор литературы</span>
+                            <p>Свежие источники</p>
                         </div>
                     </Link>
                 </div>
@@ -79,74 +119,63 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('img/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">Доступные цены</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
+                            <p className="block-service__par">Эффектная презентация</p>
+                            <p className="block-service__par">Быстро и качественно</p>
+                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
                         </div>
                     </div>
                 </Link>
                 <div className="block-service__list list-4">
                     <Link href="/zakazat-diplomnyj-proekt">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
+                            <span className="block-service__list-title">Монография</span>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
+                            <span className="block-service__list-title">Автореферат</span>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                        </div>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
-                            <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                        </div>
-                    </Link>
-                </div>
-                <div className="block-service__list list-5">
-                    <Link href="/zakazat-diplomnyj-proekt">
-                        <div className="block-service__list-item">
-                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
+                            <span className="block-service__list-title">Оригинальность текста до 98%</span>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
+                        </div>
+                    </Link>
+                </div>
+                <div className="block-service__list list-5">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Ответы к защите</span>
+                        </div>
+                    </Link>
+                    <Link href="/zakazat-diplomnyj-proekt">
+                        <div className="block-service__list-item">
+                            <span className="block-service__list-title">Доклад Слайды</span>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
-                            <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
+                            <span className="block-service__list-title">Плакаты к защите</span>
                         </div>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
                         <div className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
                         </div>
                     </Link>
                 </div>
@@ -156,7 +185,7 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Дипломная работа на заказ
+                    ПЕРЕПИСАТЬ
                 </h2>
                 <p className="block-text__par">
                     Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
@@ -171,7 +200,7 @@ const page = () => (
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
+                    Успей получить<br/> скидку на материалы для защиты
                 </h2>
                 <CallMeFormWithTimer timerDuration={155555}>
                     <p>при одновременном заказе вместе с работой</p>

@@ -5,7 +5,7 @@ import foxLogo from 'img/fox-logo.png'
 // import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 // import brands from '@fortawesome/fontawesome-free-brands'
 
-import BottomHelper from 'components/common/BottomHelper'
+import BottomHelper from 'components/common/CallAsk'
 
 // const { faTwitter, faFacebookF, faTumblr } = brands
 

@@ -105,7 +105,7 @@ class CallPopup extends Component {
                                                value={this.state.phone}
                                                onChange={(e) => this.setState({phone: e.target.value})}/>
                                     </div>
-                                    <div className="block-form__item" style={{display: context.question ? 'block' : 'none'}}>
+                                    <div className="block-form__item textarea" style={{display: context.question ? 'block' : 'none'}}>
                                         <label htmlFor="form-phone">Вопрос</label>
                                         <textarea
                                             type="textarea"

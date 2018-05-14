@@ -37,7 +37,7 @@ class OrderForm extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const {formtype, name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state
+        const {formtype, name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state;
         if (!this.state.verified) {
             window.alert('Пожалуйста, пройдите каптчу');
             return

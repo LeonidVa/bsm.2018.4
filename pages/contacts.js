@@ -13,11 +13,11 @@ import formConfig from 'components/config/formConfig';
 import links from 'components/config/linksBlockConfig';
 import schemaSrc from 'img/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
+import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 
 
 class page extends Component {
     render() {
-
         return (
             <Wrapper title="BeSmarter - Контакты">
                 <div className="wrapper bg bg-c2 bg-img bg-img5">
@@ -80,9 +80,9 @@ class page extends Component {
                         <p className="block-text__par finish-text">
                             Пишите – ответим!
                         </p>
-                        <div className="block-not-find__buttons">
-                            <a className="block-not-find__button">Задать вопрос</a>
-                            <a className="block-not-find__button">Заказать звонок</a>
+                        <div className="block-callask__buttons">
+                            <ToggleQuestionPopup><a className="block-callask__button">Задать вопрос</a></ToggleQuestionPopup>
+                            <ToggleCallPopup><a className="block-callask__button to-modal__order-call">Заказать звонок</a></ToggleCallPopup>
                         </div>
                     </section>
 

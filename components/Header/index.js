@@ -68,15 +68,15 @@ class Header extends Component {
                             </nav>
                         </div>
                         <div className="header__right">
-                                    <span className="header__tel">
-                                        {isMobile || isTablet ?
-                                            <a className="header__telanckor" href="tel:+74957724090">+7 495 772 40 90</a>
-                                            :
-                                            <ToggleCallPopup><a className="header__telanckor">+7 495 772 40 90</a></ToggleCallPopup>
-                                            //<OrderCallButton><a className="header__telanckor">+7 495 772 40 90</a></OrderCallButton>
-                                        }
-                                    </span>
-                            <ToggleCallPopup><a className="header__order-tel to-modal__order-call">Заказать звонок</a></ToggleCallPopup>
+
+                            {isMobile || isTablet ?
+                                <a className="header__telanckor" href="tel:+74957724090"><span className="header__tel">+7 495 772 40 90</span></a>
+                                :
+                                <ToggleCallPopup><a className="header__telanckor"><span className="header__tel">+7 495 772 40 90</span></a></ToggleCallPopup>
+                                //<OrderCallButton><a className="header__telanckor">+7 495 772 40 90</a></OrderCallButton>
+                            }
+
+                            <ToggleCallPopup><a className="header__order-tel to-modal__order-call"><span style={{padding: "1em 0"}}>Заказать звонок</span></a></ToggleCallPopup>
                         </div>
                         <div id="nav-icon3"
                              className={`humburger ${showMenuMob ? 'open' : ''}`}

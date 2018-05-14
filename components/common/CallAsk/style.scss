@@ -1,7 +1,7 @@
-.block-not-find {
+.block-callask {
     font-size: 2em;
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 1.56em 0;
     margin-top: 1.56em;
     position: relative;
@@ -22,6 +22,7 @@
         margin-bottom: .94em;
     }
     &__buttons {
+        cursor: pointer;
         display: flex;
         display: -webkit-box;
         display: -webkit-flex;
@@ -46,7 +47,7 @@
         font-size: .56em;
         width: 12.33em;
         display: block;
-        color: #fff;
+        color: #ffffff;
         text-decoration: none;
         background-color: #f4511e;
         padding: .91em 0;

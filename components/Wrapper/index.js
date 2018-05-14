@@ -50,11 +50,29 @@ class Wrapper extends Component {
         }
     }
 
-    componentDidMount() {
+    static componentDidMount() {
+        console.log('Wrapper componentDidMount')
     }
 
+    static getDerivedStateFromProps(nextProps, prevState) {
+        console.log('Wrapper getDerivedStateFromProps');
+        return nextProps;
+    }
+
+    static shouldComponentUpdate() {
+        console.log('Wrapper shouldComponentUpdate')
+    }
+
+    static componentDidUpdate() {
+        console.log('Wrapper componentDidUpdate')
+    }
+
+    static componentWillUnmount() {
+        console.log('Wrapper componentWillUnmount')
+    }
 
     render() {
+        console.log('Wrapper render')
         return (
             <callPopupContext.Provider value={this.state.callPopupState}>
                 <exitPopupContext.Provider value={this.state.exitPopupState}>
@@ -66,8 +84,7 @@ class Wrapper extends Component {
                         <Header/>
                         {this.props.children}
                         <Footer/>
-                        <ExitPopup isShown={true}
-                                   className="modal-sale1"
+                        <ExitPopup className="modal-sale1"
                                    bonus={<div style={{position: "relative"}}>500<span
                                        style={{
                                            fontSize: "20%",
@@ -75,7 +92,7 @@ class Wrapper extends Component {
                                            bottom: "0.5em",
                                            right: "-1.7em",
                                        }}>руб.</span></div>}
-                                   message={<span style={{marginLeft:"4em", lineHeight:"1.33"}}>Лови бонус при заказе прямо сейчас!</span>}
+                                   message={<span style={{marginLeft: "4em", lineHeight: "1.33"}}>Лови бонус при заказе прямо сейчас!</span>}
                                    text="При сумме заказа от 2 000 рублей"
                         />
                         <CallPopup/>

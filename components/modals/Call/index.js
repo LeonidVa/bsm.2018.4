@@ -40,7 +40,6 @@ class CallPopup extends Component {
                             <div className="block-form block-form2 modal-form" onClick={(e) => {
                                 e.stopPropagation();
                             }}>
-
                                 <h2 className="block-form__title">{context.question ? 'Задать вопрос' : 'Заказать звонок'}</h2>
                                 <form className="block-form__form" onSubmit={this.handleForm}>
                                     <div className="block-form__item">

@@ -61,9 +61,6 @@ class Timer extends Component {
 
     render() {
         const {hoursLeft, minutesLeft, secondsLeft} = this.state;
-        console.log('this.props.duration =)',this.props.duration )
-        console.log('this.state ',this.state )
-        console.log('hoursLeft,minutesLeft,secondsLeft ',hoursLeft,minutesLeft,secondsLeft)
         if (this.props.duration > 0 && hoursLeft === 0 && minutesLeft === 0 && secondsLeft === 0) {
             return (<div className="timer" style={{fontSize: `${this.state.size}em`, display: 'flex', color: this.state.color}}>Сейчас!</div>)
         } else {

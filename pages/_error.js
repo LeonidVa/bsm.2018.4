@@ -57,7 +57,7 @@ export default class Error extends React.Component {
                     <section className="block-nav">
                         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
                         <NavRow url='/price' title="Услуги и цены" description="Все для твоей учебы"/>
-                        <NavRow url='/contacts' title="Контакты" description="Ты знаешь, где нас найти"/>
+                        <NavRow url='/contacts' title="Контакты" description="Узнай, где нас найти"/>
                     </section>
 
                     <MessBlock/>

@@ -26,11 +26,11 @@ const page = () => (
 
             <section className="breadcrumbs">
                 <div className="inner">
-                    <Link href="/pricing">
-                        <a>Главная </a>
+                    <Link href="/">
+                        <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/course">
+                    <Link href="/price">
                         <a>Услуги и цены</a>
                     </Link>
                 </div>
@@ -93,36 +93,6 @@ const page = () => (
                     ["Повышение оригинальности"],
                 ]}
             />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 

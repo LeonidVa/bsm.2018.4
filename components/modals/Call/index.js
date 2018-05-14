@@ -1,10 +1,13 @@
 import React, {Component, createContext} from 'react';
 import './style.scss';
+import axios from 'axios';
+
 
 const callPopupState = {
     phone: '',
     name: '',
-    question: '',
+    comment: '',
+    question: false,
     isShown: false,
     show: () => {
     },
@@ -22,6 +25,44 @@ class CallPopup extends Component {
         this.state = callPopupState
     }
 
+
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        const {name, phone, comment} = this.state;
+        /*        if (!this.state.verified) {
+                    window.alert('Пожалуйста, пройдите каптчу');
+                    return
+                }*/
+        let formtype = 'call';
+        if (this.state.question) {
+            formtype = 'question'
+        }
+        let formData = new FormData();
+        formData.set('formtype', formtype);
+        formData.set('name', name);
+        formData.set('phone', phone);
+        formData.set('comment', comment);
+        formData.set('verified', true);
+        axios({
+            method: 'POST',
+            url: 'http://localhost:3001/api/form_data',
+            data: formData,
+            config: {headers: {'Content-Type': 'multipart/form-data'}}
+        }).then(function (response) {
+            //handle success
+            console.log(response);
+        }).catch(function (response) {
+            //handle error
+            console.log(response);
+        });
+
+
+        /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
+                    .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
+                    .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))*/
+        return false;
+    };
+
     render() {
         return (
             <callPopupContext.Consumer>
@@ -30,6 +71,7 @@ class CallPopup extends Component {
                         console.log('call not rendering');
                         return null
                     }
+                    this.state.question = context.question;
                     console.log('call is rendering');
                     return (
                         <div className="modal__order-call"
@@ -41,7 +83,7 @@ class CallPopup extends Component {
                                 e.stopPropagation();
                             }}>
                                 <h2 className="block-form__title">{context.question ? 'Задать вопрос' : 'Заказать звонок'}</h2>
-                                <form className="block-form__form" onSubmit={this.handleForm}>
+                                <form className="block-form__form" onSubmit={this.handleSubmit}>
                                     <div className="block-form__item">
                                         <label htmlFor="form-name">Имя*</label>
                                         <input type="text"
@@ -63,18 +105,17 @@ class CallPopup extends Component {
                                                value={this.state.phone}
                                                onChange={(e) => this.setState({phone: e.target.value})}/>
                                     </div>
-                                    {context.question ? (
-                                        <div className="block-form__item">
-                                            <label htmlFor="form-phone">Вопрос</label>
-                                            <textarea
-                                                type="textarea"
-                                                name="comment"
-                                                placeholder="Ваш вопрос"
-                                                value={this.state.question}
-                                                onChange={(e) => this.setState({question: e.target.value})}
-                                            />
-                                        </div>
-                                    ) : ''}
+                                    <div className="block-form__item" style={{display: context.question ? 'block' : 'none'}}>
+                                        <label htmlFor="form-phone">Вопрос</label>
+                                        <textarea
+                                            type="textarea"
+                                            name=""
+                                            placeholder="Ваш вопрос"
+                                            value={this.state.comment}
+                                            onChange={(e) => this.setState({comment: e.target.value})}
+                                        />
+                                    </div>
+
                                     <button type="submit" className="block-form__btn">Позвоните мне!</button>
                                 </form>
                             </div>

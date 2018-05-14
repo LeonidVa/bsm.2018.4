@@ -13,6 +13,7 @@ import axios from 'axios';
 /* fields are stored in /components/config/formConfig.js */
 class OrderForm extends Component {
     state = {
+        formtype: 'main',
         name: '',
         phone: '',
         email: '',
@@ -36,12 +37,13 @@ class OrderForm extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state
+        const {formtype, name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state
         if (!this.state.verified) {
             window.alert('Пожалуйста, пройдите каптчу');
             return
         }
         let formData = new FormData();
+        formData.set('formtype', formtype);
         formData.set('name', name);
         formData.set('phone', phone);
         formData.set('email', email);
@@ -119,7 +121,7 @@ class OrderForm extends Component {
                     return this.nptText(field);
             }
         })
-    }
+    };
 
     nptText(field) {
         return <div className="block-form__item"

@@ -33,7 +33,7 @@ app.post('/api/form_data', (req, res) => {
         // Everything went fine
         console.log('req.body', req.body);
         console.log('req.files', req.files);
-        const {name, phone, email, theme, worktype, discipline, deadline, size, comment, files, verified} = req.body;
+        const {formtype, name, phone, email, theme, worktype, discipline, deadline, size, comment, files, verified} = req.body;
 
         let answer;
         if (!verified) {
@@ -46,7 +46,7 @@ app.post('/api/form_data', (req, res) => {
         }
         const ares = axios.post('https://orders.besma.ru/api/orders/new', {
             data: {
-                source: "site",
+                source: "site:"+formtype,
                 brand: "besmarter",
                 remote_addr: req.connection.remoteAddress,
                 name, phone, email, theme, worktype, discipline, deadline, size, comment,

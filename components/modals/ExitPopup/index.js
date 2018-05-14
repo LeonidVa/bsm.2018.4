@@ -1,8 +1,13 @@
 import React, {Component, createContext} from 'react';
 import './style.scss';
+import axios from 'axios';
 
 const exitPopupState = {
+    formtype: 'exitpopup',
     phone: '',
+    name: '',
+    comment: '',
+    verified: true,
     isShown: false,
     show: () => {
     },
@@ -22,6 +27,39 @@ class ExitPopup extends Component {
 
         this.state = exitPopupState
     }
+
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        const {formtype, name, phone, comment, verified} = this.state;
+/*        if (!this.state.verified) {
+            window.alert('Пожалуйста, пройдите каптчу');
+            return
+        }*/
+        let formData = new FormData();
+        formData.set('formtype', formtype);
+        formData.set('name', name);
+        formData.set('phone', phone);
+        formData.set('comment', comment);
+        formData.set('verified', verified);
+        axios({
+            method: 'POST',
+            url: 'http://localhost:3001/api/form_data',
+            data: formData,
+            config: {headers: {'Content-Type': 'multipart/form-data'}}
+        }).then(function (response) {
+            //handle success
+            console.log(response);
+        }).catch(function (response) {
+            //handle error
+            console.log(response);
+        });
+
+
+        /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
+                    .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
+                    .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))*/
+        return false;
+    };
 
     render() {
         const {className, bonus, message, text} = this.props;
@@ -45,14 +83,14 @@ class ExitPopup extends Component {
                                  onClick={(e) => {
                                      e.stopPropagation();
                                  }}
-                                 //style={{backgroundImage: 'url(' + require('img/modal/1.jpg') + ')'}}
+                                //style={{backgroundImage: 'url(' + require('img/modal/1.jpg') + ')'}}
                             >
                                 <div className="modal-sale__top">
                                     <span className="percent">{bonus}</span>
                                     <span className="top-text">{message}</span>
                                 </div>
                                 <p>{text}</p>
-                                <form>
+                                <form onSubmit={this.handleSubmit}>
                                     <input type="text"
                                            name=""
                                            id="form-phone"

@@ -82,7 +82,7 @@ class page extends Component {
                         </p>
                         <div className="block-callask__buttons">
                             <ToggleQuestionPopup><a className="block-callask__button">Задать вопрос</a></ToggleQuestionPopup>
-                            <ToggleCallPopup><a className="block-callask__button to-modal__order-call">Заказать звонок</a></ToggleCallPopup>
+                            <ToggleCallPopup><a className="block-callask__button">Заказать звонок</a></ToggleCallPopup>
                         </div>
                     </section>
 

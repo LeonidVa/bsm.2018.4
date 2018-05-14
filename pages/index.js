@@ -31,6 +31,8 @@ const page = () => (
             </section>
             <MessBlock/>
 
+
+
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")",}}>
@@ -164,6 +166,7 @@ const page = () => (
                     </Link>
                 </div>
             </section>
+
 
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 

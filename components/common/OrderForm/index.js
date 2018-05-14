@@ -215,6 +215,7 @@ class OrderForm extends Component {
         if (!this.state.formSended.bool) {
             return (
                 <section className={`block-form ${redForm ? 'form-red' : ''}`}>
+                    <a name="form" style={{display: "block", marginTop: "-3em", height: "3em", width:"1px"}}/>
                     <h2 className="block-form__title">{title}</h2>
                     <form onSubmit={this.handleSubmit} className="block-form__form">
                         {this.renderForm()}

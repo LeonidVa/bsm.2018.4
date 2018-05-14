@@ -42,24 +42,27 @@
     }
     &__right {
         @media (max-width: 900px) {
-            margin-right: 40px;
+            margin-right: .66em;
         }
         @media (max-width: 660px) {
             margin-right: 0;
         }
     }
     .humburger {
-        width: 50px;
-        height: 32px;
+        width: 3em;
+        height: 3em;
         position: absolute;
-        top: 50%;
         right: 10px;
         display: none;
         cursor: pointer;
-        margin: -16px 0 0;
+        margin: .66em 0 0;
         @media (max-width: 900px) {
             display: block;
-            margin-left: 10px;
+            margin-left: 0.5em;
+            position: relative;
+        }
+        @media (max-width: 660px) {
+            position: absolute;
         }
     }
     &__logo {
@@ -224,8 +227,8 @@
     }
 }
 #nav-icon3 {
-    width: 50px;
-    height: 32px;
+    width: 3em;
+    height: 3em;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);

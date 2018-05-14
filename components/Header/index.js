@@ -13,29 +13,13 @@ import 'components/index.scss';
 class Header extends Component {
 
     state = {
-        modalIsOpen: false,
         showMenuMob: false,
-        saleModalIsOpen: false
     };
 
     handleMobMenu = () => {
-
         this.setState({showMenuMob: !this.state.showMenuMob})
-    }
+    };
 
-    closeModal = () => {
-        this.setState({modalIsOpen: false})
-    }
-    closeSaleModal = () => {
-
-        this.setState({saleModalIsOpen: false})
-    }
-
-    componentWillReceiveProps = (nextProps, nextState) => {
-        if (nextProps.showSaleModal && nextProps.showSaleModal !== this.state.saleModalIsOpen) {
-            this.setState({saleModalIsOpen: true})
-        }
-    }
 
 
     render() {
@@ -76,7 +60,7 @@ class Header extends Component {
                                 //<OrderCallButton><a className="header__telanckor">+7 495 772 40 90</a></OrderCallButton>
                             }
 
-                            <ToggleCallPopup><a className="header__order-tel to-modal__order-call"><span style={{padding: "1em 0"}}>Заказать звонок</span></a></ToggleCallPopup>
+                            <ToggleCallPopup><a className="header__order-tel"><span style={{padding: "1em 0"}}>Заказать звонок</span></a></ToggleCallPopup>
                         </div>
                         <div id="nav-icon3"
                              className={`humburger ${showMenuMob ? 'open' : ''}`}

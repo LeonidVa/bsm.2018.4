@@ -16,8 +16,6 @@ const callPopupContext = createContext(callPopupState);
 
 
 class CallPopup extends Component {
-    MyFunc() {
-    }
 
     constructor(props) {
         super(props);

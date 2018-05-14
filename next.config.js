@@ -5,13 +5,14 @@ const withImages = require('next-images');
 const nextConfig = {
     //assetPrefix: 'https://static.besmarter.ru',
     webpack: (config, options) => {
+        console.log("options.dev", options.dev);
         /* Aliases */
         config.resolve.alias.img = __dirname + '/img/';
         config.resolve.alias.components = __dirname + '/components/';
 
         /* Fix for missing styles */
-        const {isServer} = options;
-        if (!isServer &&false) {
+        const {dev} = options;
+        if (!dev) {
             const MergeFilesPlugin = require('merge-files-webpack-plugin');
             // Override next-css configuration
             options.extractCSSPlugin.filename = 'static/[name].css';

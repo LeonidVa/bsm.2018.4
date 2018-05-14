@@ -3,7 +3,7 @@ import Title from 'components/common/Title';
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer'
 import Link from 'next/link';
 import NavRow from 'components/common/NavRow';
-import MessBlock from 'components/common/MessagersBlock';
+import MessBlock from 'components/common/MessBlock';
 import InfoBlock from 'components/common/InfoBlock';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';

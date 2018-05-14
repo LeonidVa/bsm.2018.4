@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Wrapper from 'components/Wrapper';
-import OrderCall from 'components/Header/components/OrderCallModal'
 import Link from 'next/link';
 import Title from 'components/common/Title'
 import MapBlock from 'components/common/MapBlock';
@@ -44,8 +43,6 @@ class page extends Component {
             <Wrapper title="BeSmarter - Контакты">
                 <div className="wrapper bg bg-c2 bg-img bg-img5">
                     <Title>Контакты</Title>
-                    <OrderCall closeModal={this.closeModal}
-                               display={this.state.modalIsOpen ? 'block' : 'none'}/>
                     <ContactsInfo openModal={this.openModal}/>
                     <MapBlock/>
                     <section className="block-text">

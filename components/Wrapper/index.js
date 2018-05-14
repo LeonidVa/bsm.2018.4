@@ -19,9 +19,8 @@ class Wrapper extends Component {
         this.state = {};
         this.state.exitPopupState = exitPopupState;
         this.state.callPopupState = callPopupState;
-    }
 
-    componentDidMount() {
+
         this.state.callPopupState.show = () => {
             this.setState({callPopupState: {...this.state.callPopupState, isShown: true, question: false}})
         };
@@ -49,6 +48,9 @@ class Wrapper extends Component {
                 window.localStorage.setItem(lastExitSalePopupWas, new Date().getTime());
             }
         }
+    }
+
+    componentDidMount() {
     }
 
 

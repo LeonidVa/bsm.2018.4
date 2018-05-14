@@ -3,7 +3,7 @@ import Title from 'components/common/Title';
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer'
 import Link from 'next/link';
 import NavRow from 'components/common/NavRow';
-import MessBlock from 'components/common/MessagersBlock';
+import MessBlock from 'components/common/MessBlock';
 import InfoBlock from 'components/common/InfoBlock';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -154,7 +154,7 @@ const page = () => (
             <section className="block-service">
                 {/* Блок с объявлением. */}
                 <Link href="/diplom">
-                    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/services/course-work-bg.jpg') + ")"}}>
+                    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
                         <style dangerouslySetInnerHTML={{__html: `.block-service__title.gfgfgfg::after { background-color: #ffffff; }`}}/>
                         <span className="block-service__title gfgfgfg" style={{color: "#FFFFFF"}}>Дипломная работа</span>
                         <p className="block-service__par">
@@ -219,7 +219,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom">
-                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
+                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/g.jpg') + ")"}}>
                         <span className="block-service__title">Дипломная работа</span>
                         <p className="block-service__par">
                             Поможем написать дипломную работу на заказ

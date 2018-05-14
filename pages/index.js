@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
 import NavRow from 'components/common/NavRow';
-import MessBlock from 'components/common/MessagersBlock';
+import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'

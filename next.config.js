@@ -8,7 +8,7 @@ const nextConfig = {
     webpack: (config, options) => {
         console.log("options.dev", options.dev);
         /* Aliases */
-        config.resolve.alias.img = __dirname + '/img/';
+        config.resolve.alias.static = __dirname + '/static/';
         config.resolve.alias.components = __dirname + '/components/';
 
         /* Fix for missing styles */

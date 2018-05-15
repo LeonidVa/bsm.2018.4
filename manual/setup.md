@@ -20,4 +20,4 @@ npm run build
 
 set NODE_ENV=production
 
-node server.js
+node orders.js

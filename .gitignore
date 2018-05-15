@@ -1,8 +1,10 @@
-.next
 .idea
 node_modules
-*.log
 yarn.lock
+.next
 uploads/*
 uploads/**
+!uploads/dummy
 **/Thumbs.db
+**/*.log
+

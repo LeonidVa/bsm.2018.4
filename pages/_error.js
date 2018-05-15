@@ -62,7 +62,7 @@ export default class Error extends React.Component {
 
                     <MessBlock/>
 
-                    <section className="block-form-timer" style={{backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
+                    <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                         <h2 className="block-form-timer__title">
                             <span style={{fontSize: "5em", marginTop: "-3em"}}>404</span><br/>
                             Не работает сайт? Работает телефон!

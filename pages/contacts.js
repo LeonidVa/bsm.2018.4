@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm'
 import LinksBlock from 'components/common/LinksBlock'
 import formConfig from 'components/config/formConfig';
 import links from 'components/config/linksBlockConfig';
-import schemaSrc from 'img/contacts/how-to-go.jpg';
+import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 
@@ -128,7 +128,7 @@ class page extends Component {
 
                     <section className="block-service">
                         <Link href="/diplom-na-zakaz">
-                            <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('img/block/g.jpg') + ")",}}>
+                            <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/g.jpg') + ")",}}>
                                 <div className="block-service__text gradient-l-white">
                                     <span className="block-service__title">Удобный офис</span>
                                     <p className="block-service__par">Всегда на связи 8:00 – 22:00</p>

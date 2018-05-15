@@ -23,7 +23,7 @@
 Пример с дефолтными настройками
 ```jsx
 <Link href="/diplom">
-    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
+    <div className="block-service__top" style={{backgroundImage: "url(" + require('static/images/services/presentation-bg.jpg') + ")"}}>
         <span className="block-service__title">Дипломная работа</span>
         <p className="block-service__par">
             Поможем написать дипломную работу на заказ
@@ -39,7 +39,7 @@
 Подробный пример полного кода со всеми настройками 
 ```jsx
 <Link href="/diplom">
-    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/services/course-work-bg.jpg') + ")"}}>
+    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('static/images/services/course-work-bg.jpg') + ")"}}>
         <style dangerouslySetInnerHTML={{__html: `.block-service__title.cc1::after { background-color: blue; }`}}/>
         <span className="block-service__title cc1" style={{color: "#FFFFFF"}}>Дипломная работа</span>
         <p className="block-service__par">
@@ -84,7 +84,7 @@
 ```jsx
 <section className="block-service">
     <Link href="/diplom">
-        <div className="block-service__top" style={{backgroundImage: "url(" + require('img/services/presentation-bg.jpg') + ")"}}>
+        <div className="block-service__top" style={{backgroundImage: "url(" + require('static/images/services/presentation-bg.jpg') + ")"}}>
             <span className="block-service__title">Дипломная работа</span>
             <p className="block-service__par">
                 Поможем написать дипломную работу на заказ
@@ -112,7 +112,7 @@
 <section className="block-service">
     {/* Блок с объявлением. */}
     <Link href="/diplom">
-        <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/services/course-work-bg.jpg') + ")"}}>
+        <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('static/images/services/course-work-bg.jpg') + ")"}}>
             <style dangerouslySetInnerHTML={{__html: `.block-service__title::after { background-color: blue; }`}}/>
             <span className="block-service__title" style={{color: "#FFFFFF"}}>Дипломная работа</span>
             <p className="block-service__par">

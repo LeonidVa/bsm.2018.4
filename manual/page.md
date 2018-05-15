@@ -53,7 +53,7 @@ const page = () => (
             <MessBlock/>
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
-            <ImageBlock imageSrc={require('img/block/a.jpg')}/>
+            <ImageBlock imageSrc={require('static/images/block/a.jpg')}/>
 ```
 
 ## Элементы

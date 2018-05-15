@@ -45,7 +45,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('img/block/k.jpg') + ")",}}>
+                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -85,7 +85,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('img/block/j.jpg') + ")",}}>
+                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -121,7 +121,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('img/block/l.jpg') + ")",}}>
+                    <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -197,7 +197,7 @@ const page = () => (
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
                     Успей получить<br/> скидку на материалы для защиты

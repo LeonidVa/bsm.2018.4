@@ -46,9 +46,9 @@ const page = () => (
             <MessBlock/>
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
-            <ImageBlock imageSrc={require('img/block/a.jpg')}/>
+            <ImageBlock imageSrc={require('static/images/block/a.jpg')}/>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">Воспользуйся пока не поздно</h2>
                 <CallMeFormWithTimer timerDuration={75000}>
                     <p>Написание диссертаций специализированными докторами наук</p>
@@ -57,7 +57,7 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong}/>
             <OrderForm title="Оценить работу" formConfig={formConfig}/>
-            <ImageBlock imageSrc={require('img/block/a.jpg')}/>
+            <ImageBlock imageSrc={require('static/images/block/a.jpg')}/>
             <section className="block-text">
                 <h2 className="block-text__title">
                     Дипломная работа на заказ
@@ -154,7 +154,7 @@ const page = () => (
             <section className="block-service">
                 {/* Блок с объявлением. */}
                 <Link href="/diplom">
-                    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('img/block/h.jpg') + ")"}}>
+                    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                         <style dangerouslySetInnerHTML={{__html: `.block-service__title.gfgfgfg::after { background-color: #ffffff; }`}}/>
                         <span className="block-service__title gfgfgfg" style={{color: "#FFFFFF"}}>Дипломная работа</span>
                         <p className="block-service__par">
@@ -219,7 +219,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom">
-                    <div className="block-service__top" style={{backgroundImage: "url(" + require('img/block/g.jpg') + ")"}}>
+                    <div className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/g.jpg') + ")"}}>
                         <span className="block-service__title">Дипломная работа</span>
                         <p className="block-service__par">
                             Поможем написать дипломную работу на заказ

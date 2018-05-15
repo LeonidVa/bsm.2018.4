@@ -1,11 +1,11 @@
-import icon_1 from "img/info/1.svg"
-import icon_2 from "img/info/2.svg"
-import icon_3 from "img/info/3.svg"
-import icon_4 from "img/info/4.svg"
-import icon_5 from "img/info/5.svg"
-import icon_6 from "img/info/6.svg"
-import icon_7 from "img/info/7.svg"
-import icon_8 from "img/info/8.svg"
+import icon_1 from "static/images/info/1.svg"
+import icon_2 from "static/images/info/2.svg"
+import icon_3 from "static/images/info/3.svg"
+import icon_4 from "static/images/info/4.svg"
+import icon_5 from "static/images/info/5.svg"
+import icon_6 from "static/images/info/6.svg"
+import icon_7 from "static/images/info/7.svg"
+import icon_8 from "static/images/info/8.svg"
 
 const infoBlockConfig = [
     {icon: icon_1, title: 'Стоимость магистерской диссертации', desc: 'От 23 000 руб. до 185 000 руб.'},

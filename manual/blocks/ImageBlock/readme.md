@@ -11,5 +11,5 @@
 
 ### Пример использования
 ```js
-<ImageBlock imageSrc={require('img/block/a.jpg')}/>
+<ImageBlock imageSrc={require('static/images/block/a.jpg')}/>
 ```

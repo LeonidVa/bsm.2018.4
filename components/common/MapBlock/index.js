@@ -23,7 +23,7 @@ class FillContainer extends React.Component {
                         }}
                         options={{
                             iconLayout: 'default#image',
-                            iconImageHref: require('img/fox-logo.128.png'),
+                            iconImageHref: require('static/images/fox-logo.128.png'),
                             iconImageSize: [48, 48],
                             iconImageOffset: [-24, -24]
                         }}

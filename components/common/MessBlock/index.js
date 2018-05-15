@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 import Color from 'color';
 
-import facebookMessenger from 'img/messegers/facebook-messenger.svg'
-import telegram from 'img/messegers/telegram.svg'
-import whatsapp from 'img/messegers/whatsapp.svg'
-import vk from 'img/messegers/vk.svg'
-import instagram from 'img/messegers/instagram.svg'
+import facebookMessenger from 'static/images/messegers/facebook-messenger.svg'
+import telegram from 'static/images/messegers/telegram.svg'
+import whatsapp from 'static/images/messegers/whatsapp.svg'
+import vk from 'static/images/messegers/vk.svg'
+import instagram from 'static/images/messegers/instagram.svg'
 
 const colors = [
     '#d84315',

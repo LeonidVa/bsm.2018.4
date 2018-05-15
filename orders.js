@@ -1,3 +1,7 @@
+/*
+  This instance only for handling form submits.
+  Run pm2 start npm --name "next" -- start to start the web site.
+*/
 const express = require('express');
 const app = express();
 const fs = require('fs');
@@ -46,7 +50,7 @@ app.post('/api/form_data', (req, res) => {
         }
         const ares = axios.post('https://orders.besma.ru/api/orders/new', {
             data: {
-                source: "site:"+formtype,
+                source: "site:" + formtype,
                 brand: "besmarter",
                 remote_addr: req.connection.remoteAddress,
                 name, phone, email, theme, worktype, discipline, deadline, size, comment,
@@ -61,7 +65,7 @@ app.post('/api/form_data', (req, res) => {
                     answer = {error: false, id: reply.data.id, msg: 'заявка успешно отправлена'};
                     saveAndSend();
                 } else {
-                    answer = {error: false, id: reply.data.id, msg: 'заявка успешно отправлена'}
+                    answer = {error: false, id: reply.data.id, msg: 'заявка успешно отправлена'};
                     saveAndSend(reply.data.id);
                 }
             }
@@ -79,17 +83,19 @@ app.post('/api/form_data', (req, res) => {
                 dir = newdir
             }
 
+
             let text = '' +
                 'Номер заявки: ' + id + '\n' +
-                'Имя: ' + name + '\n' +
-                'Телефон: ' + phone + '\n' +
-                'Email: ' + email + '\n' +
-                'Тема: ' + theme + '\n' +
-                'Предмет: ' + discipline + '\n' +
-                'Срок сдачи: ' + deadline + '\n' +
-                'Объём: ' + size + '\n' +
-                'Файлы: ' + filelist + '\n' +
-                'Комментарии: ' + comment + '\n';
+                'Тип формы: ' + (formtype === undefined ? '' : formtype) + '\n' +
+                'Имя: ' + (name === undefined ? '' : name) + '\n' +
+                'Телефон: ' + (phone === undefined ? '' : phone) + '\n' +
+                'Email: ' + (email === undefined ? '' : email) + '\n' +
+                'Тема: ' + (theme === undefined ? '' : theme) + '\n' +
+                'Предмет: ' + (discipline === undefined ? '' : discipline) + '\n' +
+                'Срок сдачи: ' + deadline(deadline === undefined ? '' : deadline) + '\n' +
+                'Объём: ' + (size === undefined ? '' : size) + '\n' +
+                'Файлы: ' + (filelist === undefined ? '' : filelist) + '\n' +
+                'Комментарии: ' + (comment === undefined ? '' : comment) + '\n';
             fs.writeFile(dir + '/request-' + id + `.txt`,
                 text,
                 (err) => {
@@ -98,35 +104,33 @@ app.post('/api/form_data', (req, res) => {
                     // success case, the file was saved
                 });
 
-            /*        let transporter = nodemailer.createTransport(`smtps://${process.env.GMAIL_LOGIN}%40gmail.com:${process.env.GMAIL_PASSWORD}@smtp.gmail.com`);
-                    let mailManagerOptions = {
-                        from: 'noreply@besmarter.ru',
-                        to: `${process.env.EMAIL_1}, ${process.env.EMAIL_2}`,
-                        subject: 'besmarter',
-                        text: text,
-                        // attachments: files ? files.map(file => ({
-                        //     'filename': file.name ? file.name : '',
-                        //     'content': Buffer.from(file.url, 'base64'),
-                        //     'contentType': file.type ? file.type : ''
-                        // })
-                        // ) : null
-                    };*/
-            // transporter.sendMail(mailManagerOptions, function (error, info) {
-            //     if (error) {
-            //         console.log(error);
+            const mailLogin = encodeURIComponent(process.env.MAIL_LOGIN);
+            const mailPassword = encodeURIComponent(process.env.MAIL_PASSWORD);
+            const mailSMTP = encodeURIComponent(process.env.MAIL_SMTP);
+            //console.log('smtps://' + mailLogin + ':' + mailPassword + '@' + mailSMTP);
+            let transporter = nodemailer.createTransport('smtps://' + mailLogin + ':' + mailPassword + '@' + mailSMTP);
+            let mailManagerOptions = {
+                from: 'noreply@besmarter.ru',
+                to: `${process.env.EMAIL_1}, ${process.env.EMAIL_2}`,
+                subject: 'BeSmarter Новая заявка',
+                text: text,
+            };
+            transporter.sendMail(mailManagerOptions, function (error, info) {
+                if (error) {
+                    console.log('Email error: ');
+                    console.log(error);
+                } else {
+                    console.log('Email sent: ' + info.response);
+                }
+            });
 
-            //     } else {
-            //         console.log('Email sent: ' + info.response);
-            //     }
-            // });
-
-            /*        if (email) {
-                        /!* if user sent us an email address - send our email to user's email :D *!/
-                        let mailClientOptions = {
-                            from: 'noreply@besmarter.ru',
-                            to: email,
-                            subject: 'besmarter',
-                            html: `
+            if (email) {
+                /* if user sent us an email address - send our email to user's email :D */
+                let mailClientOptions = {
+                    from: 'zakaz@besmarter.ru',
+                    to: email,
+                    subject: 'besmarter',
+                    html: `
                                                 <div>
                                                     <p>Здравствуйте!</p>
                                                     <br/>
@@ -146,20 +150,17 @@ app.post('/api/form_data', (req, res) => {
                                                     <p>Наша почта: zakaz@besmarter.ru</p>
                                                     <p>Наш сайт: BeSmarter.ru</p>
                                             </div>`
-                        }
-                        // transporter.sendMail(mailClientOptions, function (error, info) {
-                        //     if (error) {
-                        //         console.log(error);
-
-                        //     } else {
-                        //         console.log('Email sent: ' + info.response);
-                        //     }
-                        // });
-                    }*/
-
+                };
+                transporter.sendMail(mailClientOptions, function (error, info) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log('Email sent: ' + info.response);
+                    }
+                });
+            }
 
             res.send(answer)
-
         }
 
     });

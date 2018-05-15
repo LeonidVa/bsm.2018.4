@@ -1,4 +1,4 @@
-import playIcon from 'img/play-icon.svg'
+import playIcon from 'static/images/play-icon.svg'
 
 const VideoBlock = () => (
     <section className="block-video">

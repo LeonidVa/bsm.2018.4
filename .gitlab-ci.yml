@@ -14,4 +14,10 @@ build_job:
   - yarn install
   - yarn build
 
+stage_deploy:
+  script:
+    - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+    - ssh -p22 rs@bsmr.ru "touch hahaha"
+    - ssh -p22 rs@bsmr.ru "touch ~/hahaha2"
+
   

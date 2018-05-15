@@ -83,7 +83,7 @@ class ExitPopup extends Component {
                                  onClick={(e) => {
                                      e.stopPropagation();
                                  }}
-                                //style={{backgroundImage: 'url(' + require('img/modal/1.jpg') + ')'}}
+                                //style={{backgroundImage: 'url(' + require('static/images/modal/1.jpg') + ')'}}
                             >
                                 <div className="modal-sale__top">
                                     <span className="percent">{bonus}</span>

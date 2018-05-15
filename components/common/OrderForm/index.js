@@ -238,7 +238,7 @@ class OrderForm extends Component {
         } else {
             return (
                 <div className="block-form" style={{border: 'none'}}>
-                    <img width="100%" src={require('img/fox-logo.png')}/>
+                    <img width="100%" src={require('static/images/fox-logo.png')}/>
                     <p className="block-text__par">{this.state.formSended.number ? `Номер заявки: ${this.state.formSended.number}` : ''}</p>
 
                 </div>

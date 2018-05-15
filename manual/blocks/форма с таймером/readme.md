@@ -24,7 +24,7 @@
 ```jsx
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-<section className="block-form-timer" style={{backgroundImage: "url("+require('img/block/h.jpg')+")"}}>
+<section className="block-form-timer" style={{backgroundImage: "url("+require('static/images/block/h.jpg')+")"}}>
     <h2 className="block-form-timer__title">Воспользуйся пока не поздно</h2>
     <CallMeFormWithTimer timerDuration={75000} timerSize={1.6}>
         <p>Написание диссертаций специализированными докторами наук</p>

@@ -85,7 +85,7 @@ table {
     overflow: hidden;
     position: relative;
     &.main {
-        background-image: url(~img/header/bg.jpg);
+        background-image: url(~static/images/header/bg.jpg);
         background-size: 100% 100vh;
         background-attachment: fixed;
         padding-bottom: 50px;
@@ -119,19 +119,19 @@ table {
         background-position: center 0;
     }
     &.bg-img1::before {
-        background-image: url(~img/header/bg1.jpg);
+        background-image: url(~static/images/header/bg1.jpg);
     }
     &.bg-img2::before {
-        background-image: url(~img/header/bg2.jpg);
+        background-image: url(~static/images/header/bg2.jpg);
     }
     &.bg-img3::before {
-        background-image: url(~img/header/bg3.jpg);
+        background-image: url(~static/images/header/bg3.jpg);
     }
     &.bg-img4::before {
-        background-image: url(~img/header/bg4.jpg);
+        background-image: url(~static/images/header/bg4.jpg);
     }
     &.bg-img5::before {
-        background-image: url(~img/header/bg5.jpg);
+        background-image: url(~static/images/header/bg5.jpg);
     }
 
 }

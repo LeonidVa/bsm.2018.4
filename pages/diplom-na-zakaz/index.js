@@ -5,14 +5,14 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'components/config/infoBlock/diplom';
-import icon_1 from "img/info/1.svg"
-import icon_2 from "img/info/2.svg"
-import icon_3 from "img/info/3.svg"
-import icon_4 from "img/info/4.svg"
-import icon_5 from "img/info/5.svg"
-import icon_6 from "img/info/6.svg"
-import icon_7 from "img/info/7.svg"
-import icon_8 from "img/info/8.svg"
+import icon_1 from "static/images/info/1.svg"
+import icon_2 from "static/images/info/2.svg"
+import icon_3 from "static/images/info/3.svg"
+import icon_4 from "static/images/info/4.svg"
+import icon_5 from "static/images/info/5.svg"
+import icon_6 from "static/images/info/6.svg"
+import icon_7 from "static/images/info/7.svg"
+import icon_8 from "static/images/info/8.svg"
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import profitBlockConfigLong from 'components/config/profitBlockConfig';
@@ -52,7 +52,7 @@ const page = () => (
                 ]
             }/>
 
-            <section className="block-form-timer" style={{backgroundImage: "url("+require('img/block/h.jpg')+")"}}>
+            <section className="block-form-timer" style={{backgroundImage: "url("+require('static/images/block/h.jpg')+")"}}>
                 <h2 className="block-form-timer__title">Воспользуйся пока не поздно</h2>
                 <CallMeFormWithTimer timerDuration={75000} timerSize={0}>
                     <p>Закажи дипломную работу прямо сейчас и получи скидку на пакет успешная защита!</p>

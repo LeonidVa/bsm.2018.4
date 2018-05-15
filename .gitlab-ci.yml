@@ -6,6 +6,7 @@ cache:
 
 stages:
   - build
+  - staging
 
 build_job:
   stage: build
@@ -15,9 +16,10 @@ build_job:
   - yarn build
 
 stage_deploy:
+  stage: staging
   script:
-    - ssh-add <(echo "$STAGING_PRIVATE_KEY")
-    - ssh -p22 rs@bsmr.ru "touch hahaha"
-    - ssh -p22 rs@bsmr.ru "touch ~/hahaha2"
+  - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+  - ssh -p22 rs@bsmr.ru "touch hahaha"
+  - ssh -p22 rs@bsmr.ru "touch ~/hahaha2"
 
   

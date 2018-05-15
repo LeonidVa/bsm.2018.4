@@ -1,6 +1,6 @@
 /*
   This instance only for handling form submits.
-  Run pm2 start npm --name "next" -- start to start the web site.
+  Run `pm2 start yarn --name "besmarter" -- start` to start the web site.
 */
 const express = require('express');
 const app = express();

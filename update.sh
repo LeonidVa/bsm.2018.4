@@ -19,7 +19,7 @@ sh ./stop.sh
 rm -rf ${path}/.next/
 cd ${path}
 git reset --hard HEAD
-git pull origin master
+git pull
 yarn install
 chmod -R chmod u=rwxX,go=rX besmarter ${path}
 chown -R rs:www-data ${path}

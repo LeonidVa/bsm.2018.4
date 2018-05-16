@@ -20,6 +20,7 @@ rm -rf ${path}/.next/
 cd ${path}
 git reset --hard HEAD
 git pull origin master
+yarn install
 chmod -R chmod u=rwxX,go=rX besmarter ${path}
 chown -R rs:www-data ${path}
 chmod 775 ${path}/uploads

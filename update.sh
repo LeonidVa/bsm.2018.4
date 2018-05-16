@@ -12,6 +12,7 @@ exit 1
 #########################################
 #  Rebuilding and starting application
 #
+set -e
 path=/var/www/besmarter
 cd ${path}
 sh ./stop.sh
@@ -19,9 +20,8 @@ rm -rf ${path}/.next/
 cd ${path}
 git reset --hard HEAD
 git pull origin master
+chmod -R chmod u=rwxX,go=rX besmarter ${path}
 chown -R rs:www-data ${path}
-chmod -R 644 ${path}
-chmod -R  +X ${path}
 chmod 775 ${path}/uploads
 cd ${path}
 sh ./build.sh

@@ -1,4 +1,4 @@
 #!/bin/bash
 rm -rf ./.next/
 set -e
-yarn build
+npm run build

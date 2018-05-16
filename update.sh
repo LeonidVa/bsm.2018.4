@@ -20,8 +20,8 @@ rm -rf ${path}/.next/
 cd ${path}
 git reset --hard HEAD
 git pull
-yarn install
-chmod -R chmod u=rwxX,go=rX besmarter ${path}
+npm install
+chmod -R u=rwxX,go=rX besmarter ${path}
 chown -R rs:www-data ${path}
 chmod 775 ${path}/uploads
 cd ${path}

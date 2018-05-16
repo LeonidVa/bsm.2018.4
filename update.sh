@@ -7,7 +7,7 @@ exit 1
 #########################################
 #  Setup env variables here
 #
-
+export NODE_ENV="production"
 
 #########################################
 #  Rebuilding and starting application
@@ -21,7 +21,7 @@ cd ${path}
 git reset --hard HEAD
 git pull
 npm install
-chmod -R u=rwxX,go=rX besmarter ${path}
+chmod -R u=rwX,go=rX ${path}
 chown -R rs:www-data ${path}
 chmod 775 ${path}/uploads
 cd ${path}

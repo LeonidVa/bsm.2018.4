@@ -1,9 +1,10 @@
 #!/bin/bash
 export NODE_ENV="production"
-export MAIL_SMTP=""
+export MAIL_SMTP="mail.besmarter.ru"
 export MAIL_LOGIN=""
 export MAIL_PASSWORD=""
-export EMAIL_1=""
-export EMAIL_2=""
+export EMAIL_1="zakaz@besmarter.ru"
+export EMAIL_2="bs_7724090@mail.ru"
 
-pm2 start server.js
+cd /var/www/besmarter
+pm2 start orders.js

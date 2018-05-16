@@ -72,7 +72,7 @@ class page extends Component {
                             По почте
                         </h2>
                         <p className="block-text__subtitle subtitle-orange">
-                            zakaz@besmarter.ru
+                            <a href="mailto:zakaz@besmarter.ru?subject=Новая заявка">zakaz@besmarter.ru</a>
                         </p>
                         <p className="block-text__par">
                             Возникли вопросы?

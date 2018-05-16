@@ -20,8 +20,8 @@ build_job:
   stage: build
   script:
   - node -v
-  - yarn install
-  - yarn build
+  - npm install
+  - npm run build
 
 stage_deploy:
   stage: staging

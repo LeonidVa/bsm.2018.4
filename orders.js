@@ -11,7 +11,7 @@ const nodemailer = require('nodemailer');
 const axios = require('axios');
 const multer = require('multer');
 
-const storagePath = __dirname + "/uploads";
+const storagePath = "/home/syncthing/bts_besmarter";
 const port = 3001;
 
 

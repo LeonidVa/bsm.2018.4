@@ -59,7 +59,7 @@ class OrderForm extends Component {
         formData.set('verified', verified);
         axios({
             method: 'POST',
-            url: 'http://localhost:3001/api/form_data',
+            url: '/api/form_data',
             data: formData,
             config: {headers: {'Content-Type': 'multipart/form-data'}}
         })

@@ -92,7 +92,7 @@ app.post('/api/form_data', (req, res) => {
                 'Email: ' + (email === undefined ? '' : email) + '\n' +
                 'Тема: ' + (theme === undefined ? '' : theme) + '\n' +
                 'Предмет: ' + (discipline === undefined ? '' : discipline) + '\n' +
-                'Срок сдачи: ' + deadline(deadline === undefined ? '' : deadline) + '\n' +
+                'Срок сдачи: ' + (deadline === undefined ? '' : deadline) + '\n' +
                 'Объём: ' + (size === undefined ? '' : size) + '\n' +
                 'Файлы: ' + (filelist === undefined ? '' : filelist) + '\n' +
                 'Комментарии: ' + (comment === undefined ? '' : comment) + '\n';

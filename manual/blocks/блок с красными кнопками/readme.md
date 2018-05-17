@@ -38,17 +38,16 @@
 
 Подробный пример полного кода со всеми настройками 
 ```jsx
-<Link href="/diplom">
-    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('static/images/services/course-work-bg.jpg') + ")"}}>
-        <style dangerouslySetInnerHTML={{__html: `.block-service__title.cc1::after { background-color: blue; }`}}/>
-        <span className="block-service__title cc1" style={{color: "#FFFFFF"}}>Дипломная работа</span>
-        <p className="block-service__par">
-            Поможем написать дипломную работу на заказ
-        </p>
-        <p className="block-service__par">
-            от 10 500 ₽<br/>
-            от 10 дня
-        </p>
+<Link href="/diplom-na-zakaz">
+    <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+        <div className="block-service__text gradient-l-black">
+            <style dangerouslySetInnerHTML={{__html: `.block-service__title.cc1::after { background-color: blue; }`}}/>
+            <span className="block-service__title cc1" style={{color: "#FFFFFF"}}>Дипломная работа</span>
+            <p className="block-service__par">Не парься сам – доверься нам!</p>
+            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+            <p className="block-service__par">От 4 000 руб.</p>
+            <p className="block-service__par">Срочно от 2 часов</p>
+        </div>
     </div>
 </Link>
 ```
@@ -59,9 +58,16 @@
 Но чтобы изменить цвет подчеркивания, необходимо добавить элемент `style` со стилем для
 `block-service__title` и **добавить кастомный класс** и в стиль и в блок, иначе цвет подчеркивания
 распространится и на другие блоки на этой странице.
-Назвать кастомный класс можно как угодно, в примере это `cc1`. 
+Назвать кастомный класс можно как угодно, в примере это `cc1`.
 
-В обычном случае не обязательно указывать все эти параметры.
+На мобильной версии текст наползает на картику и это затрудняет его прочтение.
+Для повышения читаемости  используется градиент, который задается классом
+`gradient-l-black` в элементе `<div className="block-service__text gradient-l-black">`.
+На текущий момент поддерживаются два градиента:
+```scss
+&.gradient-l-white { background-image: linear-gradient(to right, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.5), transparent); }
+&.gradient-l-black { background-image: linear-gradient(to right, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.5), transparent); }
+```
  
 ### Кнопки внизу
 #### Контейнер для кнопок

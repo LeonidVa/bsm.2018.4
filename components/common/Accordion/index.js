@@ -16,11 +16,29 @@ class Accordion extends Component {
                 return ""
             }
             let cells = null;
-            if (row.length === 1) {
-                cells = <td className="single" colSpan={2}>{row[0]}</td>;
-            } else {
-                cells = row.map((cell, ck) => (<td key={ck}>{cell}</td>));
+            const tof = typeof row;
+            console.log('typeof row, row', tof, row);
+
+            switch (tof) {
+                case "string":
+                    cells = <td className="single" colSpan={2}>{row}</td>;
+                    break;
+                case "object":
+                    if (row['$$typeof'] !== undefined) {
+                        cells = <td className="single" colSpan={2}>{row}</td>;
+                    } else {
+                        if (row.length === 1) {
+                            cells = <td className="single" colSpan={2}>{row[0]}</td>;
+                        } else {
+                            cells = row.map((cell, ck) => (<td key={ck}>{cell}</td>));
+                        }
+                    }
+                    break;
+
+                default:
+                    console.log('Accordion row rendering failed: unknown type ' + tof)
             }
+
             return (<tr key={index}>{cells}</tr>)
         })
     };

@@ -6,9 +6,6 @@ import Footer from 'components/Footer';
 
 
 import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/ExitPopup'
-
-const lastExitSalePopupWas = 'LKjyGTFDd';
-
 import CallPopup, {callPopupContext, callPopupState} from 'components/modals/Call'
 
 
@@ -20,7 +17,6 @@ class Wrapper extends Component {
         this.state.exitPopupState = exitPopupState;
         this.state.callPopupState = callPopupState;
 
-
         this.state.callPopupState.show = () => {
             this.setState({callPopupState: {...this.state.callPopupState, isShown: true, question: false}})
         };
@@ -31,23 +27,18 @@ class Wrapper extends Component {
             this.setState({callPopupState: {...this.state.callPopupState, isShown: false}})
         };
         this.state.exitPopupState.show = () => {
-            if (process.browser) {
-                this.setState({exitPopupState: {...this.state.exitPopupState, isShown: true}})
-            }
+            this.setState({exitPopupState: {...this.state.exitPopupState, isShown: true}});
         };
         this.state.exitPopupState.hide = () => {
-            this.setState({exitPopupState: {...this.state.exitPopupState, isShown: false}})
-            if (process.browser) {
-                window.localStorage.setItem(lastExitSalePopupWas, new Date().getTime());
-            }
+            this.setState({exitPopupState: {...this.state.exitPopupState, isShown: false}});
         };
 
         if (process.browser) {
             this._data = [];
 
             // Отслеживаем его движение курсора с целью
-            // показать сообщение о скидке если он захочет
-            // покинуть этот сайт
+            // показать сообщение о скидке если клиент захочет
+            // покинуть этот сайт~~, я бы захотел~~
             // TODO Добавить проверку колличества заказов, если есть заказы то не показывать
             document.addEventListener('mousemove', this.onMouseMove.bind(this));
         }

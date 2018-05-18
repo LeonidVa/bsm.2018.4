@@ -32,13 +32,6 @@ class Wrapper extends Component {
         };
         this.state.exitPopupState.show = () => {
             if (process.browser) {
-                const lastWasShown = window.localStorage.getItem(lastExitSalePopupWas);
-                const now = new Date().getTime();
-                const shouldShow = !(lastWasShown !== null && (Number(lastWasShown) + 120000) > now);
-                if (!shouldShow) {
-                    return null;
-                }
-                window.localStorage.setItem(lastExitSalePopupWas, now);
                 this.setState({exitPopupState: {...this.state.exitPopupState, isShown: true}})
             }
         };
@@ -47,6 +40,79 @@ class Wrapper extends Component {
             if (process.browser) {
                 window.localStorage.setItem(lastExitSalePopupWas, new Date().getTime());
             }
+        };
+
+        if (process.browser) {
+            this._data = [];
+
+            // Отслеживаем его движение курсора с целью
+            // показать сообщение о скидке если он захочет
+            // покинуть этот сайт
+            // TODO Добавить проверку колличества заказов, если есть заказы то не показывать
+            document.addEventListener('mousemove', this.onMouseMove.bind(this));
+        }
+    }
+
+    onMouseMove(e) {
+        // Процент от высоты окна браузера
+        this._data.push({
+            y: e.clientY / (window.innerHeight / 100),
+            date: Date.now(),
+        });
+
+        // Убираем все движения мыши которые старше 2х секунд
+        let newData = [];
+        let date = Date.now();
+        for(let positionInfo of this._data) {
+            if (date - positionInfo.date < 2000) {
+                newData.push(positionInfo);
+            }
+        }
+        this._data = newData;
+
+        // Убираем лишнее, оставляем только последние 10 положений курсора мыши, если меньше не чего не делаем
+        if (this._data.length > 20) {
+            this._data.splice(0, 1);
+        } else {
+            return;
+        }
+
+        // Собираем данные о движении мыши строго вверх,
+        // если она последний раз двигалась в другую сторону
+        // на выходе будет пустой массив
+        let upsY = [];
+        let prev = null;
+        for(let { y } of this._data) {
+            if (prev === null) {
+                prev = y;
+            } else if (prev > y) {
+                prev = y;
+                upsY.push(y);
+            } else {
+                upsY = [];
+                prev = null;
+            }
+        }
+
+        // Если недостаточно данных для расчёта сколько прошла мышь,
+        // то выходим
+        if (upsY.length < 3) {
+            return;
+        }
+
+        // Просчитываю сколько процентов экрана прошёл курсор мыши
+        let first = upsY[0];
+        let last = upsY[upsY.length - 1];
+        let diff = first - last;
+
+        // Если курсор мыши прошёл больше 50 процентов экрана за
+        // 2 секунды и он движется вверх, вероятно пользователь
+        // хочет закрыть вкладку или нажать на кнопку меню :)
+        //
+        // Показываем сообщение о скидке
+        if (diff > 50) {
+            this.state.exitPopupState.show();
+            document.removeEventListener('mousemove', this.onMouseMove);
         }
     }
 
@@ -76,7 +142,7 @@ class Wrapper extends Component {
         return (
             <callPopupContext.Provider value={this.state.callPopupState}>
                 <exitPopupContext.Provider value={this.state.exitPopupState}>
-                    <div onMouseLeave={this.state.exitPopupState.show}>
+                    <div>
                         <Head>
                             <title>BeSmarter! - {this.props.title}</title>
                             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>

@@ -36,7 +36,8 @@ class ExitPopup extends Component {
             return
         }*/
         let formData = new FormData();
-        formData.set('formtype', formtype);
+        formData.set('form', 'Скидка 500 рублей, при уходе с сайта');
+        formData.set('source', '2018.besmarter.ru');
         formData.set('name', name);
         formData.set('phone', phone);
         formData.set('comment', comment);

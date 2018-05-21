@@ -28,7 +28,7 @@ class CallPopup extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const {name, phone, comment} = this.state;
+        const {name, phone, comment, question} = this.state;
         /*        if (!this.state.verified) {
                     window.alert('Пожалуйста, пройдите каптчу');
                     return
@@ -38,7 +38,8 @@ class CallPopup extends Component {
             formtype = 'question'
         }
         let formData = new FormData();
-        formData.set('formtype', formtype);
+        formData.set('form', question ? 'Вопрос' : 'Заказ обратного звонка');
+        formData.set('source', '2018.besmarter.ru');
         formData.set('name', name);
         formData.set('phone', phone);
         formData.set('comment', comment);

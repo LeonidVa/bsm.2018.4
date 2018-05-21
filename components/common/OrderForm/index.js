@@ -43,7 +43,8 @@ class OrderForm extends Component {
             return
         }
         let formData = new FormData();
-        formData.set('formtype', formtype);
+        formData.set('form', 'Заказ работы');
+        formData.set('source', '2018.besmarter.ru');
         formData.set('name', name);
         formData.set('phone', phone);
         formData.set('email', email);

@@ -40,7 +40,8 @@ class Wrapper extends Component {
             // показать сообщение о скидке если клиент захочет
             // покинуть этот сайт~~, я бы захотел~~
             // TODO Добавить проверку колличества заказов, если есть заказы то не показывать
-            document.addEventListener('mousemove', this.onMouseMove.bind(this));
+            this._mouseMoveCallback = this.onMouseMove.bind(this);
+            document.addEventListener('mousemove', this._mouseMoveCallback);
         }
     }
 
@@ -103,7 +104,7 @@ class Wrapper extends Component {
         // Показываем сообщение о скидке
         if (diff > 50) {
             this.state.exitPopupState.show();
-            document.removeEventListener('mousemove', this.onMouseMove);
+            document.removeEventListener('mousemove', this._mouseMoveCallback);
         }
     }
 

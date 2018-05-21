@@ -7,6 +7,7 @@ export default class MyDocument extends Document {
         return (
             <html>
                 <Head>
+                    <meta name="yandex-verification" content="49e34bd8a11a83fb" />
                     {/* <link rel="shortcut icon" type="image/jpg" href={foxLogo}/> */}
                     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300i,400,500,500i,700" rel="stylesheet" />
                     <link rel="stylesheet" href="/_next/static/style.css" />

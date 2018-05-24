@@ -1,69 +1,189 @@
 #!/usr/bin/env bash
-# Just remove this 3 lines after you copy that file outside project folder.
-echo "Do not use this file directly in project folder."
-echo "Make a copy of this file and put it somewhere outside project folder."
-exit 1
 
 #########################################
-#  Setup env variables here
-#
-
-
+# Constants
 #########################################
-#  Rebuilding and starting application
-#
 set -e
-ts=`date "+%Y%m%d-%H%M%S"`
-path=/var/www/besmarter
-testpath=${path}/test
-buildpath=${path}/build
-if [ -d ${testpath} ]; then
-	echo "ERROR: Testing path already exists. It will be removed after tests are complete or you have to remove it manually."
-	exit 1
-fi
-if mkdir ${testpath} ; then
-	echo "Created folder for test"
-else
-	echo "ERROR: Can't create folder for test"
-	exit 2
-fi
-if git clone git@gitlab.com:igordata/bsm.2018.4.git ${testpath} ; then
-	echo "Project cloned"
-else
-	echo "ERROR: Can't clone project"
-	exit 3
-fi
-cd ${testpath}
-if npm install ; then
-	echo "Dependencies installed"
-else
-	echo "ERROR: Dependencies install failed"
-	exit 4
-fi
-rm -rf ${testpath}/.next/
-if sh ./build.sh ; then
-	echo "Build successful"
-else
-	echo "ERROR: Build failed"
-	exit 5
-fi
-chmod -R u=rwX,go=rX ${testpath}
-chown -R rs:www-data ${testpath}
-cd ${testpath}
-sh ./stop.sh
-if mv "${buildpath}" "${buildpath}.before.${ts}" ; then
-	echo "Old build moved to ${buildpath}.before.${ts}"
-else
-	echo "ERROR: Can't rename current build folder."
-fi
-mv "${testpath}" "${buildpath}"
-cd ${buildpath}
-sh ./start.sh
 
+readonly TS=`date "+%Y%m%d-%H%M%S"`
+readonly SLEEP_INTERVAL=3
+readonly START_TIME=`date +%s`
+readonly START_DIRECTORY=$(pwd)
+readonly REPOSITORY="git@gitlab.com:igordata/bsm.2018.4.git"
 
+# Directories
+readonly D_ROOT=/var/www/besmarter
+readonly D_TEST=${D_ROOT}/test
+readonly D_BUILD=${D_ROOT}/build
 
+# Indicators
+readonly I_UPDATE=${D_ROOT}/.indicator-update
+readonly I_WAITING=${D_ROOT}/.indicator-waiting
 
+# Colors
+readonly C_ERROR="\e[1;31m"
+readonly C_RESET="\e[0m"
+readonly C_SUCCESS="\e[1;32m"
+readonly C_INFO="\e[1;34m"
 
+# Error codes
+readonly E_DO_NOT_USE=1
+readonly E_CANT_CREATE_FOLDER=2
+readonly E_CANT_CLONE=3
+readonly E_DEPENDENCIES_INSTALL_FAILED=4
+readonly E_BUILD_FAILED=5
+readonly E_ALREADY_WAITING=6
 
+#########################################
+# Color functions
+#########################################
+error () {
+    echo -en "${C_ERROR}${1}${C_RESET}\n"
+}
 
+success () {
+    echo -en "${C_SUCCESS}${1}${C_RESET}\n"
+}
 
+info () {
+    echo -en "${C_INFO}${1}${C_RESET}\n"
+}
+
+#########################################
+# Just remove this 3 lines after you copy that file outside project folder.
+#########################################
+
+error "Do not use this file directly in project folder."
+error "Make a copy of this file and put it somewhere outside project folder."
+exit ${E_DO_NOT_USE}
+
+#########################################
+# Functions
+#########################################
+
+remove_update_indicator () {
+    rm -f ${I_UPDATE}
+}
+
+create_update_indicator () {
+    touch ${I_UPDATE}
+}
+
+reset_directory () {
+    cd ${START_DIRECTORY}
+}
+
+finish () {
+    remove_update_indicator
+    print_execution_time
+    reset_directory
+    exit $1
+}
+
+print_execution_time () {
+    info "Script execution time $((`date +%s`-START_TIME)) seconds"
+}
+
+exit_if_waiting () {
+    if test -f ${I_WAITING}
+    then
+        error "ERROR: The script is already waiting";
+        finish ${E_ALREADY_WAITING}
+    fi
+}
+
+wait_update () {
+    if test -f ${I_UPDATE}
+    then
+        touch ${I_WAITING}
+        while test -f ${I_UPDATE}
+        do
+            sleep ${SLEEP_INTERVAL}
+        done
+        rm -f ${I_WAITING}
+    fi
+}
+
+remove_test_directory_if_exists () {
+    if [ -d ${D_TEST} ]
+    then
+        rm -dfr ${D_TEST}
+    fi
+}
+
+create_test_directory () {
+    if mkdir ${D_TEST}
+    then
+        success "Created folder for test"
+    else
+        error "ERROR: Can't create folder for test"
+        finish ${E_CANT_CREATE_FOLDER}
+    fi
+}
+
+clone_project () {
+    if git clone ${REPOSITORY} ${D_TEST}
+    then
+        success "Project cloned"
+    else
+        error "ERROR: Can't clone project"
+        finish ${E_CANT_CLONE}
+    fi
+}
+
+install_dependencies () {
+    cd ${D_TEST}
+    if npm install
+    then
+        success "Dependencies installed"
+    else
+        error "ERROR: Dependencies install failed"
+        finish ${E_DEPENDENCIES_INSTALL_FAILED}
+    fi
+}
+
+build_project () {
+    rm -rf ${D_TEST}/.next/
+    if sh ./build.sh
+    then
+        success "Build successful"
+    else
+        error "ERROR: Build failed"
+        finish ${E_BUILD_FAILED}
+    fi
+}
+
+set_rights () {
+    chmod -R u=rwX,go=rX ${D_TEST}
+    chown -R rs:www-data ${D_TEST}
+}
+
+restart_server () {
+    cd ${D_TEST}
+    sh ./stop.sh
+    if mv "${D_BUILD}" "${D_BUILD}.before.${TS}"
+    then
+        success "Old build moved to ${D_BUILD}.before.${TS}"
+    else
+        error "ERROR: Can't rename current build folder."
+    fi
+    mv "${D_TEST}" "${D_BUILD}"
+    cd ${D_BUILD}
+    sh ./start.sh
+}
+
+#########################################
+# Update project
+#########################################
+
+exit_if_waiting
+wait_update
+create_update_indicator
+remove_test_directory_if_exists
+create_test_directory
+clone_project
+install_dependencies
+build_project
+set_rights
+restart_server
+finish 0

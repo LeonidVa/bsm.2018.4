@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Color from 'color';
+// import Color from 'color';
 
 import facebookMessenger from 'static/images/messegers/facebook-messenger.svg'
 import telegram from 'static/images/messegers/telegram.svg'

@@ -40,7 +40,7 @@ readonly E_ALREADY_WAITING=6
 #########################################
 
 error () {
-    echo -en "${C_ERROR}${1}${C_RESET}\n"
+    echo -en "${C_ERROR}ERROR: ${1}${C_RESET}\n"
 }
 
 success () {
@@ -89,7 +89,7 @@ print_execution_time () {
 exit_if_waiting () {
     if test -f ${I_WAITING}
     then
-        error "ERROR: The script is already waiting";
+        error "The script is already waiting";
         finish ${E_ALREADY_WAITING}
     fi
 }
@@ -97,6 +97,7 @@ exit_if_waiting () {
 wait_update () {
     if test -f ${I_UPDATE}
     then
+        info "Expect for the end of another update"
         touch ${I_WAITING}
         while test -f ${I_UPDATE}
         do
@@ -118,7 +119,7 @@ create_test_directory () {
     then
         success "Created folder for test"
     else
-        error "ERROR: Can't create folder for test"
+        error "Can't create folder for test"
         finish ${E_CANT_CREATE_FOLDER}
     fi
 }
@@ -128,7 +129,7 @@ clone_project () {
     then
         success "Project cloned"
     else
-        error "ERROR: Can't clone project"
+        error "Can't clone project"
         finish ${E_CANT_CLONE}
     fi
 }
@@ -139,7 +140,7 @@ install_dependencies () {
     then
         success "Dependencies installed"
     else
-        error "ERROR: Dependencies install failed"
+        error "Dependencies install failed"
         finish ${E_DEPENDENCIES_INSTALL_FAILED}
     fi
 }
@@ -150,7 +151,7 @@ build_project () {
     then
         success "Build successful"
     else
-        error "ERROR: Build failed"
+        error "Build failed"
         finish ${E_BUILD_FAILED}
     fi
 }
@@ -167,7 +168,7 @@ restart_server () {
     then
         success "Old build moved to ${D_BUILD}.before.${TS}"
     else
-        error "ERROR: Can't rename current build folder."
+        error "Can't rename current build folder."
     fi
     mv "${D_TEST}" "${D_BUILD}"
     cd ${D_BUILD}

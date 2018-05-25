@@ -45,7 +45,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz">
-                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -53,39 +53,39 @@ const page = () => (
                             <p className="block-service__par">Строго конфиденциально</p>
                             <p className="block-service__par">Индивидуально</p>
                         </div>
-                    </div>
+                    </a>
                 </Link>
                 <div className="block-service__list list-4">
                     <Link href="/zakazat-diplomnyj-proekt">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/mba-na-zakaz">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
-                        </div>
+                        </a>
                     </Link>
                 </div>
             </section>
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -93,26 +93,26 @@ const page = () => (
                             <p className="block-service__par">Строго конфиденциально</p>
                             <p className="block-service__par">Индивидуально</p>
                         </div>
-                    </div>
+                    </a>
                 </Link>
                 <div className="block-service__list list-3">
                     <Link href="/zakazat-diplomnyj-proekt">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Прямая связь с автором</span>
                             <p>Постоянный контроль</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Публикации</span>
                             <p>Журналы ВАК и иностранные</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/mba-na-zakaz">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Обзор литературы</span>
                             <p>Свежие источники</p>
-                        </div>
+                        </a>
                     </Link>
                 </div>
             </section>
@@ -121,62 +121,62 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
                             <p className="block-service__par">Быстро и качественно</p>
                             <p className="block-service__par">С нами твоя защита пройдет легко!</p>
                         </div>
-                    </div>
+                    </a>
                 </Link>
                 <div className="block-service__list list-4">
                     <Link href="/zakazat-diplomnyj-proekt">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Монография</span>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Оригинальность текста до 98%</span>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
-                        </div>
+                        </a>
                     </Link>
                 </div>
                 <div className="block-service__list list-5">
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Ответы к защите</span>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/zakazat-diplomnyj-proekt">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Доклад Слайды</span>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Плакаты к защите</span>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
-                        </div>
+                        </a>
                     </Link>
                 </div>
             </section>

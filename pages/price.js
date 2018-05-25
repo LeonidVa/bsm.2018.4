@@ -54,7 +54,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">От эссе до настоящей диссертации</span>
                             <p className="block-service__par">Уникальные авторские работы</p>
@@ -62,7 +62,7 @@ const page = () => (
                             <p className="block-service__par">Технические и креативные</p>
                             <p className="block-service__par">На иностранных языках</p>
                         </div>
-                    </div>
+                    </a>
                 </Link>
             </section>
 

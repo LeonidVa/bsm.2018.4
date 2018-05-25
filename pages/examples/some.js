@@ -154,7 +154,7 @@ const page = () => (
             <section className="block-service">
                 {/* Блок с объявлением. */}
                 <Link href="/diplom">
-                    <div className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+                    <a className="block-service__top" style={{color: "#FFFFFF", backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                         <style dangerouslySetInnerHTML={{__html: `.block-service__title.gfgfgfg::after { background-color: #ffffff; }`}}/>
                         <span className="block-service__title gfgfgfg" style={{color: "#FFFFFF"}}>Дипломная работа</span>
                         <p className="block-service__par">
@@ -164,30 +164,30 @@ const page = () => (
                             от 10 500 ₽<br/>
                             от 10 дня
                         </p>
-                    </div>
+                    </a>
                 </Link>
                 {/* Блок с кнопками. В классе "list-n" n доложно соответствовать числу кнопок. */}
                 <div className="block-service__list list-3">
                     <Link href="/">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовая</span>
                             <p>от 4 500 ₽</p>
                             <p>от 2 недель</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовая</span>
                             <p>от 4 500 ₽</p>
                             <p>от 2 недель</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовая</span>
                             <p>от 4 500 ₽</p>
                             <p>от 2 недель</p>
-                        </div>
+                        </a>
                     </Link>
                 </div>
             </section>
@@ -219,7 +219,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/diplom">
-                    <div className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/g.jpg') + ")"}}>
+                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/g.jpg') + ")"}}>
                         <span className="block-service__title">Дипломная работа</span>
                         <p className="block-service__par">
                             Поможем написать дипломную работу на заказ
@@ -228,29 +228,29 @@ const page = () => (
                             от 10 500 ₽<br/>
                             от 10 дня
                         </p>
-                    </div>
+                    </a>
                 </Link>
                 <div className="block-service__list list-1">
                     <Link href="/">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовая</span>
                             <p>от 4 500 ₽</p>
                             <p>от 2 недель</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовая</span>
                             <p>от 4 500 ₽</p>
                             <p>от 2 недель</p>
-                        </div>
+                        </a>
                     </Link>
                     <Link href="/">
-                        <div className="block-service__list-item">
+                        <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовая</span>
                             <p>от 4 500 ₽</p>
                             <p>от 2 недель</p>
-                        </div>
+                        </a>
                     </Link>
                 </div>
             </section>

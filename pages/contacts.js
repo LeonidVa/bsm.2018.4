@@ -128,7 +128,7 @@ class page extends Component {
 
                     <section className="block-service">
                         <Link href="/diplom-na-zakaz">
-                            <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/g.jpg') + ")",}}>
+                            <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/g.jpg') + ")",}}>
                                 <div className="block-service__text gradient-l-white">
                                     <span className="block-service__title">Удобный офис</span>
                                     <p className="block-service__par">Всегда на связи 8:00 – 22:00</p>
@@ -137,7 +137,7 @@ class page extends Component {
                                     <p className="block-service__par">4 линии метро</p>
                                     <p className="block-service__par">Всего 5 минут пешком от метро</p>
                                 </div>
-                            </div>
+                            </a>
                         </Link>
                     </section>
 

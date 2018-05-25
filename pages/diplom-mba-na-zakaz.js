@@ -40,7 +40,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/mba-na-zakaz">
                     <div className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Диплом MBA</span>

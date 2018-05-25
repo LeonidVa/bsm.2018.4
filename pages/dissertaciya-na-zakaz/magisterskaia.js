@@ -44,7 +44,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/dissertaciya-na-zakaz/magisterskaia">
                     <div className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Магистерская диссертация</span>
@@ -56,7 +56,7 @@ const page = () => (
                     </div>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/dissertaciya-na-zakaz">
                         <div className="block-service__list-item">
                             <span className="block-service__list-title">Диссертация<br/>под ключ</span>
                             <p>Берем заботы на себя</p>

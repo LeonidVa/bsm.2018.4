@@ -82,7 +82,7 @@ const page = () => (
             </section>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/dissertaciya-na-zakaz">
                     <div className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Диссертационные работы</span>
@@ -106,7 +106,7 @@ const page = () => (
                             <p>Написание и размещение</p>
                         </div>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz">
                         <div className="block-service__list-item">
                             <span className="block-service__list-title">Кандидатская диссертация</span>
                             <p>Автор на связи</p>
@@ -122,7 +122,7 @@ const page = () => (
             </section>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/kursovaya-rabota-na-zakaz">
                     <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Курсовая работа</span>
@@ -158,7 +158,7 @@ const page = () => (
                             <p>от 200 руб.</p>
                         </div>
                     </Link>
-                    <Link href="/mba-na-zakaz">
+                    <Link href="/kursovaya-rabota-na-zakaz">
                         <div className="block-service__list-item">
                             <span className="block-service__list-title">Курсовой проект</span>
                             <p>от 8 000 руб.</p>

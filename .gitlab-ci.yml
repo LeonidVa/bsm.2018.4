@@ -27,6 +27,5 @@ stage_deploy:
   stage: staging
   script:
   - ssh-add <(echo "$STAGING_PRIVATE_KEY")
-  - ssh -p2017 rs@bsmr.ru "sh /var/www/update.sh"
+  - ssh -p2017 rs@besmarter.ru "sh /var/www/update.sh"
 
-  

@@ -227,7 +227,7 @@ const page = () => (
             </section>
 
             <a name="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" formConfig={formConfig}/>
 
             <LinksBlock links={links}/>
         </div>

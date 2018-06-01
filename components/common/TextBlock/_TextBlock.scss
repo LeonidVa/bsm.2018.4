@@ -76,14 +76,26 @@
             font-size: .625em;
             margin-bottom: 1.56em;
         }
+        a {
+            text-decoration: none;
+            color: #4a4a4a;
+            transition: all .4s;
+            &:hover {
+                color: #f4511e;
+            }
+        }
+        &.center {
+        text-align: center;
+        }
     }
     ul, ol {
         list-style-type: disc;
-        font-size: .687em;
+        font-size: .5em;
         padding: 0 0 .91em 1.59em;
         li {
             color: #4a4a4a;
-            line-height: 2.32em;
+            line-height: 1.5em;
+            margin-bottom: 0.8em;
             a {
                 text-decoration: none;
                 color: #4a4a4a;
@@ -134,5 +146,8 @@
                 text-align: right;
             }
         }
+    }
+    b {
+        font-weight: 700;
     }
 }

@@ -184,7 +184,7 @@ const page = () => (
                 <p className="block-text__par">
                     Авторы BeSmarter! – опытные авторы со стажем преподавания, поэтому ваша дипломная работа будет:
                 </p>
-                <ul style="list-style: none;">
+                <ul style={{listStyle: 'none'}}>
                     <li>
                         - глубоко проработана и грамотно написана;
                     </li>

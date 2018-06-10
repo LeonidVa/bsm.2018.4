@@ -23,7 +23,7 @@ import links from 'components/config/linksBlockConfig';
 
 
 const page = () => (
-    <Wrapper title="Главная">
+    <Wrapper title="Заказать дипломную работу по бухгалтерскому учёту в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <section className="breadcrumbs">

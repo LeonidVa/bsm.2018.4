@@ -38,5 +38,7 @@
     "react-yandex-maps": "^2.1.4",
     "webpack": "^3.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "generate-robotstxt": "^5.0.7"
+  }
 }

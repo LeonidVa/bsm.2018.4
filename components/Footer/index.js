@@ -43,7 +43,12 @@ export default (props) => (
                                     <a>Гарантии</a>
                                 </Link>
                             </li>
-                            <li><a href="#">Оплата</a></li>
+                            <li>
+                                <Link href="/stati">
+                                    <a>Статьи</a>
+                                </Link>
+                            </li>
+                            {/* <li><a href="#">Оплата</a></li> */}
                         </ul>
                     </nav>
                 </div>

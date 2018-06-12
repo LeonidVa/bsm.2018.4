@@ -8,3 +8,4 @@ uploads/**
 **/Thumbs.db
 **/*.log
 package-lock.json
+pages/_helper.js

@@ -33,7 +33,15 @@ const page = () => (
                     </Link>
                     <span> / </span>
                     <Link href="/dissertaciya-na-zakaz">
-                        <a>Кандидатская диссертация</a>
+                        <a>Диссертация</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
+                        <a>Докторская</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="#">
+                        <a>По медицине</a>
                     </Link>
                 </div>
             </section>

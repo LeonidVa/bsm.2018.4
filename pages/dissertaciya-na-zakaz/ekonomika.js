@@ -256,7 +256,7 @@ const page = () => (
                         <b>Защита.</b> Автор ответит на любые ваши вопросы и поможет качественно подготовиться к защите.
                     </li>
                 </ol>
-                <p className="block-text__par" style={{fomtStyle: 'italic'}}>
+                <p className="block-text__par" style={{fontStyle: 'italic'}}>
                     Сотрудничество с BeSmarter! – гарантия вашего успеха, убедитесь в этом сами!
                 </p>
             </section>

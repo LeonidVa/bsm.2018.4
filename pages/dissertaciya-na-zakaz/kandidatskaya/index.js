@@ -35,6 +35,7 @@ const page = () => (
                     <Link href="/dissertaciya-na-zakaz">
                         <a>Диссертация</a>
                     </Link>
+                    <span> / </span>
                     <Link href="#">
                         <a>Кандидатская</a>
                     </Link>

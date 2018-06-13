@@ -104,6 +104,16 @@
                     color: #f4511e;
                 }
             }
+        ul,ol {
+            list-style-type: disc;
+            font-size: 1em;
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 1em;
+            line-height: 1.5;
+            color: #4a4a4a; 
+            }
         }
         &.block-text__list2 {
             font-size: .5em;

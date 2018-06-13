@@ -24,7 +24,7 @@ import links from 'components/config/linksBlockConfig'
 
 const page = () => (
     <Wrapper title="Заказать диссертацию – помощь в написании диссертации на заказ в Москве, заказать диссертационную работу срочно в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
-        <div className="wrapper bg bg-c2 bg-img bg-img3">
+        <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <section className="breadcrumbs">
                 <div className="inner">

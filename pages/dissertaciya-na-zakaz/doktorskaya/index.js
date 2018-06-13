@@ -24,7 +24,7 @@ import links from 'components/config/linksBlockConfig'
 
 const page = () => (
     <Wrapper title="Докторская диссертация на заказ в Москве и РФ – подготовка и написание под ключ, цена и сроки">
-        <div className="wrapper bg bg-c2 bg-img bg-img3">
+        <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <section className="breadcrumbs">
                 <div className="inner">

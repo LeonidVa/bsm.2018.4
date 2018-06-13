@@ -24,7 +24,7 @@ import links from 'components/config/linksBlockConfig'
 
 const page = () => (
     <Wrapper title="Главная">
-        <div className="wrapper bg bg-c2 bg-img bg-img3">
+        <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <section className="breadcrumbs">
                 <div className="inner">

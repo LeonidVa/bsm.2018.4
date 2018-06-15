@@ -5,13 +5,13 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'components/config/dopraboty';
 
 import OrderForm from 'components/common/OrderForm';
 import formConfig from 'components/config/formConfig'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/diplom';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -19,12 +19,12 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlockConfig';
 
 
 
 const page = () => (
-    <Wrapper title="Главная">
+    <Wrapper title="Как подготовиться и поступить в аспирантуру | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
             <section className="breadcrumbs">
@@ -33,8 +33,12 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/kursovaya-rabota-na-zakaz">
-                        <a>Курсовая работа</a>
+                    <Link href="/stati">
+                        <a>Статьи</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="#">
+                        <a>Как подготовиться и поступить в аспирантуру</a>
                     </Link>
                 </div>
             </section>
@@ -44,56 +48,41 @@ const page = () => (
             </section>
             <MessBlock/>
 
-
-
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Курсовая работа</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 4 000 руб.</p>
+                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Дипломная работа</span>
+                            <p className="block-service__par">Быстро и качественно!</p>
+                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
+                            <p className="block-service__par">От 14 000 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </a>
                 </Link>
-                <div className="block-service__list list-5">
+                <div className="block-service__list list-3">
                     <Link href="/zakazat-diplomnyj-proekt">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Отчет по практике</span>
-                            <p>от 3 000 руб.</p>
+                            <span className="block-service__list-title">Дипломный проект</span>
+                            <p>от 21 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Реферат</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Эссе Контрольная</span>
-                            <p>от 1 500 руб.</p>
+                            <span className="block-service__list-title">Магистерская диссертация</span>
+                            <p>от 23 000 руб.</p>
                         </a>
                     </Link>
                     <Link href="/mba-na-zakaz">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Экзамены Тесты</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/mba-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовой проект</span>
-                            <p>от 8 000 руб.</p>
+                            <span className="block-service__list-title">Диплом MBA</span>
+                            <p>от <b>25 000</b> руб.</p>
                         </a>
                     </Link>
                 </div>
             </section>
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -171,17 +160,38 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Дипломная работа на заказ
+                    Как подготовиться и поступить в аспирантуру
                 </h2>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                    Обучение в аспирантуре недаром называют сверх-высшей формой образования. Аспирантура – это уникальная форма обучения, которая ставит перед собой задачу подготовить научно- педагогические и научные кадры. Аспирантура является следующим этапом после получения высшего образования. Многие студенты при защите заказывают <Link href="/diplom-na-zakaz"><a>диплом на заказ</a></Link> у нас. Мы пишем дипломные работы качественно и в короткие сроки. Диплом завершает обучение в вузе. А аспирантуру стремятся окончить люди, желающие всерьез заниматься научными изысканиями или (и) преподавать в вузах. По окончании аспирантуры выпускник получает степень кандидата наук.
                 </p>
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    В аспирантуре существует три формы обучения – соискательство, заочная и очная. Соискатель учится до пяти лет,  на очной форме обучение длится три года, а на заочной – четыре года. Обучение в аспирантуре может быть бесплатным и платным. Результатом обучения является научная работа по строго определенной теме. Ее называют диссертацией. Человек, решающийся посвятить себя науке, задается вопросом – как поступить на учебу в аспирантуру?
                 </p>
             </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Этапы поступления в аспирантуру
+                </h2>
+                <p className="block-text__par">
+                    Во-первых, необходимо законченное высшее образование. Без высшего образования поступить учиться в аспирантуру просто невозможно. Однако, при наличии законченного высшего образования, любой человек может претендовать на обучение в  аспирантуре. Это право не зависит от сексуальной ориентации, пола, национальности, возраста,  вероисповедания и т.п.
+                </p>
+                <p className="block-text__par">
+                    Во-вторых, при решении вопроса о поступлении в аспирантуру, выбирайте специальность, по которой хотите в дальнейшем пройти обучение. Вам  не обязательно обучаться в аспирантуре именно по той специальности, которую Вы получали при получении высшего образования. К примеру, если Вы получали образование историка, то можете пройти обучение в аспирантуре вуза по программированию или по какой-нибудь химической специальности. Весь вопрос заключается в том, сумеете ли Вы сдать экзамены в аспирантуру. Это самое сложное.
+                </p>
+                <p className="block-text__par">
+                    В-третьих, выберете вуз, в котором Вы ранее никогда не обучались. Это полезно, так как в разных «альма-матер» разные подходы и разные научные школы. После выбора специализации и вуза, узнайте, какие именно документы необходимы от поступающего в аспирантуру для предоставления в данный вуз. Обычно, требуется предоставить копию диплома о законченном высшем образовании, фотографии, заявление, список опубликованных  работ и т.п.
+                </p>
+                <p className="block-text__par">
+                    В-четвертых, с особой тщательностью подготовьте все необходимые для поступления документы. Основательно подготовьтесь к вступительным экзаменам в аспирантуру. Вступительные экзамены в аспирантуру вуза представляют собой написание творческой работы – реферата и три основных экзамена – иностранный язык, экзамен по специальности и философия.
+                </p>
+                <p className="block-text__par">
+                    Конечно, задумываться о поступлении в аспирантуру лучше заранее. Однако, даже при доскональном изучении всей выбранной специальности, с иностранным языком и с философией все может быть гораздо сложнее. Вы можете изучать философию самостоятельно, но на это потребуется некоторое время. К экзамену по иностранному языку подготовиться гораздо сложнее. Ведь в большинстве вузов иностранный язык заканчивается на 3 курсе. Вам, скорее всего, придется обращаться к репетитору. Если Вы готовиться к поступлению в аспирантуру еще в студенческие годы, это серьезно облегчит Вам поступление в нее. В качестве реферата в этом случае Вы можете предоставить статью, представленную ранее на студенческих конференциях. Сложность вызывает, если у Вас нет статьи в качестве предоставления вместо реферата  - тогда его придется писать с нуля.
+                </p>
+            </section>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -193,42 +203,48 @@ const page = () => (
                 </CallMeFormWithTimer>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
             <section className="block-text">
                 <h2 className="block-text__title">
-                    ПОМЕНЯТЬ Дипломная работа на заказ
+                    Вступительный реферат
                 </h2>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                    Поскольку реферат является одним из условий поступления, ему нужно уделить особое внимание. Тему для реферата Вы определяете самостоятельно. При этом следует руководствоваться возможной темой своей диссертации. В реферате следует осветить следующие моменты:
                 </p>
+                <ul>
+                    <li>
+                        Формулировку основной цели Вашего исследования (актуальность данной темы)
+                    </li>
+                    <li>
+                        Методы и подходы,  при помощи которых Вы предполагаете решение поставленной научной задачи
+                    </li>
+                    <li>
+                        Потенциальная востребованность ожидаемых результатов исследования
+                    </li>
+                </ul>
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    В первой части реферата следует раскрыть всю актуальность проблемы исследования,  а также аргументированно ответить на вопросы:
                 </p>
+                <ol>
+                    <li>
+                        Почему данное направление интересно для Вас?
+                    </li>
+                    <li>
+                        Что осталось без внимания научного сообщества и что было сделано до Вас?
+                    </li>
+                    <li>
+                        Почему решение научной задачи должно принести значительные практические и теоретические результаты?
+                    </li>
+                </ol>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    Затем формулируется цель исследования. Как Вы видите, это колоссальная работа. Поэтому Вам стоит поступить так же, как поступают студенты вузов при написании диплома - <Link href="/diplom-na-zakaz"><a>заказать диплом</a></Link>. А в Вашем случае – заказать вступительный реферат. Ведь Вы же не хотите ждать год или учиться платно? Выход есть – реферат, написанный нашими специалистами с высшим образованием и множеством научных работ!
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
         </div>
     </Wrapper>
 );

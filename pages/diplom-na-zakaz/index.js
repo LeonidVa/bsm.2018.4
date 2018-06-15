@@ -39,10 +39,6 @@ const page = () => (
                 </div>
             </section>
 
-            <VideoBlock>
-                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2" frameborder="0" allowfullscreen></iframe>
-            </VideoBlock>
-
             <section className="block-nav">
                 <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
             </section>
@@ -210,6 +206,10 @@ const page = () => (
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+
+            <VideoBlock>
+                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2" frameborder="0" allowfullscreen></iframe>
+            </VideoBlock>
 
             <LinksBlock links={links}/>
         </div>

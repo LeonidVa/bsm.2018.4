@@ -21,6 +21,7 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
+import VideoBlock from 'components/common/VideoBlock';
 
 const page = () => (
     <Wrapper title="Заказать дипломную работу – дипломная работа (диплом) на заказ в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
@@ -37,6 +38,10 @@ const page = () => (
                     </Link>
                 </div>
             </section>
+
+            <VideoBlock>
+                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2" frameborder="0" allowfullscreen></iframe>
+            </VideoBlock>
 
             <section className="block-nav">
                 <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>

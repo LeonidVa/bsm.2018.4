@@ -29,17 +29,21 @@ export default (props) => (
                             </li>
                             <li>
                                 <Link href="/about">
-                                    <a href="about">О нас</a>
+                                    <a>О нас</a>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/pricing">
+                                <Link href="/price">
                                     <a>Услуги и Цены</a>
                                 </Link>
                             </li>
-                            <li><a href="#">Авторам</a></li>
                             <li>
-                                <Link href="/guarantees">
+                                <Link href="/avtoram">
+                                    <a>Авторам</a>
+                                </Link>    
+                            </li>
+                            <li>
+                                <Link href="/garantii">
                                     <a>Гарантии</a>
                                 </Link>
                             </li>

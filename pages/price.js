@@ -21,7 +21,7 @@ import dopy from 'components/config/dopraboty'
 
 
 const page = () => (
-    <Wrapper title="BeSmarter - Услуги и цены">
+    <Wrapper title="Услуги и цены">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <section className="breadcrumbs">

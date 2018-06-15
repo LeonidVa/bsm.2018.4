@@ -5,27 +5,29 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'components/config/dopraboty';
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import formConfig from 'components/config/formConfig';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/diplom';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlockConfig';
+
+import Video from 'components/common/VideoBlock';
 
 
 
 const page = () => (
-    <Wrapper title="Главная">
-        <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <Wrapper title="Речь к дипломной работе образец – как написать речь (доклад) к дипломной работе пример | «BeSmarter!». Тел. +7 (495) 772-40-90.">
+        <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <section className="breadcrumbs">
                 <div className="inner">
@@ -33,8 +35,12 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/kursovaya-rabota-na-zakaz">
-                        <a>Курсовая работа</a>
+                    <Link href="/stati">
+                        <a>Статьи</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="#">
+                        <a>Речь к дипломной работе</a>
                     </Link>
                 </div>
             </section>
@@ -44,56 +50,41 @@ const page = () => (
             </section>
             <MessBlock/>
 
-
-
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Курсовая работа</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 4 000 руб.</p>
+                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Дипломная работа</span>
+                            <p className="block-service__par">Быстро и качественно!</p>
+                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
+                            <p className="block-service__par">От 14 000 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </a>
                 </Link>
-                <div className="block-service__list list-5">
+                <div className="block-service__list list-3">
                     <Link href="/zakazat-diplomnyj-proekt">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Отчет по практике</span>
-                            <p>от 3 000 руб.</p>
+                            <span className="block-service__list-title">Дипломный проект</span>
+                            <p>от 21 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Реферат</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Эссе Контрольная</span>
-                            <p>от 1 500 руб.</p>
+                            <span className="block-service__list-title">Магистерская диссертация</span>
+                            <p>от 23 000 руб.</p>
                         </a>
                     </Link>
                     <Link href="/mba-na-zakaz">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Экзамены Тесты</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/mba-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовой проект</span>
-                            <p>от 8 000 руб.</p>
+                            <span className="block-service__list-title">Диплом MBA</span>
+                            <p>от <b>25 000</b> руб.</p>
                         </a>
                     </Link>
                 </div>
             </section>
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -171,17 +162,71 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Дипломная работа на заказ
+                    Как написать речь к дипломной работе
                 </h2>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                    Подготавливая речь к дипломной работе, важно ответить самому себе на следующие вопросы:
                 </p>
+                <ul>
+                    <li>
+                        Что я хочу донести до слушателей?
+                    </li>
+                    <li>
+                        Что я должен сказать педагогическому составу, чтобы ими была понята вся актуальность проблем в проекте?
+                    </li>
+                    <li>
+                        Какой временной интервал необходим мне для доклада?
+                    </li>
+                </ul>
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    Методические требования вашего учебного заведения помогут вам ответить на вышестоящие вопросы. При написании речи к дипломной работе необходимо учитывать пару-тройку нюансов.
                 </p>
             </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Структура доклада к дипломной работе
+                </h2>
+                <ul>
+                    <li>
+                        Вступление
+                    </li>
+                    <li>
+                        Главная мысль
+                    </li>
+                    <li>
+                        Заключительная часть
+                    </li>
+                </ul>
+                <p className="block-text__par">
+                    Современное выступление, раскрывающее цели, заинтересует членов комиссии. Главным считается начать ее с приветствия членов комиссии
+                </p>
+            </section>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Вступление
+                </h2>
+                <ul>
+                    <li>
+                        Заострение внимания членов комиссии.
+                    </li>
+                    <li>
+                        Установление доверительного контакта между выпускником и преподавательским составом.
+                    </li>
+                    <li>
+                        Речь должна быть простой, связной, доступной. Аудитория должна понимать автора.
+                    </li>
+                </ul>
+                <p className="block-text__par">
+                    Выделяют 3 главные задачи правильно подготовленной речи:
+                </p>
+                <p className="block-text__par">
+                    Постарайтесь писать кратко. 15% времени от выступления отводится вступительной части.
+                </p>
+            </section>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -193,42 +238,92 @@ const page = () => (
                 </CallMeFormWithTimer>
             </section>
 
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Основная мысль
+                </h2>
+                <p className="block-text__par">
+                    В этой части излагаются основные тезисы работы. Не усложняйте речь данной части слишком сложным описанием темы. Стоит задача определения базы и раскрытие взгляда на теоретическую суть вопроса и плавно перешагнуть к разбору объекта работы. Лаконично изложить суть задачи или главной темы. Кратко подытожить свой анализ. Добавьте короткие описания, советы, рекомендации. 65-70% предполагаемого времени занимает именно эта часть.
+                </p>
+            </section>
+
+            <section className="block-text">
+                <p className="block-text__par italic center">
+                    Можно сказать, что именно практическая часть работы играет главную роль в оценке академических успехов студента и определяет его оценку . Если нет логически завершенной и продуманной речи к дипломной работе, про хорошую оценку можно забыть.
+                </p>
+            </section>
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    ПОМЕНЯТЬ Дипломная работа на заказ
+                    Заключительная часть
                 </h2>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                    Эта часть включает в себя написание выводов. Как и в любом другом научном проекте, мысль должна быть высказана кратко и лаконично. Для создания эффектного заключения следует придерживаться нескольких пунктов:
                 </p>
+                <ul>
+                    <li>
+                        Кратко подытожить основное выступление речи к дипломной работе.
+                    </li>
+                    <li>
+                        Позаботиться о логическом завершении презентации.
+                    </li>
+                    <li>
+                        Окончание выступление следует акцентировать на положительном аспекте.
+                    </li>
+                </ul>
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    На заключительную часть отводится 10% отведенного времени. Задав уточняющие вопросы, комиссия восполнит поток потерянной или непонятной информации из защитной речи к дипломной работе. Написав проект самостоятельно, вы с легкостью ответите на поставленные вопросы.
                 </p>
             </section>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Как эффектно выступить на защите дипломной работы?
+                </h2>
+                <p className="block-text__par">
+                    Чтобы защитная речь к дипломной работе создала хорошее впечатление, следуйте трем правилам:
+                </p>
+                <ul>
+                    <li>
+                        Понимать, чего ждет от вас комиссия.
+                    </li>
+                    <li>
+                        Не упускать бдительность к своему монологу.
+                    </li>
+                    <li>
+                        Не волноваться.
+                    </li>
+                </ul>
+                <p className="block-text__par">
+                    Пробуйте ответить на следующие вопросы:
+                </p>
+                <ul>
+                    <li>
+                        Логичен ли ваш монолог?
+                    </li>
+                    <li>
+                        Не возникает ли трудностей в понимании вашего доклада?
+                    </li>
+                    <li>
+                        Верны ли выражения в докладе?
+                    </li>
+                    <li>
+                        Возможно ли составление ясного заключения после прослушивания доклада?
+                    </li>
+                </ul>
+                <p className="block-text__par">
+                    Если ответом на все вопросы стало «ДА!», вы отлично справились с подготовкой речи к дипломному проекту.
+                </p>
+            </section>
+
+            <Video>
+                <iframe src="https://www.youtube.com/embed/XpYziQhuZaw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </Video>
         </div>
     </Wrapper>
 );

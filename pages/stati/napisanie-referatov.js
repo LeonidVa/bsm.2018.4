@@ -5,27 +5,27 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'components/config/dopraboty';
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import formConfig from 'components/config/formConfig';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlockConfig';
 
 
 
 const page = () => (
-    <Wrapper title="Главная">
-        <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <Wrapper title="Написание рефератов | «BeSmarter!». Тел. +7 (495) 772-40-90.">
+        <div className="wrapper bg bg-c2 bg-img bg-img5">
 
             <section className="breadcrumbs">
                 <div className="inner">
@@ -33,8 +33,12 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/kursovaya-rabota-na-zakaz">
-                        <a>Курсовая работа</a>
+                    <Link href="/stati">
+                        <a>Статьи</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="#">
+                        <a>Написание рефератов</a>
                     </Link>
                 </div>
             </section>
@@ -43,8 +47,6 @@ const page = () => (
                 <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
             </section>
             <MessBlock/>
-
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -93,7 +95,6 @@ const page = () => (
             </section>
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -171,17 +172,32 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Дипломная работа на заказ
+                    Написание рефератов
                 </h2>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                <p className="block-text__par italic right">
+                    "Важно не количество знаний, а качество их. Можно знать очень многое, не зная самого нужного."
+                </p>
+                <p className="block-text__par bold right">
+                    Лев Николаевич Толстой
                 </p>
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    Каждому студенту знакома такая ситуация: через пару дней уже начинается сессия, а рефераты, которые нужно было сделать в течение семестра, еще не готовы. Казалось бы, всего лишь какие-то рефераты могут стать препятствием на пути к сессии! Но, увы и ах, это так. Время летит так быстро, а работа, семья, друзья, естественно, требуют к себе внимания. Чтобы <b>написание реферата</b> не превратилось в препятствие к успешной сессии, наша компания BeSmarter! всегда готова протянуть свою руку помощи!
                 </p>
             </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <section className="block-text">
+                <p className="block-text__par">
+                    Секрет успешной сессии несложен: главное – вовремя сдавать все работы в течение семестра, но ведь не у всех это получается, и причины этого могут быть совершенно разными. И если уж так сложилось, что Вы никак не успеваете закрыть все «хвосты», мы всегда поможем Вам преодолеть трудности!
+                </p>
+                <p className="block-text__par">
+                    Представьте себе, что Вам больше не придется отпрашиваться у начальника домой, чтобы провести вечер наедине с компьютером и рефератом, больше не нужно выкраивать драгоценные часы на то, чтобы сходить в кафе с друзьями или съездить на пикник со своей семьей! Все это становится возможно с нашей помощью и поддержкой!
+                </p>
+                <p className="block-text__par">
+                    Реферат – это работа, суть которой заключается в сборе информации определенной тематики, то есть, это, своего рода изложение различных точек зрения на некую проблему и подведение итогов. Реферат не является очень сложной работой, но при этом требует к себе довольно много времени и внимания, которое, если задуматься, можно потратить с куда большей пользой.
+                </p>
+            </section>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -196,39 +212,23 @@ const page = () => (
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
-                    ПОМЕНЯТЬ Дипломная работа на заказ
-                </h2>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                    В нашей компании работают специалисты высочайшего уровня профессионализма – кандидаты и доктора наук, не понаслышке знакомые с выполнением не только рефератов, но и всех других видов студенческих работ – контрольных, эссе, курсовых, дипломов. Вы указываете тему и дисциплину, по которой нужно написать реферат, сроки, в которые должен уложиться наш автор, в <a href="#form">заявке</a> или по телефону <b>+7 495 772-4090</b> нашему менеджеру, а все остальное сделаем мы!
                 </p>
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    В офисе компании BeSmarter! на Никитском бульваре мы ждем Вас в любое, удобное для Вас, время для заключения договора, где прописаны все наши обязательства перед Вами. А на нашем сайте Вы всегда можете почитать многочисленные отзывы клиентов компании, которым мы оказали <b>помощь в написании рефератов</b> (и не только рефератов!). Многие из них, кстати говоря, стали нашими постоянными клиентами.
                 </p>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                    Мы не случайно в начале этой статьи привели цитату Льва Николаевича Толстого, чья мудрость прошла через годы и никогда не перестанет быть актуальной. Уделяйте время тем занятиям, которые любите, только тогда Вы сможете получить истинные знания. Отвлекайтесь только на самое важное, а все остальное возьмем на себя мы.
                 </p>
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    Звоните прямо сейчас, мы Вас ждем!
                 </p>
             </section>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
         </div>
     </Wrapper>
 );

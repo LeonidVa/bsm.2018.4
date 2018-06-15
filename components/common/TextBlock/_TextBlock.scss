@@ -79,6 +79,12 @@
             font-size: .625em;
             margin-bottom: 1.56em;
         }
+        &.right{
+            text-align: right;
+        }
+        &.center {
+        text-align: center;
+        }
         a {
             text-decoration: none;
             color: #4a4a4a;
@@ -87,14 +93,16 @@
                 color: #f4511e;
             }
         }
-        &.center {
-        text-align: center;
-        }
     }
     ul, ol {
         list-style-type: disc;
         font-size: .5em;
         padding: 0 0 .91em 1.59em;
+        &.fitted {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
         li {
             color: #4a4a4a;
             line-height: 1.5em;

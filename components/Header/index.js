@@ -47,6 +47,11 @@ class Header extends Component {
                                             <a>Контакты</a>
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link href="/map">
+                                            <a>Карта сайта</a>
+                                        </Link>
+                                    </li>
 
                                 </ul>
                             </nav>

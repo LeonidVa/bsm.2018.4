@@ -90,7 +90,7 @@ const page = () => (
                         </Link>
                     </li>
                     <li>
-                        <Link href="/stati/napisanie-kursovyix-rabot">
+                        <Link href="/stati/napisanie-kursovyh-rabot">
                             <a>Написание курсовых работ</a>
                         </Link>
                     </li>

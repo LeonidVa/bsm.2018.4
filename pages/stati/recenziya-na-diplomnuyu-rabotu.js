@@ -5,27 +5,29 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'components/config/dopraboty';
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import formConfig from 'components/config/formConfig';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/diplom';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlockConfig';
+
+import Video from 'components/common/VideoBlock';
 
 
 
 const page = () => (
-    <Wrapper title="Главная">
-        <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <Wrapper title="Как написать рецензию на дипломную работу образец – пример рецензии дипломной работы на сайте компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
+        <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <section className="breadcrumbs">
                 <div className="inner">
@@ -33,8 +35,12 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/kursovaya-rabota-na-zakaz">
-                        <a>Курсовая работа</a>
+                    <Link href="/stati">
+                        <a>Статьи</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="#">
+                        <a>Рецензия на дипломную работу</a>
                     </Link>
                 </div>
             </section>
@@ -44,56 +50,41 @@ const page = () => (
             </section>
             <MessBlock/>
 
-
-
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Курсовая работа</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 4 000 руб.</p>
+                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Дипломная работа</span>
+                            <p className="block-service__par">Быстро и качественно!</p>
+                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
+                            <p className="block-service__par">От 14 000 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </a>
                 </Link>
-                <div className="block-service__list list-5">
+                <div className="block-service__list list-3">
                     <Link href="/zakazat-diplomnyj-proekt">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Отчет по практике</span>
-                            <p>от 3 000 руб.</p>
+                            <span className="block-service__list-title">Дипломный проект</span>
+                            <p>от 21 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Реферат</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Эссе Контрольная</span>
-                            <p>от 1 500 руб.</p>
+                            <span className="block-service__list-title">Магистерская диссертация</span>
+                            <p>от 23 000 руб.</p>
                         </a>
                     </Link>
                     <Link href="/mba-na-zakaz">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Экзамены Тесты</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/mba-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовой проект</span>
-                            <p>от 8 000 руб.</p>
+                            <span className="block-service__list-title">Диплом MBA</span>
+                            <p>от <b>25 000</b> руб.</p>
                         </a>
                     </Link>
                 </div>
             </section>
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -171,17 +162,66 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Дипломная работа на заказ
+                    Рецензия на дипломную работу (образец)
                 </h2>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                    Первоначальное предназначение рецензии состоит в создании внешней объективной оценки исследовательской деятельности, которую провел студент при написании дипломной работы. В этом дополнении к работе пишется мнение независимого рецензента (другого преподавателя, представителя предприятия, где выпускник проходил практику) о дипломной работе после ознакомления с материалом. Таким образом, исключается субъективность мнения, что позволяет дать правильную оценку проделанной работе.
                 </p>
+            </section>
+
+            <section className="block-text">
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    По правилам рецензент должен полностью ознакомиться со всеми частями работы:
+                </p>
+                <ul>
+                    <li>
+                        оценить структуру;
+                    </li>
+                    <li>
+                        используемую литературу;
+                    </li>
+                    <li>
+                        изучить практическую часть и значимость исследования;
+                    </li>
+                    <li>
+                        прочесть каждый раздел работы.
+                    </li>
+                </ul>
+                <p className="block-text__par">
+                    К счастью или к прискорбию студента, преподаватели далеко в каждом случае имеют достаточно времени, чтобы тратить по несколько часов, а то и дней на тщательное изучение напечатанного. По этой причине студенту важно знать, как писать рецензию на дипломную работу, ведь в некоторых случаях именно ему придется составлять данный документ. А преподаватель, если его устроит содержание рецензии, просто подписавшись под готовым документом.
                 </p>
             </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Как написать рецензию на дипломную работу?
+                </h2><br/>
+                <p className="block-text__par italic center">
+                    "Рецензия – структурированный отзыв одного или нескольких преподавателей вуза, который суммирует и подводит итоговую оценку работе студента. Написание рецензии является обязательным этапом защиты выпускного исследовательского проекта."
+                </p><br/>
+                <p className="block-text__par">
+                    Особых проблем с самостоятельным написанием анализа работы у вас возникнуть не должно, ведь, кто как не вы должен знать сильные и слабые стороны научной работы. Но даже если было решено <a href="/diplom-na-zakaz">заказать дипломную работу</a>, вы все равно будете иметь преимущества перед преподавателем-рецензентом, так как, как минимум, у вас будет больше времени на изучение материала.
+                </p>
+                <p className="block-text__par">
+                    Обычно рецензия пишется простым, свободным языком. Рекомендуется только избегать разговорных размытых фраз, включая: «отличная дипломная работа», «проведены серьезные исследования», «полностью раскрыта тема», «проделана большая работа» и т.д. Отзыв должен писаться максимально сжато, четко и основываясь на реальные факты.
+                </p>
+                <p className="block-text__par">
+                    Базовая структура рецензии следующая:
+                </p>
+                <ol>
+                    <li>
+                        Вступительная часть, в которой указывается актуальность темы и дается оценка правильности структуры.
+                    </li>
+                    <li>
+                        Основная часть, где детально разбираются основные структурные элементы и разделы работы, находятся ее преимущества и основные неточности, ошибки.
+                    </li>
+                    <li>
+                        Короткий вывод обо всей дипломной работе в целом, где необходимо указать, допускается ли работа к защите, какова рекомендуемая оценка от автора документа.
+                    </li>
+                </ol>
+            </section>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -193,42 +233,64 @@ const page = () => (
                 </CallMeFormWithTimer>
             </section>
 
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Оформление рецензии на дипломную работу
+                </h2>
+                <p className="block-text__par">
+                    Строгих требований о том, как должна быть оформлена дипломная работа, нет. Но некоторые негласные правила профессионального структурирования документа все же существуют. В большей степени строгость оформления рецензии зависит от того, на какую оценку рассчитывает студент.
+                </p>
+                <p className="block-text__par">
+                    Если анализ диплома сводится к рекомендации поставить наивысший балл, необходимо глубоко оценить все части исследовательской работы, аргументировано доказать достижение всех поставленных задач, оценить качество подачи материала, уделить внимание влиянию на материал собственных идей и мыслей автора. Необходимости в таком строгом подходе нет, если предполагается более низкая оценка за дипломную работу.
+                </p>
+            </section>
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    ПОМЕНЯТЬ Дипломная работа на заказ
+                    Рецензия включает следующие составные части:
                 </h2>
+                <ol>
+                    <li>
+                        Шапка рецензии содержит тему исследовательской работы, название факультета и данные о студенте.
+                    </li>
+                    <li>
+                        Сразу за заголовком кратко указывается обоснование актуальности выбранной темы, указывается, что рассмотрены основные понятия и методы анализа по теме материала. Указывается, какие проблемы поднял автор, примененные методики и техники в рамках темы.
+                    </li>
+                    <li style={{marginBottom: 'unset'}}>
+                        Далее следует оценка работы с точки зрения рецензента:
+                        <br/><br/>
+                        <ul>
+                            <li>
+                                Приводится оценка структуры дипломной работы и соответствия содержания материала изначальному заданию (1 предложение). Описывается, из какого количества глав состоит работа, насколько логично подан текст, оценивается наличие и грамотность примененных терминов.
+                            </li>
+                            <li>
+                                Дается краткое содержание, и оценка каждой главы материла.
+                            </li>
+                            <li>
+                                Общая оценка всей работы, указание ее недостатков и достоинств, практической значимости проекта. Рекомендуемый итоговый балл от рецензента.
+                            </li>
+                            <li style={{marginBottom: 'unset'}}>
+                                Личная информация о рецензенте, дата, инициалы, подпись.
+                            </li>
+                        </ul>
+                    </li >
+                </ol>
                 <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
+                    Важно грамотно заполнить каждую часть рецензии, в том числе, указать недостатки. Можно указать нейтральные, не влияющие на оценку недостатки. К примеру, написать, что в материале имеется малое число графиков, диаграмм и изображений или, что в некоторых частях материала не до конца выдержать строгий научный стиль повествования.
                 </p>
                 <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
-                </p>
-                <p className="block-text__par">
-                    Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
-                </p>
-                <p className="block-text__par">
-                    Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
+                    Обязательно нужно самостоятельно указать, что данные неточности не влияют на качественный уровень научно-исследовательской работы. Если у вас возникнут сложности в написании рецензии, эту задачу можно всегда поручить более опытному рецензенту.
                 </p>
             </section>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
+            <Video>
+                <iframe src="https://www.youtube.com/embed/-heyiD9tCLc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </Video>
         </div>
     </Wrapper>
 );

@@ -5,26 +5,28 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'components/config/dopraboty';
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import formConfig from 'components/config/formConfig';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/kursovaya';
+
+import Video from 'components/common/VideoBlock';
 
 
 
 const page = () => (
-    <Wrapper title="Заказать курсовую работу – курсовая работа на заказ в Москве | Купить курсовую работу срочно недорого онлайн, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
+    <Wrapper title="Заказать курсовую работу по педагогике в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
             <section className="breadcrumbs">
@@ -33,8 +35,12 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="#">
+                    <Link href="/kursovaya-rabota-na-zakaz">
                         <a>Курсовая работа</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="#">
+                        <a>По педагогике</a>
                     </Link>
                 </div>
             </section>
@@ -168,19 +174,13 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Заказать курсовую работу
+                    Заказать курсовую работу по педагогике
                 </h2>
                 <p className="block-text__par">
-                    Многим студентам требуется помощь в написании курсовой работы. Чаще всего трудности возникают из-за недостатка времени.
+                    Педагогика – одна из ключевых профессий для человечества, и соперничать с ней может только медицина. В последние годы число студентов, желающих стать педагогами, существенно возросло благодаря улучшению материального обеспечения. Но чтобы получить высокооплачиваемую должность, нужно добиться весомых результатов в вузе.
                 </p>
                 <p className="block-text__par">
-                    Если вам срочно нужна курсовая, предлагаем воспользоваться услугами специалистов BeSmarter! Наша компания успешно работает в данной сфере более 10 лет. Мы можем срочно написать курсовую от 1 дня, вне зависимости от сложности темы.
-                </p>
-                <p className="block-text__par">
-                    Своевременность сдачи готовой работы гарантируется официальным договором, подписываемым на стадии предварительного собеседования. При этом у нас вы сможете срочно заказать курсовую работу без ущерба качеству. В случае необходимости мы будем вам сдавать на проверку каждую главу.
-                </p>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Только в BeSmarter! можно заказать курсовую работу онлайн, недорого, срочно и качественно. Не теряйте времени!
+                    Курсовые работы по педагогике – одно из важных испытаний на пути профессионального становления. Преодолеть его можно самостоятельно или заручившись сторонней квалифицированной помощью. Второй вариант надежнее и безопаснее. Чтобы недорого заказать курсовую по педагогике, обращайтесь в компанию BeSmarter!
                 </p>
             </section>
 
@@ -188,25 +188,19 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Как купить курсовую работу на заказ недорого?
+                    Что мы предлагаем?
                 </h2>
-                <p className="block-text__par">
-                    На стоимость услуги влияют несколько объективных факторов.
-                </p>
                 <ul>
                     <li>
-                        <b>Тема. </b>По гуманитарным дисциплинам можно достаточно недорого купить курсовую работу на заказ. Технические специальности стоят в среднем дороже. Кроме того, если вы решите написать курсовую на заказ, цена будет определяться сложностью конкретной темы. Здесь мы сможем помочь сэкономить. Чтобы заказать курсовую работу недорого, пришлите список доступных тем (если доступен выбор), и мы подберем самую «дешевую».
+                        <b>Качество.</b> Курсовая работа по педагогике от BeSmarter! – это оригинальное исследование, в котором проводится анализ актуальной проблемы и предлагается эффективное ее решение. Все выводы строго аргументируются.
                     </li>
                     <li>
-                        <b>Сроки. </b>Заказ курсовой работы недорого возможен только при оптимальном количестве времени, доступном для ее выполнения. Если же сроки сокращаются до 1-2 суток, то нам приходится привлекать нескольких специалистов. Или предлагать им писать курсовые на заказ внеурочно. Это, разумеется, сказывается на расценках. Поэтому, чтобы заказать курсовую работу онлайн недорого, постарайтесь подать заявку как можно раньше.
+                        <b>Оперативность.</b> В случае необходимости мы можем выполнить заказ срочно и написать курсовую работу в течение суток. День сдачи регламентируется официальным договором и контролируется личным менеджером.
                     </li>
                     <li>
-                        <b>Материалы. </b>При наличии готовых наработок можно оформить заказ курсовой дешево. Ваши материалы сэкономят нам время, а вам – деньги.
+                        <b>Профессионализм.</b> Мы оказываем клиенту квалифицированную поддержку на всех этапах сотрудничества, вплоть до момента защиты. Исполнитель вносит бесплатные правки, консультирует, отвечает на вопросы. Наши сотрудники всегда на связи и готовы помочь.
                     </li>
                 </ul>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Следуйте этим советам, и сможете писать курсовые работы на заказ недорого!
-                </p>
             </section>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
@@ -219,30 +213,49 @@ const page = () => (
                 </CallMeFormWithTimer>
             </section>
 
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Сколько стоит написание курсовой по педагогике?
+                </h2>
+                <p className="block-text__par">
+                    Ориентировочный порядок цен указан в прайс-листе. Точная стоимость заказа определяется по результатам предварительного собеседования. Каждая курсовая работа на заказ по педагогике уникальна, поэтому нам нужно знать вашу тему, требования, сроки сдачи и остальные нюансы.
+                </p>
+                <p className="block-text__par">
+                    С другой стороны, подобная неопределенность открывает перед вами возможности для экономии. Если вы желаете недорого купить курсовую по педагогике, проконсультируйтесь с нами при выборе темы, а также постарайтесь оформить заказ как можно раньше. Экономьте свое время, деньги и нервы!
+                </p>
+            </section>
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Хотите заказать курсовую работу онлайн или лично?
+                    Как купить курсовую по педагогике?
                 </h2>
-                <ol>
+                <p className="block-text__par">
+                    Тогда выберите предпочтительный для себя способ связи:
+                </p>
+                <ul>
                     <li>
-                        Сайт. Оформляется курсовая работа на заказ посредством заполнения <a href="#form">онлайн-заявки</a> (Москва и другие города).
+                        онлайн – <b><a href="#form">заполните форму</a></b> на сайте и дождитесь ответа менеджера компании;
                     </li>
                     <li>
-                        Телефон. Принимаются заявки на написание курсовых работ на заказ по бесплатному номеру (Москва и другие города).
+                        телефон – позвоните нам по номеру 8 (495) 772-40-90;
                     </li>
                     <li>
-                        Визит. Лучший способ заказать курсовую работу в Москве – посетить наш уютный офис в центре столицы!
+                        визит – зайдите к нам в <b><Link href="/contacts"><a>офис</a></Link></b>: Москва, пер. Большой Кисловский, дом 1, стр. 2, оф. 211.
                     </li>
-                </ol>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Закажите курсовую работу сегодня – это быстро и удобно!
+                </ul>
+                <p className="block-text__par">
+                    Курсовая работа от компании BeSmarter! – это гарантия вашей успешной защиты. Не упустите свой шанс!
                 </p>
             </section>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
+            </Video>
 
             <LinksBlock links={links}/>
         </div>

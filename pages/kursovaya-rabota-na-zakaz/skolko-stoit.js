@@ -5,26 +5,28 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'components/config/dopraboty';
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import formConfig from 'components/config/formConfig';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/kursovaya';
+
+import Video from 'components/common/VideoBlock';
 
 
 
 const page = () => (
-    <Wrapper title="Заказать курсовую работу – курсовая работа на заказ в Москве | Купить курсовую работу срочно недорого онлайн, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
+    <Wrapper title="Сколько стоит курсовая работа – стоимость курсовой работы в Москве - 2000 рублей, звоните в компанию «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
             <section className="breadcrumbs">
@@ -33,8 +35,12 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="#">
+                    <Link href="/kursovaya-rabota-na-zakaz">
                         <a>Курсовая работа</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="#">
+                        <a>Стоимость</a>
                     </Link>
                 </div>
             </section>
@@ -168,19 +174,13 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Заказать курсовую работу
+                    Сколько стоит курсовая работа
                 </h2>
                 <p className="block-text__par">
-                    Многим студентам требуется помощь в написании курсовой работы. Чаще всего трудности возникают из-за недостатка времени.
+                    Сколько стоит курсовая работа в Москве? Данным вопросом каждый год интересуются десятки тысяч студентов столичных вузов. Не потому, что они ленивы или недостаточно прилежны – просто времени на все не хватает.
                 </p>
                 <p className="block-text__par">
-                    Если вам срочно нужна курсовая, предлагаем воспользоваться услугами специалистов BeSmarter! Наша компания успешно работает в данной сфере более 10 лет. Мы можем срочно написать курсовую от 1 дня, вне зависимости от сложности темы.
-                </p>
-                <p className="block-text__par">
-                    Своевременность сдачи готовой работы гарантируется официальным договором, подписываемым на стадии предварительного собеседования. При этом у нас вы сможете срочно заказать курсовую работу без ущерба качеству. В случае необходимости мы будем вам сдавать на проверку каждую главу.
-                </p>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Только в BeSmarter! можно заказать курсовую работу онлайн, недорого, срочно и качественно. Не теряйте времени!
+                    Если вы относитесь к числу таких студентов, то мы надеемся, что данная статья поможет вам узнать, сколько стоит написать курсовую работу в Москве сегодня. А также как сэкономить на данной услуге и найти ответственного и грамотного исполнителя.
                 </p>
             </section>
 
@@ -188,24 +188,13 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Как купить курсовую работу на заказ недорого?
+                    Как определяется стоимость курсовой работы?
                 </h2>
                 <p className="block-text__par">
-                    На стоимость услуги влияют несколько объективных факторов.
+                    Прежде всего, следует понимать, что регион проживания никак не влияет на цены. Если вам нужна курсовая работа на заказ, цена в Москве, Калининграде или Владивостоке будет одинаковой. Благодаря интернету расстояния исчезли, поэтому клиент и исполнитель могут находиться где угодно и эффективно сотрудничать.
                 </p>
-                <ul>
-                    <li>
-                        <b>Тема. </b>По гуманитарным дисциплинам можно достаточно недорого купить курсовую работу на заказ. Технические специальности стоят в среднем дороже. Кроме того, если вы решите написать курсовую на заказ, цена будет определяться сложностью конкретной темы. Здесь мы сможем помочь сэкономить. Чтобы заказать курсовую работу недорого, пришлите список доступных тем (если доступен выбор), и мы подберем самую «дешевую».
-                    </li>
-                    <li>
-                        <b>Сроки. </b>Заказ курсовой работы недорого возможен только при оптимальном количестве времени, доступном для ее выполнения. Если же сроки сокращаются до 1-2 суток, то нам приходится привлекать нескольких специалистов. Или предлагать им писать курсовые на заказ внеурочно. Это, разумеется, сказывается на расценках. Поэтому, чтобы заказать курсовую работу онлайн недорого, постарайтесь подать заявку как можно раньше.
-                    </li>
-                    <li>
-                        <b>Материалы. </b>При наличии готовых наработок можно оформить заказ курсовой дешево. Ваши материалы сэкономят нам время, а вам – деньги.
-                    </li>
-                </ul>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Следуйте этим советам, и сможете писать курсовые работы на заказ недорого!
+                <p className="block-text__par">
+                    Тем не менее, расценки все же варьируются. На то, сколько стоит курсовая работа, оказывают влияние несколько объективных факторов. В частности: дисциплина (технические специальности дороже), сложность конкретной темы, срочность заказа, фактический объем текста, необходимость написания на иностранном языке и т. д.
                 </p>
             </section>
 
@@ -219,32 +208,87 @@ const page = () => (
                 </CallMeFormWithTimer>
             </section>
 
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Сколько стоит курсовая работа в компании BeSmarter!
+                </h2>
+                <ul>
+                    <li>
+                        Стоимость курсовой работы по юриспруденции - от 2000 рублей, минимальный срок – от 1 дня.
+                    </li>
+                    <li>
+                        Цена курсовой работы по экономике с практической частью - от 3500 рублей, от 1 дня.
+                    </li>
+                    <li>
+                        Написание курсовой работы по информатике - от 7000 рублей, от 3 дней.
+                    </li>
+                    <li>
+                        Стоимость курсовой работы  по деталям машин от 8000 рублей, от 3 дней.
+                    </li>
+                    <li>
+                        Заказать курсовую работу на иностранном языке будет стоить примерно в 1,5-2 раза дороже стандартных расценок.
+                    </li>
+                </ul>
+            </section>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Преимущества сотрудничества с нами
+                </h2>
+                <ul>
+                    <li>
+                        Компетентность. Работу будет выполнять кандидат соответствующих наук.
+                    </li>
+                    <li>
+                        Оперативность. Мы способны написать хороший курсовик даже за 1 день, и это обойдется вам совсем недорого.
+                    </li>
+                    <li>
+                        Уникальность. Только оригинальные работы, никакого плагиата.
+                    </li>
+                    <li>
+                        Ответственность. Обеспечивается поддержка клиента вплоть до успешной защиты.
+                    </li>
+                    <li>
+                        Конфиденциальность. Все аспекты нашего сотрудничества останутся между нами.
+                    </li>
+                </ul>
+            </section>
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Хотите заказать курсовую работу онлайн или лично?
+                    Как заказать?
                 </h2>
+                <p className="block-text__par">
+                    Выберите наиболее удобный для себя способ связи:
+                </p>
                 <ol>
                     <li>
-                        Сайт. Оформляется курсовая работа на заказ посредством заполнения <a href="#form">онлайн-заявки</a> (Москва и другие города).
+                        С помощью сайта – <b><a href="#form">оставьте заявку</a></b> на нашем сайте и дождитесь ответа менеджера.
                     </li>
                     <li>
-                        Телефон. Принимаются заявки на написание курсовых работ на заказ по бесплатному номеру (Москва и другие города).
+                        По телефону – позвоните нам по номеру +7 (495) 772-4090.
                     </li>
                     <li>
-                        Визит. Лучший способ заказать курсовую работу в Москве – посетить наш уютный офис в центре столицы!
+                        Лично – наш <b><Link href="/contacts"><a>адрес</a></Link></b>: Москва, пер. Большой Кисловский, дом 1 строение 2, офис 211.
                     </li>
                 </ol>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Закажите курсовую работу сегодня – это быстро и удобно!
-                </p>
             </section>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
+            </Video>
+
+            <LinksBlock links={
+                [
+                    { url: "/kursovaya-rabota-na-zakaz/sait-kursovyh-rabot", text: "Где заказать курсовую работу" },
+                    { url: "/kursovoj-proekt-na-zakaz", text: "Заказать курсовой проект" },
+                ]
+            }/>
         </div>
     </Wrapper>
 );

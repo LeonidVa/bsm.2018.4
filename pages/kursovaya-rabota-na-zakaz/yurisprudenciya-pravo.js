@@ -5,26 +5,28 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'components/config/dopraboty';
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import formConfig from 'components/config/formConfig';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/kursovaya';
+
+import Video from 'components/common/VideoBlock';
 
 
 
 const page = () => (
-    <Wrapper title="Заказать курсовую работу – курсовая работа на заказ в Москве | Купить курсовую работу срочно недорого онлайн, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
+    <Wrapper title="Заказать курсовую работу по праву в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
             <section className="breadcrumbs">
@@ -33,8 +35,12 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="#">
+                    <Link href="/kursovaya-rabota-na-zakaz">
                         <a>Курсовая работа</a>
+                    </Link>
+                    <span> / </span>
+                    <Link href="#">
+                        <a>По праву</a>
                     </Link>
                 </div>
             </section>
@@ -168,19 +174,13 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Заказать курсовую работу
+                    Заказать курсовую работу по праву
                 </h2>
                 <p className="block-text__par">
-                    Многим студентам требуется помощь в написании курсовой работы. Чаще всего трудности возникают из-за недостатка времени.
+                    Курсовые работы по праву – тип проекта, обязательный для всех студентов юридических специальностей. Их написание требует умения пользоваться материалами судебной практики и другой информацией из различных профильных источников, а также глубоко разбираться в нюансах актуального российского законодательства.
                 </p>
                 <p className="block-text__par">
-                    Если вам срочно нужна курсовая, предлагаем воспользоваться услугами специалистов BeSmarter! Наша компания успешно работает в данной сфере более 10 лет. Мы можем срочно написать курсовую от 1 дня, вне зависимости от сложности темы.
-                </p>
-                <p className="block-text__par">
-                    Своевременность сдачи готовой работы гарантируется официальным договором, подписываемым на стадии предварительного собеседования. При этом у нас вы сможете срочно заказать курсовую работу без ущерба качеству. В случае необходимости мы будем вам сдавать на проверку каждую главу.
-                </p>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Только в BeSmarter! можно заказать курсовую работу онлайн, недорого, срочно и качественно. Не теряйте времени!
+                    Далеко не каждый студент владеет достаточным количеством свободного времени и опытом для качественного решения подобных задач. Компания BeSmarter! предлагает не рисковать своим профессиональным будущим и заручиться помощью опытных экспертов. Заказать курсовую работу по праву у нас можно срочно и с гарантией качества.
                 </p>
             </section>
 
@@ -188,25 +188,22 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Как купить курсовую работу на заказ недорого?
+                    Наши преимущества
                 </h2>
-                <p className="block-text__par">
-                    На стоимость услуги влияют несколько объективных факторов.
-                </p>
                 <ul>
                     <li>
-                        <b>Тема. </b>По гуманитарным дисциплинам можно достаточно недорого купить курсовую работу на заказ. Технические специальности стоят в среднем дороже. Кроме того, если вы решите написать курсовую на заказ, цена будет определяться сложностью конкретной темы. Здесь мы сможем помочь сэкономить. Чтобы заказать курсовую работу недорого, пришлите список доступных тем (если доступен выбор), и мы подберем самую «дешевую».
+                        <b>Компетентность.</b> Мы поручим написать курсовую работу кандидату юридических наук и действующему преподавателю права.
                     </li>
                     <li>
-                        <b>Сроки. </b>Заказ курсовой работы недорого возможен только при оптимальном количестве времени, доступном для ее выполнения. Если же сроки сокращаются до 1-2 суток, то нам приходится привлекать нескольких специалистов. Или предлагать им писать курсовые на заказ внеурочно. Это, разумеется, сказывается на расценках. Поэтому, чтобы заказать курсовую работу онлайн недорого, постарайтесь подать заявку как можно раньше.
+                        <b>Оригинальность.</b> Никакого «интернет-плагиата» – работа пишется с нуля. За этим следит отдел контроля. Уникальность текста проверяется на нескольких онлайн сервисах.
                     </li>
                     <li>
-                        <b>Материалы. </b>При наличии готовых наработок можно оформить заказ курсовой дешево. Ваши материалы сэкономят нам время, а вам – деньги.
+                        <b>Универсальность.</b> У нас вы сможете заказать курсовую по праву любой отрасли – уголовному, гражданскому, трудовому, семейному, конституционному и пр.
+                    </li>
+                    <li>
+                        <b>Доступная стоимость.</b> Мы придерживаемся политики прозрачных цен и индивидуально подходим к каждому клиенту. У нас действительно недорого – убедитесь в этом сами!
                     </li>
                 </ul>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Следуйте этим советам, и сможете писать курсовые работы на заказ недорого!
-                </p>
             </section>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
@@ -219,30 +216,52 @@ const page = () => (
                 </CallMeFormWithTimer>
             </section>
 
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Алгоритм сотрудничества
+                </h2>
+                <p className="block-text__par">
+                    Чтобы купить курсовую по праву, вам следует оформить заявку одним из перечисленных ниже способов. Мы оперативно ее рассмотрим и обсудим с вами все детали заказа. По итогам собеседования будет подписан официальный договор.
+                </p>
+                <p className="block-text__par">
+                    Далее вы вносите 50%-ную предоплату, и наш автор приступает к выполнению работы. Готовая курсовая сдается вам на проверку в оговоренный срок. По вашему требованию вносятся бесплатные корректировки. Финальный этап – подготовка к защите работы, автор консультирует и отвечает на ваши вопросы.
+                </p>
+                <p className="block-text__par">
+                    Главный козырь BeSmarter! – ответственность. Личный менеджер сопровождает клиента вплоть до получения оценки, оперативно решая все вопросы. От вас нужно только желание – остальное сделаем мы!
+                </p>
+            </section>
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Хотите заказать курсовую работу онлайн или лично?
+                    Как купить курсовую работу по праву?
                 </h2>
-                <ol>
+                <p className="block-text__par">
+                    Оставьте заявку удобным для себя способом:
+                </p>
+                <ul>
                     <li>
-                        Сайт. Оформляется курсовая работа на заказ посредством заполнения <a href="#form">онлайн-заявки</a> (Москва и другие города).
+                        <b><a href="#form">заполните форму</a></b> на сайте и дождитесь ответа сотрудника;
                     </li>
                     <li>
-                        Телефон. Принимаются заявки на написание курсовых работ на заказ по бесплатному номеру (Москва и другие города).
+                        свяжитесь с нами по телефону 8 (495) 772-40-90 или закажите обратный звонок.
                     </li>
                     <li>
-                        Визит. Лучший способ заказать курсовую работу в Москве – посетить наш уютный офис в центре столицы!
+                        зайдите к нам в <b><Link href="/contacts"><a>офис</a></Link></b> по адресу: Москва, пер. Большой Кисловский, дом 1, стр. 2, оф. 211.
                     </li>
-                </ol>
-                <p className="block-text__par" style={{fontStyle: 'italic'}}>
-                    Закажите курсовую работу сегодня – это быстро и удобно!
+                </ul>
+                <p className="block-text__par">
+                    Курсовая работа по праву на заказ в компании BeSmarter! – это выгодно, надежно и качественно. Поручите ее настоящим специалистам!
                 </p>
             </section>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
+            </Video>
 
             <LinksBlock links={links}/>
         </div>

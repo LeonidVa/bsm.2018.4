@@ -152,7 +152,7 @@ const page = () => (
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/kursovaya-rabota-na-zakaz/skolko-stoit-kursovaya-rabota">
+                                        <Link href="/kursovaya-rabota-na-zakaz/skolko-stoit">
                                             <a>Сколько стоит курсовая работа</a>
                                         </Link>
                                     </li>
@@ -182,23 +182,23 @@ const page = () => (
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/kursovaya-rabota-na-zakaz/po-arhitekture">
+                                        <Link href="/kursovaya-rabota-na-zakaz/arhitektura">
                                             <a>Курсовая работа по архитектуре</a>
                                         </Link>
                                     </li>
                                 </ul>
-                                <li>
-                                    <Link href="/kursovoj-proekt-na-zakaz">
-                                        <a>Курсовой проект на заказ</a>
-                                    </Link>
-                                    <ul>
-                                        <li>
-                                            <Link href="/kursovoj-proekt-na-zakaz/po-detalyam-mashin">
-                                                <a>Курсовая работа по деталям машин</a>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </li>
+                            </li>
+                            <li>
+                                <Link href="/kursovoj-proekt-na-zakaz">
+                                    <a>Курсовой проект на заказ</a>
+                                </Link>
+                                <ul>
+                                    <li>
+                                        <Link href="/kursovoj-proekt-na-zakaz/po-detalyam-mashin">
+                                            <a>Курсовая работа по деталям машин</a>
+                                        </Link>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <Link href="/dissertaciya-na-zakaz">
@@ -229,7 +229,7 @@ const page = () => (
                                         <ul>
                                             <li>
                                                 <Link href="/dissertaciya-na-zakaz/kandidatskaya/skolko-stoit">
-                                                    <a>Сколько стоит кандидатская диссертация</a>
+                                                    <a>Сколько стоит кандидатская диссертация*</a>
                                                 </Link>
                                             </li>
                                             <li>
@@ -246,12 +246,12 @@ const page = () => (
                                         <ul>
                                             <li>
                                                 <Link href="/dissertaciya-na-zakaz/magisterskaya/skolko-stoit">
-                                                    <a>Сколько стоит магистерская диссертация</a>
+                                                    <a>Сколько стоит магистерская диссертация*</a>
                                                 </Link>
                                             </li>
                                             <li>
                                                 <Link href="/dissertaciya-na-zakaz/magisterskaya/gde-zakazat">
-                                                    <a>Где заказать магистерскую диссертацию</a>
+                                                    <a>Где заказать магистерскую диссертацию*</a>
                                                 </Link>
                                             </li>
                                             <li>
@@ -298,7 +298,7 @@ const page = () => (
                                     </li>
                                     <li>
                                         <Link href="/dissertaciya-na-zakaz/skolko-stoit-napisat">
-                                            <a>Сколько стоит написать диссертацию</a>
+                                            <a>Сколько стоит написать диссертацию*</a>
                                         </Link>
                                     </li>
                                     <li>
@@ -357,12 +357,12 @@ const page = () => (
                             </li>
                             <li>
                                 <Link href="/zakazat-esse">
-                                    <a>Эссе на заказ</a>
+                                    <a>Эссе на заказ*</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/kontrolnaya-na-zakaz">
-                                    <a>Контрольная работа на заказ</a>
+                                    <a>Контрольная работа на заказ*</a>
                                 </Link>
                             </li>
                             <li>

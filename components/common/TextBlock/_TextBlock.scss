@@ -151,8 +151,12 @@
         }
     }
     ul.block-text__links-list {
+        padding-bottom: unset;
         @media (max-width: 660px) {
             list-style-type: none;
+        }
+        li:last-child {
+            margin-bottom: unset;
         }
     }
     ol {

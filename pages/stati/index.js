@@ -33,7 +33,7 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/kursovaya-rabota-na-zakaz">
+                    <Link href="#">
                         <a>Статьи</a>
                     </Link>
                 </div>

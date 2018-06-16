@@ -30,6 +30,9 @@
         color: #4a4a4a;
         margin-top: 3rem;
         margin-bottom: 1rem;
+        &.center {
+        text-align: center;
+        }
     }
     &__title:first-child {
         margin-top: 0;
@@ -103,6 +106,13 @@
             margin: 0;
             padding: 0;
         }
+        &.style-none{
+            list-style: none;
+            ul, ol {
+                list-style: none;
+                margin-top: 0.8em;
+            }
+        }
         li {
             color: #4a4a4a;
             line-height: 1.5em;
@@ -115,6 +125,9 @@
                     color: #f4511e;
                 }
             }
+        li:last-child {
+            margin-bottom: unset;
+        }
         ul,ol {
             list-style-type: disc;
             font-size: 1em;

@@ -19,7 +19,10 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/diplom';
+
+import Video from 'components/common/VideoBlock';
+
 
 
 const page = () => (

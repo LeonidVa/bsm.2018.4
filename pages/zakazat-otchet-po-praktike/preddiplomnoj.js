@@ -19,7 +19,9 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import otchet from 'components/config/linksBlock/otchet';
+
+import Video from 'components/common/VideoBlock';
 
 
 
@@ -267,10 +269,14 @@ const page = () => (
                 </p>
             </section>
 
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq/preview"></iframe>
+            </Video>
+
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
+            <LinksBlock links={otchet}/>
         </div>
     </Wrapper>
 );

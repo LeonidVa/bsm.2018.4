@@ -19,7 +19,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/diplom';
 
 
 const page = () => (
@@ -251,9 +251,13 @@ const page = () => (
                     Нужна дипломная работа по психологии на заказ прямо сейчас? Сделаем!
                 </p>
                 <p className="block-text__par">
-                    Звоните нам +7 495 772 40 90, заполните простую форму заказа или сразу приезжайте в комфортабельный <Link href="/contacts"><a>офис</a></Link> компании BeSmarter!, расположенный в самом центре Москвы!
+                    Звоните нам +7 495 772 40 90, заполните простую форму заказа или сразу приезжайте в комфортабельный <Link href="/contacts"><b><a>офис</a></b></Link> компании BeSmarter!, расположенный в самом центре Москвы!
                 </p>
             </section>
+
+            <VideoBlock>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </VideoBlock>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>

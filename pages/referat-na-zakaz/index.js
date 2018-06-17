@@ -19,7 +19,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import referat from 'components/config/linksBlock/referat';
 
 
 
@@ -261,14 +261,14 @@ const page = () => (
                     Самый простой вариант – заказать реферат онлайн (недорого, быстро и удобно), заполнив форму на сайте. Такой вариант подойдет для жителей не только Москвы, но и других регионов России. Также можно оформить заказ реферата по телефону +7 495 772-4090.
                 </p>
                 <p className="block-text__par">
-                    Если же вы живете в Москве, ждем вас по <Link href="/contacts"><a>адресу</a></Link>: переулок Большой Кисловский, дом 1, строение 2, офис 211. Какой бы вы ни выбрали способ заказать реферат – онлайн, звонок или визит, будьте уверены, менеджеры компании BeSmarter! окажут вам квалифицированную помощь в написании реферата.
+                    Если же вы живете в Москве, ждем вас по <Link href="/contacts"><b><a>адресу</a></b></Link>: переулок Большой Кисловский, дом 1, строение 2, офис 211. Какой бы вы ни выбрали способ заказать реферат – онлайн, звонок или визит, будьте уверены, менеджеры компании BeSmarter! окажут вам квалифицированную помощь в написании реферата.
                 </p>
                 <p className="block-text__par">
                     Наконец, вы можете посетить наш  в центре Москвы (пер. Большой Кисловский, дом 1, стр. 2, оф. 211). Мы ждем вас!
                 </p>
             </section>
 
-            <LinksBlock links={links}/>
+            <LinksBlock links={referat}/>
         </div>
     </Wrapper>
 );

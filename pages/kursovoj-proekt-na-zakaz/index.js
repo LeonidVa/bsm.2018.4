@@ -19,7 +19,9 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import kursovaya from 'components/config/linksBlock/kursovaya';
+
+import Video from 'components/common/VideoBlock';
 
 
 
@@ -256,7 +258,11 @@ const page = () => (
                 </p>
             </section>
 
-            <LinksBlock links={links}/>
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
+            </Video>
+
+            <LinksBlock links={kursovaya}/>
         </div>
     </Wrapper>
 );

@@ -19,7 +19,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import disser from 'components/config/linksBlock/disser';
 
 
 const page = () => (
@@ -316,7 +316,7 @@ const page = () => (
                 </p>
             </section>
 
-            <LinksBlock links={links}/>
+            <LinksBlock links={disser}/>
         </div>
     </Wrapper>
 );

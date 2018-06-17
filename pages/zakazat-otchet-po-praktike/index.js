@@ -19,7 +19,9 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import otchet from 'components/config/linksBlock/otchet';
+
+import Video from 'components/common/VideoBlock';
 
 
 
@@ -255,11 +257,16 @@ const page = () => (
                     Для наших клиентов нет никакой разницы, <b>где заказать отчет по практике</b> – в Москве или Владивостоке. В любом случае уровень сервиса будет одинаково высоким. Желаете оформить заявку на сайте – пожалуйста, по телефону – тоже никаких проблем <b>8 495 772-4090</b>
                 </p>
                 <p className="block-text__par">
-                    Наконец, вы можете посетить наш <Link href="/contacts"><a>офис</a></Link> в центре Москвы (пер. Большой Кисловский, дом 1, стр. 2, оф. 211). Мы ждем вас!
+                    Наконец, вы можете посетить наш <Link href="/contacts"><b><a>офис</a></b></Link> в центре Москвы (пер. Большой Кисловский, дом 1, стр. 2, оф. 211). Мы ждем вас!
                 </p>
             </section>
 
-            <LinksBlock links={links}/>
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq/preview"></iframe>
+            </Video>
+
+
+            <LinksBlock links={otchet}/>
         </div>
     </Wrapper>
 );

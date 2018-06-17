@@ -20,7 +20,9 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/diplom';
+
+import VideoBlock from 'components/common/VideoBlock';
 
 
 const page = () => (
@@ -206,6 +208,10 @@ const page = () => (
                     Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
                 </p>
             </section>
+
+            <VideoBlock>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </VideoBlock>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>

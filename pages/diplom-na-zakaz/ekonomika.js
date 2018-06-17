@@ -19,7 +19,9 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/diplom';
+
+import Video from 'components/common/VideoBlock';
 
 
 const page = () => (
@@ -286,6 +288,10 @@ const page = () => (
                     Если вы ищете профессиональных исполнителей для диплома по экономике на заказ, обратитесь в BeSmarter!. У нас работает отличная команда опытных специалистов, поэтому мы гарантируем вам качество услуг.
                 </p>
             </section>
+
+            <Video>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </Video>
 
             <LinksBlock links={links}/>
         </div>

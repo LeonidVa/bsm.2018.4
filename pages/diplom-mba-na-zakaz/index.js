@@ -19,7 +19,9 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlockConfig';
+
+import Video from 'components/common/VideoBlock';
 
 
 const page = () => (
@@ -216,6 +218,10 @@ const page = () => (
                 </p>
             </section>
 
+            <Video>
+                <iframe src="https://www.youtube.com/embed/mzDkG6XRKuc" frameborder="0" allowfullscreen></iframe>
+            </Video>
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
@@ -236,10 +242,14 @@ const page = () => (
                         Предложите свои наработки. Если вы уже приступили к написанию работы, принесите эти материалы, и мы снизим цену.
                     </li>
                 </ol>
-                <p className="block-text__par">
-                    <b style={{fontStyle: 'italic'}}>Воспользуйтесь услугами специалистов BeSmarter!, и вы не пожалеете об этом!</b>
+                <p className="block-text__par italic">
+                    <b>Воспользуйтесь услугами специалистов BeSmarter!, и вы не пожалеете об этом!</b>
                 </p>
             </section>
+
+            <Video>
+                <iframe src="https://drive.google.com/open?id=159HfczgLjy3uiVHfryJBAP9GLhN3RLHR" frameborder="0" allowfullscreen></iframe>
+            </Video>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>

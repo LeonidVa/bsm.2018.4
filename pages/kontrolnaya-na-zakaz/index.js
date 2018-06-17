@@ -5,29 +5,29 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'components/config/dopraboty';
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import formConfig from 'components/config/formConfig';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import otchet from 'components/config/linksBlock/otchet';
+import links from 'components/config/linksBlock/kursovaya';
 
 import Video from 'components/common/VideoBlock';
 
 
 
 const page = () => (
-    <Wrapper title="Купить отчет по учебной практике – заказать отчет по учебной практике в Москве недорого | «BeSmarter!». Тел. +7 (495) 772-40-90.">
-        <div className="wrapper bg bg-c2 bg-img bg-img4">
+    <Wrapper title="Заказать контрольную работу – решение контрольных работ на заказ недорого онлайн в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
+        <div className="wrapper bg bg-c2 bg-img bg-img1">
 
             <section className="breadcrumbs">
                 <div className="inner">
@@ -35,12 +35,8 @@ const page = () => (
                         <a>Главная</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/zakazat-otchet-po-praktike">
-                        <a>Отчёт по практике</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="/zakazat-otchet-po-praktike">
-                        <a>Учебной</a>
+                    <Link href="#">
+                        <a>Контрольная</a>
                     </Link>
                 </div>
             </section>
@@ -49,8 +45,6 @@ const page = () => (
                 <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
             </section>
             <MessBlock/>
-
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -99,7 +93,6 @@ const page = () => (
             </section>
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -177,13 +170,10 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Заказать отчет по учебной практике
+                    Заказать контрольную работу
                 </h2>
                 <p className="block-text__par">
-                    В нашей компании собран лучший преподавательский состав, состоящий из действующих специалистов разных дисциплин с учеными степенями, начиная от преподавателей вузов до кандидатов наук. Вы будете довольны результатом!
-                </p>
-                <p className="block-text__par">
-                    Перед совершением заказа клиент может лично пообщаться с возможными исполнителями и выбрать на свой взгляд лучшего кандидата. Более 98% наших заказчиков защищаются на «отлично» вследствие такого профессионального подхода.
+                    Сторонняя помощь в написании контрольных работ может понадобиться даже прилежному студенту. Никто не застрахован от нехватки времени, недопонятой темы или даже плохого самочувствия. И тогда на выручку придет BeSmarter! – компания, где заказать контрольную работу можно недорого, срочно и с качественным результатом.
                 </p>
             </section>
 
@@ -191,20 +181,23 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Как заказать отчет по учебной практике недорого
+                    Что вы получаете, заказывая у нас контрольную работу?
                 </h2>
                 <ul>
                     <li>
-                        Не теряйте времени. Заказать отчет по учебной практике лучше заблаговременно. Наши сотрудники смогут написать вашу работу срочно.
+                        <b>Профессиональный подход.</b> Решение контрольных работ на заказ поручается действующим преподавателям вузов, кандидатам соответствующих наук.
                     </li>
                     <li>
-                        Проконсультируйтесь с менеджером. При возможности свободного выбора темы, предоставьте нам право подобрать наилучший вариант, а также посоветовать вам, как купить отчет по учебной практике недорого!
+                        <b>Универсальность.</b> Доступно выполнение контрольных работ на заказ по всем техническим и гуманитарным предметам на любую тему.
                     </li>
                     <li>
-                        Предложите свои наработки. Если вы начали самостоятельно писать учебную практику, принесите нам эти наработки, мы применим их при написании вашего отчета и снизим цену за помощь в написании учебной практики.
+                        <b>Оперативность.</b> В случае необходимости мы можем написать контрольную работу на заказ срочно (от 1 дня).
                     </li>
                     <li>
-                        Особые требования. Мы поможем, если потребуется написание учебной практики на другом иностранном языке или 100% уникальность текста (при стандартных 80-98%).
+                        <b>Последовательность.</b> Написание контрольных работ на заказ завершается подробной консультацией со стороны автора, чтобы вы смогли объяснить решение преподавателю.
+                    </li>
+                    <li>
+                        <b>Удобство.</b> У нас можно заказать контрольную онлайн, поэтому услуга доступна для жителей всех регионов России.
                     </li>
                 </ul>
             </section>
@@ -221,57 +214,50 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    
+                    От чего зависит цена контрольных работ на заказ
                 </h2>
-                <ul>
-                    <li>
-                        <b>Качество</b>.  Отдел контроля компании проводит несколько этапов проверки работ, написанных под заказ.
-                    </li>
-                    <li>
-                        <b>Оригинальность</b>. Специалисты пишут каждый отчет по учебной практике «с нуля», с учетом поставленных требований заказчика, не опираясь на ранее написанные личные или чужие работы.
-                    </li>
-                    <li>
-                        <b>Пунктуальность</b>. Ни у одной заказанной работы не было задержек со сдачей ни на день. Все работы сдаются в срок, прописанный в договоре.
-                    </li>
-                    <li>
-                        <b>Конфиденциальность</b>. Факт сотрудничества остается втайне. В юридически заверенном договоре прописываются обязательства о неразглашении. В нашей компании вы сможете заказать отчет по учебной практике недорого, срочно и с гарантией качества.
-                    </li>
-                </ul>
+                <p className="block-text__par">
+                    Разумеется, вас интересует, сколько стоит сделать контрольную работу. К сожалению, назвать точную сумму заранее невозможно. Ориентировочно узнать, сколько стоит заказать контрольную работу, можно в соответствующем разделе нашего сайта.
+                </p>
+                <p className="block-text__par">
+                    Точная цена будет определена после собеседования на основании конкретной дисциплины, темы, сроков, требований и т. д.
+                </p>
+                <p className="block-text__par">
+                    Если вы желаете заказать контрольную недорого, есть два простых способа экономии. Во-первых, можно частично сделать работу самостоятельно – то, что сумеете или успеете. А во-вторых, следует заказать выполнение контрольной работы заранее, например, за неделю.
+                </p>
+                <p className="block-text__par italic">
+                    Чем больше вы выделите нам времени, тем ниже будет стоимость услуги.
+                </p>
             </section>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Как купить отчет по учебной практике в Москве
+                    Хотите заказать контрольную работу онлайн или в офисе?
                 </h2>
-                <p className="block-text__par">
-                    Есть несколько способов:
-                </p>
-                <ul>
+                <span className="block-text__par">
+                    Выберите удобный для себя вариант:
+                </span>
+                <ol>
                     <li>
-                        На нашем сайте можно заполнить <b><a href="#form">онлайн-заявку</a></b>.
+                        Через сайт – самый быстрый способ заказать контрольную работу недорого (<b><a href="#form">онлайн</a></b>).
                     </li>
                     <li>
-                        Наши менеджеры всегда рады вашему звонку +7(495) 772-4090.
+                        По телефону – свяжитесь с нами по номеру +7 (495) 772-4090.
                     </li>
                     <li>
-                        Либо встретится лично у нас, в удобном офисе, в центре столицы по адресу, указанному в наших <Link href="/contacts"><b><a>контактах</a></b></Link>.
+                        В <b><Link href="/contacts"><a>офисе</a></Link></b> – наш адрес: Москва, Большой Кисловский переулок, д. 1 стр. 2, офис 211.
                     </li>
-                </ul>
-                <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
-                    BeSmarter! – это качественные, уникальные, грамотно оформленные работы под заказ в Москве на выгодных условиях!
+                </ol>
+                <p className="block-text__par italic">
+                    Не теряйте времени! BeSmarter! – это ваша готовая контрольная работа на заказ, недорого и с гарантией качества!
                 </p>
             </section>
 
-            <Video>
-                <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq/preview"></iframe>
-            </Video>
-
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
-
-            <LinksBlock links={otchet}/>
+            
         </div>
     </Wrapper>
 );

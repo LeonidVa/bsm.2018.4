@@ -19,7 +19,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import disser from 'components/config/linksBlock/disser';
 
 
 const page = () => (
@@ -300,7 +300,7 @@ const page = () => (
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
+            <LinksBlock links={disser}/>
         </div>
     </Wrapper>
 );

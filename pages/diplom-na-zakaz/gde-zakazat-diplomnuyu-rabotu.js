@@ -19,7 +19,10 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/diplom';
+
+import Video from 'components/common/VideoBlock';
+
 
 
 const page = () => (
@@ -265,6 +268,10 @@ const page = () => (
                     <li>визит – наш адрес офиса в Москве – Большой Кисловский переулок, д. 1 стр. 2, офис 211.</li>
                 </ul>
             </section>
+
+            <Video>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </Video>
 
             <LinksBlock links={links}/>
         </div>

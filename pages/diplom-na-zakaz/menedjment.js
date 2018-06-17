@@ -19,7 +19,10 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/diplom';
+
+import Video from 'components/common/VideoBlock';
+
 
 
 const page = () => (
@@ -246,9 +249,13 @@ const page = () => (
                     Нужен диплом по менеджменту прямо сейчас? Сделаем!
                 </p>
                 <p className="block-text__par">
-                    Позвоните нам +7 495 772 40 90, заполните форму заявки или посетите наш <Link href="/contacts"><a>комфортабельный офис</a></Link>, который находится на Арбате!
+                    Позвоните нам +7 495 772 40 90, заполните форму заявки или посетите наш <Link href="/contacts"><b><a>комфортабельный офис</a></b></Link>, который находится на Арбате!
                 </p>
             </section>
+
+            <Video>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </Video>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>

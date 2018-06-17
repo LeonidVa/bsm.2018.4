@@ -19,9 +19,10 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
+import links from 'components/config/linksBlock/diplom';
 
-import VideoBlock from 'components/common/VideoBlock';
+import Video from 'components/common/VideoBlock';
+
 
 const page = () => (
     <Wrapper title="Заказать дипломную работу – дипломная работа (диплом) на заказ в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
@@ -204,12 +205,16 @@ const page = () => (
                 </p>
             </section>
 
+            <Video>
+                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2" frameborder="0" allowfullscreen></iframe>
+            </Video>
+
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <VideoBlock>
-                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2" frameborder="0" allowfullscreen></iframe>
-            </VideoBlock>
+            <Video>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </Video>
 
             <LinksBlock links={links}/>
         </div>

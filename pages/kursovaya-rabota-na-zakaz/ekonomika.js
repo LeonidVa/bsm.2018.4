@@ -19,7 +19,11 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlockConfig';
+
+import kursovaya from 'components/config/linksBlock/kursovaya';
+
+import Video from 'components/common/VideoBlock';
 
 
 
@@ -240,13 +244,13 @@ const page = () => (
                 </p>
                 <ul>
                     <li>
-                        на сайте – <a href="#form">заполните форму</a> и дождитесь ответа сотрудника компании;
+                        на сайте – <b><a href="#form">заполните форму</a></b> и дождитесь ответа сотрудника компании;
                     </li>
                     <li>
                         по телефону – свяжитесь с нами по номеру 8 (495) 772-40-90 (перезвоним);
                     </li>
                     <li>
-                        в офисе – <Link href="/contacts"><a>наш адрес</a></Link>: Москва, пер. Большой Кисловский, дом 1, стр. 2, оф. 211.
+                        в офисе – <Link href="/contacts"><b><a>наш адрес</a></b></Link>: Москва, пер. Большой Кисловский, дом 1, стр. 2, оф. 211.
                     </li>
                 </ul>
                 <p className="block-text__par">
@@ -254,10 +258,14 @@ const page = () => (
                 </p>
             </section>
 
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
+            </Video>
+
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
+            <LinksBlock links={kursovaya}/>
         </div>
     </Wrapper>
 );

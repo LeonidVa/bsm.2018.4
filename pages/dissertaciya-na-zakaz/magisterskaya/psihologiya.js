@@ -19,7 +19,9 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlockConfig';
+
+import Video from 'components/common/VideoBlock';
 
 
 const page = () => (
@@ -225,6 +227,10 @@ const page = () => (
                     Цена на написание магистерской диссертации по психологии в BeSmarter! начинается от 24 000 рублей и может варьироваться в зависимости от темы диссертации и сроков выполнения. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.
                 </p>
             </section>
+
+            <Video>
+                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239032&hash=e0751038dfbca771&hd=2" frameborder="0" allowfullscreen></iframe>
+            </Video>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>

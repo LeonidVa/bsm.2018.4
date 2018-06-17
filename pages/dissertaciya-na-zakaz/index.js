@@ -19,7 +19,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import disser from 'components/config/linksBlock/disser';
 
 
 const page = () => (
@@ -214,7 +214,7 @@ const page = () => (
                     Основные этапы сотрудничества
                 </h2>
                 <p className="block-text__par">
-                    Этап 1. Вы оформляете заявку на помощь в написании диссертации. Сделать это можно прямо на сайте или в нашем <Link href="/contacts"><a>офисе</a></Link> в Москве.
+                    Этап 1. Вы оформляете заявку на помощь в написании диссертации. Сделать это можно прямо на сайте или в нашем <Link href="/contacts"><b><a>офисе</a></b></Link> в Москве.
                 </p>
                 <p className="block-text__par">
                     Этап 2. Мы проводим с вами собеседование и составляем официальный договор с указанием всех аспектов заказа – сроки, стоимость, исполнитель, требования и так далее. Вы вносите 50% предоплаты.
@@ -276,7 +276,7 @@ const page = () => (
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
+            <LinksBlock links={disser}/>
         </div>
     </Wrapper>
 );

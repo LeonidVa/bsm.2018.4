@@ -19,7 +19,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import disser from 'components/config/linksBlock/disser';
 
 
 const page = () => (
@@ -274,7 +274,7 @@ const page = () => (
                         по телефону – свяжитесь с нами по номеру 8 495 772-4090;
                     </li>
                     <li>
-                        лично – <Link href="/contacts"><a>адрес</a></Link> офиса: Москва, Большой Кисловский переулок, д. 1 стр. 2, офис 211.
+                        лично – <Link href="/contacts"><b><a>адрес</a></b></Link> офиса: Москва, Большой Кисловский переулок, д. 1 стр. 2, офис 211.
                     </li>
                 </ul>
             </section>
@@ -282,7 +282,7 @@ const page = () => (
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
+            <LinksBlock links={disser}/>
         </div>
     </Wrapper>
 );

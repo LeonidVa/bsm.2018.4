@@ -58,7 +58,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Дипломный проект</span>
                             <p>от 21 000 руб.</p>
@@ -70,7 +70,7 @@ const page = () => (
                             <p>от 23 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/mba-na-zakaz">
+                    <Link href="/diplom-mba-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Диплом MBA</span>
                             <p>от <b>25 000</b> руб.</p>
@@ -95,7 +95,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Пакет «Успешная Защита»</span>
                             <p>от 5 000 руб.</p>
@@ -121,7 +121,7 @@ const page = () => (
                     </Link>
                 </div>
                 <div className="block-service__list list-5">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Мини-диплом Раскладка</span>
                             <p>от 2 000 руб.</p>

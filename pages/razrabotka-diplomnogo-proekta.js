@@ -71,7 +71,7 @@ const page = () => (
                             <p>от 23 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/mba-na-zakaz">
+                    <Link href="/diplom-mba-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Диплом MBA</span>
                             <p>от <b>25 000</b> руб.</p>

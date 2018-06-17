@@ -48,7 +48,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz">
+                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
                     <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
@@ -60,7 +60,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
@@ -78,7 +78,7 @@ const page = () => (
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/mba-na-zakaz">
+                    <Link href="/diplom-mba-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -88,7 +88,7 @@ const page = () => (
             </section>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/dissertaciya-na-zakaz/doktorskaya">
                     <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
@@ -100,7 +100,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Прямая связь с автором</span>
                             <p>Постоянный контроль</p>
@@ -112,7 +112,7 @@ const page = () => (
                             <p>Журналы ВАК и иностранные</p>
                         </a>
                     </Link>
-                    <Link href="/mba-na-zakaz">
+                    <Link href="/diplom-mba-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Обзор литературы</span>
                             <p>Свежие источники</p>
@@ -124,7 +124,7 @@ const page = () => (
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/dissertaciya-na-zakaz/doktorskaya">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
@@ -135,7 +135,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Монография</span>
                         </a>
@@ -162,7 +162,7 @@ const page = () => (
                             <span className="block-service__list-title">Ответы к защите</span>
                         </a>
                     </Link>
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Доклад Слайды</span>
                         </a>

@@ -77,13 +77,13 @@ const page = () => (
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/mba-na-zakaz">
+                    <Link href="/kursovoj-proekt-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/mba-na-zakaz">
+                    <Link href="/kursovoj-proekt-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовой проект</span>
                             <p>от 8 000 руб.</p>

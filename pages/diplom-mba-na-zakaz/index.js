@@ -42,7 +42,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/mba-na-zakaz">
+                <Link href="/diplom-mba-na-zakaz">
                     <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Диплом MBA</span>
@@ -54,13 +54,13 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/diplom-mba-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Диплом MBA<br/>под ключ</span>
                             <p>Берем заботы на себя</p>
                         </a>
                     </Link>
-                    <Link href="/mba-na-zakaz">
+                    <Link href="#">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Консультация автора</span>
                             <p>Прямая связь</p>
@@ -90,7 +90,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Пакет «Успешная Защита»</span>
                             <p>от 5 000 руб.</p>
@@ -116,7 +116,7 @@ const page = () => (
                     </Link>
                 </div>
                 <div className="block-service__list list-5">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Мини-диплом Раскладка</span>
                             <p>от 2 000 руб.</p>

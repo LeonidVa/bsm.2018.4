@@ -173,7 +173,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Пакет «Успешная Защита»</span>
                             <p>от 5 000 руб.</p>
@@ -199,7 +199,7 @@ const page = () => (
                     </Link>
                 </div>
                 <div className="block-service__list list-5">
-                    <Link href="/zakazat-diplomnyj-proekt">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Мини-диплом Раскладка</span>
                             <p>от 2 000 руб.</p>

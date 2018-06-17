@@ -236,9 +236,9 @@ const page = () => (
                 <h2 className="block-text__title">
                     Хотите заказать контрольную работу онлайн или в офисе?
                 </h2>
-                <span className="block-text__par">
+                <p className="block-text__par">
                     Выберите удобный для себя вариант:
-                </span>
+                </p>
                 <ol>
                     <li>
                         Через сайт – самый быстрый способ заказать контрольную работу недорого (<b><a href="#form">онлайн</a></b>).

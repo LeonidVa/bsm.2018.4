@@ -63,7 +63,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zakazat-otchet-po-praktike">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Отчет по практике</span>
                             <p>от 3 000 руб.</p>

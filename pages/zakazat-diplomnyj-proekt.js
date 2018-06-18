@@ -2,7 +2,7 @@ import Wrapper from 'components/Wrapper';
 import Title from 'components/common/Title';
 import Link from 'next/link';
 
-
+//
 const page = () => (
     <Wrapper title=":тут title который в head:">
         <div className="wrapper bg bg-c1 bg-img bg-img1">

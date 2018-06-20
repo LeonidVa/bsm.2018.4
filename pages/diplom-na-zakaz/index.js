@@ -25,7 +25,11 @@ import Video from 'components/common/VideoBlock';
 
 
 const page = () => (
-    <Wrapper title="Заказать дипломную работу – дипломная работа (диплом) на заказ в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
+    <Wrapper 
+        title="Заказать дипломную работу – дипломная работа (диплом) на заказ в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
+        keywords="11"
+        description="22"
+    >
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <section className="breadcrumbs">

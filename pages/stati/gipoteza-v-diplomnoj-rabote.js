@@ -22,13 +22,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig';
 
 import Video from 'components/common/VideoBlock';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
-    <Wrapper title="Главная">
+    <Wrapper title="Гипотеза в дипломной работе – пример гипотезы в дипломной работе на сайте компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="В статье раскрыта тема: «Гипотеза в дипломной работе», приведены общие рекомендации, примеры и образцы гипотез дипломных работ." />
+                <meta name="keywords" content="Как составить план дипломной работы содержание образец пример оформление выглядит сделать правильно написать оглавление 2018" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

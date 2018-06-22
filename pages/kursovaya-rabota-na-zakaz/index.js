@@ -22,13 +22,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import kursovaya from 'components/config/linksBlock/kursovaya';
 
 import Video from 'components/common/VideoBlock';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Заказать курсовую работу – курсовая работа на заказ в Москве | Купить курсовую работу срочно недорого онлайн, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Хотите качественно заказать курсовую работу в Москве? Только в BeSmarter! можно заказать курсовую работу онлайн, недорого и срочно, даже за 1 день. Не теряйте времени, оформляйте заказ курсовых работ прямо сейчас | Тел. +7 (495) 772-40-90." />
+                <meta name="keywords" content="Заказать курсовую работу на заказ купить недорого онлайн срочно написать курсовик помощь в написании курсача с подтверждением от антиплагиата в Москве" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

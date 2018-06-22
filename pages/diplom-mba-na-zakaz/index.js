@@ -22,12 +22,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig';
 
 import Video from 'components/common/VideoBlock';
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Диплом MBA (мва, мба) – заказать диплом MBA! Помощь в написании дипломной работы mba | Диплом mba на заказ в Москве – Besmarter!">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Многие задаются вопросом: «Как успеть написать диплом МВА срочно и при этом уделить достаточно времени работе?» Оптимальным решением в такой ситуации становится диплом MBA на заказ в Москве от компании BeSmarter!: мы выполняем для Вас эту трудоёмкую работу на самом высоком уровне, а Вы в это время спокойно занимаетесь своим делом и зарабатываете деньги." />
+                <meta name="keywords" content="диплом mba в Москве дипломы мва на заказ заказать написание дипломной работы мба срочно кейсы мва" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/"><a>Главная</a></Link>

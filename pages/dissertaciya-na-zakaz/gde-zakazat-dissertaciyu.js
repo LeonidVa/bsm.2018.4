@@ -21,11 +21,19 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import disser from 'components/config/linksBlock/disser';
 
+import MetaTags from 'react-meta-tags';
+
 
 const page = () => (
     <Wrapper title="Ищите где заказать диссертацию за деньги в Москве? Конечнов компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Ищите где заказать диссертацию за деньги в Москве? Единственное место, где можно заказать качественную диссертацию с гарантией, – это компания BeSmarter! Тел. +7 (495) 772-40-90." />
+                <meta name="keywords" content="Где заказать диссертацию" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

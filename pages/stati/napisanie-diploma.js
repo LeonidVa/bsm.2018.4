@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Написание диплома | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Представьте себе, что написание диплома может стать очень приятным занятием! Никаких бессонных ночей за монитором компьютера, часов просиживания в библиотеках в поисках нужного материала и необходимости избегать научного руководителя в вузе, поскольку Вы еще не готовы предоставить ему свои наработки. Ваше время можно потратить гораздо более интересно и продуктивно, например, посвятив его работе, семье или встречам с лучшими друзьями. И мы поможем Вам в этом!" />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

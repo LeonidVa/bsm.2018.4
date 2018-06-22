@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Как подготовиться к экзамену | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Даже круглый отличник порой сомневается в своих силах и не может перебороть волнение, возникающее накануне экзамена. Ведь от того, сдашь или не сдашь предмет, зависит многое, а у молодых людей, порой, очень многое. Поэтому, перед чередой экзаменов, следует придерживаться некоторых правил, благодаря которым можно смело рассчитывать на успех." />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

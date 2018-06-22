@@ -21,10 +21,19 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
+import MetaTags from 'react-meta-tags';
+
+
 
 const page = () => (
     <Wrapper title="Докторская диссертация на заказ в Москве и РФ – подготовка и написание под ключ, цена и сроки">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
+
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Подготовка и написание докторской диссертации на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40." />
+                <meta name="keywords" content="Заказать докторскую диссертацию помощь в написании на заказ в Москве написать в короткие сроки срочно под заказ сколько стоит" />
+            </MetaTags>
 
             <section className="breadcrumbs">
                 <div className="inner">

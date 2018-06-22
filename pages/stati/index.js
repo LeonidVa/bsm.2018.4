@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Главная">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Полезные статьи в помощь студентам и аспирантам, читайте на сайте BeSmarter!" />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

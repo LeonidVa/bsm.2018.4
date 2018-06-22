@@ -19,11 +19,10 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
-
 import kursovaya from 'components/config/linksBlock/kursovaya';
 
 import Video from 'components/common/VideoBlock';
+import MetaTags from 'react-meta-tags';
 
 
 
@@ -31,6 +30,12 @@ const page = () => (
     <Wrapper title="Заказать курсовую работу по экономике в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="В компании «BeSmarter!» можно срочно и недорого заказать курсовую работу по экономике по выгодной цене в Москве. Тел. +7 (495) 772-40-90]" />
+                <meta name="keywords" content="Заказать курсовую работу по экономике сколько стоит цена стоимость купить на заказ в Москве срочно недорого помощь" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

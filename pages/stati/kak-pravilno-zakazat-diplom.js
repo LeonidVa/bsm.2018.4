@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Как правильно заказать диплом? | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Работа, семья, дети или иные обстоятельства не позволяют Вам уделять все свое время учебе, и Вы решили заказать диплом. Это правильный выбор! Тратить свои последние силы и здоровье, выкраивая время на написание такой сложной работы – не слишком рациональное решение. Воспользовавшись услугой «диплом на заказ», Вы избавите себя от многих трудностей и неприятностей, которые неизменно встречаются на пути у учащихся последних курсов вузов." />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

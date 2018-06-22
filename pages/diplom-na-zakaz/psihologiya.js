@@ -21,11 +21,19 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlock/diplom';
 
+import MetaTags from 'react-meta-tags';
+
 
 const page = () => (
     <Wrapper title="Заказать дипломную работу по психологии в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="В компании «BeSmarter!» можно срочно и недорого заказать дипломную работу по психологии по выгодной цене в Москве. Тел. +7 (495) 772-40-90." />
+                <meta name="keywords" content="дипломная работа по психологии заказать купить написать на заказ" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

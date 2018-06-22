@@ -21,12 +21,19 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import referat from 'components/config/linksBlock/referat';
 
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Заказать реферат – написание рефератов на заказ в Москве | Заказать реферат срочно онлайн недорого, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img5">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Заказать реферат. Написание рефератов на заказ срочно онлайн недорого от опытных преподавателей, приемлемые цены только в компании «BeSmarter!». Тел. +7 (495) 772-40-90." />
+                <meta name="keywords" content="Заказать реферат купить срочно на заказ написать написание онлайн напишу москва где" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

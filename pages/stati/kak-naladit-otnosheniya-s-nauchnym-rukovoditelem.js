@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Как наладить отношения с научным руководителем? | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Как наладить отношения с научным руководителем? Эта тема волнует множество дипломников. В большинстве случаев нужно совсем немного, чтобы наладить отношения с научным руководителем. Требуется всего лишь хорошая, грамотно написанная работа и знание её содержания. К сожалению, не все темы оказываются простыми для изучения, литературы или знаний может недоставать." />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

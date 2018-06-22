@@ -21,11 +21,19 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import disser from 'components/config/linksBlock/disser';
 
+import MetaTags from 'react-meta-tags';
+
 
 const page = () => (
     <Wrapper title="Аспирантура в Москве | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="В наше время диплом о высшем образовании есть практически у всех, включая продавцов розничной торговли; тем самым нивелируется звание дипломированного специалиста." />
+                <meta name="keywords" content="Аспирантура в Москве,поступление в Аспирантуру,купить Аспирантура" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Как подготовиться и поступить в аспирантуру | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Обучение в аспирантуре недаром называют сверх-высшей формой образования. Аспирантура – это уникальная форма обучения, которая ставит перед собой задачу подготовить научно- педагогические и научные кадры. Аспирантура является следующим этапом после получения высшего образования. Многие студенты при защите заказывают диплом на заказ у нас. Мы пишем дипломные работы качественно и в короткие сроки. Диплом завершает обучение в вузе. А аспирантуру стремятся окончить люди, желающие всерьез заниматься научными изысканиями или (и) преподавать в вузах. По окончании аспирантуры выпускник получает степень кандидата наук." />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

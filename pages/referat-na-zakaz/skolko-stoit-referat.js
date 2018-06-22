@@ -21,12 +21,19 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Сколько стоит заказать реферат – стоимость реферата на заказ в компании «BeSmarter!» - 1 500 рублей, закажите реферат сейчас - тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img5">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Хотите узнать, сколько стоит заказать реферат в Москве? Звоните в компанию BeSmarter! и мы вам скажем сколько стоит написать реферат | Звоните: +7 (495) 772-40-90." />
+                <meta name="keywords" content="сколько стоит написать заказать реферат на заказ цена напсиание купить сделать стоимость" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

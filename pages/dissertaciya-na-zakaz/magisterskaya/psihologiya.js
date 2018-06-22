@@ -23,11 +23,19 @@ import links from 'components/config/linksBlockConfig';
 
 import Video from 'components/common/VideoBlock';
 
+import MetaTags from 'react-meta-tags';
+
 
 const page = () => (
     <Wrapper title="Магистерская диссертация по психологии на заказ в Москве и РФ – цены, сроки написания под ключ">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Магистерская диссертация по психологии на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40." />
+                <meta name="keywords" content="Заказать магистерскую диссертацию по психологии сколько стоит цена стоимость купить на заказ в Москве срочно недорого помощь написать написание" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

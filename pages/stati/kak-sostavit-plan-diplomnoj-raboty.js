@@ -18,17 +18,20 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
-
 import Video from 'components/common/VideoBlock';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Как составить план дипломной работы образец – пример содержания дипломной работы на сайте компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="В статье раскрыта тема: «Как составить план дипломной работы», приведены общие рекомендации, примеры и образцы заключений дипломных работ." />
+                <meta name="keywords" content="Как составить план дипломной работы содержание образец пример оформление выглядит сделать правильно написать оглавление 2018" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

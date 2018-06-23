@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Совместить работу и учебу – реально! | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Последние годы в вузе – это то время, когда молодые и амбициозные люди впервые начинают по-настоящему искать возможности для реализации себя в профессиональном направлении. Бытует мнение, что начинать работать по специальности лучше всего, когда ты учишься. И это правильно и интересно. Но интересы часто выходят за рамки средств, которыми располагают молодые люди-студенты. Тогда и начинается поиск работы. Но как быть с тем, что на учебу остается совсем немного времени? Многие студенты задумываются о том, чтобы сделать диплом на заказ. И это правильное направление мысли. Почему? Это просто: потому что это делает реальным и работать, строя карьеру и набираясь опыта, и оставаться в строю успешных студентов." />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

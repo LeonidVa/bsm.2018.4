@@ -22,13 +22,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import otchet from 'components/config/linksBlock/otchet';
 
 import Video from 'components/common/VideoBlock';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Заказать отчет по производственной практике недорого в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="В компании BeSmarter! вы можете заказать отчет по производственной практике недорого с печатью в Москве. Тел. +7 (495) 772-40-90." />
+                <meta name="keywords" content="отчёт по производственной практике заказать купить написание написать на заказ сколько стоит стоимость срочно" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

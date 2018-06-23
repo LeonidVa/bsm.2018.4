@@ -23,12 +23,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlock/diplom';
 
 import VideoBlock from 'components/common/VideoBlock';
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Главная">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Разработка и написание дипломного проекта. Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40." />
+                <meta name="keywords" content="заказать дипломный проект купить цена стоимость" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

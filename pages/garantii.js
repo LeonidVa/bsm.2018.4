@@ -15,7 +15,7 @@ import formConfig from 'components/config/formConfig';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import links from 'components/config/linksBlockConfig';
 
-
+import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
 
@@ -24,6 +24,12 @@ const page = () => (
     <Wrapper title="Гарантия качества в компании BeSmarter!. Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Наши довольные клиенты — это самая главная и важная гарантия, которую мы предоставляем тебе. Ведь это — реальный показатель высокого качества нашей работы. Все наши авторы — преподаватели, кандидаты или доктора наук." />
+                <meta name="keywords" content="диплом, диссертация, курсовая, реферат, экзамен, контрольная, сопровождение" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

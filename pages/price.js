@@ -15,7 +15,7 @@ import formConfig from 'components/config/formConfig';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import links from 'components/config/linksBlockConfig';
 
-
+import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
 
@@ -24,6 +24,12 @@ const page = () => (
     <Wrapper title="Услуги и цены">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="На этой страниц представленны цены на дипломные, курсовые работы и многие другие услуги компании BeSmarter!, звоните Тел. +7 (495) 772-40-90" />
+                <meta name="keywords" content="стоимость дипломной работы написать диплом цена написания на заказ заказать" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

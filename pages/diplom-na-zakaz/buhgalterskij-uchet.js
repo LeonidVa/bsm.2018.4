@@ -32,8 +32,8 @@ const page = () => (
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
+                <meta name="description" content="В компании «BeSmarter!» можно срочно и недорого заказать дипломную работу по бухгалтерскому учету по выгодной цене в Москве. Тел. +7 (495) 772-40-90." />
+                <meta name="keywords" content="дипломная работа по бухгалтерскому учету" />
             </MetaTags>
             
             <section className="breadcrumbs">

@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Выбираем вуз своей мечты | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="На дворе лето. Для тысяч школьников это возможно самые волнующие три месяца в жизни, потому что это их последнее лето в школе. Они – выпускники. И в этом году им предстоит начать полную незабываемых деньков студенческую жизнь. Но прежде придется решить по-настоящему серьезный вопрос – выбрать вуз своей мечты. Это трудно, ведь каждый думает: «А вдруг выберу не то? А что если не справлюсь? А кто поможет мне, ведь семья занимается абсолютно другим?». Но не нужно бояться, ведь Вы всегда сможете найти помощь у специалистов и выполнить любое задание, например, курсовую работу или диплом на заказ." />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

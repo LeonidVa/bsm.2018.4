@@ -22,12 +22,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig';
 
 import Video from 'components/common/VideoBlock';
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Сколько стоит магистерская диссертация – цена написания магистерской диссертации на заказ – от 24 000 руб. | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Интересует, цена магистерской диссертации? Позвоните в компанию BeSmarter! и мы вам скажем сколько стоит магистерская диссертация | Тел. +7 (495) 772-40-90." />
+                <meta name="keywords" content="Сколько стоит магистерская диссертация на заказ стоимость написать цена" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

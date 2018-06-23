@@ -18,17 +18,22 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
-
+import MetaTags from 'react-meta-tags';
 import Video from 'components/common/VideoBlock';
-
 
 
 const page = () => (
     <Wrapper title="Как написать заключение к дипломной работе образец – написание заключения в дипломной работе пример на сайте компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            
+
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="В статье раскрыта тема: «Как правильно написать заключение к дипломной работе», приведены общие рекомендации, примеры и образцы заключений дипломных работ." />
+                <meta name="keywords" content="Заключение в дипломной работе пример как написать образец написание пишется что правильно структура" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

@@ -18,15 +18,19 @@ import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Написание рефератов | «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img5">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Каждому студенту знакома такая ситуация: через пару дней уже начинается сессия, а рефераты, которые нужно было сделать в течение семестра, еще не готовы. Казалось бы, всего лишь какие-то рефераты могут стать препятствием на пути к сессии! Но, увы и ах, это так. Время летит так быстро, а работа, семья, друзья, естественно, требуют к себе внимания. Чтобы написание реферата не превратилось в препятствие к успешной сессии, наша компания BeSmarter! всегда готова протянуть свою руку помощи!" />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

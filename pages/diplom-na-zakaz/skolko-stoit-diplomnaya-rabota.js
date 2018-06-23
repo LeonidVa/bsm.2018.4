@@ -22,13 +22,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlock/diplom';
 
 import Video from 'components/common/VideoBlock';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Сколько стоит написать диплом – стоимость дипломной работы в компании «BeSmarter!» - 8900 рублей, закажите сейчас - тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Интересуетесь сколько стоит написать дипломную работу на заказ в Москве? Хотите разобраться сколько стоит заказать диплом? Звоните в компанию BeSmarter! И мы вам скажем точную стоимость дипломной работы!" />
+                <meta name="keywords" content="Стоимость цена дипломной работы сколько стоит написать заказать диплом написание на заказ сделать купить в Москве" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

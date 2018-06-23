@@ -22,13 +22,19 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlock/kursovaya';
 
 import Video from 'components/common/VideoBlock';
-
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Сколько стоит курсовая работа – стоимость курсовой работы в Москве - 2000 рублей, звоните в компанию «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Хотите узнать сколько стоит написать курсовую работу на заказ в Москве? Примерная стоимость курсовой работы – 2000 рублей! Звоните в компанию BeSmarter! И мы вам скажем точно сколько стоит написать курсовую работу." />
+                <meta name="keywords" content="Стоимость цена курсовой работы сколько стоит написать заказать  написание на заказ сделать купить в Москве" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

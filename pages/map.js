@@ -21,12 +21,21 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig';
 
+import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
     <Wrapper title="Карта сайта">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
 
+            
+
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Карта сайта BeSmarter!" />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

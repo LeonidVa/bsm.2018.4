@@ -234,11 +234,8 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Написание диплома под ключ
-                </h2>
-                <p className="block-text__par">
                     Как заказать дипломную работу в Москве?
-                </p>
+                </h2>
                 <ul className="fitted">
                     <li>
                         Заказать написание онлайн – просто <b><a href="#form">заполните заявку</a></b> на сайте.

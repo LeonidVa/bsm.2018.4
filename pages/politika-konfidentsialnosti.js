@@ -8,11 +8,11 @@ const page = () => (
         <div className="wrapper bg bg-c2 bg-img bg-img4">
             <section className="breadcrumbs">
                 <div className="inner">
-                    <Link href="/pricing">
+                    <Link href="/price">
                         <a>AAAAAAAAAA</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/course">
+                    <Link href="#">
                         <a>AAAAAAAAAAAAAAA</a>
                     </Link>
                 </div>

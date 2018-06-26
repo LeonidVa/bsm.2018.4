@@ -139,7 +139,7 @@ const page = () => (
                         </Link>
                     </li>
                     <li>
-                        <Link href="/stati/zakluchenie-po-diplomnoj-rabote">
+                        <Link href="/stati/zakluchenie-k-diplomnoj-rabote">
                             <a>Как написать заключение к дипломной работе (образец)</a>
                         </Link>
                     </li>
@@ -183,19 +183,19 @@ const page = () => (
                             <p>от 5 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Доклад</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Оригинальность текста</span>
                             <p>Во всех системах</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Ответы к защите</span>
                             <p>от 200 руб.</p>
@@ -209,25 +209,25 @@ const page = () => (
                             <p>от 2 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
                             <p>Гибкие условия</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
                             <p>от 1 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Слайды</span>
                             <p>от 350 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
                             <p>от 1 200 руб.</p>

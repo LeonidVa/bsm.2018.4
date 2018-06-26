@@ -22,6 +22,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlock/diplom';
 
 import MetaTags from 'react-meta-tags';
+import Video from 'components/common/VideoBlock';
 
 
 const page = () => (
@@ -263,9 +264,9 @@ const page = () => (
                 </p>
             </section>
 
-            <VideoBlock>
+            <Video>
                 <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
-            </VideoBlock>
+            </Video>
 
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>

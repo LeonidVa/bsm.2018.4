@@ -1,4 +1,3 @@
-
 .modal-sale {
     position: fixed;
     width: 100%;
@@ -55,29 +54,7 @@
             }
         }
     }
-    &__close {
-        width: 1.56em;
-        height: 1.56em;
-        position: absolute;
-        top: 1em;
-        right: .8em;
-        cursor: pointer;
-        .line {
-            width: 100%;
-            height: 3px;
-            background-color: #fff;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            margin-top: -1.5px;
-            transform: rotate(44deg);
-            &:last-child {
-                transform: rotate(-44deg);
-            }
-        }
-    }
     &__body {
-        position: absolute;
         width: 34.18em;
         max-width: 100%;
         left: 50%;

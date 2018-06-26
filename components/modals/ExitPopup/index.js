@@ -1,6 +1,7 @@
 import React, {Component, createContext} from 'react';
 import './style.scss';
 import axios from 'axios';
+import Close from "../Close/index";
 
 const exitPopupState = {
     formtype: 'exitpopup',
@@ -80,12 +81,13 @@ class ExitPopup extends Component {
                                  context.hide()
                              }}
                         >
-                            <div className="modal-sale__body"
+                            <div className="modal-sale__body modal__body"
                                  onClick={(e) => {
                                      e.stopPropagation();
                                  }}
                                 //style={{backgroundImage: 'url(' + require('static/images/modal/1.jpg') + ')'}}
                             >
+                                <Close onClick={() => { context.hide() }}/>
                                 <div className="modal-sale__top">
                                     <span className="percent">{bonus}</span>
                                     <span className="top-text">{message}</span>

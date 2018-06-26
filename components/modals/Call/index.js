@@ -1,7 +1,7 @@
 import React, {Component, createContext} from 'react';
 import './style.scss';
 import axios from 'axios';
-
+import Close from '../Close';
 
 const callPopupState = {
     phone: '',
@@ -80,9 +80,10 @@ class CallPopup extends Component {
                              onClick={() => {
                                  context.hide()
                              }}>
-                            <div className="block-form block-form2 modal-form" onClick={(e) => {
+                            <div className="block-form block-form2 modal-form modal__body" onClick={(e) => {
                                 e.stopPropagation();
                             }}>
+                                <Close onClick={() => { context.hide() }} inverse/>
                                 <h2 className="block-form__title">{context.question ? 'Задать вопрос' : 'Заказать звонок'}</h2>
                                 <form className="block-form__form" onSubmit={this.handleSubmit}>
                                     <div className="block-form__item">

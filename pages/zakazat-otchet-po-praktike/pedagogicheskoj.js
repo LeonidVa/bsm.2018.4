@@ -26,9 +26,15 @@ import Video from 'components/common/VideoBlock';
 
 
 const page = () => (
-    <Wrapper title="Главная">
+    <Wrapper title="">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
 
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="" />
+                <meta name="keywords" content="" />
+            </MetaTags>
+            
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">

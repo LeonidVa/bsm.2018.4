@@ -290,7 +290,6 @@ const page = () => (
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" formConfig={formConfig}/>
 
-            <LinksBlock links={links}/>
         </div>
     </Wrapper>
 );

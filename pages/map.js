@@ -139,7 +139,7 @@ const page = () => (
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/diplom-na-zakaz/dorabotka-diplomnoj-raboty">
+                                        <Link href="/dorabotka-diplomnoj-raboty">
                                             <a>Доработка дипломной работы</a>
                                         </Link>
                                     </li>

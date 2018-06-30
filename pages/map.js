@@ -365,7 +365,7 @@ const page = () => (
                                 </ul>
                             </li>
                             <li>
-                                <Link href="/esse-na-zakaz">
+                                <Link href="/zakazat-esse">
                                     <a>Эссе на заказ</a>
                                 </Link>
                             </li>

@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 //
 const page = () => (
-    <Wrapper title=":тут title который в head:">
+    <Wrapper title="Заказать дипломный проект в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c1 bg-img bg-img1">
             <section className="breadcrumbs">
                 <div className="inner">
-                    <Link href="/pricing">
+                    <Link href="/price">
                         <a>AAAAAAAAAA</a>
                     </Link>
                     <span> / </span>

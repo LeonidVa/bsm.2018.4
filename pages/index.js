@@ -290,6 +290,29 @@ const page = () => (
             <a name="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" formConfig={formConfig}/>
 
+            <section className="block-text">
+                <ul>
+                    <li>
+                        Где можно заказать дипломную работу
+                    </li>
+                    <li>
+                        Помощь в написании диплома
+                    </li>
+                    <li>
+                        Дипломная работа срочно
+                    </li>
+                    <li>
+                        Сколько стоит дипломная работа
+                    </li>
+                    <li>
+                        Диплом заказать недорого
+                    </li>
+                    <li>
+                        Выполнение дипломных работ
+                    </li>
+                </ul>
+            </section>
+
         </div>
     </Wrapper>
 );

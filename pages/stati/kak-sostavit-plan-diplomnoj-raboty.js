@@ -164,9 +164,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Как составить план дипломной работы (образец)
-                </h2>
+                </h1>
                 <p className="block-text__par italic">
                     "План – это «карта», по которой двигается процесс. Именно с его составления и начинается вся <Link href="/diplom-na-zakaz"><b><a>дипломная работа</a></b></Link>. Он позволяет структурировать информацию, определится с чего начать и на чем заострить особое внимание."
                 </p>

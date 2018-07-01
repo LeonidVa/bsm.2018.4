@@ -181,9 +181,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Сколько стоит заказать реферат
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     Выяснить, сколько стоит заказать реферат в компании «BeSmarter!», можно с помощью нашего <Link href="/price"><a>прайс-листа</a></Link>. Ориентировочный диапазон цен составляет от 1 500 до 7 000 рублей.
                 </p>

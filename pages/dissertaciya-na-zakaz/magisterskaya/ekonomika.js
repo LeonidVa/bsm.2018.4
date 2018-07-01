@@ -171,9 +171,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Магистерская диссертация по экономике
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     Если вам срочно нужна магистерская диссертация по экономике, а самостоятельно вы никак не укладываетесь в сроки, обратитесь за помощью в агентство BeSmarter! Мы занимаемся подготовкой научных работ по индивидуальным запросам клиентов. Чаще всего к нам обращаются, когда:
                 </p>

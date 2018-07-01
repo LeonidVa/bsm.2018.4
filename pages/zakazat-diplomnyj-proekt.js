@@ -21,7 +21,7 @@ const page = () => (
             <Title>ЭТО СТРАНИЦА-ЗАГЛУШКА</Title>
 
             <section className="block-text">
-                <h2 className="block-text__title">Дипломный проект</h2>
+                <h1 className="block-text__title">Дипломный проект</h1>
                 <p className="block-text__par">Тут должна быть страница про дипломный проект. На старом сайте есть страница с таким же адресом.</p>
             </section>
 

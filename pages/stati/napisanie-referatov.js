@@ -175,9 +175,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Написание рефератов
-                </h2>
+                </h1>
                 <p className="block-text__par italic right">
                     "Важно не количество знаний, а качество их. Можно знать очень многое, не зная самого нужного."
                 </p>

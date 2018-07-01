@@ -54,9 +54,9 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-text">
-                <h2 className="block-text__title center">
+                <h1 className="block-text__title center">
                     Карта сайта
-                </h2>
+                </h1>
                 <ul className="style-none">
                     <li>
                         <Link href="/contacts">

@@ -179,9 +179,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Заказать курсовой проект
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     Курсовой проект – это более сложный вариант курсовой работы, включающий помимо научного исследования по конкретной теме обязательную практическую часть, в которой студент показывает навыки технической и экономической реализации своего предложения.
                 </p>

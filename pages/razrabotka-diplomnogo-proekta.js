@@ -165,7 +165,7 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">Разработка и написание дипломного проекта</h2>
+                <h1 className="block-text__title">Разработка и написание дипломного проекта</h1>
                 <p className="block-text__par">
                     Вы можете заказать дипломный проект в BeSmarter!, чтобы сэкономить время и нервы, и, конечно же, успешно защититься. К нам обращаются в таких ситуациях:
                 </p>

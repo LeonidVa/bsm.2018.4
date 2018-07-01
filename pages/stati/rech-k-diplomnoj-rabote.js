@@ -164,9 +164,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Как написать речь к дипломной работе
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     Подготавливая речь к дипломной работе, важно ответить самому себе на следующие вопросы:
                 </p>

@@ -167,9 +167,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Диплом на заказ – «скорая помощь» студенту
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     С каждым годом все больше и больше студентов пользуются услугой <Link href="/diplom-na-zakaz"><b><a>диплом на заказ</a></b></Link>, и в этом нет ничего предосудительного. Возможно, кто-то будет возмущаться: «Ведь дипломная работа – это результат многолетней учебы!», но мы же живем в современном мире, а его реалии иногда бывают довольно суровы.
                 </p>

@@ -49,9 +49,9 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Разные статьи о том, как подготовиться студенту!
-                </h2>
+                </h1>
                 <ul style={{listStyle: 'none'}}>
                     <li>
                         <Link href="/stati/skoraya-pomoshch-studentu">

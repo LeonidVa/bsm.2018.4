@@ -168,9 +168,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Где заказать дипломную работу
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     Где заказать дипломную работу? Каждый год данный вопрос ставят перед собой тысячи студентов вузов. И вовсе не потому, что в России низкий уровень образования – просто времени на подготовку диплома критически не хватает.
                 </p>

@@ -169,9 +169,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Заказать дипломную работу по бухгалтерскому учёту
-                </h2>
+                </h1>
                 <ul>
                     <li>
                         Хотите, чтобы для Вас в сжатые сроки была написана дипломная работа по бухгалтерскому учёту?

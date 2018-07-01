@@ -182,9 +182,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Заказать отчет по учебной практике
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     В нашей компании собран лучший преподавательский состав, состоящий из действующих специалистов разных дисциплин с учеными степенями, начиная от преподавателей вузов до кандидатов наук. Вы будете довольны результатом!
                 </p>

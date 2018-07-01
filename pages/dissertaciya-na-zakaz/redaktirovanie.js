@@ -196,9 +196,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Сколько стоит редактирование диссертацию
-                </h2>
+                </h1>
                 <ul>
                     <li>
                         <b>Любые специальности</b><br/>

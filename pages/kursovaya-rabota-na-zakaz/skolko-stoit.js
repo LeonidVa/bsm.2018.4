@@ -179,9 +179,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Сколько стоит курсовая работа
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     Сколько стоит курсовая работа в Москве? Данным вопросом каждый год интересуются десятки тысяч студентов столичных вузов. Не потому, что они ленивы или недостаточно прилежны – просто времени на все не хватает.
                 </p>

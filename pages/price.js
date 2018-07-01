@@ -47,7 +47,7 @@ const page = () => (
             </section>
 
             <section className="block-text">
-                <h2 className="block-text__title">Цена вашей работы</h2>
+                <h1 className="block-text__title">Цена вашей работы</h1>
                 <p className="block-text__par">
                     Ваша работа пишется преподавателем только для вас, на ваших условиях и строго по вашим требованиям.
                 </p>

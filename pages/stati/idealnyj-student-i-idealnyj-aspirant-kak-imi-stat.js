@@ -175,9 +175,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Идеальный студент и идеальный аспирант: как ими стать?
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     Чтобы закончить ВУЗ с красным дипломом, недостаточно быть наделенным природным умом, большинство необходимых личностных качеств нужно развивать в себе самостоятельно. Это упорный ежедневный труд, но результат того стоит.
                 </p>

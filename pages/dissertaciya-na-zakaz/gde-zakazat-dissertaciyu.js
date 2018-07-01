@@ -196,9 +196,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Где заказать диссертацию
-                </h2>
+                </h1>
                 <p className="block-text__par">
                     Написание и успешная защита диссертации является обязательным условием получения очередной ученой степени, начиная от магистра и заканчивая доктором наук. При этом требования к данной работе намного выше в сравнении с курсовыми и даже дипломами.
                 </p>

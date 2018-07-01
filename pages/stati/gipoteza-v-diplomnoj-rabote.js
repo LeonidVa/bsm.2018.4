@@ -167,9 +167,9 @@ const page = () => (
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
             <section className="block-text">
-                <h2 className="block-text__title">
+                <h1 className="block-text__title">
                     Гипотеза в дипломной работе (пример)
-                </h2>
+                </h1>
                 <p className="block-text__par italic">
                     "Создавая большой проект для предоставления оценочной комиссии в ВУЗах, необходимо оснащать ее научной, рабочей гипотезой. Если исключить такую нить особого взгляда на корень темы, то весь пакет разработок и исследований потеряет свою значимость в научной проекции."
                 </p>

@@ -5,7 +5,7 @@ export default class extends React.Component {
         if (!res) return {};
         res.setHeader('Content-Type', 'application/javascript');
         res.end(`<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
+<!--	created with www.mysitemapgenerator.com	-->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://2018.besmarter.ru/</loc>

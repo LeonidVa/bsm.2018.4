@@ -27,7 +27,7 @@ import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
-    <Wrapper title="" description="контент">
+    <Wrapper title="" description="">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
 
             <MetaTags>

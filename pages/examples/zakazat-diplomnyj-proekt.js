@@ -12,7 +12,7 @@ const page = () => (
                         <a>AAAAAAAAAA</a>
                     </Link>
                     <span> / </span>
-                    <Link href="/course">
+                    <Link href="#">
                         <a>AAAAAAAAAAAAAAA</a>
                     </Link>
                 </div>

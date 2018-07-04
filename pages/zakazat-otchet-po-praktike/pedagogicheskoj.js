@@ -22,11 +22,12 @@ import LinksBlock from 'components/common/LinksBlock';
 import otchet from 'components/config/linksBlock/otchet';
 
 import Video from 'components/common/VideoBlock';
+import MetaTags from 'react-meta-tags';
 
 
 
 const page = () => (
-    <Wrapper title="">
+    <Wrapper title="" description="контент">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
 
             <MetaTags>

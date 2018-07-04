@@ -25,6 +25,7 @@ const messegers = (messegersList) => (
                        className="block-mess__item"
                        style={{background:colors[index]}}
                        title={item.title}
+                       rel="nofollow"
                     >
                         <img src={item.icon} alt={item.title}/>
                     </a>

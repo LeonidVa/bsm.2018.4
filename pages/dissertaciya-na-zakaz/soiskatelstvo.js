@@ -25,12 +25,11 @@ import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
-    <Wrapper title="Соискательство | «BeSmarter!». Тел. +7 (495) 772-40-90.">
+    <Wrapper title="Соискательство | «BeSmarter!». Тел. +7 (495) 772-40-90." description="Если у Вас нет времени учиться в аспирантуре, а Вы хотите защитить кандидатскую диссертацию, то Вы можете стать соискателем ученой степени кандидата наук.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="description" content="Если у Вас нет времени учиться в аспирантуре, а Вы хотите защитить кандидатскую диссертацию, то Вы можете стать соискателем ученой степени кандидата наук." />
                 <meta name="keywords" content="" />
             </MetaTags>
             

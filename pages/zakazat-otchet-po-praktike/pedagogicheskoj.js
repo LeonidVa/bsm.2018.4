@@ -32,7 +32,6 @@ const page = () => (
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="description" content="" />
                 <meta name="keywords" content="" />
             </MetaTags>
             

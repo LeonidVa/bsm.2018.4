@@ -22,12 +22,11 @@ import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
-    <Wrapper title="Разные статьи о том, как подготовиться студенту!">
+    <Wrapper title="Разные статьи о том, как подготовиться студенту!" description="Полезные статьи в помощь студентам и аспирантам, читайте на сайте BeSmarter!">
         <div className="wrapper bg bg-c2 bg-img bg-img1">
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="description" content="Полезные статьи в помощь студентам и аспирантам, читайте на сайте BeSmarter!" />
                 <meta name="keywords" content="" />
             </MetaTags>
             

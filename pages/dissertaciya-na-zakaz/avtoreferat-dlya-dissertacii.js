@@ -25,12 +25,11 @@ import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
-    <Wrapper title="Заказать автореферат диссертации в Москве и РФ – цены, сроки написания под ключ">
+    <Wrapper title="Заказать автореферат диссертации в Москве и РФ – цены, сроки написания под ключ" description="Заказать автореферат диссертации недорого! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="description" content="Заказать автореферат диссертации недорого! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40." />
                 <meta name="keywords" content="" />
             </MetaTags>
             

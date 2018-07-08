@@ -4,7 +4,6 @@ import Head from 'next/head';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
-
 import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/ExitPopup'
 import CallPopup, {callPopupContext, callPopupState} from 'components/modals/Call'
 

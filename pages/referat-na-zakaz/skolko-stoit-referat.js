@@ -19,7 +19,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/linksBlock/referat'
 
 import MetaTags from 'react-meta-tags';
 
@@ -294,7 +294,7 @@ const page = () => (
                 </p>
             </section>
 
-            <LinksBlock links={links}/>
+            <LinksBlock links={referat}/>
         </div>
     </Wrapper>
 );

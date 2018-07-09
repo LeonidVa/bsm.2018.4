@@ -344,7 +344,7 @@ const page = () => (
                 </p>
             </section>
 
-            <LinksBlock links={links}/>
+            {/* <LinksBlock links={links}/> */}
         </div>
     </Wrapper>
 );

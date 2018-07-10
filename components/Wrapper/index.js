@@ -138,6 +138,7 @@ class Wrapper extends Component {
                             <title>{this.props.title}</title>
                             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
                             <meta name="description" content={this.props.description}/>
+                            <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
                         </Head>
                         <Header/>
                         {this.props.children}

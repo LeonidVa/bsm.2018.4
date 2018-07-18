@@ -87,6 +87,9 @@ export default (props) => (
                 <br/>
                 <span>ИНН 7725765120 ОГРН 1127746632276</span>
                 <span>© 2004-{1900 + new Date().getYear()}</span>
+                <br/>
+                <span><Link href="/map"><a>Карта сайта</a></Link></span>
+
 
             </p>
         </div>

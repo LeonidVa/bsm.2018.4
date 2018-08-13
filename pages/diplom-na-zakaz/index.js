@@ -26,7 +26,8 @@ import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
-    <Wrapper title="Заказать дипломную работу – дипломная работа (диплом) на заказ в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="Хотите заказать дипломную работу в Москве?  В компании «BeSmarter!» работают опытные профессионалы, готовые написать вашу дипломную работу на заказ срочно от 1-го дня, по выгодной цене! Тел. +7 (495) 772-40-90.">
+    <Wrapper title="Заказать дипломную работу – дипломная работа (диплом) на заказ в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
+             description="Хотите заказать дипломную работу в Москве?  В компании «BeSmarter!» работают опытные профессионалы, готовые написать вашу дипломную работу на заказ срочно от 1-го дня, по выгодной цене! Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <MetaTags>
@@ -52,8 +53,8 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                <Link>
+                    <a href="/diplom-na-zakaz#form" className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Дипломная работа</span>
                             <p className="block-service__par">Быстро и качественно!</p>
@@ -87,9 +88,8 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/zashitit">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
@@ -101,25 +101,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Пакет «Успешная Защита»</span>
                             <p>от 5 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Доклад</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Оригинальность текста</span>
                             <p>Во всех системах</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Ответы к защите</span>
                             <p>от 200 руб.</p>
@@ -127,31 +127,31 @@ const page = () => (
                     </Link>
                 </div>
                 <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Мини-диплом Раскладка</span>
                             <p>от 2 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
                             <p>Гибкие условия</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
                             <p>от 1 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Слайды</span>
                             <p>от 350 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
                             <p>от 1 200 руб.</p>
@@ -215,7 +215,7 @@ const page = () => (
                 </h2>
                 <ul>
                     <li>
-                       <b>Дисциплину.</b> По гуманитарным предметам можно заказать дипломную работу недорого, технические специальности оцениваются выше.
+                        <b>Дисциплину.</b> По гуманитарным предметам можно заказать дипломную работу недорого, технические специальности оцениваются выше.
                     </li>
                     <li>
                         <b>Тематику.</b> Стоимость написания диплома даже в рамках одной специальности зависит от сложности выбранной темы.
@@ -225,7 +225,7 @@ const page = () => (
                     </li>
                     <li>
                         <b>Время.</b> Заказ диплома срочно оплачивается дополнительно. Стандартное время написания – около месяца.
-                   </li>
+                    </li>
                 </ul>
             </section>
 

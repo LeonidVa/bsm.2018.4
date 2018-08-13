@@ -26,14 +26,15 @@ import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
-    <Wrapper title="Диплом MBA (мва, мба) – заказать диплом MBA! Помощь в написании дипломной работы mba | Диплом mba на заказ в Москве – Besmarter!" description="Многие задаются вопросом: «Как успеть написать диплом МВА срочно и при этом уделить достаточно времени работе?» Оптимальным решением в такой ситуации становится диплом MBA на заказ в Москве от компании BeSmarter!: мы выполняем для Вас эту трудоёмкую работу на самом высоком уровне, а Вы в это время спокойно занимаетесь своим делом и зарабатываете деньги.">
+    <Wrapper title="Диплом MBA (мва, мба) – заказать диплом MBA! Помощь в написании дипломной работы mba | Диплом mba на заказ в Москве – Besmarter!"
+             description="Многие задаются вопросом: «Как успеть написать диплом МВА срочно и при этом уделить достаточно времени работе?» Оптимальным решением в такой ситуации становится диплом MBA на заказ в Москве от компании BeSmarter!: мы выполняем для Вас эту трудоёмкую работу на самом высоком уровне, а Вы в это время спокойно занимаетесь своим делом и зарабатываете деньги.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="keywords" content="диплом mba в Москве дипломы мва на заказ заказать написание дипломной работы мба срочно кейсы мва" />
+                <meta name="keywords" content="диплом mba в Москве дипломы мва на заказ заказать написание дипломной работы мба срочно кейсы мва"/>
             </MetaTags>
-            
+
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/"><a>Главная</a></Link>
@@ -48,8 +49,8 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-mba-na-zakaz">
-                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                <Link>
+                    <a href="/diplom-mba-na-zakaz#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/8.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Диплом MBA</span>
                             <p className="block-service__par">Решаем кейсы любой сложности</p>
@@ -60,22 +61,22 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Диплом MBA<br/>под ключ</span>
-                            <p>Берем заботы на себя</p>
-                        </a>
-                    </Link>
-                    <Link href="#">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Консультация автора</span>
-                            <p>Прямая связь</p>
+                            <span className="block-service__list-title">Дипломный проект</span>
+                            <p>от 21 000 руб.</p>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Сопровождение<br/>до защиты</span>
-                            <p>Надежно, спокойно</p>
+                            <span className="block-service__list-title">Магистерская диссертация</span>
+                            <p>от 23 000 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/diplom-na-zakaz">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Дипломная работа</span>
+                            <p>от 14 000 руб.</p>
                         </a>
                     </Link>
                 </div>
@@ -96,25 +97,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Пакет «Успешная Защита»</span>
                             <p>от 5 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Доклад</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Оригинальность текста</span>
                             <p>Во всех системах</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Ответы к защите</span>
                             <p>от 200 руб.</p>
@@ -122,31 +123,31 @@ const page = () => (
                     </Link>
                 </div>
                 <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Мини-диплом Раскладка</span>
                             <p>от 2 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
                             <p>Гибкие условия</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
                             <p>от 1 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Слайды</span>
                             <p>от 350 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
                             <p>от 1 200 руб.</p>
@@ -164,19 +165,19 @@ const page = () => (
                 <ul>
                     <li>
                         <b>Гарантия качества</b><br/>
-                        Мы напишем оригинальный диплом MBA на заказ в полном соответствии с вашими требованиями и правилами оформления.
+                        Напишем диплом МБА в соответствии с вашими требованиями и оформим по правилам.
                     </li>
                     <li>
                         <b>Уникальность текста</b><br/>
-                        Осуществляется обязательная проверка работы с помощью всех основных онлайн-сервисов антиплагиата (АП, АП.вуз, Etxt, Advego).
+                        Проверка работы осуществляется с помощью всех основных онлайн-сервисов антиплагиата (АП, АП.вуз, Etxt, Advego).
                     </li>
                     <li>
                         <b>Пунктуальность</b><br/>
-                        Срок сдачи готового диплома фиксируется в официальном договоре и отслеживается вашим индивидуальным менеджером.
+                        Срок сдачи готового диплома фиксируется в официальном договоре и отслеживается вашим менеджером.
                     </li>
                     <li>
                         <b>Последовательность</b><br/>
-                        Мы сопровождаем наших клиентов вплоть до успешной защиты, консультируя и помогая с подготовкой дополнительных материалов.
+                        Мы сопровождаем вас до успешной защиты, консультируя и помогая с подготовкой дополнительных материалов.
                     </li>
                     <li>
                         <b>Удобство</b><br/>

@@ -54,7 +54,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link>
-                    <a href="#form" className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/1.jpg') + ")",}}>
+                    <a href="#form" className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/111.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Дипломный проект</span>
                             <p className="block-service__par">Быстро и качественно!</p>

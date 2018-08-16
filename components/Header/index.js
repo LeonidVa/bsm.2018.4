@@ -60,7 +60,7 @@ class Header extends Component {
                                 //<OrderCallButton><a className="header__telanckor">+7 495 772 40 90</a></OrderCallButton>
                             }
 
-                            <ToggleCallPopup><a className="header__order-tel"><span style={{padding: "1em 0"}}>Заказать звонок</span></a></ToggleCallPopup>
+                            <ToggleCallPopup><a className="header__order-tel"><span style={{padding: "1em 0"}}><span className="header__order-call">Заказать звонок</span></span></a></ToggleCallPopup>
                         </div>
                         <div id="nav-icon3"
                              className={`humburger ${showMenuMob ? 'open' : ''}`}

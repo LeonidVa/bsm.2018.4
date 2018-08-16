@@ -225,6 +225,11 @@
             display: none;
         }
     }
+    &__order-call {
+        @media (max-width: 660px) {
+            display: none;
+        }
+    }
 }
 #nav-icon3 {
     width: 3em;

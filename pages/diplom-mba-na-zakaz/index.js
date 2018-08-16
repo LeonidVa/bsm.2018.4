@@ -50,7 +50,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link>
-                    <a href="/diplom-mba-na-zakaz#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/8.jpg') + ")",}}>
+                    <a href="/diplom-mba-na-zakaz#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/88.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Диплом MBA</span>
                             <p className="block-service__par">Решаем кейсы любой сложности</p>

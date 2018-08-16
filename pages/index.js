@@ -24,12 +24,13 @@ import MetaTags from 'react-meta-tags';
 
 
 const page = () => (
-    <Wrapper title="Помощь студентам в написании работ - заказать дипломную, курсовую, магистерскую и другие работы в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90" description="Компания BeSmarter! профессионально оказывает помощь студентам в написании работ! Дипломные и курсовые работы на заказ, написание магистерских диссертаций, а также можно заказать рефераты, контрольные, отчеты по пратике в Москве, звоните Тел. +7 (495) 772-40-90">
+    <Wrapper title="Помощь студентам в написании работ - заказать дипломную, курсовую, магистерскую и другие работы в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90"
+             description="Компания BeSmarter! профессионально оказывает помощь студентам в написании работ! Дипломные и курсовые работы на заказ, написание магистерских диссертаций, а также можно заказать рефераты, контрольные, отчеты по пратике в Москве, звоните Тел. +7 (495) 772-40-90">
         <div className="wrapper main">
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="keywords" content="Помощь студентам в написании студенческих работ на заказ сайт заказать учебные объявление помощь дипломные курсовые рефераты" />
+                <meta name="keywords" content="Помощь студентам в написании студенческих работ на заказ сайт заказать учебные объявление помощь дипломные курсовые рефераты"/>
             </MetaTags>
 
             <section className="block-nav">
@@ -38,8 +39,6 @@ const page = () => (
                 <NavRow url='/contacts' title="Контакты" description="Узнай, где нас найти"/>
             </section>
             <MessBlock/>
-
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -82,13 +81,16 @@ const page = () => (
                     Сделаем всё как надо!
                 </h2>
                 <p className="block-text__par">
-                    Опытные авторы напишут дипломную работу в полном соответствии с требованиями вашего научного руководителя. Скажем даже больше: часто научным руководителям настолько нравится глубина раскрытия темы, приведенные аргументы и четкие формулировки диплома, что никаких доработок не требуется.
+                    Опытные авторы напишут дипломную работу в полном соответствии с требованиями вашего научного руководителя.
+                </p>
+                <p className="block-text__par">
+                    Скажем даже больше: часто научным руководителям настолько нравится глубина раскрытия темы, приведенные аргументы и четкие формулировки диплома, что никаких доработок не требуется.
                 </p>
             </section>
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/3.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Диссертационные работы</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -99,13 +101,13 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/dissertaciya-na-zakaz/kandidatskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/dissertaciya-na-zakaz/kandidatskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
@@ -128,7 +130,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/7.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Курсовая работа</span>
                             <p className="block-service__par">Не парься сам – доверься нам!</p>
@@ -145,19 +147,19 @@ const page = () => (
                             <p>от 3 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/referat-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Реферат</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/kontrolnaya-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
@@ -171,7 +173,6 @@ const page = () => (
                     </Link>
                 </div>
             </section>
-
 
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
 
@@ -230,20 +231,18 @@ const page = () => (
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Помощь студентам в написании работ
+                    Помощь студентам в&nbsp;написании работ
                 </h2>
+
                 <p className="block-text__par">
-                    Оказывая помощь в написании студенческих работ, мы направляем усилия лучших специалистов для успешной сдачи нашими клиентами студенческих работ.
-                </p>
-                <p className="block-text__par">
-                    Наша команда работает исключительно на результат и гордится каждым выполненным заказом.
+                    Наша команда работает для успешной защиты каждого студента.
                 </p>
                 <p className="block-text__par">
-                    Индивидуальный подход не только в выполнении заказов, но и при расчете оплаты.
+                    Мы направляем усилия лучших специалистов для успешной сдачи ваших работ: у вас будет свой менеджер, свой автор и своя цена. Это по-настоящему индивидуальный подход при выполнении каждого заказа!</p>
+                <p className="block-text__par  italic bold">
+                    Не теряйте времени – заказывайте сейчас!
                 </p>
-                <p className="block-text__par italic bold">
-                    Не теряйте время, мы выполним любую студенческую работу в срок!
-                </p>
+
             </section>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
@@ -267,7 +266,7 @@ const page = () => (
                     </li>
                 </ul>
                 <p className="block-text__par italic bold">
-                    Открывая наш сайт студенческих работ на заказ, будьте уверены — вы связались с профессионалами.
+                    Обращаясь в нашу компанию выполнения студенческих работ на заказ, будьте уверены – Вам помогают прфессионалы!
                 </p>
             </section>
 
@@ -292,22 +291,34 @@ const page = () => (
             <section className="block-text">
                 <ul>
                     <li>
-                        Где можно заказать дипломную работу
+                        <Link href="/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu">
+                            <a>Где можно заказать дипломную работу</a>
+                        </Link>
                     </li>
                     <li>
-                        Помощь в написании диплома
+                        <Link href="/stati/napisanie-diploma">
+                            <a>Помощь в написании диплома</a>
+                        </Link>
                     </li>
                     <li>
-                        Дипломная работа срочно
+                        <Link href="diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu">
+                            <a>Дипломная работа срочно</a>
+                        </Link>
                     </li>
                     <li>
-                        Сколько стоит дипломная работа
+                        <Link href="/diplom-na-zakaz/skolko-stoit-diplomnaya-rabota">
+                            <a>Сколько стоит дипломная работа</a>
+                        </Link>
                     </li>
                     <li>
-                        Диплом заказать недорого
+                        <Link href="/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu">
+                            <a>Диплом заказать недорого</a>
+                        </Link>
                     </li>
                     <li>
-                        Выполнение дипломных работ
+                        <Link href="/diplom-na-zakaz">
+                            <a>Выполнение дипломных работ</a>
+                        </Link>
                     </li>
                 </ul>
             </section>

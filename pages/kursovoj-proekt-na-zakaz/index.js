@@ -32,9 +32,9 @@ const page = () => (
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="keywords" content="Заказать курсовой проект купить на заказ написание сколько стоит стоимость цена" />
+                <meta name="keywords" content="Заказать курсовой проект купить на заказ написание сколько стоит стоимость цена"/>
             </MetaTags>
-            
+
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">
@@ -52,16 +52,14 @@ const page = () => (
             </section>
             <MessBlock/>
 
-
-
             <section className="block-service">
-                <Link href="/kursovaya-rabota-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
+                <Link>
+                    <a href="#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Курсовая работа</span>
+                            <span className="block-service__title">Курсовой проект</span>
                             <p className="block-service__par">Не парься сам – доверься нам!</p>
                             <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 4 000 руб.</p>
+                            <p className="block-service__par">От 8 000 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </a>
@@ -73,28 +71,28 @@ const page = () => (
                             <p>от 3 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/referat-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Реферат</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/kontrolnaya-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/kursovoj-proekt-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/kursovoj-proekt-na-zakaz">
+                    <Link href="/kursovaya-rabota-na-zakaz">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовой проект</span>
-                            <p>от 8 000 руб.</p>
+                            <span className="block-service__list-title">Курсовая работа</span>
+                            <p>от 4 000 руб.</p>
                         </a>
                     </Link>
                 </div>
@@ -102,9 +100,8 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-
             <section className="block-service">
-                <Link href="/kursovaya-rabota-na-zakaz">
+                <Link href="/zashitit">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
@@ -116,25 +113,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Пакет «Успешная Защита»</span>
                             <p>от 5 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Доклад</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Оригинальность текста</span>
                             <p>Во всех системах</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Ответы к защите</span>
                             <p>от 200 руб.</p>
@@ -142,31 +139,31 @@ const page = () => (
                     </Link>
                 </div>
                 <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Мини-диплом Раскладка</span>
                             <p>от 2 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
                             <p>Гибкие условия</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
                             <p>от 1 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Слайды</span>
                             <p>от 350 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
                             <p>от 1 200 руб.</p>
@@ -185,7 +182,8 @@ const page = () => (
                     Курсовой проект – это более сложный вариант курсовой работы, включающий помимо научного исследования по конкретной теме обязательную практическую часть, в которой студент показывает навыки технической и экономической реализации своего предложения.
                 </p>
                 <p className="block-text__par">
-                    Как правило, курсовой проект содержит сложные расчеты, схемы, таблицы, графики, чертежи и другие инструменты визуального обобщения. Далеко не каждый студент владеет ими в достаточной мере, чтобы выполнить работу качественно и в срок. Если вы не успеваете с написанием, предлагаем заказать курсовой проект в компании BeSmarter!
+                    Как правило, курсовой проект содержит сложные расчеты, схемы, таблицы, графики, чертежи и другие инструменты визуального обобщения. Далеко не каждый студент владеет ими в достаточной мере, чтобы выполнить работу качественно и в срок. Если вы не успеваете с написанием, предлагаем заказать курсовой проект в
+                    компании BeSmarter!
                 </p>
             </section>
 
@@ -226,7 +224,8 @@ const page = () => (
                     Чтобы воспользоваться услугами наших экспертов, вам нужно оформить заявку любым удобным способом. Для уточнения всех деталей заказа мы проведем с вами предварительное собеседование. По его итогам будет составлен договор, содержащий ваши требования и наши обязательства.
                 </p>
                 <p className="block-text__par">
-                    Далее, после 50%-ной предоплаты, наш специалист выполняет курсовой проект и по главам сдает его вам на проверку. Это позволяет в случае необходимости вовремя внести корректировки (бесплатно). Готовый проект вы получаете в оговоренные сроки после окончательной оплаты. Затем автор помогает вам подготовиться к хорошей защите.
+                    Далее, после 50%-ной предоплаты, наш специалист выполняет курсовой проект и по главам сдает его вам на проверку. Это позволяет в случае необходимости вовремя внести корректировки (бесплатно). Готовый проект вы получаете в оговоренные сроки после окончательной оплаты. Затем автор помогает вам подготовиться к
+                    хорошей защите.
                 </p>
             </section>
 
@@ -268,7 +267,11 @@ const page = () => (
                 <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
             </Video>
 
-            <LinksBlock links={kursovaya}/>
+            <LinksBlock links={[
+                {url: "/kursovaya-rabota-na-zakaz/skolko-stoit", text: "Сколько стоит курсовая работа"},
+                {url: "/kursovaya-rabota-na-zakaz/sait-kursovyh-rabot", text: "Где заказать курсовую работу"},
+                {url: "/kursovoj-proekt-na-zakaz/po-detalyam-mashin", text: "Заказать курсовой проект по деталям машин"},
+            ]}/>
         </div>
     </Wrapper>
 );

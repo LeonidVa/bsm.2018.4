@@ -65,7 +65,7 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/zashitit">
+                    <Link href="/diplom-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Дипломная работа</span>
                             <p>от 14 000 руб.</p>
@@ -90,7 +90,7 @@ const page = () => (
 
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/zashitit">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>

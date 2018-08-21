@@ -17,7 +17,6 @@ class Accordion extends Component {
             }
             let cells = null;
             const tof = typeof row;
-            console.log('typeof row, row', tof, row);
 
             switch (tof) {
                 case "string":
@@ -52,7 +51,7 @@ class Accordion extends Component {
         let buttonEl = <br/>;
         if (button) {
             buttonEl = <Link href={buttonURL}>
-                <a className="big-btn" href="">{buttonLabel}</a>
+                <a className="big-btn">{buttonLabel}</a>
             </Link>;
         }
         return (

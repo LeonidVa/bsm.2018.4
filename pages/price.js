@@ -101,7 +101,7 @@ const page = () => (
                 title="Дипломная работа, от"
                 button={true}
                 buttonLabel="Нажми меня"
-                buttonURL="/"
+                buttonURL="#form"
                 rows={[
                     ["Стандартный вуз", "12 000"],
                     ["Вуз с повышенными требованиями", "15 000"],

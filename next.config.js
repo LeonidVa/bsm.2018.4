@@ -6,7 +6,7 @@ const withImages = require('next-images');
 const nextConfig = {
     //assetPrefix: 'https://static.besmarter.ru',
     webpack: (config, options) => {
-        console.log("options.dev", options.dev);
+        //console.log("options.dev", options.dev);
         /* Aliases */
         config.resolve.alias.static = __dirname + '/static/';
         config.resolve.alias.components = __dirname + '/components/';

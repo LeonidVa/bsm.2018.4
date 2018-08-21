@@ -3,7 +3,7 @@ import Title from 'components/common/Title';
 import Link from 'next/link';
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import fields from 'components/config/form/main'
 
 
 const page = () => (
@@ -61,7 +61,7 @@ const page = () => (
                 </p>
             </section>
 
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" formConfig={formConfig}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
         </div>
     </Wrapper>

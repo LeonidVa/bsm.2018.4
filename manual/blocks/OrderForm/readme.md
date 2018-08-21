@@ -21,6 +21,15 @@
 
 Определяет будет ли данная форма красной.
 
+### formType
+*string, default value `default formType`*
+
+
+Тип формы для отслеживания какую форму чаще заполняют.
+Отправляется в базу данных вместе с заявкой.
+
+Не влияет на отображение.
+
 ### formConfig
 
 Описание всех полей.
@@ -57,7 +66,7 @@
 ## Пример использования
 ```jsx
 import OrderForm from 'components/common/OrderForm';
-import {formConfig} from 'components/config/formConfig';
+import {fields} from 'components/config/form/main';
 
-<OrderForm title="Узнайте стоимость Вашей работы прямо сейчас!"  buttonLabel="Оценить" formConfig={formConfig}/>
+<OrderForm title="Узнайте стоимость Вашей работы прямо сейчас!"  buttonLabel="Оценить" fields={fields}/>
 ```

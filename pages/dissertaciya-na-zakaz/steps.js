@@ -8,7 +8,7 @@ import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'components/config/infoBlock/disser'
@@ -192,7 +192,7 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -983,7 +983,7 @@ const page = () => (
             </section>
 
             <a name="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <section className="block-text">
                 <p className="block-text__par">

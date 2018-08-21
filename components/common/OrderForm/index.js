@@ -6,30 +6,42 @@ import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
 import Dropdown from 'react-dropdown'
 import Recaptcha from "react-google-recaptcha";
 
-
 import axios from 'axios';
 
 
-/* fields are stored in /components/config/formConfig.js */
+/* fields are stored in /components/config/main.js */
 class OrderForm extends Component {
-    state = {
-        formtype: 'main',
-        name: '',
-        phone: '',
-        email: '',
-        theme: '',
-        worktype: {label: 'Укажите тип работы', value: ''},
-        discipline: '',
-        deadline: '',
-        size: '',
-        comment: '',
-        files: [],
-        fileName: 'Добавить файл',
-        Extended: false,
-        verified: "",
-        formSended: {bool: false, number: '', error: false},
-    };
 
+    constructor(props) {
+        super(props);
+        // Don't call this.setState() here!
+        let source = 'server side default value';
+        if (process.browser) {
+            source = window.location.hostname;
+        }
+        let formType = "default formType";
+        if (props.formType !== undefined) {
+            formType = props.formType
+        }
+        this.state = {
+            formType: formType,
+            source: source,
+            name: '',
+            phone: '',
+            email: '',
+            theme: '',
+            worktype: {label: 'Укажите тип работы', value: ''},
+            discipline: '',
+            deadline: '',
+            size: '',
+            comment: '',
+            files: [],
+            fileName: 'Добавить файл',
+            Extended: false,
+            verified: "",
+            formSended: {bool: false, number: '', error: false},
+        };
+    }
 
     verifyCallback = (value) => {
         this.setState({verified: value})
@@ -37,14 +49,14 @@ class OrderForm extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const {formtype, name, phone, email, theme, worktype, discipline, deadline, size, comment, files, fileName, Extended, verified} = this.state;
+        const {formType, source, name, phone, email, theme, worktype, discipline, deadline, size, comment, files, verified} = this.state;
         if (!this.state.verified) {
-            window.alert('Пожалуйста, пройдите каптчу');
-            return
+            //window.alert('Пожалуйста, пройдите каптчу');
+            //return
         }
         let formData = new FormData();
-        formData.set('form', 'Заказ работы');
-        formData.set('source', '2018.besmarter.ru');
+        formData.set('form', formType);
+        formData.set('source', source);
         formData.set('name', name);
         formData.set('phone', phone);
         formData.set('email', email);
@@ -101,8 +113,12 @@ class OrderForm extends Component {
     }
 
     renderForm = () => {
-        const {formConfig, buttonText} = this.props
-        return formConfig.map((field, index) => {
+        if (this.props.fields === undefined){
+            console.log("warning: form has no fields");
+            return "";
+        }
+        const {fields} = this.props
+        return fields.map((field, index) => {
             let rlabel = ""
             if (field.required) {
                 rlabel = <span title="Обязательное поле">*</span>

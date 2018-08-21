@@ -10,7 +10,7 @@ import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
 
 import OrderForm from 'components/common/OrderForm';
-import formConfig from 'components/config/formConfig'
+import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'components/config/infoBlock/diplom'
@@ -74,7 +74,7 @@ export default class Error extends React.Component {
 
 
                     <a name="form"/>
-                    <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+                    <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
                 </div>
             </Wrapper>

@@ -69,7 +69,6 @@ class CallPopup extends Component {
             <callPopupContext.Consumer>
                 {(context) => {
                     if (context.isShown === undefined || context.isShown === null || context.isShown === false) {
-                        console.log('call not rendering');
                         return null
                     }
                     this.state.question = context.question;
@@ -135,7 +134,6 @@ class ToggleCallPopup extends Component {
         return (
             <callPopupContext.Consumer>
                 {(context) => {
-                    console.log('toggleCallPopup callPopupContext', context, this.state);
                     if (context === undefined || context === null) {
                         return null
                     }
@@ -156,7 +154,6 @@ class ToggleQuestionPopup extends Component {
         return (
             <callPopupContext.Consumer>
                 {(context) => {
-                    console.log('toggleCallPopup callPopupContext', context, this.state);
                     if (context === undefined || context === null) {
                         return null
                     }

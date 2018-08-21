@@ -107,29 +107,14 @@ class Wrapper extends Component {
         }
     }
 
-    static componentDidMount() {
-        console.log('Wrapper componentDidMount')
-    }
-
     static getDerivedStateFromProps(nextProps, prevState) {
-        console.log('Wrapper getDerivedStateFromProps');
         return nextProps;
     }
 
-    static shouldComponentUpdate() {
-        console.log('Wrapper shouldComponentUpdate')
-    }
 
-    static componentDidUpdate() {
-        console.log('Wrapper componentDidUpdate')
-    }
 
-    static componentWillUnmount() {
-        console.log('Wrapper componentWillUnmount')
-    }
 
     render() {
-        console.log('Wrapper render')
         return (
             <callPopupContext.Provider value={this.state.callPopupState}>
                 <exitPopupContext.Provider value={this.state.exitPopupState}>

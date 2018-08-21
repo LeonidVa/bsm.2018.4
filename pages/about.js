@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm'
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 
-import formConfig from 'components/config/formConfig';
+import fields from 'components/config/form/main';
 import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import links from 'components/config/linksBlockConfig';
 
@@ -134,7 +134,7 @@ const page = () => (
                 </p>
             </section>
 
-            <OrderForm title="Заказать работу" formConfig={formConfig}/>
+            <OrderForm title="Заказать работу" fields={fields}/>
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <LinksBlock links={links}/>

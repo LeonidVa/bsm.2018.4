@@ -5,6 +5,7 @@ import Close from "../Close/index";
 
 const exitPopupState = {
     formtype: 'exitpopup',
+    source: 'server side default value',
     phone: '',
     name: '',
     comment: '',
@@ -26,19 +27,22 @@ class ExitPopup extends Component {
     constructor(props) {
         super(props);
 
-        this.state = exitPopupState
+        this.state = exitPopupState;
+        if (process.browser) {
+            this.state.source = window.location.hostname;
+        }
     }
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const {formtype, name, phone, comment, verified} = this.state;
-/*        if (!this.state.verified) {
-            window.alert('Пожалуйста, пройдите каптчу');
-            return
-        }*/
+        const {source, name, phone, comment, verified} = this.state;
+        /*        if (!this.state.verified) {
+                    window.alert('Пожалуйста, пройдите каптчу');
+                    return
+                }*/
         let formData = new FormData();
         formData.set('form', 'Скидка 500 рублей, при уходе с сайта');
-        formData.set('source', '2018.besmarter.ru');
+        formData.set('source', source);
         formData.set('name', name);
         formData.set('phone', phone);
         formData.set('comment', comment);
@@ -69,10 +73,8 @@ class ExitPopup extends Component {
             <exitPopupContext.Consumer>
                 {(context) => {
                     if (context.isShown === undefined || context.isShown === null || context.isShown === false) {
-                        console.log('exitpoput not rendering');
                         return null
                     }
-                    console.log('exitpoput is rendering');
                     return (
                         <div id="modal_sale"
                              className={`modal-sale ${className}`}
@@ -87,7 +89,9 @@ class ExitPopup extends Component {
                                  }}
                                 //style={{backgroundImage: 'url(' + require('static/images/modal/1.jpg') + ')'}}
                             >
-                                <Close onClick={() => { context.hide() }}/>
+                                <Close onClick={() => {
+                                    context.hide()
+                                }}/>
                                 <div className="modal-sale__top">
                                     <span className="percent">{bonus}</span>
                                     <span className="top-text">{message}</span>
@@ -119,7 +123,6 @@ class ToggleExitPopup extends Component {
         return (
             <exitPopupContext.Consumer>
                 {(context) => {
-                    console.log('toggleCallPopup callPopupContext', context, this.state);
                     if (context === undefined || context === null) {
                         return null
                     }

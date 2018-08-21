@@ -9,7 +9,7 @@ import Title from 'components/common/Title'
 import MapBlock from 'components/common/MapBlock';
 import OrderForm from 'components/common/OrderForm'
 import LinksBlock from 'components/common/LinksBlock'
-import formConfig from 'components/config/formConfig';
+import fields from 'components/config/form/main';
 import links from 'components/config/linksBlockConfig';
 import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
@@ -199,7 +199,7 @@ class page extends Component {
                         </Link>
                     </section>
 
-                    <OrderForm title="Заказать работу" formConfig={formConfig}/>
+                    <OrderForm title="Заказать работу" fields={fields}/>
                     <LinksBlock links={links}/>
                 </div>
             </Wrapper>

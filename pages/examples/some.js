@@ -56,7 +56,7 @@ const page = () => (
             </section>
 
             <ProfitsBlockSlider profitBlockConfig={profitBlockConfigLong}/>
-            <OrderForm title="Оценить работу" formConfig={formConfig}/>
+            <OrderForm title="Оценить работу" fields={fields}/>
             <ImageBlock imageSrc={require('static/images/block/a.jpg')}/>
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -132,7 +132,7 @@ const page = () => (
                 <p className="block-text__par">Диплом на заказ в Москве в компании BeSmarter – это отличный вариант успешно защитить свой диплом!</p>
             </section>
 
-            <OrderForm title="Узнайте стоимость Вашей работы прямо сейчас!" redForm={true} buttonLabel="Оценить" formConfig={formConfig}/>
+            <OrderForm title="Узнайте стоимость Вашей работы прямо сейчас!" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 

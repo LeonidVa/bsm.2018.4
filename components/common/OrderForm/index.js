@@ -184,7 +184,6 @@ class OrderForm extends Component {
                 }}>
                 <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
                 <DayPickerInput
-                  
                     format="L"
                     formatDate={formatDate}
                     parseDate={parseDate}

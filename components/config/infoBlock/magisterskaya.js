@@ -8,7 +8,7 @@ import icon_7 from "static/images/info/7.svg"
 import icon_8 from "static/images/info/8.svg"
 
 const infoBlockConfig = [
-    {icon: icon_1, title: 'Стоимость магистерской диссертации', desc: 'От 23 000 руб. до 185 000 руб.'},
+    {icon: icon_1, title: 'Стоимость магистерской диссертации', desc: 'От 25 000 руб. до 85 000 руб.'},
     {icon: icon_2, title: 'Срок выполнения', desc: 'От 2 часов'},
     {icon: icon_3, title: 'Гарантии', desc: 'Сделаем все, о чем договорились'},
     {icon: icon_4, title: 'Договор', desc: 'Внесение дополнений и пожеланий'},

@@ -6,6 +6,13 @@ import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
 import Dropdown from 'react-dropdown'
 import Recaptcha from "react-google-recaptcha";
 
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
+import MomentLocaleUtils, {
+    formatDate,
+    parseDate,
+} from 'react-day-picker/moment';
+
 import axios from 'axios';
 
 
@@ -134,6 +141,9 @@ class OrderForm extends Component {
                 case "file":
                     return this.nptFile(field);
                     break;
+                case "date":
+                    return this.nptDate(field);
+                    break;
                 default:
                     return this.nptText(field);
             }
@@ -157,6 +167,54 @@ class OrderForm extends Component {
                    value={this.state[field.name]}
                    onChange={(e) => this.setState({[field.name]: e.target.value})}/>
         </div>
+    }
+
+    nptDate(field) {
+        return (
+            <div className="block-form__item"
+                key={field.id}
+                style={{
+                    opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
+                    maxHeight: field.required ? '1000px' : (this.state.Extended ? '1000px' : '0'),
+                    visibility: field.required
+                        ? 'visible'
+                        : (this.state.Extended
+                            ? 'visible'
+                            : 'hidden'),
+                }}>
+                <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
+                <DayPickerInput
+                  
+                    format="L"
+                    formatDate={formatDate}
+                    parseDate={parseDate}
+                    placeholder={`${formatDate(new Date(), 'L', 'ru')}`}
+                    dayPickerProps={{
+                        locale: 'ru',
+                        localeUtils: MomentLocaleUtils,
+                    }}
+                    component={props => (
+                        <input
+                            id={field.id}
+                            placeholder={field.placeholder}
+                            required={field.required}
+                            value={this.state[field.name]}
+                            onChange={(e) => this.setState({ [field.name]: e.target.value })}
+                            {...props}
+                        />
+                    )}
+                />
+                {/*<input
+                    type={field.type}
+                    name=""
+                    id={field.id}
+                    placeholder={field.placeholder}
+                    required={field.required}
+                    value={this.state[field.name]}
+                    onChange={(e) => this.setState({ [field.name]: e.target.value })}
+                />*/}
+            </div>
+        );
     }
 
     nptTextarea(field) {

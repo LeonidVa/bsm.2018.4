@@ -16,10 +16,11 @@ class OrderForm extends Component {
         super(props);
         // Don't call this.setState() here!
         let source = 'server side default value';
-        if (process.browser) {
-            source = window.location.hostname;
-        }
         let formType = "default formType";
+        if (process.browser && window.location !== undefined) {
+            source = window.location.hostname;
+            formType += " at " + window.location.toString();
+        }
         if (props.formType !== undefined) {
             formType = props.formType
         }
@@ -113,7 +114,7 @@ class OrderForm extends Component {
     }
 
     renderForm = () => {
-        if (this.props.fields === undefined){
+        if (this.props.fields === undefined) {
             console.log("warning: form has no fields");
             return "";
         }

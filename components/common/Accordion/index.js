@@ -44,21 +44,19 @@ class Accordion extends Component {
 
     render() {
         const {title, rows, button, buttonLabel, buttonURL} = this.props;
-        let adfad = "block-accordion__arrow";
+        let classes = "block-accordion__arrow";
         if (this.state.open) {
-            adfad += " up"
+            classes += " up"
         }
         let buttonEl = <br/>;
         if (button) {
-            buttonEl = <Link href={buttonURL}>
-                <a className="big-btn">{buttonLabel}</a>
-            </Link>;
+            buttonEl = <a className="big-btn" href={buttonURL}>{buttonLabel}</a>;
         }
         return (
             <section className="block-text block-accordion" data-accordion="open" style={{paddingBottom: 0}}>
                 <div className="block-accordion__header" onClick={() => this.setState({open: !this.state.open})}>
                     <h2 className="block-text__title">{title}</h2>
-                    <div className={adfad}>
+                    <div className={classes}>
                         <div></div>
                     </div>
                 </div>

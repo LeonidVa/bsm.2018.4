@@ -14,18 +14,13 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.12",
     "@fortawesome/react-fontawesome": "^0.0.19",
     "@zeit/next-sass": "^0.1.2",
-    "ajv": "^6.0.0",
     "axios": "^0.18.0",
     "countdown": "^2.6.0",
-    "express": "^4.16.3",
     "merge-files-webpack-plugin": "^1.1.2",
-    "multer": "^1.3.0",
-    "next": "^7.0.0-canary.0",
+    "next": "^6.1.1",
     "next-compose-plugins": "^2.1.0",
     "next-images": "^0.10.2",
-    "node-sass": "^4.9.0",
-    "nodemailer": "^4.6.4",
-    "npm": "^6.1.0",
+    "node-sass": "^4.9.3",
     "react": "^16.3.2",
     "react-async-script": "^0.9.1",
     "react-device-detect": "^1.3.4",
@@ -37,7 +32,7 @@
     "react-scroll": "^1.7.9",
     "react-slick": "^0.23.1",
     "react-yandex-maps": "^2.1.4",
-    "webpack": "^3.1.0"
+    "webpack": "^3.12.0"
   },
   "devDependencies": {
     "generate-robotstxt": "^5.0.7"

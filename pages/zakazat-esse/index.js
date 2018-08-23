@@ -53,7 +53,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link>
-                    <a href="#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
+                    <a href="#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ii.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Эссе</span>
                             <p className="block-service__par">Не парься сам – доверься нам!</p>
@@ -261,7 +261,7 @@ const page = () => (
             </section>
 
             <a name="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
             
         </div>
     </Wrapper>

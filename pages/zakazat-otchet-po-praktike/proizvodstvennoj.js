@@ -59,12 +59,12 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/otch-prakrik1.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Курсовая работа</span>
+                            <span className="block-service__title">Отчет по практике</span>
                             <p className="block-service__par">Не парься сам – доверься нам!</p>
                             <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 4 000 руб.</p>
+                            <p className="block-service__par">От 3 000 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </a>

@@ -289,7 +289,7 @@ const page = () => (
             </section>
 
             <a name="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <Video>
                 <iframe src="https://www.youtube.com/embed/-heyiD9tCLc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

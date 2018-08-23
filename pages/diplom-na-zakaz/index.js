@@ -256,7 +256,7 @@ const page = () => (
             </Video>
 
             <a name="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <Video>
                 <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>

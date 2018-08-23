@@ -203,7 +203,7 @@ const page = () => (
             </section>
 
             <a name="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
         </div>
     </Wrapper>

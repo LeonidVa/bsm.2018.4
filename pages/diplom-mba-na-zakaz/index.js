@@ -255,7 +255,7 @@ const page = () => (
             </section>
 
             <Video>
-                <iframe src="https://drive.google.com/open?id=159HfczgLjy3uiVHfryJBAP9GLhN3RLHR" frameborder="0" allowfullscreen></iframe>
+                <iframe src="//drive.google.com/file/d/159HfczgLjy3uiVHfryJBAP9GLhN3RLHR/preview" frameBorder="0" allowFullScreen></iframe>
             </Video>
 
             <a name="form"/>

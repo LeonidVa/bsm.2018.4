@@ -255,7 +255,7 @@ const page = () => (
                 <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2" frameborder="0" allowfullscreen></iframe>
             </Video>
 
-            <a name="form"/>
+            <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <Video>

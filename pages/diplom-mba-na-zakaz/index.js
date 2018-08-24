@@ -258,7 +258,7 @@ const page = () => (
                 <iframe src="//drive.google.com/file/d/159HfczgLjy3uiVHfryJBAP9GLhN3RLHR/preview" frameBorder="0" allowFullScreen></iframe>
             </Video>
 
-            <a name="form"/>
+            <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <LinksBlock links={links}/>

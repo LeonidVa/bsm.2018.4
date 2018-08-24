@@ -239,7 +239,7 @@ const page = () => (
                 <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239032&hash=e0751038dfbca771&hd=2" frameborder="0" allowfullscreen></iframe>
             </Video>
 
-            <a name="form"/>
+            <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <LinksBlock links={links}/>

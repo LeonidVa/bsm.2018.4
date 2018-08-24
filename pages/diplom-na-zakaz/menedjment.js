@@ -262,7 +262,7 @@ const page = () => (
                 <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
             </Video>
 
-            <a name="form"/>
+            <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <LinksBlock links={links}/>

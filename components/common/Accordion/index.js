@@ -50,7 +50,7 @@ class Accordion extends Component {
         }
         let buttonEl = <br/>;
         if (button) {
-            buttonEl = <a className="big-btn" href={buttonURL}>{buttonLabel}</a>;
+            buttonEl = <Link href={buttonURL}><a className="big-btn">{buttonLabel}</a></Link>;
         }
         return (
             <section className="block-text block-accordion" data-accordion="open" style={{paddingBottom: 0}}>

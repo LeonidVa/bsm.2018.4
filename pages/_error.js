@@ -73,7 +73,7 @@ export default class Error extends React.Component {
                     </section>
 
 
-                    <a name="form"/>
+                    <a name="form" id="form"/>
                     <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
                 </div>

@@ -284,7 +284,7 @@ const page = () => (
                 </p>
             </section>
 
-            <a name="form"/>
+            <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <LinksBlock links={disser}/>

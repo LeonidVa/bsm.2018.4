@@ -19,7 +19,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlock/referat'
+import referatLinks from 'components/config/linksBlock/referat'
 
 import MetaTags from 'react-meta-tags';
 
@@ -271,7 +271,7 @@ const page = () => (
                 </p>
             </section>
 
-            <a name="form"/>
+            <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <section className="block-text">
@@ -294,7 +294,7 @@ const page = () => (
                 </p>
             </section>
 
-            <LinksBlock links={referat}/>
+            <LinksBlock links={referatLinks}/>
         </div>
     </Wrapper>
 );

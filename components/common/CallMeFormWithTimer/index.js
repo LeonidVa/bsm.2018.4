@@ -1,15 +1,47 @@
 import React, {Component} from 'react';
 import Timer from 'components/common/Timer'
+import axios from 'axios/index';
 
 class CallMeFormWithTimer extends Component {
 
     state = {
-        phone: ''
+        phone: '',
+        msg:null, // можно вывести сообщение при желании
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
         console.log('позвоните мне на номер ' + this.state.phone + ' по-поводу диссертации')
+        const {phone} = this.state;
+
+        const formData = new FormData();
+        formData.set('form', 'Успешная Защита');
+        formData.set('phone', phone);
+        axios({
+            method: 'POST',
+            url: '/api/form_data',
+            data: formData,
+            config: {headers: {'Content-Type': 'multipart/form-data'}}
+        })
+            .then(function (response) {
+                const {
+                    error=true, id, msg,
+                } = response;
+                if ( !error ) {
+                    this.setState({msg});
+                }
+                console.log(response);
+            })
+            .catch(function (response) {
+                //handle error
+                console.log(response);
+            });
+
+
+        /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
+                    .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
+                    .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))*/
+
     }
 
     render() {

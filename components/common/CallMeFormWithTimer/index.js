@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Timer from 'components/common/Timer'
+import Timer from 'components/common/Timer';
+import analytics from 'utils/analytics';
 
 class CallMeFormWithTimer extends Component {
 
@@ -9,7 +10,9 @@ class CallMeFormWithTimer extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log('позвоните мне на номер ' + this.state.phone + ' по-поводу диссертации')
+        console.log('позвоните мне на номер ' + this.state.phone + ' по-поводу диссертации');
+
+        analytics('Отправка_формы_с_таймером');
     }
 
     render() {

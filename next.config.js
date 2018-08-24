@@ -10,6 +10,7 @@ const nextConfig = {
         /* Aliases */
         config.resolve.alias.static = __dirname + '/static/';
         config.resolve.alias.components = __dirname + '/components/';
+        config.resolve.alias.utils = __dirname + '/utils/';
 
         /* Fix for missing styles */
         const {dev} = options;

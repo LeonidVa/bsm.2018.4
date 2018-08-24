@@ -5,9 +5,9 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
 import Dropdown from 'react-dropdown'
 import Recaptcha from "react-google-recaptcha";
+import analytics from 'utils/analytics';
 
 import axios from 'axios';
-
 
 /* fields are stored in /components/config/main.js */
 class OrderForm extends Component {
@@ -85,6 +85,7 @@ class OrderForm extends Component {
                 console.log(response);
             });
 
+        analytics('Отправка_формы');
 
         /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
                     .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))

@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/disser'
+import infoBlockConfig from 'components/config/infoBlock/dis'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -22,6 +22,8 @@ import LinksBlock from 'components/common/LinksBlock';
 import disser from 'components/config/linksBlock/disser';
 
 import MetaTags from 'react-meta-tags';
+
+import ImageBlock from 'components/common/ImageBlock';
 
 
 const page = () => (
@@ -52,11 +54,13 @@ const page = () => (
             <section className="block-nav">
                 <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
             </section>
+
+
             <MessBlock/>
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -96,7 +100,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -128,11 +132,23 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            <section className="block-text">
+            <h1 className="block-text__title">
+                Кандидатская диссертация на заказ
+            </h1>
+            <p className="block-text__par">
+                Кандидатская диссертация – квалифицированная научная работа на соискание ученой степени кандидата наук. Это сложная и кропотливая работа, которая занимает 1-2 года. Подготовка кандидатской диссертации предполагает изучение большого количества литературных источников по теме, публикацию статей, выполнение экспериментальных исследований.
+            </p>
+            <p className="block-text__par">
+                Уложиться в отведенный срок непросто. Семья и работа занимают большую часть времени. Заказать кандидатскую диссертацию в компании BeSmarter! – отличное решение этой проблемы. Помощь может понадобиться и тем, кому кандидатская степень нужна для того, чтобы занять определенную должность, а не для построения научной карьеры. Компания BeSmarter! предлагает написание работ на соискание кандидатской степени по самым разнообразным темам.
+            </p>
+        </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -192,22 +208,14 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Кандидатская диссертация на заказ
-                </h1>
-                <p className="block-text__par">
-                    Кандидатская диссертация – квалифицированная научная работа на соискание ученой степени кандидата наук. Это сложная и кропотливая работа, которая занимает 1-2 года. Подготовка кандидатской диссертации предполагает изучение большого количества литературных источников по теме, публикацию статей, выполнение экспериментальных исследований.
-                </p>
-                <p className="block-text__par">
-                    Уложиться в отведенный срок непросто. Семья и работа занимают большую часть времени. Заказать кандидатскую диссертацию в компании BeSmarter! – отличное решение этой проблемы. Помощь может понадобиться и тем, кому кандидатская степень нужна для того, чтобы занять определенную должность, а не для построения научной карьеры. Компания BeSmarter! предлагает написание работ на соискание кандидатской степени по самым разнообразным темам.
-                </p>
-            </section>
-
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
-            
+
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/kandidatskie.jpg')}/>
+
+
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Преимущества написания под ключ
@@ -245,6 +253,16 @@ const page = () => (
                     </li>
                 </ul>
             </section>
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Стоит ли покупать готовую работу в интернете?
+                </h2>
+                <p className="block-text__par">
+                    В принципе, это возможно. Таких предложений немало, цены почти демпинговые, но и рисков, связанных с ними, предостаточно. Нередко бывает так, что заказчик вместо уникального труда получает компиляцию из скопированных текстов. И это – в лучшем случае. В худшем – исполнитель, получив деньги, попросту исчезает. Написание кандидатской диссертации в специализированной компании, которая успела себя зарекомендовать – гарантия высокого качества и 100% безопасности. У нас вы можете заказать подготовку исследования полностью «под ключ» или по частям. Все зависит от характера вашей работы с научным руководителем.
+                </p>
+            </section>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -254,15 +272,6 @@ const page = () => (
                 <CallMeFormWithTimer timerDuration={155555}>
                     <p>при одновременном заказе вместе с работой</p>
                 </CallMeFormWithTimer>
-            </section>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Стоит ли покупать готовую работу в интернете?
-                </h2>
-                <p className="block-text__par">
-                    В принципе, это возможно. Таких предложений немало, цены почти демпинговые, но и рисков, связанных с ними, предостаточно. Нередко бывает так, что заказчик вместо уникального труда получает компиляцию из скопированных текстов. И это – в лучшем случае. В худшем – исполнитель, получив деньги, попросту исчезает. Написание кандидатской диссертации в специализированной компании, которая успела себя зарекомендовать – гарантия высокого качества и 100% безопасности. У нас вы можете заказать подготовку исследования полностью «под ключ» или по частям. Все зависит от характера вашей работы с научным руководителем.
-                </p>
             </section>
 
             <section className="block-text">
@@ -285,7 +294,7 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -310,8 +319,9 @@ const page = () => (
                 </p>
             </section>
 
-            <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
+            <ImageBlock imageSrc={require('static/images/block/kandidatskie2.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -339,7 +349,16 @@ const page = () => (
                 </p>
             </section>
 
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+
+
             <LinksBlock links={disser}/>
+
+
         </div>
     </Wrapper>
 );

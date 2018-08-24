@@ -21,13 +21,12 @@ import dopy from 'components/config/dopraboty'
 
 
 const page = () => (
-    <Wrapper title="Услуги и цены">
+    <Wrapper title="Услуги и цены" description="На этой странице представлены цены на дипломные, курсовые работы и многие другие услуги компании.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="description" content="На этой страниц представленны цены на дипломные, курсовые работы и многие другие услуги компании BeSmarter!, звоните Тел. +7 (495) 772-40-90" />
-                <meta name="keywords" content="стоимость дипломной работы написать диплом цена написания на заказ заказать" />
+                <meta name="keywords" content="" />
             </MetaTags>
             
             <section className="breadcrumbs">

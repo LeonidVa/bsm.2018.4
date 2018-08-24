@@ -20,14 +20,13 @@ import MetaTags from "react-meta-tags";
 class page extends Component {
     render() {
         return (
-            <Wrapper title="BeSmarter - Контакты">
+            <Wrapper title="BeSmarter - Контакты" description="На этой страницы указан наш адрес офиса, наша почта и телефоны в Москве, звоните, приезжайте в компанию.">
                 <div className="wrapper bg bg-c2 bg-img bg-img5">
                     <Title>Контакты</Title>
 
                     <MetaTags>
                         {/* <title></title> */}
-                        <meta name="description" content="На этой страницы указан наш адрес офиса, наша почта и телефоны в Москве, звоните, приезжайте в компанию." />
-
+                        <meta name="keywords" content="" />
                     </MetaTags>
 
                     <section className="breadcrumbs">

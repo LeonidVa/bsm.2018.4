@@ -9,13 +9,12 @@ import React from "react";
 
 
 const page = () => (
-    <Wrapper title="Согласие на обработку персональных данных Пользователей | Компания «BeSmarter!». Тел. +7 (495) 772-40-90.">
+    <Wrapper title="Согласие на обработку персональных данных Пользователей | Компания «BeSmarter!». Тел. +7 (495) 772-40-90." description="Согласие на обработку персональных данных пользователей компанией «BeSmarter!». Тел. +7 (495) 772-40-90.">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
 
             <MetaTags>
                 {/* <title></title> */}
-                <meta name="description" content="Согласие на обработку персональных данных пользователей компанией «BeSmarter!». Тел. +7 (495) 772-40-90." />
-                <meta name="keywords" content="стоимость дипломной работы написать диплом цена написания на заказ заказать" />
+                <meta name="keywords" content="" />
             </MetaTags>
 
             <section className="breadcrumbs">

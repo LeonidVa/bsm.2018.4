@@ -17,32 +17,11 @@ class MenuMob extends Component{
     render(){
         return(
             <div className="menu-mob" style={{top: this.state.showMenu ? '0' : '-170%'}}>
-                <Link href="#"><a className="menu-mob__title">Раздел 1</a></Link>
-                <ul>
-                    <li><Link href="#"><a>Подраздел 1</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 1</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 1</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 1</a></Link></li>
-                </ul>
-
-                <Link href="#"><a className="menu-mob__title">Раздел 2</a></Link>
-                <ul>
-                    <li><Link href="#"><a>Подраздел 2</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 2</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 2</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 2</a></Link></li>
-                </ul>
-
-                <Link href="#"><a className="menu-mob__title">Раздел 3</a></Link>
-                <ul>
-                    <li><Link href="#"><a>Подраздел 3</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 3</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 3</a></Link></li>
-                    <li><Link href="#"><a>Подраздел 3</a></Link></li>
-                </ul>
-                <Link href="#"><a className="menu-mob__title">Услуги и цены</a></Link>
-                <Link href="#"><a className="menu-mob__title">О нас</a></Link>
-                <Link href="#"><a className="menu-mob__title">Контакты</a></Link>
+                <Link href="/price"><a className="menu-mob__title">Услуги и цены</a></Link>
+                <Link href="/about"><a className="menu-mob__title">О нас</a></Link>
+                <Link href="/garantii"><a className="menu-mob__title">Гарантии</a></Link>
+                <Link href="/contacts"><a className="menu-mob__title">Контакты</a></Link>
+                <Link href="/avtoram"><a className="menu-mob__title">Авторам</a></Link>
             </div>
         )
     }

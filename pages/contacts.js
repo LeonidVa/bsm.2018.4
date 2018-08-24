@@ -14,6 +14,7 @@ import links from 'components/config/linksBlockConfig';
 import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
+import MetaTags from "react-meta-tags";
 
 
 class page extends Component {
@@ -22,6 +23,12 @@ class page extends Component {
             <Wrapper title="BeSmarter - Контакты">
                 <div className="wrapper bg bg-c2 bg-img bg-img5">
                     <Title>Контакты</Title>
+
+                    <MetaTags>
+                        {/* <title></title> */}
+                        <meta name="description" content="На этой страницы указан наш адрес офиса, наша почта и телефоны в Москве, звоните, приезжайте в компанию." />
+
+                    </MetaTags>
 
                     <section className="breadcrumbs">
                         <div className="inner">

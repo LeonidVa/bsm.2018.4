@@ -18,11 +18,18 @@ import links from 'components/config/linksBlockConfig';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
+import MetaTags from "react-meta-tags";
 
 
 const page = () => (
     <Wrapper title="Стать автором компании BeSmarter!">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
+
+            <MetaTags>
+                {/* <title></title> */}
+                <meta name="description" content="Компания BeSmarter – несомненный лидер в сфере образовательного консалтинга. Заработать отличную репутацию помогают наши авторы – практикующие преподаватели. Вместе с ними мы оказываем клиентам комплексные услуги по подготовке дипломных проектов и диссертаций, консультируем и разъясняем непонятные моменты, даем советы по защите и выступлению." />
+                <meta name="keywords" content="стоимость дипломной работы написать диплом цена написания на заказ заказать" />
+            </MetaTags>
 
             <section className="breadcrumbs">
                 <div className="inner">

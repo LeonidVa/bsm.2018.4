@@ -5,13 +5,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
 import Dropdown from 'react-dropdown'
 import Recaptcha from "react-google-recaptcha";
-
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import 'react-day-picker/lib/style.css';
-import MomentLocaleUtils, {
-    formatDate,
-    parseDate,
-} from 'react-day-picker/moment';
+import DatePicker from 'components/common/DatePicker';
 
 import axios from 'axios';
 
@@ -183,26 +177,13 @@ class OrderForm extends Component {
                             : 'hidden'),
                 }}>
                 <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
-                <DayPickerInput
-                    format="L"
-                    formatDate={formatDate}
-                    parseDate={parseDate}
-                    placeholder={`${formatDate(new Date(), 'L', 'ru')}`}
-                    dayPickerProps={{
-                        locale: 'ru',
-                        localeUtils: MomentLocaleUtils,
-                    }}
-                    component={props => (
-                        <input
-                            id={field.id}
-                            placeholder={field.placeholder}
-                            required={field.required}
-                            value={this.state[field.name]}
-                            onChange={(e) => this.setState({ [field.name]: e.target.value })}
-                            {...props}
-                        />
-                    )}
+
+                <DatePicker
+                    placeholder={field.placeholder}
+                    value={this.state[field.name]}
+                    onDayChange={(value) => this.setState({ [field.name]: value })}
                 />
+
                 {/*<input
                     type={field.type}
                     name=""

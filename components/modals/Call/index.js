@@ -2,6 +2,7 @@ import React, {Component, createContext} from 'react';
 import './style.scss';
 import axios from 'axios';
 import Close from '../Close';
+import analytics from 'utils/analytics';
 
 const callPopupState = {
     phone: '',
@@ -57,6 +58,7 @@ class CallPopup extends Component {
             console.log(response);
         });
 
+        analytics('Отправка_формы_попап1');
 
         /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
                     .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))

@@ -54,6 +54,7 @@ class OrderForm extends Component {
             //window.alert('Пожалуйста, пройдите каптчу');
             //return
         }
+        const _this = this;
         let formData = new FormData();
         formData.set('form', formType);
         formData.set('source', source);
@@ -77,17 +78,26 @@ class OrderForm extends Component {
             config: {headers: {'Content-Type': 'multipart/form-data'}}
         })
             .then(function (response) {
+                const { data = {} } = response;
                 const {
-                    error=true, id, msg,
-                } = response;
-                if ( !error ) {
-                    this.setState({
-                        bool: true,
-                        number: id
+                    error = true,
+                    id,
+                    msg,
+                } = data;
+                if (!error) {
+                    _this.setState({
+                        formSended: {
+                            ..._this.state.formSended,
+                            bool: true,
+                            number: id,
+                        },
                     });
                 } else {
-                    this.setState({
-                        error: msg,
+                    _this.setState({
+                        formSended: {
+                            ..._this.state.formSended,
+                            error: msg,
+                        },
                     });
                 }
                 console.log(response);
@@ -241,6 +251,7 @@ class OrderForm extends Component {
         if (buttonLabel === undefined || buttonLabel === "") {
             buttonLabel = "Заказать работу"
         }
+        debugger
         if (!this.state.formSended.bool) {
             return (
                 <section className={`block-form ${redForm ? 'form-red' : ''}`}>

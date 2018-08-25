@@ -251,7 +251,6 @@ class OrderForm extends Component {
         if (buttonLabel === undefined || buttonLabel === "") {
             buttonLabel = "Заказать работу"
         }
-        debugger
         if (!this.state.formSended.bool) {
             return (
                 <section className={`block-form ${redForm ? 'form-red' : ''}`}>

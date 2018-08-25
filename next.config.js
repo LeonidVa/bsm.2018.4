@@ -2,13 +2,13 @@ const withPlugins = require('next-compose-plugins');
 const withSass = require('@zeit/next-sass');
 const withImages = require('next-images');
 
-
 const nextConfig = {
     //assetPrefix: 'https://static.besmarter.ru',
     webpack: (config, options) => {
         /* Aliases */
         config.resolve.alias.static = __dirname + '/static/';
         config.resolve.alias.components = __dirname + '/components/';
+        config.resolve.alias.utils = __dirname + '/utils/';
 
         /* Fix for missing styles */
         const {dev} = options;

@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
+import infoBlockConfig from 'components/config/infoBlock/kurs-na-zakaz-arch';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 

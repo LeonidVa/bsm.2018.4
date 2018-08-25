@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/kurs-proekt'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -272,7 +272,7 @@ const page = () => (
             </Video>
 
             <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <LinksBlock links={kursovaya}/>
         </div>

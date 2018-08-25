@@ -70,28 +70,28 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Отчет по практике</span>
-                            <p>от 3 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/referat-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Реферат</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/kontrolnaya-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/kursovoj-proekt-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/kursovaya-rabota-na-zakaz">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Курсовая работа</span>
+                            <p>от 4 000 руб.</p>
                         </a>
                     </Link>
                     <Link href="/kursovoj-proekt-na-zakaz">

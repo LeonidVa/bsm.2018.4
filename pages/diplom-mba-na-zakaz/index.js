@@ -156,7 +156,7 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -259,7 +259,7 @@ const page = () => (
             </Video>
 
             <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <LinksBlock links={links}/>
         </div>

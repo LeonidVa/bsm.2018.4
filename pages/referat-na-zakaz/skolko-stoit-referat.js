@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/referat'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -57,13 +57,13 @@ const page = () => (
 
 
             <section className="block-service">
-                <Link href="/kursovaya-rabota-na-zakaz">
+                <Link href="#form">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ref1.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Курсовая работа</span>
+                            <span className="block-service__title">Реферат</span>
                             <p className="block-service__par">Не парься сам – доверься нам!</p>
                             <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 4 000 руб.</p>
+                            <p className="block-service__par">От 1 500 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </a>
@@ -75,22 +75,22 @@ const page = () => (
                             <p>от 3 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Реферат</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/kontrolnaya-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/kursovoj-proekt-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/kursovaya-rabota-na-zakaz">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Курсовая работа</span>
+                            <p>от 4 000 руб.</p>
                         </a>
                     </Link>
                     <Link href="/kursovoj-proekt-na-zakaz">
@@ -272,7 +272,7 @@ const page = () => (
             </section>
 
             <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">

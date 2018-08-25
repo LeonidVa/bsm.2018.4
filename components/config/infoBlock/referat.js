@@ -8,13 +8,13 @@ import icon_7 from "static/images/info/7.svg"
 import icon_8 from "static/images/info/8.svg"
 
 const infoBlockConfig = [
-    {icon: icon_1, title: 'Стоимость кандидатской диссертации', desc: 'От 180 000 руб. до 450 000 руб.'},
-    {icon: icon_2, title: 'Срок выполнения', desc: 'От одного месяца'},
+    {icon: icon_1, title: 'Реферат', desc: 'От 1 500 руб.'},
+    {icon: icon_2, title: 'Срок выполнения', desc: 'От 2 часов'},
     {icon: icon_3, title: 'Гарантии', desc: 'Сделаем все, о чем договорились'},
     {icon: icon_4, title: 'Договор', desc: 'Внесение дополнений и пожеланий'},
     {icon: icon_5, title: 'Материалы для защиты', desc: 'Полный комплект для успешной защиты'},
     {icon: icon_6, title: 'Автор работы', desc: 'Проверенный специалист с опытом'},
-    {icon: icon_7, title: 'Оригинальность (Антиплагиат)', desc: 'От 90% до 98%'},
+    {icon: icon_7, title: 'Оригинальность (Антиплагиат)', desc: 'От 70% до 98%'},
     {icon: icon_8, title: 'Язык написания', desc: 'Русский, английский, французкий, немецкий, и др.'},
 ]
 

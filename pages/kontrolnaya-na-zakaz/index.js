@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
+import infoBlockConfig from 'components/config/infoBlock/kontrol-na-zakaz';
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -56,7 +56,7 @@ const page = () => (
                             <span className="block-service__title">Контрольная работа</span>
                             <p className="block-service__par">Не парься сам – доверься нам!</p>
                             <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 1 500 руб.</p>
+                            <p className="block-service__par">От 2 000 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </a>
@@ -259,7 +259,7 @@ const page = () => (
             </section>
 
             <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
             
         </div>
     </Wrapper>

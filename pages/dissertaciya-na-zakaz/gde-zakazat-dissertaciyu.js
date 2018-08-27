@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/disser'
+import infoBlockConfig from 'components/config/infoBlock/disser1'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -22,6 +22,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import disser from 'components/config/linksBlock/disser';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -56,7 +57,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -96,7 +97,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -128,11 +129,30 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Где заказать диссертацию
+                </h1>
+                <p className="block-text__par">
+                    Написание и успешная защита диссертации является обязательным условием получения очередной ученой степени, начиная от магистра и заканчивая доктором наук. При этом требования к данной работе намного выше в сравнении с курсовыми и даже дипломами.
+                </p>
+                <p className="block-text__par">
+                    Дело в том, что защищаться придется перед независимой комиссией из представителей ученого сообщества, поэтому важно обеспечить максимальное качество и актуальность. Данная задача, в особенности для вчерашнего студента или аспиранта – не из самых простых.
+                </p>
+                <p className="block-text__par">
+                    Чтобы избежать ненужного риска, многие ищут, где заказать диссертацию за деньги. Обычные фрилансеры выполнить такую работу не смогут. В лучшем случае они сделают рерайт какого-нибудь старого научного труда из Интернета. Единственное место, где можно заказать качественную диссертацию с гарантией, – это компания BeSmarter!
+                </p>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -192,24 +212,12 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Где заказать диссертацию
-                </h1>
-                <p className="block-text__par">
-                    Написание и успешная защита диссертации является обязательным условием получения очередной ученой степени, начиная от магистра и заканчивая доктором наук. При этом требования к данной работе намного выше в сравнении с курсовыми и даже дипломами.
-                </p>
-                <p className="block-text__par">
-                    Дело в том, что защищаться придется перед независимой комиссией из представителей ученого сообщества, поэтому важно обеспечить максимальное качество и актуальность. Данная задача, в особенности для вчерашнего студента или аспиранта – не из самых простых.
-                </p>
-                <p className="block-text__par">
-                    Чтобы избежать ненужного риска, многие ищут, где заказать диссертацию за деньги. Обычные фрилансеры выполнить такую работу не смогут. В лучшем случае они сделают рерайт какого-нибудь старого научного труда из Интернета. Единственное место, где можно заказать качественную диссертацию с гарантией, – это компания BeSmarter!
-                </p>
-            </section>
-
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dis-eko.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -231,7 +239,9 @@ const page = () => (
                 </ul>
             </section>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
                     Успей получить<br/> скидку на материалы для защиты
@@ -264,7 +274,7 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -285,6 +295,8 @@ const page = () => (
                     </li>
                 </ul>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>

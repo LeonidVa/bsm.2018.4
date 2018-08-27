@@ -75,6 +75,12 @@ const page = () => (
                             <p>от 3 000 руб.</p>
                         </a>
                     </Link>
+                    <Link href="/kursovaya-rabota-na-zakaz">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Курсовая работа</span>
+                            <p>от 4 000 руб.</p>
+                        </a>
+                    </Link>
                     <Link href="/kontrolnaya-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
@@ -85,12 +91,6 @@ const page = () => (
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/kursovaya-rabota-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовая работа</span>
-                            <p>от 4 000 руб.</p>
                         </a>
                     </Link>
                     <Link href="/kursovoj-proekt-na-zakaz">

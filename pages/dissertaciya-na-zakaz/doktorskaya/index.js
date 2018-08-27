@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/disser'
+import infoBlockConfig from 'components/config/infoBlock/disser-doc'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -22,12 +22,13 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../../components/common/ImageBlock";
 
 
 
 const page = () => (
     <Wrapper title="Докторская диссертация на заказ в Москве и РФ – подготовка и написание под ключ, цена и сроки" description="Подготовка и написание докторской диссертации на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+        <div className="wrapper bg bg-c2 bg-img bg-img4">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -56,8 +57,43 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
+                <Link href="/dissertaciya-na-zakaz/doktorskaya">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Докторская диссертация</span>
+                            <p className="block-service__par">Актуальность и научная новизна</p>
+                            <p className="block-service__par">Ваши и наши данные</p>
+                            <p className="block-service__par">Строго конфиденциально</p>
+                            <p className="block-service__par">Индивидуально</p>
+                        </div>
+                    </a>
+                </Link>
+                <div className="block-service__list list-3">
+                    <Link href="/razrabotka-diplomnogo-proekta">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Прямая связь с автором</span>
+                            <p>Постоянный контроль</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Публикации</span>
+                            <p>Журналы ВАК и иностранные</p>
+                        </a>
+                    </Link>
+                    <Link href="/diplom-mba-na-zakaz">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Обзор литературы</span>
+                            <p>Свежие источники</p>
+                        </a>
+                    </Link>
+                </div>
+            </section>
+
+
+            <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -95,45 +131,22 @@ const page = () => (
                 </div>
             </section>
 
-            <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Докторская диссертация</span>
-                            <p className="block-service__par">Актуальность и научная новизна</p>
-                            <p className="block-service__par">Ваши и наши данные</p>
-                            <p className="block-service__par">Строго конфиденциально</p>
-                            <p className="block-service__par">Индивидуально</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-3">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Прямая связь с автором</span>
-                            <p>Постоянный контроль</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Публикации</span>
-                            <p>Журналы ВАК и иностранные</p>
-                        </a>
-                    </Link>
-                    <Link href="/diplom-mba-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Обзор литературы</span>
-                            <p>Свежие источники</p>
-                        </a>
-                    </Link>
-                </div>
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Докторская диссертация на заказ
+                </h1>
+                <p className="block-text__par">
+                    Докторская диссертация – это научный труд, по результатам защиты которого соискателю присваивают ученую степень доктора наук. Как правило, в ее основе находится кандидатская или даже магистерская диссертация. Важный момент подготовки докторской диссертации – автореферат. Это краткое изложение ключевых моментов и выводов научной работы. Его написание очень важно еще и потому, что без автореферата диссертация не допускается к защите.
+                </p>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -193,18 +206,13 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Докторская диссертация на заказ
-                </h1>
-                <p className="block-text__par">
-                    Докторская диссертация – это научный труд, по результатам защиты которого соискателю присваивают ученую степень доктора наук. Как правило, в ее основе находится кандидатская или даже магистерская диссертация. Важный момент подготовки докторской диссертации – автореферат. Это краткое изложение ключевых моментов и выводов научной работы. Его написание очень важно еще и потому, что без автореферата диссертация не допускается к защите.
-                </p>
-            </section>
-
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/ddoc.jpg')}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -246,6 +254,8 @@ const page = () => (
                 </ul>
             </section>
 
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
@@ -279,7 +289,32 @@ const page = () => (
                 </p>
             </section>
 
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Этапы совместной работы
+                </h2>
+                <p className="block-text__par">
+                    После согласования темы и плана диссертации с научным руководителем порядок действий следующий:
+                </p>
+                <ul>
+                    <li>
+                        Внесение аванса. После этого автор приступает к выполнению задания.
+                    </li>
+                    <li>
+                        Когда часть диссертации уже написана, следует ее проверка и внесение остатка заранее оговоренной суммы.
+                    </li>
+                    <li>
+                        Получение готовой работы клиентом на электронный адрес.
+                    </li>
+                </ul>
+                <p className="block-text__par">
+                    На протяжении гарантийного срока все дополнения и правки вносятся бесплатно. Компания BeSmarter! поможет вам защититься блестяще!
+                </p>
+            </section>
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <ImageBlock imageSrc={require('static/images/block/docto-watch.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -310,28 +345,9 @@ const page = () => (
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Этапы совместной работы
-                </h2>
-                <p className="block-text__par">
-                    После согласования темы и плана диссертации с научным руководителем порядок действий следующий:
-                </p>
-                <ul>
-                    <li>
-                        Внесение аванса. После этого автор приступает к выполнению задания.
-                    </li>
-                    <li>
-                        Когда часть диссертации уже написана, следует ее проверка и внесение остатка заранее оговоренной суммы.
-                    </li>
-                    <li>
-                        Получение готовой работы клиентом на электронный адрес.
-                    </li>
-                </ul>
-                <p className="block-text__par">
-                    На протяжении гарантийного срока все дополнения и правки вносятся бесплатно. Компания BeSmarter! поможет вам защититься блестяще!
-                </p>
-            </section>
+
+
+
 
             {/* <LinksBlock links={links}/> */}
         </div>

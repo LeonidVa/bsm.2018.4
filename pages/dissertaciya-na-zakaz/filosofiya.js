@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/disser'
+import infoBlockConfig from 'components/config/infoBlock/disser1'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -22,6 +22,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import disser from 'components/config/linksBlock/disser';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -56,7 +57,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -96,7 +97,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -128,11 +129,34 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Диссертация по философии
+                </h1>
+                <p className="block-text__par">
+                    В каких случаях обращаются к нам за помощью с написанием работы? Вы можете заказать диссертацию по философии в компании BeSmarter!, если не успеваете со сроками. Обычно приходится жертвовать либо учебой, либо работой, а распределить время между двумя этими занятиями не получается. В этом случае мы поможем собрать и структурировать материал так, что клиент успешно пройдет защиту. Чаще всего заказывают диссертацию, если:
+                </p>
+                <ul>
+                    <li>
+                        работа сделана, но не оформлена;
+                    </li>
+                    <li>
+                        написана только вводная часть;
+                    </li>
+                    <li>
+                        готовы к защите только отдельные части диссертации.
+                    </li>
+                </ul>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -192,29 +216,13 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Диссертация по философии
-                </h1>
-                <p className="block-text__par">
-                    В каких случаях обращаются к нам за помощью с написанием работы? Вы можете заказать диссертацию по философии в компании BeSmarter!, если не успеваете со сроками. Обычно приходится жертвовать либо учебой, либо работой, а распределить время между двумя этими занятиями не получается. В этом случае мы поможем собрать и структурировать материал так, что клиент успешно пройдет защиту. Чаще всего заказывают диссертацию, если:
-                </p>
-                <ul>
-                    <li>
-                        работа сделана, но не оформлена;
-                    </li>
-                    <li>
-                        написана только вводная часть;
-                    </li>
-                    <li>
-                        готовы к защите только отдельные части диссертации.
-                    </li>
-                </ul>
-            </section>
-
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dis-eko.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -242,7 +250,27 @@ const page = () => (
                 </p>
             </section>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Этапы сотрудничества с BeSmarter!
+                </h2>
+                <p className="block-text__par">
+                    Вы заполняете форму заявки на сайте, указывая исходные данные. Все детали обсуждаются лично с менеджером компании, после чего подписывается договор на оказание услуг. Вы также можете просто позвонить по телефону +7 (495) 772-40-90 или +7 (495) 772-90-40, чтобы сэкономить время на заполнение онлайн-анкеты.
+                </p>
+                <p className="block-text__par">
+                    Можно договориться как о выполнении всего заказа полностью, так и о написании частями.
+                </p>
+                <p className="block-text__par">
+                    Лучше всего, конечно, сразу иметь на руках полностью готовый и оформленный по ГОСТ материал, ведь так вы всегда сможете ответить на вопросы научного руководителя.
+                </p>
+                <p className="block-text__par">
+                    Если вас интересует заказ диссертации по философии, обращайтесь к нам – мы гарантированно поможем с выполнением всех заданий, а также сэкономим вам массу времени. Агентство BeSmarter! тщательно отбирает авторов, чтобы вы остались довольны.
+                </p>
+            </section>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
                     Успей получить<br/> скидку на материалы для защиты
@@ -269,8 +297,6 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
             <section className="block-text">
                 <h2 className="block-text__title">
                     Как можно сэкономить?
@@ -293,29 +319,19 @@ const page = () => (
                     <li>
                         наличие обязательной практической части делает заказ дороже.
                     </li>
+                    <li>
+                        Чтобы заказать диссертацию по философии приходите к нам в офис по адресу: г. Москва, пер. Большой Кисловский, дом 1, стр. 2, офис 211
+                    </li>
                 </ul>
             </section>
+
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Этапы сотрудничества с BeSmarter!
-                </h2>
-                <p className="block-text__par">
-                    Вы заполняете форму заявки на сайте, указывая исходные данные. Все детали обсуждаются лично с менеджером компании, после чего подписывается договор на оказание услуг. Вы также можете просто позвонить по телефону +7 (495) 772-40-90 или +7 (495) 772-90-40, чтобы сэкономить время на заполнение онлайн-анкеты.
-                </p>
-                <p className="block-text__par">
-                    Можно договориться как о выполнении всего заказа полностью, так и о написании частями.
-                </p>
-                <p className="block-text__par">
-                    Лучше всего, конечно, сразу иметь на руках полностью готовый и оформленный по ГОСТ материал, ведь так вы всегда сможете ответить на вопросы научного руководителя.
-                </p>
-                <p className="block-text__par">
-                    Если вас интересует заказ диссертации по философии, обращайтесь к нам – мы гарантированно поможем с выполнением всех заданий, а также сэкономим вам массу времени. Агентство BeSmarter! тщательно отбирает авторов, чтобы вы остались довольны.
-                </p>
-            </section>
+
 
             <LinksBlock links={disser}/>
         </div>

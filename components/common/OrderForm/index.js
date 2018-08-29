@@ -99,10 +99,6 @@ class OrderForm extends Component {
             });
 
         analytics('Отправка_формы');
-
-        /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
-                    .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
-                    .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))*/
     };
 
     onDrop(files) {

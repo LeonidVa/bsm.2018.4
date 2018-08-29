@@ -302,6 +302,12 @@ const page = () => (
                 </ul>
             </section>
 
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <VideoBlock>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </VideoBlock>
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Этапы сотрудничества
@@ -318,14 +324,6 @@ const page = () => (
                     </li>
                 </ul>
             </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
-            <VideoBlock>
-                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
-            </VideoBlock>
-
-
 
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>

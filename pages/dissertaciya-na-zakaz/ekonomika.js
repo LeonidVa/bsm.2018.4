@@ -56,7 +56,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
+                <Link href="#form">
                     <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
@@ -68,25 +68,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -108,19 +108,19 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Прямая связь с автором</span>
                             <p>Постоянный контроль</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Публикации</span>
                             <p>Журналы ВАК и иностранные</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Обзор литературы</span>
                             <p>Свежие источники</p>
@@ -275,7 +275,7 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")"}}>
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
                     Успей получить<br/> скидку на материалы для защиты

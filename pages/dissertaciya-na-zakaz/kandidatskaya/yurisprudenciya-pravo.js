@@ -22,11 +22,13 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../../components/common/ImageBlock";
+import disser from "../../../components/config/linksBlock/disser";
 
 
 const page = () => (
     <Wrapper title="Кандидатская диссертация по праву – заказать в Москве и РФ, цены, сроки написания под ключ" description="Кандидатская диссертация по праву на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+        <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -59,8 +61,8 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                <Link href="#form">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -71,25 +73,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -100,7 +102,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -132,11 +134,27 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Кандидатская диссертация по праву на заказ
+                </h1>
+                <p className="block-text__par">
+                    Успешная защита кандидатской диссертации в области права требует значительных усилий. Важно, чтобы подготовленный научный труд соответствовал требованиям ВАК, а тема была актуальной и пригодной для практического применения. От этого во многом зависит успешность защиты. Заказать кандидатскую диссертацию по праву – один из лучших способов решения этого вопроса.
+                </p>
+                <p className="block-text__par">
+                    Реалии современного общества таковы, что в нормативные акты часто вносятся дополнения и изменения. Поэтому необходимо написать диссертационную работу в как можно более короткие сроки. Для специалиста с плотным рабочим графиком это непростая задача. Разумный выход в подобной ситуации – заказать написание кандидатской диссертации в проверенной компании. Компания BeSmarter! предлагает свои услуги по подготовке подобных работ. Вы получите результат под ключ с учетом всех требований ВАК.
+                </p>
+                <p className="block-text__par">
+                    К выполнению кандидатской диссертации по праву будут привлечены высококвалифицированные специалисты с учеными степенями в области юриспруденции. Вы можете заказать как написание всей работы полностью, так и часть научного труда, по собственному выбору. Заказ будет выполнен строго в оговоренный срок за разумную сумму.
+                </p>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -196,24 +214,13 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Кандидатская диссертация по праву на заказ
-                </h1>
-                <p className="block-text__par">
-                    Успешная защита кандидатской диссертации в области права требует значительных усилий. Важно, чтобы подготовленный научный труд соответствовал требованиям ВАК, а тема была актуальной и пригодной для практического применения. От этого во многом зависит успешность защиты. Заказать кандидатскую диссертацию по праву – один из лучших способов решения этого вопроса.
-                </p>
-                <p className="block-text__par">
-                    Реалии современного общества таковы, что в нормативные акты часто вносятся дополнения и изменения. Поэтому необходимо написать диссертационную работу в как можно более короткие сроки. Для специалиста с плотным рабочим графиком это непростая задача. Разумный выход в подобной ситуации – заказать написание кандидатской диссертации в проверенной компании. Компания BeSmarter! предлагает свои услуги по подготовке подобных работ. Вы получите результат под ключ с учетом всех требований ВАК.
-                </p>
-                <p className="block-text__par">
-                    К выполнению кандидатской диссертации по праву будут привлечены высококвалифицированные специалисты с учеными степенями в области юриспруденции. Вы можете заказать как написание всей работы полностью, так и часть научного труда, по собственному выбору. Заказ будет выполнен строго в оговоренный срок за разумную сумму.
-                </p>
-            </section>
-
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
+            <ImageBlock imageSrc={require('static/images/block/kand-uri.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -238,16 +245,6 @@ const page = () => (
                 </p>
             </section>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
-                <h2 className="block-form-timer__title">
-                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на материалы для защиты
-                </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
-                    <p>при одновременном заказе вместе с работой</p>
-                </CallMeFormWithTimer>
-            </section>
-
             <section className="block-text">
                 <h2 className="block-text__title">
                     От чего зависит стоимость
@@ -266,7 +263,17 @@ const page = () => (
                 </p>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+                <h2 className="block-form-timer__title">
+                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
+                    Успей получить<br/> скидку на материалы для защиты
+                </h2>
+                <CallMeFormWithTimer timerDuration={155555}>
+                    <p>при одновременном заказе вместе с работой</p>
+                </CallMeFormWithTimer>
+            </section>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -291,10 +298,12 @@ const page = () => (
                 </ul>
             </section>
 
-            <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-            <LinksBlock links={links}/>
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <LinksBlock links={disser}/>
         </div>
     </Wrapper>
 );

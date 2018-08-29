@@ -22,11 +22,12 @@ import LinksBlock from 'components/common/LinksBlock';
 import disser from 'components/config/linksBlock/disser';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
     <Wrapper title="Заказать диссертацию по юриспруденции – сколько стоит написать диссертацию по юриспруденции в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="Заказать диссертацию по юриспруденции. В компании  BeSmarter! Вы сможете заказать помощь в написании диссертации по юриспруденции от надежных и проверенных кандидатов и докторов наук, недорогие цены только в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+        <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -55,8 +56,8 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                <Link href="#form">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -67,25 +68,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -96,7 +97,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -128,11 +129,37 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Заказать диссертацию по юриспруденции
+                </h1>
+                <ul>
+                    <li>
+                        <b>Удобство сотрудничества</b><br/>
+                        Заказать диссертацию по юриспруденции могут жители не только Москвы, но и других регионов РФ.
+                    </li>
+                    <li>
+                        <b>Все виды диссертационных работ</b><br/>
+                        В BeSmarter! можно заказать <Link href="/dissertaciya-na-zakaz/magisterskaya"><a>магистерскую</a></Link>, <Link href="/dissertaciya-na-zakaz/kandidatskaya"><a>кандидатскую</a></Link> или <Link href="/dissertaciya-na-zakaz/doktorskaya"><a>докторскую</a></Link> диссертацию по любой тематике, связанной с юриспруденцией.
+                    </li>
+                    <li>
+                        <b>Оригинальность и актуальность</b><br/>
+                        Все работы пишутся с «нуля» и базируются на исследованиях в сфере современного права. Уникальность текста проверяется в онлайн-сервисах антиплагиата;
+                    </li>
+                    <li>
+                        <b>Комплексный подход</b><br/>
+                        Мы не только предлагаем помощь в написании диссертации, но и оказываем содействие в подготовке к защите, включая изготовление дополнительных материалов;
+                    </li>
+                </ul>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -192,33 +219,15 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Заказать диссертацию по юриспруденции
-                </h1>
-                <ul>
-                    <li>
-                        <b>Удобство сотрудничества</b><br/>
-                        Заказать диссертацию по юриспруденции могут жители не только Москвы, но и других регионов РФ.
-                    </li>
-                    <li>
-                        <b>Все виды диссертационных работ</b><br/>
-                        В BeSmarter! можно заказать <Link href="/dissertaciya-na-zakaz/magisterskaya"><a>магистерскую</a></Link>, <Link href="/dissertaciya-na-zakaz/kandidatskaya"><a>кандидатскую</a></Link> или <Link href="/dissertaciya-na-zakaz/doktorskaya"><a>докторскую</a></Link> диссертацию по любой тематике, связанной с юриспруденцией.
-                    </li>
-                    <li>
-                        <b>Оригинальность и актуальность</b><br/>
-                        Все работы пишутся с «нуля» и базируются на исследованиях в сфере современного права. Уникальность текста проверяется в онлайн-сервисах антиплагиата;
-                    </li>
-                    <li>
-                        <b>Комплексный подход</b><br/>
-                        Мы не только предлагаем помощь в написании диссертации, но и оказываем содействие в подготовке к защите, включая изготовление дополнительных материалов;
-                    </li>
-                </ul>
-            </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dis-uri.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -237,6 +246,8 @@ const page = () => (
                     Воспользуйтесь нашими услугами, и сами поймете, почему мы – лучшие!
                 </p>
             </section>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -268,7 +279,7 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -279,7 +290,7 @@ const page = () => (
                 </p>
                 <ol>
                     <li>
-                        Вы оформляете заявку на сайте, по телефону +7 (495) 772-4090 или при личной встрече в Москве (пер. Большой Кисловский, д. 1, стр. 2, оф. 211).
+                        Вы оформляете заявку на сайте, по телефону <br/>+7 (495) 772-4090 или при личной встрече в Москве (пер. Большой Кисловский, д. 1, стр. 2, оф. 211).
                     </li>
                     <li>
                         Мы проводим с вами собеседование и составляем официальный договор, в котором прописываются все ваши требования и наши обязательства.
@@ -292,6 +303,8 @@ const page = () => (
                     Попробуйте, и вы не пожалеете о сотрудничестве!
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>

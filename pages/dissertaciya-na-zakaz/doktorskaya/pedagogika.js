@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/disser'
+import infoBlockConfig from 'components/config/infoBlock/disser-doc'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -20,11 +20,12 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
+import ImageBlock from "../../../components/common/ImageBlock";
 
 
 const page = () => (
     <Wrapper title="Докторская диссертация по педагогике на заказ в Москве и РФ – цены, сроки написания под ключ" description="Докторские диссертации по педагогике на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+        <div className="wrapper bg bg-c2 bg-img bg-img4">
 
             <section className="breadcrumbs">
                 <div className="inner">
@@ -51,49 +52,10 @@ const page = () => (
             </section>
             <MessBlock/>
 
-            <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Кандидатская диссертация</span>
-                            <p className="block-service__par">Написание и оформление</p>
-                            <p className="block-service__par">Публикации</p>
-                            <p className="block-service__par">Строго конфиденциально</p>
-                            <p className="block-service__par">Индивидуально</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Аспирантские работы</span>
-                            <p>От поступления<br/>до защиты</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Статьи</span>
-                            <p>Написание и размещение</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Автореферат</span>
-                            <p>Строго по ГОСТу</p>
-                        </a>
-                    </Link>
-                    <Link href="/diplom-mba-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Апробация</span>
-                            <p>Реальные эксперименты</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                <Link href="#form">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -125,7 +87,69 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            <section className="block-service">
+                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Кандидатская диссертация</span>
+                            <p className="block-service__par">Написание и оформление</p>
+                            <p className="block-service__par">Публикации</p>
+                            <p className="block-service__par">Строго конфиденциально</p>
+                            <p className="block-service__par">Индивидуально</p>
+                        </div>
+                    </a>
+                </Link>
+                <div className="block-service__list list-4">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Аспирантские работы</span>
+                            <p>От поступления<br/>до защиты</p>
+                        </a>
+                    </Link>
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Статьи</span>
+                            <p>Написание и размещение</p>
+                        </a>
+                    </Link>
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Автореферат</span>
+                            <p>Строго по ГОСТу</p>
+                        </a>
+                    </Link>
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Апробация</span>
+                            <p>Реальные эксперименты</p>
+                        </a>
+                    </Link>
+                </div>
+            </section>
+
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Докторская диссертация по педагогике на заказ
+                </h1>
+                <p className="block-text__par">
+                    Присвоение научной степени – важнейший элемент признания научных заслуг любого педагога, а докторская степень по педагогике – своего рода атрибут «гуру» в сфере образования. Доктор наук – человек, которые обрел все навыки профессии, защитил диссертацию, имеет опыт научной и практической работы. Подготовка докторской диссертации – это серьезнейший научный труд, требующий больших умственных и временных затрат. Необходимо изучить, проанализировать и обобщить множество первичных источников, провести социологические и статистические исследования, выработать инновации в области педагогики. Причины, по которым подготовка диссертации может быть затруднена:
+                </p>
+                <ul>
+                    <li>
+                        Активная педагогическая деятельность и отсутствие достаточного времени на выполнение плановых мероприятий
+                    </li>
+                    <li>
+                        Невозможность самостоятельно изучать первичные источники
+                    </li>
+                    <li>
+                        Сложности в проведении полевых исследований, подготовке и публикации статей и монографий
+                    </li>
+                </ul>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
@@ -189,29 +213,13 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Докторская диссертация по педагогике на заказ
-                </h1>
-                <p className="block-text__par">
-                    Присвоение научной степени – важнейший элемент признания научных заслуг любого педагога, а докторская степень по педагогике – своего рода атрибут «гуру» в сфере образования. Доктор наук – человек, которые обрел все навыки профессии, защитил диссертацию, имеет опыт научной и практической работы. Подготовка докторской диссертации – это серьезнейший научный труд, требующий больших умственных и временных затрат. Необходимо изучить, проанализировать и обобщить множество первичных источников, провести социологические и статистические исследования, выработать инновации в области педагогики. Причины, по которым подготовка диссертации может быть затруднена:
-                </p>
-                <ul>
-                    <li>
-                        Активная педагогическая деятельность и отсутствие достаточного времени на выполнение плановых мероприятий
-                    </li>
-                    <li>
-                        Невозможность самостоятельно изучать первичные источники
-                    </li>
-                    <li>
-                        Сложности в проведении полевых исследований, подготовке и публикации статей и монографий
-                    </li>
-                </ul>
-            </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/doc-ped.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -232,6 +240,8 @@ const page = () => (
                     </li>
                 </ul>
             </section>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -258,7 +268,7 @@ const page = () => (
                 </p>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -276,6 +286,8 @@ const page = () => (
                     </li>
                 </ol>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>

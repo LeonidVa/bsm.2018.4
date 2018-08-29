@@ -11,7 +11,7 @@ import OrderForm from 'components/common/OrderForm';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/disser'
+import infoBlockConfig from 'components/config/infoBlock/disser1'
 
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 
@@ -22,11 +22,12 @@ import LinksBlock from 'components/common/LinksBlock';
 import disser from 'components/config/linksBlock/disser';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
     <Wrapper title="Как защитить диссертацию | «BeSmarter!». Тел. +7 (495) 772-40-90." description="Компания BeSmarter! окажет Вам все виды помощи, которые могут потребоваться аспирантам и соискателям ученых степеней кандидата и доктора наук на любом этапе от принятия решения о поступлении в аспирантуру до написания диссертации, вплоть до ее защиты.">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+        <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -55,8 +56,8 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                <Link href="#form">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -67,25 +68,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -96,7 +97,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -128,11 +129,25 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Как защитить диссертацию
+                </h1>
+                <h2 className="block-text__title">
+                    Как комфортно и успешно защитить свою диссертацию
+                </h2>
+                <p className="block-text__par">
+                    Компания BeSmarter! окажет Вам все виды помощи, которые могут потребоваться аспирантам и соискателям ученых степеней кандидата и доктора наук на любом этапе от принятия решения о поступлении в аспирантуру до написания диссертации, вплоть до ее защиты.
+                </p>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -192,27 +207,23 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/kand-uri.jpg')}/>
+
 
             <section className="block-text">
-                <h1 className="block-text__title">
-                    Как защитить диссертацию
-                </h1>
-                <h2 className="block-text__title">
-                    Как комфортно и успешно защитить свою диссертацию
-                </h2>
-                <p className="block-text__par">
-                    Компания BeSmarter! окажет Вам все виды помощи, которые могут потребоваться аспирантам и соискателям ученых степеней кандидата и доктора наук на любом этапе от принятия решения о поступлении в аспирантуру до написания диссертации, вплоть до ее защиты.
-                </p>
-                <h2 className="block-text__title">
-                    Этапы процесса подготовки кандидатской диссертации
-                </h2>
-                <p className="block-text__par">
-                    На примере процесса выполнения кандидатской диссертации рассмотрим главные этапы написания и основные виды помощи, которые может предоставить Вам команда профессионалов научно-консалтингового центра компании BeSmarter!.
-                </p>
-            </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <h2 className="block-text__title">
+                Этапы процесса подготовки кандидатской диссертации
+            </h2>
+            <p className="block-text__par">
+                На примере процесса выполнения кандидатской диссертации рассмотрим главные этапы написания и основные виды помощи, которые может предоставить Вам команда профессионалов научно-консалтингового центра компании BeSmarter!.
+            </p>
+            </section>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -361,15 +372,7 @@ const page = () => (
                 </ol>
             </section>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
-                <h2 className="block-form-timer__title">
-                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на материалы для защиты
-                </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
-                    <p>при одновременном заказе вместе с работой</p>
-                </CallMeFormWithTimer>
-            </section>
+            <ImageBlock imageSrc={require('static/images/block/dis-shagi-3.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -593,7 +596,9 @@ const page = () => (
                 </ol>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dis-shagi-2.jpg')}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -656,6 +661,9 @@ const page = () => (
                     </li>
                 </ol>
             </section>
+
+            <ImageBlock imageSrc={require('static/images/block/dis-shagi.jpg')}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -791,6 +799,19 @@ const page = () => (
                     </li>
                 </ol>
             </section>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+                <h2 className="block-form-timer__title">
+                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
+                    Успей получить<br/> скидку на материалы для защиты
+                </h2>
+                <CallMeFormWithTimer timerDuration={155555}>
+                    <p>при одновременном заказе вместе с работой</p>
+                </CallMeFormWithTimer>
+            </section>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -982,9 +1003,6 @@ const page = () => (
                 </ol>
             </section>
 
-            <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
-
             <section className="block-text">
                 <p className="block-text__par">
                     Благодаря профессиональной помощи команды научно-консалтингового центра компании BeSmarter! защита диссертационной работы пройдет благополучно и с минимальными нервными затратами.
@@ -1008,6 +1026,11 @@ const page = () => (
                     <b>Мы ждем Вас, мы всегда с Вами!</b>
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <LinksBlock links={disser}/>
         </div>

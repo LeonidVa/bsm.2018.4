@@ -27,7 +27,7 @@ import ImageBlock from "../../components/common/ImageBlock";
 
 const page = () => (
     <Wrapper title="Аспирантура в Москве | «BeSmarter!». Тел. +7 (495) 772-40-90." description="В наше время диплом о высшем образовании есть практически у всех, включая продавцов розничной торговли; тем самым нивелируется звание дипломированного специалиста.">
-        <div className="wrapper bg bg-c2 bg-img bg-img1">
+        <div className="wrapper bg bg-c2 bg-img bg-img2">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -68,25 +68,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="#form-block">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -108,19 +108,19 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-3">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Прямая связь с автором</span>
                             <p>Постоянный контроль</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Публикации</span>
                             <p>Журналы ВАК и иностранные</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Обзор литературы</span>
                             <p>Свежие источники</p>
@@ -129,6 +129,8 @@ const page = () => (
                 </div>
             </section>
 
+
+            <a name="form-block" id="form-block"/>
             <section className="block-text">
                 <h1 className="block-text__title">
                     Аспирантура
@@ -161,7 +163,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>

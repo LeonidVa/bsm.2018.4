@@ -52,7 +52,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
+                <Link href="#form">
                     <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
@@ -64,25 +64,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -132,7 +132,7 @@ const page = () => (
                 <ul>
                     <li>
                         <b>Оперативность</b><br/>
-                        По желанию клиента мы можем написать диссертацию на заказ в короткие сроки (от 24 часов) без ущерба ее качеству.
+                        По желанию клиента мы можем написать диссертацию на заказ в короткие сроки без ущерба ее качеству.
                     </li>
                     <li>
                         <b>Квалификация</b><br/>
@@ -224,7 +224,7 @@ const page = () => (
                 <ul>
                     <li>
                         <b>Оперативность</b><br/>
-                        По желанию клиента мы можем написать диссертацию на заказ в короткие сроки (от 24 часов) без ущерба ее качеству.
+                        По желанию клиента мы можем написать диссертацию на заказ в короткие сроки без ущерба ее качеству.
                     </li>
                     <li>
                         <b>Квалификация</b><br/>
@@ -245,6 +245,7 @@ const page = () => (
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
+            <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <ImageBlock imageSrc={require('static/images/block/dissertaciya-na-zakaz.jpg')}/>
@@ -253,15 +254,19 @@ const page = () => (
                 <h2 className="block-text__title">
                     Основные этапы сотрудничества
                 </h2>
-                <p className="block-text__par">
+                <ul>
+                    <li>
+
                     Этап 1. Вы оформляете заявку на помощь в написании диссертации. Сделать это можно прямо на сайте или в нашем <Link href="/contacts"><b><a>офисе</a></b></Link> в Москве.
-                </p>
-                <p className="block-text__par">
+
+                    </li>
+                <li>
                     Этап 2. Мы проводим с вами собеседование и составляем официальный договор с указанием всех аспектов заказа – сроки, стоимость, исполнитель, требования и так далее. Вы вносите 50% предоплаты.
-                </p>
-                <p className="block-text__par">
+                </li>
+                <li>
                     Этап 3. Согласованный автор пишет диссертацию под заказ и сдает ее вам на проверку по частям. По Вашему требованию вносятся бесплатные доработки. После 100%-ной оплаты и сдачи диссертационной работы наш эксперт помогает вам подготовиться к отличной защите.
-                </p>
+                </li>
+                </ul>
             </section>
 
             <section className="block-text">
@@ -278,7 +283,7 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")"}}>
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
                     Успей получить<br/> скидку на материалы для защиты
@@ -287,12 +292,6 @@ const page = () => (
                     <p>при одновременном заказе вместе с работой</p>
                 </CallMeFormWithTimer>
             </section>
-
-
-
-
-
-
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -321,7 +320,7 @@ const page = () => (
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-            <a name="form" id="form"/>
+
 
 
             <LinksBlock links={disser}/>

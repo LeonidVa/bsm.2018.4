@@ -21,6 +21,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../components/common/ImageBlock";
 
 const page = () => (
     <Wrapper title="Помощь студентам в написании работ - заказать дипломную, курсовую, магистерскую и другие работы в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90"
@@ -73,60 +74,6 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Сделаем всё как надо!
-                </h2>
-                <p className="block-text__par">
-                    Опытные авторы напишут дипломную работу в полном соответствии с требованиями вашего научного руководителя.
-                </p>
-                <p className="block-text__par">
-                    Скажем даже больше: часто научным руководителям настолько нравится глубина раскрытия темы, приведенные аргументы и четкие формулировки диплома, что никаких доработок не требуется.
-                </p>
-            </section>
-
-            <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/3.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Диссертационные работы</span>
-                            <p className="block-service__par">Написание и оформление</p>
-                            <p className="block-service__par">Публикации</p>
-                            <p className="block-service__par">Строго конфиденциально</p>
-                            <p className="block-service__par">Индивидуально</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-4">
-                    <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Аспирантские работы</span>
-                            <p>От поступления<br/>до защиты</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Статьи</span>
-                            <p>Написание и размещение</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Кандидатская диссертация</span>
-                            <p>Автор на связи</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Докторская диссертация</span>
-                            <p>Конфиденциально</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/7.jpg') + ")",}}>
@@ -173,7 +120,62 @@ const page = () => (
                 </div>
             </section>
 
+            <section className="block-service">
+                <Link href="/dissertaciya-na-zakaz">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/3.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Диссертационные работы</span>
+                            <p className="block-service__par">Написание и оформление</p>
+                            <p className="block-service__par">Публикации</p>
+                            <p className="block-service__par">Строго конфиденциально</p>
+                            <p className="block-service__par">Индивидуально</p>
+                        </div>
+                    </a>
+                </Link>
+                <div className="block-service__list list-4">
+                    <Link href="/dissertaciya-na-zakaz/kandidatskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Аспирантские работы</span>
+                            <p>От поступления<br/>до защиты</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/kandidatskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Статьи</span>
+                            <p>Написание и размещение</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/kandidatskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Кандидатская диссертация</span>
+                            <p>Автор на связи</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/doktorskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Докторская диссертация</span>
+                            <p>Конфиденциально</p>
+                        </a>
+                    </Link>
+                </div>
+            </section>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Сделаем всё как надо!
+                </h2>
+                <p className="block-text__par">
+                    Опытные авторы напишут дипломную работу в полном соответствии с требованиями вашего научного руководителя.
+                </p>
+                <p className="block-text__par">
+                    Скажем даже больше: часто научным руководителям настолько нравится глубина раскрытия темы, приведенные аргументы и четкие формулировки диплома, что никаких доработок не требуется.
+                </p>
+            </section>
+
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}  formType="тип формы"/>
+
+            <ImageBlock imageSrc={require('static/images/block/main1.jpg')}/>
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -193,7 +195,7 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -217,6 +219,10 @@ const page = () => (
                     </li>
                 </ul>
             </section>
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -244,7 +250,7 @@ const page = () => (
 
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -268,6 +274,8 @@ const page = () => (
                     Обращаясь в нашу компанию выполнения студенческих работ на заказ, будьте уверены – Вам помогают прфессионалы!
                 </p>
             </section>
+
+            <ImageBlock imageSrc={require('static/images/block/main.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">

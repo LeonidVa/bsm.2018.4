@@ -23,12 +23,13 @@ import links from 'components/config/linksBlock/diplom';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 
 const page = () => (
     <Wrapper title="Заказать дипломную работу по бухгалтерскому учёту в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В компании «BeSmarter!» можно срочно и недорого заказать дипломную работу по бухгалтерскому учету по выгодной цене в Москве. Тел. +7 (495) 772-40-90.">
-        <div className="wrapper bg bg-c2 bg-img bg-img3">
+        <div className="wrapper bg bg-c2 bg-img bg-img5">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -89,9 +90,6 @@ const page = () => (
                     </Link>
                 </div>
             </section>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -165,8 +163,6 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Заказать дипломную работу по бухгалтерскому учёту
@@ -190,7 +186,9 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dip-po-buch.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -236,6 +234,11 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
@@ -245,8 +248,6 @@ const page = () => (
                     <p>при одновременном заказе вместе с работой</p>
                 </CallMeFormWithTimer>
             </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -265,6 +266,8 @@ const page = () => (
                     Звоните нам прямо сейчас +7 495 772 40 90, посетите наш офис на Арбате!
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <Video>
                 <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>

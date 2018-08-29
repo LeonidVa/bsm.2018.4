@@ -23,11 +23,12 @@ import links from 'components/config/linksBlock/diplom';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../components/common/ImageBlock";
 
 
 const page = () => (
     <Wrapper title="Доработка дипломной работы срочно в Москве, заказать исправление диплома – цены и сроки" description="Доработка дипломной работы срочно! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-        <div className="wrapper bg bg-c2 bg-img bg-img3">
+        <div className="wrapper bg bg-c2 bg-img bg-img5">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -88,9 +89,6 @@ const page = () => (
                     </Link>
                 </div>
             </section>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -164,8 +162,6 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Доработка дипломной работы
@@ -187,7 +183,9 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dip-rabota.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -204,17 +202,7 @@ const page = () => (
                 </p>
             </section>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
-                <h2 className="block-form-timer__title">
-                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
-                </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
-                    <p>при одновременном заказе вместе с работой</p>
-                </CallMeFormWithTimer>
-            </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -241,6 +229,24 @@ const page = () => (
                     Исправление дипломных работ срочно – это уникальная возможность быстро, качественно и надежно получить желаемую специальность.
                 </p>
             </section>
+
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+                <h2 className="block-form-timer__title">
+                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
+                    Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
+                </h2>
+                <CallMeFormWithTimer timerDuration={155555}>
+                    <p>при одновременном заказе вместе с работой</p>
+                </CallMeFormWithTimer>
+            </section>
+
+
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -284,6 +290,8 @@ const page = () => (
                     Мы рады видеть новых клиентов и готовы всем помочь в срочной доработке диплома!
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <Video>
                 <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>

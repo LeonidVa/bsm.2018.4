@@ -57,7 +57,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/doktorskaya">
+                <Link href="#form">
                     <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
@@ -104,25 +104,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -221,7 +221,7 @@ const page = () => (
                 <p className="block-text__par">
                     Самостоятельная подготовка докторской диссертации часто занимает не один год. Текст включает 3 основные части:
                 </p>
-                <ul>
+                <ul className="marker">
                     <li>Теоретическую.</li>
                     <li>Практическую.</li>
                     <li>Методологическую.</li>
@@ -232,7 +232,7 @@ const page = () => (
                 <p className="block-text__par">
                     Главные преимущества этого решения:
                 </p>
-                <ul>
+                <ul className="marker">
                     <li>
                         Качественно выполненная докторская диссертация под ключ с исчерпывающим раскрытием темы. Написанием вашей работы будут заниматься настоящие профессионалы со значительным опытом в освещаемых вопросах.
                     </li>

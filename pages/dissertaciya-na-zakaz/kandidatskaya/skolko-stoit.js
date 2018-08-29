@@ -22,10 +22,12 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../../components/common/ImageBlock";
+import disser from "../../../components/config/linksBlock/disser";
 
 const page = () => (
     <Wrapper title="Сколько стоит кандидатская диссертация – цена кандидатской диссертации от 150 000 рублей | Закажите кандидатскую диссертацию по выгодной стоимости, в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="Хотите узнать, сколько стоит кандидатская диссертация? Позвоните нам по тел. +7 (495) 772-40-90, и мы вам скажем, сколько стоит написать кандидатскую диссертацию в компании «BeSmarter!».">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+        <div className="wrapper bg bg-c2 bg-img bg-img3">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -58,8 +60,8 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                <Link href="#form">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -70,25 +72,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -99,7 +101,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -131,11 +133,25 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Сколько стоит кандидатская диссертация
+                </h1>
+                <p className="block-text__par">
+                    Качественно написанная кандидатская диссертация – цена успеха на защите и шанс обеспечить безоблачное профессиональное будущее молодого ученого. К сожалению, далеко не всегда долгие месяцы кропотливой работы приводят к ожидаемому результату. Не каждый аспирант владеет соответствующими навыками для написания оригинальной и актуальной работы.
+                </p>
+                <p className="block-text__par">
+                    Иногда бывает проще купить кандидатскую диссертацию – цена ее будет намного меньше в сравнении со стоимостью напрасно потерянного времени, нервов и сил. Квалифицированную помощь в написании работы вы сможете получить в компании BeSmarter! Мы сделаем все качественно и недорого, просто доверьтесь нам!
+                </p>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">Эффектная презентация</p>
@@ -195,21 +211,12 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Сколько стоит кандидатская диссертация
-                </h1>
-                <p className="block-text__par">
-                    Качественно написанная кандидатская диссертация – цена успеха на защите и шанс обеспечить безоблачное профессиональное будущее молодого ученого. К сожалению, далеко не всегда долгие месяцы кропотливой работы приводят к ожидаемому результату. Не каждый аспирант владеет соответствующими навыками для написания оригинальной и актуальной работы.
-                </p>
-                <p className="block-text__par">
-                    Иногда бывает проще купить кандидатскую диссертацию – цена ее будет намного меньше в сравнении со стоимостью напрасно потерянного времени, нервов и сил. Квалифицированную помощь в написании работы вы сможете получить в компании BeSmarter! Мы сделаем все качественно и недорого, просто доверьтесь нам!
-                </p>
-            </section>
-
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/kandidatskie2.jpg')}/>
             
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -231,15 +238,7 @@ const page = () => (
                 </ul>
             </section>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
-                <h2 className="block-form-timer__title">
-                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на материалы для защиты
-                </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
-                    <p>при одновременном заказе вместе с работой</p>
-                </CallMeFormWithTimer>
-            </section>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -256,10 +255,18 @@ const page = () => (
                 </p>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-            <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+            <h2 className="block-form-timer__title">
+                <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
+                Успей получить<br/> скидку на материалы для защиты
+            </h2>
+            <CallMeFormWithTimer timerDuration={155555}>
+                <p>при одновременном заказе вместе с работой</p>
+            </CallMeFormWithTimer>
+            </section>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -286,6 +293,13 @@ const page = () => (
                     Не теряйте времени – сделайте свой заказ прямо сейчас и избавьте себя от лишних проблем.
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <LinksBlock links={disser}/>
 
         </div>
     </Wrapper>

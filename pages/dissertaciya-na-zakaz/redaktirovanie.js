@@ -22,11 +22,12 @@ import LinksBlock from 'components/common/LinksBlock';
 import disser from 'components/config/linksBlock/disser';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
     <Wrapper title="Редактирование диссертации – стоимость (расценки) редактирование диссертации в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В компании  BeSmarter! Вы сможете заказать редактирование диссертации от надежных и проверенных кандидатов и докторов наук, недорогие цены только в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+        <div className="wrapper bg bg-c2 bg-img bg-img5">
 
             <MetaTags>
                 {/* <title></title> */}
@@ -55,8 +56,8 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                <Link href="#form">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
                             <p className="block-service__par">Написание и оформление</p>
@@ -67,25 +68,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -96,7 +97,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Докторская диссертация</span>
                             <p className="block-service__par">Актуальность и научная новизна</p>
@@ -128,7 +129,33 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            <section className="block-text">
+                <h1 className="block-text__title">
+                    Сколько стоит редактирование диссертацию
+                </h1>
+                <ul>
+                    <li>
+                        <b>Любые специальности</b><br/>
+                        Мы принимаем на редактирование работы любой сложности, по техническим и гуманитарным дисциплинам.
+                    </li>
+                    <li>
+                        <b>Квалификация</b><br/>
+                        Редактирование диссертации под заказ будет поручено компетентному в данной теме специалисту, с ученой степенью не ниже кандидатской.
+                    </li>
+                    <li>
+                        <b>Честность</b><br/>
+                        Расценки на редактирование диссертаций устанавливаются согласно прозрачным и объективным критериям, действует гибкая система скидок.
+                    </li>
+                    <li>
+                        <b>Дополнительные услуги</b><br/>
+                        Также мы предоставляем помощь в написании диссертаций «с нуля» и подготовке необходимых дополнительных материалов.
+                    </li>
+                </ul>
+            </section>
+
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+
 
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
@@ -192,61 +219,13 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Сколько стоит редактирование диссертацию
-                </h1>
-                <ul>
-                    <li>
-                        <b>Любые специальности</b><br/>
-                        Мы принимаем на редактирование работы любой сложности, по техническим и гуманитарным дисциплинам.
-                    </li>
-                    <li>
-                        <b>Квалификация</b><br/>
-                        Редактирование диссертации под заказ будет поручено компетентному в данной теме специалисту, с ученой степенью не ниже кандидатской.
-                    </li>
-                    <li>
-                        <b>Честность</b><br/>
-                        Расценки на редактирование диссертаций устанавливаются согласно прозрачным и объективным критериям, действует гибкая система скидок.
-                    </li>
-                    <li>
-                        <b>Дополнительные услуги</b><br/>
-                        Также мы предоставляем помощь в написании диссертаций «с нуля» и подготовке необходимых дополнительных материалов.
-                    </li>
-                </ul>
-            </section>
-
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Наши гарантии
-                </h2>
-                <p className="block-text__par">
-                    Гарантия качества. Наш отдел контроля использует фирменный многоступенчатый алгоритм проверки работ (грамотность, оформление, уникальность и т. д.).
-                </p>
-                <p className="block-text__par">
-                    Гарантия соблюдения сроков. Точный день сдачи прописывается в официальном договоре, а стадии готовности отдельных глав и разделов контролируются личным менеджером.
-                </p>
-                <p className="block-text__par">
-                    Гарантия доступности. Мы всегда на связи и готовы помочь. Связаться с менеджером можно онлайн, по телефону или побеседовать лично в нашем офисе в Москве.
-                </p>
-                <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
-                    Компания BeSmarter! – это уникальная возможность качественно, срочно и недорого отредактировать диссертацию по любой теме. Воспользуйтесь ей прямо сейчас!
-                </p>
-            </section>
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
-                <h2 className="block-form-timer__title">
-                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на материалы для защиты
-                </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
-                    <p>при одновременном заказе вместе с работой</p>
-                </CallMeFormWithTimer>
-            </section>
+
+            <ImageBlock imageSrc={require('static/images/block/dis-red.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -268,7 +247,35 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Наши гарантии
+                </h2>
+                <p className="block-text__par">
+                    Гарантия качества. Наш отдел контроля использует фирменный многоступенчатый алгоритм проверки работ (грамотность, оформление, уникальность и т. д.).
+                </p>
+                <p className="block-text__par">
+                    Гарантия соблюдения сроков. Точный день сдачи прописывается в официальном договоре, а стадии готовности отдельных глав и разделов контролируются личным менеджером.
+                </p>
+                <p className="block-text__par">
+                    Гарантия доступности. Мы всегда на связи и готовы помочь. Связаться с менеджером можно онлайн, по телефону или побеседовать лично в нашем офисе в Москве.
+                </p>
+                <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
+                    Компания BeSmarter! – это уникальная возможность качественно, срочно и недорого отредактировать диссертацию по любой теме. Воспользуйтесь ей прямо сейчас!
+                </p>
+            </section>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+                <h2 className="block-form-timer__title">
+                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
+                    Успей получить<br/> скидку на материалы для защиты
+                </h2>
+                <CallMeFormWithTimer timerDuration={155555}>
+                    <p>при одновременном заказе вместе с работой</p>
+                </CallMeFormWithTimer>
+            </section>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -292,6 +299,8 @@ const page = () => (
                     Станьте нашим клиентом уже сегодня, и вы не пожалеете об этом!
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>

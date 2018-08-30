@@ -79,17 +79,26 @@ class OrderForm extends Component {
             config: {headers: {'Content-Type': 'multipart/form-data'}}
         })
             .then(function (response) {
+                const { data = {} } = response;
                 const {
-                    error=true, id, msg,
-                } = response;
-                if ( !error ) {
-                    this.setState({
-                        bool: true,
-                        number: id
+                    error = true,
+                    id,
+                    msg,
+                } = data;
+                if (!error) {
+                    _this.setState({
+                        formSended: {
+                            ..._this.state.formSended,
+                            bool: true,
+                            number: id,
+                        },
                     });
                 } else {
-                    this.setState({
-                        error: msg,
+                    _this.setState({
+                        formSended: {
+                            ..._this.state.formSended,
+                            error: msg,
+                        },
                     });
                 }
                 console.log(response);
@@ -98,6 +107,7 @@ class OrderForm extends Component {
                 //handle error
                 console.log(response);
             });
+
 
         const { targetID = "form submit" } = this.props;
         analytics(targetID);

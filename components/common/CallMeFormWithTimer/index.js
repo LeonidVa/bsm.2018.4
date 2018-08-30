@@ -12,7 +12,8 @@ class CallMeFormWithTimer extends Component {
         e.preventDefault();
         console.log('позвоните мне на номер ' + this.state.phone + ' по-поводу диссертации');
 
-        analytics('Отправка_формы_с_таймером');
+        const { targetID = "form submit" } = this.props;
+        analytics(targetID);
     }
 
     render() {

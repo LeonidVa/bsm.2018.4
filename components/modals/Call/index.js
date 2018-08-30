@@ -58,7 +58,8 @@ class CallPopup extends Component {
             console.log(response);
         });
 
-        analytics('Отправка_формы_попап1');
+        const { targetID = "form submit" } = this.props;
+        analytics(targetID);
 
         /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
                     .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))

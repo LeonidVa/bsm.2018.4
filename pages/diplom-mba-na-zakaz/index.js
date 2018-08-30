@@ -23,6 +23,7 @@ import links from 'components/config/linksBlockConfig';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -82,7 +83,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -156,7 +157,6 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -186,7 +186,11 @@ const page = () => (
                 </ul>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Заказать" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/diplom MBA.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -202,6 +206,10 @@ const page = () => (
                     Согласованный исполнитель пишет диплом МВА на заказ и сдает его в оговоренные сроки. При необходимости вы можете заказать бесплатные корректировки. Далее автор консультирует вас и помогает подготовиться к защите.
                 </p>
             </section>
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -229,7 +237,7 @@ const page = () => (
                 <iframe src="https://www.youtube.com/embed/mzDkG6XRKuc" frameborder="0" allowfullscreen></iframe>
             </Video>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -253,6 +261,8 @@ const page = () => (
                     <b>Воспользуйтесь услугами специалистов BeSmarter!, и вы не пожалеете об этом!</b>
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <Video>
                 <iframe src="//drive.google.com/file/d/159HfczgLjy3uiVHfryJBAP9GLhN3RLHR/preview" frameBorder="0" allowFullScreen></iframe>

@@ -56,6 +56,7 @@ class OrderForm extends Component {
             //window.alert('Пожалуйста, пройдите каптчу');
             //return
         }
+			  const _this = this;
         let formData = new FormData();
         formData.set('form', formType);
         formData.set('source', source);

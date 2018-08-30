@@ -2,12 +2,8 @@ import Link from 'next/link';
 
 import './index.scss';
 import foxLogo from 'static/images/fox-logo.png'
-// import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-// import brands from '@fortawesome/fontawesome-free-brands'
-
 import BottomHelper from 'components/common/CallAsk'
 
-// const { faTwitter, faFacebookF, faTumblr } = brands
 
 export default (props) => (
     <div>

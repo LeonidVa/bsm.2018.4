@@ -5,7 +5,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
 import Dropdown from 'react-dropdown'
 import Recaptcha from "react-google-recaptcha";
-import analytics from 'utils/analytics';
+import triggerTarget from 'utils/analytics';
 import DatePicker from 'components/common/DatePicker';
 
 import axios from 'axios';
@@ -112,7 +112,7 @@ class OrderForm extends Component {
 
 
         const {targetID = "form submit"} = this.props;
-        analytics(targetID);
+        triggerTarget(targetID);
     };
 
     onDrop(files) {

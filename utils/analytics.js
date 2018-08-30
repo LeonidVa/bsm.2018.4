@@ -2,7 +2,8 @@
 // ReactGA.initialize('UA-000000-01');
 
 /* Функция может принимать любое количество параметров */
-export default function analytics() {
+export default function triggerTarget(targetID) {
+    console.log('triggered target "'+targetID+'"');
     try {
         // код отправки аналитики
         // ReactGA.ga(...arguments);

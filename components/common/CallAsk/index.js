@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
+import triggerTarget from 'utils/analytics';
 
 
 class BottomHelper extends Component {
@@ -11,8 +12,8 @@ class BottomHelper extends Component {
                     <div className="inner">
                         <h2 className="block-callask__title">Остались вопросы?</h2>
                         <div className="block-callask__buttons">
-                            <ToggleQuestionPopup><a className="block-callask__button">Задать вопрос</a></ToggleQuestionPopup>
-                            <ToggleCallPopup><a className="block-callask__button">Заказать звонок</a></ToggleCallPopup>
+                            <ToggleQuestionPopup targetID="question"><a className="block-callask__button">Задать вопрос</a></ToggleQuestionPopup>
+                            <ToggleCallPopup targetID="call_me_bottom"><a className="block-callask__button">Заказать звонок</a></ToggleCallPopup>
                         </div>
                     </div>
                 </section>

@@ -9,6 +9,8 @@ import {ToggleCallPopup} from "components/modals/Call"
 import './header.scss';
 import 'components/index.scss';
 
+import triggerTarget from 'utils/analytics';
+
 
 class Header extends Component {
 
@@ -54,13 +56,13 @@ class Header extends Component {
                         <div className="header__right">
 
                             {isMobile || isTablet ?
-                                <a className="header__telanckor" href="tel:+74957724090"><span className="header__tel">+7 495 772 40 90</span></a>
+                                <a className="header__telanckor" href="tel:+74957724090" onClick={()=>{triggerTarget("click_phone"); return true;}}><span className="header__tel">+7 495 772 40 90</span></a>
                                 :
-                                <ToggleCallPopup><a className="header__telanckor"><span className="header__tel">+7 495 772 40 90</span></a></ToggleCallPopup>
+                                <ToggleCallPopup targetID="call_me_top"><a className="header__telanckor"><span className="header__tel">+7 495 772 40 90</span></a></ToggleCallPopup>
                                 //<OrderCallButton><a className="header__telanckor">+7 495 772 40 90</a></OrderCallButton>
                             }
 
-                            <ToggleCallPopup><a className="header__order-tel"><span style={{padding: "1em 0"}}><span className="header__order-call">Заказать звонок</span></span></a></ToggleCallPopup>
+                            <ToggleCallPopup targetID="call_me_top"><a className="header__order-tel"><span style={{padding: "1em 0"}}><span className="header__order-call">Заказать звонок</span></span></a></ToggleCallPopup>
                         </div>
                         <div id="nav-icon3"
                              className={`humburger ${showMenuMob ? 'open' : ''}`}

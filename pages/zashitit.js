@@ -2,7 +2,7 @@ import Wrapper from 'components/Wrapper';
 import Title from 'components/common/Title';
 import Link from 'next/link';
 
-import OrderForm from 'components/common/OrderForm';
+import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';;
 import fields from 'components/config/form/main'
 
 
@@ -49,7 +49,7 @@ const page = () => (
                 <p className="block-text__par"><b>Успешной защиты!</b></p>
             </section>
 
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+            <OrderForm />
 
         </div>
     </Wrapper>

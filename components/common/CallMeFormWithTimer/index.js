@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
 import Timer from 'components/common/Timer';
-import analytics from 'utils/analytics';
+import triggerTarget from 'utils/analytics';
 import axios from 'axios/index';
 
 class CallMeFormWithTimer extends Component {
 
     state = {
         phone: '',
-        msg:null, // можно вывести сообщение при желании
+        msg: null, // можно вывести сообщение при желании
     };
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log('позвоните мне на номер ' + this.state.phone + ' по-поводу диссертации')
         const {phone} = this.state;
-
+        const {formType = "timer_form"} = this.props;
         const formData = new FormData();
-        formData.set('form', 'Успешная Защита');
+        formData.set('form', formType);
         formData.set('phone', phone);
         axios({
             method: 'POST',
@@ -26,9 +25,9 @@ class CallMeFormWithTimer extends Component {
         })
             .then(function (response) {
                 const {
-                    error=true, id, msg,
+                    error = true, id, msg,
                 } = response;
-                if ( !error ) {
+                if (!error) {
                     this.setState({msg});
                 }
                 console.log(response);
@@ -38,9 +37,9 @@ class CallMeFormWithTimer extends Component {
                 console.log(response);
             });
 
-        const { targetID = "form submit" } = this.props;
-        analytics(targetID);
-    }
+        const {targetID = "timer_form"} = this.props;
+        triggerTarget(targetID);
+    };
 
     render() {
         const {timerSize = 1.6, timerDuration, buttonText = "Позвоните мне!"} = this.props;

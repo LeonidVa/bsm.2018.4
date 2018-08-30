@@ -7,13 +7,13 @@ import MessBlock from 'components/common/MessBlock';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
 
-import OrderForm from 'components/common/OrderForm';
+import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';;
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'components/config/infoBlock/diplom'
 
-import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -188,7 +188,7 @@ const page = () => (
                 </p>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <FormEstimate />
 
             <ImageBlock imageSrc={require('static/images/block/dip-po-ped.jpg')}/>
 
@@ -236,15 +236,7 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
-                <h2 className="block-form-timer__title">
-                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
-                </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
-                    <p>при одновременном заказе вместе с работой</p>
-                </CallMeFormWithTimer>
-            </section>
+            <CurrentOffer />
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -270,7 +262,7 @@ const page = () => (
 
 
             <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+            <OrderForm />
 
             <LinksBlock links={links}/>
         </div>

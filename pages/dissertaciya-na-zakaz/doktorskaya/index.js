@@ -7,13 +7,13 @@ import MessBlock from 'components/common/MessBlock';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
 
-import OrderForm from 'components/common/OrderForm';
+import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';;
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'components/config/infoBlock/disser-doc'
 
-import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -140,7 +140,7 @@ const page = () => (
                 </p>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+            <FormEstimate />
 
 
 
@@ -209,7 +209,7 @@ const page = () => (
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
             <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+            <OrderForm />
 
             <ImageBlock imageSrc={require('static/images/block/ddoc.jpg')}/>
 
@@ -343,7 +343,7 @@ const page = () => (
             </section>
 
             <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+            <OrderForm />
 
 
 

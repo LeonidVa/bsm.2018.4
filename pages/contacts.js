@@ -7,7 +7,7 @@ import NavRow from 'components/common/NavRow';
 
 import Title from 'components/common/Title'
 import MapBlock from 'components/common/MapBlock';
-import OrderForm from 'components/common/OrderForm'
+import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';
 import LinksBlock from 'components/common/LinksBlock'
 import fields from 'components/config/form/main';
 import links from 'components/config/linksBlockConfig';
@@ -15,7 +15,7 @@ import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 import MetaTags from "react-meta-tags";
-
+import triggerTarget from 'utils/analytics';
 
 class page extends Component {
     render() {
@@ -78,7 +78,7 @@ class page extends Component {
                             Почта
                         </h2>
                         <p className="block-text__subtitle subtitle-orange">
-                            <a href="mailto:zakaz@besmarter.ru?subject=Новая заявка" style={{color: "#f4511e"}}>zakaz@besmarter.ru</a>
+                            <a href="mailto:zakaz@besmarter.ru?subject=Новая заявка" onClick={()=>{triggerTarget("email"); return true;}} style={{color: "#f4511e"}}>zakaz@besmarter.ru</a>
                         </p>
                         <p className="block-text__par">
                             Возникли вопросы?
@@ -87,8 +87,8 @@ class page extends Component {
                             Пишите – ответим!
                         </p>
                         <div className="block-callask__buttons">
-                            <ToggleQuestionPopup><a className="block-callask__button">Задать вопрос</a></ToggleQuestionPopup>
-                            <ToggleCallPopup><a className="block-callask__button">Заказать звонок</a></ToggleCallPopup>
+                            <ToggleQuestionPopup targetID="question_contacts"><a className="block-callask__button">Задать вопрос</a></ToggleQuestionPopup>
+                            <ToggleCallPopup targetID="call_me_contacts"><a className="block-callask__button">Заказать звонок</a></ToggleCallPopup>
                         </div>
                     </section>
 
@@ -205,7 +205,7 @@ class page extends Component {
                         </Link>
                     </section>
 
-                    <OrderForm title="Заказать работу" fields={fields}/>
+                    <OrderForm />
                     <LinksBlock links={links}/>
                 </div>
             </Wrapper>

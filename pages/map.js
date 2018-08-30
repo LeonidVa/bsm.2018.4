@@ -4,22 +4,12 @@ import Wrapper from 'components/Wrapper';
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
-import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty';
 
-import OrderForm from 'components/common/OrderForm';
+
+import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';;
 import fields from 'components/config/form/main';
 
-import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
 
-import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
-
-import reviewBlockConfig from 'components/config/reviewBlockConfig';
-import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
-
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig';
 
 import MetaTags from 'react-meta-tags';
 
@@ -507,98 +497,8 @@ const page = () => (
                 </ul>
             </section>
 
-            {/* <ProfitsBlockSlider profitBlockConfig={dopy}/> */}
-
-            {/* <section className="block-service">
-                <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Материалы для успешной защиты</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">Доступные цены</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaia">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section> */}
-
-            {/* <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/> */}
-
-            {/* <InfoBlock infoBlockConfig={infoBlockConfig}/> */}
-
-            {/* <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
-                <h2 className="block-form-timer__title">
-                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
-                </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
-                    <p>при одновременном заказе вместе с работой</p>
-                </CallMeFormWithTimer>
-            </section> */}
-
-            {/* <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/> */}
-
             <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+            <OrderForm />
 
         </div>
     </Wrapper>

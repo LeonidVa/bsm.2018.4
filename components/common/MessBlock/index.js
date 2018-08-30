@@ -1,7 +1,5 @@
-import Link from 'next/link';
-
-// import Color from 'color';
-
+import React, {Component} from 'react'
+import triggerTarget from 'utils/analytics';
 import facebookMessenger from 'static/images/messegers/facebook-messenger.svg'
 import telegram from 'static/images/messegers/telegram.svg'
 import whatsapp from 'static/images/messegers/whatsapp.svg'
@@ -15,59 +13,70 @@ const colors = [
     '#ff7043',
     '#ff8a65',
 ];
-const messegers = (messegersList) => (
-    <div className="block-mess__list">
-        {messegersList.map((item, index) => {
-                return (
-                    <a href={item.url}
-                       target="_blank"
-                       key={index}
-                       className="block-mess__item"
-                       style={{background:colors[index]}}
-                       title={item.title}
-                       rel="nofollow"
-                    >
-                        <img src={item.icon} alt={item.title}/>
-                    </a>
-                )
+
+class MessBlock extends Component {
+    drawList(messegersList) {
+        return <div className="block-mess__list">
+            {messegersList.map((item, index) => {
+                    const handleClick = () => {
+                        triggerTarget(item.targetID)
+                    };
+                    return (
+                        <a href={item.url}
+                           target="_blank"
+                           key={index}
+                           className="block-mess__item"
+                           style={{background: colors[index]}}
+                           title={item.title}
+                           rel="nofollow"
+                           onClick={handleClick}
+                        >
+                            <img src={item.icon} alt={item.title}/>
+                        </a>
+                    )
+                }
+            )
             }
-        )
-        }
-    </div>
-)
+        </div>
+    };
 
-
-const MessBlock = () => (
-    <section className="block-mess">
-        <span className="block-mess__title">Спроси нас:</span>
-        {messegers([
-            {
-                icon: vk,
-                title: "VK",
-                url: "https://vk.com/im?sel=-129623016"
-            },
-            {
-                icon: facebookMessenger,
-                title: "Facebook Messenger",
-                url: "https://www.facebook.com/messages/t/besmarter.better/"
-            },
-            {
-                icon: telegram,
-                title: "Телеграм",
-                url: ""
-            },
-            {
-                icon: whatsapp,
-                title: "WhatsApp",
-                url: "https://api.whatsapp.com/send?phone=79257729045"
-            },
-            {
-                icon: instagram,
-                title: "Instagram",
-                url: "https://www.instagram.com/besmarter_moscow/"
-            },
-        ])}
-    </section>
-)
+    render() {
+        return <section className="block-mess">
+            <span className="block-mess__title">Спроси нас:</span>
+            {this.drawList([
+                {
+                    icon: vk,
+                    title: "VK",
+                    url: "https://vk.com/im?sel=-129623016",
+                    targetID: "vk"
+                },
+                {
+                    icon: facebookMessenger,
+                    title: "Facebook Messenger",
+                    url: "https://www.facebook.com/messages/t/besmarter.better/",
+                    targetID: "facebook"
+                },
+                {
+                    icon: telegram,
+                    title: "Телеграм",
+                    url: "https://t.me/igordata",
+                    targetID: "telegram"
+                },
+                {
+                    icon: whatsapp,
+                    title: "WhatsApp",
+                    url: "https://api.whatsapp.com/send?phone=79257729045",
+                    targetID: "whatsapp"
+                },
+                {
+                    icon: instagram,
+                    title: "Instagram",
+                    url: "https://www.instagram.com/besmarter_moscow/",
+                    targetID: "instagram"
+                },
+            ])}
+        </section>
+    }
+}
 
 export default MessBlock

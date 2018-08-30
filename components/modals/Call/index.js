@@ -2,7 +2,7 @@ import React, {Component, createContext} from 'react';
 import './style.scss';
 import axios from 'axios';
 import Close from '../Close';
-import analytics from 'utils/analytics';
+import triggerTarget from 'utils/analytics';
 
 const callPopupState = {
     phone: '',
@@ -34,12 +34,8 @@ class CallPopup extends Component {
                     window.alert('Пожалуйста, пройдите каптчу');
                     return
                 }*/
-        let formtype = 'call';
-        if (this.state.question) {
-            formtype = 'question'
-        }
         let formData = new FormData();
-        formData.set('form', question ? 'Вопрос' : 'Заказ обратного звонка');
+        formData.set('form', question ? 'Задать вопрос' : 'Заказать звонок');
         formData.set('source', '2018.besmarter.ru');
         formData.set('name', name);
         formData.set('phone', phone);
@@ -58,8 +54,8 @@ class CallPopup extends Component {
             console.log(response);
         });
 
-        const { targetID = "form submit" } = this.props;
-        analytics(targetID);
+        const {targetID = "call_me_top"} = this.props;
+        triggerTarget(targetID);
 
         /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
                     .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
@@ -85,7 +81,9 @@ class CallPopup extends Component {
                             <div className="block-form block-form2 modal-form modal__body" onClick={(e) => {
                                 e.stopPropagation();
                             }}>
-                                <Close onClick={() => { context.hide() }} inverse/>
+                                <Close onClick={() => {
+                                    context.hide()
+                                }} inverse/>
                                 <h2 className="block-form__title">{context.question ? 'Задать вопрос' : 'Заказать звонок'}</h2>
                                 <form className="block-form__form" onSubmit={this.handleSubmit}>
                                     <div className="block-form__item">

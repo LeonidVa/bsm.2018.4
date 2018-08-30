@@ -2,11 +2,9 @@ import React, {Component, createContext} from 'react';
 import './style.scss';
 import axios from 'axios';
 import Close from "../Close/index";
-import analytics from 'utils/analytics';
+import triggerTarget from 'utils/analytics';
 
 const exitPopupState = {
-    formtype: 'exitpopup',
-    source: 'server side default value',
     phone: '',
     name: '',
     comment: '',
@@ -27,22 +25,22 @@ class ExitPopup extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = exitPopupState;
-        if (process.browser) {
-            this.state.source = window.location.hostname;
-        }
     }
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const {source, name, phone, comment, verified} = this.state;
+        const {name, phone, comment, verified} = this.state;
         /*        if (!this.state.verified) {
                     window.alert('Пожалуйста, пройдите каптчу');
                     return
                 }*/
+        let source = "server default value";
+        if (process.browser) {
+            source = window.location.hostname;
+        }
         let formData = new FormData();
-        formData.set('form', 'Скидка 500 рублей, при уходе с сайта');
+        formData.set('form', 'Бонус при заказе 500р');
         formData.set('source', source);
         formData.set('name', name);
         formData.set('phone', phone);
@@ -61,8 +59,8 @@ class ExitPopup extends Component {
             console.log(response);
         });
 
-        const { targetID = "form submit" } = this.props;
-        analytics(targetID);
+        const {targetID = "sale_500"} = this.props;
+        triggerTarget(targetID);
 
         /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
                     .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))

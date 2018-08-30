@@ -7,7 +7,7 @@ import NavRow from 'components/common/NavRow';
 
 import ImageBlock from 'components/common/ImageBlock'
 import Accordion from 'components/common/Accordion'
-import OrderForm from 'components/common/OrderForm'
+import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 
@@ -107,7 +107,7 @@ const page = () => (
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <ImageBlock imageSrc={require('static/images/block/g.jpg')}/>
-            <OrderForm title="Заказать работу" fields={fields}/>
+            <OrderForm />
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <LinksBlock links={links}/>

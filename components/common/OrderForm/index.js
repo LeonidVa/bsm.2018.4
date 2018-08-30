@@ -56,7 +56,6 @@ class OrderForm extends Component {
             //window.alert('Пожалуйста, пройдите каптчу');
             //return
         }
-        const _this = this;
         let formData = new FormData();
         formData.set('form', formType);
         formData.set('source', source);
@@ -81,24 +80,16 @@ class OrderForm extends Component {
         })
             .then(function (response) {
                 const {
-                    error = true,
-                    id,
-                    msg,
+                    error=true, id, msg,
                 } = response;
-                if (!error) {
-                    _this.setState({
-                        formSended: {
-                            ..._this.state.formSended,
-                            bool: true,
-                            number: id,
-                        },
+                if ( !error ) {
+                    this.setState({
+                        bool: true,
+                        number: id
                     });
                 } else {
-                    _this.setState({
-                        formSended: {
-                            ..._this.state.formSended,
-                            error: msg,
-                        },
+                    this.setState({
+                        error: msg,
                     });
                 }
                 console.log(response);

@@ -8,6 +8,16 @@
     position: relative;
     z-index: 1;
 
+    ul.marker {
+        li {
+            list-style-type: none;
+        }
+        li:before {
+            content: "\2B24";
+            margin-right: 10px;
+        }
+    }
+
     @media (max-width: 900px) {
         width: 70%;
         min-width: 273px;
@@ -31,7 +41,7 @@
         margin-top: 3rem;
         margin-bottom: 1rem;
         &.center {
-        text-align: center;
+            text-align: center;
         }
     }
     &__title:first-child {
@@ -86,7 +96,7 @@
             text-align: right;
         }
         &.center {
-        text-align: center;
+            text-align: center;
         }
         a {
             text-decoration: none;
@@ -117,6 +127,9 @@
             color: #4a4a4a;
             line-height: 1.5em;
             margin-bottom: 0.8em;
+            .tel {
+                white-space: nowrap;
+            }
             a {
                 text-decoration: none;
                 color: #4a4a4a;

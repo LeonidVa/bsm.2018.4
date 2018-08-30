@@ -18,11 +18,12 @@ class OrderForm extends Component {
         // Don't call this.setState() here!
         let source = 'server side default value';
         let formType = "default formType";
-        if (process.browser && window.location !== undefined) {
-            source = window.location.hostname;
-            formType += " at " + window.location.toString();
-        }
-        if (props.formType !== undefined) {
+        if (props.formType === undefined) {
+            if (process.browser && window.location !== undefined) {
+                source = window.location.hostname;
+                formType += " at " + window.location.toString();
+            }
+        } else {
             formType = props.formType
         }
         this.state = {
@@ -56,7 +57,7 @@ class OrderForm extends Component {
             //window.alert('Пожалуйста, пройдите каптчу');
             //return
         }
-			  const _this = this;
+        const _this = this;
         let formData = new FormData();
         formData.set('form', formType);
         formData.set('source', source);
@@ -80,7 +81,7 @@ class OrderForm extends Component {
             config: {headers: {'Content-Type': 'multipart/form-data'}}
         })
             .then(function (response) {
-                const { data = {} } = response;
+                const {data = {}} = response;
                 const {
                     error = true,
                     id,
@@ -110,12 +111,8 @@ class OrderForm extends Component {
             });
 
 
-        const { targetID = "form submit" } = this.props;
+        const {targetID = "form submit"} = this.props;
         analytics(targetID);
-
-        /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
-                    .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
-                    .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))*/
     };
 
     onDrop(files) {
@@ -192,22 +189,22 @@ class OrderForm extends Component {
     nptDate(field) {
         return (
             <div className="block-form__item"
-                key={field.id}
-                style={{
-                    opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
-                    maxHeight: field.required ? '1000px' : (this.state.Extended ? '1000px' : '0'),
-                    visibility: field.required
-                        ? 'visible'
-                        : (this.state.Extended
-                            ? 'visible'
-                            : 'hidden'),
-                }}>
+                 key={field.id}
+                 style={{
+                     opacity: field.required ? 1 : (this.state.Extended ? 1 : 0),
+                     maxHeight: field.required ? '1000px' : (this.state.Extended ? '1000px' : '0'),
+                     visibility: field.required
+                         ? 'visible'
+                         : (this.state.Extended
+                             ? 'visible'
+                             : 'hidden'),
+                 }}>
                 <label htmlFor={field.id}>{field.label}{field.rlabel}</label>
 
                 <DatePicker
                     placeholder={field.placeholder}
                     value={this.state[field.name]}
-                    onDayChange={(value) => this.setState({ [field.name]: value })}
+                    onDayChange={(value) => this.setState({[field.name]: value})}
                 />
 
                 {/*<input
@@ -321,7 +318,6 @@ class OrderForm extends Component {
                 <div className="block-form" style={{border: 'none'}}>
                     <img width="100%" src={require('static/images/fox-logo.png')}/>
                     <p className="block-text__par">{this.state.formSended.number ? `Номер заявки: ${this.state.formSended.number}` : ''}</p>
-
                 </div>
             )
         }

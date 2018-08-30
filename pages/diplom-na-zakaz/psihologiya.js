@@ -23,6 +23,7 @@ import links from 'components/config/linksBlock/diplom';
 
 import MetaTags from 'react-meta-tags';
 import Video from 'components/common/VideoBlock';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -89,7 +90,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
 
             <section className="block-service">
@@ -164,7 +165,7 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -193,7 +194,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dip-po-psih.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -234,6 +239,10 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
@@ -244,7 +253,7 @@ const page = () => (
                 </CallMeFormWithTimer>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -264,6 +273,8 @@ const page = () => (
             <Video>
                 <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
             </Video>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>

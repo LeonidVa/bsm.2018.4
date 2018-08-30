@@ -23,6 +23,7 @@ import links from 'components/config/linksBlock/diplom';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -88,9 +89,6 @@ const page = () => (
                     </Link>
                 </div>
             </section>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -164,8 +162,6 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Заказать дипломную работу по менеджменту
@@ -192,7 +188,43 @@ const page = () => (
                 </p>
             </section>
 
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dip-po-men.jpg')}/>
+
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Заказать диплом по менеджменту в Москве
+                </h2>
+                <p className="block-text__par">
+                    После приёма Вашего заказа мы составляем техническое задание, по которому автор пишет работу. В задании мы указываем предпочитаемые Вами методики исследования.
+                </p>
+                <p className="block-text__par">
+                    Поэтому Вы получаете сделанную именно для Вас интересную и качественную работу. Мы уверены, что с нею отлично защититесь!
+                </p>
+                <p className="block-text__par">
+                    Нужен диплом по менеджменту прямо сейчас? Сделаем!
+                </p>
+                <p className="block-text__par">
+                    Позвоните нам +7 495 772 40 90, заполните форму заявки или посетите наш <Link href="/contacts"><b><a>комфортабельный офис</a></b></Link>, который находится на Арбате!
+                </p>
+            </section>
+
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
+                <h2 className="block-form-timer__title">
+                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
+                    Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
+                </h2>
+                <CallMeFormWithTimer timerDuration={155555}>
+                    <p>при одновременном заказе вместе с работой</p>
+                </CallMeFormWithTimer>
+            </section>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -228,39 +260,15 @@ const page = () => (
                 </ul>
             </section>
 
-            <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
-                <h2 className="block-form-timer__title">
-                    <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-                    Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
-                </h2>
-                <CallMeFormWithTimer timerDuration={155555}>
-                    <p>при одновременном заказе вместе с работой</p>
-                </CallMeFormWithTimer>
-            </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Заказать диплом по менеджменту в Москве
-                </h2>
-                <p className="block-text__par">
-                    После приёма Вашего заказа мы составляем техническое задание, по которому автор пишет работу. В задании мы указываем предпочитаемые Вами методики исследования.
-                </p>
-                <p className="block-text__par">
-                    Поэтому Вы получаете сделанную именно для Вас интересную и качественную работу. Мы уверены, что с нею отлично защититесь!
-                </p>
-                <p className="block-text__par">
-                    Нужен диплом по менеджменту прямо сейчас? Сделаем!
-                </p>
-                <p className="block-text__par">
-                    Позвоните нам +7 495 772 40 90, заполните форму заявки или посетите наш <Link href="/contacts"><b><a>комфортабельный офис</a></b></Link>, который находится на Арбате!
-                </p>
-            </section>
-
             <Video>
                 <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
             </Video>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+
+
+
 
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>

@@ -22,6 +22,8 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlock/diplom';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
+import Video from "../../components/common/VideoBlock";
 
 
 
@@ -89,7 +91,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
 
             <section className="block-service">
@@ -164,7 +166,6 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -198,7 +199,11 @@ const page = () => (
                 </ul>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dip-po-prog.jpg')}/>
+
+
             
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -222,6 +227,11 @@ const page = () => (
                     Лучше оставить заявку на написание под ключ, а не покупать готовый материал! При покупке уже написанной работы вы сильно рискуете – материал может быть лишь незначительно изменен. Это чревато неприятными вопросами со стороны научного руководителя, а то и полным провалом во время защиты диплома. Если вы делаете заказ в BeSmarter!, то получаете на руки работу, которая тщательно проверена на уникальность. Конечно, когда речь идет о технических дисциплинах, не стоит пренебрегать написанием диплома по программированию на заказ, потому что в свободном доступе или в продаже вряд ли найдется стоящий материал.
                 </p>
             </section>
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
@@ -256,7 +266,6 @@ const page = () => (
                 </ol>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -278,8 +287,13 @@ const page = () => (
                 </ul>
             </section>
 
-            <a name="form" id="form"/>
-            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <Video>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </Video>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -287,7 +301,7 @@ const page = () => (
                 </h2>
                 <ol>
                     <li>
-                        Оставьте заявку на сайте или обратитесь по телефону +7 (495) 772-40-90, +7 (495) 772-90-40.
+                        Оставьте заявку на сайте или обратитесь по телефону <br/>+7 (495) 772-40-90, +7 (495) 772-90-40.
                     </li>
                     <li>
                         Закажите написание всей работы полностью или оформите заказ на отдельные главы, разделы. Мы рекомендуем первый вариант, ведь когда на руках есть полностью готовый диплом, то отвечать на вопросы научного руководителя намного проще.
@@ -300,6 +314,9 @@ const page = () => (
                     Обращайтесь в компанию BeSmarter!, если вам срочно нужен качественный диплом, курсовая или реферат по программированию на заказ.
                 </p>
             </section>
+
+            <a name="form" id="form"/>
+            <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
             <LinksBlock links={links}/>
         </div>

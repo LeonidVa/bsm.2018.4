@@ -174,7 +174,7 @@ const page = () => (
 
             <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}  formType="тип формы"/>
 
-            <ImageBlock imageSrc={require('static/images/block/main1.jpg')}/>
+            <ImageBlock imageSrc={require('static/images/block/main2.jpg')}/>
 
 
             <section className="block-text">

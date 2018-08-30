@@ -23,6 +23,7 @@ import links from 'components/config/linksBlock/diplom';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -88,9 +89,6 @@ const page = () => (
                     </Link>
                 </div>
             </section>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -164,8 +162,6 @@ const page = () => (
                 </div>
             </section>
 
-            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Диплом по экономике на заказ
@@ -189,7 +185,9 @@ const page = () => (
                 </ul>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <OrderForm title="Узнай стоимость работы прямо сейчас" redForm={true} buttonLabel="Оценить" fields={fields}/>
+
+            <ImageBlock imageSrc={require('static/images/block/dip-rab-eko.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -214,6 +212,10 @@ const page = () => (
                 </ol>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                 <h2 className="block-form-timer__title">
                     <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
@@ -223,7 +225,7 @@ const page = () => (
                     <p>при одновременном заказе вместе с работой</p>
                 </CallMeFormWithTimer>
             </section>
-            
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Купить или заказать диплом – что лучше?
@@ -237,6 +239,10 @@ const page = () => (
                     <li>В случае с готовой дипломной работой вы берете на себя все правки и коррекции, о которых вас попросит научный руководитель. При заказе в BeSmarter! ваш диплом по экономике исполнители ведут до его защиты, то есть перерабатывают и исправляют по необходимости сами.</li>
                 </ol>
             </section>
+
+            <Video>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+            </Video>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -272,32 +278,7 @@ const page = () => (
             <a name="form" id="form"/>
             <OrderForm title="Заказать работу" redForm={true} buttonLabel="Заказать" fields={fields}/>
 
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Этапы сотрудничества
-                </h2>
-                <p className="block-text__par">
-                    Специалисты BeSmarter! работают с заказчиками по следующей схеме:
-                </p>
-                <ol>
-                    <li>
-                        Составляют план диплома.
-                    </li>
-                    <li>
-                        Получают аванс за выполнение дипломной работы.
-                    </li>
-                    <li>
-                        Выполняют каждую главу ВКР поочередно. Параграфы высылаются заказчику только после оплаты.
-                    </li>
-                </ol>
-                <p className="block-text__par">
-                    Если вы ищете профессиональных исполнителей для диплома по экономике на заказ, обратитесь в BeSmarter!. У нас работает отличная команда опытных специалистов, поэтому мы гарантируем вам качество услуг.
-                </p>
-            </section>
 
-            <Video>
-                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
-            </Video>
 
             <LinksBlock links={links}/>
         </div>

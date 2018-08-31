@@ -25,6 +25,9 @@ import links from 'components/config/linksBlock/kursovaya';
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 
+import ImageBlock from 'components/common/ImageBlock';
+
+
 
 const page = () => (
     <Wrapper title="Заказать эссе срочно и недорого – написание эссе на заказ по философии в Москве и РФ – цены и сроки под ключ" description="Заказать эссе. Напишем эссе на заказ недорого в Москве. Срочная помощь в написании эссе от надежных профессионалов в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
@@ -98,8 +101,6 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
             <section className="block-service">
                 <Link href="/zashitit">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -172,8 +173,6 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Заказать эссе
@@ -189,7 +188,9 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/zakazat-esse.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -208,6 +209,10 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -222,7 +227,6 @@ const page = () => (
                 </p>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -240,6 +244,10 @@ const page = () => (
                     </li>
                 </ul>
             </section>
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+            <ImageBlock imageSrc={require('static/images/block/zakazar-esse2.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">

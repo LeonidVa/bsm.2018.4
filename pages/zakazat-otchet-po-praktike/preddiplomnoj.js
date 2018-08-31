@@ -25,6 +25,8 @@ import otchet from 'components/config/linksBlock/otchet';
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 
+import ImageBlock from 'components/common/ImageBlock';
+
 
 const page = () => (
     <Wrapper title="Заказать отчет по преддипломной практике – купить отчет по практике в Москве и РФ срочно – цены, сроки написания на заказ" description="Предлагаем заказать отчет по преддипломной практике! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
@@ -73,8 +75,8 @@ const page = () => (
                 <div className="block-service__list list-5">
                     <Link href="/zakazat-otchet-po-praktike">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Отчет по практике</span>
-                            <p>от 3 000 руб.</p>
+                            <span className="block-service__list-title">Курсовая работа</span>
+                            <p>от 4 000 руб.</p>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
@@ -103,9 +105,6 @@ const page = () => (
                     </Link>
                 </div>
             </section>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
 
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
@@ -179,8 +178,6 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Купить преддипломную практику
@@ -196,7 +193,9 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/otchet-po-preddiplomnoy-praktike.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -225,6 +224,10 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -243,8 +246,6 @@ const page = () => (
                     </li>
                 </ul>
             </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -270,6 +271,8 @@ const page = () => (
             <Video>
                 <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq/preview"></iframe>
             </Video>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
             <FormOrder />

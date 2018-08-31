@@ -22,6 +22,8 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import MetaTags from 'react-meta-tags';
 import Video from 'components/common/VideoBlock';
 
+import ImageBlock from 'components/common/ImageBlock';
+
 
 const page = () => (
     <Wrapper title="Как написать заключение к дипломной работе образец – написание заключения в дипломной работе пример на сайте компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В статье раскрыта тема: «Как правильно написать заключение к дипломной работе», приведены общие рекомендации, примеры и образцы заключений дипломных работ.">
@@ -86,8 +88,6 @@ const page = () => (
                     </Link>
                 </div>
             </section>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -161,8 +161,6 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Как написать заключение к дипломной работе (образец)
@@ -175,7 +173,9 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/zakluchenie-k-diplomnoy-rabote.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -203,7 +203,14 @@ const page = () => (
                 </p>
             </section>
 
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+
             <CurrentOffer />
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -219,8 +226,6 @@ const page = () => (
                     Основная задача последнего раздела — отобразить целостность и логическую завершенность всей работы.
                 </p>
             </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -243,11 +248,14 @@ const page = () => (
             </section>
 
             <a name="form" id="form"/>
-            <FormOrder />
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <Video>
                 <iframe src="https://www.youtube.com/embed/9szbyVEYtMg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </Video>
+
+            <FormOrder />
         </div>
     </Wrapper>
 );

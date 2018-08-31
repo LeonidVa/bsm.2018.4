@@ -7,7 +7,8 @@ import MessBlock from 'components/common/MessBlock';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
 
-import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';;
+import FormOrder from 'components/common/forms/Order';
+import FormEstimate from 'components/common/forms/Estimate';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
@@ -222,7 +223,7 @@ const page = () => (
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
             <a name="form" id="form"/>
-            <OrderForm />
+            <FormOrder />
 
 
             <ImageBlock imageSrc={require('static/images/block/dis-red.jpg')}/>
@@ -303,7 +304,7 @@ const page = () => (
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
-            <OrderForm />
+            <FormOrder />
 
             <LinksBlock links={disser}/>
         </div>

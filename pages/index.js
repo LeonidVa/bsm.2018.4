@@ -286,7 +286,7 @@ const page = () => (
             </section>
 
             <a name="form" id="form"/>
-            <OrderForm />
+            <FormOrder />
 
             <section className="block-text">
                 <ul>

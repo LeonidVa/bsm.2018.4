@@ -291,7 +291,7 @@ const page = () => (
             </Video>
 
             <a name="form" id="form"/>
-            <OrderForm />
+            <FormOrder />
 
             <LinksBlock links={links}/>
         </div>

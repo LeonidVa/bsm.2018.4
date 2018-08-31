@@ -2,7 +2,8 @@ import Wrapper from 'components/Wrapper';
 import Title from 'components/common/Title';
 import Link from 'next/link';
 
-import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';;
+import FormOrder from 'components/common/forms/Order';
+import FormEstimate from 'components/common/forms/Estimate';
 import fields from 'components/config/form/main'
 
 
@@ -49,7 +50,7 @@ const page = () => (
                 <p className="block-text__par"><b>Успешной защиты!</b></p>
             </section>
 
-            <OrderForm />
+            <FormOrder />
 
         </div>
     </Wrapper>

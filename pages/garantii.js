@@ -107,7 +107,7 @@ const page = () => (
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <ImageBlock imageSrc={require('static/images/block/g.jpg')}/>
-            <OrderForm />
+            <FormOrder />
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <LinksBlock links={links}/>

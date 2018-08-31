@@ -134,7 +134,7 @@ const page = () => (
                 </p>
             </section>
 
-            <OrderForm />
+            <FormOrder />
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <LinksBlock links={links}/>

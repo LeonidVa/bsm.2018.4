@@ -205,7 +205,7 @@ class page extends Component {
                         </Link>
                     </section>
 
-                    <OrderForm />
+                    <FormOrder />
                     <LinksBlock links={links}/>
                 </div>
             </Wrapper>

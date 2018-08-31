@@ -6,7 +6,8 @@ import MessBlock from 'components/common/MessBlock';
 
 
 
-import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';;
+import FormOrder from 'components/common/forms/Order';
+import FormEstimate from 'components/common/forms/Estimate';
 import fields from 'components/config/form/main';
 
 
@@ -498,7 +499,7 @@ const page = () => (
             </section>
 
             <a name="form" id="form"/>
-            <OrderForm />
+            <FormOrder />
 
         </div>
     </Wrapper>

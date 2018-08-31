@@ -25,6 +25,7 @@ import otchet from 'components/config/linksBlock/otchet';
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 
+import ImageBlock from 'components/common/ImageBlock';
 
 
 const page = () => (
@@ -102,9 +103,6 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-
             <section className="block-service">
                 <Link href="/zashitit">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -177,8 +175,6 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Заказать отчет по практике
@@ -191,8 +187,9 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
 
+            <ImageBlock imageSrc={require('static/images/block/zakazat-otchet-po-praktike.jpg')}/>
             <section className="block-text">
                 <h2 className="block-text__title">
                     Наши преимущества
@@ -210,6 +207,11 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -223,8 +225,6 @@ const page = () => (
                     Чтобы <b>недорого заказать отчет по практике</b>, постарайтесь оформить заявку как можно раньше. Если у вас уже есть собственные наработки – присылайте их нам, и мы снизим цену. Компания BeSmarter! стремится обеспечить клиентам самые выгодные условия, чтобы <b>купить отчет по практике</b> смог каждый студент. Воспользуетесь своим шансом!
                 </p>
             </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -246,8 +246,11 @@ const page = () => (
                 </ul>
             </section>
 
-            <a name="form" id="form"/>
-            <FormOrder />
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq/preview"></iframe>
+            </Video>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -261,10 +264,8 @@ const page = () => (
                 </p>
             </section>
 
-            <Video>
-                <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq/preview"></iframe>
-            </Video>
-
+            <a name="form" id="form"/>
+            <FormOrder />
 
             <LinksBlock links={otchet}/>
         </div>

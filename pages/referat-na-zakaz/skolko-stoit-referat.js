@@ -23,6 +23,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import referatLinks from 'components/config/linksBlock/referat'
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -103,7 +104,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
 
             <section className="block-service">
@@ -178,7 +179,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -203,11 +204,15 @@ const page = () => (
                 </ul>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/skolko-stiot-ref.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
-                    Что вы гарантируем?
+                    Что мы гарантируем?
                 </h2>
                 <ul>
                     <li>
@@ -228,6 +233,12 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -242,7 +253,7 @@ const page = () => (
                 </p>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -264,8 +275,11 @@ const page = () => (
                 </p>
             </section>
 
-            <a name="form" id="form"/>
-            <FormOrder />
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <ImageBlock imageSrc={require('static/images/block/skolko-stoit-ref-2.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -276,7 +290,7 @@ const page = () => (
                         онлайн-заявка – просто <a href="/#form">заполните форму</a> на сайте и дождитесь ответа менеджера;
                     </li>
                     <li>
-                        заявка по телефону – свяжитесь с нами по номеру +7 (495) 772-4090
+                        заявка по телефону – свяжитесь с нами по номеру <br/>+7 (495) 772-4090
                     </li>
                     <li>
                         личная заявка – наш адрес: Москва, пер. Большой Кисловский, д. 1, стр. 2, оф. 211.
@@ -286,6 +300,9 @@ const page = () => (
                     Оформляйте заявку прямо сейчас и узнайте сколько будет стоить написание вашего реферата!
                 </p>
             </section>
+
+            <a name="form" id="form"/>
+            <FormOrder />
 
             <LinksBlock links={referatLinks}/>
         </div>

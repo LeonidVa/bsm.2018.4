@@ -20,6 +20,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -96,7 +97,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/zashitit">
@@ -170,7 +171,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -181,7 +182,12 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/kontrol-rab.jpg')}/>
+
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -206,6 +212,11 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -227,6 +238,8 @@ const page = () => (
             </section>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <ImageBlock imageSrc={require('static/images/block/kontrolnaya.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">

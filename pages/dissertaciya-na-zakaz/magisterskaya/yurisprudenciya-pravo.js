@@ -23,6 +23,8 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../../components/common/ImageBlock";
+import Video from "../../../components/common/VideoBlock";
 
 
 const page = () => (
@@ -93,7 +95,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
 
             <section className="block-service">
@@ -168,7 +170,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -193,7 +195,10 @@ const page = () => (
                 </ul>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/magiuri.jpg')}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -217,6 +222,11 @@ const page = () => (
                     Почему лучше сделать выбор в пользу написания, а не покупки готовой диссертации? Одна из самых частых жалоб тех, кто хотел сэкономить и просто купить материал – отсутствие научной новизны, авторского подхода к изложению, а также устаревшие данные. Когда магистерская диссертация по юриспруденции выполняется под ключ, с такими проблемами почти не сталкиваются. Кроме того, вам гарантировано оформление по стандартам ГОСТ, исчерпывающие и развернутые ответы на все поднятые и исследуемые вопросы. При написании наши авторы ориентируются исключительно на актуальные и проверенные данные.
                 </p>
             </section>
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <CurrentOffer />
 
@@ -243,7 +253,7 @@ const page = () => (
                 </ol>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -265,12 +275,18 @@ const page = () => (
                 </ul>
             </section>
 
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <Video>
+                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239032&hash=e0751038dfbca771&hd=2"></iframe>
+            </Video>
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Этапы сотрудничества с нами
                 </h2>
                 <p className="block-text__par">
-                    Вы можете заполнить заявку на сайте компании BeSmarter! или позвонить по телефонам +7 (495) 772-40-90, +7 (495) 772-90-40, чтобы сэкономить время. Далее действует такая схема работы:
+                    Вы можете заполнить заявку на сайте компании BeSmarter! или позвонить по телефонам <span className="tel1">+7 (495) 772-40-90</span>, <span className="tel1">+7 (495) 772-90-40</span>, чтобы сэкономить время. Далее действует такая схема работы:
                 </p>
                 <ol>
                     <li>

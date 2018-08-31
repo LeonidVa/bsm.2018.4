@@ -24,6 +24,7 @@ import links from 'components/config/linksBlock/kursovaya';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -102,7 +103,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
@@ -176,7 +177,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -190,7 +191,12 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/kurs-po-pedag.jpg')}/>
+
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -209,6 +215,12 @@ const page = () => (
                 </ul>
             </section>
 
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -224,6 +236,10 @@ const page = () => (
             </section>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
+            </Video>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -251,9 +267,7 @@ const page = () => (
             <a name="form" id="form"/>
             <FormOrder />
 
-            <Video>
-                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
-            </Video>
+
 
             <LinksBlock links={links}/>
         </div>

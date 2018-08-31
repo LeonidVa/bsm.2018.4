@@ -24,6 +24,7 @@ import links from 'components/config/linksBlock/kursovaya';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -102,7 +103,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
@@ -176,7 +177,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -190,7 +191,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/kurs-rab-po-psih.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -212,6 +217,12 @@ const page = () => (
                 </p>
             </section>
 
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -231,6 +242,10 @@ const page = () => (
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
+            </Video>
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Как купить курсовую работу по психологии?
@@ -243,7 +258,7 @@ const page = () => (
                         на сайте – <b><a href="#form">заполните форму</a></b> и дождитесь ответа сотрудника компании;
                     </li>
                     <li>
-                        по телефону – свяжитесь с нами по номеру 8 (495) 772-40-90 (перезвоним);
+                        по телефону – свяжитесь с нами по номеру <br/>8 (495) 772-40-90 (перезвоним);
                     </li>
                     <li>
                         в офисе – <b><Link href="/contacts"><a>наш адрес</a></Link></b>: Москва, пер. Большой Кисловский, дом 1, стр. 2, оф. 211.
@@ -257,9 +272,7 @@ const page = () => (
             <a name="form" id="form"/>
             <FormOrder />
 
-            <Video>
-                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
-            </Video>
+
 
             <LinksBlock links={links}/>
         </div>

@@ -24,6 +24,7 @@ import links from 'components/config/linksBlockConfig';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -94,7 +95,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
 
             <section className="block-service">
@@ -169,7 +170,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -183,7 +184,13 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+
+            <ImageBlock imageSrc={require('static/images/block/mag-ckolko.jpg')}/>
+
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -202,7 +209,13 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -224,10 +237,7 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-            <a name="form" id="form"/>
-            <FormOrder />
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -241,9 +251,16 @@ const page = () => (
                 </p>
             </section>
 
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
             <Video>
                 <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239032&hash=e0751038dfbca771&hd=2"></iframe>
             </Video>
+
+            <a name="form" id="form"/>
+            <FormOrder />
+
+
 
             <LinksBlock links={
                 [

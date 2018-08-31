@@ -23,6 +23,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -93,7 +94,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
 
             <section className="block-service">
@@ -168,7 +169,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -182,8 +183,10 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
-            
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/mag-men.jpg')}/>
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Преимущества написания под ключ
@@ -210,6 +213,12 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+            
+
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -232,7 +241,7 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -263,8 +272,11 @@ const page = () => (
                 </ul>
             </section>
 
-            <a name="form" id="form"/>
-            <FormOrder />
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <ImageBlock imageSrc={require('static/images/block/mag-po-men.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -285,6 +297,9 @@ const page = () => (
                     В течении гарантированного срока все изменения и дополнения вносятся бесплатно. Оформите заказ, и защита вашей магистерской диссертации по менеджменту пройдет на отлично!
                 </p>
             </section>
+
+            <a name="form" id="form"/>
+            <FormOrder />
 
             <LinksBlock links={links}/>
         </div>

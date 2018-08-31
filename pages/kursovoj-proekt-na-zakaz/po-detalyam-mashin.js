@@ -24,6 +24,7 @@ import kursovaya from 'components/config/linksBlock/kursovaya';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -104,7 +105,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
 
             <section className="block-service">
@@ -179,7 +180,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -196,7 +197,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/detali-mash.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -218,6 +223,12 @@ const page = () => (
                 </p>
             </section>
 
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -237,6 +248,10 @@ const page = () => (
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
+            <Video>
+                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
+            </Video>
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Как заказать курсовой проект по деталям машин?
@@ -249,7 +264,7 @@ const page = () => (
                         на сайте – нужно оформить <b><a href="#form">онлайн заявку</a></b> и дождаться ответа;
                     </li>
                     <li>
-                        по телефону – позвоните нам по номеру 8 (495) 772-40-90;
+                        по телефону – позвоните нам по номеру <br/>8 (495) 772-40-90;
                     </li>
                     <li>
                         в Москве – приходите <Link href="/contacts"><b><a>к нам</a></b></Link> по адресу: пер. Большой Кисловский, дом 1, стр. 2, оф. 211.
@@ -260,9 +275,7 @@ const page = () => (
                 </p>
             </section>
 
-            <Video>
-                <iframe src="https://drive.google.com/file/d/1wyWdWvevGsIBbyp-D7T40O-JQky9R5s5/preview"></iframe>
-            </Video>
+
 
             <a name="form" id="form"/>
             <FormOrder />

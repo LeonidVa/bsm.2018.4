@@ -23,6 +23,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import referat from 'components/config/linksBlock/referat';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -99,7 +100,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
 
             <section className="block-service">
@@ -174,7 +175,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -191,7 +192,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/referat-na-zak.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -213,6 +218,11 @@ const page = () => (
                 </p>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -227,7 +237,7 @@ const page = () => (
                 </p>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -249,8 +259,11 @@ const page = () => (
                 </ul>
             </section>
 
-            <a name="form" id="form"/>
-            <FormOrder />
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <ImageBlock imageSrc={require('static/images/block/ref-na-zakaz.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -269,6 +282,9 @@ const page = () => (
                     Какой бы вы ни выбрали способ заказать реферат – онлайн, звонок или визит, будьте уверены, менеджеры компании BeSmarter! окажут вам квалифицированную помощь в написании реферата.
                 </p>
             </section>
+
+            <a name="form" id="form"/>
+            <FormOrder />
 
             <LinksBlock links={referat}/>
         </div>

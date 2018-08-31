@@ -25,6 +25,8 @@ import otchet from 'components/config/linksBlock/otchet';
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 
+import ImageBlock from 'components/common/ImageBlock';
+
 
 const page = () => (
     <Wrapper title="Заказать отчет по учебной практике – купить отчет по учебной практике в Москве и РФ срочно – цены, сроки написания под ключ" description="Предлагаем заказать отчет по учебной практике! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
@@ -104,9 +106,6 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -179,8 +178,6 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Заказать отчет по учебной практике
@@ -193,7 +190,10 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+            <ImageBlock imageSrc={require('static/images/block/otchet-po-uchebnoy-praktike.jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -214,6 +214,8 @@ const page = () => (
                     </li>
                 </ul>
             </section>
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <CurrentOffer />
 
@@ -237,8 +239,6 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
             <section className="block-text">
                 <h2 className="block-text__title">
                     Как купить отчет по учебной практике в Москве
@@ -261,6 +261,8 @@ const page = () => (
                     BeSmarter! – это качественные, уникальные, грамотно оформленные работы под заказ в Москве на выгодных условиях!
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <Video>
                 <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq/preview"></iframe>

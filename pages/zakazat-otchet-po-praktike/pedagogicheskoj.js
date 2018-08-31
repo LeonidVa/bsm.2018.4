@@ -25,6 +25,8 @@ import otchet from 'components/config/linksBlock/otchet';
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 
+import ImageBlock from 'components/common/ImageBlock';
+
 
 
 const page = () => (
@@ -105,9 +107,6 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -180,8 +179,6 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
-
             <section className="block-text">
                 <h1 className="block-text__title">
                     Заказать отчет по педагогической практике
@@ -205,7 +202,9 @@ const page = () => (
                 </ul>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/pedagogicheskaya-praktika.jpg')}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -227,7 +226,14 @@ const page = () => (
                 </ul>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
+
+
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -237,8 +243,6 @@ const page = () => (
                     Для того чтобы получить готовый отчет по педагогической практике, его лучше заказать в специализированной компании. Этапы действий студента при этом аналогичны шагам при заказе курсовой или дипломной работы. Сэкономить при этом можно, если студент самостоятельно подготовит план работы и увеличит время написания для исполнителя. Чем меньше сроки при заказе отчета по педагогической практике, тем выше стоимость услуги.
                 </p>
             </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -252,12 +256,18 @@ const page = () => (
                 </p>
             </section>
 
-            <a name="form" id="form"/>
-            <FormOrder />
+
 
             <Video>
                 <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq/preview"></iframe>
             </Video>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+
+            <a name="form" id="form"/>
+            <FormOrder />
+
 
             <LinksBlock links={otchet}/>
         </div>

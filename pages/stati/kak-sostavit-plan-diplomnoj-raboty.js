@@ -21,6 +21,7 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -87,7 +88,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -161,7 +162,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -175,7 +176,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/19(4).jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -200,7 +205,15 @@ const page = () => (
                 </p>
             </section>
 
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -227,6 +240,15 @@ const page = () => (
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
+            <Video>
+                <iframe src="https://www.youtube.com/embed/VkuU_zZP-z4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </Video>
+
+
+
+
+
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Содержание дипломной работы (образец)
@@ -251,6 +273,12 @@ const page = () => (
                 </p>
             </section>
 
+            <a name="form" id="form"/>
+            <FormOrder />
+
+            <ImageBlock imageSrc={require('static/images/block/19-(5).jpg')}/>
+
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Раскрытие понятий «тезисный план»
@@ -266,8 +294,7 @@ const page = () => (
                 </p>
             </section>            
 
-            <a name="form" id="form"/>
-            <FormOrder />
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -284,9 +311,10 @@ const page = () => (
                 </p>
             </section>
 
-            <Video>
-                <iframe src="https://www.youtube.com/embed/VkuU_zZP-z4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </Video>
+            <a name="form" id="form"/>
+            <FormOrder />
+
+
 
         </div>
     </Wrapper>

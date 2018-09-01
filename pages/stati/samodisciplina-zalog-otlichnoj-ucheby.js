@@ -20,6 +20,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -86,7 +87,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -160,7 +161,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -171,13 +172,23 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/19(3).jpg')}/>
+
+
 
             <section className="block-text">
                 <p className="block-text__par">
                     Самодисциплина – это основа всех основ. Только систематизированный подход к решению того или другого вопроса даст положительный результат. И этот подход невозможен без самодисциплины. Особенно это касается учебы. Скажем, не каждый дипломник может усидчиво работать над своей дипломной работой. Что он делает? Он покупает <a href="/diplom-na-zakaz"target="_blank">диплом на заказ</a> у квалифицированных преподавателей. Но у многих людей есть конкретная цель – научиться самодисциплине, воспитать себя. Не прав тот, кто сказал – «человека не изменить». Человека изменить. Более того, человека нужно менять!
                 </p>
             </section>
+
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <CurrentOffer />
 
@@ -204,7 +215,7 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <p className="block-text__par">
@@ -217,6 +228,8 @@ const page = () => (
 
             <a name="form" id="form"/>
             <FormOrder />
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
         </div>
     </Wrapper>

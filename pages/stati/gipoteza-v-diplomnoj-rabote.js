@@ -12,7 +12,7 @@ import FormEstimate from 'components/common/forms/Estimate';
 import fields from 'components/config/form/main';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
+import infoBlockConfig from 'components/config/infoBlock/diplom';
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 
@@ -24,6 +24,7 @@ import links from 'components/config/linksBlockConfig';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -90,7 +91,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -164,7 +165,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -175,7 +176,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/19(2).jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -194,6 +199,12 @@ const page = () => (
                     Все эти факторы создают множество сложностей и отнимают много времени, поэтому некоторые предпочитают <Link href="/diplom-na-zakaz"><b><a>заказать дипломную работу</a></b></Link> специалистам, нежели затрачивать лишнее время в бессмысленных поисках нужной информации.
                 </p>
             </section>
+
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <CurrentOffer />
 
@@ -214,7 +225,8 @@ const page = () => (
                 </ul>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -234,8 +246,14 @@ const page = () => (
                 </p>
             </section>
 
-            <a name="form" id="form"/>
-            <FormOrder />
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <Video>
+                <iframe src="https://www.youtube.com/embed/Vm2UK9MVGn4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </Video>
+
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -252,9 +270,9 @@ const page = () => (
                 </p>
             </section>
 
-            <Video>
-                <iframe src="https://www.youtube.com/embed/Vm2UK9MVGn4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </Video>
+            <a name="form" id="form"/>
+            <FormOrder />
+
 
         </div>
     </Wrapper>

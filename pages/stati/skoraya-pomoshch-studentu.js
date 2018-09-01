@@ -23,6 +23,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'components/config/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 
@@ -90,7 +91,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -164,7 +165,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -178,7 +179,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/20.jpeg')}/>
+
+
 
             <section className="block-text">
                 <p className="block-text__par">
@@ -191,6 +196,12 @@ const page = () => (
                     Наверняка, каждый слышал о предоставлении таких услуг, ведь интернет буквально пестрит объявлениями с подобными предложениями. Перед тем, как остановить свой выбор на той или иной фирме, почитайте отзывы клиентов на сайте фирмы, которые уже пользовались такими услугами, также стоит обратить внимание на то, сколько лет компания занимается данной деятельностью, есть ли у нее офис, куда можно приехать для заключения письменного договора. И будьте внимательны: многие фирмы предлагают купить уже готовый диплом или, что еще хуже, продают уже готовые корочки! Чтобы не попасть на удочку недобросовестных компаний, будьте предельно внимательны и, прежде чем оформлять свой заказ, выясните абсолютно все подробности работы у менеджеров фирмы.
                 </p>
             </section>
+
+
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <CurrentOffer />
 

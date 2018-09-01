@@ -12,7 +12,7 @@ import FormEstimate from 'components/common/forms/Estimate';
 import fields from 'components/config/form/main';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya';
+import infoBlockConfig from 'components/config/infoBlock/referat';
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 
@@ -20,6 +20,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -53,43 +54,43 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
+                <Link href="#form">
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ref1.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Курсовая работа</span>
+                            <span className="block-service__title">Реферат</span>
                             <p className="block-service__par">Не парься сам – доверься нам!</p>
                             <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 4 000 руб.</p>
+                            <p className="block-service__par">От 1 500 руб.</p>
                             <p className="block-service__par">Срочно от 2 часов</p>
                         </div>
                     </a>
                 </Link>
                 <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zakazat-otchet-po-praktike">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Отчет по практике</span>
                             <p>от 3 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/kursovaya-rabota-na-zakaz">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Реферат</span>
+                            <span className="block-service__list-title">Курсовая работа</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/kontrolnaya-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/kursovoj-proekt-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовой проект</span>
                             <p>от 8 000 руб.</p>
@@ -98,7 +99,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -172,7 +173,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -189,7 +190,18 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/19(9).jpg')}/>
+
+            <section className="block-text">
+                <p className="block-text__par">
+                    Помните, чтобы успешно сдать сессию нужно как следует высыпаться. Доктора советуют отводить на сон не менее восьми часов, именно это время необходимо, чтобы организм полностью отдохнул и набрал сил. Не стоит забывать об этой рекомендации даже тогда, когда накопилась масса неотложных дел, Ваше здоровье прежде всего! Но как же быть, если до сдачи курсовой всего несколько дней, а Вы к ней еще даже и не приступали? Конечно, обратиться за помощью к нам!
+                </p>
+                <p className="block-text__par">
+                    Вы сами указываете нужные сроки выполнения работы, ровно в которые и получаете уже готовую курсовую. Наши авторы – профессионалы с многолетним стажем работы, кандидаты и доктора наук, которые качественно и грамотно выполнят курсовую любого уровня сложности и абсолютно любой тематики.
+                </p>
+            </section>
 
             <section className="block-text">
                 <p className="block-text__par">
@@ -203,9 +215,13 @@ const page = () => (
                 </p>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <p className="block-text__par">
@@ -224,6 +240,8 @@ const page = () => (
 
             <a name="form" id="form"/>
             <FormOrder />
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
         </div>
     </Wrapper>

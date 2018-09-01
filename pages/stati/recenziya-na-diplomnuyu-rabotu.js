@@ -21,6 +21,7 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
 import Video from 'components/common/VideoBlock';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 
@@ -88,7 +89,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -162,7 +163,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -172,6 +173,12 @@ const page = () => (
                     Первоначальное предназначение рецензии состоит в создании внешней объективной оценки исследовательской деятельности, которую провел студент при написании дипломной работы. В этом дополнении к работе пишется мнение независимого рецензента (другого преподавателя, представителя предприятия, где выпускник проходил практику) о дипломной работе после ознакомления с материалом. Таким образом, исключается субъективность мнения, что позволяет дать правильную оценку проделанной работе.
                 </p>
             </section>
+
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/19(12).jpg')}/>
+
+
 
             <section className="block-text">
                 <p className="block-text__par">
@@ -196,7 +203,25 @@ const page = () => (
                 </p>
             </section>
 
+            <section className="block-text">
+                <h2 className="block-text__title">
+                    Оформление рецензии на дипломную работу
+                </h2>
+                <p className="block-text__par">
+                    Строгих требований о том, как должна быть оформлена дипломная работа, нет. Но некоторые негласные правила профессионального структурирования документа все же существуют. В большей степени строгость оформления рецензии зависит от того, на какую оценку рассчитывает студент.
+                </p>
+                <p className="block-text__par">
+                    Если анализ диплома сводится к рекомендации поставить наивысший балл, необходимо глубоко оценить все части исследовательской работы, аргументировано доказать достижение всех поставленных задач, оценить качество подачи материала, уделить внимание влиянию на материал собственных идей и мыслей автора. Необходимости в таком строгом подходе нет, если предполагается более низкая оценка за дипломную работу.
+                </p>
+            </section>
+
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+            <CurrentOffer />
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -227,21 +252,18 @@ const page = () => (
                 </ol>
             </section>
 
-            <CurrentOffer />
 
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Оформление рецензии на дипломную работу
-                </h2>
-                <p className="block-text__par">
-                    Строгих требований о том, как должна быть оформлена дипломная работа, нет. Но некоторые негласные правила профессионального структурирования документа все же существуют. В большей степени строгость оформления рецензии зависит от того, на какую оценку рассчитывает студент.
-                </p>
-                <p className="block-text__par">
-                    Если анализ диплома сводится к рекомендации поставить наивысший балл, необходимо глубоко оценить все части исследовательской работы, аргументировано доказать достижение всех поставленных задач, оценить качество подачи материала, уделить внимание влиянию на материал собственных идей и мыслей автора. Необходимости в таком строгом подходе нет, если предполагается более низкая оценка за дипломную работу.
-                </p>
-            </section>
+            <a name="form" id="form"/>
+            <FormOrder />
+
+
+
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <Video>
+                <iframe src="https://www.youtube.com/embed/-heyiD9tCLc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </Video>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -284,9 +306,7 @@ const page = () => (
             <a name="form" id="form"/>
             <FormOrder />
 
-            <Video>
-                <iframe src="https://www.youtube.com/embed/-heyiD9tCLc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </Video>
+
         </div>
     </Wrapper>
 );

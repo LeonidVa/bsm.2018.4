@@ -190,6 +190,7 @@ const page = () => (
             <FormEstimate />
 
             <ImageBlock imageSrc={require('static/images/block/zakazat-otchet-po-praktike.jpg')}/>
+
             <section className="block-text">
                 <h2 className="block-text__title">
                     Наши преимущества

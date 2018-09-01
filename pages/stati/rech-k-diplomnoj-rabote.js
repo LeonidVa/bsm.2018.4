@@ -21,6 +21,7 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
 import Video from 'components/common/VideoBlock';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -87,7 +88,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -161,7 +162,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -186,7 +187,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/19(13).jpg')}/>
+
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -231,6 +236,10 @@ const page = () => (
                 </p>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
             <section className="block-text">
@@ -248,7 +257,7 @@ const page = () => (
                 </p>
             </section>
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -272,6 +281,10 @@ const page = () => (
                     На заключительную часть отводится 10% отведенного времени. Задав уточняющие вопросы, комиссия восполнит поток потерянной или непонятной информации из защитной речи к дипломной работе. Написав проект самостоятельно, вы с легкостью ответите на поставленные вопросы.
                 </p>
             </section>
+
+            <Video>
+                <iframe src="https://www.youtube.com/embed/XpYziQhuZaw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </Video>
 
             <a name="form" id="form"/>
             <FormOrder />
@@ -316,9 +329,10 @@ const page = () => (
                 </p>
             </section>
 
-            <Video>
-                <iframe src="https://www.youtube.com/embed/XpYziQhuZaw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </Video>
+
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
         </div>
     </Wrapper>
 );

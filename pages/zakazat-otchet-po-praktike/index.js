@@ -249,7 +249,7 @@ const page = () => (
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <Video>
-                <iframe src="https://drive.google.com/file/d/1pOfa1kQsnKv9gwPUNAkv3pnd29Pxwouq"></iframe>
+                <iframe src="https://drive.google.com/file/d/1DyyUE0vjUtNv_9Bzdhgc8nsUqKRvxrJM/preview" width="640" height="480"></iframe>
             </Video>
 
             <section className="block-text">

@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "generate-robotstxt": "^5.0.7",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "webpack": "^3.12.0"
   }
 }

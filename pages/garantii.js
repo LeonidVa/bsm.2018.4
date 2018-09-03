@@ -7,7 +7,8 @@ import NavRow from 'components/common/NavRow';
 
 import ImageBlock from 'components/common/ImageBlock'
 import Accordion from 'components/common/Accordion'
-import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';
+import FormOrder from 'components/common/forms/Order';
+import FormEstimate from 'components/common/forms/Estimate';
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 
@@ -18,6 +19,10 @@ import links from 'components/config/linksBlockConfig';
 import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
+import MessBlock from "../components/common/MessBlock";
+import infoBlockConfig from "../components/config/infoBlock/diplom";
+import InfoBlock from "../components/common/InfoBlock";
+import CurrentOffer from "../components/content/offers/CurrentOffer";
 
 
 const page = () => (
@@ -44,6 +49,28 @@ const page = () => (
             <section className="block-nav">
                 <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
             </section>
+
+            <MessBlock/>
+
+            <section className="block-service">
+                <Link href="/price">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">От эссе до настоящей диссертации</span>
+                            <p className="block-service__par">Уникальные авторские работы</p>
+                            <p className="block-service__par">Сложные и срочные</p>
+                            <p className="block-service__par">Технические и креативные</p>
+                            <p className="block-service__par">На иностранных языках</p>
+                        </div>
+                    </a>
+                </Link>
+            </section>
+
+            <FormEstimate />
+
+
+
+            <ImageBlock imageSrc={require('static/images/block/gar.jpg')}/>
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -90,25 +117,19 @@ const page = () => (
                 </p>
             </section>
 
-            <section className="block-service">
-                <Link href="/price">
-                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">От эссе до настоящей диссертации</span>
-                            <p className="block-service__par">Уникальные авторские работы</p>
-                            <p className="block-service__par">Сложные и срочные</p>
-                            <p className="block-service__par">Технические и креативные</p>
-                            <p className="block-service__par">На иностранных языках</p>
-                        </div>
-                    </a>
-                </Link>
-            </section>
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-            <ImageBlock imageSrc={require('static/images/block/g.jpg')}/>
-            <FormOrder />
+            <CurrentOffer />
+
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <a name="form" id="form"/>
+            <FormOrder />
+
 
             <LinksBlock links={links}/>
 

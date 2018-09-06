@@ -12,7 +12,7 @@ import FormEstimate from 'components/common/forms/Estimate';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/diplom';
+import infoBlockConfig from 'components/config/infoBlock/disser';
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 
@@ -20,6 +20,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -53,114 +54,110 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                <Link href="#form">
+                    <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Дипломная работа</span>
-                            <p className="block-service__par">Быстро и качественно!</p>
-                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-                            <p className="block-service__par">От 14 000 руб.</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
+                            <span className="block-service__title">Кандидатская диссертация</span>
+                            <p className="block-service__par">Написание и оформление</p>
+                            <p className="block-service__par">Публикации</p>
+                            <p className="block-service__par">Строго конфиденциально</p>
+                            <p className="block-service__par">Индивидуально</p>
                         </div>
                     </a>
                 </Link>
-                <div className="block-service__list list-3">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                <div className="block-service__list list-4">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Дипломный проект</span>
-                            <p>от 21 000 руб.</p>
+                            <span className="block-service__list-title">Аспирантские работы</span>
+                            <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Магистерская диссертация</span>
-                            <p>от 23 000 руб.</p>
+                            <span className="block-service__list-title">Статьи</span>
+                            <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Диплом MBA</span>
-                            <p>от <b>25 000</b> руб.</p>
+                            <span className="block-service__list-title">Автореферат</span>
+                            <p>Строго по ГОСТу</p>
+                        </a>
+                    </Link>
+                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Апробация</span>
+                            <p>Реальные эксперименты</p>
                         </a>
                     </Link>
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                <Link href="/dissertaciya-na-zakaz/doktorskaya">
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">Доступные цены</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
+                            <p className="block-service__par">Эффектная презентация</p>
+                            <p className="block-service__par">Быстро и качественно</p>
+                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
                         </div>
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
                     <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
+                            <span className="block-service__list-title">Монография</span>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
+                            <span className="block-service__list-title">Автореферат</span>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
+                            <span className="block-service__list-title">Оригинальность текста до 98%</span>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
+                        </a>
+                    </Link>
+                </div>
+                <div className="block-service__list list-5">
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Ответы к защите</span>
+                        </a>
+                    </Link>
+                    <Link href="/razrabotka-diplomnogo-proekta">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Доклад Слайды</span>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
-                            <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
+                            <span className="block-service__list-title">Плакаты к защите</span>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
                         </a>
                     </Link>
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -174,7 +171,12 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+
+
+            <ImageBlock imageSrc={require('static/images/block/postup-v-aspir.jpg')}/>
+
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -196,6 +198,11 @@ const page = () => (
                     Конечно, задумываться о поступлении в аспирантуру лучше заранее. Однако, даже при доскональном изучении всей выбранной специальности, с иностранным языком и с философией все может быть гораздо сложнее. Вы можете изучать философию самостоятельно, но на это потребуется некоторое время. К экзамену по иностранному языку подготовиться гораздо сложнее. Ведь в большинстве вузов иностранный язык заканчивается на 3 курсе. Вам, скорее всего, придется обращаться к репетитору. Если Вы готовиться к поступлению в аспирантуру еще в студенческие годы, это серьезно облегчит Вам поступление в нее. В качестве реферата в этом случае Вы можете предоставить статью, представленную ранее на студенческих конференциях. Сложность вызывает, если у Вас нет статьи в качестве предоставления вместо реферата  - тогда его придется писать с нуля.
                 </p>
             </section>
+
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <CurrentOffer />
 

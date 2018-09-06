@@ -20,6 +20,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -86,7 +87,7 @@ const page = () => (
                 </div>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
 
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
@@ -160,7 +161,7 @@ const page = () => (
                 </div>
             </section>
 
-            <FormEstimate />
+
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -177,7 +178,11 @@ const page = () => (
                 </p>
             </section>
 
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+            <FormEstimate />
+
+            <ImageBlock imageSrc={require('static/images/block/kak-nal.jpg')}/>
+
+
 
             <section className="block-text">
                 <p className="block-text__par">
@@ -194,9 +199,13 @@ const page = () => (
                 </p>
             </section>
 
+            <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
             <CurrentOffer />
 
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
 
             <section className="block-text">
                 <p className="block-text__par">
@@ -212,6 +221,8 @@ const page = () => (
                     Обычно защита происходит в каком-нибудь просторном помещении. Здесь Вы выступаете с кратким изложением работы и выводов по ней. Конечно же, будет присутствовать и Ваш научный руководитель. Но Вы уже одержали победу. Необходимо всего лишь <Link href="/diplom-na-zakaz"><b><a>заказать диплом</a></b></Link> у нас, Вы уже прошли все указанные этапы, заслужили доверие и похвалу Вашего учителя – и он грудью встанет за Вас на защите. А это значит, что победа и отличная оценка – в Вашем кармане.
                 </p>
             </section>
+
+            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
             <a name="form" id="form"/>
             <FormOrder />

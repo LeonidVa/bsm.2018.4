@@ -12,7 +12,7 @@ import FormEstimate from 'components/common/forms/Estimate';
 import fields from 'components/config/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/magisterskaya'
+import infoBlockConfig from 'components/config/infoBlock/diplom'
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 
@@ -20,6 +20,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
+import ImageBlock from "../../components/common/ImageBlock";
 
 
 const page = () => (
@@ -47,6 +48,115 @@ const page = () => (
                 <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
             </section>
             <MessBlock/>
+
+
+            <section className="block-service">
+                <Link href="/diplom-na-zakaz">
+                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-white">
+                            <span className="block-service__title">Дипломная работа</span>
+                            <p className="block-service__par">Быстро и качественно!</p>
+                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
+                            <p className="block-service__par">От 14 000 руб.</p>
+                            <p className="block-service__par">Срочно от 2 часов</p>
+                        </div>
+                    </a>
+                </Link>
+                <div className="block-service__list list-3">
+                    <Link href="/razrabotka-diplomnogo-proekta">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Дипломный проект</span>
+                            <p>от 21 000 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Магистерская диссертация</span>
+                            <p>от 23 000 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/diplom-mba-na-zakaz">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Диплом MBA</span>
+                            <p>от <b>25 000</b> руб.</p>
+                        </a>
+                    </Link>
+                </div>
+            </section>
+
+
+
+            <section className="block-service">
+                <Link href="/diplom-na-zakaz">
+                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+                        <div className="block-service__text gradient-l-black">
+                            <span className="block-service__title">Материалы для успешной защиты</span>
+                            <p className="block-service__par">Не парься сам – доверься нам!</p>
+                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+                            <p className="block-service__par">Доступные цены</p>
+                            <p className="block-service__par">Срочно от 2 часов</p>
+                        </div>
+                    </a>
+                </Link>
+                <div className="block-service__list list-4">
+                    <Link href="/razrabotka-diplomnogo-proekta">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
+                            <p>от 5 000 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Доклад</span>
+                            <p>от 1 500 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Оригинальность текста</span>
+                            <p>Во всех системах</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Ответы к защите</span>
+                            <p>от 200 руб.</p>
+                        </a>
+                    </Link>
+                </div>
+                <div className="block-service__list list-5">
+                    <Link href="/razrabotka-diplomnogo-proekta">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
+                            <p>от 2 000 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Получение по главам</span>
+                            <p>Гибкие условия</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
+                            <p>от 1 200 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Слайды</span>
+                            <p>от 350 руб.</p>
+                        </a>
+                    </Link>
+                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                        <a className="block-service__list-item">
+                            <span className="block-service__list-title">Распечатка Переплеты</span>
+                            <p>от 1 200 руб.</p>
+                        </a>
+                    </Link>
+                </div>
+            </section>
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -161,84 +271,13 @@ const page = () => (
                 </ul>
             </section>
 
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-
-            <section className="block-service">
-                <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Материалы для успешной защиты</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">Доступные цены</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-
             <FormEstimate />
 
+            <ImageBlock imageSrc={require('static/images/block/stat_.jpg')}/>
+
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+            <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
             <CurrentOffer />
 

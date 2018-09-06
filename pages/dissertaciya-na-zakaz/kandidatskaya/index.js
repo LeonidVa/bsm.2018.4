@@ -84,7 +84,7 @@ const page = () => (
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>

@@ -88,6 +88,7 @@ const page = () => (
                 </div>
             </section>
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/zashitit">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -158,6 +159,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
             <section className="block-text">

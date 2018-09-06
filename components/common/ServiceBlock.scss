@@ -13,6 +13,9 @@
     @media (max-width: 660px) {
         font-size: 2em;
     }
+    &__dis {
+        pointer-events: none;
+    }
     &__top {
         min-height: 18rem;
         height: auto;
@@ -105,6 +108,15 @@
         &.list-2 {
             .block-service__list-item {
                 width: 50%;
+                @media (max-width: 660px) {
+                    width: 100%;
+                }
+            }
+        }
+        &.list-35 {
+            .block-service__list-item {
+                width: 33.33%;
+                pointer-events: none;
                 @media (max-width: 660px) {
                     width: 100%;
                 }
@@ -213,4 +225,5 @@
         }
     }
 }
+
 

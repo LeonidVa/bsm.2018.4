@@ -58,7 +58,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/diplom-na-zakaz/yurisprudenciya-pravo#form">
                     <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Дипломная работа</span>
@@ -93,7 +93,7 @@ const page = () => (
 
 
 
-
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -164,6 +164,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 
@@ -253,7 +254,7 @@ const page = () => (
                     Поэтому Вы получаете грамотную именно для Вас написанную работу. Мы убеждены, что Вы сможете превосходно защититься!
                 </p>
                 <p className="block-text__par">
-                    Нужно заказать диплом? Звоните нам по номеру +7 495 772 40 90, заполните форму заявки или приезжайте в наш <Link href="/contacts"><b><a>офис</a></b></Link> расположенный на Арбате!
+                    Нужно заказать диплом? Звоните нам по номеру <br/>+7 495 772 40 90, заполните форму заявки или приезжайте в наш <Link href="/contacts"><b><a>офис</a></b></Link> расположенный на Арбате!
                 </p>
             </section>
 

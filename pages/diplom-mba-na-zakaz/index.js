@@ -85,7 +85,7 @@ const page = () => (
             </section>
 
 
-
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
@@ -156,6 +156,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 

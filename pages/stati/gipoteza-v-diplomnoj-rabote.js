@@ -58,7 +58,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="/stati/gipoteza-v-diplomnoj-rabote#form">
                     <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Дипломная работа</span>
@@ -92,7 +92,7 @@ const page = () => (
             </section>
 
 
-
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -163,6 +163,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 

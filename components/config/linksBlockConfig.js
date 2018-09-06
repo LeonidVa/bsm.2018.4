@@ -1,10 +1,10 @@
 const links = [
-    { url: "#", text: "Где можно заказать дипломную работу" },
-    { url: "#", text: "Помощь в написании диплома" },
-    { url: "#", text: "Дипломная работа срочно" },
-    { url: "#", text: "Сколько стоит дипломная работа" },
-    { url: "#", text: "Диплом заказать недорого" },
-    { url: "#", text: "Выполнение дипломных работ" },
+    { url: "/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu", text: "Где можно заказать дипломную работу" },
+    { url: "/stati/napisanie-diploma", text: "Помощь в написании диплома" },
+    { url: "/diplom-mba-na-zakaz#form", text: "Дипломная работа срочно" },
+    { url: "/diplom-na-zakaz/skolko-stoit-diplomnaya-rabota", text: "Сколько стоит дипломная работа" },
+    { url: "/stati/kak-pravilno-zakazat-diplom", text: "Диплом заказать недорого" },
+    { url: "/stati/napisanie-diploma", text: "Выполнение дипломных работ" },
     // { url: "#", text: "Фирмы по написанию дипломных работ" },
 ]
 

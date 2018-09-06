@@ -13,6 +13,9 @@
     @media (max-width: 660px) {
         font-size: 2em;
     }
+    &__dis {
+        pointer-events: none;
+    }
     &__top {
         min-height: 18rem;
         height: auto;
@@ -110,6 +113,15 @@
                 }
             }
         }
+        &.list-35 {
+            .block-service__list-item {
+                width: 33.33%;
+                pointer-events: none;
+                @media (max-width: 660px) {
+                    width: 100%;
+                }
+            }
+        }
         &.list-3 {
             .block-service__list-item {
                 width: 33.33%;
@@ -121,6 +133,7 @@
         &.list-4 {
             .block-service__list-item {
                 width: 25%;
+                pointer-events: none;
                 @media (max-width: 660px) {
                     width: 100%;
                 }
@@ -134,6 +147,7 @@
         &.list-5 {
             .block-service__list-item {
                 width: 20%;
+                pointer-events: none;
                 @media (max-width: 660px) {
                     width: 100%;
                 }

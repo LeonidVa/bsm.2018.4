@@ -56,7 +56,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link>
-                    <a href="/diplom-na-zakaz#form" className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+                    <a href="#form" className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Дипломная работа</span>
                             <p className="block-service__par">Быстро и качественно!</p>
@@ -88,8 +88,9 @@ const page = () => (
                 </div>
             </section>
 
+            <section className="block-service__dis">
             <section className="block-service">
-                <Link href="/zashitit">
+                <Link href="">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Материалы для успешной защиты</span>
@@ -101,25 +102,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Пакет «Успешная Защита»</span>
                             <p>от 5 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Доклад</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Оригинальность текста</span>
                             <p>Во всех системах</p>
                         </a>
                     </Link>
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Ответы к защите</span>
                             <p>от 200 руб.</p>
@@ -127,37 +128,38 @@ const page = () => (
                     </Link>
                 </div>
                 <div className="block-service__list list-5">
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Мини-диплом Раскладка</span>
                             <p>от 2 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
                             <p>Гибкие условия</p>
                         </a>
                     </Link>
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
                             <p>от 1 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Слайды</span>
                             <p>от 350 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/zashitit">
+                    <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
                             <p>от 1 200 руб.</p>
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
             <section className="block-text">
@@ -242,7 +244,7 @@ const page = () => (
                         Заказать написание онлайн – просто <b><a href="#form">заполните заявку</a></b> на сайте.
                     </li>
                     <li>
-                        Связаться с нашими менеджерами по телефону 8 (495) 772-40-90.
+                        Связаться с нашими менеджерами по телефону <br/>8 (495) 772-40-90.
                     </li>
                     <li>
                         Заказать диплом в Москве у нас в <Link href="/contacts"><b><a>офисе</a></b></Link> (пер. Большой Кисловский, дом 1 стр. 2, офис 211).

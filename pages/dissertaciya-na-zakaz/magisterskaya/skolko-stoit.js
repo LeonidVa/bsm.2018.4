@@ -62,7 +62,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                <Link href="#form">
                     <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Магистерская диссертация</span>
@@ -73,7 +73,7 @@ const page = () => (
                         </div>
                     </a>
                 </Link>
-                <div className="block-service__list list-3">
+                <div className="block-service__list list-35">
                     <Link href="/dissertaciya-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Диссертация<br/>под ключ</span>
@@ -97,7 +97,7 @@ const page = () => (
 
 
 
-
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -168,6 +168,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 

@@ -7,4 +7,4 @@ BDIR=$(cat ./.next/BUILD_ID)
 mkdir ./.next/${BDIR}/
 PAGESDIR=$(realpath ./.next/bundles/pages)
 PDIR=$(realpath ./.next/${BDIR}/page)
-ln -s PAGESDIR PDIR
+ln -s ${PAGESDIR} ${PDIR}

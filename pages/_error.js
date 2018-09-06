@@ -65,7 +65,7 @@ export default class Error extends React.Component {
 
                     <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                         <h2 className="block-form-timer__title">
-                            <span style={{fontSize: "5em", marginTop: "-3em"}}>404</span><br/>
+                            <span style={{fontSize: "5em", marginTop: "-3em"}}>${this.props.statusCode}</span><br/>
                             Не работает сайт? Работает телефон!
                         </h2>
                         <CallMeFormWithTimer timerDuration={0}>

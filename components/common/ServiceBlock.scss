@@ -133,7 +133,6 @@
         &.list-4 {
             .block-service__list-item {
                 width: 25%;
-                pointer-events: none;
                 @media (max-width: 660px) {
                     width: 100%;
                 }
@@ -147,7 +146,6 @@
         &.list-5 {
             .block-service__list-item {
                 width: 20%;
-                pointer-events: none;
                 @media (max-width: 660px) {
                     width: 100%;
                 }

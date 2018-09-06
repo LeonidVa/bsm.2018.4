@@ -3,7 +3,7 @@ const withSass = require('@zeit/next-sass');
 const withImages = require('next-images');
 
 const nextConfig = {
-    //assetPrefix: 'https://static.besmarter.ru',
+    //assetPrefix: 'https://2018.besmarter.ru',
     webpack: (config, options) => {
         /* Aliases */
         config.resolve.alias.static = __dirname + '/static/';

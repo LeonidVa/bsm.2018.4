@@ -5,6 +5,6 @@ rm -rf ./.next/
 npm run build
 BDIR=$(cat ./.next/BUILD_ID)
 mkdir ./.next/${BDIR}/
-PAGESDIR=$(realpath ./.next/pages)
+PAGESDIR=$(realpath ./.next/bundles/pages)
 PDIR=$(realpath ./.next/${BDIR}/page)
 ln -s PAGESDIR PDIR

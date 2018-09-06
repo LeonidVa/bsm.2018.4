@@ -97,7 +97,7 @@ exit_if_waiting () {
 wait_update () {
     if test -f ${I_UPDATE}
     then
-        info "Expect for the end of another update"
+        info "Wating for the end of another update"
         touch ${I_WAITING}
         while test -f ${I_UPDATE}
         do

@@ -57,7 +57,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="#form">
+                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
                     <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
@@ -81,7 +81,7 @@ const page = () => (
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
@@ -108,7 +108,7 @@ const page = () => (
                         </div>
                     </a>
                 </Link>
-                <div className="block-service__list list-3">
+                <div className="block-service__list list-35">
                     <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Прямая связь с автором</span>
@@ -146,6 +146,7 @@ const page = () => (
 
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
@@ -207,6 +208,7 @@ const page = () => (
                     </Link>
                 </div>
             </section>
+            </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
@@ -246,7 +248,7 @@ const page = () => (
                         на сайте – заполните <b><a href="#form">онлайн-форму</a></b> и дождитесь ответа менеджера;
                     </li>
                     <li>
-                        по телефону – свяжитесь с нами по телефону +7 (495) 772-4090;
+                        по телефону – свяжитесь с нами по телефону <br/>+7 (495) 772-4090;
                     </li>
                     <li>
                         непосредственно – адрес <b><Link href="/contacts"><a>офиса</a></Link></b>: Москва, пер. Большой Кисловский, д. 1, стр. 2, офис 211.

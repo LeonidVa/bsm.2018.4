@@ -82,7 +82,7 @@ const page = () => (
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
+                    <Link href="/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
@@ -99,6 +99,7 @@ const page = () => (
 
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/zashitit">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -169,6 +170,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 

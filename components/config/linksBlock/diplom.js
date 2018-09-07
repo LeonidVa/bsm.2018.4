@@ -7,6 +7,7 @@ const links = [
     { url: "/stati/zakluchenie-k-diplomnoj-rabote", text: "Как написать заключение к дипломной работе (образец)" },
     { url: "/stati/recenziya-na-diplomnuyu-rabotu", text: "Рецензия на дипломную работу" },
     { url: "/stati/rech-k-diplomnoj-rabote", text: "Речь к дипломной работе" },
+    { url: "/diplom-na-zakaz#form", text: "Дипломная работа срочно" },
 ]
 
 

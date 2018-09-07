@@ -58,7 +58,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/kursovaya-rabota-na-zakaz">
+                <Link href="#form">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/kurs-rab.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Курсовая работа</span>
@@ -76,19 +76,19 @@ const page = () => (
                             <p>от 3 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/referat-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Реферат</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zakazat-esse">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/kursovoj-proekt-na-zakaz">
+                    <Link href="/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
@@ -105,6 +105,7 @@ const page = () => (
 
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -175,6 +176,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 
@@ -281,7 +283,7 @@ const page = () => (
                         С помощью сайта – <b><a href="#form">оставьте заявку</a></b> на нашем сайте и дождитесь ответа менеджера.
                     </li>
                     <li>
-                        По телефону – позвоните нам по номеру <br/>+7 (495) 772-4090.
+                        По телефону – позвоните нам по номеру <br/>+7 (495) 772-40-90.
                     </li>
                     <li>
                         Лично – наш <b><Link href="/contacts"><a>адрес</a></Link></b>: Москва, пер. Большой Кисловский, дом 1 строение 2, офис 211.

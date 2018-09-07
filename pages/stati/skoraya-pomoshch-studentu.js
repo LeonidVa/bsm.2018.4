@@ -20,7 +20,7 @@ import reviewBlockConfig from 'components/config/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'components/config/skoraya-pom-studentu'
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
@@ -93,6 +93,7 @@ const page = () => (
 
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -163,6 +164,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 

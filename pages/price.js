@@ -127,7 +127,7 @@ const page = () => (
                 title="Магистерская диссертация, от"
                 button={true}
                 buttonLabel="Нажми меня"
-                buttonURL="/"
+                buttonURL="#form"
                 rows={[
                     ["Стандартный вуз", "12 000"],
                     ["Вуз с повышенными требованиями", "15 000"],
@@ -153,7 +153,7 @@ const page = () => (
                 title="Дипломная работа MBA, от"
                 button={true}
                 buttonLabel="Нажми меня"
-                buttonURL="/"
+                buttonURL="#form"
                 rows={[
                     ["Написание диплома mba", "25 000"],
                     ["Кейсы mba", "5 000"],
@@ -174,7 +174,7 @@ const page = () => (
                 title="Курсовая работа, от"
                 button={true}
                 buttonLabel="Нажми меня"
-                buttonURL="/"
+                buttonURL="#form"
                 rows={[
                     ["Теоретическая", "2 000"],
                     ["С практикой", "3 500"],
@@ -197,7 +197,7 @@ const page = () => (
                 title="Аспирантура и диссертации"
                 button={true}
                 buttonLabel="Нажми меня"
-                buttonURL="/"
+                buttonURL="#form"
                 rows={[
                     ["Докторская", "450 000"],
                     ["Кандидатская", "180 000"],
@@ -226,7 +226,7 @@ const page = () => (
                 title="Отчет по практике"
                 button={true}
                 buttonLabel="Нажми меня"
-                buttonURL="/"
+                buttonURL="#form"
                 rows={[
                     ["Производственный отчет", "3 000"],
                     ["Преддипломный отчет", "3 000"],
@@ -238,7 +238,7 @@ const page = () => (
                 title="Реферат"
                 button={true}
                 buttonLabel="Нажми меня"
-                buttonURL="/"
+                buttonURL="#form"
                 rows={[
                     ["Теоретический", "1 500"],
                     ["С практикой", "1 500"],
@@ -250,7 +250,7 @@ const page = () => (
                 title="Другие работы"
                 button={true}
                 buttonLabel="Нажми меня"
-                buttonURL="/"
+                buttonURL="#form"
                 rows={[
                     ["Подготовка к успешной защите", ""],
                     ["Консультация с автором"],

@@ -89,7 +89,7 @@ const page = () => (
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
+                    <Link href="/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
@@ -107,6 +107,7 @@ const page = () => (
 
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -178,6 +179,7 @@ const page = () => (
                     </Link>
                 </div>
             </section>
+            </section>
 
 
 
@@ -186,7 +188,7 @@ const page = () => (
                     Сколько стоит заказать реферат
                 </h1>
                 <p className="block-text__par">
-                    Выяснить, сколько стоит заказать реферат в компании «BeSmarter!», можно с помощью нашего <Link href="/price"><a>прайс-листа</a></Link>. Ориентировочный диапазон цен составляет от 1 500 до 7 000 рублей.
+                    Выяснить, сколько стоит заказать реферат в компании «BeSmarter!», можно с помощью нашего <Link href="/price"><a>прайс-листа</a></Link>. Ориентировочный диапазон цен составляет от 1 500 до <br/>7 000 рублей.
                 </p>
                 <p className="block-text__par">
                     Чтобы узнать точно, сколько стоит написать реферат, заданную именно вам, понадобится собеседование. Мы определим ее цену на основании следующих факторов.

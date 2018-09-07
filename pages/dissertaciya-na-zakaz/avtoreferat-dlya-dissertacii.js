@@ -69,25 +69,25 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-4">
-                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                    <Link href="/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аспирантские работы</span>
                             <p>От поступления<br/>до защиты</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                    <Link href="/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Статьи</span>
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                    <Link href="/kak-podgotovitsya-i-postupit-v-aspiranturu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Апробация</span>
                             <p>Реальные эксперименты</p>
@@ -96,6 +96,7 @@ const page = () => (
                 </div>
             </section>
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
                     <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
@@ -129,6 +130,7 @@ const page = () => (
                     </Link>
                 </div>
             </section>
+            </section>
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -145,6 +147,7 @@ const page = () => (
 
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
@@ -205,6 +208,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 

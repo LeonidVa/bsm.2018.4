@@ -52,7 +52,7 @@ const page = () => (
 
             <section className="block-service">
                 <Link>
-                    <a href="/diplom-mba-na-zakaz#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/88.jpg') + ")",}}>
+                    <a href="#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/88.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Диплом MBA</span>
                             <p className="block-service__par">Решаем кейсы любой сложности</p>
@@ -199,7 +199,7 @@ const page = () => (
                     Как мы работаем?
                 </h2>
                 <p className="block-text__par">
-                    Вы оформляете заявку на помощь в написании дипломной работы MBA удобным для себя способом – онлайн, по телефону (<b>+7 495 772-4090</b>) или в нашем <a href="/contacts">офисе</a> (Москва, пер. Большой Кисловский, д. 1, стр. 2, оф. 211).
+                    Вы оформляете заявку на помощь в написании дипломной работы MBA удобным для себя способом – онлайн, по телефону (<b>+7 495 772-40-90</b>) или в нашем <a href="/contacts">офисе</a> (Москва, пер. Большой Кисловский, д. 1, стр. 2, оф. 211).
                 </p>
                 <p className="block-text__par">
                     Мы проводим с вами собеседование и уточняем все детали заказа. Определяется стоимость услуги и согласовывается автор. По результатам переговоров подписывается официальный договор с указанием всех ваших требований и наших обязательств.

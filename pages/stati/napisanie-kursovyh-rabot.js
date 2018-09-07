@@ -54,7 +54,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="/diplom-na-zakaz">
+                <Link href="#form">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/i.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Курсовая работа</span>
@@ -66,31 +66,31 @@ const page = () => (
                     </a>
                 </Link>
                 <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
+                    <Link href="/zakazat-otchet-po-praktike">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Отчет по практике</span>
                             <p>от 3 000 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/referat-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Реферат</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
+                    <Link href="/zakazat-esse">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/diplom-mba-na-zakaz">
+                    <Link href="/kursovoj-proekt-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовой проект</span>
                             <p>от 8 000 руб.</p>
@@ -101,6 +101,7 @@ const page = () => (
 
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/diplom-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -171,6 +172,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
 

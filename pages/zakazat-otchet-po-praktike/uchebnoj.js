@@ -61,7 +61,7 @@ const page = () => (
 
 
             <section className="block-service">
-                <Link href="/kursovaya-rabota-na-zakaz">
+                <Link href="#form">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/otch-prakrik1.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-black">
                             <span className="block-service__title">Отчет по практике</span>
@@ -85,7 +85,7 @@ const page = () => (
                             <p>от 1 500 руб.</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
+                    <Link href="/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
                             <p>от 200 руб.</p>
@@ -106,6 +106,7 @@ const page = () => (
                 </div>
             </section>
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/kursovaya-rabota-na-zakaz">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
@@ -176,6 +177,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
             <section className="block-text">
@@ -251,7 +253,7 @@ const page = () => (
                         На нашем сайте можно заполнить <b><a href="#form">онлайн-заявку</a></b>.
                     </li>
                     <li>
-                        Наши менеджеры всегда рады вашему звонку +7(495) 772-4090.
+                        Наши менеджеры всегда рады вашему звонку <br/>+7(495) 772-40-90.
                     </li>
                     <li>
                         Либо встретиться лично у нас - в удобном офисе, в центре столицы по адресу, указанному в наших <Link href="/contacts"><b><a>контактах</a></b></Link>.

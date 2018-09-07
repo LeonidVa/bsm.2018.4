@@ -57,7 +57,7 @@ const page = () => (
             <MessBlock/>
 
             <section className="block-service">
-                <Link href="#form">
+                <Link href="/dissertaciya-na-zakaz/kandidatskaya">
                     <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
                         <div className="block-service__text gradient-l-white">
                             <span className="block-service__title">Кандидатская диссертация</span>
@@ -81,7 +81,7 @@ const page = () => (
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
@@ -108,7 +108,7 @@ const page = () => (
                         </div>
                     </a>
                 </Link>
-                <div className="block-service__list list-3">
+                <div className="block-service__list list-35">
                     <Link href="/dissertaciya-na-zakaz/doktorskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Прямая связь с автором</span>
@@ -155,6 +155,7 @@ const page = () => (
 
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
@@ -216,6 +217,7 @@ const page = () => (
                     </Link>
                 </div>
             </section>
+            </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
@@ -256,7 +258,7 @@ const page = () => (
                     Этапы сотрудничества с BeSmarter!
                 </h2>
                 <p className="block-text__par">
-                    Вы заполняете форму заявки на сайте, указывая исходные данные. Все детали обсуждаются лично с менеджером компании, после чего подписывается договор на оказание услуг. Вы также можете просто позвонить по телефону +7 (495) 772-40-90 или +7 (495) 772-90-40, чтобы сэкономить время на заполнение онлайн-анкеты.
+                    Вы заполняете форму заявки на сайте, указывая исходные данные. Все детали обсуждаются лично с менеджером компании, после чего подписывается договор на оказание услуг. Вы также можете просто позвонить по телефону <br/>+7 (495) 772-40-90 или <span className="tel1">+7 (495) 772-90-40</span>, чтобы сэкономить время на заполнение онлайн-анкеты.
                 </p>
                 <p className="block-text__par">
                     Можно договориться как о выполнении всего заказа полностью, так и о написании частями.

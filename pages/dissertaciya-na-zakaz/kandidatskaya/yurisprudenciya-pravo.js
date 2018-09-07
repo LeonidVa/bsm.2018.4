@@ -86,7 +86,7 @@ const page = () => (
                             <p>Написание и размещение</p>
                         </a>
                     </Link>
-                    <Link href="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu">
+                    <Link href="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Автореферат</span>
                             <p>Строго по ГОСТу</p>
@@ -113,7 +113,7 @@ const page = () => (
                         </div>
                     </a>
                 </Link>
-                <div className="block-service__list list-3">
+                <div className="block-service__list list-35">
                     <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Прямая связь с автором</span>
@@ -153,6 +153,7 @@ const page = () => (
             <FormEstimate />
 
 
+            <section className="block-service__dis">
             <section className="block-service">
                 <Link href="/dissertaciya-na-zakaz/doktorskaya">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
@@ -213,6 +214,7 @@ const page = () => (
                         </a>
                     </Link>
                 </div>
+            </section>
             </section>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>

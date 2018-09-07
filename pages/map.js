@@ -211,12 +211,12 @@ const page = () => (
                                         <ul>
                                             <li>
                                                 <Link href="/dissertaciya-na-zakaz/doktorskaya/medicina">
-                                                    <a>Доктоорская диссертация по медицине</a>
+                                                    <a>Докторская диссертация по медицине</a>
                                                 </Link>
                                             </li>
                                             <li>
                                                 <Link href="/dissertaciya-na-zakaz/doktorskaya/pedagogika">
-                                                    <a >Доктоорская диссертация по педагогике</a>
+                                                    <a >Докторская диссертация по педагогике</a>
                                                 </Link>
                                             </li>
                                         </ul>
@@ -317,7 +317,7 @@ const page = () => (
                                     </li>
                                     <li>
                                         <Link href="/dissertaciya-na-zakaz/redaktirovanie">
-                                            <a>Сколько стоит редактирование диссертацию</a>
+                                            <a>Сколько стоит редактирование диссертации</a>
                                         </Link>
                                     </li>
                                 </ul>

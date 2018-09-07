@@ -9,3 +9,4 @@ mkdir ./.next/${BDIR}/
 PDIR=$(realpath ./.next/${BDIR}/page)
 ln -s ./../bundles/pages ${PDIR}
 ln -s ./../.env ./.env
+cp ./static/favicon.ico ./.next/static/favicon.ico

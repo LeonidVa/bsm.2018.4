@@ -1,47 +1,51 @@
-import React from 'react';
-import Router from 'next/router';
+import React from 'react'
+
 import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
+
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
+
+import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
+import dopy from 'components/config/dopraboty'
+
 import FormOrder from 'components/common/forms/Order';
+import FormEstimate from 'components/common/forms/Estimate';
+import fields from 'components/config/form/main'
+
+import InfoBlock from 'components/common/InfoBlock';
+import infoBlockConfig from 'components/config/infoBlock/diplom'
+
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
+
+import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
+
+import LinksBlock from 'components/common/LinksBlock';
+import links from 'components/config/linksBlockConfig'
+
 import Title from 'components/common/Title'
 import telega from 'utils/telega';
 
-// Script errors occuring during initial client render can cause the server-rendered
-// content to be hidden by an error page. Track router events to determine if the
-// error being handled happened during initial render, and throw within
-// getInitialProps to allow the server-rendered content to remain visible.
-const isClient = typeof window !== 'undefined';
-let isInitialClientRender = isClient;
-if (isClient) {
-    Router.ready(() => {
-        Router.router.once('routeChangeStart', () => {
-            isInitialClientRender = false;
-        });
-    });
-}
 
+/*<p>
+{this.props.statusCode
+    ? `An error ${this.props.statusCode} occurred on server`
+    : 'An error occurred on client'}
+</p>*/
 
 export default class Error extends React.Component {
-    static getInitialProps({err, res, xhr, req}) {
-        if (isInitialClientRender) {
-            telega('Error rendering on page ' + url + '```' + err.message + '``` and ```' + err.toString() + '```');
-            // rethrow to prevent the error view from displaying on initial client render
-            throw err;
-        }
-        const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;
-        const url = (req && req.url) || null;
-        if (!isClient) {
-            telega('Error ' + statusCode + ' on page ' + url);
-        }
-        return {statusCode, url};
+    static getInitialProps({req, res, err}) {
+        const statusCode = res ? res.statusCode : err ? err.statusCode : null;
+        return {statusCode}
     }
 
-
     render() {
-        const {statusCode} = this.props;
+        if (process.browser && window.location !== undefined) {
+            source = window.location.hostname;
+            formType += " at " + window.location.toString();
+        }
+        telega('Error ' + this.props.statusCode + ' on ');
         return (
             <Wrapper title="Главная">
                 <div className="wrapper bg bg-c2 bg-img bg-img4">
@@ -68,7 +72,7 @@ export default class Error extends React.Component {
 
                     <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
                         <h2 className="block-form-timer__title">
-                            <span style={{fontSize: "5em", marginTop: "-3em"}}>{statusCode}</span><br/>
+                            <span style={{fontSize: "5em", marginTop: "-3em"}}>${this.props.statusCode}</span><br/>
                             Не работает сайт? Работает телефон!
                         </h2>
                         <CallMeFormWithTimer timerDuration={0}>
@@ -84,3 +88,6 @@ export default class Error extends React.Component {
         )
     }
 }
+
+
+

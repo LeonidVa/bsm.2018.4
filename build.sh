@@ -8,3 +8,4 @@ mkdir ./.next/${BDIR}/
 #PAGESDIR=$(realpath ./.next/bundles/pages)
 PDIR=$(realpath ./.next/${BDIR}/page)
 ln -s ./../bundles/pages ${PDIR}
+ln -s ./../.env ./.env

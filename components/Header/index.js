@@ -49,6 +49,11 @@ class Header extends Component {
                                             <a>Контакты</a>
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link href="/contactdfdfdfdfdfs">
+                                            <a>Конdfdfdffтакты</a>
+                                        </Link>
+                                    </li>
 
                                 </ul>
                             </nav>

@@ -161,7 +161,16 @@ class OrderForm extends Component {
             .then(function (response) {
                 const {data = {}} = response;
                 const {error = true, id, msg} = data;
-                if (!error) {
+                if (error) {
+                    /* ошибка со стороны сервера */
+                    _this.setState({
+                        formSended: {
+                            ..._this.state.formSended,
+                            error: msg
+                        }
+                    });
+                } else {
+                    /* ушло хорошо */
                     _this.setState({
                         formSended: {
                             ..._this.state.formSended,
@@ -169,14 +178,8 @@ class OrderForm extends Component {
                             number: id
                         }
                     });
-                } else {
-                    _this.setState({
-                        formSended: {
-                            ..._this.state.formSended,
-                            error: msg
-                        }
-                    });
                 }
+                _this.clearFormData();
                 console.log(response);
             })
             .catch(function (response) {
@@ -187,6 +190,13 @@ class OrderForm extends Component {
         const {targetID = "form submit"} = this.props;
         triggerTarget(targetID);
     };
+
+    clearFormData() {
+        const data = this.state.data;
+        const {name, phone, email} = this.state.data;
+        this.saveData(this.dataDefaults);
+        this.saveData({name, phone, email});
+    }
 
     onDrop(files) {
         if (files.length === 0) {

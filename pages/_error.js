@@ -42,7 +42,7 @@ export default class Error extends React.Component {
         const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;
         const url = (req && req.url) || null;
         if (!isClient) {
-            telega('Error ' + statusCode + ' on page ' + url);
+            telega('Error ' + statusCode + ' on page ' + url + ' ip ' + req.connection.remoteAddress);
         }
         return {statusCode, url};
     }

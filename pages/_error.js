@@ -80,7 +80,7 @@ export default class Error extends React.Component {
                             Не работает сайт? Работает телефон!
                         </h2>
                         <CallMeFormWithTimer timerDuration={0}>
-                            <p>Звони нам, мы на связи!<br/><br/><a href="tel:+79257724099">+7 925 772 4099</a></p>
+                            <p>Звони нам, мы на связи!<br/><br/><a href="tel:+79257724090">+7 925 772 4090</a></p>
                         </CallMeFormWithTimer>
                     </section>
 

@@ -16,11 +16,19 @@ import telega from 'utils/telega';
 const isClient = typeof window !== 'undefined';
 let isInitialClientRender = isClient;
 if (isClient) {
-    Router.ready(() => {
-        Router.router.once('routeChangeStart', () => {
-            isInitialClientRender = false;
+    if (Router.ready !== undefined
+        && Router.ready !== null
+        && Router.router !== undefined
+        && Router.router !== null
+        && Router.router.once !== undefined
+        && Router.router.once !== null
+    ) {
+        Router.ready(() => {
+            Router.router.once('routeChangeStart', () => {
+                isInitialClientRender = false;
+            });
         });
-    });
+    }
 }
 
 

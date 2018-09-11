@@ -7,8 +7,10 @@ import Dropdown from "react-dropdown";
 import Recaptcha from "react-google-recaptcha";
 import triggerTarget from "utils/analytics";
 import DatePicker from "components/common/DatePicker";
-
 import axios from "axios";
+import getConfig from 'next/config';
+
+const config = getConfig();
 
 /*   fields are stored in /components/config/main.js   */
 
@@ -153,10 +155,9 @@ class OrderForm extends Component {
         });
         formData.set("verified", verified);
         let url = "/api/form_data";
-        if (process.env.NODE_ENV === "development") {
+        if (config.publicRuntimeConfig.runtime.development) {
             url = ' http://localhost:3001/api/form_data'
         }
-
         axios({
             method: "POST",
             url: url,

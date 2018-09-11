@@ -1,22 +1,29 @@
 import axios from 'axios'
+import getConfig from 'next/config';
+
+const {serverRuntimeConfig = {}} = getConfig();
 
 export default function telega(text) {
-    if (process.env.telegaDialogID === undefined) {
+    if (text === ""
+        || serverRuntimeConfig.telega === undefined
+        || serverRuntimeConfig.telega.dialogID === undefined
+        || serverRuntimeConfig.telega.APIKey === undefined
+    ) {
         return false;
     }
     try {
-        telegramSend(process.env.telegaDialogID, text);
+        return telegramSend(serverRuntimeConfig.telega.APIKey, serverRuntimeConfig.telega.dialogID, text);
     } catch (e) {
         console.log('telega failed')
     }
 }
 
 
-function telegramSend(chatID, text) {
-    if (typeof text === "undefined" || text === "" || process.env.telegaAPIKey === undefined || process.env.telegaAPIKey === "") {
+function telegramSend(APIKey, chatID, text) {
+    if (typeof text === "undefined" || text === "") {
         return false;
     }
-    const url = 'https://api.telegram.org/bot' + process.env.telegaAPIKey + '/sendMessage';
+    const url = 'https://api.telegram.org/bot' + APIKey + '/sendMessage';
     const data = {
         'chat_id': chatID,
         'text': text,
@@ -29,11 +36,12 @@ function telegramSend(chatID, text) {
         config: {headers: {'Content-Type': 'application/json'}}
     }).then(function (response) {
         //handle success
-        console.log('telegram message sent to '+chatID);
+        console.log('telegram message sent to ' + chatID + ' text \"' + text + '\"');
         //console.log(response);
     }).catch(function (response) {
         //handle error
         console.log('telega error');
         //console.log(response);
     });
+    return true;
 }

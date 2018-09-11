@@ -27,7 +27,7 @@ const nextConfig = {
             development: process.env.NODE_ENV === "development",
         },
     },
-    //assetPrefix: 'https://2018.besmarter.ru',
+    ///assetPrefix: process.env.NODE_ENV === "production" ? 'https://cdn.cloudflare.com' : null,
     webpack: (config, options) => {
         /* Aliases to use same path in imports everywhere, i.e. import DatePicker from "components/common/DatePicker"; */
         config.resolve.alias.static = __dirname + '/static/';
@@ -35,9 +35,8 @@ const nextConfig = {
         config.resolve.alias.utils = __dirname + '/utils/';
 
         /* compression-webpack-plugin creates precompressed *.gz files for nginx gzip_static */
-        const CompressionPlugin = require('compression-webpack-plugin');
-        config.plugins.push(new CompressionPlugin()
-        );
+        //const CompressionPlugin = require('compression-webpack-plugin');
+        //config.plugins.push(new CompressionPlugin());
 
         /* done */
         return config

@@ -459,8 +459,8 @@ class OrderForm extends Component {
                     <img width="100%" src={require("static/images/fox-logo.png")}/>
                     <br/>
                     <br/>
-                    <h2 className="block-form__title">Отлично, отправлено!</h2>
-                    <p>Скоро менеджер свяжется с вами для уточнения деталей</p>
+                    <h2 className="block-form__title">Спасибо!</h2>
+                    <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
                 </div>
                 <form onSubmit={this.handleSubmit} className="block-form__form" style={{display: this.state.formSended.bool ? "none" : "block"}}>
                     <h2 className="block-form__title">{title}</h2>

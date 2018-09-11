@@ -8,6 +8,7 @@ import FormOrder from 'components/common/forms/Order';
 import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
 import Title from 'components/common/Title'
 import telega from 'utils/telega';
+import redirect from 'utils/redirect';
 
 // Script errors occuring during initial client render can cause the server-rendered
 // content to be hidden by an error page. Track router events to determine if the
@@ -34,14 +35,30 @@ if (isClient) {
 
 export default class Error extends React.Component {
     static getInitialProps({err, res, xhr, req}) {
+
+
+        ////////////
+
+        const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;
+        const url = (req && req.url) || null;
+        /* check if redirect is required and if yes - do it and exit */
+        const newUrl = redirect(url);
+        if (newUrl) {
+            if (res) {
+                res.writeHead(301, {Location: newUrl});
+                res.end();
+                return {}
+            }
+        }
+
         if (isInitialClientRender) {
             telega('Error rendering on page ' + url + '```' + err.message + '``` and ```' + err.toString() + '```');
             // rethrow to prevent the error view from displaying on initial client render
             throw err;
         }
-        const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;
-        const url = (req && req.url) || null;
         if (!isClient) {
+            console.log('req.connection.remoteAddress');
+            console.log(req.connection.remoteAddress);
             telega('Error ' + statusCode + ' on page ' + url + ' ip ' + req.connection.remoteAddress);
         }
         return {statusCode, url};

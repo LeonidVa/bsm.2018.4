@@ -152,9 +152,14 @@ class OrderForm extends Component {
             formData.append("files", file);
         });
         formData.set("verified", verified);
+        let url = "/api/form_data";
+        if (process.env.NODE_ENV === "development") {
+            url = ' http://localhost:3001/api/form_data'
+        }
+
         axios({
             method: "POST",
-            url: "/api/form_data",
+            url: url,
             data: formData,
             config: {headers: {"Content-Type": "multipart/form-data"}}
         })
@@ -437,67 +442,62 @@ class OrderForm extends Component {
         if (buttonLabel === undefined || buttonLabel === "") {
             buttonLabel = "Заказать работу";
         }
-        if (!this.state.formSended.bool) {
-            return (
-                <section className={`block-form ${redForm ? "form-red" : ""}`}>
-                    <a
-                        name="form"
-                        id="form"
-                        style={{
-                            display: "block",
-                            marginTop: "-3em",
-                            height: "3em",
-                            width: "1px"
-                        }}
-                    />
+        return (
+            <section className={`block-form ${redForm ? "form-red" : ""}`}>
+                <a
+                    name="form"
+                    id="form"
+                    style={{
+                        display: "block",
+                        marginTop: "-3em",
+                        height: "3em",
+                        width: "1px"
+                    }}
+                />
+                <div className="block-form__message" style={{display: this.state.formSended.bool ? "block" : "none"}}>
+                    <img width="100%" src={require("static/images/fox-logo.png")}/>
+                    <br/>
+                    <br/>
+                    <h2 className="block-form__title">Отлично, отправлено!</h2>
+                    <p>Скоро менеджер свяжется с вами для уточнения деталей</p>
+                </div>
+                <form onSubmit={this.handleSubmit} className="block-form__form" style={{display: this.state.formSended.bool ? "none" : "block"}}>
                     <h2 className="block-form__title">{title}</h2>
-                    <form onSubmit={this.handleSubmit} className="block-form__form">
-                        {this.renderForm()}
-                        <a
-                            className="block-form__more-info"
-                            onClick={() => this.showFullForm()}
-                        >
-                            {this.state.Extended
-                                ? "Cкрыть дополнительные поля"
-                                : "Дополнительная информация"}
-                        </a>
-                        <div
-                            style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                margin: "0.75em"
-                            }}
-                        >
-                            <Recaptcha
-                                ref="recaptcha"
-                                onChange={this.verifyCallback}
-                                sitekey="6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS"
-                            />
-                        </div>
-                        <span className="block-form__agree">
+                    {this.renderForm()}
+                    <a
+                        className="block-form__more-info"
+                        onClick={() => this.showFullForm()}
+                    >
+                        {this.state.Extended
+                            ? "Cкрыть дополнительные поля"
+                            : "Дополнительная информация"}
+                    </a>
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            margin: "0.75em"
+                        }}
+                    >
+                        <Recaptcha
+                            ref="recaptcha"
+                            onChange={this.verifyCallback}
+                            sitekey="6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS"
+                        />
+                    </div>
+                    <span className="block-form__agree">
               Отправляя эти данные, я принимаю{" "}
-                            <Link href="/politika-konfidentsialnosti">
+                        <Link href="/politika-konfidentsialnosti">
                 <a>Политику конфиденциальности</a>
               </Link>
             </span>
-                        <button type="submit" className="block-form__btn">
-                            {buttonLabel}
-                        </button>
-                    </form>
-                </section>
-            );
-        } else {
-            return (
-                <div className="block-form" style={{border: "none"}}>
-                    <img width="100%" src={require("static/images/fox-logo.png")}/>
-                    <p className="block-text__par">
-                        {this.state.formSended.number
-                            ? `Номер заявки: ${this.state.formSended.number}`
-                            : ""}
-                    </p>
-                </div>
-            );
-        }
+                    <button type="submit" className="block-form__btn">
+                        {buttonLabel}
+                    </button>
+                </form>
+            </section>
+        );
+
     }
 }
 

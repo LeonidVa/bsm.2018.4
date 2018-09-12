@@ -1,15 +1,12 @@
 import React, {Component, createContext} from 'react';
 import './style.scss';
-import axios from 'axios';
 import Close from "../Close/index";
-import triggerTarget from 'utils/analytics';
+import PhoneAndSubmit from 'components/common/forms/PhoneAndSubmit';
+
 
 const exitPopupState = {
-    phone: '',
-    name: '',
-    comment: '',
-    verified: true,
     isShown: false,
+    sent: false,
     show: () => {
     },
     hide: () => {
@@ -26,47 +23,13 @@ class ExitPopup extends Component {
     constructor(props) {
         super(props);
         this.state = exitPopupState;
+        this.onSent = this.onSent.bind(this);
     }
 
-    handleSubmit = async (e) => {
-        e.preventDefault();
-        const {name, phone, comment, verified} = this.state;
-        /*        if (!this.state.verified) {
-                    window.alert('Пожалуйста, пройдите каптчу');
-                    return
-                }*/
-        let source = "server default value";
-        if (process.browser) {
-            source = window.location.hostname;
-        }
-        let formData = new FormData();
-        formData.set('form', 'Бонус при заказе 500р');
-        formData.set('source', source);
-        formData.set('name', name);
-        formData.set('phone', phone);
-        formData.set('comment', comment);
-        formData.set('verified', verified);
-        axios({
-            method: 'POST',
-            url: '/api/form_data',
-            data: formData,
-            config: {headers: {'Content-Type': 'multipart/form-data'}}
-        }).then(function (response) {
-            //handle success
-            console.log(response);
-        }).catch(function (response) {
-            //handle error
-            console.log(response);
-        });
-
-        const {targetID = "sale_500"} = this.props;
-        triggerTarget(targetID);
-
-        /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
-                    .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
-                    .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))*/
-        return false;
-    };
+    onSent() {
+        console.log('a popup sees that form was sent')
+        this.setState({sent: true});
+    }
 
     render() {
         const {className, bonus, message, text} = this.props;
@@ -80,35 +43,31 @@ class ExitPopup extends Component {
                         <div id="modal_sale"
                              className={`modal-sale ${className}`}
                              style={{display: 'block'}}
-                             onClick={() => {
-                                 context.hide()
-                             }}
+                             onClick={() => context.hide()}
                         >
                             <div className="modal-sale__body modal__body"
-                                 onClick={(e) => {
-                                     e.stopPropagation();
-                                 }}
-                                //style={{backgroundImage: 'url(' + require('static/images/modal/1.jpg') + ')'}}
+                                 onClick={(e) => e.stopPropagation()}
                             >
                                 <Close onClick={() => {
                                     context.hide()
                                 }}/>
-                                <div className="modal-sale__top">
-                                    <span className="percent">{bonus}</span>
-                                    <span className="top-text">{message}</span>
+                                <div className="block-form__message" style={{display: this.state.sent ? "block" : "none"}}>
+                                    abc
                                 </div>
-                                <p>{text}</p>
-                                <form onSubmit={this.handleSubmit}>
-                                    <input type="text"
-                                           name=""
-                                           id="form-phone"
-                                           placeholder="Ваш телефон"
-                                           required
-                                           value={this.state.phone}
-                                           onChange={(e) => this.setState({phone: e.target.value})}
+                                <div className="block-form__message" style={{display: this.state.sent ? "none" : "block"}}>
+                                    <div className="modal-sale__top">
+                                        <span className="percent">{bonus}</span>
+                                        <span className="top-text">{message}</span>
+                                    </div>
+                                    <p>{text}</p>
+                                    <PhoneAndSubmit
+                                        formType="Бонус при заказе 500р"
+                                        targetID="sale_500"
+                                        placeholder="Ваш телефон"
+                                        submitLabel="Хочу получить!"
+                                        onSent={this.onSent}
                                     />
-                                    <button type="submit">Хочу получить!</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     )

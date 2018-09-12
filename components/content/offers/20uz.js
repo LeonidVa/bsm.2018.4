@@ -1,4 +1,4 @@
-import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer'
+import FormWithTimer from 'components/common/forms/WithTimer'
 
 const Offer20uz = () => (
     <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
@@ -6,13 +6,13 @@ const Offer20uz = () => (
             <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
             Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
         </h2>
-        <CallMeFormWithTimer
+        <FormWithTimer
             timerDuration={155555}
             formType="Скидка 20% на материалы"
             targetID="sale_20%"
         >
             <p>при одновременном заказе вместе с работой</p>
-        </CallMeFormWithTimer>
+        </FormWithTimer>
     </section>
 );
 

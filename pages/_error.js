@@ -5,7 +5,7 @@ import Wrapper from 'components/Wrapper';
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 import FormOrder from 'components/common/forms/Order';
-import CallMeFormWithTimer from 'components/common/CallMeFormWithTimer';
+import FormWithTimer from 'components/common/forms/WithTimer';
 import Title from 'components/common/Title'
 import telega from 'utils/telega';
 import redirect from 'utils/redirect';
@@ -36,7 +36,8 @@ if (isClient) {
 export default class Error extends React.Component {
     static getInitialProps({err, res, xhr, req}) {
 
-
+    console.log('req.headers');
+    console.log(req.headers);
         ////////////
 
         const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;
@@ -96,9 +97,9 @@ export default class Error extends React.Component {
                             <span style={{fontSize: "5em", marginTop: "-3em"}}>{statusCode}</span><br/>
                             Не работает сайт? Работает телефон!
                         </h2>
-                        <CallMeFormWithTimer timerDuration={0}>
+                        <FormWithTimer timerDuration={0}>
                             <p>Звони нам, мы на связи!<br/><br/><a href="tel:+79257724090">+7 925 772 4090</a></p>
-                        </CallMeFormWithTimer>
+                        </FormWithTimer>
                     </section>
 
                     <a name="form" id="form"/>

@@ -135,7 +135,7 @@ const page = () => (
                             <p>Во всех системах</p>
                         </a>
                     </Link>
-                    <Link href="/zashitita">
+                    <Link href="/zashitit">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Ответы к защите</span>
                             <p>от 200 руб.</p>

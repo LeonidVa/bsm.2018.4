@@ -6,8 +6,8 @@ import MessBlock from 'components/common/MessBlock';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty'
 
-import FormOrder from 'components/common/forms/Order';
-import FormEstimate from 'components/common/forms/Order';
+import FormOrder from 'components/common/forms/Big/Order';
+import FormEstimate from 'components/common/forms/Big/Estimate';
 
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'components/config/infoBlock/diplom'

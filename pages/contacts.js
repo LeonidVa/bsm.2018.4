@@ -7,7 +7,8 @@ import NavRow from 'components/common/NavRow';
 
 import Title from 'components/common/Title'
 import MapBlock from 'components/common/MapBlock';
-import FormOrder from 'components/common/forms/Order';import FormEstimate from 'components/common/forms/Order';
+import FormOrder from 'components/common/forms/Big/Order';
+import FormEstimate from 'components/common/forms/Big/Estimate';
 import LinksBlock from 'components/common/LinksBlock'
 import fields from 'components/config/form/main';
 import links from 'components/config/linksBlockConfig';

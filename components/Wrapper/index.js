@@ -137,7 +137,7 @@ class Wrapper extends Component {
                                            bottom: "0.5em",
                                            right: "-1.7em",
                                        }}>руб.</span></div>}
-                                   message={<span style={{marginLeft: "4em", lineHeight: "1.33"}}>Лови бонус при заказе прямо сейчас!</span>}
+                                   message={<span style={{marginLeft: "3em", lineHeight: "1.33", textAlign: "left"}}>Лови бонус при заказе прямо сейчас!</span>}
                                    text="При сумме заказа от 2 000 рублей"
                         />
                         <CallPopup/>

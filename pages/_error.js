@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
-import FormOrder from 'components/common/forms/Order';
+import FormOrder from 'components/common/forms/Big/Order';
 import FormWithTimer from 'components/common/forms/WithTimer';
 import Title from 'components/common/Title'
 import telega from 'utils/telega';

@@ -5,8 +5,6 @@ import getConfig from 'next/config';
 
 const config = getConfig();
 
-/*   fields are stored in /components/config/main.js   */
-
 
 class BaseForm extends Component {
 
@@ -214,6 +212,9 @@ class BaseForm extends Component {
         });
     }
 
+    render(){
+        return(<div>Do not use me like this. Read the manual.</div>);
+    }
 
 }
 

@@ -127,7 +127,7 @@ const page = () => (
             </section>
 
             <section className="block-text">
-                <ul>
+                <ul className="marker">
                     <li>
                         Есть идеи и наработки, но нет времени на написание?
                     </li>
@@ -135,9 +135,12 @@ const page = () => (
                         Мы поможем с настоящей серьезной диссертацией!
                     </li>
                     <li>
-                        Прямо сейчас обратитесь к нам, и Вы отлично защититесь!
+                        Прямо сейчас обратитесь к нам, и Вы отлично
                     </li>
                 </ul>
+                    <p className="block-text__par">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;защититесь!
+                    </p>
             </section>
 
             <FormEstimate />

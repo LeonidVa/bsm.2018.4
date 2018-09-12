@@ -8,7 +8,7 @@ import fields from 'components/config/form/main'
 
 
 const page = () => (
-    <Wrapper title="Как точно защититься | Компания «BeSmarter!». Тел. +7 (495) 772-40-90.">
+    <Wrapper title="Как точно защититься | Компания «BeSmarter!». Тел. +7 (495) 772-40-90." description="Комфортная и успешная защита обеспечена!">
         <div className="wrapper bg bg-c2 bg-img bg-img4">
             <section className="breadcrumbs">
                 <div className="inner">

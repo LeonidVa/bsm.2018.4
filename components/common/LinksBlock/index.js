@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import './index.scss'
 
 const renderLinks=(links)=>(
     links.map((item, index)=>{

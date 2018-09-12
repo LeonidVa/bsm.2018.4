@@ -1,5 +1,6 @@
 import playIcon from 'static/images/play-icon.svg'
 import React, {Component} from 'react';
+import './index.scss'
 
 class VideoBlock extends Component {
     render() {

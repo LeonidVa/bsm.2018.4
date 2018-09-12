@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
-import triggerTarget from 'utils/analytics';
+import './index.scss'
 
 
 class BottomHelper extends Component {

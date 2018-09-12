@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Arrow from './arrow.svg'
+import './index.scss'
 
 
 const NavRow = ({title, description, url}) => {

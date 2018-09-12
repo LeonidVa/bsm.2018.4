@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import countdown from 'countdown';
+import './index.scss'
 
 class Timer extends Component {
     constructor(props) {

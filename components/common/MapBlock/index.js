@@ -1,11 +1,12 @@
 import {YMaps, Map, Placemark} from 'react-yandex-maps';
 
-import React from 'react';
+import {Component} from 'react';
+import './index.scss'
 
 
 const mapState = {center: [55.753710, 37.605719], zoom: 17};
 
-class FillContainer extends React.Component {
+class FillContainer extends Component {
     state = {width: '100%', height: '100%'};
 
     render() {

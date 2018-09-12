@@ -1,4 +1,4 @@
-
+import './index.scss'
 
 const ImageBlock = ({imageSrc})=>(
     <section className="block-img">

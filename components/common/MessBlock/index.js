@@ -5,6 +5,7 @@ import telegram from 'static/images/messegers/telegram.svg'
 import whatsapp from 'static/images/messegers/whatsapp.svg'
 import vk from 'static/images/messegers/vk.svg'
 import instagram from 'static/images/messegers/instagram.svg'
+import './index.scss'
 
 const colors = [
     '#d84315',

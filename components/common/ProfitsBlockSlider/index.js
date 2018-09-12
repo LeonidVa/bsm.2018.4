@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import Link from 'next/link';
 import Slider from "react-slick";
 import {isMobile} from 'react-device-detect';
-
+import "./index.scss"
 import '../slick.scss'
 
 const Block = (props) => {

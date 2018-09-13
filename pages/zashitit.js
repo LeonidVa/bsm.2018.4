@@ -3,7 +3,7 @@ import Title from 'components/common/Title';
 import Link from 'next/link';
 
 import FormOrder from 'components/common/forms/Big/Order';
-import FormEstimate from 'components/common/forms/Estimate';
+import FormEstimate from 'components/common/forms/Big/Estimate';
 import fields from 'components/config/form/main'
 
 

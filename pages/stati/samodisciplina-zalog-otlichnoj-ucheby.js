@@ -8,7 +8,7 @@ import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'components/config/dopraboty';
 
 import FormOrder from 'components/common/forms/Big/Order';
-import FormEstimate from 'components/common/forms/Estimate';
+import FormEstimate from 'components/common/forms/Big/Estimate';
 import fields from 'components/config/form/main';
 
 import InfoBlock from 'components/common/InfoBlock';

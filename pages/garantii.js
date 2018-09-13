@@ -8,7 +8,7 @@ import NavRow from 'components/common/NavRow';
 import ImageBlock from 'components/common/ImageBlock'
 import Accordion from 'components/common/Accordion'
 import FormOrder from 'components/common/forms/Big/Order';
-import FormEstimate from 'components/common/forms/Estimate';
+import FormEstimate from 'components/common/forms/Big/Estimate';
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 

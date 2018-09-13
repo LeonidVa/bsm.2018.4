@@ -23,8 +23,13 @@ class Wrapper extends Component {
             this.setState({callPopupState: {...this.state.callPopupState, isShown: true, question: true}})
         };
         this.state.callPopupState.hide = () => {
-            this.setState({callPopupState: {...this.state.callPopupState, isShown: false}})
+            this.setState({callPopupState: {...this.state.callPopupState, isShown: false, sent: false}})
         };
+        this.state.callPopupState.onSent = () => {
+            this.setState({callPopupState: {...this.state.callPopupState, sent: true}})
+        };
+
+
         this.state.exitPopupState.show = () => {
             this.setState({exitPopupState: {...this.state.exitPopupState, isShown: true}});
         };
@@ -54,7 +59,7 @@ class Wrapper extends Component {
         // Убираем все движения мыши которые старше 2х секунд
         let newData = [];
         let date = Date.now();
-        for(let positionInfo of this._data) {
+        for (let positionInfo of this._data) {
             if (date - positionInfo.date < 2000) {
                 newData.push(positionInfo);
             }
@@ -73,7 +78,7 @@ class Wrapper extends Component {
         // на выходе будет пустой массив
         let upsY = [];
         let prev = null;
-        for(let { y } of this._data) {
+        for (let {y} of this._data) {
             if (prev === null) {
                 prev = y;
             } else if (prev > y) {
@@ -110,8 +115,6 @@ class Wrapper extends Component {
     static getDerivedStateFromProps(nextProps, prevState) {
         return nextProps;
     }
-
-
 
 
     render() {

@@ -1,15 +1,12 @@
-import React, {Component, createContext} from 'react';
+import {Component, createContext} from 'react';
 import './style.scss';
-import axios from 'axios';
 import Close from '../Close';
-import triggerTarget from 'utils/analytics';
+import Form from './form'
 
 const callPopupState = {
-    phone: '',
-    name: '',
-    comment: '',
     question: false,
     isShown: false,
+    sent: false,
     show: () => {
     },
     hide: () => {
@@ -18,50 +15,15 @@ const callPopupState = {
 
 const callPopupContext = createContext(callPopupState);
 
-
+//
 class CallPopup extends Component {
 
     constructor(props) {
         super(props);
-        this.state = callPopupState
+        this.state = callPopupState;
+
     }
 
-
-    handleSubmit = async (e) => {
-        e.preventDefault();
-        const {name, phone, comment, question} = this.state;
-        /*        if (!this.state.verified) {
-                    window.alert('Пожалуйста, пройдите каптчу');
-                    return
-                }*/
-        let formData = new FormData();
-        formData.set('form', question ? 'Задать вопрос' : 'Заказать звонок');
-        formData.set('source', '2018.besmarter.ru');
-        formData.set('name', name);
-        formData.set('phone', phone);
-        formData.set('comment', comment);
-        formData.set('verified', true);
-        axios({
-            method: 'POST',
-            url: '/api/form_data',
-            data: formData,
-            config: {headers: {'Content-Type': 'multipart/form-data'}}
-        }).then(function (response) {
-            //handle success
-            console.log(response);
-        }).catch(function (response) {
-            //handle error
-            console.log(response);
-        });
-
-        const {targetID = "call_me_top"} = this.props;
-        triggerTarget(targetID);
-
-        /*        axios.post('http://localhost:3001/api/form_data', {name, phone, email, theme, worktype: worktype.value, discipline, deadline, size, comment, files, fileName, Extended, verified})
-                    .then(res => this.setState({formSended: {bool: true, number: res.data.id, error: false}}))
-                    .catch(err => this.setState({formSended: {bool: true, number: '', error: err}}))*/
-        return false;
-    };
 
     render() {
         return (
@@ -70,56 +32,29 @@ class CallPopup extends Component {
                     if (context.isShown === undefined || context.isShown === null || context.isShown === false) {
                         return null
                     }
-                    this.state.question = context.question;
                     console.log('call is rendering');
                     return (
                         <div className="modal__order-call"
                              style={{display: "block"}}
-                             onClick={() => {
-                                 context.hide()
-                             }}>
-                            <div className="block-form block-form2 modal-form modal__body" onClick={(e) => {
-                                e.stopPropagation();
-                            }}>
-                                <Close onClick={() => {
-                                    context.hide()
-                                }} inverse/>
+                             onClick={context.hide}>
+                            <div className="block-form block-form2 modal-form modal__body" onClick={(e) => e.stopPropagation()}>
+                                <Close onClick={context.hide} inverse/>
                                 <h2 className="block-form__title">{context.question ? 'Задать вопрос' : 'Заказать звонок'}</h2>
-                                <form className="block-form__form" onSubmit={this.handleSubmit}>
-                                    <div className="block-form__item">
-                                        <label htmlFor="form-name">Имя*</label>
-                                        <input type="text"
-                                               name=""
-                                               id="form-name"
-                                               placeholder="Ваше имя"
-                                               required
-                                               value={this.state.name}
-                                               onChange={(e) => this.setState({name: e.target.value})}
-                                        />
-                                    </div>
-                                    <div className="block-form__item">
-                                        <label htmlFor="form-phone">Телефон*</label>
-                                        <input type="text"
-                                               name=""
-                                               id="form-phone"
-                                               placeholder="Ваш телефон"
-                                               required
-                                               value={this.state.phone}
-                                               onChange={(e) => this.setState({phone: e.target.value})}/>
-                                    </div>
-                                    <div className="block-form__item textarea" style={{display: context.question ? 'block' : 'none'}}>
-                                        <label htmlFor="form-phone">Вопрос</label>
-                                        <textarea
-                                            type="textarea"
-                                            name=""
-                                            placeholder="Ваш вопрос"
-                                            value={this.state.comment}
-                                            onChange={(e) => this.setState({comment: e.target.value})}
-                                        />
-                                    </div>
-
-                                    <button type="submit" className="block-form__btn">Позвоните мне!</button>
-                                </form>
+                                <div className="block-form__message" style={{display: context.sent ? "block" : "none"}}>
+                                    <img width="100%" src={require("static/images/fox-logo.png")}/>
+                                    <br/>
+                                    <br/>
+                                    <h2 className="block-form__title">Спасибо!</h2>
+                                    <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
+                                </div>
+                                <div className="block-form__message" style={{display: context.sent ? "none" : "block"}}>
+                                    <Form
+                                        question={context.question}
+                                        targetID="call_me_top"
+                                        formType={context.question ? 'Вопрос' : 'Заказ обратного звонка'}
+                                        onSent={context.onSent}
+                                    />
+                                </div>
                             </div>
                         </div>
                     )

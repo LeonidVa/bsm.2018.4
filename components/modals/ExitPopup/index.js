@@ -27,7 +27,7 @@ class ExitPopup extends Component {
     }
 
     onSent() {
-        console.log('a popup sees that form was sent')
+        console.log('a popup sees that form was sent');
         this.setState({sent: true});
     }
 

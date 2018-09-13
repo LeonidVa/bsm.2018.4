@@ -127,7 +127,7 @@ const page = () => (
             </section>
 
             <section className="block-text">
-                <ul className="marker">
+                <ul className="marker-dot">
                     <li>
                         Есть идеи и наработки, но нет времени на написание?
                     </li>
@@ -139,7 +139,7 @@ const page = () => (
                     </li>
                 </ul>
                     <p className="block-text__par">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;защититесь!
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;защититесь!
                     </p>
             </section>
 

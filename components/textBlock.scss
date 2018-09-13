@@ -17,6 +17,15 @@
             margin-right: 10px;
         }
     }
+    ul.marker-dot {
+        li {
+            list-style-type: none;
+        }
+        li {
+            list-style-image: url("../static/images/marker.png");
+            margin-right: 10px;
+        }
+    }
 
     @media (max-width: 900px) {
         width: 70%;

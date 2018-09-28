@@ -64,7 +64,7 @@
             position: absolute;
         }
     }
-    .humburger-desc {
+    .humburger-desk {
         font-size: 1em;
         display: block;
         width: 2.5em;
@@ -334,7 +334,7 @@
 // HUMBURGER-MENU-DESKTOP
 
 
-.menu-desc {
+.menu-desk {
     position: absolute;
     width: 100%;
     background-color: #f5f5f5;
@@ -358,7 +358,7 @@
             width: 50%;
             border-right: none;
             margin-right: 0;
-            .menu-desc__lists .menu-desc__list {
+            .menu-desk__lists .menu-desk__list {
                 width: 50%;
                 &:first-child {
                     padding-right: 0.75em;

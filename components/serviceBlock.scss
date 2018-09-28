@@ -161,31 +161,56 @@
         }
         &-item {
             display: block;
-            padding: 1.75em .6em;
+            padding: 1.75em 0;
             text-decoration: none;
             color: #ffffff;
             cursor: pointer;
             transition: all .3s;
+            position: relative;
             &:nth-child(1) {
                 background-color: #fd704b;
+                z-index: 5;
+                .block-service__list-description {
+                    background-color: #fd704b;
+                }
             }
             &:nth-child(2) {
                 background-color: #ff5722;
+                z-index: 4;
+                .block-service__list-description {
+                    background-color: #ff5722;
+                }
             }
             &:nth-child(3) {
                 background-color: #f4511e;
+                z-index: 3;
+                .block-service__list-description {
+                    background-color: #f4511e;
+                }
             }
             &:nth-child(4) {
                 background-color: #e64a19;
+                z-index: 2;
+                .block-service__list-description {
+                    background-color: #e64a19;
+                }
             }
             &:nth-child(5) {
                 background-color: #d84315;
+                z-index: 1;
+                .block-service__list-description {
+                    background-color: #d84315;
+                }
             }
             &:hover {
                 transform: scale(1.04);
                 .block-service__list-title::after {
                     width: 100%;
                     left: 0;
+                }
+                .block-service__list-description {
+                    opacity: 1;
+
                 }
             }
             @media (max-width: 660px) {
@@ -198,7 +223,7 @@
                 -webkit-box-pack: justify;
                 -webkit-justify-content: space-between;
                 -ms-flex-pack: justify;
-                padding: .687em .6em;
+                padding: .687em 0;
             }
         }
         &-title {
@@ -222,6 +247,20 @@
         p {
             font-size: .6em;
             line-height: normal;
+            position: relative;
+            width: 100%;
+            .block-service__list-description {
+                display: block;
+                font-size: 0.6em;
+                text-align: left;
+                line-height: normal;
+                opacity: 0;
+                transition: all .3s;
+                position: absolute;
+                top: calc(100% + 8px);
+                left: 0;
+                padding: 0 1.8em 1.5em;
+            }
         }
     }
 }

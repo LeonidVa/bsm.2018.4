@@ -17,6 +17,9 @@
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
+        @media (max-width: 900px) {
+            height: 5em;
+        }
         @media (max-width: 660px) {
             flex-direction: column;
             -webkit-box-orient: vertical;
@@ -56,13 +59,46 @@
         display: none;
         cursor: pointer;
         margin: .66em 0 0;
-        @media (max-width: 900px) {
-            display: block;
-            margin-left: 0.5em;
-            position: relative;
-        }
         @media (max-width: 660px) {
+            display: block;
             position: absolute;
+        }
+    }
+    .humburger-desc {
+        font-size: 1em;
+        display: block;
+        width: 2.5em;
+        height: 1.45em;
+        position: relative;
+        cursor: pointer;
+        @media (max-width: 660px) {
+            display: none;
+        }
+        span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 0.25em;
+            background-color: #d84315;
+            top: 0;
+            left: 0;
+            transition: ease-in-out .25s;
+            &:nth-child(2) {
+                top: calc(50% - 0.125em);
+            }
+            &:last-child {
+                top: auto;
+                bottom: 0;
+            }
+        }
+        &.close {
+            span {
+                top: calc(50% - 0.125em);
+                transform: rotate(45deg);
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
         }
     }
     &__logo {
@@ -207,6 +243,7 @@
         text-decoration: none;
         position: relative;
         cursor: pointer;
+        margin-right: 3.11em;
         &::after {
             content: "";
             position: absolute;
@@ -293,3 +330,77 @@
     left: 50%;
 }
 
+
+// HUMBURGER-MENU-DESKTOP
+
+
+.menu-desc {
+    position: absolute;
+    width: 100%;
+    background-color: #f5f5f5;
+    top: 5em;
+    left: 0;
+    z-index: 4;
+    padding: 3.25em 0 5.125em;
+    display: none;
+    .inner {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+    }
+    &__item {
+        width: 25%;
+        border-right: 0.0625em solid #cfd8dc;
+        margin-right: 1em;
+        padding-right: 0.25em;
+        &:last-child {
+            width: 50%;
+            border-right: none;
+            margin-right: 0;
+            .menu-desc__lists .menu-desc__list {
+                width: 50%;
+                &:first-child {
+                    padding-right: 0.75em;
+                }
+            }
+        }
+    }
+    &__title {
+        display: block;
+        font-size: 1.125em;
+        color: #f4511e;
+        font-weight: bold;
+        margin-bottom: 1em;
+        line-height: normal;
+    }
+    &__lists {
+        margin-bottom: 2.125em;
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__list {
+        width: 100%;
+        &--item {
+            margin-bottom: 1em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &--link {
+            font-size: 1em;
+            color: #4a4a4a;
+            text-decoration: none;
+            line-height: normal;
+            &:hover {
+                color: #d84315;
+                text-decoration: underline;
+            }
+        }
+    }
+}

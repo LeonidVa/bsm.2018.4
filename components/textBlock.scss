@@ -214,3 +214,107 @@
         font-weight: 700;
     }
 }
+
+
+.block-quality {
+    width: 100%;
+    font-size: 2em;
+    background-color: #ffffff;
+    max-width: 30.94em;
+    margin: 1.56em auto 0;
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    @media (max-width: 768px) {
+        font-size: 1.8em;
+    }
+    @media (max-width: 660px) {
+        font-size: 2em;
+    }
+
+    .quality-list {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        &__link {
+            display: block;
+            padding: 1em 0.2em;
+            color: #4a4a4a;
+            text-decoration: none;
+            border: 0.1125em solid #fff;
+            transition: all .2s;
+            &:hover {
+                border: 0.1125em solid #cfd8dc;
+            }
+            @media (max-width: 480px) {
+                padding: 0.5em 0.2em;
+            }
+        }
+        &__item {
+            width: 25%;
+            border: 1px solid #cfd8dc;
+            border-right: none;
+            transition: all .2s;
+            &:nth-child(4),
+            &:last-child {
+                border-right: 1px solid #cfd8dc;
+            }
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                border-bottom: none;
+            }
+            @media (max-width: 660px) {
+                width: 50%;
+                &:nth-child(2),
+                &:nth-child(6) {
+                    border-right: 1px solid #cfd8dc;
+                }
+                &:nth-child(5),
+                &:nth-child(6) {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &__title-block {
+            display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            align-items: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            margin-bottom: 0.25em;
+            img {
+                display: block;
+                width: 1em;
+                margin-right: 0.5em;
+            }
+        }
+
+        &__title {
+            font-size: 0.5em;
+            line-height: normal;
+            font-weight: bold;
+        }
+
+        &__description {
+            font-size: 0.4375em;
+            line-height: 1.57;
+            @media (max-width: 480px) {
+                font-size: 0.35em;
+            }
+        }
+    }
+}
+
+
+                            
+                            

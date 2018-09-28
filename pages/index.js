@@ -323,6 +323,99 @@ const page = () => (
                 </ul>
             </section>
 
+            <section className="block-quality">
+                <ul className="quality-list">
+                    <li className="quality-list__item">
+                        <a href="#" className="quality-list__link">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item">
+                        <a href="#" className="quality-list__link">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item">
+                        <a href="#" className="quality-list__link">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item">
+                        <a href="#" className="quality-list__link">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item">
+                        <a href="#" className="quality-list__link">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item">
+                        <a href="#" className="quality-list__link">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item">
+                        <a href="#" className="quality-list__link">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item">
+                        <a href="#" className="quality-list__link">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
         </div>
     </Wrapper>
 );

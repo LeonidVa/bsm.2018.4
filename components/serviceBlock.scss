@@ -204,13 +204,17 @@
             }
             &:hover {
                 transform: scale(1.04);
+                padding: 1.75em 0 .75em;
                 .block-service__list-title::after {
                     width: 100%;
                     left: 0;
                 }
                 .block-service__list-description {
-                    opacity: 1;
-
+                    display: block;
+                    animation-name: test;
+                    animation-duration: .5s;
+                    animation-delay: .2s;
+                    animation-fill-mode: forwards; 
                 }
             }
             @media (max-width: 660px) {
@@ -249,20 +253,23 @@
             line-height: normal;
             position: relative;
             width: 100%;
-            .block-service__list-description {
-                display: block;
-                font-size: 0.6em;
-                text-align: left;
-                line-height: normal;
-                opacity: 0;
-                transition: all .3s;
-                position: absolute;
-                top: calc(100% + 8px);
-                left: 0;
-                padding: 0 1.8em 1.5em;
-            }
+        }
+        &-description {
+            font-size: 0.35em;
+            text-align: left;
+            line-height: normal;
+            opacity: 0;
+            padding: .7em 1.8em 0;
+            display: none;
         }
     }
+}
+
+
+@keyframes test {
+    0% { display: block; opacity: 0; }
+    10% { display: block; opacity: 0; }
+    100% { display: block; opacity: 1; }
 }
 
 

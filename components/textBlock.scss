@@ -240,7 +240,8 @@
         flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        &__link {
+        cursor: pointer;
+        &__inner {
             display: block;
             padding: 1em 0.2em;
             color: #4a4a4a;

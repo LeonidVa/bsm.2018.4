@@ -284,7 +284,7 @@ const page = () => (
             </section>
 
             <Video>
-                <iframe src="https://www.youtube.com/embed/XpYziQhuZaw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/XpYziQhuZaw" frameBorder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </Video>
 
             <a name="form" id="form"/>

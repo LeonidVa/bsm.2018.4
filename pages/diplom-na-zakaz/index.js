@@ -9,7 +9,7 @@ import dopy from 'components/config/dopraboty';
 
 import FormOrder from 'components/common/forms/Big/Order';
 import FormEstimate from 'components/common/forms/Big/Estimate';
-import fields from 'components/config/form/main';
+
 
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'components/config/infoBlock/diplom';

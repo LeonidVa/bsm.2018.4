@@ -11,9 +11,6 @@
     font-weight: bold;
     transition: all .5s;
     overflow-y: scroll;
-    &.open {
-        top: 0%;
-    }
     &__title {
         display: block;
         color: #333;

@@ -32,12 +32,24 @@ if (isClient) {
     }
 }
 
+function getIP(req) {
+    if (typeof req === "undefined"
+        || req === null
+        || req.connection === undefined
+        || req.connection === null
+        || req.connection.remoteAddress === undefined
+        || req.connection.remoteAddress === null
+    ) {
+        return false;
+    }
+    return req.connection.remoteAddress;
+}
 
 export default class Error extends React.Component {
     static getInitialProps({err, res, xhr, req}) {
 
-    console.log('req.headers');
-    console.log(req.headers);
+        console.log('req.headers');
+        console.log(req.headers);
         ////////////
 
         const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;
@@ -57,10 +69,13 @@ export default class Error extends React.Component {
             // rethrow to prevent the error view from displaying on initial client render
             throw err;
         }
+        const ip = getIP(req);
         if (!isClient) {
-            console.log('req.connection.remoteAddress');
-            console.log(req.connection.remoteAddress);
-            telega('Error ' + statusCode + ' on page ' + url + ' ip ' + req.connection.remoteAddress);
+            if (ip === "::1"
+                || ip === "::ffff:127.0.0.1") {
+            } else {
+                telega('Error ' + statusCode + ' on page ' + url + ' ip ' + req.connection.remoteAddress);
+            }
         }
         return {statusCode, url};
     }

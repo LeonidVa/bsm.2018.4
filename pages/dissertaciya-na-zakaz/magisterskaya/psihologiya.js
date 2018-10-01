@@ -245,7 +245,7 @@ const page = () => (
 
 
             <Video>
-                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239032&hash=e0751038dfbca771&hd=2" frameborder="0" allowfullscreen></iframe>
+                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239032&hash=e0751038dfbca771&hd=2" frameBorder="0" allowfullscreen></iframe>
             </Video>
 
             <a name="form" id="form"/>

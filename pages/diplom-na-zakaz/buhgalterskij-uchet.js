@@ -266,7 +266,7 @@ const page = () => (
             <FormOrder />
 
             <Video>
-                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameBorder="0" allowfullscreen></iframe>
             </Video>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>

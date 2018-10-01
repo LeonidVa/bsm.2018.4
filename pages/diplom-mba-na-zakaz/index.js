@@ -228,7 +228,7 @@ const page = () => (
             </section>
 
             <Video>
-                <iframe src="https://www.youtube.com/embed/mzDkG6XRKuc" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/mzDkG6XRKuc" frameBorder="0" allowfullscreen></iframe>
             </Video>
 
 

@@ -278,7 +278,7 @@ const page = () => (
             </section>
 
             <Video>
-                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2" frameborder="0" allowfullscreen></iframe>
+                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2" frameBorder="0" allowfullscreen></iframe>
             </Video>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
@@ -304,7 +304,7 @@ const page = () => (
             </section>
 
             <Video>
-                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameborder="0" allowfullscreen></iframe>
+                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameBorder="0" allowfullscreen></iframe>
             </Video>
 
             <a name="form" id="form"/>

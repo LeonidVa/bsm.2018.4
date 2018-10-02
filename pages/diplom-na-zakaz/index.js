@@ -70,28 +70,34 @@ const page = () => (
                     <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Дипломный проект</span>
-                            <p>от 21 000 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 21 000 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Магистерская диссертация</span>
-                            <p>от 23 000 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 23 000 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="/diplom-mba-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Диплом MBA</span>
-                            <p>от <b>25 000</b> руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от <b>25 000</b> руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                 </div>
@@ -114,37 +120,45 @@ const page = () => (
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 5 000 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 1 500 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">    
+                                <p>Во всех системах</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 200 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                 </div>
@@ -152,46 +166,56 @@ const page = () => (
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 2 000 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>Гибкие условия</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 1 200 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 350 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                     <Link href="">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
-                            <span className="block-service__list-description">
-                                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                            </span>
+                            <div className="block-service__list-text">
+                                <p>от 1 200 руб.</p>
+                                <span className="block-service__list-description">
+                                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                                </span>
+                            </div>
                         </a>
                     </Link>
                 </div>

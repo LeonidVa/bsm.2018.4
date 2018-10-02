@@ -6,7 +6,7 @@
     max-width: 30.94em;
     margin: 1.56em auto 0;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     @media (max-width: 900px) {
         max-width: 100%;
     }
@@ -168,54 +168,46 @@
             cursor: pointer;
             transition: all .3s;
             position: relative;
+            z-index: 1;
             &:nth-child(1) {
                 background-color: #fd704b;
-                z-index: 5;
                 .block-service__list-description {
                     background-color: #fd704b;
                 }
             }
             &:nth-child(2) {
                 background-color: #ff5722;
-                z-index: 4;
                 .block-service__list-description {
                     background-color: #ff5722;
                 }
             }
             &:nth-child(3) {
                 background-color: #f4511e;
-                z-index: 3;
                 .block-service__list-description {
                     background-color: #f4511e;
                 }
             }
             &:nth-child(4) {
                 background-color: #e64a19;
-                z-index: 2;
                 .block-service__list-description {
                     background-color: #e64a19;
                 }
             }
             &:nth-child(5) {
                 background-color: #d84315;
-                z-index: 1;
                 .block-service__list-description {
                     background-color: #d84315;
                 }
             }
             &:hover {
                 transform: scale(1.04);
-                padding: 1.75em 0 .75em;
+                z-index: 2;
                 .block-service__list-title::after {
                     width: 100%;
                     left: 0;
                 }
                 .block-service__list-description {
-                    display: block;
-                    animation-name: test;
-                    animation-duration: .5s;
-                    animation-delay: .2s;
-                    animation-fill-mode: forwards;
+                    opacity: 1;
                 }
             }
             @media (max-width: 660px) {
@@ -238,6 +230,7 @@
             color: #ffffff;
             text-decoration: none;
             position: relative;
+            max-width: 90%;
             &::after {
                 content: "";
                 position: absolute;
@@ -248,6 +241,9 @@
                 top: 100%;
                 transition: all .4s;
             }
+        }
+        &-text {
+            position: relative;
         }
         p {
             font-size: .6em;
@@ -260,17 +256,15 @@
             text-align: left;
             line-height: normal;
             opacity: 0;
-            padding: .7em 1.8em 0;
-            display: none;
+            padding: .7em 1.8em 4em;
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            transition: all .3s;
         }
     }
 }
 
-
-@keyframes test {
-    0% { display: block; opacity: 0; }
-    10% { display: block; opacity: 0; }
-    100% { display: block; opacity: 1; }
-}
 
 

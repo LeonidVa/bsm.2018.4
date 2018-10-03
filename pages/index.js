@@ -332,51 +332,51 @@ const page = () => (
                                 <span className="quality-list__title">Высокое качество</span>
                             </div>
                             <p className="quality-list__description">
-                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                                100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                             </p>
                         </div>
                     </li>
-                    <li className="quality-list__item">
+                    <li className="quality-list__item w50">
                         <div className="quality-list__inner">
                             <div className="quality-list__title-block">
                                 <img src="/static/images/slide-profits/6.svg" alt="" />
                                 <span className="quality-list__title">Высокое качество</span>
                             </div>
                             <p className="quality-list__description">
-                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                               50 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                             </p>
                         </div>
                     </li>
-                    <li className="quality-list__item">
+                    <li className="quality-list__item w50">
                         <div className="quality-list__inner">
                             <div className="quality-list__title-block">
                                 <img src="/static/images/slide-profits/6.svg" alt="" />
                                 <span className="quality-list__title">Высокое качество</span>
                             </div>
                             <p className="quality-list__description">
-                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                               50 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                             </p>
                         </div>
                     </li>
-                    <li className="quality-list__item">
+                    <li className="quality-list__item w33">
+                        <a className="quality-list__inner" href="ya.ru">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt="" />
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                               33 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item w66">
                         <div className="quality-list__inner">
                             <div className="quality-list__title-block">
                                 <img src="/static/images/slide-profits/6.svg" alt="" />
                                 <span className="quality-list__title">Высокое качество</span>
                             </div>
                             <p className="quality-list__description">
-                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
-                            </p>
-                        </div>
-                    </li>
-                    <li className="quality-list__item">
-                        <div className="quality-list__inner">
-                            <div className="quality-list__title-block">
-                                <img src="/static/images/slide-profits/6.svg" alt="" />
-                                <span className="quality-list__title">Высокое качество</span>
-                            </div>
-                            <p className="quality-list__description">
-                                Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                               66 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                             </p>
                         </div>
                     </li>

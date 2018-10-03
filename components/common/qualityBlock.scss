@@ -1,0 +1,102 @@
+.block-quality {
+    width: 100%;
+    font-size: 2em;
+    background-color: #ffffff;
+    max-width: 30.94em;
+    margin: 1.56em auto 0;
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    @media (max-width: 768px) {
+        font-size: 1.8em;
+    }
+    @media (max-width: 660px) {
+        font-size: 2em;
+    }
+
+    .quality-list {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        &__inner {
+            font-size: 1.2em;
+            display: block;
+            padding: 2em 1.5em;
+            color: #4a4a4a;
+            text-decoration: none;
+            @media (max-width: 660px) {
+                padding: 0.1em 0.75em;
+            }
+            @media (max-width: 480px) {
+                padding: 0.5em 0.2em;
+            }
+        }
+        &__item {
+            &.w33 { width: 33.33333333%; }
+            &.w66 { width: 66.66666666%; }
+            &.w50 { width: 50%; }
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #cfd8dc;
+            transition: all .2s;
+            &:hover {
+                box-shadow: inset 0px 0px 0px 0.2em #cfd8dc;
+                @media (max-width: 660px) {
+                    box-shadow: inset 0px 0px 0px 0.125em #cfd8dc;
+                }
+                @media (max-width: 480px) {
+                    box-shadow: inset 0px 0px 0px 0.075em #cfd8dc;
+                }
+            }
+            @media (max-width: 660px) {
+                width: 100%;
+                &.w33 { width: 100%; }
+                &.w66 { width: 100%; }
+                &.w50 { width: 50%; }
+                &:nth-child(2),
+                &:nth-child(6) {
+                    border-right: 1px solid #cfd8dc;
+                }
+                &:nth-child(5),
+                &:nth-child(6) {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &__title-block {
+            display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            align-items: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            margin-bottom: 0.25em;
+            img {
+                display: block;
+                width: 1em;
+                margin-right: 0.5em;
+            }
+        }
+
+        &__title {
+            font-size: 0.5em;
+            line-height: normal;
+            font-weight: bold;
+        }
+
+        &__description {
+            font-size: 0.4375em;
+            line-height: 1.57;
+            @media (max-width: 480px) {
+                font-size: 0.35em;
+            }
+        }
+    }
+}

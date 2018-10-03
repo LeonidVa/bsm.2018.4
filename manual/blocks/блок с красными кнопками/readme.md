@@ -13,6 +13,9 @@
 
 ![блок с красными кнопками и серым текстом image](./redbtnblock2.png)
 
+Пример с активированной кнопкой и текстом
+![блок с красными кнопками и серым текстом image](./redbtnblock3.png)
+
 ## Параметры
 Нет
 
@@ -31,6 +34,9 @@
         <p className="block-service__par">
             от 10 500 ₽<br/>
             от 10 дня
+            <span className="block-service__list-description">
+                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+            </span>
         </p>
     </div>
 </Link>
@@ -47,6 +53,9 @@
             <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
             <p className="block-service__par">От 4 000 руб.</p>
             <p className="block-service__par">Срочно от 2 часов</p>
+            <span className="block-service__list-description">
+                Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+            </span>
         </div>
     </div>
 </Link>
@@ -127,6 +136,9 @@
             <p className="block-service__par">
                 от 10 500 ₽<br/>
                 от 10 дня
+                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span>
             </p>
         </div>
     </Link>

@@ -25,7 +25,7 @@
                     <img src="/static/images/slide-profits/6.svg" alt="" />
                     <span className="quality-list__title">Высокое качество</span>
                 </div>
-                <p className="quality-list__description">
+                <p>
                     100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                 </p>
             </div>
@@ -36,7 +36,7 @@
                     <img src="/static/images/slide-profits/6.svg" alt="" />
                     <span className="quality-list__title">Высокое качество</span>
                 </div>
-                <p className="quality-list__description">
+                <p>
                    50 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                 </p>
             </div>
@@ -47,7 +47,7 @@
                     <img src="/static/images/slide-profits/6.svg" alt="" />
                     <span className="quality-list__title">Высокое качество</span>
                 </div>
-                <p className="quality-list__description">
+                <p>
                    50 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                 </p>
             </div>
@@ -58,7 +58,7 @@
                     <img src="/static/images/slide-profits/6.svg" alt="" />
                     <span className="quality-list__title">Высокое качество</span>
                 </div>
-                <p className="quality-list__description">
+                <p>
                    33 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                 </p>
             </a>
@@ -69,7 +69,7 @@
                     <img src="/static/images/slide-profits/6.svg" alt="" />
                     <span className="quality-list__title">Высокое качество</span>
                 </div>
-                <p className="quality-list__description">
+                <p>
                    66 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
                 </p>
             </div>

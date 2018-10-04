@@ -56,22 +56,91 @@ const page = () => (
                     <Link href="/razrabotka-diplomnogo-proekta">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Дипломный проект</span>
-                            <p>от 21 000 руб.</p>
+                            <p>от 21 000 руб.
+                                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span></p>
                         </a>
                     </Link>
                     <Link href="/dissertaciya-na-zakaz/magisterskaya">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Магистерская диссертация</span>
-                            <p>от 23 000 руб.</p>
+                            <p>от 23 000 руб.
+                                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span></p>
                         </a>
                     </Link>
                     <Link href="/diplom-mba-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Диплом MBA</span>
-                            <p>от <b>25 000</b> руб.</p>
+                            <p>от <b>25 000</b> руб.
+                                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span></p>
                         </a>
                     </Link>
                 </div>
+            </section>
+
+            <section className="block-quality">
+                <ul className="quality-list">
+                    <li className="quality-list__item">
+                        <div className="quality-list__inner">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt=""/>
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </div>
+                    </li>
+                    <li className="quality-list__item w50">
+                        <div className="quality-list__inner">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt=""/>
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                50 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </div>
+                    </li>
+                    <li className="quality-list__item w50">
+                        <div className="quality-list__inner">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt=""/>
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                50 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </div>
+                    </li>
+                    <li className="quality-list__item w33">
+                        <a className="quality-list__inner" href="ya.ru">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt=""/>
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                33 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </a>
+                    </li>
+                    <li className="quality-list__item w66">
+                        <div className="quality-list__inner">
+                            <div className="quality-list__title-block">
+                                <img src="/static/images/slide-profits/6.svg" alt=""/>
+                                <span className="quality-list__title">Высокое качество</span>
+                            </div>
+                            <p className="quality-list__description">
+                                66 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </section>
 
             <section className="block-service">
@@ -90,31 +159,46 @@ const page = () => (
                     <Link href="/zakazat-otchet-po-praktike">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Отчет по практике</span>
-                            <p>от 3 000 руб.</p>
+                            <p>от 3 000 руб.
+                                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span></p>
                         </a>
                     </Link>
                     <Link href="/referat-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Реферат</span>
-                            <p>от 1 500 руб.</p>
+                            <p>от 1 500 руб.
+                                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span></p>
                         </a>
                     </Link>
                     <Link href="/kontrolnaya-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Эссе Контрольная</span>
-                            <p>от 1 500 руб.</p>
+                            <p>от 1 500 руб.
+                                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span></p>
                         </a>
                     </Link>
                     <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Экзамены Тесты</span>
-                            <p>от 200 руб.</p>
+                            <p>от 200 руб.
+                                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span></p>
                         </a>
                     </Link>
                     <Link href="/kursovoj-proekt-na-zakaz">
                         <a className="block-service__list-item">
                             <span className="block-service__list-title">Курсовой проект</span>
-                            <p>от 8 000 руб.</p>
+                            <p>от 8 000 руб.
+                                <span className="block-service__list-description">
+                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
+                </span></p>
                         </a>
                     </Link>
                 </div>
@@ -172,10 +256,9 @@ const page = () => (
                 </p>
             </section>
 
-            <FormEstimate />
+            <FormEstimate/>
 
             <ImageBlock imageSrc={require('static/images/block/main2.jpg')}/>
-
 
             <section className="block-text">
                 <h1 className="block-text__title">
@@ -194,8 +277,6 @@ const page = () => (
                     Вы получаете оперативный ответ, вносите предоплату и наши авторы начинают написание студенческих работ сразу же.
                 </p>
             </section>
-
-
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -224,8 +305,7 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-            <CurrentOffer />
-
+            <CurrentOffer/>
 
             <section className="block-text">
                 <h2 className="block-text__title">
@@ -284,7 +364,7 @@ const page = () => (
             </section>
 
             <a name="form" id="form"/>
-            <FormOrder />
+            <FormOrder/>
 
             <section className="block-text">
                 <ul>

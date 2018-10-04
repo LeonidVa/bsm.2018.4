@@ -243,8 +243,6 @@ const page = () => (
 
             </section>
 
-
-
             <section className="block-text">
                 <h2 className="block-text__title">
                     Наша команда

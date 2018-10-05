@@ -219,7 +219,6 @@
       &:hover {
         transform: scale(1.04);
         z-index: 2;
-        box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
         .block-service__list-title::after {
           width: 100%;
           left: 0;
@@ -288,18 +287,17 @@
   color: #ffffff;
   text-align: center;
   position: relative;
-  padding: 15px;
+  // padding: 15px;
 }
 .b-item:hover .b-item__hovered {
   opacity: 1;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 .b-item__hovered {
   opacity: 0;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
   position: absolute;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 5px -5px #333, -5px 5px 5px -5px #333, 5px 5px 5px -5px #333;
   left: 0;
   width: inherit;
   height: inherit;
@@ -325,4 +323,21 @@
 .b-item__hovered-text {
   font-size: 11px;
   margin-top: 10px;
+}
+
+// ma shit
+.b-list-item {
+  padding: 0px 0px 56px;
+  &:hover {
+    box-shadow: none;
+    .b-item__content {
+      box-shadow: 0 -5px 5px -5px #333, 5px 0 5px -5px #333, -5px 0 5px -5px #333;
+    }
+  }
+  .b-item__content {
+    padding: 71px 15px 15px;
+  }
+  .b-item__hovered {
+    top: 161px;
+  }
 }

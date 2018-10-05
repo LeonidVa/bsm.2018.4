@@ -28,7 +28,6 @@ import MetaTags from "react-meta-tags";
 import ImageBlock from "../../components/common/ImageBlock";
 
 import CardPopInfo from "components/common/CardPopInfo";
-import { serviceBlocks } from "../../components/config/serviceBlocks";
 
 const page = () => (
   <Wrapper
@@ -141,19 +140,60 @@ const page = () => (
             </a>
           </Link>
           <div className="block-service__list list-4">
-            {serviceBlocks.map(block => (
-              <Link href={block.path}>
-                <a className="block-service__list-item">
-                  <CardPopInfo
-                    title={block.title}
-                    color={block.color}
-                    cost={block.cost}
-                    days={block.days}
-                    description={block.description}
-                  />
-                </a>
-              </Link>
-            ))}
+            <Link href="">
+              <a className="block-service__list-item b-list-item">
+                <CardPopInfo
+                  title="Кандидатская"
+                  color="#fd704b"
+                  cost="от 1 500 руб."
+                  days="от 1 дня"
+                  description={[
+                    <div>
+                      Что опаснее — груша или вакцина? Можно ли отравиться
+                      «органическим» рисом? А бывают ли «натуральные» вещества в
+                      принципе?
+                    </div>,
+                    <div>
+                      Что опаснее — груша или вакцина? Можно ли отравиться
+                      «органическим» рисом? А бывают ли «натуральные» вещества в
+                      принципе?
+                    </div>,
+                    <div>
+                      Что опаснее — груша или вакцина? Можно ли отравиться
+                      «органическим» рисом? А бывают ли «натуральные» вещества в
+                      принципе?
+                    </div>
+                  ]}
+                />
+              </a>
+            </Link>
+            <Link href="">
+              <a className="block-service__list-item b-list-item">
+                <CardPopInfo
+                  title="Доктарская"
+                  color="#ff5722"
+                  cost="от 1 500 руб."
+                  days="от 1 дня"
+                  description={[
+                    <div>
+                      Что опаснее — груша или вакцина? Можно ли отравиться
+                      «органическим» рисом? А бывают ли «натуральные» вещества в
+                      принципе?
+                    </div>,
+                    <div>
+                      Что опаснее — груша или вакцина? Можно ли отравиться
+                      «органическим» рисом? А бывают ли «натуральные» вещества в
+                      принципе?
+                    </div>,
+                    <div>
+                      Что опаснее — груша или вакцина? Можно ли отравиться
+                      «органическим» рисом? А бывают ли «натуральные» вещества в
+                      принципе?
+                    </div>
+                  ]}
+                />
+              </a>
+            </Link>
             <Link href="">
               <a className="block-service__list-item">
                 <span className="block-service__list-title">

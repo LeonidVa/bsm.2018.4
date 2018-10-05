@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import Wrapper from "components/Wrapper";
 
@@ -25,6 +26,9 @@ import links from "components/config/linksBlock/diplom";
 import Video from "components/common/VideoBlock";
 import MetaTags from "react-meta-tags";
 import ImageBlock from "../../components/common/ImageBlock";
+
+import CardPopInfo from "components/common/CardPopInfo";
+import { serviceBlocks } from "../../components/config/serviceBlocks";
 
 const page = () => (
   <Wrapper
@@ -137,42 +141,19 @@ const page = () => (
             </a>
           </Link>
           <div className="block-service__list list-4">
-            <Link href="">
-              <a className="block-service__list-item">
-                <div className="b-item">
-                  <div className="b-item__content">
-                    <div className="block-service__list-title">Кандидатская</div>
-                    <p>от 1 500 руб.</p>
-                    <p >от 1 дня</p>
-                  </div>
-                  <div className="b-item__hovered">
-                    <div className="b-item__hovered-text">
-                      Что опаснее — груша или вакцина? Можно ли отравиться
-                      «органическим» рисом? А бывают ли «натуральные» вещества в
-                      принципе?
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </Link>
-            <Link href="">
-              <a className="block-service__list-item">
-                <div className="b-item">
-                  <div className="b-item__content">
-                    <div className="block-service__list-title">Доктарская</div>
-                    <p>от 1 500 руб.</p>
-                    <p >от 1 дня</p>
-                  </div>
-                  <div className="b-item__hovered">
-                    <div className="b-item__hovered-text">
-                      Что опаснее — груша или вакцина? Можно ли отравиться
-                      «органическим» рисом? А бывают ли «натуральные» вещества в
-                      принципе?
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </Link>
+            {serviceBlocks.map(block => (
+              <Link href={block.path}>
+                <a className="block-service__list-item">
+                  <CardPopInfo
+                    title={block.title}
+                    color={block.color}
+                    cost={block.cost}
+                    days={block.days}
+                    description={block.description}
+                  />
+                </a>
+              </Link>
+            ))}
             <Link href="">
               <a className="block-service__list-item">
                 <span className="block-service__list-title">

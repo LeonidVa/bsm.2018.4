@@ -53,6 +53,7 @@
         }
     }
     &__list {
+        font-size: 0.85em;
         width: 100%;
         padding-right: 10px;
         &--item {
@@ -62,7 +63,6 @@
             }
         }
         &--link {
-            font-size: 1em;
             color: #4a4a4a;
             text-decoration: none;
             line-height: normal;

@@ -1,363 +1,393 @@
 .block-service {
-    background-color: red;
-    width: 100%;
-    font-size: 2em;
-    max-width: 30.94em;
-    margin: 1.56em auto 0;
-    position: relative;
+  background-color: red;
+  width: 100%;
+  font-size: 2em;
+  max-width: 30.94em;
+  margin: 1.56em auto 0;
+  position: relative;
+  @media (max-width: 900px) {
+    max-width: 100%;
+    font-size: 1.7em;
+  }
+  @media (max-width: 660px) {
+    font-size: 1.5em;
+  }
+  /********************* Upper part with big image *******************************************************************/
+  &__top {
+    min-height: 18rem;
+    height: auto;
+    display: block;
+    background-size: cover;
+    background-position: right top;
+    text-decoration: none;
+    color: #333333;
+    &.color-33 {
+      color: #333333;
+      .block-service__title::after {
+        background-color: #333333;
+      }
+    }
+    &.color-ff {
+      color: #ffffff;
+      .block-service__title::after {
+        background-color: #ffffff;
+      }
+    }
+    &.color-red {
+      color: #ff5722;
+      .block-service__title::after {
+        background-color: #ff5722;
+      }
+    }
+    &:hover {
+      transform: scale(1.03);
+      .block-service__title::after {
+        left: 0;
+        width: 100%;
+      }
+    }
     @media (max-width: 900px) {
-        max-width: 100%;
-        font-size: 1.7em;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: 77%;
     }
     @media (max-width: 660px) {
-        font-size: 1.5em;
+      background-position-x: 72%;
     }
-    /********************* Upper part with big image *******************************************************************/
-    &__top {
-        min-height: 18rem;
-        height: auto;
-        display: block;
-        background-size: cover;
-        background-position: right top;
-        text-decoration: none;
-        color: #333333;
-        &.color-33 {
-            color: #333333;
-            .block-service__title::after {
-                background-color: #333333;
-            }
-        }
-        &.color-ff {
-            color: #ffffff;
-            .block-service__title::after {
-                background-color: #ffffff;
-            }
-        }
-        &.color-red {
-            color: #ff5722;
-            .block-service__title::after {
-                background-color: #ff5722;
-            }
-        }
-        &:hover {
-            transform: scale(1.03);
-            .block-service__title::after {
-                left: 0;
-                width: 100%;
-            }
-        }
-        @media (max-width: 900px) {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position-x: 77%;
-        }
+  }
+  &__text {
+    padding: 1.56em 1.56em 0.75em;
+    @media (max-width: 660px) {
+      padding: 1.56em 0.56em 0.75em;
+      &.gradient-l-white {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.66),
+          rgba(255, 255, 255, 0.5),
+          transparent
+        );
+      }
+      &.gradient-l-black {
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.66),
+          rgba(0, 0, 0, 0.5),
+          transparent
+        );
+      }
+    }
+  }
+  &__title {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background-color: #333333;
+      left: 50%;
+      top: 100%;
+    }
+    @media (max-width: 660px) {
+      font-family: "Ubuntu", sans-serif;
+      font-weight: bold;
+    }
+  }
+  &__par {
+    font-size: 0.68em;
+    max-width: 17.09em;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+  /********************* Desktop red buttons *******************************************************************/
+  &__list {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    color: #ffffff;
+    text-align: center;
+    @media (max-width: 660px) {
+      display: block;
+    }
+    &.list-1 {
+      .block-service__list-item {
+        width: 100%;
+      }
+    }
+    &.list-2 {
+      .block-service__list-item {
+        width: 50%;
         @media (max-width: 660px) {
-            background-position-x: 72%;
+          width: 100%;
         }
+      }
     }
-    &__text {
-        padding: 1.56em 1.56em 0.75em;
+    &.list-35 {
+      .block-service__list-item {
+        width: 33.33%;
         @media (max-width: 660px) {
-            padding: 1.56em 0.56em 0.75em;
-            &.gradient-l-white {
-                background-image: linear-gradient(
-                                to right,
-                                rgba(255, 255, 255, 0.66),
-                                rgba(255, 255, 255, 0.5),
-                                transparent
-                );
-            }
-            &.gradient-l-black {
-                background-image: linear-gradient(
-                                to right,
-                                rgba(0, 0, 0, 0.66),
-                                rgba(0, 0, 0, 0.5),
-                                transparent
-                );
-            }
+          width: 100%;
         }
+      }
     }
-    &__title {
-        display: inline-block;
-        font-weight: bold;
-        text-decoration: none;
-        margin-bottom: 1rem;
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 1px;
-            background-color: #333333;
-            left: 50%;
-            top: 100%;
-        }
+    &.list-3 {
+      .block-service__list-item {
+        width: 33.33%;
         @media (max-width: 660px) {
-            font-family: "Ubuntu", sans-serif;
-            font-weight: bold;
+          width: 100%;
         }
+      }
     }
-    &__par {
-        font-size: 0.68em;
-        max-width: 17.09em;
-        line-height: normal;
-        margin-bottom: 1rem;
+    &.list-4 {
+      .block-service__list-item {
+        width: 25%;
+        @media (max-width: 660px) {
+          width: 100%;
+        }
+      }
+      .block-service__list-title {
+        @media (min-width: 661px) and (max-width: 780px) {
+          font-size: 0.6em;
+        }
+      }
     }
-    /********************* Desktop red buttons *******************************************************************/
-    &__list {
+    &.list-5 {
+      .block-service__list-item {
+        width: 20%;
+        @media (max-width: 660px) {
+          width: 100%;
+        }
+      }
+      .block-service__list-title {
+        @media (min-width: 801px) and (max-width: 1000px) {
+          font-size: 0.7em;
+        }
+        @media (min-width: 661px) and (max-width: 800px) {
+          font-size: 0.6em;
+        }
+      }
+    }
+    &-item {
+      display: block;
+      text-decoration: none;
+      color: #ffffff;
+      position: relative;
+      &:nth-child(1) {
+        background-color: #fd704b;
+        .block-service__list-description,
+        .b-item__hovered {
+          background-color: #fd704b;
+        }
+      }
+      &:nth-child(2) {
+        background-color: #ff5722;
+        .block-service__list-description,
+        .b-item__hovered {
+          background-color: #ff5722;
+        }
+      }
+      &:nth-child(3) {
+        background-color: #f4511e;
+        .block-service__list-description,
+        .b-item__hovered {
+          background-color: #f4511e;
+        }
+      }
+      &:nth-child(4) {
+        background-color: #e64a19;
+        .block-service__list-description,
+        .b-item__hovered {
+          background-color: #e64a19;
+        }
+      }
+      &:nth-child(5) {
+        background-color: #d84315;
+        .block-service__list-description,
+        .b-item__hovered {
+          background-color: #d84315;
+        }
+      }
+      &:hover {
+        transform: scale(1.04);
+        .block-service__list-title::after {
+          transition: all 0.3s ease-in-out;
+          width: 100%;
+          left: 0;
+        }
+        .block-service__list-description {
+          opacity: 1;
+        }
+      }
+      @media (max-width: 660px) {
         display: flex;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
-        color: #ffffff;
-        text-align: center;
-        @media (max-width: 660px) {
-            display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+      }
+      &.mobile {
+        padding: 0.5em 0.5em 1em;
+        .block-service__m-description {
+          max-height: 0;
+          overflow: hidden;
+          font-size: 0.75em;
+          transition: 1s;
         }
-        &.list-1 {
-            .block-service__list-item {
-                width: 100%;
-            }
+        &:hover .block-service__m-description {
+          max-height: 1000px;
+          transition: 1s;
         }
-        &.list-2 {
-            .block-service__list-item {
-                width: 50%;
-                @media (max-width: 660px) {
-                    width: 100%;
-                }
-            }
-        }
-        &.list-35 {
-            .block-service__list-item {
-                width: 33.33%;
-                @media (max-width: 660px) {
-                    width: 100%;
-                }
-            }
-        }
-        &.list-3 {
-            .block-service__list-item {
-                width: 33.33%;
-                @media (max-width: 660px) {
-                    width: 100%;
-                }
-            }
-        }
-        &.list-4 {
-            .block-service__list-item {
-                width: 25%;
-                @media (max-width: 660px) {
-                    width: 100%;
-                }
-            }
-            .block-service__list-title {
-                @media (min-width: 661px) and (max-width: 780px) {
-                    font-size: 0.6em;
-                }
-            }
-        }
-        &.list-5 {
-            .block-service__list-item {
-                width: 20%;
-                @media (max-width: 660px) {
-                    width: 100%;
-                }
-            }
-            .block-service__list-title {
-                @media (min-width: 801px) and (max-width: 1000px) {
-                    font-size: 0.7em;
-                }
-                @media (min-width: 661px) and (max-width: 800px) {
-                    font-size: 0.6em;
-                }
-            }
-        }
-        &-item {
-            display: block;
-            text-decoration: none;
-            color: #ffffff;
-            position: relative;
-            &:nth-child(1) {
-                background-color: #fd704b;
-                .block-service__list-description,
-                .b-item__hovered {
-                    background-color: #fd704b;
-                }
-            }
-            &:nth-child(2) {
-                background-color: #ff5722;
-                .block-service__list-description,
-                .b-item__hovered {
-                    background-color: #ff5722;
-                }
-            }
-            &:nth-child(3) {
-                background-color: #f4511e;
-                .block-service__list-description,
-                .b-item__hovered {
-                    background-color: #f4511e;
-                }
-            }
-            &:nth-child(4) {
-                background-color: #e64a19;
-                .block-service__list-description,
-                .b-item__hovered {
-                    background-color: #e64a19;
-                }
-            }
-            &:nth-child(5) {
-                background-color: #d84315;
-                .block-service__list-description,
-                .b-item__hovered {
-                    background-color: #d84315;
-                }
-            }
-            &:hover {
-                transform: scale(1.04);
-                .block-service__list-title::after {
-                    transition: all 0.3s ease-in-out;
-                    width: 100%;
-                    left: 0;
-                }
-                .block-service__list-description {
-                    opacity: 1;
-                }
-            }
-            @media (max-width: 660px) {
-                display: flex;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                flex-direction: column;
-                justify-content: space-between;
-                -webkit-box-pack: justify;
-                -webkit-justify-content: space-between;
-                -ms-flex-pack: justify;
-            }
-            &.mobile {
-                padding: 0.5em 0.5em 1em;
-                background: inherit;
-                .block-service__m-description {
-                    max-height: 0;
-                    overflow: hidden;
-                    font-size: 0.75em;
-                    transition: 1s;
-                    &-button {
-                        background-color: whitesmoke;
-                    }
-                }
-                &:hover .block-service__m-description {
-                    max-height: 1000px;
-                    transition: 1s;
-                }
-            }
-        }
-        &-title {
-            display: inline-block;
-            font-size: 0.75em;
-            margin-bottom: 0.5em;
-            color: #ffffff;
-            text-decoration: none;
-            position: relative;
-            max-width: 90%;
-            &::after {
-                content: "";
-                position: absolute;
-                width: 0;
-                height: 1px;
-                background-color: #ffffff;
-                left: 50%;
-                top: 100%;
-            }
-        }
-        &-text {
-            position: relative;
-        }
-        p {
-            font-size: 0.6em;
-            line-height: normal;
-            position: relative;
-            width: 100%;
-        }
-        &-description {
-            font-size: 0.35em;
-            text-align: left;
-            line-height: normal;
-            opacity: 0;
-            padding: 0.7em 1.8em 4em;
-            display: block;
-            position: absolute;
-            width: 100%;
-            top: 100%;
-        }
+      }
     }
-    /**************************** Desktop red buttons hover description  ************************************************************/
-    .b-item {
-        color: #ffffff;
-        text-align: center;
-        position: relative;
-        padding: 0 0 56px;
-    }
-    .b-list-item, .b-item__hovered { transition: all 0.33s ease-out; animation: z-out 1s; z-index: 0; }
-    .b-list-item:hover, .b-item__hovered:hover { transition: all 0.1s ease-out; animation: z-in 1s; z-index: 3; }
-    @keyframes z-in {
-        0% { z-index: 3; }
-    }
-    @keyframes z-out {
-        0% { z-index: 2; }
-        100% { z-index: 1; }
-    }
-    .b-item:hover .b-item__hovered {
-        opacity: 1;
-        animation: b-item-in 0.33s;
-    }
-    @keyframes b-item-in {
-        10% { opacity: 1; }
-    }
-    .b-item__hovered {
-        opacity: 0;
+    &-title {
+      display: inline-block;
+      font-size: 0.75em;
+      margin-bottom: 0.5em;
+      color: #ffffff;
+      text-decoration: none;
+      position: relative;
+      max-width: 90%;
+      &::after {
+        content: "";
         position: absolute;
-        box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
-        left: 0;
-        width: inherit;
-        height: inherit;
-        overflow-y: scroll;
+        width: 0;
+        height: 1px;
+        background-color: #ffffff;
+        left: 50%;
+        top: 100%;
+      }
     }
-    .b-item__hovered::-webkit-scrollbar {
-        width: 2px;
+    &-text {
+      position: relative;
     }
-    .b-item__hovered::-webkit-scrollbar-track {
-        width: 2px;
+    p {
+      font-size: 0.6em;
+      line-height: normal;
+      position: relative;
+      width: 100%;
     }
-    .b-item__hovered::-webkit-scrollbar-thumb {
-        width: 2px;
-        background: red;
+    &-description {
+      font-size: 0.35em;
+      text-align: left;
+      line-height: normal;
+      opacity: 0;
+      padding: 0.7em 1.8em 4em;
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+    }
+  }
+  /**************************** Desktop red buttons hover description  ************************************************************/
+  .b-item {
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding: 0 0 56px;
+  }
+  .b-list-item,
+  .b-item__hovered {
+    transition: all 0.33s ease-out;
+    animation: z-out 1s;
+    z-index: 0;
+  }
+  .b-list-item:hover,
+  .b-item__hovered:hover {
+    transition: all 0.1s ease-out;
+    animation: z-in 1s;
+    z-index: 3;
+  }
+  @keyframes z-in {
+    0% {
+      z-index: 3;
+    }
+  }
+  @keyframes z-out {
+    0% {
+      z-index: 2;
+    }
+    100% {
+      z-index: 1;
+    }
+  }
+  .b-item:hover .b-item__hovered {
+    opacity: 1;
+    animation: b-item-in 0.33s;
+  }
+  @keyframes b-item-in {
+    10% {
+      opacity: 1;
+    }
+  }
+  .b-item__hovered {
+    opacity: 0;
+    position: absolute;
+    box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
+    left: 0;
+    width: inherit;
+    height: inherit;
+    overflow-y: scroll;
+  }
+  .b-item__hovered::-webkit-scrollbar {
+    width: 2px;
+  }
+  .b-item__hovered::-webkit-scrollbar-track {
+    width: 2px;
+  }
+  .b-item__hovered::-webkit-scrollbar-thumb {
+    width: 2px;
+    background: red;
+  }
+  .b-item__content {
+    position: relative;
+  }
+  .b-item__hovered-text {
+    font-size: 0.5em;
+    margin-top: 10px;
+    padding: 0.5em 0.5em 1.5em;
+  }
+  // ma shit
+  .b-list-item {
+    &:hover {
+      box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.25),
+        0 0px 0px 0 rgba(0, 0, 0, 0.25), 0 0px 0px 0 rgba(0, 0, 0, 0.25);
+      .b-item__content {
+        box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25);
+      }
     }
     .b-item__content {
-        position: relative;
+      padding-top: 1.5em;
     }
-    .b-item__hovered-text {
-        font-size: 0.5em;
-        margin-top: 10px;
-        padding: 0.5em 0.5em 1.5em;
-    }
-    // ma shit
-    .b-list-item {
-        &:hover {
-            .b-item__content {
-                box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25);
-            }
-        }
-        .b-item__content {
-            padding-top: 1.5em;
-        }
-    }
-    .b-list-item .btn {
-        width: 100%;
-        height: 2em;
-        background-color: whitesmoke;
-    }
-    /****************************************************************************************/
-    .block-service__m-list-item {
-    }
+  }
+  .b-list-item .btn {
+    width: 100%;
+    height: 2em;
+    background-color: whitesmoke;
+  }
+  /****************************************************************************************/
+  .block-service__m-list-item {
+  }
+}
+
+.button-mobile {
+  padding-top: 15px;
+  background: none;
+  width: 100%;
+  border: none;
+  &:active,
+  &:focus {
+    outline: none ;
+  }
+  &::-moz-focus-inner {
+    border: 0 ;
+  }
 }

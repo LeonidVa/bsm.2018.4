@@ -1,5 +1,5 @@
 .block-service {
-  background-color: red;
+  background-color: #f4511e;
   width: 100%;
   font-size: 2em;
   max-width: 30.94em;
@@ -213,7 +213,9 @@
         }
       }
       &:hover {
-        transform: scale(1.04);
+        @media (min-width: 661px) {
+          transform: scale(1.04);
+        }
         .block-service__list-title::after {
           transition: all 0.3s ease-in-out;
           width: 100%;
@@ -283,40 +285,6 @@
       padding: 0 0 56px;
     }
   }
-  .b-list-item,
-  .b-item__hovered {
-    transition: all 0.33s ease-out;
-    animation: z-out 1s;
-    z-index: 0;
-  }
-  .b-list-item:hover,
-  .b-item__hovered:hover {
-    transition: all 0.1s ease-out;
-    animation: z-in 1s;
-    z-index: 3;
-  }
-  @keyframes z-in {
-    0% {
-      z-index: 3;
-    }
-  }
-  @keyframes z-out {
-    0% {
-      z-index: 2;
-    }
-    100% {
-      z-index: 1;
-    }
-  }
-  .b-item:hover .b-item__hovered {
-    opacity: 1;
-    animation: b-item-in 0.33s;
-  }
-  @keyframes b-item-in {
-    10% {
-      opacity: 1;
-    }
-  }
   .b-item__hovered {
     @media (max-width: 660px) {
       box-shadow: none;
@@ -324,12 +292,10 @@
     @media (min-width: 661px) {
       position: absolute;
     }
-    opacity: 0;
-    box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
     left: 0;
     width: inherit;
     height: inherit;
-    overflow-y: scroll;
+    overflow: hidden;
   }
   .b-item__hovered::-webkit-scrollbar {
     width: 2px;
@@ -347,7 +313,7 @@
   .b-item__hovered-text {
     font-size: 0.5em;
     margin-top: 10px;
-    padding: 0.5em 0.5em 1.5em;
+    padding: 0.5em;
     @media (max-width: 660px) {
       padding: 0 1em 1em;
       font-size: 0.66em;
@@ -355,54 +321,109 @@
   }
 
   .b-list-item {
-    @media (max-width: 660px) {
-      box-shadow: none;
-    }
-    &:hover {
-      @media (max-width: 660px) {
-        box-shadow: none;
-      }
-      box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.25),
-      0 0px 0px 0 rgba(0, 0, 0, 0.25), 0 0px 0px 0 rgba(0, 0, 0, 0.25);
-      .b-item__content {
-        @media (max-width: 660px) {
-          box-shadow: none;
-        }
-        box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25);
-      }
+    /*
+     upper and visible part of button. shadow must be animated with delay,
+     else it will be visible when description opacity is animated.
+     */
+    @keyframes shadow-delay {
+      0% { box-shadow: none; }
+      50% { box-shadow: 0 0 25px 0 rgba(51, 51, 51, 0.01); }
+      100% { box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25); }
     }
     .b-item__content {
-      padding-top: 1.5em;
       @media (max-width: 660px) {
         padding: 0.5em 0;
       }
+      @media (min-width: 661px) {
+        padding-top: 1.5em;
+        transition: all 1s ease;
+        animation: shadow-delay 1s;
+      }
     }
   }
-  .b-list-item .btn {
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* global .b-list-item styles */
+.b-list-item {
+  & .b-item__hovered-button-wrapper {
+    display: block;
     width: 100%;
-    height: 2em;
-    background-color: whitesmoke;
+    padding: 0.33em;
   }
-  /****************************************************************************************/
-  .block-service__m-list-item {
-  }
-}
-.button-mobile {
-  padding-top: 15px;
-  background: none;
-  width: 100%;
-  border: none;
-  &:active,
-  &:focus {
-    outline: none;
-  }
-  &::-moz-focus-inner {
-    border: 0;
+  & .b-item__hovered-button {
+    background-color: white;
+    width: 100%;
   }
 }
-.b-list-item .b-item__hovered {
-  max-height: 0px;
+/* mobile .b-list-item styles */
+@media (max-width: 660px) {
+  .b-list-item {
+    .b-item__hovered {
+      transition: all 0.33s cubic-bezier(0.65, 0.05, 0.36, 1);
+      max-height: 0;
+    }
+    &.open {
+      .b-item__hovered {
+        transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+        max-height: 30em;
+      }
+    }
+    & .b-item__hovered-button {
+      display: block;
+      padding: 0.5em 3em 0.7em;
+      font-size: 0.75em;
+    }
+  }
 }
-.b-list-item:hover .b-item__hovered {
-  max-height: 10000px;
+/* desktop .b-list-item styles */
+@media (min-width: 661px) {
+  .b-list-item {
+    z-index: 0;
+    animation: z-out 1s;
+    transition: all 0.15s ease-in;
+
+    & .b-item__hovered {
+      transition: all 0.33s ease-in;
+      max-height: 10px;
+
+      & * {
+        transition: all 0.33s ease-in;
+        opacity: 0;
+      }
+    }
+    & .b-item__hovered-button {
+      display: inline-block;
+      padding: 0.4em 0 0.5em;
+      font-size: 0.75em;
+    }
+    /* * hover * */
+    &:hover {
+      z-index: 3;
+      animation: z-in 1s;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
+
+      & .b-item__hovered {
+        transition: all 0.15s ease;
+        max-height: 30em;
+        box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
+
+        & * {
+          transition: all 0.15s ease;
+          opacity: 1;
+        }
+      }
+
+      & .b-item__content {
+        box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25);
+      }
+    }
+  }
+  @keyframes z-in {
+    0% { z-index: 3; }
+    100% { z-index: 3; }
+  }
+  @keyframes z-out {
+    0% { z-index: 2; }
+    100% { z-index: 2; }
+  }
 }

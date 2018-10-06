@@ -1,4 +1,5 @@
 .block-service {
+    background-color: red;
     width: 100%;
     font-size: 2em;
     max-width: 30.94em;
@@ -6,11 +7,12 @@
     position: relative;
     @media (max-width: 900px) {
         max-width: 100%;
+        font-size: 1.7em;
     }
     @media (max-width: 660px) {
-        font-size: 2em;
+        font-size: 1.5em;
     }
-
+    /********************* Upper part with big image *******************************************************************/
     &__top {
         min-height: 18rem;
         height: auto;
@@ -101,6 +103,7 @@
         line-height: normal;
         margin-bottom: 1rem;
     }
+    /********************* Desktop red buttons *******************************************************************/
     &__list {
         display: flex;
         display: -webkit-box;
@@ -171,7 +174,6 @@
         }
         &-item {
             display: block;
-            padding: 1.75em 0;
             text-decoration: none;
             color: #ffffff;
             position: relative;
@@ -185,28 +187,28 @@
             &:nth-child(2) {
                 background-color: #ff5722;
                 .block-service__list-description,
-                .b-item__hovered  {
+                .b-item__hovered {
                     background-color: #ff5722;
                 }
             }
             &:nth-child(3) {
                 background-color: #f4511e;
                 .block-service__list-description,
-                .b-item__hovered  {
+                .b-item__hovered {
                     background-color: #f4511e;
                 }
             }
             &:nth-child(4) {
                 background-color: #e64a19;
                 .block-service__list-description,
-                .b-item__hovered  {
+                .b-item__hovered {
                     background-color: #e64a19;
                 }
             }
             &:nth-child(5) {
                 background-color: #d84315;
                 .block-service__list-description,
-                .b-item__hovered  {
+                .b-item__hovered {
                     background-color: #d84315;
                 }
             }
@@ -231,7 +233,23 @@
                 -webkit-box-pack: justify;
                 -webkit-justify-content: space-between;
                 -ms-flex-pack: justify;
-                padding: 0.687em 0;
+            }
+            &.mobile {
+                padding: 0.5em 0.5em 1em;
+                background: inherit;
+                .block-service__m-description {
+                    max-height: 0;
+                    overflow: hidden;
+                    font-size: 0.75em;
+                    transition: 1s;
+                    &-button {
+                        background-color: whitesmoke;
+                    }
+                }
+                &:hover .block-service__m-description {
+                    max-height: 1000px;
+                    transition: 1s;
+                }
             }
         }
         &-title {
@@ -273,65 +291,73 @@
             top: 100%;
         }
     }
-}
-.b-item {
-    color: #ffffff;
-    text-align: center;
-    position: relative;
-}
-.b-list-item, .b-item__hovered { transition: all 0.33s ease-out; animation: z-out 1s; z-index: 0; }
-.b-list-item:hover, .b-item__hovered:hover { transition: all 0.1s ease-out; animation: z-in 1s; z-index: 3; }
-@keyframes z-in {
-    0% { z-index: 3; }
-}
-@keyframes z-out {
-    0% { z-index: 2; }
-    100% { z-index: 1; }
-}
-.b-item::after { height: 100%; width: 100%; background-color: blue; }
-.b-item:hover .b-item__hovered {
-    opacity: 1;
-    animation: b-item-in 0.33s;
-}
-@keyframes b-item-in {
-    10% { opacity: 1; }
-}
-.b-item__hovered {
-    opacity: 0;
-    position: absolute;
-    box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
-    left: 0;
-    width: inherit;
-    height: inherit;
-    padding: 10px;
-    overflow-y: scroll;
-}
-.b-item__hovered::-webkit-scrollbar {
-    width: 2px;
-}
-.b-item__hovered::-webkit-scrollbar-track {
-    width: 2px;
-}
-.b-item__hovered::-webkit-scrollbar-thumb {
-    width: 2px;
-    background: red;
-}
-.b-item__content {
-    position: relative;
-}
-.b-item__hovered-text {
-    font-size: 0.5em;
-    margin-top: 10px;
-}
-// ma shit
-.b-list-item {
-    padding: 0 0 56px;
-    &:hover {
-        .b-item__content {
-            box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25);
-        }
+    /**************************** Desktop red buttons hover description  ************************************************************/
+    .b-item {
+        color: #ffffff;
+        text-align: center;
+        position: relative;
+        padding: 0 0 56px;
+    }
+    .b-list-item, .b-item__hovered { transition: all 0.33s ease-out; animation: z-out 1s; z-index: 0; }
+    .b-list-item:hover, .b-item__hovered:hover { transition: all 0.1s ease-out; animation: z-in 1s; z-index: 3; }
+    @keyframes z-in {
+        0% { z-index: 3; }
+    }
+    @keyframes z-out {
+        0% { z-index: 2; }
+        100% { z-index: 1; }
+    }
+    .b-item:hover .b-item__hovered {
+        opacity: 1;
+        animation: b-item-in 0.33s;
+    }
+    @keyframes b-item-in {
+        10% { opacity: 1; }
+    }
+    .b-item__hovered {
+        opacity: 0;
+        position: absolute;
+        box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
+        left: 0;
+        width: inherit;
+        height: inherit;
+        overflow-y: scroll;
+    }
+    .b-item__hovered::-webkit-scrollbar {
+        width: 2px;
+    }
+    .b-item__hovered::-webkit-scrollbar-track {
+        width: 2px;
+    }
+    .b-item__hovered::-webkit-scrollbar-thumb {
+        width: 2px;
+        background: red;
     }
     .b-item__content {
-        padding-top: 1.5em;
+        position: relative;
+    }
+    .b-item__hovered-text {
+        font-size: 0.5em;
+        margin-top: 10px;
+        padding: 0.5em 0.5em 1.5em;
+    }
+    // ma shit
+    .b-list-item {
+        &:hover {
+            .b-item__content {
+                box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25);
+            }
+        }
+        .b-item__content {
+            padding-top: 1.5em;
+        }
+    }
+    .b-list-item .btn {
+        width: 100%;
+        height: 2em;
+        background-color: whitesmoke;
+    }
+    /****************************************************************************************/
+    .block-service__m-list-item {
     }
 }

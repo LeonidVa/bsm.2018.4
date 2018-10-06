@@ -157,8 +157,7 @@ const page = () => (
                 />
               </a>
             </Link>
-            <Link href="">
-              <a className="block-service__list-item b-list-item">
+              <span className="block-service__list-item b-list-item">
                 <CardPopInfo
                   title="Доктарская ажажажа ололо"
                   color="#ff5722"
@@ -167,7 +166,7 @@ const page = () => (
                   description={[
                     <div>
                       Что опаснее — груша или вакцина? Можно ли отравиться
-                      «органическим» рисом? А бывают ли «натуральные» вещества в
+                      «органическим» рисом? <a href="https://ya.ru">А бывают ли «натуральные» вещества</a> в
                       принципе?
                     </div>,
                     <div>
@@ -182,8 +181,7 @@ const page = () => (
                     </div>
                   ]}
                 />
-              </a>
-            </Link>
+              </span>
             <Link href="">
               <a className="block-service__list-item">
                 <span className="block-service__list-title">

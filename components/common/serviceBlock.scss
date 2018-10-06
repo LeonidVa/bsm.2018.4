@@ -1,5 +1,4 @@
 .block-service {
-    background-color: #fdd100;
     width: 100%;
     font-size: 2em;
     max-width: 30.94em;
@@ -19,7 +18,6 @@
         background-size: cover;
         background-position: right top;
         text-decoration: none;
-        cursor: pointer;
         color: #333333;
         &.color-33 {
             color: #333333;
@@ -129,7 +127,6 @@
         &.list-35 {
             .block-service__list-item {
                 width: 33.33%;
-                pointer-events: none;
                 @media (max-width: 660px) {
                     width: 100%;
                 }
@@ -177,35 +174,39 @@
             padding: 1.75em 0;
             text-decoration: none;
             color: #ffffff;
-            cursor: pointer;
             position: relative;
             &:nth-child(1) {
                 background-color: #fd704b;
-                .block-service__list-description {
+                .block-service__list-description,
+                .b-item__hovered {
                     background-color: #fd704b;
                 }
             }
             &:nth-child(2) {
                 background-color: #ff5722;
-                .block-service__list-description {
+                .block-service__list-description,
+                .b-item__hovered  {
                     background-color: #ff5722;
                 }
             }
             &:nth-child(3) {
                 background-color: #f4511e;
-                .block-service__list-description {
+                .block-service__list-description,
+                .b-item__hovered  {
                     background-color: #f4511e;
                 }
             }
             &:nth-child(4) {
                 background-color: #e64a19;
-                .block-service__list-description {
+                .block-service__list-description,
+                .b-item__hovered  {
                     background-color: #e64a19;
                 }
             }
             &:nth-child(5) {
                 background-color: #d84315;
-                .block-service__list-description {
+                .block-service__list-description,
+                .b-item__hovered  {
                     background-color: #d84315;
                 }
             }
@@ -303,7 +304,6 @@
     width: inherit;
     height: inherit;
     padding: 10px;
-    cursor: pointer;
     overflow-y: scroll;
 }
 .b-item__hovered::-webkit-scrollbar {
@@ -332,6 +332,6 @@
         }
     }
     .b-item__content {
-        padding: 71px 15px 15px;
+        padding-top: 1.5em;
     }
 }

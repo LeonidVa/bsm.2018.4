@@ -18,7 +18,6 @@ class CardPopInfo extends Component {
           <div className="block-service__list-title">{title}</div>
           {text}
         </div>
-
         <div className="b-item__hovered">
           <div className="b-item__hovered-text">{description}</div>
         </div>
@@ -59,9 +58,9 @@ class CardPopInfo extends Component {
 
   render() {
     const { title = "", text = "", url = "", description = [] } = this.props;
-    if (isMobile) {
-      return this.drawMobile(title, text, url, description);
-    }
+    // if (isMobile) {
+    //   return this.drawMobile(title, text, url, description);
+    // }
     return this.drawDesktop(title, text, url, description);
   }
 }

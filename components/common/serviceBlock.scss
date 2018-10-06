@@ -61,18 +61,18 @@
       padding: 1.56em 0.56em 0.75em;
       &.gradient-l-white {
         background-image: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0.66),
-          rgba(255, 255, 255, 0.5),
-          transparent
+                to right,
+                rgba(255, 255, 255, 0.66),
+                rgba(255, 255, 255, 0.5),
+                transparent
         );
       }
       &.gradient-l-black {
         background-image: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.66),
-          rgba(0, 0, 0, 0.5),
-          transparent
+                to right,
+                rgba(0, 0, 0, 0.66),
+                rgba(0, 0, 0, 0.5),
+                transparent
         );
       }
     }
@@ -234,19 +234,6 @@
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
       }
-      &.mobile {
-        padding: 0.5em 0.5em 1em;
-        .block-service__m-description {
-          max-height: 0;
-          overflow: hidden;
-          font-size: 0.75em;
-          transition: 1s;
-        }
-        &:hover .block-service__m-description {
-          max-height: 1000px;
-          transition: 1s;
-        }
-      }
     }
     &-title {
       display: inline-block;
@@ -292,7 +279,9 @@
     color: #ffffff;
     text-align: center;
     position: relative;
-    padding: 0 0 56px;
+    @media (min-width: 661px) {
+      padding: 0 0 56px;
+    }
   }
   .b-list-item,
   .b-item__hovered {
@@ -359,6 +348,10 @@
     font-size: 0.5em;
     margin-top: 10px;
     padding: 0.5em 0.5em 1.5em;
+    @media (max-width: 660px) {
+      padding: 0 1em 1em;
+      font-size: 0.66em;
+    }
   }
 
   .b-list-item {
@@ -370,7 +363,7 @@
         box-shadow: none;
       }
       box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.25),
-        0 0px 0px 0 rgba(0, 0, 0, 0.25), 0 0px 0px 0 rgba(0, 0, 0, 0.25);
+      0 0px 0px 0 rgba(0, 0, 0, 0.25), 0 0px 0px 0 rgba(0, 0, 0, 0.25);
       .b-item__content {
         @media (max-width: 660px) {
           box-shadow: none;
@@ -380,6 +373,9 @@
     }
     .b-item__content {
       padding-top: 1.5em;
+      @media (max-width: 660px) {
+        padding: 0.5em 0;
+      }
     }
   }
   .b-list-item .btn {
@@ -391,7 +387,6 @@
   .block-service__m-list-item {
   }
 }
-
 .button-mobile {
   padding-top: 15px;
   background: none;
@@ -404,4 +399,10 @@
   &::-moz-focus-inner {
     border: 0;
   }
+}
+.b-list-item .b-item__hovered {
+  max-height: 0px;
+}
+.b-list-item:hover .b-item__hovered {
+  max-height: 10000px;
 }

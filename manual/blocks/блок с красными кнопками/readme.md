@@ -71,7 +71,7 @@
 
 На мобильной версии текст наползает на картику и это затрудняет его прочтение.
 Для повышения читаемости  используется градиент, который задается классом
-`gradient-l-black` в элементе `<div className="block-service__text gradient-l-black">`.
+в элементе `<div className="block-service__text">`.
 На текущий момент поддерживаются два градиента:
 ```scss
 &.gradient-l-white { background-image: linear-gradient(to right, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.5), transparent); }

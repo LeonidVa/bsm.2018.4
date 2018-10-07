@@ -16,11 +16,14 @@
   &__top {
     min-height: 18rem;
     height: auto;
-    display: block;
+    display: flex;
+    position: relative;
+    z-index: 1;
     background-size: cover;
     background-position: right top;
     text-decoration: none;
     color: #333333;
+    transition: all 0.33s cubic-bezier(0, 1, 1, 1);
     &.color-33 {
       color: #333333;
       .block-service__title::after {
@@ -179,6 +182,9 @@
       position: relative;
       &:nth-child(1) {
         background-color: #fd704b;
+        @media (max-width: 660px) {
+          border-bottom: 1px solid #fc7553;
+        }
         .block-service__list-description,
         .b-item__hovered {
           background-color: #fd704b;
@@ -186,6 +192,10 @@
       }
       &:nth-child(2) {
         background-color: #ff5722;
+        @media (max-width: 660px) {
+          border-top: 1px solid #fc5420;
+          border-bottom: 1px solid #ff5c2b;
+        }
         .block-service__list-description,
         .b-item__hovered {
           background-color: #ff5722;
@@ -193,6 +203,10 @@
       }
       &:nth-child(3) {
         background-color: #f4511e;
+        @media (max-width: 660px) {
+          border-top: 1px solid #f24e1d;
+          border-bottom: 1px solid #f45524;
+        }
         .block-service__list-description,
         .b-item__hovered {
           background-color: #f4511e;
@@ -200,6 +214,10 @@
       }
       &:nth-child(4) {
         background-color: #e64a19;
+        @media (max-width: 660px) {
+          border-top: 1px solid #e24818;
+          border-bottom: 1px solid #e54e20;
+        }
         .block-service__list-description,
         .b-item__hovered {
           background-color: #e64a19;
@@ -207,6 +225,9 @@
       }
       &:nth-child(5) {
         background-color: #d84315;
+        @media (max-width: 660px) {
+          border-top: 1px solid #d64215;
+        }
         .block-service__list-description,
         .b-item__hovered {
           background-color: #d84315;
@@ -345,6 +366,7 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* global .b-list-item styles */
 .b-list-item {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   & .b-item__hovered-button-wrapper {
     display: block;
     width: 100%;
@@ -383,24 +405,32 @@
     transition: all 0.15s ease-in;
 
     & .b-item__hovered {
-      transition: all 0.33s ease-in;
+      /* transition: all 0.33s ease-in;
+      отвечает за разворачивание description.
+      Варианты:
+      - all, height+opacity - разворачиваться, но это не очень красиво;
+      - только opacity - не разворачиваться, а просто появляться; */
+      //transition: all 0.33s ease-in;
+      transition: opacity 0.33s ease-in;
       max-height: 10px;
 
       & * {
-        transition: all 0.33s ease-in;
+        //transition: all 0.33s ease-in;
         opacity: 0;
       }
     }
+
     & .b-item__hovered-button {
       display: inline-block;
       padding: 0.4em 0 0.5em;
       font-size: 0.75em;
     }
+
     /* * hover * */
     &:hover {
       z-index: 3;
       animation: z-in 1s;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
+      box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
 
       & .b-item__hovered {
         transition: all 0.15s ease;
@@ -412,16 +442,14 @@
           opacity: 1;
         }
       }
-
-      & .b-item__content {
-        box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25);
-      }
     }
   }
+
   @keyframes z-in {
     0% { z-index: 3; }
     100% { z-index: 3; }
   }
+
   @keyframes z-out {
     0% { z-index: 2; }
     100% { z-index: 2; }

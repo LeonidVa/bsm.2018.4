@@ -13,26 +13,33 @@ class CardPopInfo extends Component {
 
   render() {
     const {title = "", text = "", url = "", description = []} = this.props;
-    const el = (
-      <div className="b-item" onClick={this.handleClick}>
-        <div className="b-item__content">
-          <div className="block-service__list-title">{title}</div>
-          {text}
+    let btn = "";
+    if (url !== "") {
+      btn = (
+        <div className="b-item__hovered-button-wrapper">
+          <Link href={url}>
+            <a className="b-item__hovered-button">Кнопка</a>
+          </Link>
         </div>
-        <div className="b-item__hovered">
-          <div className="b-item__hovered-text">{description}</div>
-          <div className="b-item__hovered-button-wrapper"><a className="b-item__hovered-button" href="#">Кнопка</a></div>
-        </div>
-      </div>
-    );
-    let className = "block-service__list-item b-list-item" + (this.state.isOpen ? " open" : "");
-    if (url === "") {
-      return <div className={className}>{el}</div>;
+      );
+    }
+    let dsc = "";
+    if (description.length > 0) {
+      dsc = <div className="b-item__hovered-text">{description}</div>;
     }
     return (
-      <Link href={url}>
-        <a className={className}>{el}</a>
-      </Link>
+      <div className={"block-service__list-item b-list-item" + (this.state.isOpen ? " open" : "")}>
+        <div className="b-item" onClick={this.handleClick}>
+          <div className="b-item__content">
+            <div className="block-service__list-title">{title}</div>
+            {text}
+          </div>
+          <div className="b-item__hovered">
+            {dsc}
+            {btn}
+          </div>
+        </div>
+      </div>
     );
   }
 }

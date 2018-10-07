@@ -117,7 +117,7 @@ const page = () => (
             <section className="block-service">
                 <Link href="">
                     <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require("static/images/block/l.jpg") + ")"}}>
-                        <div className="block-service__text gradient-l-black">
+                        <div className="block-service__text">
                             <span className="block-service__title">Материалы для успешной защиты</span>
                             <p className="block-service__par">
                                 Не парься сам – доверься нам!
@@ -184,19 +184,12 @@ const page = () => (
                     <CardPopInfo
                         title="Ответы к защите"
                         text={[<p>от 200 руб.</p>]}
-                        description={[
-                            <div>
-                                Что опаснее — груша или вакцина? Можно ли отравиться
-                                «органическим» рисом? А бывают ли «натуральные» вещества в
-                                принципе?
-                            </div>
-                        ]}
                     />
                 </div>
                 <div className="block-service__list list-5">
                     <CardPopInfo
                         title="Мини-диплом Раскладка"
-                        text={[<p>от 2 000 руб.</p>]}
+                        text={[<p>от 2 000 руб.</p>,<p>от 2 000 руб.</p>,]}
                         description={[
                             <div>
                                 Что опаснее — груша или вакцина? Можно ли отравиться

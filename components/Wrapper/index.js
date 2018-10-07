@@ -1,4 +1,4 @@
-import React, {Component, createContext} from 'react';
+import React, {Component, createContext, Fragment} from 'react';
 import Head from 'next/head';
 
 import Header from 'components/Header';
@@ -121,7 +121,7 @@ class Wrapper extends Component {
         return (
             <callPopupContext.Provider value={this.state.callPopupState}>
                 <exitPopupContext.Provider value={this.state.exitPopupState}>
-                    <div>
+                    <Fragment>
                         <Head>
                             <title>{this.props.title}</title>
                             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -144,7 +144,7 @@ class Wrapper extends Component {
                                    text="При сумме заказа от 2 000 рублей"
                         />
                         <CallPopup/>
-                    </div>
+                    </Fragment>
                 </exitPopupContext.Provider>
             </callPopupContext.Provider>
         )

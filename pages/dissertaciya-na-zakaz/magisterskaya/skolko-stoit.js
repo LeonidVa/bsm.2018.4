@@ -25,252 +25,242 @@ import links from 'components/config/linksBlockConfig';
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
+import CardPopInfo from "components/common/CardPopInfo";
 
 
 const page = () => (
-    <Wrapper title="Сколько стоит магистерская диссертация – цена написания магистерской диссертации на заказ – от 24 000 руб. | «BeSmarter!». Тел. +7 (495) 772-40-90." description="Интересует, цена магистерской диссертации? Позвоните в компанию BeSmarter! и мы вам скажем сколько стоит магистерская диссертация | Тел. +7 (495) 772-40-90.">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+  <Wrapper title="Сколько стоит магистерская диссертация – цена написания магистерской диссертации на заказ – от 24 000 руб. | «BeSmarter!». Тел. +7 (495) 772-40-90."
+           description="Интересует, цена магистерской диссертации? Позвоните в компанию BeSmarter! и мы вам скажем сколько стоит магистерская диссертация | Тел. +7 (495) 772-40-90.">
+    <div className="wrapper bg bg-c2 bg-img bg-img2">
 
-            <MetaTags>
-                {/* <title></title> */}
-                <meta name="keywords" content="Сколько стоит магистерская диссертация на заказ стоимость написать цена" />
-            </MetaTags>
-            
-            <section className="breadcrumbs">
-                <div className="inner">
-                    <Link href="/">
-                        <a>Главная </a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="/dissertaciya-na-zakaz">
-                        <a>Диссертация</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a>Магистерская</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="#">
-                        <a>Стоимость</a>
-                    </Link>
-                </div>
-            </section>
+      <MetaTags>
+        {/* <title></title> */}
+        <meta name="keywords" content="Сколько стоит магистерская диссертация на заказ стоимость написать цена"/>
+      </MetaTags>
 
-            <section className="block-nav">
-                <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-            </section>
-            <MessBlock/>
-
-            <section className="block-service">
-                <Link href="#form">
-                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Магистерская диссертация</span>
-                            <p className="block-service__par">Быстро и качественно!</p>
-                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-                            <p className="block-service__par">От 23 000 руб.</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-35">
-                    <Link href="/dissertaciya-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Диссертация<br/>под ключ</span>
-                            <p>Берем заботы на себя</p>
-                        </a>
-                    </Link>
-                    <Link href="/diplom-mba-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Консультация автора</span>
-                            <p>Прямая связь</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Сопровождение<br/>до защиты</span>
-                            <p>Надежно, спокойно</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-
-
-
-            <section className="block-service__dis">
-            <section className="block-service">
-                <Link href="/dissertaciya-na-zakaz/doktorskaya">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Материалы для успешной защиты</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">Доступные цены</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-            </section>
-
-
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Сколько стоит магистерская диссертация
-                </h1>
-                <p className="block-text__par">
-                    Грамотно написанная и уверенно защищенная магистерская диссертация – цена получения первого значительного научного звания в карьере будущего ученого. Тем не менее, далеко не каждый студент обладает навыками и, главное – достаточным количеством свободного времени, чтобы выполнить данную работу.
-                </p>
-                <p className="block-text__par">
-                    Предлагаем заказать магистерскую диссертацию по доступной цене у опытных специалистов компании BeSmarter! Мы напишем работу в сжатые сроки и в полном соответствии со всеми вузовскими требованиями. Кроме того, вы получите квалифицированную поддержку вплоть до момента успешной защиты.
-                </p>
-            </section>
-
-            <FormEstimate />
-
-
-            <ImageBlock imageSrc={require('static/images/block/mag-ckolko.jpg')}/>
-
-
-
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Почему написать магистерскую диссертацию в BeSmarter  – надежно?
-                </h2>
-                <ul className="fitted">
-                    <li>
-                        Во-первых, мы гарантируем, что диссертацию будет писать действующий преподаватель вуза с кандидатской степенью в соответствующей научной сфере. Качество работы непрерывно проверяется нашим отделом контроля. В случае необходимости по вашему запросу автор вносит бесплатные правки.
-                    </li>
-                    <li>
-                        Во-вторых, компания BeSmarter! оказывает комплексную помощь при подготовке к защите. Наше сотрудничество не заканчивается вместе с последней главой диссертации. Мы продолжаем консультировать вас, помогаем подготовить доклад и презентацию, тренируем отвечать на вопросы комиссии и так далее.
-                    </li>
-                    <li>
-                        Наконец, компания придерживается политики прозрачного ценообразования, поэтому стоимость магистерской диссертации на заказ полностью соответствует трудоемкости и сложности конкретной работы. Кроме того, вы можете рассчитывать на скидки и гибкую систему оплаты.
-                    </li>
-                </ul>
-            </section>
-
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-            <CurrentOffer />
-
-
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    От чего зависит стоимость написания магистерской диссертации на заказ?
-                </h2>
-                <p className="block-text__par">
-                    Разумеется, этот вопрос волнует каждого. Ориентировочно узнать, сколько стоит написать магистерскую диссертацию на заказ, можно в соответствующем разделе нашего сайта. Точная цена будет определена во время общения с менеджером на основании следующих критериев.
-                </p>
-                <ul>
-                    <li>
-                        Шифр специальности. Написание работы по гуманитарным вопросам обычно обходится дешевле в сравнении с тем, сколько стоит магистерская диссертация по техническим дисциплинам.
-                    </li>
-                    <li>
-                        Сложность тематики. Если у вас есть возможность выбора, мы готовы помочь вам выбрать тему для написания магистерской диссертации на заказ, цена которой будет минимальной.
-                    </li>
-                    <li>
-                        Сроки сдачи. Оптимальное время, необходимое для написания работы – от 5 дней. Если же вам нужно за день-два написать магистерскую диссертацию, цена будет немного выше, поскольку нам придется привлечь несколько авторов.
-                    </li>
-                </ul>
-            </section>
-
-
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Как узнать сколько стоит магистерская диссертация на заказ?
-                </h2>
-                <p className="block-text__par">
-                    Выберите наиболее удобный для себя способ связи. Жители Москвы имеют возможность непосредственно посетить наш <b><Link href="/contacts"><a>офис</a></Link></b> по адресу Большой Кисловский переулок, д. 1 стр. 2, офис 211. А если вы живете в другом регионе России, заполните <b><a href="#form">онлайн-форму</a></b> на сайте или позвоните по одному из номеров: +7(495)772-40-90, +7(495)772-90-40.
-                </p>
-                <p className="block-text__par">
-                    После собеседования мы, заключим с вами официальный договор и зафиксируем в нем все важные моменты сотрудничества, в том числе стоимость написания магистерской диссертации. Далее согласованный с вами автор приступит к написанию магистерской диссертации, а вы сможете заниматься другими делами, не переживая за будущее своей научной карьеры!
-                </p>
-            </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
-            <Video>
-                <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239032&hash=e0751038dfbca771&hd=2"></iframe>
-            </Video>
-
-            <a name="form" id="form"/>
-            <FormOrder />
-
-
-
-            <LinksBlock links={
-                [
-                    { url: "/dissertaciya-na-zakaz/magisterskaya/gde-zakazat", text: "Где заказать магистерскую диссертацию" },
-                    { url: "/diplom-na-zakaz#form", text: "Дипломная работа срочно" },
-                ]
-            }/>
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная </a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz">
+            <a>Диссертация</a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz/magisterskaya">
+            <a>Магистерская</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>Стоимость</a>
+          </Link>
         </div>
-    </Wrapper>
+      </section>
+
+      <section className="block-nav">
+        <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
+      </section>
+      <MessBlock/>
+
+      <section className="block-service">
+        <Link href="#form">
+          <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
+            <div className="block-service__text gradient-l-white">
+              <span className="block-service__title">Магистерская диссертация</span>
+              <p className="block-service__par">Быстро и качественно!</p>
+              <p className="block-service__par">С нами твоя защита пройдет легко!</p>
+              <p className="block-service__par">От 23 000 руб.</p>
+              <p className="block-service__par">Срочно от 2 часов</p>
+            </div>
+          </a>
+        </Link>
+        <div className="block-service__list list-3">
+          <Link href="/dissertaciya-na-zakaz">
+            <a className="block-service__list-item">
+              <span className="block-service__list-title">Диссертация<br/>под ключ</span>
+              <p>Берем заботы на себя</p>
+            </a>
+          </Link>
+          <CardPopInfo
+            url="/diplom-mba-na-zakaz"
+            title="Консультация автора"
+            text={[<p>Прямая связь</p>]}
+          />
+
+          <Link href="/dissertaciya-na-zakaz/magisterskaya">
+            <a className="block-service__list-item">
+              <span className="block-service__list-title">Сопровождение<br/>до защиты</span>
+              <p>Надежно, спокойно</p>
+            </a>
+          </Link>
+        </div>
+      </section>
+
+      <section className="block-service__dis">
+        <section className="block-service">
+          <Link href="/dissertaciya-na-zakaz/doktorskaya">
+            <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+              <div className="block-service__text gradient-l-black">
+                <span className="block-service__title">Материалы для успешной защиты</span>
+                <p className="block-service__par">Не парься сам – доверься нам!</p>
+                <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+                <p className="block-service__par">Доступные цены</p>
+                <p className="block-service__par">Срочно от 2 часов</p>
+              </div>
+            </a>
+          </Link>
+          <div className="block-service__list list-4">
+            <CardPopInfo
+              url="/razrabotka-diplomnogo-proekta"
+              title="Пакет «Успешная Защита»"
+              text={[<p>от 5 000 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Доклад"
+              text={[<p>от 1 500 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Оригинальность текста"
+              text={[<p>Во всех системах</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Ответы к защите"
+              text={[<p>от 200 руб.</p>]}
+            />
+
+          </div>
+          <div className="block-service__list list-5">
+            <CardPopInfo
+              url="/razrabotka-diplomnogo-proekta"
+              title="Мини-диплом Раскладка"
+              text={[<p>от 2 000 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Получение по главам"
+              text={[<p>Гибкие условия</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Аннотация Отзыв Рецензия"
+              text={[<p>от 1 200 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Слайды"
+              text={[<p>от 350 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Распечатка Переплеты"
+              text={[<p>от 1 200 руб.</p>]}
+            />
+
+          </div>
+        </section>
+      </section>
+
+      <section className="block-text">
+        <h1 className="block-text__title">
+          Сколько стоит магистерская диссертация
+        </h1>
+        <p className="block-text__par">
+          Грамотно написанная и уверенно защищенная магистерская диссертация – цена получения первого значительного научного звания в карьере будущего ученого. Тем не менее, далеко не каждый студент обладает навыками и, главное – достаточным количеством свободного времени, чтобы выполнить данную работу.
+        </p>
+        <p className="block-text__par">
+          Предлагаем заказать магистерскую диссертацию по доступной цене у опытных специалистов компании BeSmarter! Мы напишем работу в сжатые сроки и в полном соответствии со всеми вузовскими требованиями. Кроме того, вы получите квалифицированную поддержку вплоть до момента успешной защиты.
+        </p>
+      </section>
+
+      <FormEstimate/>
+
+      <ImageBlock imageSrc={require('static/images/block/mag-ckolko.jpg')}/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Почему написать магистерскую диссертацию в BeSmarter – надежно?
+        </h2>
+        <ul className="fitted">
+          <li>
+            Во-первых, мы гарантируем, что диссертацию будет писать действующий преподаватель вуза с кандидатской степенью в соответствующей научной сфере. Качество работы непрерывно проверяется нашим отделом контроля. В случае необходимости по вашему запросу автор вносит бесплатные правки.
+          </li>
+          <li>
+            Во-вторых, компания BeSmarter! оказывает комплексную помощь при подготовке к защите. Наше сотрудничество не заканчивается вместе с последней главой диссертации. Мы продолжаем консультировать вас, помогаем подготовить доклад и презентацию, тренируем отвечать на вопросы комиссии и так далее.
+          </li>
+          <li>
+            Наконец, компания придерживается политики прозрачного ценообразования, поэтому стоимость магистерской диссертации на заказ полностью соответствует трудоемкости и сложности конкретной работы. Кроме того, вы можете рассчитывать на скидки и гибкую систему оплаты.
+          </li>
+        </ul>
+      </section>
+
+      <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+      <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+      <CurrentOffer/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          От чего зависит стоимость написания магистерской диссертации на заказ?
+        </h2>
+        <p className="block-text__par">
+          Разумеется, этот вопрос волнует каждого. Ориентировочно узнать, сколько стоит написать магистерскую диссертацию на заказ, можно в соответствующем разделе нашего сайта. Точная цена будет определена во время общения с менеджером на основании следующих критериев.
+        </p>
+        <ul>
+          <li>
+            Шифр специальности. Написание работы по гуманитарным вопросам обычно обходится дешевле в сравнении с тем, сколько стоит магистерская диссертация по техническим дисциплинам.
+          </li>
+          <li>
+            Сложность тематики. Если у вас есть возможность выбора, мы готовы помочь вам выбрать тему для написания магистерской диссертации на заказ, цена которой будет минимальной.
+          </li>
+          <li>
+            Сроки сдачи. Оптимальное время, необходимое для написания работы – от 5 дней. Если же вам нужно за день-два написать магистерскую диссертацию, цена будет немного выше, поскольку нам придется привлечь несколько авторов.
+          </li>
+        </ul>
+      </section>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Как узнать сколько стоит магистерская диссертация на заказ?
+        </h2>
+        <p className="block-text__par">
+          Выберите наиболее удобный для себя способ связи. Жители Москвы имеют возможность непосредственно посетить наш <b><Link href="/contacts"><a>офис</a></Link></b> по адресу Большой Кисловский переулок, д. 1 стр. 2, офис 211. А если вы живете в другом регионе России, заполните <b><a href="#form">онлайн-форму</a></b> на сайте
+          или позвоните по одному из номеров: +7(495)772-40-90, +7(495)772-90-40.
+        </p>
+        <p className="block-text__par">
+          После собеседования мы, заключим с вами официальный договор и зафиксируем в нем все важные моменты сотрудничества, в том числе стоимость написания магистерской диссертации. Далее согласованный с вами автор приступит к написанию магистерской диссертации, а вы сможете заниматься другими делами, не переживая за будущее своей
+          научной карьеры!
+        </p>
+      </section>
+
+      <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+      <Video>
+        <iframe src="//vk.com/video_ext.php?oid=372065572&id=456239032&hash=e0751038dfbca771&hd=2"></iframe>
+      </Video>
+
+      <a name="form" id="form"/>
+      <FormOrder/>
+
+      <LinksBlock links={
+        [
+          {url: "/dissertaciya-na-zakaz/magisterskaya/gde-zakazat", text: "Где заказать магистерскую диссертацию"},
+          {url: "/diplom-na-zakaz#form", text: "Дипломная работа срочно"},
+        ]
+      }/>
+    </div>
+  </Wrapper>
 );
 
 

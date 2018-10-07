@@ -22,280 +22,270 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
 import referat from 'components/config/linksBlock/referat'
 import ImageBlock from "../../components/common/ImageBlock";
-
+import CardPopInfo from "components/common/CardPopInfo";
 
 
 const page = () => (
-    <Wrapper title="Заказать реферат по философии в Москве и РФ – цены, сроки написания под ключ" description="Написание реферата по философии на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-        <div className="wrapper bg bg-c2 bg-img bg-img5">
+  <Wrapper title="Заказать реферат по философии в Москве и РФ – цены, сроки написания под ключ" description="Написание реферата по философии на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
+    <div className="wrapper bg bg-c2 bg-img bg-img5">
 
-            <section className="breadcrumbs">
-                <div className="inner">
-                    <Link href="/">
-                        <a>Главная</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="/referat-na-zakaz">
-                        <a>Реферат</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="#">
-                        <a>По философии</a>
-                    </Link>
-                </div>
-            </section>
-
-            <section className="block-nav">
-                <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-            </section>
-            <MessBlock/>
-
-
-
-            <section className="block-service">
-                <Link href="#form">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ref1.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Реферат</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 1 500 руб.</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-5">
-                    <Link href="/zakazat-otchet-po-praktike">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Отчет по практике</span>
-                            <p>от 3 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/kursovaya-rabota-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовая работа</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/kontrolnaya-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Эссе Контрольная</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Экзамены Тесты</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/kursovoj-proekt-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовой проект</span>
-                            <p>от 8 000 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-
-
-
-
-            <section className="block-service__dis">
-            <section className="block-service">
-                <Link href="/kursovaya-rabota-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Материалы для успешной защиты</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">Доступные цены</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-            </section>
-
-
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Реферат по философии на заказ
-                </h1>
-                <p className="block-text__par">
-                    Философия, прародительница всех современных наук, многим студентам кажется сложной для восприятия и запоминания. Для того чтобы выполнить реферат по философии, недостаточно подобрать первичные источники, скопировать из них определенные отрывки, увязать эти фрагменты с темой работы, выделить причинно-следственные связи и сформулировать выводы. Такая работа очень кропотливая, требует больших временных затрат и не всегда приносит нужный результат.
-                </p>
-                <p className="block-text__par">
-                    Свободного времени для написания реферата по философии может не оказаться по нескольким причинам:
-                </p>
-                <ul>
-                    <li>
-                        Болезнь
-                    </li>
-                    <li>
-                        Загруженность на основном месте работы (важно для заочников)
-                    </li>
-                    <li>
-                        Беременность и необходимость ухаживать за ребенком 
-                    </li>
-                    <li>
-                        Другие личные причины
-                    </li>
-                </ul>
-            </section>
-
-            <FormEstimate />
-
-            <ImageBlock imageSrc={require('static/images/block/ref-po-filos.jpg')}/>
-
-
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Воспользоваться помощью профессионалов – это просто и быстро!
-                </h2>
-                <p className="block-text__par">
-                    Один из вариантов решения проблемы – покупка уже готовой работы в сети интернет. Однако в таком случае соответствие содержания теме работы, ее уникальность и качество не гарантируется. Наиболее эффективный способ сдать реферат по философии в срок – заказать его подготовку в специализированной компании BeSmarter!
-                </p>
-                <p className="block-text__par">
-                    Преимуществами этого варианта являются:
-                </p>
-                <ul>
-                    <li>
-                        Уникальность работы
-                    </li>
-                    <li>
-                        Точное соответствие содержания теме
-                    </li>
-                    <li>
-                        Возможность написания работы по главам для периодических консультаций с научным руководителем
-                    </li>
-                </ul>
-                <p className="block-text__par">
-                    Алгоритм сотрудничества с нами выглядит следующим образом:
-                </p>
-                <ul>
-                    <li>
-                        Заказ работы, установление сроков выполнения
-                    </li>
-                    <li>
-                        Определение плана работы
-                    </li>
-                    <li>
-                        Внесение предоплаты
-                    </li>
-                    <li>
-                        Написание работы
-                    </li>
-                    <li>
-                        Контроль качества, полная оплата и сопровождение до защиты
-                    </li>
-                </ul>
-            </section>
-
-
-
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-            <CurrentOffer />
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    
-                </h2>
-                <p className="block-text__par">
-                    Заказать реферат по философии под ключ удобно в BeSmarter! – специалисты нашей компании окажут всю необходимую помощь. Стоимость написания зависит от нескольких критериев:
-                </p>
-                <ul>
-                    <li>
-                        Сроки сдачи
-                    </li>
-                    <li>
-                        Требуемый уровень уникальности
-                    </li>
-                    <li>
-                        Сложность темы
-                    </li>
-                    <li>
-                        Объем работы
-                    </li>
-                </ul>
-                <p className="block-text__par">
-                    Для того чтобы сэкономить и купить реферат по философии на выгодных условиях, необходимо поставить перед исполнителем конкретную задачу, четко сформулировать тему и, что самое главное – сделать заказ заранее.
-                </p>
-            </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
-            <ImageBlock imageSrc={require('static/images/block/ref-po-fil.jpg')}/>
-
-            <a name="form" id="form"/>
-            <FormOrder />
-
-            <LinksBlock links={referat}/>
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная</a>
+          </Link>
+          <span> / </span>
+          <Link href="/referat-na-zakaz">
+            <a>Реферат</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>По философии</a>
+          </Link>
         </div>
-    </Wrapper>
+      </section>
+
+      <section className="block-nav">
+        <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
+      </section>
+      <MessBlock/>
+
+      <section className="block-service">
+        <Link href="#form">
+          <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ref1.jpg') + ")",}}>
+            <div className="block-service__text gradient-l-black">
+              <span className="block-service__title">Реферат</span>
+              <p className="block-service__par">Не парься сам – доверься нам!</p>
+              <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+              <p className="block-service__par">От 1 500 руб.</p>
+              <p className="block-service__par">Срочно от 2 часов</p>
+            </div>
+          </a>
+        </Link>
+        <div className="block-service__list list-5">
+          <CardPopInfo
+            url="/zakazat-otchet-po-praktike"
+            title="Отчет по практике"
+            text={[<p>от 3 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kursovaya-rabota-na-zakaz"
+            title="Курсовая работа"
+            text={[<p>от 1 500 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kontrolnaya-na-zakaz"
+            title="Эссе Контрольная"
+            text={[<p>от 1 500 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/stati/kak-podgotovitsya-k-ekzamenu"
+            title="Экзамены Тесты"
+            text={[<p>от 200 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kursovoj-proekt-na-zakaz"
+            title="Курсовой проект"
+            text={[<p>от 8 000 руб.</p>]}
+          />
+
+        </div>
+      </section>
+
+      <section className="block-service__dis">
+        <section className="block-service">
+          <Link href="/kursovaya-rabota-na-zakaz">
+            <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+              <div className="block-service__text gradient-l-black">
+                <span className="block-service__title">Материалы для успешной защиты</span>
+                <p className="block-service__par">Не парься сам – доверься нам!</p>
+                <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+                <p className="block-service__par">Доступные цены</p>
+                <p className="block-service__par">Срочно от 2 часов</p>
+              </div>
+            </a>
+          </Link>
+          <div className="block-service__list list-4">
+            <CardPopInfo
+              url="/razrabotka-diplomnogo-proekta"
+              title="Пакет «Успешная Защита»"
+              text={[<p>от 5 000 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Доклад"
+              text={[<p>от 1 500 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Оригинальность текста"
+              text={[<p>Во всех системах</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Ответы к защите"
+              text={[<p>от 200 руб.</p>]}
+            />
+
+          </div>
+          <div className="block-service__list list-5">
+            <CardPopInfo
+              url="/razrabotka-diplomnogo-proekta"
+              title="Мини-диплом Раскладка"
+              text={[<p>от 2 000 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Получение по главам"
+              text={[<p>Гибкие условия</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Аннотация Отзыв Рецензия"
+              text={[<p>от 1 200 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Слайды"
+              text={[<p>от 350 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Распечатка Переплеты"
+              text={[<p>от 1 200 руб.</p>]}
+            />
+
+          </div>
+        </section>
+      </section>
+
+      <section className="block-text">
+        <h1 className="block-text__title">
+          Реферат по философии на заказ
+        </h1>
+        <p className="block-text__par">
+          Философия, прародительница всех современных наук, многим студентам кажется сложной для восприятия и запоминания. Для того чтобы выполнить реферат по философии, недостаточно подобрать первичные источники, скопировать из них определенные отрывки, увязать эти фрагменты с темой работы, выделить причинно-следственные связи и
+          сформулировать выводы. Такая работа очень кропотливая, требует больших временных затрат и не всегда приносит нужный результат.
+        </p>
+        <p className="block-text__par">
+          Свободного времени для написания реферата по философии может не оказаться по нескольким причинам:
+        </p>
+        <ul>
+          <li>
+            Болезнь
+          </li>
+          <li>
+            Загруженность на основном месте работы (важно для заочников)
+          </li>
+          <li>
+            Беременность и необходимость ухаживать за ребенком
+          </li>
+          <li>
+            Другие личные причины
+          </li>
+        </ul>
+      </section>
+
+      <FormEstimate/>
+
+      <ImageBlock imageSrc={require('static/images/block/ref-po-filos.jpg')}/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Воспользоваться помощью профессионалов – это просто и быстро!
+        </h2>
+        <p className="block-text__par">
+          Один из вариантов решения проблемы – покупка уже готовой работы в сети интернет. Однако в таком случае соответствие содержания теме работы, ее уникальность и качество не гарантируется. Наиболее эффективный способ сдать реферат по философии в срок – заказать его подготовку в специализированной компании BeSmarter!
+        </p>
+        <p className="block-text__par">
+          Преимуществами этого варианта являются:
+        </p>
+        <ul>
+          <li>
+            Уникальность работы
+          </li>
+          <li>
+            Точное соответствие содержания теме
+          </li>
+          <li>
+            Возможность написания работы по главам для периодических консультаций с научным руководителем
+          </li>
+        </ul>
+        <p className="block-text__par">
+          Алгоритм сотрудничества с нами выглядит следующим образом:
+        </p>
+        <ul>
+          <li>
+            Заказ работы, установление сроков выполнения
+          </li>
+          <li>
+            Определение плана работы
+          </li>
+          <li>
+            Внесение предоплаты
+          </li>
+          <li>
+            Написание работы
+          </li>
+          <li>
+            Контроль качества, полная оплата и сопровождение до защиты
+          </li>
+        </ul>
+      </section>
+
+      <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+      <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+      <CurrentOffer/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+
+        </h2>
+        <p className="block-text__par">
+          Заказать реферат по философии под ключ удобно в BeSmarter! – специалисты нашей компании окажут всю необходимую помощь. Стоимость написания зависит от нескольких критериев:
+        </p>
+        <ul>
+          <li>
+            Сроки сдачи
+          </li>
+          <li>
+            Требуемый уровень уникальности
+          </li>
+          <li>
+            Сложность темы
+          </li>
+          <li>
+            Объем работы
+          </li>
+        </ul>
+        <p className="block-text__par">
+          Для того чтобы сэкономить и купить реферат по философии на выгодных условиях, необходимо поставить перед исполнителем конкретную задачу, четко сформулировать тему и, что самое главное – сделать заказ заранее.
+        </p>
+      </section>
+
+      <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+      <ImageBlock imageSrc={require('static/images/block/ref-po-fil.jpg')}/>
+
+      <a name="form" id="form"/>
+      <FormOrder/>
+
+      <LinksBlock links={referat}/>
+    </div>
+  </Wrapper>
 );
 
 

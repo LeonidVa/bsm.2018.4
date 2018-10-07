@@ -160,53 +160,53 @@ const page = () => (
             </a>
           </Link>
           <div className="block-service__list list-4">
-            <Link href="/razrabotka-diplomnogo-proekta">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Монография</span>
-              </a>
-            </Link>
-            <Link href="/dissertaciya-na-zakaz/magisterskaya">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Автореферат</span>
-              </a>
-            </Link>
-            <Link href="/dissertaciya-na-zakaz/magisterskaya">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Оригинальность текста до 98%</span>
-              </a>
-            </Link>
-            <Link href="/dissertaciya-na-zakaz/magisterskaya">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Получение по главам</span>
-              </a>
-            </Link>
+            <CardPopInfo
+              url="/razrabotka-diplomnogo-proekta"
+              title="Монография"
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Автореферат"
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Оригинальность текста до 98%"
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Получение по главам"
+            />
+
           </div>
           <div className="block-service__list list-5">
-            <Link href="/dissertaciya-na-zakaz/magisterskaya">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Ответы к защите</span>
-              </a>
-            </Link>
-            <Link href="/razrabotka-diplomnogo-proekta">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Доклад Слайды</span>
-              </a>
-            </Link>
-            <Link href="/dissertaciya-na-zakaz/magisterskaya">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-              </a>
-            </Link>
-            <Link href="/dissertaciya-na-zakaz/magisterskaya">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Плакаты к защите</span>
-              </a>
-            </Link>
-            <Link href="/dissertaciya-na-zakaz/magisterskaya">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Распечатка Переплеты</span>
-              </a>
-            </Link>
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Ответы к защите"
+            />
+
+            <CardPopInfo
+              url="/razrabotka-diplomnogo-proekta"
+              title="Доклад Слайды"
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Аннотация Отзыв Рецензия"
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Плакаты к защите"
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Распечатка Переплеты"
+            />
+
           </div>
         </section>
       </section>

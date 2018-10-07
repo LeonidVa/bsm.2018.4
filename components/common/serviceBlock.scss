@@ -14,7 +14,6 @@
     height: auto;
     display: flex;
     position: relative;
-    z-index: 3;
     background-size: cover;
     background-position: right top;
     text-decoration: none;
@@ -39,6 +38,7 @@
       }
     }
     &:hover {
+      z-index: 3;
       transform: scale(1.03);
       .block-service__title::after {
         left: 0;
@@ -258,11 +258,10 @@
     &-title {
       display: block;
       font-size: 1.5rem;
-      margin-bottom: 1rem;
       color: #ffffff;
       text-decoration: none;
       position: relative;
-      margin: 0 1rem 1rem;
+      margin-bottom: .75em;
       &::after {
         content: "";
         position: absolute;
@@ -293,7 +292,7 @@
     text-align: center;
     position: relative;
     @media (min-width: 661px) {
-      padding: 0 0 56px;
+      min-height: 10rem;
     }
     &-content {
       p {
@@ -323,9 +322,6 @@
     width: 2px;
     background: red;
   }
-  .b-item__content {
-    position: relative;
-  }
   .b-item__hovered-text {
     margin-top: 1rem;
     padding: 1rem;
@@ -340,11 +336,12 @@
      else it will be visible when description opacity is animated.
      */
     .b-item__content {
+      position: relative;
       @media (max-width: 660px) {
         padding: 0.5em 0;
       }
       @media (min-width: 661px) {
-        padding-top: 1.5em;
+        padding: 3em 2em;
         transition: all 0.5s cubic-bezier(0, 1, 1, 1);
       }
     }
@@ -402,7 +399,7 @@
       - all, height+opacity - разворачиваться, но это не очень красиво;
       - только opacity - не разворачиваться, а просто появляться; */
       transition: opacity 0.33s cubic-bezier(0, 1, 1, 1);
-      max-height: 10px;
+      max-height: 0;
 
       & * {
         opacity: 0;
@@ -423,6 +420,7 @@
       & .b-item__hovered {
         transition: all 0.15s cubic-bezier(0, 1, 1, 1);
         max-height: 50em;
+        width: 100%;
         box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
 
         & * {

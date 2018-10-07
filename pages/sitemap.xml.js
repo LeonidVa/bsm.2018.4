@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default class extends React.Component {
-    static async getInitialProps ({ res }) {
-        if (!res) return {};
-        res.setHeader('Content-Type', 'application/javascript');
-        res.end(`<?xml version="1.0" encoding="UTF-8"?>
+  static async getInitialProps({res}) {
+    if (!res) return {};
+    res.setHeader('Content-Type', 'application/javascript');
+    res.end(`<?xml version="1.0" encoding="UTF-8"?>
 <!--	created with www.mysitemapgenerator.com	-->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
@@ -443,10 +443,10 @@ export default class extends React.Component {
         <priority>0.8</priority>
     </url>
 </urlset>`, 'utf8');
-        return {}
-    }
+    return {}
+  }
 
-    render () {
-        return null
-    }
+  render() {
+    return null
+  }
 }

@@ -87,22 +87,18 @@ const page = () => (
           </a>
         </Link>
         <div className="block-service__list list-3">
-          <Link href="/razrabotka-diplomnogo-proekta">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">
-                Дипломный проект
-              </span>
-              <p>от 21 000 руб.</p>
-            </a>
-          </Link>
-          <Link href="/dissertaciya-na-zakaz/magisterskaya">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">
-                Магистерская диссертация
-              </span>
-              <p>от 23 000 руб.</p>
-            </a>
-          </Link>
+          <CardPopInfo
+            url="/razrabotka-diplomnogo-proekta"
+            title="Дипломный проект"
+            text={[<p>от 21 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/dissertaciya-na-zakaz/magisterskaya"
+            title="Магистерская диссертация"
+            text={[<p>от 23 000 руб.</p>]}
+          />
+
           <Link href="/diplom-mba-na-zakaz">
             <a className="block-service__list-item">
               <span className="block-service__list-title">Диплом MBA</span>
@@ -187,6 +183,11 @@ const page = () => (
           />
         </div>
         <div className="block-service__list list-5">
+          <CardPopInfo
+            url="$2"
+            title="$3"
+            text={[<p>$4</p>]}
+          />
           <CardPopInfo
             title="Мини-диплом Раскладка"
             text={[<p>от 2 000 руб.</p>, <p>от 2 000 руб.</p>,]}

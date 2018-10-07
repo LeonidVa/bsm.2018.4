@@ -24,291 +24,278 @@ import referatLinks from 'components/config/linksBlock/referat'
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
+import CardPopInfo from "components/common/CardPopInfo";
 
 
 const page = () => (
-    <Wrapper title="Сколько стоит заказать реферат – стоимость реферата на заказ в компании «BeSmarter!» - 1 500 рублей, закажите реферат сейчас - тел. +7 (495) 772-40-90." description="Хотите узнать, сколько стоит заказать реферат в Москве? Звоните в компанию BeSmarter! и мы вам скажем сколько стоит написать реферат | Звоните: +7 (495) 772-40-90.">
-        <div className="wrapper bg bg-c2 bg-img bg-img5">
+  <Wrapper title="Сколько стоит заказать реферат – стоимость реферата на заказ в компании «BeSmarter!» - 1 500 рублей, закажите реферат сейчас - тел. +7 (495) 772-40-90."
+           description="Хотите узнать, сколько стоит заказать реферат в Москве? Звоните в компанию BeSmarter! и мы вам скажем сколько стоит написать реферат | Звоните: +7 (495) 772-40-90.">
+    <div className="wrapper bg bg-c2 bg-img bg-img5">
 
-            <MetaTags>
-                {/* <title></title> */}
-                <meta name="keywords" content="сколько стоит написать заказать реферат на заказ цена напсиание купить сделать стоимость" />
-            </MetaTags>
-            
-            <section className="breadcrumbs">
-                <div className="inner">
-                    <Link href="/">
-                        <a>Главная</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="/referat-na-zakaz">
-                        <a>Реферат</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="#">
-                        <a>Стоимость</a>
-                    </Link>
-                </div>
-            </section>
+      <MetaTags>
+        {/* <title></title> */}
+        <meta name="keywords" content="сколько стоит написать заказать реферат на заказ цена напсиание купить сделать стоимость"/>
+      </MetaTags>
 
-            <section className="block-nav">
-                <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-            </section>
-            <MessBlock/>
-
-
-
-            <section className="block-service">
-                <Link href="#form">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ref1.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Реферат</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 1 500 руб.</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-5">
-                    <Link href="/zakazat-otchet-po-praktike">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Отчет по практике</span>
-                            <p>от 3 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/kursovaya-rabota-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовая работа</span>
-                            <p>от 4 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/kontrolnaya-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Эссе Контрольная</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Экзамены Тесты</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/kursovoj-proekt-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Курсовой проект</span>
-                            <p>от 8 000 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-
-
-
-
-            <section className="block-service__dis">
-            <section className="block-service">
-                <Link href="/kursovaya-rabota-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Материалы для успешной защиты</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">Доступные цены</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-            </section>
-
-
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Сколько стоит заказать реферат
-                </h1>
-                <p className="block-text__par">
-                    Выяснить, сколько стоит заказать реферат в компании «BeSmarter!», можно с помощью нашего <Link href="/price"><a>прайс-листа</a></Link>. Ориентировочный диапазон цен составляет от 1 500 до <br/>7 000 рублей.
-                </p>
-                <p className="block-text__par">
-                    Чтобы узнать точно, сколько стоит написать реферат, заданную именно вам, понадобится собеседование. Мы определим ее цену на основании следующих факторов.
-                </p>
-                <ul>
-                    <li>
-                        Предмет. Расценки на гуманитарные дисциплины несколько ниже в сравнении с тем, сколько стоит сделать реферат по математике или электротехнике.
-                    </li>
-                    <li>
-                        Объем. Чем больше задание (количество задач, требуемое число страниц), тем выше цена реферата на заказ.
-                    </li>
-                    <li>
-                        Сроки. Чтобы минимизировать стоимость написания реферата, оформите заявку как можно раньше.
-                    </li>
-                </ul>
-            </section>
-
-            <FormEstimate />
-
-            <ImageBlock imageSrc={require('static/images/block/skolko-stiot-ref.jpg')}/>
-
-
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Что мы гарантируем?
-                </h2>
-                <ul>
-                    <li>
-                        Никаких ошибок. Каждый реферат в «BeSmarter!» проходит многоступенчатую проверку на правильность решения и грамотность оформления.
-                    </li>
-                    <li>
-                        Любой предмет. Компания принимает заказы на выполнение рефератов по любым гуманитарным, естественнонаучным или техническим дисциплинам.
-                    </li>
-                    <li>
-                        Максимальная оперативность. Даже, если вам нужно сдавать работу завтра утром, мы успеем ее сделать вовремя и качественно.
-                    </li>
-                    <li>
-                        Профессиональный подход. Мы не просто выполним ваш реферат, но и подробно объясним все ее нюансы, чтобы у вас не возникло проблем с «придирчивым» преподавателем.
-                    </li>
-                    <li>
-                        Гарантия неразглашения. Мы строго придерживаемся принципа строгой конфиденциальности, гарантии которой прописываются в официальном договоре.
-                    </li>
-                </ul>
-            </section>
-
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-
-
-            <CurrentOffer />
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Кто будет выполнять реферат?
-                </h2>
-                <p className="block-text__par">
-                    Лучше всего пишет рефераты тот, кто их задает! Поэтому мы делегируем такие заказы действующим вузовским преподавателям по соответствующим предметам. Они абсолютно точно знают, как правильно выполнить и грамотно оформить реферат, поскольку сами их регулярно проверяют.
-                </p>
-                <p className="block-text__par">
-                    Такой подход совместно с фирменной системой многоступенчатого контроля качества позволил нам добиться невероятной статистики – почти 99% отличных оценок! Если хотите получить высший балл за реферат по любому предмету – обращайтесь, мы поможем!
-                </p>
-            </section>
-
-
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Как мы работаем?
-                </h2>
-                <ul>
-                    <li>
-                        Подготовка. Вы оформляете заявку, и после предварительного собеседования подписывается договор, в котором фиксируются все ваши требования к заказу и наши обязательства.
-                    </li>
-                    <li>
-                        Исполнение. Утвержденный вами исполнитель выполняет реферат и сдает его на проверку в оговоренный срок. В случае необходимости вносятся бесплатные корректировки.
-                    </li>
-                    <li>
-                        Завершение. Вы консультируетесь с автором по всем непонятным моментам, сдаете готовый реферат и получаете отличную оценку.
-                    </li>
-                </ul>
-                <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
-                    Все элементарно – попробуйте сами и не пожалеете!
-                </p>
-            </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
-            <ImageBlock imageSrc={require('static/images/block/skolko-stoit-ref-2.jpg')}/>
-
-
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Как узнать, сколько стоит реферат?
-                </h2>
-                <ul>
-                    <li>
-                        онлайн-заявка – просто <a href="/#form">заполните форму</a> на сайте и дождитесь ответа менеджера;
-                    </li>
-                    <li>
-                        заявка по телефону – свяжитесь с нами по номеру <br/>+7 (495) 772-4090
-                    </li>
-                    <li>
-                        личная заявка – наш адрес: Москва, пер. Большой Кисловский, д. 1, стр. 2, оф. 211.
-                    </li>
-                </ul>
-                <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
-                    Оформляйте заявку прямо сейчас и узнайте сколько будет стоить написание вашего реферата!
-                </p>
-            </section>
-
-            <a name="form" id="form"/>
-            <FormOrder />
-
-            <LinksBlock links={referatLinks}/>
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная</a>
+          </Link>
+          <span> / </span>
+          <Link href="/referat-na-zakaz">
+            <a>Реферат</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>Стоимость</a>
+          </Link>
         </div>
-    </Wrapper>
+      </section>
+
+      <section className="block-nav">
+        <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
+      </section>
+      <MessBlock/>
+
+      <section className="block-service">
+        <Link href="#form">
+          <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ref1.jpg') + ")",}}>
+            <div className="block-service__text gradient-l-black">
+              <span className="block-service__title">Реферат</span>
+              <p className="block-service__par">Не парься сам – доверься нам!</p>
+              <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+              <p className="block-service__par">От 1 500 руб.</p>
+              <p className="block-service__par">Срочно от 2 часов</p>
+            </div>
+          </a>
+        </Link>
+        <div className="block-service__list list-5">
+          <CardPopInfo
+            url="/zakazat-otchet-po-praktike"
+            title="Отчет по практике"
+            text={[<p>от 3 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kursovaya-rabota-na-zakaz"
+            title="Курсовая работа"
+            text={[<p>от 4 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kontrolnaya-na-zakaz"
+            title="Эссе Контрольная"
+            text={[<p>от 1 500 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/stati/kak-podgotovitsya-k-ekzamenu"
+            title="Экзамены Тесты"
+            text={[<p>от 200 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kursovoj-proekt-na-zakaz"
+            title="Курсовой проект"
+            text={[<p>от 8 000 руб.</p>]}
+          />
+
+        </div>
+      </section>
+
+      <section className="block-service__dis">
+        <section className="block-service">
+          <Link href="/kursovaya-rabota-na-zakaz">
+            <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+              <div className="block-service__text gradient-l-black">
+                <span className="block-service__title">Материалы для успешной защиты</span>
+                <p className="block-service__par">Не парься сам – доверься нам!</p>
+                <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+                <p className="block-service__par">Доступные цены</p>
+                <p className="block-service__par">Срочно от 2 часов</p>
+              </div>
+            </a>
+          </Link>
+          <div className="block-service__list list-4">
+            <CardPopInfo
+              url="/razrabotka-diplomnogo-proekta"
+              title="Пакет «Успешная Защита»"
+              text={[<p>от 5 000 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Доклад"
+              text={[<p>от 1 500 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Оригинальность текста"
+              text={[<p>Во всех системах</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Ответы к защите"
+              text={[<p>от 200 руб.</p>]}
+            />
+
+          </div>
+          <div className="block-service__list list-5">
+            <CardPopInfo
+              url="/razrabotka-diplomnogo-proekta"
+              title="Мини-диплом Раскладка"
+              text={[<p>от 2 000 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Получение по главам"
+              text={[<p>Гибкие условия</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Аннотация Отзыв Рецензия"
+              text={[<p>от 1 200 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Слайды"
+              text={[<p>от 350 руб.</p>]}
+            />
+
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Распечатка Переплеты"
+              text={[<p>от 1 200 руб.</p>]}
+            />
+
+          </div>
+        </section>
+      </section>
+
+      <section className="block-text">
+        <h1 className="block-text__title">
+          Сколько стоит заказать реферат
+        </h1>
+        <p className="block-text__par">
+          Выяснить, сколько стоит заказать реферат в компании «BeSmarter!», можно с помощью нашего <Link href="/price"><a>прайс-листа</a></Link>. Ориентировочный диапазон цен составляет от 1 500 до <br/>7 000 рублей.
+        </p>
+        <p className="block-text__par">
+          Чтобы узнать точно, сколько стоит написать реферат, заданную именно вам, понадобится собеседование. Мы определим ее цену на основании следующих факторов.
+        </p>
+        <ul>
+          <li>
+            Предмет. Расценки на гуманитарные дисциплины несколько ниже в сравнении с тем, сколько стоит сделать реферат по математике или электротехнике.
+          </li>
+          <li>
+            Объем. Чем больше задание (количество задач, требуемое число страниц), тем выше цена реферата на заказ.
+          </li>
+          <li>
+            Сроки. Чтобы минимизировать стоимость написания реферата, оформите заявку как можно раньше.
+          </li>
+        </ul>
+      </section>
+
+      <FormEstimate/>
+
+      <ImageBlock imageSrc={require('static/images/block/skolko-stiot-ref.jpg')}/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Что мы гарантируем?
+        </h2>
+        <ul>
+          <li>
+            Никаких ошибок. Каждый реферат в «BeSmarter!» проходит многоступенчатую проверку на правильность решения и грамотность оформления.
+          </li>
+          <li>
+            Любой предмет. Компания принимает заказы на выполнение рефератов по любым гуманитарным, естественнонаучным или техническим дисциплинам.
+          </li>
+          <li>
+            Максимальная оперативность. Даже, если вам нужно сдавать работу завтра утром, мы успеем ее сделать вовремя и качественно.
+          </li>
+          <li>
+            Профессиональный подход. Мы не просто выполним ваш реферат, но и подробно объясним все ее нюансы, чтобы у вас не возникло проблем с «придирчивым» преподавателем.
+          </li>
+          <li>
+            Гарантия неразглашения. Мы строго придерживаемся принципа строгой конфиденциальности, гарантии которой прописываются в официальном договоре.
+          </li>
+        </ul>
+      </section>
+
+      <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+      <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+      <CurrentOffer/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Кто будет выполнять реферат?
+        </h2>
+        <p className="block-text__par">
+          Лучше всего пишет рефераты тот, кто их задает! Поэтому мы делегируем такие заказы действующим вузовским преподавателям по соответствующим предметам. Они абсолютно точно знают, как правильно выполнить и грамотно оформить реферат, поскольку сами их регулярно проверяют.
+        </p>
+        <p className="block-text__par">
+          Такой подход совместно с фирменной системой многоступенчатого контроля качества позволил нам добиться невероятной статистики – почти 99% отличных оценок! Если хотите получить высший балл за реферат по любому предмету – обращайтесь, мы поможем!
+        </p>
+      </section>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Как мы работаем?
+        </h2>
+        <ul>
+          <li>
+            Подготовка. Вы оформляете заявку, и после предварительного собеседования подписывается договор, в котором фиксируются все ваши требования к заказу и наши обязательства.
+          </li>
+          <li>
+            Исполнение. Утвержденный вами исполнитель выполняет реферат и сдает его на проверку в оговоренный срок. В случае необходимости вносятся бесплатные корректировки.
+          </li>
+          <li>
+            Завершение. Вы консультируетесь с автором по всем непонятным моментам, сдаете готовый реферат и получаете отличную оценку.
+          </li>
+        </ul>
+        <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
+          Все элементарно – попробуйте сами и не пожалеете!
+        </p>
+      </section>
+
+      <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+      <ImageBlock imageSrc={require('static/images/block/skolko-stoit-ref-2.jpg')}/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Как узнать, сколько стоит реферат?
+        </h2>
+        <ul>
+          <li>
+            онлайн-заявка – просто <a href="/#form">заполните форму</a> на сайте и дождитесь ответа менеджера;
+          </li>
+          <li>
+            заявка по телефону – свяжитесь с нами по номеру <br/>+7 (495) 772-4090
+          </li>
+          <li>
+            личная заявка – наш адрес: Москва, пер. Большой Кисловский, д. 1, стр. 2, оф. 211.
+          </li>
+        </ul>
+        <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
+          Оформляйте заявку прямо сейчас и узнайте сколько будет стоить написание вашего реферата!
+        </p>
+      </section>
+
+      <a name="form" id="form"/>
+      <FormOrder/>
+
+      <LinksBlock links={referatLinks}/>
+    </div>
+  </Wrapper>
 );
 
 

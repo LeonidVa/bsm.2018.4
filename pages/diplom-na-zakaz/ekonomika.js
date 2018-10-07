@@ -25,259 +25,248 @@ import links from 'components/config/linksBlock/diplom';
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
+import CardPopInfo from "components/common/CardPopInfo";
 
 
 const page = () => (
-    <Wrapper title="Диплом по экономике на заказ – цена и сроки написания, сколько стоит заказать дипломную работу в Москве" description="Диплом по экономике на заказ! Быстро и профессионально – компания BeSmarter!. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-        <div className="wrapper bg bg-c2 bg-img bg-img3">
+  <Wrapper title="Диплом по экономике на заказ – цена и сроки написания, сколько стоит заказать дипломную работу в Москве" description="Диплом по экономике на заказ! Быстро и профессионально – компания BeSmarter!. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
+    <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-            <MetaTags>
-                {/* <title></title> */}
-                <meta name="keywords" content="дипломная работа по экономике заказать написать купить цена сколько стоит на заказ" />
-            </MetaTags>
-            
-            <section className="breadcrumbs">
-                <div className="inner">
-                    <Link href="/">
-                        <a>Главная</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="/diplom-na-zakaz">
-                        <a>Дипломная работа</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="/diplom-na-zakaz">
-                        <a>По экономике</a>
-                    </Link>
-                </div>
-            </section>
+      <MetaTags>
+        {/* <title></title> */}
+        <meta name="keywords" content="дипломная работа по экономике заказать написать купить цена сколько стоит на заказ"/>
+      </MetaTags>
 
-            <section className="block-nav">
-                <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-            </section>
-            <MessBlock/>
-
-            <section className="block-service">
-                <Link href="/diplom-na-zakaz/ekonomika#form">
-                    <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-white">
-                            <span className="block-service__title">Дипломная работа</span>
-                            <p className="block-service__par">Быстро и качественно!</p>
-                            <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-                            <p className="block-service__par">От 14 000 руб.</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-3">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Дипломный проект</span>
-                            <p>от 21 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Магистерская диссертация</span>
-                            <p>от 23 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/diplom-mba-na-zakaz">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Диплом MBA</span>
-                            <p>от <b>25 000</b> руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-
-            <section className="block-service__dis">
-            <section className="block-service">
-                <Link href="/diplom-na-zakaz">
-                    <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Материалы для успешной защиты</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">Доступные цены</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-4">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                            <p>от 5 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Доклад</span>
-                            <p>от 1 500 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Оригинальность текста</span>
-                            <p>Во всех системах</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Ответы к защите</span>
-                            <p>от 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className="block-service__list list-5">
-                    <Link href="/razrabotka-diplomnogo-proekta">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                            <p>от 2 000 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Получение по главам</span>
-                            <p>Гибкие условия</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Слайды</span>
-                            <p>от 350 руб.</p>
-                        </a>
-                    </Link>
-                    <Link href="/dissertaciya-na-zakaz/magisterskaya">
-                        <a className="block-service__list-item">
-                            <span className="block-service__list-title">Распечатка Переплеты</span>
-                            <p>от 1 200 руб.</p>
-                        </a>
-                    </Link>
-                </div>
-            </section>
-            </section>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Диплом по экономике на заказ
-                </h1>
-                <p className="block-text__par">
-                    Получение высшего образования обязательно связано с написанием дипломной работы. Это научный труд, который требует хороших знаний по специальности. Выполнить хороший диплом по экономике сложно, поэтому студенты предпочитают заказывать его у профессионалов. Компания BeSmarter! специализируется на предоставлении таких услуг. К нам обращаются, если:
-                </p>
-                <ul>
-                    <li>
-                        Нет времени написать дипломную работу по экономике самостоятельно.
-                    </li>
-                    <li>
-                        Есть некоторые пробелы в знаниях.
-                    </li>
-                    <li>
-                        Студенты обзаводятся семьей, нужно находить время для детей и подрабатывать.
-                    </li>
-                    <li>
-                        Имеется желание получить работу, выполненную на «отлично».
-                    </li>
-                </ul>
-            </section>
-
-            <FormEstimate />
-
-            <ImageBlock imageSrc={require('static/images/block/dip-rab-eko.jpg')}/>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Преимущества написания диплома на заказ
-                </h2>
-                <p className="block-text__par">
-                    Самостоятельное написание ВКР сопряжено с некоторыми сложностями – это переработка массы источников и потеря времени на поиск информации, большая часть которой будет лишней или не используется позже в работе. Написание диплома по экономике на заказ избавит вас от этих проблем. Вы получите несколько преимуществ:
-                </p>
-                <ol>
-                    <li>
-                        Будете уверены в правильности выполнения работы.<br/>
-                        ВКР пишут авторы, проверенные временем, преподаватели ВУЗов Москвы и других городов России. Диплом по экономике на заказ выполняют узкие специалисты этой сферы, имеющие практический опыт.
-                    </li>
-                    <li>
-                        Текст работы оформляется согласно ГОСТу.<br/>
-                        Чаще всего студенты тратят массу времени на подготовку ВКР к сдаче по требованиям стандартов, подгоняют диплом по стилю, корректируют абзацы, шрифты. Наша команда использует специальные программы, которые не допустят ошибок и недочетов по оформлению.
-                    </li>
-                    <li>
-                        Работа будет уникальной.<br/>
-                        В процессе подготовки к написанию диплома по экономике студенты используют интернет, книги, написанные научные труды. Часто их работы грешат плагиатом. На заказ вы получите уникальный научный труд, который смело пройдет проверку на уникальность.
-                    </li>
-                </ol>
-            </section>
-
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-            <CurrentOffer />
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Купить или заказать диплом – что лучше?
-                </h2>
-                <p className="block-text__par">
-                   Объяснить, чем заказ ВКР лучше, чем покупка готового проекта, можно следующим:
-                </p>
-                <ol>
-                    <li>При заказе работы вы сможете предъявить исполнителю требования по срокам, цене и другим тонкостям. В результате получите качественный продукт по разумной стоимости и вовремя!</li>
-                    <li>Многие студенты подрабатывают написанием дипломных работ, но делают их некачественно. Покупая готовую ВКР через интернет или у посредников, вы не сможете быть уверенным в качестве продаваемого текста и узнать точно, кто выполнял задание и какой у него имеется опыт в нужной вам сфере.</li>
-                    <li>В случае с готовой дипломной работой вы берете на себя все правки и коррекции, о которых вас попросит научный руководитель. При заказе в BeSmarter! ваш диплом по экономике исполнители ведут до его защиты, то есть перерабатывают и исправляют по необходимости сами.</li>
-                </ol>
-            </section>
-
-            <Video>
-                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameBorder="0" allowfullscreen></iframe>
-            </Video>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    От чего зависит цена
-                </h2>
-                <p className="block-text__par">
-                    Стоимость диплома по экономике на заказ зависит от срока выполнения, количества страниц, сложности проблематики. Наличие чертежей, графиков, таблиц, необходимость написать рецензию и речь для защиты – все это повышает цену диплома. Срочные заказы выполняются по более высокой стоимости.
-                </p>
-            </section>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Как можно сэкономить?
-                </h2>
-                <p className="block-text__par">
-                    Если вы хотите купить диплом по экономике на заказ по более низкой цене, следуйте нашим советам:
-                </p>
-                <ul>
-                    <li>
-                        Оформите заявку на написание заранее, за 2-3 месяца до защиты ВКР.
-                    </li>
-                    <li>
-                        Выполните самую простую часть дипломной работы самостоятельно, например, введение, заключение, графики или таблицы.
-                    </li>
-                    <li>
-                        Максимально точно ставьте задачи перед исполнителем во время заказа. Это позволит избежать доработок вашего диплома по экономической дисциплине.
-                    </li>
-                </ul>
-            </section>
-
-            <a name="form" id="form"/>
-            <FormOrder />
-
-
-
-            <LinksBlock links={links}/>
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная</a>
+          </Link>
+          <span> / </span>
+          <Link href="/diplom-na-zakaz">
+            <a>Дипломная работа</a>
+          </Link>
+          <span> / </span>
+          <Link href="/diplom-na-zakaz">
+            <a>По экономике</a>
+          </Link>
         </div>
-    </Wrapper>
+      </section>
+
+      <section className="block-nav">
+        <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
+      </section>
+      <MessBlock/>
+
+      <section className="block-service">
+        <Link href="/diplom-na-zakaz/ekonomika#form">
+          <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
+            <div className="block-service__text gradient-l-white">
+              <span className="block-service__title">Дипломная работа</span>
+              <p className="block-service__par">Быстро и качественно!</p>
+              <p className="block-service__par">С нами твоя защита пройдет легко!</p>
+              <p className="block-service__par">От 14 000 руб.</p>
+              <p className="block-service__par">Срочно от 2 часов</p>
+            </div>
+          </a>
+        </Link>
+        <div className="block-service__list list-3">
+          <CardPopInfo
+            url="/razrabotka-diplomnogo-proekta"
+            title="Дипломный проект"
+            text={[<p>от 21 000 руб.</p>]}
+          />
+          <CardPopInfo
+            url="/dissertaciya-na-zakaz/magisterskaya"
+            title="Магистерская диссертация"
+            text={[<p>от 23 000 руб.</p>]}
+          />
+          <CardPopInfo
+            url="/diplom-mba-na-zakaz"
+            title="Диплом MBA"
+            text={[<p>от 25 000 руб.</p>]}
+          />
+
+        </div>
+      </section>
+
+      <section className="block-service__dis">
+        <section className="block-service">
+          <Link href="/diplom-na-zakaz">
+            <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+              <div className="block-service__text gradient-l-black">
+                <span className="block-service__title">Материалы для успешной защиты</span>
+                <p className="block-service__par">Не парься сам – доверься нам!</p>
+                <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+                <p className="block-service__par">Доступные цены</p>
+                <p className="block-service__par">Срочно от 2 часов</p>
+              </div>
+            </a>
+          </Link>
+          <div className="block-service__list list-4"><CardPopInfo
+            url="/razrabotka-diplomnogo-proekta"
+            title="Пакет «Успешная Защита»"
+            text={[<p>от 5 000 руб.</p>]}
+          />
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Доклад"
+              text={[<p>от 1 500 руб.</p>]}
+            />
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Оригинальность текста"
+              text={[<p>Во всех системах</p>]}
+            />
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Ответы к защите"
+              text={[<p>от 200 руб.</p>]}
+            />
+
+          </div>
+          <div className="block-service__list list-5"><CardPopInfo
+            url="/razrabotka-diplomnogo-proekta"
+            title="Мини-диплом Раскладка"
+            text={[<p>от 2 000 руб.</p>]}
+          />
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Получение по главам"
+              text={[<p>Гибкие условия</p>]}
+            />
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Аннотация Отзыв Рецензия"
+              text={[<p>от 1 200 руб.</p>]}
+            />
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Слайды"
+              text={[<p>от 350 руб.</p>]}
+            />
+            <CardPopInfo
+              url="/dissertaciya-na-zakaz/magisterskaya"
+              title="Распечатка Переплеты"
+              text={[<p>от 1 200 руб.</p>]}
+            />
+
+          </div>
+        </section>
+      </section>
+
+      <section className="block-text">
+        <h1 className="block-text__title">
+          Диплом по экономике на заказ
+        </h1>
+        <p className="block-text__par">
+          Получение высшего образования обязательно связано с написанием дипломной работы. Это научный труд, который требует хороших знаний по специальности. Выполнить хороший диплом по экономике сложно, поэтому студенты предпочитают заказывать его у профессионалов. Компания BeSmarter! специализируется на предоставлении таких
+          услуг. К нам обращаются, если:
+        </p>
+        <ul>
+          <li>
+            Нет времени написать дипломную работу по экономике самостоятельно.
+          </li>
+          <li>
+            Есть некоторые пробелы в знаниях.
+          </li>
+          <li>
+            Студенты обзаводятся семьей, нужно находить время для детей и подрабатывать.
+          </li>
+          <li>
+            Имеется желание получить работу, выполненную на «отлично».
+          </li>
+        </ul>
+      </section>
+
+      <FormEstimate/>
+
+      <ImageBlock imageSrc={require('static/images/block/dip-rab-eko.jpg')}/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Преимущества написания диплома на заказ
+        </h2>
+        <p className="block-text__par">
+          Самостоятельное написание ВКР сопряжено с некоторыми сложностями – это переработка массы источников и потеря времени на поиск информации, большая часть которой будет лишней или не используется позже в работе. Написание диплома по экономике на заказ избавит вас от этих проблем. Вы получите несколько преимуществ:
+        </p>
+        <ol>
+          <li>
+            Будете уверены в правильности выполнения работы.<br/>
+            ВКР пишут авторы, проверенные временем, преподаватели ВУЗов Москвы и других городов России. Диплом по экономике на заказ выполняют узкие специалисты этой сферы, имеющие практический опыт.
+          </li>
+          <li>
+            Текст работы оформляется согласно ГОСТу.<br/>
+            Чаще всего студенты тратят массу времени на подготовку ВКР к сдаче по требованиям стандартов, подгоняют диплом по стилю, корректируют абзацы, шрифты. Наша команда использует специальные программы, которые не допустят ошибок и недочетов по оформлению.
+          </li>
+          <li>
+            Работа будет уникальной.<br/>
+            В процессе подготовки к написанию диплома по экономике студенты используют интернет, книги, написанные научные труды. Часто их работы грешат плагиатом. На заказ вы получите уникальный научный труд, который смело пройдет проверку на уникальность.
+          </li>
+        </ol>
+      </section>
+
+      <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+      <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+      <CurrentOffer/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Купить или заказать диплом – что лучше?
+        </h2>
+        <p className="block-text__par">
+          Объяснить, чем заказ ВКР лучше, чем покупка готового проекта, можно следующим:
+        </p>
+        <ol>
+          <li>При заказе работы вы сможете предъявить исполнителю требования по срокам, цене и другим тонкостям. В результате получите качественный продукт по разумной стоимости и вовремя!</li>
+          <li>Многие студенты подрабатывают написанием дипломных работ, но делают их некачественно. Покупая готовую ВКР через интернет или у посредников, вы не сможете быть уверенным в качестве продаваемого текста и узнать точно, кто выполнял задание и какой у него имеется опыт в нужной вам сфере.</li>
+          <li>В случае с готовой дипломной работой вы берете на себя все правки и коррекции, о которых вас попросит научный руководитель. При заказе в BeSmarter! ваш диплом по экономике исполнители ведут до его защиты, то есть перерабатывают и исправляют по необходимости сами.</li>
+        </ol>
+      </section>
+
+      <Video>
+        <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameBorder="0" allowfullscreen></iframe>
+      </Video>
+
+      <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          От чего зависит цена
+        </h2>
+        <p className="block-text__par">
+          Стоимость диплома по экономике на заказ зависит от срока выполнения, количества страниц, сложности проблематики. Наличие чертежей, графиков, таблиц, необходимость написать рецензию и речь для защиты – все это повышает цену диплома. Срочные заказы выполняются по более высокой стоимости.
+        </p>
+      </section>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Как можно сэкономить?
+        </h2>
+        <p className="block-text__par">
+          Если вы хотите купить диплом по экономике на заказ по более низкой цене, следуйте нашим советам:
+        </p>
+        <ul>
+          <li>
+            Оформите заявку на написание заранее, за 2-3 месяца до защиты ВКР.
+          </li>
+          <li>
+            Выполните самую простую часть дипломной работы самостоятельно, например, введение, заключение, графики или таблицы.
+          </li>
+          <li>
+            Максимально точно ставьте задачи перед исполнителем во время заказа. Это позволит избежать доработок вашего диплома по экономической дисциплине.
+          </li>
+        </ul>
+      </section>
+
+      <a name="form" id="form"/>
+      <FormOrder/>
+
+      <LinksBlock links={links}/>
+    </div>
+  </Wrapper>
 );
 
 

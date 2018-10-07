@@ -1,24 +1,20 @@
 .block-service {
   background-color: #f4511e;
   width: 100%;
-  font-size: 2em;
-  max-width: 30.94em;
-  margin: 1.56em auto 0;
+  font-size: 1rem;
+  max-width: 62rem;
+  margin: 1.5rem auto 0;
   position: relative;
   @media (max-width: 900px) {
     max-width: 100%;
-    font-size: 1.7em;
-  }
-  @media (max-width: 660px) {
-    font-size: 1.5em;
   }
   /********************* Upper part with big image *******************************************************************/
   &__top {
-    min-height: 18rem;
+    min-height: 10rem;
     height: auto;
     display: flex;
     position: relative;
-    z-index: 1;
+    z-index: 3;
     background-size: cover;
     background-position: right top;
     text-decoration: none;
@@ -59,9 +55,9 @@
     }
   }
   &__text {
-    padding: 1.56em 1.56em 0.75em;
+    padding: 3rem;
     @media (max-width: 660px) {
-      padding: 1.56em 0.56em 0.75em;
+      padding: 3rem 1rem 1.5rem;
       &.gradient-l-white {
         background-image: linear-gradient(
                 to right,
@@ -86,6 +82,7 @@
     text-decoration: none;
     margin-bottom: 1rem;
     position: relative;
+    font-size: 2rem;
     &::after {
       content: "";
       position: absolute;
@@ -101,8 +98,8 @@
     }
   }
   &__par {
-    font-size: 0.68em;
-    max-width: 17.09em;
+    font-size: 1.4rem;
+    max-width: 24rem;
     line-height: normal;
     margin-bottom: 1rem;
   }
@@ -155,7 +152,7 @@
       }
       .block-service__list-title {
         @media (min-width: 661px) and (max-width: 780px) {
-          font-size: 0.6em;
+          font-size: 2rem;
         }
       }
     }
@@ -168,10 +165,10 @@
       }
       .block-service__list-title {
         @media (min-width: 801px) and (max-width: 1000px) {
-          font-size: 0.7em;
+          font-size: 2rem;
         }
         @media (min-width: 661px) and (max-width: 800px) {
-          font-size: 0.6em;
+          font-size: 2rem;
         }
       }
     }
@@ -259,13 +256,13 @@
       }
     }
     &-title {
-      display: inline-block;
-      font-size: 0.75em;
-      margin-bottom: 0.5em;
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
       color: #ffffff;
       text-decoration: none;
       position: relative;
-      max-width: 90%;
+      margin: 0 1rem 1rem;
       &::after {
         content: "";
         position: absolute;
@@ -279,18 +276,11 @@
     &-text {
       position: relative;
     }
-    p {
-      font-size: 0.6em;
-      line-height: normal;
-      position: relative;
-      width: 100%;
-    }
     &-description {
-      font-size: 0.35em;
+      font-size: 1rem;
       text-align: left;
       line-height: normal;
       opacity: 0;
-      padding: 0.7em 1.8em 4em;
       display: block;
       position: absolute;
       width: 100%;
@@ -304,6 +294,11 @@
     position: relative;
     @media (min-width: 661px) {
       padding: 0 0 56px;
+    }
+    &-content {
+      p {
+        font-size: 0.6em;
+      }
     }
   }
   .b-item__hovered {
@@ -332,12 +327,10 @@
     position: relative;
   }
   .b-item__hovered-text {
-    font-size: 0.5em;
-    margin-top: 10px;
-    padding: 0.5em;
+    margin-top: 1rem;
+    padding: 1rem;
     @media (max-width: 660px) {
-      padding: 0 1em 1em;
-      font-size: 0.66em;
+      padding: 0 1rem 1rem;
     }
   }
 
@@ -346,19 +339,13 @@
      upper and visible part of button. shadow must be animated with delay,
      else it will be visible when description opacity is animated.
      */
-    @keyframes shadow-delay {
-      0% { box-shadow: none; }
-      50% { box-shadow: 0 0 25px 0 rgba(51, 51, 51, 0.01); }
-      100% { box-shadow: 0 25px 50px 0 rgba(51, 51, 51, 0.25); }
-    }
     .b-item__content {
       @media (max-width: 660px) {
         padding: 0.5em 0;
       }
       @media (min-width: 661px) {
         padding-top: 1.5em;
-        transition: all 1s ease;
-        animation: shadow-delay 1s;
+        transition: all 0.5s cubic-bezier(0, 1, 1, 1);
       }
     }
   }
@@ -367,10 +354,15 @@
 /* global .b-list-item styles */
 .b-list-item {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  .b-item__content {
+    p { font-size: 1.2rem; }
+  }
+
   & .b-item__hovered-button-wrapper {
     display: block;
     width: 100%;
-    padding: 0.33em;
+    padding: 1em;
   }
   & .b-item__hovered-button {
     background-color: white;
@@ -381,19 +373,18 @@
 @media (max-width: 660px) {
   .b-list-item {
     .b-item__hovered {
-      transition: all 0.33s cubic-bezier(0.65, 0.05, 0.36, 1);
+      transition: all 0.33s ease;
       max-height: 0;
     }
     &.open {
       .b-item__hovered {
-        transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+        transition: all 0.5s ease;
         max-height: 30em;
       }
     }
     & .b-item__hovered-button {
       display: block;
       padding: 0.5em 3em 0.7em;
-      font-size: 0.75em;
     }
   }
 }
@@ -401,8 +392,8 @@
 @media (min-width: 661px) {
   .b-list-item {
     z-index: 0;
-    animation: z-out 1s;
-    transition: all 0.15s ease-in;
+    animation: z-out 0.33s;
+    transition: all 0.33s cubic-bezier(0, 1, 1, 1);
 
     & .b-item__hovered {
       /* transition: all 0.33s ease-in;
@@ -410,12 +401,10 @@
       Варианты:
       - all, height+opacity - разворачиваться, но это не очень красиво;
       - только opacity - не разворачиваться, а просто появляться; */
-      //transition: all 0.33s ease-in;
-      transition: opacity 0.33s ease-in;
+      transition: opacity 0.33s cubic-bezier(0, 1, 1, 1);
       max-height: 10px;
 
       & * {
-        //transition: all 0.33s ease-in;
         opacity: 0;
       }
     }
@@ -423,22 +412,21 @@
     & .b-item__hovered-button {
       display: inline-block;
       padding: 0.4em 0 0.5em;
-      font-size: 0.75em;
     }
 
     /* * hover * */
     &:hover {
       z-index: 3;
-      animation: z-in 1s;
+      animation: z-in 0.33s;
       box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
 
       & .b-item__hovered {
-        transition: all 0.15s ease;
-        max-height: 30em;
+        transition: all 0.15s cubic-bezier(0, 1, 1, 1);
+        max-height: 50em;
         box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
 
         & * {
-          transition: all 0.15s ease;
+          transition: all 0.15s cubic-bezier(0, 1, 1, 1);
           opacity: 1;
         }
       }

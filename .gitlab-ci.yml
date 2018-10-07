@@ -19,9 +19,9 @@ before_script:
 build_job:
   stage: build
   script:
-  - node -v
-  - npm install
-  - npm run build
+  - yarn -v
+  - yarn install
+  - yarn run build
 
 stage_deploy:
   stage: staging

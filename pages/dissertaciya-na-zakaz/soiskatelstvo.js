@@ -99,7 +99,7 @@ const page = () => (
 
       <section className="block-service">
         <Link href="/dissertaciya-na-zakaz/doktorskaya">
-          <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
+          <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
             <div className="block-service__text gradient-l-white">
               <span className="block-service__title">Докторская диссертация</span>
               <p className="block-service__par">Актуальность и научная новизна</p>
@@ -109,7 +109,7 @@ const page = () => (
             </div>
           </a>
         </Link>
-        <div className="block-service__list list-35">
+        <div className="block-service__list list-3">
           <CardPopInfo
             url="/razrabotka-diplomnogo-proekta"
             title="Прямая связь с автором"

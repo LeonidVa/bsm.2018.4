@@ -14,12 +14,6 @@ import infoBlockConfig from 'components/config/infoBlock/diplom'
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
-import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
-
-import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
-
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../components/common/ImageBlock";
 import CardPopInfo from "components/common/CardPopInfo";
@@ -54,33 +48,23 @@ const page = () => (
           </a>
         </Link>
         <div className="block-service__list list-3">
-          <Link href="/razrabotka-diplomnogo-proekta">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Дипломный проект</span>
-              <p>от 21 000 руб.
-                <span className="block-service__list-description">
-                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                </span></p>
-            </a>
-          </Link>
-          <Link href="/dissertaciya-na-zakaz/magisterskaya">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Магистерская диссертация</span>
-              <p>от 23 000 руб.
-                <span className="block-service__list-description">
-                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                </span></p>
-            </a>
-          </Link>
-          <Link href="/diplom-mba-na-zakaz">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Диплом MBA</span>
-              <p>от <b>25 000</b> руб.
-                <span className="block-service__list-description">
-                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                </span></p>
-            </a>
-          </Link>
+          <CardPopInfo
+            url="/razrabotka-diplomnogo-proekta"
+            title="Дипломный проект"
+            text={[<p>от 21 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/dissertaciya-na-zakaz/magisterskaya"
+            title="Магистерская диссертация"
+            text={[<p>от 23 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/diplom-mba-na-zakaz"
+            title="Диплом MBA"
+            text={[<p>от 25 000 руб.</p>]}
+          />
         </div>
       </section>
 
@@ -196,51 +180,33 @@ const page = () => (
           </a>
         </Link>
         <div className="block-service__list list-5">
-          <Link href="/zakazat-otchet-po-praktike">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Отчет по практике</span>
-              <p>от 3 000 руб.
-                <span className="block-service__list-description">
-                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                </span></p>
-            </a>
-          </Link>
-          <Link href="/referat-na-zakaz">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Реферат</span>
-              <p>от 1 500 руб.
-                <span className="block-service__list-description">
-                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                </span></p>
-            </a>
-          </Link>
-          <Link href="/kontrolnaya-na-zakaz">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Эссе Контрольная</span>
-              <p>от 1 500 руб.
-                <span className="block-service__list-description">
-                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                </span></p>
-            </a>
-          </Link>
-          <Link href="/stati/kak-podgotovitsya-k-ekzamenu">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Экзамены Тесты</span>
-              <p>от 200 руб.
-                <span className="block-service__list-description">
-                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                </span></p>
-            </a>
-          </Link>
-          <Link href="/kursovoj-proekt-na-zakaz">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Курсовой проект</span>
-              <p>от 8 000 руб.
-                <span className="block-service__list-description">
-                    Что опаснее — груша или вакцина? Можно ли отравиться «органическим» рисом? А бывают ли «натуральные» вещества в принципе?
-                </span></p>
-            </a>
-          </Link>
+          <CardPopInfo
+            url="/zakazat-otchet-po-praktike"
+            title="Отчет по практике"
+            text={[<p>от 3 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/referat-na-zakaz"
+            title="Реферат"
+            text={[<p>от 1 500 руб.</p>]}
+          />
+          <CardPopInfo
+            url="/kontrolnaya-na-zakaz"
+            title="Эссе Контрольная"
+            text={[<p>от 1 500 руб.</p>]}
+          />
+          <CardPopInfo
+            url="/stati/kak-podgotovitsya-k-ekzamenu"
+            title="Экзамены Тесты"
+            text={[<p>от 200 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kursovoj-proekt-na-zakaz"
+            title="Курсовой проект"
+            text={[<p>от 8 000 руб.</p>]}
+          />
         </div>
       </section>
 
@@ -257,12 +223,13 @@ const page = () => (
           </a>
         </Link>
         <div className="block-service__list list-4">
-          <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Аспирантские работы</span>
-              <p>От поступления<br/>до защиты</p>
-            </a>
-          </Link>
+
+          <CardPopInfo
+            url="/dissertaciya-na-zakaz/kandidatskaya"
+            title="Аспирантские работы"
+            text={[<p>От поступления до защиты</p>]}
+          />
+
           <CardPopInfo
             url="/dissertaciya-na-zakaz/kandidatskaya"
             title="Статьи"

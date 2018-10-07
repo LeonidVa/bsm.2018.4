@@ -74,7 +74,7 @@ const page = () => (
             </div>
           </a>
         </Link>
-        <div className="block-service__list list-35">
+        <div className="block-service__list list-3">
           <Link href="/dissertaciya-na-zakaz">
             <a className="block-service__list-item">
               <span className="block-service__list-title">Диссертация<br/>под ключ</span>

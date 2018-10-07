@@ -1,166 +1,160 @@
 @import './common/textBlock';
 @import './common/serviceBlock';
 @import './common/qualityBlock';
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i,#form-sale center,
+b, u, i, #form-sale center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Ubuntu", sans-serif;
 }
-
 html {
-    font-size: 16px;
+  font-size: 16px;
+  @media (min-width: 661px) and (max-width: 800px) {
+    font-size: 12px;
+  }
+  @media (min-width: 801px) and (max-width: 1000px) {
+    font-size: 14px;
+  }
 }
-
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-    display: block;
-    font-family: "Ubuntu", sans-serif;
+  display: block;
+  font-family: "Ubuntu", sans-serif;
 }
 body {
-    line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 blockquote, q {
-    quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
-*{
-    box-sizing: border-box;
-    outline: none;
+* {
+  box-sizing: border-box;
+  outline: none;
 }
-
-*::before, *::after{
-    box-sizing:border-box;
+*::before, *::after {
+  box-sizing: border-box;
 }
-
 .wrapper {
-    font-family: "Ubuntu", sans-serif;
-    background-color: #eceff1;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 0;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-    overflow: hidden;
-    position: relative;
-    &.main {
-        background-image: url(~static/images/header/bg.jpg);
-        background-size: 100% 100vh;
-        background-attachment: fixed;
-        padding-bottom: 50px;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #eceff1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 0;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  overflow: hidden;
+  position: relative;
+  &.main {
+    background-image: url(~static/images/header/bg.jpg);
+    background-size: 100% 100vh;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+  }
+  &.bg {
+    @media (max-width: 660px) {
+      padding-top: 70px;
     }
-    &.bg {
-        @media (max-width: 660px) {
-            padding-top: 70px;
-        }
-        &::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 21em;
-            background-color: #87bce7;
-            z-index: 0;
-        }    
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 21em;
+      background-color: #87bce7;
+      z-index: 0;
     }
-    &.bg-c1::before {
-        background-color: #857a95;
-    }
-    &.bg-c2::before {
-        background-color: #87bce7;
-    }
-    &.bg-c3::before {
-        background-color: #25b9a9;
-    }
-    &.bg-img::before {
-        background-size: cover;
-        background-position: center 0;
-    }
-    &.bg-img1::before {
-        background-image: url(~static/images/header/bg1.jpg);
-    }
-    &.bg-img2::before {
-        background-image: url(~static/images/header/bg2.jpg);
-    }
-    &.bg-img3::before {
-        background-image: url(~static/images/header/bg3.jpg);
-    }
-    &.bg-img4::before {
-        background-image: url(~static/images/header/bg4.jpg);
-    }
-    &.bg-img5::before {
-        background-image: url(~static/images/header/bg5.jpg);
-    }
+  }
+  &.bg-c1::before {
+    background-color: #857a95;
+  }
+  &.bg-c2::before {
+    background-color: #87bce7;
+  }
+  &.bg-c3::before {
+    background-color: #25b9a9;
+  }
+  &.bg-img::before {
+    background-size: cover;
+    background-position: center 0;
+  }
+  &.bg-img1::before {
+    background-image: url(~static/images/header/bg1.jpg);
+  }
+  &.bg-img2::before {
+    background-image: url(~static/images/header/bg2.jpg);
+  }
+  &.bg-img3::before {
+    background-image: url(~static/images/header/bg3.jpg);
+  }
+  &.bg-img4::before {
+    background-image: url(~static/images/header/bg4.jpg);
+  }
+  &.bg-img5::before {
+    background-image: url(~static/images/header/bg5.jpg);
+  }
 
 }
-
 .inner {
-    width: 100%;
-    max-width: 990px;
-    margin: 0 auto;
-    @media (max-width: 900px) {
-        width: calc(100% - 30px);
-        max-width: none;
-    }
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  @media (max-width: 900px) {
+    width: calc(100% - 30px);
+    max-width: none;
+  }
 }
-
-
 ul {
-    list-style: none;
+  list-style: none;
 }
-
-
 .breadcrumbs {
-    font-size: 2em;
-    position: relative;
-    z-index: 1;
-    .inner {
-        width: 100%;
-        max-width: 17em;
-        @media (max-width: 900px) {
-            width: 70%;
-            min-width: 273px;
-            max-width: none;
-        }
-        @media (max-width: 660px) {
-            width: 100%;
-            padding: 0 10px;
-        }
+  font-size: 2em;
+  position: relative;
+  z-index: 1;
+  .inner {
+    width: 100%;
+    max-width: 17em;
+    @media (max-width: 900px) {
+      width: 70%;
+      min-width: 273px;
+      max-width: none;
     }
-    a, span {
-        font-size: .5em;
-        color: #fff;
-        text-decoration: none;
+    @media (max-width: 660px) {
+      width: 100%;
+      padding: 0 10px;
     }
+  }
+  a, span {
+    font-size: .5em;
+    color: #ffffff;
+    text-decoration: none;
+  }
 }

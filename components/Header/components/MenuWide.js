@@ -141,7 +141,7 @@ class MenuWide extends Component {
                                     <a href="#" className="menu-desk__list--link">Архитектура</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Бухгалтерски учет</a>
+                                    <a href="#" className="menu-desk__list--link">Бухгалтерский учет</a>
                                 </li>
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Педагогика</a>

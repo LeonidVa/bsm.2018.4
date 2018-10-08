@@ -181,11 +181,6 @@ const page = () => (
         </div>
         <div className="block-service__list list-5">
           <CardPopInfo
-            url="$2"
-            title="$3"
-            text={[<p>$4</p>]}
-          />
-          <CardPopInfo
             title="Мини-диплом Раскладка"
             text={[<p>от 2 000 руб.</p>, <p>от 2 000 руб.</p>,]}
             description={[

@@ -136,7 +136,7 @@ clone_project () {
 
 install_dependencies () {
     cd ${D_TEST}
-    if npm install
+    if yarn install
     then
         success "Dependencies installed"
     else

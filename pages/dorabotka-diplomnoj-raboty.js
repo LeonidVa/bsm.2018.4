@@ -83,12 +83,11 @@ const page = () => (
             text={[<p>от 23 000 руб.</p>]}
           />
 
-          <Link href="/diplom-mba-na-zakaz">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Диплом MBA</span>
-              <p>от <b>25 000</b> руб.</p>
-            </a>
-          </Link>
+            <CardPopInfo
+                url="/diplom-mba-na-zakaz"
+                title="Диплом MBA"
+                text={[<p>от 25 000 руб.</p>]}
+            />
         </div>
       </section>
 
@@ -106,62 +105,61 @@ const page = () => (
             </a>
           </Link>
           <div className="block-service__list list-4">
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Пакет «Успешная Защита»</span>
-                <p>от 5 000 руб.</p>
-              </a>
-            </Link>
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Доклад</span>
-                <p>от 1 500 руб.</p>
-              </a>
-            </Link>
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Оригинальность текста</span>
-                <p>Во всех системах</p>
-              </a>
-            </Link>
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Ответы к защите</span>
-                <p>от 200 руб.</p>
-              </a>
-            </Link>
+              <CardPopInfo
+                  url="/razrabotka-diplomnogo-proekta"
+                  title="Пакет «Успешная Защита»"
+                  text={[<p>от 5 000 руб.</p>]}
+              />
+
+              <CardPopInfo
+                  url="/dissertaciya-na-zakaz/magisterskaya"
+                  title="Доклад"
+                  text={[<p>от 1 500 руб.</p>]}
+              />
+
+              <CardPopInfo
+                  url="/dissertaciya-na-zakaz/magisterskaya"
+                  title="Оригинальность текста"
+                  text={[<p>Во всех системах</p>]}
+              />
+
+              <CardPopInfo
+                  url="/dissertaciya-na-zakaz/magisterskaya"
+                  title="Ответы к защите"
+                  text={[<p>от 200 руб.</p>]}
+              />
+
           </div>
-          <div className="block-service__list list-5">
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Мини-диплом Раскладка</span>
-                <p>от 2 000 руб.</p>
-              </a>
-            </Link>
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Получение по главам</span>
-                <p>Гибкие условия</p>
-              </a>
-            </Link>
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Аннотация Отзыв Рецензия</span>
-                <p>от 1 200 руб.</p>
-              </a>
-            </Link>
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Слайды</span>
-                <p>от 350 руб.</p>
-              </a>
-            </Link>
-            <Link href="">
-              <a className="block-service__list-item">
-                <span className="block-service__list-title">Распечатка Переплеты</span>
-                <p>от 1 200 руб.</p>
-              </a>
-            </Link>
+            <div className="block-service__list list-5">
+                <CardPopInfo
+                    url="/razrabotka-diplomnogo-proekta"
+                    title="Мини-диплом Раскладка"
+                    text={[<p>от 2 000 руб.</p>]}
+                />
+
+                <CardPopInfo
+                    url="/dissertaciya-na-zakaz/magisterskaya"
+                    title="Получение по главам"
+                    text={[<p>Гибкие условия</p>]}
+                />
+
+                <CardPopInfo
+                    url="/dissertaciya-na-zakaz/magisterskaya"
+                    title="Аннотация Отзыв Рецензия"
+                    text={[<p>от 1 200 руб.</p>]}
+                />
+
+                <CardPopInfo
+                    url="/dissertaciya-na-zakaz/magisterskaya"
+                    title="Слайды"
+                    text={[<p>от 350 руб.</p>]}
+                />
+
+                <CardPopInfo
+                    url="/dissertaciya-na-zakaz/magisterskaya"
+                    title="Распечатка Переплеты"
+                    text={[<p>от 1 200 руб.</p>]}
+                />
           </div>
         </section>
 

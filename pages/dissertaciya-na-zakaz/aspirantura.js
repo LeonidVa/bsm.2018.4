@@ -70,12 +70,11 @@ const page = () => (
           </a>
         </Link>
         <div className="block-service__list list-4">
-          <Link href="#form-block">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Аспирантские работы</span>
-              <p>От поступления<br/>до защиты</p>
-            </a>
-          </Link>
+            <CardPopInfo
+                url="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu"
+                title="Аспирантские работы"
+                text={[<p>От поступления до защиты</p>]}
+            />
           <CardPopInfo
             url="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu"
             title="Статьи"

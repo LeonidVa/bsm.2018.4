@@ -76,24 +76,24 @@ const page = () => (
           </a>
         </Link>
         <div className="block-service__list list-3">
-          <Link href="/dissertaciya-na-zakaz">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Диссертация<br/>под ключ</span>
-              <p>Берем заботы на себя</p>
-            </a>
-          </Link>
+            <CardPopInfo
+            url="/dissertaciya-na-zakaz"
+                title="Диссертация под ключ"
+              text={[<p>Берем заботы на себя</p>]}
+              />
+
+
           <CardPopInfo
             url="/diplom-mba-na-zakaz"
             title="Консультация автора"
             text={[<p>Прямая связь</p>]}
           />
 
-          <Link href="/dissertaciya-na-zakaz/magisterskaya">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Сопровождение<br/>до защиты</span>
-              <p>Надежно, спокойно</p>
-            </a>
-          </Link>
+                <CardPopInfo
+            url="/dissertaciya-na-zakaz/magisterskaya"
+                    title="Сопровождение до защиты"
+              text={[<p>Надежно, спокойно</p>]}
+            />
         </div>
       </section>
 

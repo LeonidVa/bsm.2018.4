@@ -83,12 +83,11 @@ const page = () => (
             text={[<p>от 23 000 руб.</p>]}
           />
 
-          <Link href="/diplom-mba-na-zakaz">
-            <a className="block-service__list-item">
-              <span className="block-service__list-title">Диплом MBA</span>
-              <p>от <b>25 000</b> руб.</p>
-            </a>
-          </Link>
+            <CardPopInfo
+                url="/diplom-mba-na-zakaz"
+                title="Диплом MBA"
+                text={[<p>от 25 000 руб.</p>]}
+            />
         </div>
       </section>
 

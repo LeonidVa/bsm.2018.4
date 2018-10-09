@@ -25,6 +25,7 @@ import links from 'data/linksBlockConfig'
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
 import CardPopInfo from "components/common/CardPopInfo";
+import servicecards from "data/servicecards";
 
 
 const page = () => (

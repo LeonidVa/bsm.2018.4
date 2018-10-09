@@ -23,6 +23,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'data/linksBlockConfig'
 import ImageBlock from "../../../components/common/ImageBlock";
 import CardPopInfo from "components/common/CardPopInfo";
+import servicecards from "data/servicecards";
 
 
 const page = () => (

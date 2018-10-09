@@ -17,6 +17,7 @@ import CurrentOffer from 'components/content/offers/CurrentOffer';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../components/common/ImageBlock";
 import CardPopInfo from "components/common/CardPopInfo";
+import servicecards from "data/servicecards";
 
 const page = () => (
   <Wrapper title="Помощь студентам в написании работ - заказать дипломную, курсовую, магистерскую и другие работы в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90"

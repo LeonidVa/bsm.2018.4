@@ -26,6 +26,7 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
 import disser from "../../../data/linksBlock/disser";
 import CardPopInfo from "components/common/CardPopInfo";
+import servicecards from "data/servicecards";
 
 const page = () => (
   <Wrapper title="Сколько стоит кандидатская диссертация – цена кандидатской диссертации от 150 000 рублей | Закажите кандидатскую диссертацию по выгодной стоимости, в компании «BeSmarter!». Тел. +7 (495) 772-40-90."

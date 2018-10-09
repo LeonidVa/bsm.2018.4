@@ -25,6 +25,7 @@ import disser from 'data/linksBlock/disser';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
 import CardPopInfo from "components/common/CardPopInfo";
+import servicecards from "data/servicecards";
 
 const page = () => (
   <Wrapper title="Сколько стоит написать диссертацию – стоимость диссертации от 150 000 рублей | Написание диссертации по выгодным ценам в компании «BeSmarter!». Тел. +7 (495) 772-40-90."

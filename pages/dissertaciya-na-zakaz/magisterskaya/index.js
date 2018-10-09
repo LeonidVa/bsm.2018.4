@@ -26,6 +26,7 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
 import Video from "../../../components/common/VideoBlock";
 import CardPopInfo from "components/common/CardPopInfo";
+import servicecards from "data/servicecards";
 
 
 const page = () => (

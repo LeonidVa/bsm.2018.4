@@ -22,7 +22,8 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
 import CardPopInfo from "components/common/CardPopInfo";
-
+import servicecards from "data/servicecards";
+import React from "react";
 
 const page = () => (
   <Wrapper title="Разные статьи о том, как подготовиться студенту!" description="Полезные статьи в помощь студентам и аспирантам, читайте на сайте BeSmarter!">
@@ -97,60 +98,61 @@ const page = () => (
             </a>
           </Link>
           <div className="block-service__list list-4">
+              <CardPopInfo
+                  title={servicecards["Пакет «Успешная Защита»"].title}
+                  text={servicecards["Пакет «Успешная Защита»"].text}
+                  description={servicecards["Пакет «Успешная Защита»"].description}
+              />
+
             <CardPopInfo
-              url="/razrabotka-diplomnogo-proekta"
-              title="Пакет «Успешная Защита»"
-              text={[<p>от 5 000 руб.</p>]}
+                title={servicecards["Доклад"].title}
+                text={servicecards["Доклад"].text}
+                description={servicecards["Доклад"].description}
+            />
+
+
+            <CardPopInfo
+                title={servicecards["Оригинальность текста"].title}
+                text={servicecards["Оригинальность текста"].text}
+              description={servicecards["Оригинальность текста"].description}
             />
 
             <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Доклад"
-              text={[<p>от 1 500 руб.</p>]}
-            />
-
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Оригинальность текста"
-              text={[<p>Во всех системах</p>]}
-            />
-
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Ответы к защите"
-              text={[<p>от 200 руб.</p>]}
+                title={servicecards["Ответы к защите"].title}
+                text={servicecards["Ответы к защите"].text}
+              description={servicecards["Ответы к защите"].description}
             />
 
           </div>
           <div className="block-service__list list-5">
             <CardPopInfo
-              url="/razrabotka-diplomnogo-proekta"
-              title="Мини-диплом Раскладка"
-              text={[<p>от 2 000 руб.</p>]}
+                title={servicecards["Мини-диплом Раскладка"].title}
+                text={servicecards["Мини-диплом Раскладка"].text}
+              description={servicecards["Мини-диплом Раскладка"].description}
             />
 
             <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Получение по главам"
-              text={[<p>Гибкие условия</p>]}
+                title={servicecards["Получение по главам"].title}
+                text={servicecards["Получение по главам"].text}
+              description={servicecards["Получение по главам"].description}
             />
 
             <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Аннотация Отзыв Рецензия"
-              text={[<p>от 1 200 руб.</p>]}
+                title={servicecards["Аннотация Отзыв Рецензия"].title}
+                text={servicecards["Аннотация Отзыв Рецензия"].text}
+              description={servicecards["Аннотация Отзыв Рецензия"].description}
             />
 
             <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Слайды"
-              text={[<p>от 350 руб.</p>]}
+                title={servicecards["Слайды"].title}
+                text={servicecards["Слайды"].text}
+              description={servicecards["Слайды"].description}
             />
 
             <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Распечатка Переплеты"
-              text={[<p>от 1 200 руб.</p>]}
+                title={servicecards["Распечатка Переплеты"].title}
+                text={servicecards["Распечатка Переплеты"].text}
+              description={servicecards["Распечатка Переплеты"].description}
             />
 
           </div>

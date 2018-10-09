@@ -4,13 +4,13 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'data/dopraboty'
 
 import FormOrder from 'components/common/forms/Big/Order';
 import FormEstimate from 'components/common/forms/Big/Estimate';
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/diplom'
+import infoBlockConfig from 'data/infoBlock/diplom'
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 

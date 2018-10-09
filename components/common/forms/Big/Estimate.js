@@ -1,5 +1,5 @@
 import Form from './index'
-import fields from 'components/config/form/main';
+import fields from 'data/form/main';
 
 export default () => (
     <Form

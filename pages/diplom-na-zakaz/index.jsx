@@ -6,28 +6,30 @@ import NavRow from "components/common/NavRow";
 import MessBlock from "components/common/MessBlock";
 
 import ProfitsBlockSlider from "components/common/ProfitsBlockSlider";
-import dopy from "components/config/dopraboty";
+import dopy from "data/dopraboty";
 
 import FormOrder from "components/common/forms/Big/Order";
 import FormEstimate from "components/common/forms/Big/Estimate";
-import fields from "components/config/form/main";
+import fields from "data/form/main";
 
 import InfoBlock from "components/common/InfoBlock";
-import infoBlockConfig from "components/config/infoBlock/diplom";
+import infoBlockConfig from "data/infoBlock/diplom";
 
 import CurrentOffer from "components/content/offers/CurrentOffer";
 
-import reviewBlockConfig from "components/config/reviewBlockConfig";
+import reviewBlockConfig from "data/reviewBlockConfig";
 import ReviewBlockSlider from "components/common/ReviewBlockSlider";
 
 import LinksBlock from "components/common/LinksBlock";
-import links from "components/config/linksBlock/diplom";
+import links from "data/linksBlock/diplom";
 
 import Video from "components/common/VideoBlock";
 import MetaTags from "react-meta-tags";
 import ImageBlock from "../../components/common/ImageBlock";
 
 import CardPopInfo from "components/common/CardPopInfo";
+import servicecards from "data/servicecards";
+
 
 const page = () => (
   <Wrapper
@@ -99,11 +101,11 @@ const page = () => (
             text={[<p>от 23 000 руб.</p>]}
           />
 
-            <CardPopInfo
-                url="/diplom-mba-na-zakaz"
-                title="Диплом MBA"
-                text={[<p>от 25 000 руб.</p>]}
-            />
+          <CardPopInfo
+            url="/diplom-mba-na-zakaz"
+            title="Диплом MBA"
+            text={[<p>от 25 000 руб.</p>]}
+          />
         </div>
       </section>
 
@@ -124,18 +126,18 @@ const page = () => (
           </a>
         </Link>
         <div className="block-service__list list-4">
+
           <CardPopInfo
+            url="/razrabotka-diplomnogo-proekta"
             title="Пакет «Успешная Защита»"
             text={[<p>от 5 000 руб.</p>]}
-            url="#"
-            description={[
-              <div>
-                Что опаснее — груша или вакцина? Можно ли отравиться
-                «органическим» рисом? А бывают ли «натуральные» вещества в
-                принципе?
-              </div>
-            ]}
           />
+
+          <CardPopInfo
+            title={servicecards["Пакет «Успешная Защита»"].title}
+            text={servicecards["Пакет «Успешная Защита»"].text}
+          />
+
           <CardPopInfo
             title="Доклад"
             text={[<p>от 1 500 руб.</p>]}

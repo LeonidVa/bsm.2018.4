@@ -23,7 +23,7 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessagersBlock';
 import InfoBlock from 'components/common/InfoBlock';
 import ImageBlock from 'components/common/ImageBlock';
-import infoBlockConfig from 'components/config/infoBlock/diplom'
+import infoBlockConfig from 'data/infoBlock/diplom'
 
 const page = () => (
     <Wrapper title=":тут title который в head:">

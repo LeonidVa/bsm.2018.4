@@ -19,6 +19,6 @@
 
 ### Пример использования
 ```jsx
-import links from 'components/config/linksBlockConfig';
+import links from 'data/linksBlockConfig';
 <LinksBlock links={links}/>
 ```

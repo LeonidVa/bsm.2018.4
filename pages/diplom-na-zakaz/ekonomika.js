@@ -5,22 +5,22 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'data/dopraboty'
 
 import FormOrder from 'components/common/forms/Big/Order';
 import FormEstimate from 'components/common/forms/Big/Estimate';
-import fields from 'components/config/form/main'
+import fields from 'data/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/diplom'
+import infoBlockConfig from 'data/infoBlock/diplom'
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlock/diplom';
+import links from 'data/linksBlock/diplom';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
@@ -103,7 +103,8 @@ const page = () => (
               </div>
             </a>
           </Link>
-          <div className="block-service__list list-4"><CardPopInfo
+          <div className="block-service__list list-4">
+<CardPopInfo
             url="/razrabotka-diplomnogo-proekta"
             title="Пакет «Успешная Защита»"
             text={[<p>от 5 000 руб.</p>]}
@@ -125,7 +126,8 @@ const page = () => (
             />
 
           </div>
-          <div className="block-service__list list-5"><CardPopInfo
+          <div className="block-service__list list-5">
+<CardPopInfo
             url="/razrabotka-diplomnogo-proekta"
             title="Мини-диплом Раскладка"
             text={[<p>от 2 000 руб.</p>]}

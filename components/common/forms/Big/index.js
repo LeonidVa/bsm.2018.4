@@ -8,7 +8,7 @@ import Recaptcha from "react-google-recaptcha";
 import DatePicker from "components/common/DatePicker";
 import "./index.scss"
 
-/*   fields are stored in /components/config/main.js   */
+/*   fields are stored in /data/main.js   */
 
 
 class OrderForm extends BaseForm {

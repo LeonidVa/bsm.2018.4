@@ -70,7 +70,7 @@
 ## Пример использования
 ```jsx
 import OrderForm from 'components/common/OrderForm';
-import {fields} from 'components/config/form/main';
+import {fields} from 'data/form/main';
 
 <OrderForm title="Узнайте стоимость Вашей работы прямо сейчас!"  buttonLabel="Оценить" fields={fields}/>
 ```

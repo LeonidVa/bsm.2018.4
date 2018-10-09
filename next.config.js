@@ -33,6 +33,7 @@ const nextConfig = {
         config.resolve.alias.static = __dirname + '/static/';
         config.resolve.alias.components = __dirname + '/components/';
         config.resolve.alias.utils = __dirname + '/utils/';
+        config.resolve.alias.data = __dirname + '/data/';
 
         /* compression-webpack-plugin creates precompressed *.gz files for nginx gzip_static */
         //const CompressionPlugin = require('compression-webpack-plugin');

@@ -10,8 +10,8 @@ import MapBlock from 'components/common/MapBlock';
 import FormOrder from 'components/common/forms/Big/Order';
 import FormEstimate from 'components/common/forms/Big/Estimate';
 import LinksBlock from 'components/common/LinksBlock'
-import fields from 'components/config/form/main';
-import links from 'components/config/linksBlockConfig';
+import fields from 'data/form/main';
+import links from 'data/linksBlockConfig';
 import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"

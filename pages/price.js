@@ -7,11 +7,11 @@ import Accordion from 'components/common/Accordion'
 import FormOrder from 'components/common/forms/Big/Order';
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
-import reviewBlockConfig from 'components/config/reviewBlockConfig';
-import links from 'components/config/linksBlockConfig';
+import reviewBlockConfig from 'data/reviewBlockConfig';
+import links from 'data/linksBlockConfig';
 import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'data/dopraboty'
 
 
 const page = () => (

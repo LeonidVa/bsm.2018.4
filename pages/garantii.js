@@ -12,15 +12,15 @@ import FormEstimate from 'components/common/forms/Big/Estimate';
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 
-import fields from 'components/config/form/main';
-import reviewBlockConfig from 'components/config/reviewBlockConfig';
-import links from 'components/config/linksBlockConfig';
+import fields from 'data/form/main';
+import reviewBlockConfig from 'data/reviewBlockConfig';
+import links from 'data/linksBlockConfig';
 
 import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'data/dopraboty'
 import MessBlock from "../components/common/MessBlock";
-import infoBlockConfig from "../components/config/infoBlock/diplom";
+import infoBlockConfig from "../data/infoBlock/diplom";
 import InfoBlock from "../components/common/InfoBlock";
 import CurrentOffer from "../components/content/offers/CurrentOffer";
 

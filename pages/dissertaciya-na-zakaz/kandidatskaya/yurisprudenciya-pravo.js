@@ -5,26 +5,26 @@ import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
-import dopy from 'components/config/dopraboty'
+import dopy from 'data/dopraboty'
 
 import FormOrder from 'components/common/forms/Big/Order';
 import FormEstimate from 'components/common/forms/Big/Estimate';
-import fields from 'components/config/form/main'
+import fields from 'data/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
-import infoBlockConfig from 'components/config/infoBlock/disser'
+import infoBlockConfig from 'data/infoBlock/disser'
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 
-import reviewBlockConfig from 'components/config/reviewBlockConfig'
+import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'components/config/linksBlockConfig'
+import links from 'data/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
-import disser from "../../../components/config/linksBlock/disser";
+import disser from "../../../data/linksBlock/disser";
 import CardPopInfo from "components/common/CardPopInfo";
 
 

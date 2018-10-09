@@ -240,7 +240,7 @@
     }
     &-title {
       display: block;
-      font-size: 1.3rem; /* see e*/
+      font-size: 1.3rem;
       color: #ffffff;
       text-decoration: none;
       position: relative;
@@ -270,64 +270,7 @@
     }
   }
   /**************************** Desktop red buttons hover description  ************************************************************/
-  .b-item {
-    color: #ffffff;
-    text-align: center;
-    position: relative;
-    @media (min-width: 661px) {
-      min-height: 10rem;
-    }
-    &-content {
-      p {
-        font-size: 0.6em;
-      }
-    }
-  }
-  .b-item__hovered {
-    @media (max-width: 660px) {
-      box-shadow: none;
-    }
-    @media (min-width: 661px) {
-      position: absolute;
-    }
-    left: 0;
-    width: inherit;
-    height: inherit;
-    overflow: hidden;
-  }
-  .b-item__hovered::-webkit-scrollbar {
-    width: 2px;
-  }
-  .b-item__hovered::-webkit-scrollbar-track {
-    width: 2px;
-  }
-  .b-item__hovered::-webkit-scrollbar-thumb {
-    width: 2px;
-    background: red;
-  }
-  .b-item__hovered-text {
-    padding: 0 1rem 1rem;
-    @media (max-width: 660px) {
-      padding: 0 1rem 1rem;
-    }
-  }
 
-  .b-list-item {
-    /*
-     upper and visible part of button. shadow must be animated with delay,
-     else it will be visible when description opacity is animated.
-     */
-    .b-item__content {
-      position: relative;
-      @media (max-width: 660px) {
-        padding: 0.5em 0;
-      }
-      @media (min-width: 661px) {
-        padding: 2em 2em 1em;
-        transition: all 0.5s cubic-bezier(0, 1, 1, 1);
-      }
-    }
-  }
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* global .b-list-item styles */
@@ -337,26 +280,70 @@
 
   &.link { cursor: pointer; }
 
-  .b-item__content {
-    p { font-size: 1rem; }
-  }
+  .b-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
 
-  & .b-item__hovered-button-wrapper {
-    display: block;
-    width: 100%;
-    padding: 1em;
-  }
-  & .b-item__hovered-button {
-    background-color: white;
-    width: 100%;
+    &-content {
+      p {
+        font-size: 0.6em;
+      }
+    }
+    .b-item__content {
+      position: relative;
+      p { font-size: 1rem; }
+    }
+
+    .b-item__hovered {
+      left: 0;
+      width: inherit;
+      height: inherit;
+      overflow: hidden;
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+      &::-webkit-scrollbar-track {
+        width: 2px;
+      }
+      &::-webkit-scrollbar-thumb {
+        width: 2px;
+        background: red;
+      }
+      &-text {
+        padding: 0 1rem 1rem;
+      }
+      &-button-wrapper {
+        display: block;
+        width: 100%;
+        padding: 1em;
+      }
+      &-button {
+        background-color: white;
+        width: 100%;
+      }
+
+    }
+
   }
 }
 /* mobile .b-list-item styles */
 @media (max-width: 660px) {
   .b-list-item {
+    .b-item__content {
+      padding: 0.5em 0;
+    }
     .b-item__hovered {
+      box-shadow: none;
       transition: all 0.33s ease;
       max-height: 0;
+      &-text {
+        padding: 0 1rem 1rem;
+      }
     }
     &.open {
       .b-item__hovered {
@@ -377,6 +364,15 @@
     animation: z-out 0.33s;
     transition: all 0.33s cubic-bezier(0, 1, 1, 1);
 
+    .b-item {
+      min-height: 10rem;
+    }
+
+    .b-item__content {
+      padding: 0 1em;
+      transition: all 0.5s cubic-bezier(0, 1, 1, 1);
+    }
+
     & .b-item__hovered {
       /* transition: all 0.33s ease-in;
       отвечает за разворачивание description.
@@ -384,6 +380,8 @@
       - all, height+opacity - разворачиваться, но это не очень красиво;
       - только opacity - не разворачиваться, а просто появляться; */
       transition: opacity 0.33s cubic-bezier(0, 1, 1, 1);
+      position: absolute;
+      top: 90%;
       max-height: 0;
       width: 100%;
       margin-top: -1px; /* есть узкая щель при рендеринге над этим блоком. если сдвинуть блок вверх она пропадает. */

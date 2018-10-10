@@ -27,7 +27,7 @@ const nextConfig = {
       development: process.env.NODE_ENV === "development",
       analytics: {
         gaID: 'UA-119183335-1',
-        yaID: '132186',
+        yaID: 132186,
         fbpID: '196710264445109',
       }
     },

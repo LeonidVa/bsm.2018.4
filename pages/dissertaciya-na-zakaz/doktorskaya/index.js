@@ -24,7 +24,8 @@ import links from 'data/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
-import CardPopInfo from "components/common/CardPopInfo";
+import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
+import ServiceBlock from "components/common/ServiceBlock";
 import servicecards from "data/servicecards";
 
 
@@ -143,69 +144,31 @@ const page = () => (
 
       <FormEstimate/>
 
-      <section className="block-service__dis">
-        <section className="block-service">
-          <Link href="/dissertaciya-na-zakaz/doktorskaya">
-            <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
-              <div className="block-service__text gradient-l-black">
-                <span className="block-service__title">Материалы для успешной защиты</span>
-                <p className="block-service__par">Эффектная презентация</p>
-                <p className="block-service__par">Быстро и качественно</p>
-                <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-              </div>
-            </a>
-          </Link>
-          <div className="block-service__list list-4">
-            <CardPopInfo
-              url="/razrabotka-diplomnogo-proekta"
-              title="Монография"
-            />
-
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii"
-              title="Автореферат"
-            />
-
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Оригинальность текста до 98%"
-            />
-
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Получение по главам"
-            />
-
-          </div>
-          <div className="block-service__list list-5">
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Ответы к защите"
-            />
-
-            <CardPopInfo
-              url="/razrabotka-diplomnogo-proekta"
-              title="Доклад Слайды"
-            />
-
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Аннотация Отзыв Рецензия"
-            />
-
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Плакаты к защите"
-            />
-
-            <CardPopInfo
-              url="/dissertaciya-na-zakaz/magisterskaya"
-              title="Распечатка Переплеты"
-            />
-
-          </div>
-        </section>
-      </section>
+      <ServiceBlock
+        image={require('static/images/block/mat-dlya-zash.jpg')}
+        title="Материалы для успешной защиты"
+        text={<div>
+          <p>Не парься сам – доверься нам!</p>
+          <p>Легко разберёшься, точно сдашь!</p>
+          <p>Доступные цены</p>
+          <p>Срочно от 2 часов</p>
+        </div>}
+        cards={[
+          [
+            servicecards["Пакет «Успешная Защита»"],
+            servicecards["Доклад"],
+            servicecards["Оригинальность текста"],
+            servicecards["Ответы к защите"],
+          ],
+          [
+            servicecards["Мини-диплом Раскладка"],
+            servicecards["Получение по главам"],
+            servicecards["Аннотация Отзыв Рецензия"],
+            servicecards["Слайды"],
+            servicecards["Распечатка Переплеты"],
+          ],
+        ]}
+      />
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 

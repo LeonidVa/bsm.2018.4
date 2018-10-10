@@ -24,7 +24,7 @@ class Wrapper extends Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.state.yaID = '0000000000';
+        this.state.yaID = 0;
         if (publicRuntimeConfig.production) {
             this.state.yaID = publicRuntimeConfig.analytics.yaID;
         }

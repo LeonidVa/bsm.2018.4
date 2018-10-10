@@ -71,6 +71,12 @@
         );
       }
     }
+    & p {
+      font-size: 1.4rem;
+      max-width: 24rem;
+      line-height: normal;
+      margin-bottom: 1rem;
+    }
   }
   &__title {
     display: inline-block;
@@ -93,12 +99,7 @@
       font-weight: bold;
     }
   }
-  &__par {
-    font-size: 1.4rem;
-    max-width: 24rem;
-    line-height: normal;
-    margin-bottom: 1rem;
-  }
+
   /********************* Desktop red buttons *******************************************************************/
   &__list {
     display: flex;
@@ -424,4 +425,27 @@
     0% { z-index: 2; }
     100% { z-index: 2; }
   }
+}
+/**/
+.block-service {
+  &__title {
+    &-underline {
+      position: absolute;
+      height: 1px;
+      width: 0;
+      bottom: 0;
+      left: 0;
+      transition: all 0.33s ease;
+    }
+  }
+
+  &:hover {
+    &__title {
+      &-underline {
+        width: 100%;
+        transition: all 0.33s ease;
+      }
+    }
+  }
+
 }

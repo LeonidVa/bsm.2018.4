@@ -25,9 +25,10 @@ import links from 'data/linksBlockConfig';
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
-import CardPopInfo from "components/common/CardPopInfo";
+import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
+import ServiceBlock from "components/common/ServiceBlock";
 import servicecards from "data/servicecards";
-
+import MatZashMan from "components/common/ServiceBlock/ready-made/MatZashMan";
 
 const page = () => (
   <Wrapper title="Диплом MBA (мва, мба) – заказать диплом MBA! Помощь в написании дипломной работы mba | Диплом mba на заказ в Москве – Besmarter!"
@@ -86,68 +87,31 @@ const page = () => (
         </div>
       </section>
 
-      <section className="block-service">
-        <div className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/mat-dlya-zash.jpg') + ")",}}>
-          <div className="block-service__text gradient-l-black">
-            <span className="block-service__title">Материалы для успешной защиты</span>
-            <p className="block-service__par">Не парься сам – доверься нам!</p>
-            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-            <p className="block-service__par">Доступные цены</p>
-            <p className="block-service__par">Срочно от 2 часов</p>
-          </div>
-        </div>
-        <div className="block-service__list list-4">
-          <CardPopInfo
-            title={servicecards["Пакет «Успешная Защита»"].title}
-            text={servicecards["Пакет «Успешная Защита»"].text}
-            description={servicecards["Пакет «Успешная Защита»"].description}
-          />
-
-          <CardPopInfo
-            title={servicecards["Доклад"].title}
-            text={servicecards["Доклад"].text}
-            description={servicecards["Доклад"].description}
-          />
-          <CardPopInfo
-            title={servicecards["Оригинальность текста"].title}
-            text={servicecards["Оригинальность текста"].text}
-            description={servicecards["Оригинальность текста"].description}
-          />
-          <CardPopInfo
-            title={servicecards["Ответы к защите"].title}
-            text={servicecards["Ответы к защите"].text}
-            description={servicecards["Ответы к защите"].description}
-          />
-
-        </div>
-        <div className="block-service__list list-5">
-          <CardPopInfo
-            title={servicecards["Мини-диплом Раскладка"].title}
-            text={servicecards["Мини-диплом Раскладка"].text}
-            description={servicecards["Мини-диплом Раскладка"].description}
-          />
-          <CardPopInfo
-            title={servicecards["Получение по главам"].title}
-            text={servicecards["Получение по главам"].text}
-            description={servicecards["Получение по главам"].description}
-          />
-          <CardPopInfo
-            title={servicecards["Аннотация Отзыв Рецензия"].title}
-            text={servicecards["Аннотация Отзыв Рецензия"].text}
-            description={servicecards["Аннотация Отзыв Рецензия"].description}
-          />
-          <CardPopInfo
-            title={servicecards["Слайды"].title}
-            text={servicecards["Слайды"].text}
-            description={servicecards["Слайды"].description}
-          />
-          <CardPopInfo
-            title={servicecards["Распечатка Переплеты"].title}
-            text={servicecards["Распечатка Переплеты"].text}
-            description={servicecards["Распечатка Переплеты"].description}
-          />
-        </div>
-      </section>
+      <ServiceBlock
+        image={require('static/images/block/mat-dlya-zash.jpg')}
+        title="Материалы для успешной защиты"
+        text={<div>
+          <p>Не парься сам – доверься нам!</p>
+          <p>Легко разберёшься, точно сдашь!</p>
+          <p>Доступные цены</p>
+          <p>Срочно от 2 часов</p>
+        </div>}
+        cards={[
+          [
+            servicecards["Пакет «Успешная Защита»"],
+            servicecards["Доклад"],
+            servicecards["Оригинальность текста"],
+            servicecards["Ответы к защите"],
+          ],
+          [
+            servicecards["Мини-диплом Раскладка"],
+            servicecards["Получение по главам"],
+            servicecards["Аннотация Отзыв Рецензия"],
+            servicecards["Слайды"],
+            servicecards["Распечатка Переплеты"],
+          ],
+        ]}
+      />
 
       <section className="block-text">
         <h1 className="block-text__title">

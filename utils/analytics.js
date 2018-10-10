@@ -82,7 +82,7 @@ function StatInstance() {
       return null;
     }
     const value = 10000;
-    self.ReactGA.ReactGAEvent({category: "contacts", action: "phone_click", value});
+    self.ReactGAEvent({category: "contacts", action: "phone_click", value});
     self.ym('reachGoal', 'phone_click', {value});
     self.ReactPixelEventCustom('phone_click', {value})
   };
@@ -92,7 +92,7 @@ function StatInstance() {
     }
     const value = 10000;
     self.ym('reachGoal', 'email_click', {value});
-    self.ReactGA.ReactGAEvent({category: "contacts", action: "email_click", value});
+    self.ReactGAEvent({category: "contacts", action: "email_click", value});
     self.ReactPixelEventCustom('email_click', {value})
   };
   self.triggerTarget.messengerClicked = (targetID) => {
@@ -101,7 +101,7 @@ function StatInstance() {
     }
     const value = 10000;
     self.ym('reachGoal', 'messenger_click', {category: "chat", label: targetID, value});
-    self.ReactGA.ReactGAEvent({category: "chat", action: "messenger_click", label: targetID, value});
+    self.ReactGAEvent({category: "chat", action: "messenger_click", label: targetID, value});
     self.ReactPixelEventCustom('messenger_click', {messenger: targetID, value})
   };
   self.triggerTarget.formSubmit = (targetID) => {
@@ -110,7 +110,7 @@ function StatInstance() {
     }
     const value = 20000;
     self.ym('reachGoal', targetID, {category: "form", value});
-    self.ReactGA.ReactGAEvent({category: "form", action: targetID, value});
+    self.ReactGAEvent({category: "form", action: targetID, value});
     self.ReactPixelEventCustom(targetID, {category: "form", value})
   };
 

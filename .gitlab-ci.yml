@@ -17,6 +17,7 @@ before_script:
 
 
 build_job:
+  only: master
   stage: build
   script:
   - yarn -v
@@ -24,6 +25,7 @@ build_job:
   - yarn run build
 
 stage_deploy:
+  only: master
   stage: staging
   script:
   - ssh-add <(echo "$STAGING_PRIVATE_KEY")

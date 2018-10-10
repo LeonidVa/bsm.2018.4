@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Link from "next/link";
 
+
+
 class CardPopInfo extends Component {
   state = {
     isOpen: false

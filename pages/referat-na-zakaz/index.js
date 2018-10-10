@@ -24,254 +24,191 @@ import links from 'data/linksBlock/referatNew';
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
-import CardPopInfo from "components/common/CardPopInfo";
-import servicecards from "data/servicecards";
+import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
+import ServiceBlock from "components/common/ServiceBlock";
+import servicecards from "data/serviceCards";
+import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 
 
 const page = () => (
-    <Wrapper title="Заказать реферат недорого онлайн – сколько стоит написать реферат на заказ в Москве и РФ – цены, сроки под ключ" description="Написание рефератов недорого на заказ! Быстро и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-        <div className="wrapper bg bg-c2 bg-img bg-img5">
+  <Wrapper title="Заказать реферат недорого онлайн – сколько стоит написать реферат на заказ в Москве и РФ – цены, сроки под ключ" description="Написание рефератов недорого на заказ! Быстро и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
+    <div className="wrapper bg bg-c2 bg-img bg-img5">
 
-            <MetaTags>
-                {/* <title></title> */}
-                <meta name="keywords" content="Заказать реферат купить срочно на заказ написать написание онлайн напишу москва где"/>
-            </MetaTags>
+      <MetaTags>
+        {/* <title></title> */}
+        <meta name="keywords" content="Заказать реферат купить срочно на заказ написать написание онлайн напишу москва где"/>
+      </MetaTags>
 
-            <section className="breadcrumbs">
-                <div className="inner">
-                    <Link href="/">
-                        <a>Главная</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="#">
-                        <a>Реферат</a>
-                    </Link>
-                </div>
-            </section>
-
-            <section className="block-nav">
-                <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-            </section>
-            <MessBlock/>
-
-            <section className="block-service">
-                <Link>
-                    <a href="#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ref1.jpg') + ")",}}>
-                        <div className="block-service__text gradient-l-black">
-                            <span className="block-service__title">Реферат</span>
-                            <p className="block-service__par">Не парься сам – доверься нам!</p>
-                            <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                            <p className="block-service__par">От 1 500 руб.</p>
-                            <p className="block-service__par">Срочно от 2 часов</p>
-                        </div>
-                    </a>
-                </Link>
-                <div className="block-service__list list-5">
-                    <CardPopInfo
-                        url="/zakazat-otchet-po-praktike"
-                        title="Отчет по практике"
-                        text={[<p>от 3 000 руб.</p>]}
-                    />
-
-                    <CardPopInfo
-                        url="/kursovaya-rabota-na-zakaz"
-                        title="Курсовая работа"
-                        text={[<p>от 4 000 руб.</p>]}
-                    />
-
-                    <CardPopInfo
-                        url="/kontrolnaya-na-zakaz"
-                        title="Эссе Контрольная"
-                        text={[<p>от 1 500 руб.</p>]}
-                    />
-
-                    <CardPopInfo
-                        url="/stati/kak-podgotovitsya-k-ekzamenu"
-                        title="Экзамены Тесты"
-                        text={[<p>от 200 руб.</p>]}
-                    />
-
-                    <CardPopInfo
-                        url="/kursovoj-proekt-na-zakaz"
-                        title="Курсовой проект"
-                        text={[<p>от 8 000 руб.</p>]}
-                    />
-
-                </div>
-            </section>
-
-            <section className="block-service__dis">
-                <section className="block-service">
-                    <Link href="/zashitit">
-                        <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
-                            <div className="block-service__text gradient-l-black">
-                                <span className="block-service__title">Материалы для успешной защиты</span>
-                                <p className="block-service__par">Не парься сам – доверься нам!</p>
-                                <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                                <p className="block-service__par">Доступные цены</p>
-                                <p className="block-service__par">Срочно от 2 часов</p>
-                            </div>
-                        </a>
-                    </Link>
-                    <div className="block-service__list list-4">
-                        <CardPopInfo
-                            title={servicecards["Пакет «Успешная Защита»"].title}
-                            text={servicecards["Пакет «Успешная Защита»"].text}
-                            description={servicecards["Пакет «Успешная Защита»"].description}
-                        />
-                        <CardPopInfo
-                            title={servicecards["Доклад"].title}
-                            text={servicecards["Доклад"].text}
-                            description={servicecards["Доклад"].description}
-                        />
-                        <CardPopInfo
-                            title={servicecards["Оригинальность текста"].title}
-                            text={servicecards["Оригинальность текста"].text}
-                            description={servicecards["Оригинальность текста"].description}
-                        />
-                        <CardPopInfo
-                            title={servicecards["Ответы к защите"].title}
-                            text={servicecards["Ответы к защите"].text}
-                            description={servicecards["Ответы к защите"].description}
-                        />
-
-                    </div>
-                    <div className="block-service__list list-5">
-                        <CardPopInfo
-                            title={servicecards["Мини-диплом Раскладка"].title}
-                            text={servicecards["Мини-диплом Раскладка"].text}
-                            description={servicecards["Мини-диплом Раскладка"].description}
-                        />
-                        <CardPopInfo
-                            title={servicecards["Получение по главам"].title}
-                            text={servicecards["Получение по главам"].text}
-                            description={servicecards["Получение по главам"].description}
-                        />
-                        <CardPopInfo
-                            title={servicecards["Аннотация Отзыв Рецензия"].title}
-                            text={servicecards["Аннотация Отзыв Рецензия"].text}
-                            description={servicecards["Аннотация Отзыв Рецензия"].description}
-                        />
-                        <CardPopInfo
-                            title={servicecards["Слайды"].title}
-                            text={servicecards["Слайды"].text}
-                            description={servicecards["Слайды"].description}
-                        />
-                        <CardPopInfo
-                            title={servicecards["Распечатка Переплеты"].title}
-                            text={servicecards["Распечатка Переплеты"].text}
-                            description={servicecards["Распечатка Переплеты"].description}
-                        />
-
-                    </div>
-                </section>
-            </section>
-
-            <section className="block-text">
-                <h1 className="block-text__title">
-                    Заказать реферат недорого
-                </h1>
-                <p className="block-text__par">
-                    Неприятная особенность рефератов заключается в том, что о них (в отличие от экзаменов или курсовой) легко забыть. И внезапно выясняется, что сдавать работу нужно завтра-послезавтра, а у вас совсем ничего не готово.
-                </p>
-                <p className="block-text__par">
-                    Можно, конечно судорожно броситься в библиотеку или попытаться на скорую руку переделать чей-то старый реферат. Но уверяем вас, вся эта спешка в лучшем случае закончится удовлетворительной оценкой, а в худшем – «неудом» и недопуском к сессии.
-                </p>
-                <p className="block-text__par">
-                    Мы предлагаем вам более надежный вариант – срочно написать реферат на заказ силами компании BeSmarter! Мы выполним работу максимально быстро, качественно и по доступной цене.
-                </p>
-            </section>
-
-            <FormEstimate/>
-
-            <ImageBlock imageSrc={require('static/images/block/referat-na-zak.jpg')}/>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Что вы получите?
-                </h2>
-                <ul>
-                    <li>
-                        <b>Гарантию пунктуальности. </b>У нас можно заказать реферат срочно – от 24 часов. Точное время сдачи прописывается в официальном договоре, так что волноваться не придется.
-                    </li>
-                    <li>
-                        <b>Гарантию оригинальности. </b>Написание рефератов на заказ в компании BeSmarter! осуществляется «с нуля». Уникальность текста проверяется на нескольких онлайн-сервисах.
-                    </li>
-                    <li>
-                        <b>Гарантию конфиденциальности. </b>Факт нашего сотрудничества останется строго между нами. Обязательства о неразглашении также фиксируются в договоре.
-                    </li>
-                </ul>
-                <p className="block-text__par">
-                    В BeSmarter! вы сможете написать реферат на заказ срочно, не опасаясь мошенничества, плагиата и недобросовестного отношения.
-                </p>
-            </section>
-
-            <InfoBlock infoBlockConfig={infoBlockConfig}/>
-
-            <ProfitsBlockSlider profitBlockConfig={dopy}/>
-
-            <CurrentOffer/>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    А как насчет качества?
-                </h2>
-                <p className="block-text__par">
-                    Это наша особая гордость. Компания BeSmarter! – единственное место, где заказать реферат можно у действующего преподавателя вуза с кандидатской ученой степенью. Мы не пользуемся услугами фрилансеров-копирайтеров – только квалифицированные научные кадры с огромным опытом написания подобных работ.
-                </p>
-                <p className="block-text__par">
-                    Каждый реферат проходит фирменную многоступенчатую систему контроля для проверки его уникальности, грамотности оформления и соответствия вашим требованиям. Но даже после получения готовой работы вы имеете право потребовать бесплатные правки. Наша главная цель – ваша хорошая оценка!
-                </p>
-            </section>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Сколько стоит реферат на заказ
-                </h2>
-                <p className="block-text__par">
-                    Как и для любого другого товара или услуги, если вы желаете купить работу, цена будет определяться ее индивидуальными особенностями:
-                </p>
-                <ul>
-                    <li>
-                        <b>Специальность. </b>По гуманитарным дисциплинам рефераты на заказ обычно стоят недорого, в то время как для технических предметов цены в среднем выше (до 2 раз).
-                    </li>
-                    <li>
-                        <b>Требования. </b>В первую очередь, это фактический объем текста – чем его больше, тем пропорционально выше стоимость. Также влияет высокая уникальность (выше 80%) – написать реферат на заказ со 100%-м показателем на всех сервисах будет дороже.
-                    </li>
-                    <li>
-                        <b>Срочность. </b>Если вы хотите заказать работу недорого, постарайтесь оформить заявку как можно раньше.
-                    </li>
-                </ul>
-            </section>
-
-            <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-
-            <ImageBlock imageSrc={require('static/images/block/ref-na-zakaz.jpg')}/>
-
-            <section className="block-text">
-                <h2 className="block-text__title">
-                    Как сделать заказ?
-                </h2>
-                <p className="block-text__par">
-                    Самый простой вариант – заказать реферат онлайн (недорого, быстро и удобно), заполнив форму на сайте. Такой вариант подойдет для жителей не только Москвы, но и других регионов России.
-                </p>
-                <p className="block-text__par">
-                    Также можно оформить заказ реферата по телефону <br/>+7 495 772-4090.
-                </p>
-                <p className="block-text__par">
-                    Если же вы живете в Москве, ждем вас по <Link href="/contacts"><b><a>адресу</a></b></Link>: переулок Большой Кисловский, дом 1, строение 2, офис 211.
-                </p>
-                <p className="block-text__par">
-                    Какой бы вы ни выбрали способ заказать реферат – онлайн, звонок или визит, будьте уверены, менеджеры компании BeSmarter! окажут вам квалифицированную помощь в написании реферата.
-                </p>
-            </section>
-
-            <a name="form" id="form"/>
-            <FormOrder/>
-
-            <LinksBlock links={links}/>
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>Реферат</a>
+          </Link>
         </div>
-    </Wrapper>
+      </section>
+
+      <section className="block-nav">
+        <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
+      </section>
+      <MessBlock/>
+
+      <section className="block-service">
+        <Link>
+          <a href="#form" className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/ref1.jpg') + ")",}}>
+            <div className="block-service__text gradient-l-black">
+              <span className="block-service__title">Реферат</span>
+              <p className="block-service__par">Не парься сам – доверься нам!</p>
+              <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+              <p className="block-service__par">От 1 500 руб.</p>
+              <p className="block-service__par">Срочно от 2 часов</p>
+            </div>
+          </a>
+        </Link>
+        <div className="block-service__list list-5">
+          <CardPopInfo
+            url="/zakazat-otchet-po-praktike"
+            title="Отчет по практике"
+            text={[<p>от 3 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kursovaya-rabota-na-zakaz"
+            title="Курсовая работа"
+            text={[<p>от 4 000 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kontrolnaya-na-zakaz"
+            title="Эссе Контрольная"
+            text={[<p>от 1 500 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/stati/kak-podgotovitsya-k-ekzamenu"
+            title="Экзамены Тесты"
+            text={[<p>от 200 руб.</p>]}
+          />
+
+          <CardPopInfo
+            url="/kursovoj-proekt-na-zakaz"
+            title="Курсовой проект"
+            text={[<p>от 8 000 руб.</p>]}
+          />
+
+        </div>
+      </section>
+
+<MatZashGirl/>
+
+      <section className="block-text">
+        <h1 className="block-text__title">
+          Заказать реферат недорого
+        </h1>
+        <p className="block-text__par">
+          Неприятная особенность рефератов заключается в том, что о них (в отличие от экзаменов или курсовой) легко забыть. И внезапно выясняется, что сдавать работу нужно завтра-послезавтра, а у вас совсем ничего не готово.
+        </p>
+        <p className="block-text__par">
+          Можно, конечно судорожно броситься в библиотеку или попытаться на скорую руку переделать чей-то старый реферат. Но уверяем вас, вся эта спешка в лучшем случае закончится удовлетворительной оценкой, а в худшем – «неудом» и недопуском к сессии.
+        </p>
+        <p className="block-text__par">
+          Мы предлагаем вам более надежный вариант – срочно написать реферат на заказ силами компании BeSmarter! Мы выполним работу максимально быстро, качественно и по доступной цене.
+        </p>
+      </section>
+
+      <FormEstimate/>
+
+      <ImageBlock imageSrc={require('static/images/block/referat-na-zak.jpg')}/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Что вы получите?
+        </h2>
+        <ul>
+          <li>
+            <b>Гарантию пунктуальности. </b>У нас можно заказать реферат срочно – от 24 часов. Точное время сдачи прописывается в официальном договоре, так что волноваться не придется.
+          </li>
+          <li>
+            <b>Гарантию оригинальности. </b>Написание рефератов на заказ в компании BeSmarter! осуществляется «с нуля». Уникальность текста проверяется на нескольких онлайн-сервисах.
+          </li>
+          <li>
+            <b>Гарантию конфиденциальности. </b>Факт нашего сотрудничества останется строго между нами. Обязательства о неразглашении также фиксируются в договоре.
+          </li>
+        </ul>
+        <p className="block-text__par">
+          В BeSmarter! вы сможете написать реферат на заказ срочно, не опасаясь мошенничества, плагиата и недобросовестного отношения.
+        </p>
+      </section>
+
+      <InfoBlock infoBlockConfig={infoBlockConfig}/>
+
+      <ProfitsBlockSlider profitBlockConfig={dopy}/>
+
+      <CurrentOffer/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          А как насчет качества?
+        </h2>
+        <p className="block-text__par">
+          Это наша особая гордость. Компания BeSmarter! – единственное место, где заказать реферат можно у действующего преподавателя вуза с кандидатской ученой степенью. Мы не пользуемся услугами фрилансеров-копирайтеров – только квалифицированные научные кадры с огромным опытом написания подобных работ.
+        </p>
+        <p className="block-text__par">
+          Каждый реферат проходит фирменную многоступенчатую систему контроля для проверки его уникальности, грамотности оформления и соответствия вашим требованиям. Но даже после получения готовой работы вы имеете право потребовать бесплатные правки. Наша главная цель – ваша хорошая оценка!
+        </p>
+      </section>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Сколько стоит реферат на заказ
+        </h2>
+        <p className="block-text__par">
+          Как и для любого другого товара или услуги, если вы желаете купить работу, цена будет определяться ее индивидуальными особенностями:
+        </p>
+        <ul>
+          <li>
+            <b>Специальность. </b>По гуманитарным дисциплинам рефераты на заказ обычно стоят недорого, в то время как для технических предметов цены в среднем выше (до 2 раз).
+          </li>
+          <li>
+            <b>Требования. </b>В первую очередь, это фактический объем текста – чем его больше, тем пропорционально выше стоимость. Также влияет высокая уникальность (выше 80%) – написать реферат на заказ со 100%-м показателем на всех сервисах будет дороже.
+          </li>
+          <li>
+            <b>Срочность. </b>Если вы хотите заказать работу недорого, постарайтесь оформить заявку как можно раньше.
+          </li>
+        </ul>
+      </section>
+
+      <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+      <ImageBlock imageSrc={require('static/images/block/ref-na-zakaz.jpg')}/>
+
+      <section className="block-text">
+        <h2 className="block-text__title">
+          Как сделать заказ?
+        </h2>
+        <p className="block-text__par">
+          Самый простой вариант – заказать реферат онлайн (недорого, быстро и удобно), заполнив форму на сайте. Такой вариант подойдет для жителей не только Москвы, но и других регионов России.
+        </p>
+        <p className="block-text__par">
+          Также можно оформить заказ реферата по телефону <br/>+7 495 772-4090.
+        </p>
+        <p className="block-text__par">
+          Если же вы живете в Москве, ждем вас по <Link href="/contacts"><b><a>адресу</a></b></Link>: переулок Большой Кисловский, дом 1, строение 2, офис 211.
+        </p>
+        <p className="block-text__par">
+          Какой бы вы ни выбрали способ заказать реферат – онлайн, звонок или визит, будьте уверены, менеджеры компании BeSmarter! окажут вам квалифицированную помощь в написании реферата.
+        </p>
+      </section>
+
+      <a name="form" id="form"/>
+      <FormOrder/>
+
+      <LinksBlock links={referat}/>
+    </div>
+  </Wrapper>
 );
 
 

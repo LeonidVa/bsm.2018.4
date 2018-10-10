@@ -20,7 +20,7 @@ import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import referat from 'data/linksBlock/referat'
+import links from 'data/linksBlock/filReferat'
 import ImageBlock from "../../components/common/ImageBlock";
 import CardPopInfo from "components/common/CardPopInfo";
 import servicecards from "data/servicecards";
@@ -277,7 +277,7 @@ description={servicecards["Распечатка Переплеты"].description
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <LinksBlock links={referat}/>
+      <LinksBlock links={links}/>
     </div>
   </Wrapper>
 );

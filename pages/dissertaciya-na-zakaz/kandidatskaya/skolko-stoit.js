@@ -24,7 +24,7 @@ import links from 'data/linksBlockConfig';
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
-import disser from "../../../data/linksBlock/disser";
+import disKandSkolko from "../../../data/linksBlock/disKandSkolko";
 import CardPopInfo from "components/common/CardPopInfo";
 import servicecards from "data/servicecards";
 
@@ -294,7 +294,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <LinksBlock links={disser}/>
+      <LinksBlock links={disKandSkolko}/>
 
     </div>
   </Wrapper>

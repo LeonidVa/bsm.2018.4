@@ -23,6 +23,8 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
 import CardPopInfo from "components/common/CardPopInfo";
 import servicecards from "data/servicecards";
+import links from "../../data/linksBlock/stati/kaknaladitOtnosheniya";
+import LinksBlock from "../../components/common/LinksBlock";
 
 
 const page = () => (
@@ -226,6 +228,8 @@ description={servicecards["Распечатка Переплеты"].description
 
       <a name="form" id="form"/>
       <FormOrder/>
+
+        <LinksBlock links={links}/>
 
     </div>
   </Wrapper>

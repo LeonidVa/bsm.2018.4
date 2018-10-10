@@ -24,7 +24,7 @@ class MenuWide extends Component {
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Дипломная работа</a>
+                                    <a href="#" className="menu-desk__list--link--black">Дипломная работа</a>
                                 </li>
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Бухгалтерский учет</a>
@@ -48,13 +48,13 @@ class MenuWide extends Component {
                                     <a href="#" className="menu-desk__list--link">Экономика</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Доработка дипломной работы</a>
+                                    <a href="#" className="menu-desk__list--link--black">Доработка дипломной</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Дипломный проект</a>
+                                    <a href="#" className="menu-desk__list--link--black">Дипломный проект</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Диплом МВА</a>
+                                    <a href="#" className="menu-desk__list--link--black">Диплом МВА</a>
                                 </li>
                             </ul>
                         </div>
@@ -65,22 +65,7 @@ class MenuWide extends Component {
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Кандидатская</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Юриспруденция</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Докторская</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Медицина</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Педагогика</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Магистерская</a>
+                                    <a href="#" className="menu-desk__list--link--black">Магистерская</a>
                                 </li>
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Менеджмент</a>
@@ -94,34 +79,40 @@ class MenuWide extends Component {
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Экономика</a>
                                 </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#" className="menu-desk__list--link--black">Аспирантура</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#" className="menu-desk__list--link--black">Соискательство</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#" className="menu-desk__list--link--black">Автореферат</a>
+                                </li>
                             </ul>
                             <ul className="menu-desk__list">
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Медицина</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Философия</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Экономика</a>
+                                    <a href="#" className="menu-desk__list--link--black">Кандидатская</a>
                                 </li>
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Юриспруденция</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Соискательство</a>
+                                    <a href="#" className="menu-desk__list--link">Экономика</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Аспирантура</a>
+                                    <a href="#" className="menu-desk__list--link">Философия</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Как защитить диссертацию</a>
+                                    <a href="#" className="menu-desk__list--link">Медицина</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Редактирование диссертации</a>
+                                    <a href="#" className="menu-desk__list--link--black">Докторская</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Автореферат для диссертации</a>
+                                    <a href="#" className="menu-desk__list--link">Медицина</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#" className="menu-desk__list--link">Педагогика</a>
                                 </li>
                             </ul>
                         </div>
@@ -135,7 +126,7 @@ class MenuWide extends Component {
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Курсовая работа</a>
+                                    <a href="#" className="menu-desk__list--link--black">Курсовая работа</a>
                                 </li>
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Архитектура</a>
@@ -155,7 +146,9 @@ class MenuWide extends Component {
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Экономика</a>
                                 </li>
-                                <span className="menu-desk__title">Курсовой проект</span>
+                                <li className="menu-desk__list--item">
+                                    <a href="#" className="menu-desk__list--link--black">Курсовой проект</a>
+                                </li>
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Детали машин</a>
                                 </li>
@@ -172,7 +165,7 @@ class MenuWide extends Component {
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Философия</a>
                                 </li>
-                                <span className="menu-desk__title">Практика</span>
+                                <span className="menu-desk__title">Отчет по практике</span>
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Производственная</a>
                                 </li>
@@ -185,12 +178,8 @@ class MenuWide extends Component {
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link">Педагогическая</a>
                                 </li>
-                                <span className="menu-desk__title">Контрольная</span>
-                                <li className="menu-desk__list--item">
-                                <a href="#" className="menu-desk__list--link">Контрольная работа</a></li>
-                                <li className="menu-desk__list--item">
-                                <a href="#" className="menu-desk__list--link">Эссе</a>
-                                </li>
+                                <span className="menu-desk__title">Контрольная работа</span>
+                                <span className="menu-desk__title">Эссе</span>
                             </ul>
                         </div>
                     </div>

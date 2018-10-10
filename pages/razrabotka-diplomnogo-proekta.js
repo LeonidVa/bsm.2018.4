@@ -12,7 +12,7 @@ import CurrentOffer from 'components/content/offers/CurrentOffer';
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'data/linksBlock/diplom';
+import links from 'data/linksBlock/dipRazrab';
 import VideoBlock from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../components/common/ImageBlock";

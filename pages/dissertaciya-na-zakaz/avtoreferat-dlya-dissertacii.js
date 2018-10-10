@@ -28,6 +28,7 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 import servicecards from "data/servicecards";
 
+import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 
 const page = () => (
   <Wrapper title="Заказать автореферат диссертации в Москве и РФ – цены, сроки написания под ключ" description="Заказать автореферат диссертации недорого! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
@@ -146,31 +147,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ServiceBlock
-        image={require('static/images/block/mat-dlya-zash.jpg')}
-        title="Материалы для успешной защиты"
-        text={<div>
-          <p>Не парься сам – доверься нам!</p>
-          <p>Легко разберёшься, точно сдашь!</p>
-          <p>Доступные цены</p>
-          <p>Срочно от 2 часов</p>
-        </div>}
-        cards={[
-          [
-            servicecards["Пакет «Успешная Защита»"],
-            servicecards["Доклад"],
-            servicecards["Оригинальность текста"],
-            servicecards["Ответы к защите"],
-          ],
-          [
-            servicecards["Мини-диплом Раскладка"],
-            servicecards["Получение по главам"],
-            servicecards["Аннотация Отзыв Рецензия"],
-            servicecards["Слайды"],
-            servicecards["Распечатка Переплеты"],
-          ],
-        ]}
-      />
+<MatZashDisser/>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 

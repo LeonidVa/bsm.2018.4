@@ -1,5 +1,5 @@
 import ServiceBlock from 'components/common/ServiceBlock'
-import servicecards from "data/serviceCards/matzashDisser";
+import servicecards from "data/serviceCards/matzash";
 
 
 export default () => (
@@ -7,23 +7,22 @@ export default () => (
         image={require('static/images/block/mat-dlya-zash.jpg')}
         title="Материалы для успешной защиты"
         text={<div>
-          <p>Не парься сам – доверься нам!</p>
-          <p>Легко разберёшься, точно сдашь!</p>
-          <p>Доступные цены</p>
-          <p>Срочно от 2 часов</p>
+          <p>Эффектная презентация</p>
+          <p>Быстро и качественно</p>
+          <p>С нами твоя защита пройдет легко!</p>
         </div>}
         cards={[
           [
-            servicecards["Пакет «Успешная Защита»"],
-            servicecards["Доклад"],
-            servicecards["Оригинальность текста"],
-            servicecards["Ответы к защите"],
+            servicecards["Монография"],
+            servicecards["Автореферат"],
+            servicecards["Оригинальность"],
+            servicecards["По главам"],
           ],
           [
-            servicecards["Мини-диплом Раскладка"],
-            servicecards["Получение по главам"],
+            servicecards["Ответы к защите"],
+            servicecards["Доклад Слайды"],
             servicecards["Аннотация Отзыв Рецензия"],
-            servicecards["Слайды"],
+            servicecards["Плакаты к защите"],
             servicecards["Распечатка Переплеты"],
           ],
         ]}

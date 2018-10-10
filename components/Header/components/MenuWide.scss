@@ -23,7 +23,7 @@
         margin-right: 1em;
         padding-right: 1em;
         &:last-child {
-            width: 50%;
+
             border-right: none;
             margin-right: 0;
             .menu-desk__lists .menu-desk__list {
@@ -66,6 +66,15 @@
             color: #4a4a4a;
             text-decoration: none;
             line-height: normal;
+            &--black {
+                font-weight: bold;
+                text-decoration: none;
+                color: #191919;
+                &:hover {
+                    color: #d84315;
+                    text-decoration: underline;
+                }
+            }
             &:hover {
                 color: #d84315;
                 text-decoration: underline;

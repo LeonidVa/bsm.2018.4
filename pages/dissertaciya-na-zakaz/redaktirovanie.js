@@ -134,7 +134,7 @@ const page = () => (
 
       <section className="block-text">
         <h1 className="block-text__title">
-          Сколько стоит редактирование диссертацию
+          Сколько стоит редактирование диссертации
         </h1>
         <ul>
           <li>

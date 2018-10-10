@@ -48,7 +48,7 @@ class MenuWide extends Component {
                                     <a href="#" className="menu-desk__list--link">Экономика</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Доработка дипломной работы</a>
+                                    <a href="#" className="menu-desk__list--link--black">Доработка дипломной</a>
                                 </li>
                                 <li className="menu-desk__list--item">
                                     <a href="#" className="menu-desk__list--link--black">Дипломный проект</a>
@@ -86,7 +86,7 @@ class MenuWide extends Component {
                                     <a href="#" className="menu-desk__list--link--black">Соискательство</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Автореферат для диссертации</a>
+                                    <a href="#" className="menu-desk__list--link--black">Автореферат</a>
                                 </li>
                             </ul>
                             <ul className="menu-desk__list">

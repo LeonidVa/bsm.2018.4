@@ -96,6 +96,8 @@ const page = () => (
       </section>
 
 <MatZashGirl/>
+
+
       <section className="block-text">
         <h1 className="block-text__title">
           Заказать дипломную работу по педагогике

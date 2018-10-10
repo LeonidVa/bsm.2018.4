@@ -122,6 +122,7 @@ const page = () => (
                         <CardPopInfo
                             title={servicecards["Пакет «Успешная Защита»"].title}
                             text={servicecards["Пакет «Успешная Защита»"].text}
+                            description={servicecards["Пакет «Успешная Защита»"].description}
                         />
                         <CardPopInfo
                             title={servicecards["Доклад"].title}

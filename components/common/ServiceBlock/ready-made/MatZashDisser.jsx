@@ -1,5 +1,5 @@
 import ServiceBlock from 'components/common/ServiceBlock'
-import servicecards from "data/serviceCards/matzash";
+import servicecards from "data/serviceCards";
 
 
 export default () => (

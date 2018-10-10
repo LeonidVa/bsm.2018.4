@@ -27,8 +27,7 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
-import servicecards from "data/servicecards";
-import MatZashMan from "components/common/ServiceBlock/ready-made/MatZashMan";
+import servicecards from "data/serviceCards/";
 
 const page = () => (
   <Wrapper title="Диплом MBA (мва, мба) – заказать диплом MBA! Помощь в написании дипломной работы mba | Диплом mba на заказ в Москве – Besmarter!"

@@ -27,7 +27,7 @@ import ImageBlock from "../../../components/common/ImageBlock";
 import disser from "../../../data/linksBlock/disser";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
-import servicecards from "data/servicecards";
+import servicecards from "data/serviceCards";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 
 const page = () => (

@@ -24,7 +24,7 @@ import links from 'data/linksBlockConfig'
 import ImageBlock from "../../../components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
-import servicecards from "data/servicecards";
+import servicecards from "data/serviceCards";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 
 

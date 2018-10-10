@@ -6,13 +6,28 @@ import Footer from 'components/Footer';
 
 import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/ExitPopup'
 import CallPopup, {callPopupContext, callPopupState} from 'components/modals/Call'
+import getConfig from 'next/config';
+import {YMInitializer} from 'react-yandex-metrika';
+import stat from 'utils/analytics'
 
+const {publicRuntimeConfig = {}} = getConfig();
 
 class Wrapper extends Component {
+    static getInitialProps({req}) {
+        if (typeof window === 'undefined' || window.location === undefined || window.location === null) {
+            return;
+        }
+        const url = window.location.pathname + window.location.search;
+        stat.triggerTarget.pageView(url);
+    }
 
     constructor(props) {
         super(props);
         this.state = {};
+        this.state.yaID = '0000000000';
+        if (publicRuntimeConfig.production) {
+            this.state.yaID = publicRuntimeConfig.analytics.yaID;
+        }
         this.state.exitPopupState = exitPopupState;
         this.state.callPopupState = callPopupState;
 
@@ -127,6 +142,7 @@ class Wrapper extends Component {
                             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
                             <meta name="description" content={this.props.description}/>
                             <link rel="icon" href={require('static/favicon.ico')} type="image/x-icon"/>
+                            <YMInitializer accounts={[this.state.yaID]} options={{defer: true}} version="2"/>
                         </Head>
                         <Header/>
                         {this.props.children}

@@ -6,6 +6,7 @@ import close from "@fortawesome/fontawesome-free-solid/faWindowClose";
 import Dropdown from "react-dropdown";
 import Recaptcha from "react-google-recaptcha";
 import DatePicker from "components/common/DatePicker";
+
 import "./index.scss"
 
 /*   fields are stored in /data/main.js   */

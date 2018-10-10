@@ -16,7 +16,7 @@ import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 import MetaTags from "react-meta-tags";
-import triggerTarget from 'utils/analytics';
+import stat from 'utils/analytics';
 
 class page extends Component {
   render() {
@@ -80,7 +80,7 @@ class page extends Component {
             </h2>
             <p className="block-text__subtitle subtitle-orange">
               <a href="mailto:zakaz@besmarter.ru?subject=Новая заявка" onClick={() => {
-                triggerTarget("email");
+                stat.triggerTarget.emailClicked();
                 return true;
               }} style={{color: "#f4511e"}}>zakaz@besmarter.ru</a>
             </p>

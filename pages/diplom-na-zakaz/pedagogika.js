@@ -85,80 +85,77 @@ const page = () => (
             text={[<p>от 23 000 руб.</p>]}
           />
 
-            <CardPopInfo
-                url="/diplom-mba-na-zakaz"
-                title="Диплом MBA"
-                text={[<p>от 25 000 руб.</p>]}
-            />
+          <CardPopInfo
+            url="/diplom-mba-na-zakaz"
+            title="Диплом MBA"
+            text={[<p>от 25 000 руб.</p>]}
+          />
         </div>
       </section>
 
-      <section className="block-service__dis">
-        <section className="block-service">
-          <Link href="/diplom-na-zakaz">
-            <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
-              <div className="block-service__text gradient-l-black">
-                <span className="block-service__title">Материалы для успешной защиты</span>
-                <p className="block-service__par">Не парься сам – доверься нам!</p>
-                <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-                <p className="block-service__par">Доступные цены</p>
-                <p className="block-service__par">Срочно от 2 часов</p>
-              </div>
-            </a>
-          </Link>
-          <div className="block-service__list list-4">
-<CardPopInfo
-title={servicecards["Пакет «Успешная Защита»"].title}
-text={servicecards["Пакет «Успешная Защита»"].text}
-description={servicecards["Пакет «Успешная Защита»"].description}
-/>
+      <section className="block-service">
+        <Link href="/diplom-na-zakaz">
+          <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/l.jpg') + ")",}}>
+            <div className="block-service__text gradient-l-black">
+              <span className="block-service__title">Материалы для успешной защиты</span>
+              <p className="block-service__par">Не парься сам – доверься нам!</p>
+              <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
+              <p className="block-service__par">Доступные цены</p>
+              <p className="block-service__par">Срочно от 2 часов</p>
+            </div>
+          </a>
+        </Link>
+        <div className="block-service__list list-4">
+          <CardPopInfo
+            title={servicecards["Пакет «Успешная Защита»"].title}
+            text={servicecards["Пакет «Успешная Защита»"].text}
+            description={servicecards["Пакет «Успешная Защита»"].description}
+          />
 
-            <CardPopInfo
-                title={servicecards["Доклад"].title}
-                text={servicecards["Доклад"].text}
-                description={servicecards["Доклад"].description}
-            />
-<CardPopInfo
-title={servicecards["Оригинальность текста"].title}
-text={servicecards["Оригинальность текста"].text}
-description={servicecards["Оригинальность текста"].description}
-/>
-<CardPopInfo
-title={servicecards["Ответы к защите"].title}
-text={servicecards["Ответы к защите"].text}
-description={servicecards["Ответы к защите"].description}
-/>
+          <CardPopInfo
+            title={servicecards["Доклад"].title}
+            text={servicecards["Доклад"].text}
+            description={servicecards["Доклад"].description}
+          />
+          <CardPopInfo
+            title={servicecards["Оригинальность текста"].title}
+            text={servicecards["Оригинальность текста"].text}
+            description={servicecards["Оригинальность текста"].description}
+          />
+          <CardPopInfo
+            title={servicecards["Ответы к защите"].title}
+            text={servicecards["Ответы к защите"].text}
+            description={servicecards["Ответы к защите"].description}
+          />
 
-          </div>
-          <div className="block-service__list list-5">
-<CardPopInfo
-title={servicecards["Мини-диплом Раскладка"].title}
-text={servicecards["Мини-диплом Раскладка"].text}
-description={servicecards["Мини-диплом Раскладка"].description}
-/>
-<CardPopInfo
-title={servicecards["Получение по главам"].title}
-text={servicecards["Получение по главам"].text}
-description={servicecards["Получение по главам"].description}
-/>
-<CardPopInfo
-title={servicecards["Аннотация Отзыв Рецензия"].title}
-text={servicecards["Аннотация Отзыв Рецензия"].text}
-description={servicecards["Аннотация Отзыв Рецензия"].description}
-/>
-<CardPopInfo
-title={servicecards["Слайды"].title}
-text={servicecards["Слайды"].text}
-description={servicecards["Слайды"].description}
-/>
-<CardPopInfo
-title={servicecards["Распечатка Переплеты"].title}
-text={servicecards["Распечатка Переплеты"].text}
-description={servicecards["Распечатка Переплеты"].description}
-/>
-
-          </div>
-        </section>
+        </div>
+        <div className="block-service__list list-5">
+          <CardPopInfo
+            title={servicecards["Мини-диплом Раскладка"].title}
+            text={servicecards["Мини-диплом Раскладка"].text}
+            description={servicecards["Мини-диплом Раскладка"].description}
+          />
+          <CardPopInfo
+            title={servicecards["Получение по главам"].title}
+            text={servicecards["Получение по главам"].text}
+            description={servicecards["Получение по главам"].description}
+          />
+          <CardPopInfo
+            title={servicecards["Аннотация Отзыв Рецензия"].title}
+            text={servicecards["Аннотация Отзыв Рецензия"].text}
+            description={servicecards["Аннотация Отзыв Рецензия"].description}
+          />
+          <CardPopInfo
+            title={servicecards["Слайды"].title}
+            text={servicecards["Слайды"].text}
+            description={servicecards["Слайды"].description}
+          />
+          <CardPopInfo
+            title={servicecards["Распечатка Переплеты"].title}
+            text={servicecards["Распечатка Переплеты"].text}
+            description={servicecards["Распечатка Переплеты"].description}
+          />
+        </div>
       </section>
 
       <section className="block-text">

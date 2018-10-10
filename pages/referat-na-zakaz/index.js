@@ -115,61 +115,54 @@ const page = () => (
           </Link>
           <div className="block-service__list list-4">
             <CardPopInfo
-              url="/zashitit"
-              title="Пакет «Успешная Защита»"
-              text={[<p>от 5 000 руб.</p>]}
+              title={servicecards["Пакет «Успешная Защита»"].title}
+              text={servicecards["Пакет «Успешная Защита»"].text}
+              description={servicecards["Пакет «Успешная Защита»"].description}
             />
 
             <CardPopInfo
-              url="/zashitit"
-              title="Доклад"
-              text={[<p>от 1 500 руб.</p>]}
+              title={servicecards["Доклад"].title}
+              text={servicecards["Доклад"].text}
+              description={servicecards["Доклад"].description}
             />
-
             <CardPopInfo
-              url="/zashitit"
-              title="Оригинальность текста"
-              text={[<p>Во всех системах</p>]}
+              title={servicecards["Оригинальность текста"].title}
+              text={servicecards["Оригинальность текста"].text}
+              description={servicecards["Оригинальность текста"].description}
             />
-
             <CardPopInfo
-              url="/zashitit"
-              title="Ответы к защите"
-              text={[<p>от 200 руб.</p>]}
+              title={servicecards["Ответы к защите"].title}
+              text={servicecards["Ответы к защите"].text}
+              description={servicecards["Ответы к защите"].description}
             />
 
           </div>
           <div className="block-service__list list-5">
             <CardPopInfo
-              url="/zashitit"
-              title="Мини-диплом Раскладка"
-              text={[<p>от 2 000 руб.</p>]}
+              title={servicecards["Мини-диплом Раскладка"].title}
+              text={servicecards["Мини-диплом Раскладка"].text}
+              description={servicecards["Мини-диплом Раскладка"].description}
             />
-
             <CardPopInfo
-              url="/zashitit"
-              title="Получение по главам"
-              text={[<p>Гибкие условия</p>]}
+              title={servicecards["Получение по главам"].title}
+              text={servicecards["Получение по главам"].text}
+              description={servicecards["Получение по главам"].description}
             />
-
             <CardPopInfo
-              url="/zashitit"
-              title="Аннотация Отзыв Рецензия"
-              text={[<p>от 1 200 руб.</p>]}
+              title={servicecards["Аннотация Отзыв Рецензия"].title}
+              text={servicecards["Аннотация Отзыв Рецензия"].text}
+              description={servicecards["Аннотация Отзыв Рецензия"].description}
             />
-
             <CardPopInfo
-              url="/zashitit"
-              title="Слайды"
-              text={[<p>от 350 руб.</p>]}
+              title={servicecards["Слайды"].title}
+              text={servicecards["Слайды"].text}
+              description={servicecards["Слайды"].description}
             />
-
             <CardPopInfo
-              url="/zashitit"
-              title="Распечатка Переплеты"
-              text={[<p>от 1 200 руб.</p>]}
+              title={servicecards["Распечатка Переплеты"].title}
+              text={servicecards["Распечатка Переплеты"].text}
+              description={servicecards["Распечатка Переплеты"].description}
             />
-
           </div>
         </section>
       </section>

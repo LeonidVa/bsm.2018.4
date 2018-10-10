@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import triggerTarget from 'utils/analytics';
+import stat from 'utils/analytics';
 import facebookMessenger from 'static/images/messegers/facebook-messenger.svg'
 import telegram from 'static/images/messegers/telegram.svg'
 import whatsapp from 'static/images/messegers/whatsapp.svg'
@@ -20,7 +20,7 @@ class MessBlock extends Component {
         return <div className="block-mess__list">
             {messegersList.map((item, index) => {
                     const handleClick = () => {
-                        triggerTarget(item.targetID)
+                        stat.triggerTarget.messengerClicked(item.targetID)
                     };
                     return (
                         <a href={item.url}

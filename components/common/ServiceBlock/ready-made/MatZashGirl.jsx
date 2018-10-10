@@ -1,5 +1,6 @@
 import ServiceBlock from 'components/common/ServiceBlock'
-import servicecards from "data/serviceCards";
+import servicecards from "data/serviceBlock/matzash";
+
 
 export default () => (
     <ServiceBlock
@@ -20,9 +21,9 @@ export default () => (
                 servicecards["Ответы к защите"],
             ],
             [
+                servicecards["Аннотация Отзыв Рецензия"],
                 servicecards["Мини-диплом Раскладка"],
                 servicecards["Получение по главам"],
-                servicecards["Аннотация Отзыв Рецензия"],
                 servicecards["Слайды"],
                 servicecards["Распечатка Переплеты"],
             ],

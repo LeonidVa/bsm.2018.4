@@ -1,10 +1,10 @@
 import ServiceBlock from 'components/common/ServiceBlock'
-import servicecards from "data/serviceCards";
+import servicecards from "data/serviceBlock/matzashDisser";
 
 
 export default () => (
     <ServiceBlock
-        color="#000000"
+        color="#333333"
         image={require('static/images/block/mat-dlya-zash.jpg')}
         title="Материалы для успешной защиты"
         text={<div>

@@ -29,7 +29,7 @@ import ImageBlock from "../../components/common/ImageBlock";
 
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
-import servicecards from "data/serviceCards";
+
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 
 

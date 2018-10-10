@@ -18,7 +18,7 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "../components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
-import servicecards from "data/serviceCards";
+
 
 const page = () => (
   <Wrapper title="Помощь студентам в написании работ - заказать дипломную, курсовую, магистерскую и другие работы в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90"

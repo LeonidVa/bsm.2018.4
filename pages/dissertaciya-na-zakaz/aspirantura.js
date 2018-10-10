@@ -26,7 +26,7 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
-import servicecards from "data/serviceCards";
+
 
 
 const page = () => (

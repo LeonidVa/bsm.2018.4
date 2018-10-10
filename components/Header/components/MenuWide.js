@@ -7,17 +7,17 @@ class MenuWide extends Component {
 
     state = {
         showMenu: false
-    }
+    };
 
     componentWillReceiveProps = (nextProps, nextState) => {
         if (nextProps.showMenu !== this.state.showMenu) {
             this.setState({showMenu: nextProps.showMenu})
         }
-    }
+    };
 
     render() {
         return (
-            <div className={"menu-desk " + ( this.state.showMenu ? "open" : "")}>
+            <div className={"menu-desk " + ( this.state.showMenu ? "open" : "")} onMouseLeave={this.props.handler}>
                 <div className="inner">
                     <div className="menu-desk__item">
                         <span className="menu-desk__title">Диплом</span>

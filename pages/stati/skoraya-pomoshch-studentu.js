@@ -20,7 +20,7 @@ import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'data/skoraya-pom-studentu'
+import links from 'data/linksBlock/stati/skorayaPomosh'
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";

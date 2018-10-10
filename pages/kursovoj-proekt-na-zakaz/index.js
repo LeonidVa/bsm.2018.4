@@ -20,7 +20,7 @@ import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import kursovaya from 'data/linksBlock/kursovaya';
+import links from 'data/linksBlock/kursovayaNew';
 
 import Video from 'components/common/VideoBlock';
 
@@ -267,11 +267,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <LinksBlock links={[
-        {url: "/kursovaya-rabota-na-zakaz/skolko-stoit", text: "Сколько стоит курсовая работа"},
-        {url: "/kursovaya-rabota-na-zakaz/sait-kursovyh-rabot", text: "Где заказать курсовую работу"},
-        {url: "/kursovoj-proekt-na-zakaz/po-detalyam-mashin", text: "Заказать курсовой проект по деталям машин"},
-      ]}/>
+      <LinksBlock links={links}/>
     </div>
   </Wrapper>
 );

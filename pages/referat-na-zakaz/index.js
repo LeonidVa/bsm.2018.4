@@ -20,7 +20,7 @@ import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import referat from 'data/linksBlock/referat';
+import links from 'data/linksBlock/referatNew';
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
@@ -276,7 +276,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <LinksBlock links={referat}/>
+      <LinksBlock links={links}/>
     </div>
   </Wrapper>
 );

@@ -20,7 +20,7 @@ import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import LinksBlock from 'components/common/LinksBlock';
-import links from 'data/linksBlock/kursovaya';
+import links from 'data/linksBlock/kursovayaNew';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';

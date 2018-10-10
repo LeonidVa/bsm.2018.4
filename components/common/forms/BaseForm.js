@@ -95,9 +95,7 @@ class BaseForm extends Component {
   };
 
   constructor(props) {
-    console.log('inside big constructor before super', props.formType);
     super(props);
-    console.log('inside big constructor after super', props.formType);
     // Don't call this.setState() here!
     this.dataDefaults = {
       name: "",

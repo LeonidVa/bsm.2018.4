@@ -25,12 +25,11 @@ import links from 'data/linksBlockConfig';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
 import disKandSkolko from "../../../data/linksBlock/disKandSkolko";
-import CardPopInfo from "components/common/CardPopInfo";
-import servicecards from "data/servicecards";
+
+
 import disser from "../../../data/linksBlock/disser";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
-import servicecards from "data/serviceCards";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 
 const page = () => (

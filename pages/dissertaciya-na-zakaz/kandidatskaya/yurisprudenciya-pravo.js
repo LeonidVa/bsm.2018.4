@@ -25,8 +25,8 @@ import links from 'data/linksBlockConfig'
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../../components/common/ImageBlock";
 import disKanYuri from "../../../data/linksBlock/disKanYuri";
-import CardPopInfo from "components/common/CardPopInfo";
-import servicecards from "data/servicecards";
+
+
 import disser from "../../../data/linksBlock/disser";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";

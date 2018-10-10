@@ -21,8 +21,8 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "../../components/common/ImageBlock";
-import CardPopInfo from "components/common/CardPopInfo";
-import servicecards from "data/servicecards";
+
+
 import links from "../../data/linksBlock/stati/idealniy";
 import LinksBlock from "../../components/common/LinksBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";

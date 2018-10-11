@@ -24,7 +24,7 @@ import links from 'data/linksBlock/kursovayaNew';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
-import ImageBlock from "../../components/common/ImageBlock";
+import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
@@ -199,7 +199,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <LinksBlock links={kursovaya}/>
+      <LinksBlock links={links}/>
     </div>
   </Wrapper>
 );

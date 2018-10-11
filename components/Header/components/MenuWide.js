@@ -20,137 +20,101 @@ class MenuWide extends Component {
             <div className={"menu-desk " + ( this.state.showMenu ? "open" : "")} onMouseLeave={this.props.handler}>
                 <div className="inner">
                     <div className="menu-desk__item">
-                        <span className="menu-desk__title">Диплом</span>
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Дипломная работа</a>
+                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                    <a href="#" >Диплом</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#" >Дипломная работа</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Бухгалтерский учет</a>
+                                    <a href="#">Бухгалтерский учет</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Менеджемент</a>
+                                    <a href="#">Менеджемент</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Педагогика</a>
+                                    <a href="#">Педагогика</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Психология</a>
+                                    <a href="#">Психология</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Программирование</a>
+                                    <a href="#">Программирование</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Юриспруденция</a>
+                                    <a href="#">Юриспруденция</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Экономика</a>
+                                    <a href="#">Экономика</a>
                                 </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Доработка дипломной</a>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Доработка дипломной</a>
                                 </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Дипломный проект</a>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Дипломный проект</a>
                                 </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Диплом МВА</a>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Диплом МВА</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
                     <div className="menu-desk__item">
-                        <span className="menu-desk__title">Диссертация</span>
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Магистерская</a>
+                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                    <a href="#">Диссертация</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Магистерская</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Менеджмент</a>
+                                    <a href="#">Менеджмент</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Психология</a>
+                                    <a href="#">Психология</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Юриспруденция</a>
+                                    <a href="#">Юриспруденция</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Экономика</a>
+                                    <a href="#">Экономика</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Аспирантура</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Соискательство</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Автореферат</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Кандидатская</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Аспирантура</a>
+                                    <a href="#">Юриспруденция</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Соискательство</a>
+                                    <a href="#">Экономика</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Автореферат</a>
-                                </li>
-                            </ul>
-                            <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Кандидатская</a>
+                                    <a href="#">Философия</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Юриспруденция</a>
+                                    <a href="#">Медицина</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Докторская</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Экономика</a>
+                                    <a href="#">Медицина</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Философия</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Медицина</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Докторская</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Медицина</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Педагогика</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
-
-                    <div className="menu-desk__item">
-                        <span className="menu-desk__title">Курсовая</span>
-                        <div className="menu-desk__lists">
-                            <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Курсовая работа</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Архитектура</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Бухгалтерский учет</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Педагогика</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Право</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Ппсихология</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Экономика</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link--black">Курсовой проект</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Детали машин</a>
+                                    <a href="#">Педагогика</a>
                                 </li>
                             </ul>
                         </div>
@@ -158,28 +122,76 @@ class MenuWide extends Component {
 
 
 
+
                     <div className="menu-desk__item">
-                        <span className="menu-desk__title">Реферат</span>
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Философия</a>
+                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                    <a href="#">Курсовая</a>
                                 </li>
-                                <span className="menu-desk__title">Отчет по практике</span>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Производственная</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Преддипломная</a>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Курсовая работа</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Учебная</a>
+                                    <a href="#">Архитектура</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="#" className="menu-desk__list--link">Педагогическая</a>
+                                    <a href="#">Бухгалтерский учет</a>
                                 </li>
-                                <span className="menu-desk__title">Контрольная работа</span>
-                                <span className="menu-desk__title">Эссе</span>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Педагогика</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Право</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Ппсихология</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Экономика</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Курсовой проект</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Детали машин</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div className="menu-desk__item">
+                        <div className="menu-desk__lists">
+                            <ul className="menu-desk__list">
+                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                    <a href="#">Реферат</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Философия</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                    <a href="#">Отчет по практике</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Производственная</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Преддипломная</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Учебная</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Педагогическая</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                    <a href="#">Контрольная работа</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                    <a href="#">Эссе</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

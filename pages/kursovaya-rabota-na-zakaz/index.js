@@ -188,7 +188,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <LinksBlock links={kursovaya}/>
+      <LinksBlock links={links}/>
     </div>
   </Wrapper>
 );

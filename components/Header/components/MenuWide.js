@@ -19,11 +19,27 @@ class MenuWide extends Component {
         return (
             <div className={"menu-desk " + ( this.state.showMenu ? "open" : "")} onMouseLeave={this.props.handler}>
                 <div className="inner">
+
+
+
+
                     <div className="menu-desk__item">
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item menu-desk__list--item-header">
-                                    <a href="#" >Диплом</a>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Магистерская</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Менеджмент</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Психология</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Юриспруденция</a>
+                                </li>
+                                <li className="menu-desk__list--item">
+                                    <a href="#">Экономика</a>
                                 </li>
                                 <li className="menu-desk__list--item menu-desk__list--item-subheader">
                                     <a href="#" >Дипломная работа</a>
@@ -62,36 +78,12 @@ class MenuWide extends Component {
                         </div>
                     </div>
 
+
+
+
                     <div className="menu-desk__item">
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item menu-desk__list--item-header">
-                                    <a href="#">Диссертация</a>
-                                </li>
-                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
-                                    <a href="#">Магистерская</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#">Менеджмент</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#">Психология</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#">Юриспруденция</a>
-                                </li>
-                                <li className="menu-desk__list--item">
-                                    <a href="#">Экономика</a>
-                                </li>
-                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
-                                    <a href="#">Аспирантура</a>
-                                </li>
-                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
-                                    <a href="#">Соискательство</a>
-                                </li>
-                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
-                                    <a href="#">Автореферат</a>
-                                </li>
                                 <li className="menu-desk__list--item menu-desk__list--item-subheader">
                                     <a href="#">Кандидатская</a>
                                 </li>
@@ -116,6 +108,15 @@ class MenuWide extends Component {
                                 <li className="menu-desk__list--item">
                                     <a href="#">Педагогика</a>
                                 </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Аспирантура</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Соискательство</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="#">Автореферат</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -123,12 +124,10 @@ class MenuWide extends Component {
 
 
 
+
                     <div className="menu-desk__item">
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item menu-desk__list--item-header">
-                                    <a href="#">Курсовая</a>
-                                </li>
                                 <li className="menu-desk__list--item menu-desk__list--item-subheader">
                                     <a href="#">Курсовая работа</a>
                                 </li>
@@ -165,13 +164,13 @@ class MenuWide extends Component {
                     <div className="menu-desk__item">
                         <div className="menu-desk__lists">
                             <ul className="menu-desk__list">
-                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
                                     <a href="#">Реферат</a>
                                 </li>
                                 <li className="menu-desk__list--item">
                                     <a href="#">Философия</a>
                                 </li>
-                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
                                     <a href="#">Отчет по практике</a>
                                 </li>
                                 <li className="menu-desk__list--item">
@@ -186,10 +185,10 @@ class MenuWide extends Component {
                                 <li className="menu-desk__list--item">
                                     <a href="#">Педагогическая</a>
                                 </li>
-                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
                                     <a href="#">Контрольная работа</a>
                                 </li>
-                                <li className="menu-desk__list--item menu-desk__list--item-header">
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
                                     <a href="#">Эссе</a>
                                 </li>
                             </ul>

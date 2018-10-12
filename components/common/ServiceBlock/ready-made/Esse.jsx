@@ -6,7 +6,7 @@ import React from "react";
 export default () => (
     <ServiceBlock
         color="#333333"
-        image={require('static/images/block/kontr-ekz.jpg')}
+        image={require('static/images/block/esse1.jpg')}
         title="Эссе"
         text={<div>
             <p>Не парься сам – доверься нам!</p>

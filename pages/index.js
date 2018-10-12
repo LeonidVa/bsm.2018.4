@@ -18,6 +18,9 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "../components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
+import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
+import KursovayaRabota from "components/common/ServiceBlock/ready-made/KursovayaRabota"
+import DisserRaboty from "components/common/ServiceBlock/ready-made/DisserRaboty"
 
 
 const page = () => (
@@ -37,122 +40,9 @@ const page = () => (
       </section>
       <MessBlock/>
 
-      <section className="block-service">
-        <Link href="/diplom-na-zakaz">
-          <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Дипломная работа</span>
-              <p className="block-service__par">Быстро и качественно!</p>
-              <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-              <p className="block-service__par">От 14 000 руб.</p>
-              <p className="block-service__par">Срочно от 2 часов</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-3">
-          <CardPopInfo
-            url="/razrabotka-diplomnogo-proekta"
-            title="Дипломный проект"
-            text={[<p>от 21 000 руб.</p>]}
-          />
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/magisterskaya"
-            title="Магистерская диссертация"
-            text={[<p>от 23 000 руб.</p>]}
-          />
-
-          <CardPopInfo
-            url="/diplom-mba-na-zakaz"
-            title="Диплом MBA"
-            text={[<p>от 25 000 руб.</p>]}
-          />
-        </div>
-      </section>
-
-      <section className="block-service">
-        <Link href="/kursovaya-rabota-na-zakaz">
-          <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/7.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-black">
-              <span className="block-service__title">Курсовая работа</span>
-              <p className="block-service__par">Не парься сам – доверься нам!</p>
-              <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-              <p className="block-service__par">От 4 000 руб.</p>
-              <p className="block-service__par">Срочно от 2 часов</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-5">
-          <CardPopInfo
-            url="/zakazat-otchet-po-praktike"
-            title="Отчет по практике"
-            text={[<p>от 3 000 руб.</p>]}
-          />
-
-          <CardPopInfo
-            url="/referat-na-zakaz"
-            title="Реферат"
-            text={[<p>от 1 500 руб.</p>]}
-          />
-          <CardPopInfo
-            url="/kontrolnaya-na-zakaz"
-            title="Эссе Контрольная"
-            text={[<p>от 1 500 руб.</p>]}
-          />
-          <CardPopInfo
-            url="/stati/kak-podgotovitsya-k-ekzamenu"
-            title="Экзамены Тесты"
-            text={[<p>от 200 руб.</p>]}
-          />
-
-          <CardPopInfo
-            url="/kursovoj-proekt-na-zakaz"
-            title="Курсовой проект"
-            text={[<p>от 8 000 руб.</p>]}
-          />
-        </div>
-      </section>
-
-      <section className="block-service">
-        <Link href="/dissertaciya-na-zakaz">
-          <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/3.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Диссертационные работы</span>
-              <p className="block-service__par">Написание и оформление</p>
-              <p className="block-service__par">Публикации</p>
-              <p className="block-service__par">Строго конфиденциально</p>
-              <p className="block-service__par">Индивидуально</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-4">
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/kandidatskaya"
-            title="Аспирантские работы"
-            text={[<p>От поступления до защиты</p>]}
-          />
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/kandidatskaya"
-            title="Статьи"
-            text={[<p>Написание и размещение</p>]}
-          />
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/kandidatskaya"
-            title="Кандидатская диссертация"
-            text={[<p>Автор на связи</p>]}
-          />
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/doktorskaya"
-            title="Докторская диссертация"
-            text={[<p>Конфиденциально</p>]}
-          />
-
-        </div>
-      </section>
+        <Diplom/>
+        <KursovayaRabota/>
+        <DisserRaboty/>
 
       <section className="block-text">
         <h2 className="block-text__title">

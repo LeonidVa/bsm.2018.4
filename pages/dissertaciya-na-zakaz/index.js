@@ -28,6 +28,8 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
+import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
+import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 
 
 const page = () => (
@@ -57,78 +59,9 @@ const page = () => (
       </section>
       <MessBlock/>
 
-      <section className="block-service">
-        <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-          <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Кандидатская диссертация</span>
-              <p className="block-service__par">Написание и оформление</p>
-              <p className="block-service__par">Публикации</p>
-              <p className="block-service__par">Строго конфиденциально</p>
-              <p className="block-service__par">Индивидуально</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-4">
-            <CardPopInfo
-                url="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu"
-                title="Аспирантские работы"
-                text={[<p>От поступления до защиты</p>]}
-            />
-          <CardPopInfo
-            url="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu"
-            title="Статьи"
-            text={[<p>Написание и размещение</p>]}
-          />
+        <KandidatDis/>
 
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii"
-            title="Автореферат"
-            text={[<p>Строго по ГОСТу</p>]}
-          />
-
-          <CardPopInfo
-            url="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu"
-            title="Апробация"
-            text={[<p>Реальные эксперименты</p>]}
-          />
-
-        </div>
-      </section>
-
-      <section className="block-service">
-        <Link href="/dissertaciya-na-zakaz/doktorskaya">
-          <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Докторская диссертация</span>
-              <p className="block-service__par">Актуальность и научная новизна</p>
-              <p className="block-service__par">Ваши и наши данные</p>
-              <p className="block-service__par">Строго конфиденциально</p>
-              <p className="block-service__par">Индивидуально</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-3">
-          <CardPopInfo
-            url="/razrabotka-diplomnogo-proekta"
-            title="Прямая связь с автором"
-            text={[<p>Постоянный контроль</p>]}
-          />
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/magisterskaya"
-            title="Публикации"
-            text={[<p>Журналы ВАК и иностранные</p>]}
-          />
-
-          <CardPopInfo
-            url="/diplom-mba-na-zakaz"
-            title="Обзор литературы"
-            text={[<p>Свежие источники</p>]}
-          />
-
-        </div>
-      </section>
+        <DoctorskayaDis/>
 
       <section className="block-text">
         <ul className="marker-dot">
@@ -143,7 +76,7 @@ const page = () => (
           </li>
         </ul>
         <p className="block-text__par">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;защититесь!
+          &nbsp;&nbsp;&nbsp;&nbsp;защититесь!
         </p>
       </section>
 

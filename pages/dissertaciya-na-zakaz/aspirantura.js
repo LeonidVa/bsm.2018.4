@@ -26,6 +26,8 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
+import KandidatDis from "../../components/common/ServiceBlock/ready-made/KandidatDis";
+import DoctorskayaDis from "../../components/common/ServiceBlock/ready-made/DoctorskayaDis";
 
 
 
@@ -59,76 +61,9 @@ const page = () => (
       </section>
       <MessBlock/>
 
-      <section className="block-service">
-        <Link href="/dissertaciya-na-zakaz/kandidatskaya">
-          <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/kandidat.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Кандидатская диссертация</span>
-              <p className="block-service__par">Написание и оформление</p>
-              <p className="block-service__par">Публикации</p>
-              <p className="block-service__par">Строго конфиденциально</p>
-              <p className="block-service__par">Индивидуально</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-4">
-          <CardPopInfo
-            url="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu"
-            title="Аспирантские работы"
-            text={[<p>От поступления до защиты</p>]}
-          />
-          <CardPopInfo
-            url="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu"
-            title="Статьи"
-            text={[<p>Написание и размещение</p>]}
-          />
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii"
-            title="Автореферат"
-            text={[<p>Строго по ГОСТу</p>]}
-          />
-          <CardPopInfo
-            url="/stati/kak-podgotovitsya-i-postupit-v-aspiranturu"
-            title="Апробация"
-            text={[<p>Реальные эксперименты</p>]}
-          />
+        <KandidatDis/>
 
-        </div>
-      </section>
-
-      <section className="block-service">
-        <Link href="/dissertaciya-na-zakaz/doktorskaya">
-          <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/doctorskaya.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Докторская диссертация</span>
-              <p className="block-service__par">Актуальность и научная новизна</p>
-              <p className="block-service__par">Ваши и наши данные</p>
-              <p className="block-service__par">Строго конфиденциально</p>
-              <p className="block-service__par">Индивидуально</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-3">
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/doktorskaya"
-            title="Прямая связь с автором"
-            text={[<p>Постоянный контроль</p>]}
-          />
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/doktorskaya"
-            title="Публикации"
-            text={[<p>Журналы ВАК и иностранные</p>]}
-          />
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/doktorskaya"
-            title="Обзор литературы"
-            text={[<p>Свежие источники</p>]}
-          />
-
-        </div>
-      </section>
+        <DoctorskayaDis/>
 
       <a name="form-block" id="form-block"/>
       <section className="block-text">

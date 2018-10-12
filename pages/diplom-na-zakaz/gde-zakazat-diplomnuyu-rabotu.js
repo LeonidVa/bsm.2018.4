@@ -29,7 +29,7 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
-
+import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
 
 const page = () => (
   <Wrapper title="Где заказать дипломную работу – лучше заказать дипломную работу в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
@@ -62,38 +62,7 @@ const page = () => (
       </section>
       <MessBlock/>
 
-      <section className="block-service">
-        <Link href="/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu#form">
-          <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Дипломная работа</span>
-              <p className="block-service__par">Быстро и качественно!</p>
-              <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-              <p className="block-service__par">От 14 000 руб.</p>
-              <p className="block-service__par">Срочно от 2 часов</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-3">
-          <CardPopInfo
-            url="/razrabotka-diplomnogo-proekta"
-            title="Дипломный проект"
-            text={[<p>от 21 000 руб.</p>]}
-          />
-
-          <CardPopInfo
-            url="/dissertaciya-na-zakaz/magisterskaya"
-            title="Магистерская диссертация"
-            text={[<p>от 23 000 руб.</p>]}
-          />
-
-            <CardPopInfo
-                url="/diplom-mba-na-zakaz"
-                title="Диплом MBA"
-                text={[<p>от 25 000 руб.</p>]}
-            />
-        </div>
-      </section>
+        <Diplom/>
 
      <MatZashGirl/>
 

@@ -29,6 +29,7 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
+import MagisDis from "components/common/ServiceBlock/ready-made/MagisDis"
 
 
 const page = () => (
@@ -66,39 +67,7 @@ const page = () => (
       </section>
       <MessBlock/>
 
-      <section className="block-service">
-        <Link href="#form">
-          <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Магистерская диссертация</span>
-              <p className="block-service__par">Быстро и качественно!</p>
-              <p className="block-service__par">С нами твоя защита пройдет легко!</p>
-              <p className="block-service__par">От 23 000 руб.</p>
-              <p className="block-service__par">Срочно от 2 часов</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-3">
-            <CardPopInfo
-            url="/dissertaciya-na-zakaz"
-                title="Диссертация под ключ"
-              text={[<p>Берем заботы на себя</p>]}
-              />
-
-
-          <CardPopInfo
-            url="/diplom-mba-na-zakaz"
-            title="Консультация автора"
-            text={[<p>Прямая связь</p>]}
-          />
-
-                <CardPopInfo
-            url="/dissertaciya-na-zakaz/magisterskaya"
-                    title="Сопровождение до защиты"
-              text={[<p>Надежно, спокойно</p>]}
-            />
-        </div>
-      </section>
+        <MagisDis/>
 
 <MatZashGirl/>
 

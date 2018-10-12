@@ -30,6 +30,7 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
+import OtchPoPrak from "components/common/ServiceBlock/ready-made/OtchPoPrak"
 
 
 const page = () => (
@@ -62,51 +63,7 @@ const page = () => (
       </section>
       <MessBlock/>
 
-      <section className="block-service">
-        <Link href="#form">
-          <a className="block-service__top color-ff" style={{backgroundImage: "url(" + require('static/images/block/otch-prakrik1.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-black">
-              <span className="block-service__title">Отчет по практике</span>
-              <p className="block-service__par">Не парься сам – доверься нам!</p>
-              <p className="block-service__par">Легко разберёшься, точно сдашь!</p>
-              <p className="block-service__par">От 3 000 руб.</p>
-              <p className="block-service__par">Срочно от 2 часов</p>
-            </div>
-          </a>
-        </Link>
-        <div className="block-service__list list-5">
-          <CardPopInfo
-            url="/zakazat-otchet-po-praktike"
-            title="Отчет по практике"
-            text={[<p>от 3 000 руб.</p>]}
-          />
 
-          <CardPopInfo
-            url="/referat-na-zakaz"
-            title="Реферат"
-            text={[<p>от 1 500 руб.</p>]}
-          />
-
-          <CardPopInfo
-            url="/zakazat-esse"
-            title="Эссе Контрольная"
-            text={[<p>от 1 500 руб.</p>]}
-          />
-
-          <CardPopInfo
-            url="/stati/kak-podgotovitsya-k-ekzamenu"
-            title="Экзамены Тесты"
-            text={[<p>от 200 руб.</p>]}
-          />
-
-          <CardPopInfo
-            url="/kursovoj-proekt-na-zakaz"
-            title="Курсовой проект"
-            text={[<p>от 8 000 руб.</p>]}
-          />
-
-        </div>
-      </section>
 
 <MatZashGirl/>
 

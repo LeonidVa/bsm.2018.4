@@ -7,7 +7,7 @@ export default () => (
     <ServiceBlock
         color="#333333"
         image={require('static/images/block/otch-prakrik1.jpg')}
-        title="Магистерская диссертация"
+        title="Отчет по практике"
         text={<div>
             <p>Не парься сам – доверься нам!</p>
             <p>Легко разберёшься, точно сдашь!</p>

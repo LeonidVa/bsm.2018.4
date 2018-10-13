@@ -16,9 +16,9 @@ export default () => (
         </div>}
         cards={[
             [
-                servicecards["Диссертация под ключ"],
-                servicecards["Консультация автора"],
-                servicecards["Сопровождение до защиты"],
+                servicecards["Дипломный проект"],
+                servicecards["Дипломная работа"],
+                servicecards["Диплом МВА"],
             ],
         ]}
     />

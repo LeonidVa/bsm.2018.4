@@ -8,6 +8,7 @@ class ServiceBlock extends Component {
         color: "",
         title: "",
         text: "",
+        url: "",
         cards: [],
     };
 
@@ -30,6 +31,7 @@ class ServiceBlock extends Component {
                     title={button.title}
                     text={button.text}
                     description={button.description}
+                    url={button.url}
                 />;
             });
             cardsKey++;
@@ -39,9 +41,9 @@ class ServiceBlock extends Component {
 
 
     render() {
-        const {title = "", text = "", image = "", color = ""} = this.props;
+        const {title = "", text = "", image = "", color = "", url = ""} = this.props;
         let top = (
-            <div className="block-service__top" style={{backgroundImage: "url(" + image + ")", color: color}}>
+            <a href={url} className="block-service__top" style={{backgroundImage: "url(" + image + ")", color: color}}>
                 <div className="block-service__text gradient-l-black">
           <span className="block-service__top-title">
             {title}
@@ -49,7 +51,7 @@ class ServiceBlock extends Component {
           </span>
                     {text}
                 </div>
-            </div>
+            </a>
         );
         let cards = this.renderCards();
         return <section className="block-service">{top}{cards}</section>

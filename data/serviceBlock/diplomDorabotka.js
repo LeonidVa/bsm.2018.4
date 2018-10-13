@@ -2,11 +2,12 @@ import React from "react";
 
 export default {
 
-    "Дипломная работа": {
-        title: "Дипломная работа",
-        text: [<p>от 14 000 руб.</p>],
-        url: "/diplom-na-zakaz"
+    "Дипломный проект": {
+        title: "Дипломный проект",
+        text: [<p>от 21 000 руб.</p>],
+        url: "/razrabotka-diplomnogo-proekta"
     },
+
 
     "Магистерская диссертация": {
         title: "Магистерская диссертация",

@@ -7,7 +7,7 @@ export default () => (
     <ServiceBlock
         color="#333333"
         url="#form"
-        image={require('static/images/block/1.jpg')}
+        image={require('static/images/block/111.jpg')}
         title="Дипломный проект"
         text={<div>
             <p>Быстро и качественно!</p>

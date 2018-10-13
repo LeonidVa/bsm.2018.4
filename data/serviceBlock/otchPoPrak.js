@@ -5,7 +5,7 @@ export default {
     "Курсовая работа": {
         title: "Курсовая работа",
         text: [<p>от 4 000 руб.</p>],
-        url: "/zakazat-otchet-po-praktike"
+        url: "/kursovaya-rabota-na-zakaz"
     },
 
     "Реферат": {

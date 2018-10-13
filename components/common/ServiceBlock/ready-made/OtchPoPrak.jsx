@@ -5,7 +5,7 @@ import React from "react";
 
 export default () => (
     <ServiceBlock
-        color="#333333"
+        color="#f5f5f5"
         url="#form"
         image={require('static/images/block/otch-prakrik1.jpg')}
         title="Отчет по практике"

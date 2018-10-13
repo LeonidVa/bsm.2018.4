@@ -11,12 +11,12 @@ export default {
     "Дипломная работа": {
         title: "Дипломная работа",
         text: [<p>от 14 000 руб.</p>],
-        url: "/razrabotka-diplomnogo-proekta"
+        url: "/diplom-na-zakaz"
     },
 
     "Диплом МВА": {
         title: "Диплом МВА",
         text: [<p>от 25 000 руб.</p>],
-        url: "/razrabotka-diplomnogo-proekta"
+        url: "/diplom-mba-na-zakaz"
     },
 };

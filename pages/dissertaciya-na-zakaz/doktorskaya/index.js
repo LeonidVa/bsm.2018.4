@@ -28,7 +28,7 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
-import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
+import DoctorskayaDis1 from "components/common/ServiceBlock/ready-made/DoctorskayaDis1";
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 
 const page = () => (
@@ -63,7 +63,7 @@ const page = () => (
 
 
 
-        <DoctorskayaDis/>
+        <DoctorskayaDis1/>
 
         <KandidatDis/>
 

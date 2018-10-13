@@ -23,12 +23,12 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'data/linksBlock/referatNew';
 
 import MetaTags from 'react-meta-tags';
-import ImageBlock from "../../components/common/ImageBlock";
+import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
-import Referat from "../../components/common/ServiceBlock/ready-made/Referat";
+import Referat from "components/common/ServiceBlock/ready-made/Referat";
 
 
 

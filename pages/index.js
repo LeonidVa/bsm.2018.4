@@ -19,8 +19,8 @@ import ImageBlock from "../components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
-import KursovayaRabota from "components/common/ServiceBlock/ready-made/KursovayaRabota"
-import DisserRaboty from "components/common/ServiceBlock/ready-made/DisserRaboty"
+import KursovayaRabotaMain from "components/common/ServiceBlock/ready-made/KursovayaRabotaMain"
+import DisserRabotyMain from "components/common/ServiceBlock/ready-made/DisserRabotyMain"
 
 
 const page = () => (
@@ -41,8 +41,8 @@ const page = () => (
       <MessBlock/>
 
         <Diplom/>
-        <KursovayaRabota/>
-        <DisserRaboty/>
+        <KursovayaRabotaMain/>
+        <DisserRabotyMain/>
 
       <section className="block-text">
         <h2 className="block-text__title">

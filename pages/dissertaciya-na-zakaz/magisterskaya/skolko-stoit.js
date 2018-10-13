@@ -29,7 +29,7 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
-import MagisDis from "components/common/ServiceBlock/ready-made/MagisDis"
+import MagisDisGdeZakazat from "components/common/ServiceBlock/ready-made/MagisDisGdeZakazat"
 
 
 const page = () => (
@@ -67,7 +67,7 @@ const page = () => (
       </section>
       <MessBlock/>
 
-        <MagisDis/>
+        <MagisDisGdeZakazat/>
 
 <MatZashGirl/>
 

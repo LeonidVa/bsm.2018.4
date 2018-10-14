@@ -23,7 +23,7 @@ export default {
     "Экзамены Тесты": {
         title: "Экзамены Тесты",
         text: [<p>от 200 руб.</p>],
-        url: "stati/kak-podgotovitsya-k-ekzamenu"
+        url: "/stati/kak-podgotovitsya-k-ekzamenu"
     },
 
     "Курсовой проект": {

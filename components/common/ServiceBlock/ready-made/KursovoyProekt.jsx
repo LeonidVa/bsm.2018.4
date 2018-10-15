@@ -5,9 +5,10 @@ import React from "react";
 
 export default () => (
     <ServiceBlock
-        color="#333333"
+        color="#ffffff"
         url="#form"
         image={require('static/images/block/kurs-proekt1.jpg')}
+        gradient="rgba(70,111,131,0.75)"
         title="Курсовой проект"
         text={<div>
             <p>Не парься сам – доверься нам!</p>

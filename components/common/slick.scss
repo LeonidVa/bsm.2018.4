@@ -7,6 +7,7 @@
 //   position: relative;
 //   text-align: center;
 // }
+/*
 .slick-arrow {
     top: -5% !important;
     color: #f4511e !important; 
@@ -92,8 +93,49 @@
 }
 .slick-arrow {
   background-color: grey;
-  /* color: black; */
 }
 .slick-arrow:hover {
   background-color: grey;
+}
+*/
+
+.slick {
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 1023px) {
+    max-width: 100%;
+  }
+  .slick-next,
+  .slick-prev {
+    z-index: 2;
+    @media (max-width: 370px) {
+      transform: scale(3);
+    }
+    @media (max-width: 660px) {
+      transform: scale(4);
+    }
+    @media (min-width: 661px) {
+      transform: scale(5);
+    }
+    &:before {
+      color: #f05638;
+      @media (max-width: 660px) {
+        opacity: 1;
+      }
+    }
+  }
+  .slick-next {
+    right: 5%;
+  }
+  .slick-prev {
+    left: 5%;
+  }
+  @media (max-width: 660px) {
+    .slick-next {
+      right: 7%;
+    }
+    .slick-prev {
+      left: 7%;
+    }
+  }
 }

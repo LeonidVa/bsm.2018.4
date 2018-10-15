@@ -45,8 +45,8 @@ class ProfitSlider extends Component {
 
 
     render() {
-        const {profitBlockConfig} = this.props
-        var settings = {
+        const {profitBlockConfig} = this.props;
+        const settings = {
             dots: false,
             infinite: true,
             slidesToShow: 5,
@@ -54,10 +54,11 @@ class ProfitSlider extends Component {
             autoplay: true,
             autoplaySpeed: 5000,
             pauseOnHover: true,
-            arrows: !isMobile,
+            arrows: true,
+            easing: 'ease',
             responsive: [
                 {
-                    breakpoint: 640,
+                    breakpoint: 660,
                     settings: {
                         slidesToShow: 1,
                     }
@@ -85,7 +86,7 @@ class ProfitSlider extends Component {
         };
         return (
             <section className="block-slider" style={{maxWidth: (profitBlockConfig !== undefined && profitBlockConfig.length) < 5 ? '60%' : '100%'}}>
-                <div className="slick3">
+                <div className="slick">
                     <Slider {...settings}>
                         {renderBlocks(profitBlockConfig)}
                     </Slider>

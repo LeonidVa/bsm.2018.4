@@ -34,7 +34,6 @@ function StatInstance() {
     };
 
     self.init = () => {
-        console.log('process.env.NODE_ENV', process.env.NODE_ENV);
         if (!self.isClient()) {
             return null;
         }
@@ -42,7 +41,7 @@ function StatInstance() {
 
         /* google */
         let gaID = 'UA-000000-00';
-        if (publicRuntimeConfig.production) {
+        if (publicRuntimeConfig.runtime.production) {
             gaID = publicRuntimeConfig.analytics.gaID;
         }
         this.ReactGA.initialize(gaID, {
@@ -54,11 +53,10 @@ function StatInstance() {
 
         /* fb */
         let fbpID = '000000000';
-        if (publicRuntimeConfig.production) {
+        if (publicRuntimeConfig.runtime.production) {
             fbpID = publicRuntimeConfig.analytics.fbpID;
         }
         self.ReactPixel.init(fbpID);
-
     };
 
     self.isClient = () => {
@@ -117,6 +115,7 @@ function StatInstance() {
 
 
     self.init();
+    return self;
 }
 
 const stat = new StatInstance();

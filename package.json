@@ -1,4 +1,5 @@
 {
+  "license": "propietary",
   "scripts": {
     "dev": "next",
     "build": "next build",

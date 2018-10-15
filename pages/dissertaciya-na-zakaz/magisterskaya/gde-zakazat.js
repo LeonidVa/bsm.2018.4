@@ -29,7 +29,7 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
-import MagisDis from "components/common/ServiceBlock/ready-made/MagisDis"
+import MagisDisGdeZakazat from "components/common/ServiceBlock/ready-made/MagisDisGdeZakazat"
 
 const page = () => (
   <Wrapper title="Где заказать (купить) магистерскую диссертацию – можно заказать диссертацию магистра в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="Где заказать магистерскую диссертацию? Лучшее место в Москве, где заказать магистерскую диссертацию можно с гарантией успешной защиты – компания BeSmarter!">
@@ -65,7 +65,7 @@ const page = () => (
       </section>
       <MessBlock/>
 
-        <MagisDis/>
+        <MagisDisGdeZakazat/>
 
 <MatZashGirl/>
 

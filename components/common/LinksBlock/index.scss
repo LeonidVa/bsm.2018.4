@@ -1,6 +1,10 @@
- ul.block-text__links-list {
-    list-style: disc;
+@media (max-width: 660px) {
+.block-text {
+    ul.block-text__links-list {
+        list-style: disc;
         @media (max-width: 660px) {
-            list-style-type: none;
+
         }
     }
+}
+}

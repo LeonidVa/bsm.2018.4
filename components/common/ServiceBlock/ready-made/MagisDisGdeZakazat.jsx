@@ -1,5 +1,5 @@
 import ServiceBlock from 'components/common/ServiceBlock'
-import servicecards from "data/serviceBlock/magisDis";
+import servicecards from "data/serviceBlock/magisDisGdeZakazat";
 import React from "react";
 
 
@@ -17,9 +17,9 @@ export default () => (
         </div>}
         cards={[
             [
-                servicecards["Дипломный проект"],
-                servicecards["Дипломная работа"],
-                servicecards["Диплом МВА"],
+                servicecards["Диссертация под ключ"],
+                servicecards["Консультация автора"],
+                servicecards["Сопровождение до защиты"],
             ],
         ]}
     />

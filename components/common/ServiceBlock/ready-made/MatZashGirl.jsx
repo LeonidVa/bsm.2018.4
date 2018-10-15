@@ -4,7 +4,8 @@ import servicecards from "data/serviceBlock/matzash";
 
 export default () => (
     <ServiceBlock
-        color="#333333"
+        color="#f5f5f5"
+        url=""
         image={require('static/images/block/l.jpg')}
         title="Материалы для успешной защиты"
         text={<div>

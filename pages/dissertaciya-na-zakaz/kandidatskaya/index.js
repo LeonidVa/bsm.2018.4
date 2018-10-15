@@ -30,7 +30,7 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
-import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
+import KandidatDisForm from "components/common/ServiceBlock/ready-made/KandidatDisForm";
 
 
 
@@ -65,7 +65,7 @@ const page = () => (
 
       <MessBlock/>
 
-        <KandidatDis/>
+        <KandidatDisForm/>
 
         <DoctorskayaDis/>
 

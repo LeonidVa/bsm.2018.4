@@ -29,8 +29,8 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
-import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
-import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
+import DoctorskayaDis2 from "components/common/ServiceBlock/ready-made/DoctorskayaDis2";
+import KandidatDisForm from "components/common/ServiceBlock/ready-made/KandidatDisForm";
 
 const page = () => (
   <Wrapper title="Заказать автореферат диссертации в Москве и РФ – цены, сроки написания под ключ" description="Заказать автореферат диссертации недорого! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
@@ -62,9 +62,9 @@ const page = () => (
       </section>
       <MessBlock/>
 
-        <KandidatDis/>
+        <KandidatDisForm/>
 
-        <DoctorskayaDis/>
+        <DoctorskayaDis2/>
 
       <section className="block-text">
         <h1 className="block-text__title">

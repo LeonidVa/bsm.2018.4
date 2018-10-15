@@ -12,7 +12,6 @@ class ServiceBlock extends Component {
     };
 
     renderCards() {
-        console.log(this.props.cards);
         if (this.props.cards === undefined || this.props.cards === null || this.props.cards.length === 0) {
             return "";
         }

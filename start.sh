@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if ! pm2 restart besmarter
+if ! pm2 restart website --update-env
 then
     set -e
-    pm2 start npm --name "besmarter" --kill-timeout 30000 -- run start
+    pm2 start ./ecosystem.config.js
 fi

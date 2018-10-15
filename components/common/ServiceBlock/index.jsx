@@ -45,10 +45,10 @@ class ServiceBlock extends Component {
         let top = (
             <a href={url} className="block-service__top" style={{backgroundImage: "url(" + image + ")", color: color}}>
                 <div className="block-service__text gradient-l-black">
-          <span className="block-service__top-title">
+          <h1 className="block-service__top-title">
             {title}
               <span className="block-service__top-title-underline" style={{backgroundColor: color}}></span>
-          </span>
+          </h1>
                     {text}
                 </div>
             </a>

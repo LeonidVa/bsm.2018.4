@@ -34,7 +34,7 @@ import DiplomDorabotka from "components/common/ServiceBlock/ready-made/DiplomDor
 const page = () => (
   <Wrapper title="Доработка дипломной работы срочно в Москве, заказать исправление диплома – цены и сроки" description="Доработка дипломной работы срочно! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <div className="wrapper bg bg-c2 bg-img bg-img5">
-
+        <h1>Доработка дипломной работы</h1>
       <MetaTags>
         {/* <title></title> */}
         <meta name="keywords" content="доработка дипломной работы диплома корректировка срочно заказать рерайт редактирование цена дописать переделать исправление"/>

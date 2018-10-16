@@ -1,8 +1,14 @@
 import React from "react";
 import App, { Container } from "next/app";
+import Router from "next/router";
 
-import { YMInitializer } from "react-yandex-metrika";
-import { Head } from "next/document";
+import ym, { YMInitializer } from "react-yandex-metrika";
+
+const handleRouteChange = url => {
+  ym("hit", url);
+};
+
+Router.events.on("routeChangeComplete", handleRouteChange);
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -22,7 +28,7 @@ export default class MyApp extends App {
       <Container>
         <YMInitializer
           accounts={[132186]}
-          options={{ defer: true}}
+          options={{ defer: true }}
           version="2"
         />
         <Component {...pageProps} />

@@ -3,7 +3,7 @@ import "./Title.scss"
 
 class Title extends Component {
     render() {
-        return <h1>{this.props.children}</h1>
+        return <div className="inner"><h1>{this.props.children}</h1></div>
     };
 }
 

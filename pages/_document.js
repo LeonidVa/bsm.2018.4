@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
             <html>
             <Head>
                 <meta name="yandex-verification" content="49e34bd8a11a83fb"/>
-                <YMInitializer accounts={[yaID]} options={{defer: true}} version="2"/>
+                <YMInitializer accounts={[132186]} options={{defer: true}} version="2"/>
             </Head>
             <body>
                 <Main/>

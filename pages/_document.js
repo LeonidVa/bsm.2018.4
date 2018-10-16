@@ -1,14 +1,5 @@
 import Document, {Head, Main, NextScript} from 'next/document'
 import {YMInitializer} from 'react-yandex-metrika';
-import getConfig from 'next/config';
-
-const {publicRuntimeConfig = {}} = getConfig();
-
-let yaID = 0;
-if (publicRuntimeConfig.runtime.production) {
-    yaID = publicRuntimeConfig.analytics.yaID;
-}
-
 
 export default class MyDocument extends Document {
     render() {

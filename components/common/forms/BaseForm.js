@@ -86,7 +86,7 @@ class BaseForm extends Component {
           }, _this.onSent);
         }
         _this.clearFormData();
-        console.log(response);
+        //console.log('',response);
       })
       .catch(function (response) {
         //handle error

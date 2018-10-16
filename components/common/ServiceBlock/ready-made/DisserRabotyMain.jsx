@@ -8,6 +8,7 @@ export default () => (
         color="#333333"
         url="/dissertaciya-na-zakaz"
         image={require('static/images/block/3.jpg')}
+        gradient="rgba(167, 172, 176, 0.75)"
         title="Диссертационные работы"
         text={<div>
             <p>Написание и оформление</p>

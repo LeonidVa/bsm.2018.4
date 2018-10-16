@@ -8,6 +8,7 @@ export default () => (
         color="#333333"
         url="#form"
         image={require('static/images/block/j.jpg')}
+        gradient="rgba(199, 212, 229, 0.75)"
         title="Дипломная работа"
         text={<div>
             <p>Быстро и качественно!</p>

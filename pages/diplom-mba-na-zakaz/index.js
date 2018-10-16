@@ -57,7 +57,8 @@ const page = () => (
         <DipMBA/>
 
       <ServiceBlock
-        image={require('static/images/block/mat-dlya-zash.jpg')}
+        image={require('static/images/block/10.jpg')}
+        gradient="rgba(213,222,231,0.75)"
         title="Материалы для успешной защиты"
         text={<div>
           <p>Не парься сам – доверься нам!</p>

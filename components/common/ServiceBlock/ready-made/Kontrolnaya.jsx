@@ -8,6 +8,7 @@ export default () => (
         color="#333333"
         url="#form"
         image={require('static/images/block/kontr-ekz.jpg')}
+        gradient="rgba(255, 255, 255, 0.75)"
         title="Контрольная работа"
         text={<div>
             <p>Не парься сам – доверься нам!</p>

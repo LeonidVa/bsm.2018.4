@@ -3,17 +3,8 @@ import CardPopInfo from "./CardPopInfo";
 import "./serviceBlock.scss"
 
 class ServiceBlock extends Component {
-    state = {
-        image: "",
-        color: "",
-        title: "",
-        text: "",
-        url: "",
-        cards: [],
-    };
 
     renderCards() {
-        console.log(this.props.cards);
         if (this.props.cards === undefined || this.props.cards === null || this.props.cards.length === 0) {
             return "";
         }
@@ -41,14 +32,14 @@ class ServiceBlock extends Component {
 
 
     render() {
-        const {title = "", text = "", image = "", color = "", url = ""} = this.props;
+        const {title = "", text = "", image = "", color = "", url = "", gradient = "rgba(0,0,0,0.5)"} = this.props;
         let top = (
-            <a href={url} className="block-service__top" style={{backgroundImage: "url(" + image + ")", color: color}}>
-                <div className="block-service__text gradient-l-black">
-          <span className="block-service__top-title">
-            {title}
-              <span className="block-service__top-title-underline" style={{backgroundColor: color}}></span>
-          </span>
+            <a href={url} className="block-service__top" style={{backgroundImage: "url(" + image + ")", color}}>
+                <div className="block-service__text" style={{backgroundImage: "linear-gradient(to right, " + gradient + ", transparent)"}}>
+                    <span className="block-service__top-title">
+                        {title}
+                        <span className="block-service__top-title-underline" style={{backgroundColor: color}}></span>
+                    </span>
                     {text}
                 </div>
             </a>

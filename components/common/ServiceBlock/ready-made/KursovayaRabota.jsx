@@ -7,7 +7,8 @@ export default () => (
     <ServiceBlock
         color="#333333"
         url="#form"
-        image={require('static/images/block/kurs-rab.jpg')}
+        image={require('static/images/block/7.jpg')}
+        gradient="rgba(52,192,228,0.75)"
         title="Курсовая работа"
         text={<div>
             <p>Не парься сам – доверься нам!</p>

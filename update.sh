@@ -28,7 +28,6 @@ readonly C_SUCCESS="\e[1;32m"
 readonly C_INFO="\e[1;34m"
 
 # Error codes
-readonly E_DO_NOT_USE=1
 readonly E_CANT_CREATE_FOLDER=2
 readonly E_CANT_CLONE=3
 readonly E_DEPENDENCIES_INSTALL_FAILED=4
@@ -50,14 +49,6 @@ success () {
 info () {
     echo -en "${C_INFO}${1}${C_RESET}\n"
 }
-
-#########################################
-# Just remove this 3 lines after you copy that file outside project folder.
-#########################################
-
-error "Do not use this file directly in project folder."
-error "Make a copy of this file and put it somewhere outside project folder."
-exit ${E_DO_NOT_USE}
 
 #########################################
 # Functions

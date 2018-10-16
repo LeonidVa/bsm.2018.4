@@ -7,7 +7,8 @@ export default () => (
     <ServiceBlock
         color="#333333"
         url="#form"
-        image={require('static/images/block/kandidat.jpg')}
+        image={require('static/images/block/3.jpg')}
+        gradient="rgba(167, 172, 176, 0.75)"
         title="Кандидатская диссертация"
         text={<div>
             <p>Написание и оформление</p>

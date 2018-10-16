@@ -1,8 +1,9 @@
 {
-  "license": "propietary",
+  "license": "UNLICENSED",
+  "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "NODE_ENV=production next build",
     "start": "next start"
   },
   "dependencies": {

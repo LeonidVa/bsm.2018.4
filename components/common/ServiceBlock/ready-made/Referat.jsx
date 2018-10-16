@@ -5,7 +5,7 @@ import React from "react";
 
 export default () => (
     <ServiceBlock
-        color="#333333"
+        color="#000000"
         url="#form"
         image={require('static/images/block/ref1.jpg')}
         gradient="rgba(131,187,148,0.75)"

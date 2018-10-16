@@ -122,17 +122,4 @@ const stat = new StatInstance();
 export default stat;
 
 
-/* Функция может принимать любое количество параметров */
-/*
-export default function triggerTarget(targetID) {
-    console.log('triggered target "' + targetID + '"');
-    try {
-        // код отправки аналитики
-        // ReactGA.ga(...arguments);
-        // или просто ga('create', 'UA-XXXXX-Y', 'auto'); или ga(...arguments);
-    }
-    catch (e) {
-        // инструкции для работы с ошибками
-    }
-}
-*/
+

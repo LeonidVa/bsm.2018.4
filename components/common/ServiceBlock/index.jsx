@@ -32,7 +32,7 @@ class ServiceBlock extends Component {
 
 
     render() {
-        const {title = "", text = "", image = "", color = "", url = "", gradient = "rgba(0,0,0,0.5)"} = this.props;
+        const {title = "", text = "", image = "", color = "#333333", url = "", gradient = "rgba(0,0,0,0.5)"} = this.props;
         let top = (
             <a href={url} className="block-service__top" style={{backgroundImage: "url(" + image + ")", color}}>
                 <div className="block-service__text" style={{backgroundImage: "linear-gradient(to right, " + gradient + ", transparent)"}}>

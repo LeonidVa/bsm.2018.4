@@ -7,7 +7,6 @@ import Footer from 'components/Footer';
 import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/ExitPopup'
 import CallPopup, {callPopupContext, callPopupState} from 'components/modals/Call'
 import getConfig from 'next/config';
-import {YMInitializer} from 'react-yandex-metrika';
 import stat from 'utils/analytics'
 
 const {publicRuntimeConfig = {}} = getConfig();
@@ -142,7 +141,6 @@ class Wrapper extends Component {
                             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
                             <meta name="description" content={this.props.description}/>
                             <link rel="icon" href={require('static/favicon.ico')} type="image/x-icon"/>
-                            <YMInitializer accounts={[this.state.yaID]} options={{defer: true}} version="2"/>
                         </Head>
                         <Header/>
                         {this.props.children}

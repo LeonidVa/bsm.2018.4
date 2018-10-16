@@ -96,7 +96,7 @@ class page extends Component {
             </div>
           </section>
 
-          <MapBlock/>
+            <MapBlock/>
           <section className="block-text">
             <h2 className="block-text__title">
               Как пройти

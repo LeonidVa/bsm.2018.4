@@ -48,8 +48,9 @@ function getIP(req) {
 export default class Error extends React.Component {
   static getInitialProps({err, res, xhr, req}) {
 
-    console.log('req.headers');
-    console.log(req.headers);
+ /*   console.log('req.headers');
+    const {headers =[]}=req;
+    console.log(headers);*/
     ////////////
 
     const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;

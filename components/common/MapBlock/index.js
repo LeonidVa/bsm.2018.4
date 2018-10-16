@@ -1,19 +1,17 @@
 import {YMaps, Map, Placemark} from 'react-yandex-maps';
 
 import {Component} from 'react';
-import './index.scss'
+import './MapBlock.scss'
 
 
 const mapState = {center: [55.753710, 37.605719], zoom: 17};
 
 class FillContainer extends Component {
-    state = {width: '100%', height: '100%'};
 
     render() {
-        const {width, height} = this.state;
         return (
             <YMaps>
-                <Map state={mapState} width={width} height={height}>
+                <Map state={mapState} width="100%" height="100%">
                     <Placemark
                         geometry={{
                             coordinates: [55.753710, 37.605719]

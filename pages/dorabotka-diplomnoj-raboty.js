@@ -70,9 +70,9 @@ const page = () => (
       <ImageBlock imageSrc={require('static/images/block/dip-rabota.jpg')}/>
 
         <section className="block-text">
-            <h2 className="block-text__title">
+            <h1 className="block-text__title">
                 Доработка дипломной работы
-            </h2>
+            </h1>
             <p className="block-text__par">
                 Сроки сдачи становятся минимальными и нужно дописать дипломную работу?
             </p>

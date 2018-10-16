@@ -3966,9 +3966,9 @@ react-slick@^0.23.1:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-react-yandex-maps@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-yandex-maps/-/react-yandex-maps-2.2.0.tgz#032a51e5c3dd8ad40d93650128f0a10099300feb"
+react-yandex-maps@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-yandex-maps/-/react-yandex-maps-2.2.1.tgz#7a129085da193ca3a94089f228a75fc721b10a8b"
   dependencies:
     prop-types "^15.6.1"
 

@@ -7,25 +7,65 @@ import ReactPixel from 'react-facebook-pixel';
 const {publicRuntimeConfig = {}} = getConfig();
 //facebook pixel 196710264445109
 // vk VK-RTRG-228914-6kyV2
-function StatInstance() {
-    const self = this;
-    self.ReactGA = ReactGA;
-    self.ReactGAEvent = (params) => {
-        try {
-            self.ReactGA.event(params);
-        } catch (e) {
-            console.log('GAEvent call failed', e);
-        }
+class StatInstance {
+    ReactPixel = ReactPixel;
+    ReactGA = ReactGA;
+    triggerTarget = {
+        pageView: (url) => {
+            if (!this.isClient()) {
+                return null;
+            }
+            this.ReactGA.pageview(url); //обычно window.location.pathname + window.location.search
+            this.ReactPixel.pageView();
+            this.ym('hit', url);
+        },
+        phoneClicked() {
+            if (!this.isClient()) {
+                return null;
+            }
+            const value = 10000;
+            this.ReactGAEvent({category: "contacts", action: "phone_click", value});
+            this.ym('reachGoal', 'phone_click', {value});
+            this.ReactPixelEventCustom('phone_click', {value})
+        },
+        emailClicked() {
+            if (!this.isClient()) {
+                return null;
+            }
+            const value = 10000;
+            this.ym('reachGoal', 'email_click', {value});
+            this.ReactGAEvent({category: "contacts", action: "email_click", value});
+            this.ReactPixelEventCustom('email_click', {value})
+        },
+        messengerClicked(targetID) {
+            if (!this.isClient()) {
+                return null;
+            }
+            const value = 10000;
+            this.ym('reachGoal', 'messenger_click', {category: "chat", label: targetID, value});
+            this.ReactGAEvent({category: "chat", action: "messenger_click", label: targetID, value});
+            this.ReactPixelEventCustom('messenger_click', {messenger: targetID, value})
+        },
+        formSubmit(targetID) {
+            if (!this.isClient()) {
+                return null;
+            }
+            const value = 20000;
+            this.ym('reachGoal', targetID, {category: "form", value});
+            this.ReactGAEvent({category: "form", action: targetID, value});
+            this.ReactPixelEventCustom(targetID, {category: "form", value})
+        },
     };
-    self.ReactPixel = ReactPixel;
-    self.ReactPixelEventCustom = (event, params) => {
+
+    ReactPixelEventCustom(event, params) {
         try {
-            self.ReactPixel.trackCustom(event, params);
+            this.ReactPixel.trackCustom(event, params);
         } catch (e) {
             console.log('ReactPixelEventCustom call failed', e);
         }
     };
-    self.ym = (method, target, params) => {
+
+    ym(method, target, params) {
         try {
             ym(method, target, params);
         } catch (e) {
@@ -33,8 +73,23 @@ function StatInstance() {
         }
     };
 
-    self.init = () => {
-        if (!self.isClient()) {
+    ReactGAEvent(params) {
+        try {
+            this.ReactGA.event(params);
+        } catch (e) {
+            console.log('GAEvent call failed', e);
+        }
+    };
+
+    isClient() {
+        if (typeof window !== 'undefined' && window !== null && window !== false) {
+            return true;
+        }
+        return false;
+    };
+
+    init() {
+        if (!this.isClient()) {
             return null;
         }
         /* yandex is initialized in <head> */
@@ -56,69 +111,13 @@ function StatInstance() {
         if (publicRuntimeConfig.runtime.production) {
             fbpID = publicRuntimeConfig.analytics.fbpID;
         }
-        self.ReactPixel.init(fbpID);
-    };
-
-    self.isClient = () => {
-        if (typeof window !== 'undefined' && window !== null && window !== false) {
-            return true;
-        }
-        return false;
-    };
-
-    self.triggerTarget = {};
-
-    self.triggerTarget.pageView = (url) => {
-        if (!self.isClient()) {
-            return null;
-        }
-        self.ReactGA.pageview(url); //обычно window.location.pathname + window.location.search
-        self.ReactPixel.pageView();
-        self.ym('hit', url);
-    };
-    self.triggerTarget.phoneClicked = () => {
-        if (!self.isClient()) {
-            return null;
-        }
-        const value = 10000;
-        self.ReactGAEvent({category: "contacts", action: "phone_click", value});
-        self.ym('reachGoal', 'phone_click', {value});
-        self.ReactPixelEventCustom('phone_click', {value})
-    };
-    self.triggerTarget.emailClicked = () => {
-        if (!self.isClient()) {
-            return null;
-        }
-        const value = 10000;
-        self.ym('reachGoal', 'email_click', {value});
-        self.ReactGAEvent({category: "contacts", action: "email_click", value});
-        self.ReactPixelEventCustom('email_click', {value})
-    };
-    self.triggerTarget.messengerClicked = (targetID) => {
-        if (!self.isClient()) {
-            return null;
-        }
-        const value = 10000;
-        self.ym('reachGoal', 'messenger_click', {category: "chat", label: targetID, value});
-        self.ReactGAEvent({category: "chat", action: "messenger_click", label: targetID, value});
-        self.ReactPixelEventCustom('messenger_click', {messenger: targetID, value})
-    };
-    self.triggerTarget.formSubmit = (targetID) => {
-        if (!self.isClient()) {
-            return null;
-        }
-        const value = 20000;
-        self.ym('reachGoal', targetID, {category: "form", value});
-        self.ReactGAEvent({category: "form", action: targetID, value});
-        self.ReactPixelEventCustom(targetID, {category: "form", value})
-    };
-
-
-    self.init();
-    return self;
+        this.ReactPixel.init(fbpID);
+    }
 }
 
+
 const stat = new StatInstance();
+stat.init();
 export default stat;
 
 

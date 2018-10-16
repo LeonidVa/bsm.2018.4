@@ -6,7 +6,7 @@ import React from "react";
 export default () => (
     <ServiceBlock
         color="#333333"
-        gradient="rgba(52, 192, 228, 0.75)"
+        gradient="rgba(52, 192, 228, 0.95), rgba(52, 192, 228, 0.7)"
         url="/kursovaya-rabota-na-zakaz"
         image={require('static/images/block/7.jpg')}
         title="Курсовая работа"

@@ -8,7 +8,7 @@ export default () => (
         color="#000000"
         url="#form"
         image={require('static/images/block/ref1.jpg')}
-        gradient="rgba(131,187,148,0.75)"
+        gradient="rgba(131, 187, 148, 0.95), rgba(131, 187, 148, 0.7)"
         title="Реферат"
         text={<div>
             <p>Не парься сам – доверься нам!</p>

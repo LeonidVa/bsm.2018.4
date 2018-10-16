@@ -58,7 +58,7 @@ const page = () => (
 
       <ServiceBlock
         image={require('static/images/block/10.jpg')}
-        gradient="rgba(213,222,231,0.75)"
+        gradient="rgba(213,222,231,0.95),rgba(213,222,231,0.7)"
         title="Материалы для успешной защиты"
         text={<div>
           <p>Не парься сам – доверься нам!</p>
@@ -149,7 +149,7 @@ const page = () => (
       </section>
 
       <Video>
-        <iframe src="https://www.youtube.com/embed/mzDkG6XRKuc" frameBorder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/mzDkG6XRKuc" frameBorder="0" allowFullScreen></iframe>
       </Video>
 
       <section className="block-text">

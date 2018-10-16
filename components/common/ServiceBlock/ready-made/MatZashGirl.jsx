@@ -7,7 +7,7 @@ export default () => (
         color="#f5f5f5"
         url=""
         image={require('static/images/block/l.jpg')}
-        gradient="rgba(1,136,194,0.75)"
+        gradient="rgba(1, 136, 194, 0.95), rgba(1, 136, 194, 0.7)"
         title="Материалы для успешной защиты"
         text={<div>
             <p>Не парься сам – доверься нам!</p>

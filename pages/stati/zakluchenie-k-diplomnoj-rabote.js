@@ -187,7 +187,7 @@ const page = () => (
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
       <Video>
-        <iframe src="https://www.youtube.com/embed/9szbyVEYtMg" frameBorder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/9szbyVEYtMg" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
       </Video>
 
       <FormOrder/>

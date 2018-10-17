@@ -60,7 +60,7 @@ class MessBlock extends Component {
                 {
                     icon: telegram,
                     title: "Телеграм",
-                    url: "https://t.me/igordata",
+                    url: "https://t.me/besmarter_ru",
                     targetID: "telegram"
                 },
                 {

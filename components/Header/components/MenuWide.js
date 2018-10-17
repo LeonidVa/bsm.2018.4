@@ -109,6 +109,9 @@ class MenuWide extends Component {
                                     <a href="/dissertaciya-na-zakaz/doktorskaya/pedagogika">Педагогика</a>
                                 </li>
                                 <li className="menu-desk__list--item menu-desk__list--item-subheader">
+                                    <a href="/dissertaciya-na-zakaz">Диссертация</a>
+                                </li>
+                                <li className="menu-desk__list--item menu-desk__list--item-subheader">
                                     <a href="/dissertaciya-na-zakaz/aspirantura">Аспирантура</a>
                                 </li>
                                 <li className="menu-desk__list--item menu-desk__list--item-subheader">

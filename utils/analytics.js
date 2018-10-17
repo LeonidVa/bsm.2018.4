@@ -19,7 +19,7 @@ class StatInstance {
             this.ReactPixel.pageView();
             this.ym('hit', url);
         },
-        phoneClicked() {
+        phoneClicked: () => {
             if (!this.isClient()) {
                 return null;
             }
@@ -28,7 +28,7 @@ class StatInstance {
             this.ym('reachGoal', 'phone_click', {value});
             this.ReactPixelEventCustom('phone_click', {value})
         },
-        emailClicked() {
+        emailClicked: () => {
             if (!this.isClient()) {
                 return null;
             }
@@ -37,7 +37,7 @@ class StatInstance {
             this.ReactGAEvent({category: "contacts", action: "email_click", value});
             this.ReactPixelEventCustom('email_click', {value})
         },
-        messengerClicked(targetID) {
+        messengerClicked: (targetID) => {
             if (!this.isClient()) {
                 return null;
             }
@@ -46,7 +46,7 @@ class StatInstance {
             this.ReactGAEvent({category: "chat", action: "messenger_click", label: targetID, value});
             this.ReactPixelEventCustom('messenger_click', {messenger: targetID, value})
         },
-        formSubmit(targetID) {
+        formSubmit: (targetID) => {
             if (!this.isClient()) {
                 return null;
             }

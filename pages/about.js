@@ -19,6 +19,8 @@ import links from 'data/linksBlockConfig';
 import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'data/dopraboty'
+import ContactsPage from "components/common/ServiceBlock/ready-made/ContactsPage";
+import MagisDisAnother from "../components/common/ServiceBlock/ready-made/MagisDisAnother";
 
 
 const page = () => (
@@ -67,19 +69,7 @@ const page = () => (
         </p>
       </section>
 
-      <section className="block-service">
-        <Link href="/price">
-          <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/k.jpg') + ")",}}>
-            <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">От эссе до настоящей диссертации</span>
-              <p className="block-service__par">Уникальные авторские работы</p>
-              <p className="block-service__par">Сложные и срочные</p>
-              <p className="block-service__par">Технические и креативные</p>
-              <p className="block-service__par">На иностранных языках</p>
-            </div>
-          </a>
-        </Link>
-      </section>
+        <MagisDisAnother/>
 
       <section className="block-text">
         <h2 className="block-text__title">

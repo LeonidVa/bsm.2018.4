@@ -17,6 +17,7 @@ import Address from 'components/contacts/Address'
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 import MetaTags from "react-meta-tags";
 import stat from 'utils/analytics';
+import ContactsPage from "components/common/ServiceBlock/ready-made/ContactsPage";
 
 class page extends Component {
   render() {
@@ -54,8 +55,8 @@ class page extends Component {
               Москва, Большой Кисловский переулок, д. 1, стр. 2, офис 211
             </p>
             <p className="block-text__par">
-              Понедельник - пятница <span className="bold">с 10:00 до 19:30</span><br/>
-              Суббота, воскресенье <span className="bold">с 10:00 до 18:30</span>
+              Понедельник - Суббота <span className="bold">с 10:00 до 18:30</span><br/>
+              Воскресенье <span className="bold">- выходной</span>
             </p>
             <p className="block-text__par finish-text">
               Приходите – мы ждём Вас!
@@ -194,20 +195,7 @@ class page extends Component {
             </Address>
           </section>
 
-          <section className="block-service">
-            <Link href="/diplom-na-zakaz">
-              <a className="block-service__top color-33" style={{backgroundImage: "url(" + require('static/images/block/g.jpg') + ")",}}>
-                <div className="block-service__text gradient-l-white">
-                  <span className="block-service__title">Удобный офис</span>
-                  <p className="block-service__par">Всегда на связи 8:00 – 22:00</p>
-                  <p className="block-service__par">Работаем в выходные и праздники</p>
-                  <p className="block-service__par">Уютный офис в Центре</p>
-                  <p className="block-service__par">4 линии метро</p>
-                  <p className="block-service__par">Всего 5 минут пешком от метро</p>
-                </div>
-              </a>
-            </Link>
-          </section>
+          <ContactsPage/>
 
           <FormOrder/>
           <LinksBlock links={links}/>

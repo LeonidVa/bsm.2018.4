@@ -48,7 +48,7 @@ class MessBlock extends Component {
                 {
                     icon: vk,
                     title: "VK",
-                    url: "https://vk.com/im?sel=-129623016",
+                    url: "https://vk.com/besmarter_ru",
                     targetID: "vk"
                 },
                 {
@@ -72,7 +72,7 @@ class MessBlock extends Component {
                 {
                     icon: instagram,
                     title: "Instagram",
-                    url: "https://www.instagram.com/besmarter_moscow/",
+                    url: "https://www.instagram.com/besmarter_ru/",
                     targetID: "instagram"
                 },
             ])}

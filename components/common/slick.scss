@@ -112,12 +112,13 @@
       transform: scale(3);
     }
     @media (max-width: 660px) {
-      transform: scale(4);
+      transform: scale(3.5);
     }
     @media (min-width: 661px) {
-      transform: scale(5);
+      transform: scale(4);
     }
     &:before {
+      line-height: 1.2;
       color: #f05638;
       @media (max-width: 660px) {
         opacity: 1;

@@ -54,7 +54,7 @@ class MessBlock extends Component {
                 {
                     icon: facebookMessenger,
                     title: "Facebook Messenger",
-                    url: "https://www.facebook.com/messages/t/besmarter.better/",
+                    url: "https://www.messenger.com/t/besmarter.better",
                     targetID: "facebook"
                 },
                 {

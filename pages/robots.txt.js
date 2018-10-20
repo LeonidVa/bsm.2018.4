@@ -5,7 +5,7 @@ export default class extends React.Component {
     if (!res) return {};
     res.setHeader('Content-Type', 'application/javascript');
     res.end(`User-agent: *
-Disallow: /`, 'utf8');
+Allow: /`, 'utf8');
     return {}
   }
 

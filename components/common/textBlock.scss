@@ -33,7 +33,7 @@
       list-style-type: none;
     }
     li {
-      list-style-image: url("../static/images/marker.png");
+      list-style-image: url("/static/images/marker.png");
       margin-right: 10px;
     }
   }
@@ -81,6 +81,10 @@
       span {
         margin-right: 3rem;
       }
+    }
+    &.subtitle-orange__micro{
+      color: #f4511e;
+      margin-bottom: .625rem;
     }
     &.subtitle-big {
       font-size: .687rem;

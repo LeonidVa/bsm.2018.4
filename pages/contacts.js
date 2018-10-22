@@ -47,13 +47,17 @@ class page extends Component {
             <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
           </section>
 
+            <div itemScope itemType="http://schema.org/Organization">
           <section className="block-text">
-            <h2 className="block-text__title">
+            <h2 itemprop="name" className="block-text__title">
               Офис
             </h2>
-            <p className="block-text__subtitle subtitle-orange">
-              Москва, Большой Кисловский переулок, д. 1, стр. 2, офис 211
+              <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+            <p className="block-text__subtitle subtitle-orange__micro">
+                <span itemProp="addressLocality">Москва, </span>
+                <span itemProp="streetAddress">Большой Кисловский переулок д. 1, стр. 2, офис 211</span>
             </p>
+              </div>
             <p className="block-text__par">
               Понедельник - Суббота <span className="bold">с 10:00 до 18:30</span><br/>
               Воскресенье <span className="bold">- выходной</span>
@@ -66,8 +70,8 @@ class page extends Component {
               Телефон
             </h2>
             <p className="block-text__subtitle subtitle-orange">
-              <span className="phone">+7 (495) 772-40-90</span>
-              <span className="phone">+7 (495) 772-90-40</span>
+              <span itemprop="telephone" className="phone">+7 (495) 772-40-90</span>
+              <span itemprop="telephone" className="phone">+7 (495) 772-90-40</span>
             </p>
             <p className="block-text__par">
               Понедельник - пятница <span className="bold">с 10:00 до 19:30</span><br/>
@@ -79,7 +83,7 @@ class page extends Component {
             <h2 className="block-text__title">
               Почта
             </h2>
-            <p className="block-text__subtitle subtitle-orange">
+            <p itemprop="email" className="block-text__subtitle subtitle-orange">
               <a href="mailto:zakaz@besmarter.ru?subject=Новая заявка" onClick={() => {
                 stat.triggerTarget.emailClicked();
                 return true;
@@ -96,6 +100,7 @@ class page extends Component {
               <ToggleCallPopup targetID="call_me_contacts"><a className="block-callask__button">Заказать звонок</a></ToggleCallPopup>
             </div>
           </section>
+            </div>
 
             <MapBlock/>
           <section className="block-text">

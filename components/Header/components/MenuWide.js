@@ -48,7 +48,7 @@ class MenuWide extends Component {
                                     <a href="/diplom-na-zakaz/buhgalterskij-uchet">Бухгалтерский учет</a>
                                 </li>
                                 <li className="menu-desk__list--item">
-                                    <a href="/diplom-na-zakaz/menedjment">Менеджемент</a>
+                                    <a href="/diplom-na-zakaz/menedjment">Менеджмент</a>
                                 </li>
                                 <li className="menu-desk__list--item">
                                     <a href="/diplom-na-zakaz/pedagogika">Педагогика</a>

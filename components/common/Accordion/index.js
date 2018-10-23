@@ -54,16 +54,16 @@ class Accordion extends Component {
             buttonEl = <Link href={buttonURL}><a className="big-btn">{buttonLabel}</a></Link>;
         }
         return (
-            <section className="block-text block-accordion" data-accordion="open" style={{paddingBottom: 0}}>
+            <section className="block-accordion" data-accordion="open" style={{paddingBottom: 0}}>
                 <div className="block-accordion__header" onClick={() => this.setState({open: !this.state.open})}>
-                    <h2 className="block-text__title">{title}</h2>
+                    <h2 className="block-accordion__title">{title}</h2>
                     <div className={classes}>
                         <div></div>
                     </div>
                 </div>
                 <div className="block-accordion__body" style={{opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "100000px" : "0"}}>
                     <p className="block-text__par">{this.props.children}</p>
-                    <table>
+                    <table className="block-accordion__table">
                         <tbody>
                         <tr>
                             <th>Вид работы</th>

@@ -80,7 +80,7 @@ const page = () => (
       <MagisDisPricePage/>
 
       <Accordion
-        title="Дипломная работа, от"
+        title="Дипломная работа"
         button={true}
         buttonLabel="Нажми меня"
         buttonURL="#form"
@@ -107,7 +107,7 @@ const page = () => (
       />
 
       <Accordion
-        title="Магистерская диссертация, от"
+        title="Магистерская диссертация"
         button={true}
         buttonLabel="Нажми меня"
         buttonURL="#form"
@@ -133,7 +133,7 @@ const page = () => (
       />
 
       <Accordion
-        title="Дипломная работа MBA, от"
+        title="Дипломная работа MBA"
         button={true}
         buttonLabel="Нажми меня"
         buttonURL="#form"
@@ -154,7 +154,7 @@ const page = () => (
       />
 
       <Accordion
-        title="Курсовая работа, от"
+        title="Курсовая работа"
         button={true}
         buttonLabel="Нажми меня"
         buttonURL="#form"

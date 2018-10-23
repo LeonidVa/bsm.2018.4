@@ -6,6 +6,7 @@
     margin-top: 1.56em;
     position: relative;
     z-index: 1;
+    margin: 5px;
     .inner {
         width: 14.88em;
         @media (max-width: 660px) {
@@ -20,6 +21,7 @@
         font-size: 1em;
         color: #4a4a4a;
         margin-bottom: .94em;
+        line-height: 0.4;
     }
     &__buttons {
         cursor: pointer;

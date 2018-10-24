@@ -140,9 +140,10 @@ const page = () => (
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-      <Video>
-        <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameBorder="0" allowFullScreen></iframe>
-      </Video>
+        <Video>
+            <iframe src="https://www.youtube.com/embed/KM6vU-TKPoE" frameBorder="0"
+                    allow="autoplay; encrypted-media" allowFullScreen></iframe>
+        </Video>
 
       <section className="block-text">
         <h2 className="block-text__title">

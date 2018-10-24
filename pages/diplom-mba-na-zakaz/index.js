@@ -178,7 +178,8 @@ const page = () => (
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
       <Video>
-        <iframe src="//drive.google.com/file/d/159HfczgLjy3uiVHfryJBAP9GLhN3RLHR/preview" frameBorder="0" allowFullScreen></iframe>
+          <iframe src="https://www.youtube.com/embed/sC_LJF0WhXM" frameBorder="0"
+                  allow="autoplay; encrypted-media" allowFullScreen></iframe>
       </Video>
 
       <a name="form" id="form"/>

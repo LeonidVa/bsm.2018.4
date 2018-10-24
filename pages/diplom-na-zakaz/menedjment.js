@@ -155,7 +155,8 @@ const page = () => (
             </section>
 
             <Video>
-                <iframe src="//drive.google.com/file/d/0ByS0VqTi2Rm7R2liV1NPYkN5MVk/preview" frameBorder="0" allowFullScreen></iframe>
+                <iframe src="https://www.youtube.com/embed/KM6vU-TKPoE" frameBorder="0"
+                        allow="autoplay; encrypted-media" allowFullScreen></iframe>
             </Video>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>

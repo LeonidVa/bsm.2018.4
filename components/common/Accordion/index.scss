@@ -51,12 +51,19 @@
     }
     span.spacepricepage {
       padding-left: 309px;
+      @media (max-width: 660px) {
+        padding-left: 122px;
+      }
     }
     span.strint {
       color: #4a4a4a;
       font-weight: 100;
       line-height: 147%;
       font-size: 99%;
+      @media (max-width: 660px) {
+        display: block;
+        width: 53%;
+      }
     }
   }
   &__table {
@@ -72,9 +79,21 @@
       width: 60%;
       text-align: left;
       padding-bottom: 0.875em;
+      @media (max-width: 660px) {
+        text-align: left;
+        width: 29%;
+      }
     }
     td:last-child {
       text-align: right;
+      @media (max-width: 415px) {
+        text-align: left;
+        width: 24%;
+      }
+      @media (max-width: 321px) {
+        text-align: left;
+        width: 44%;
+      }
     }
   }
   &__arrow {
@@ -119,7 +138,15 @@
     margin: 3.12rem 0 0 -2.18rem;
     background-color: #f4511e;
     transition: all .4s;
-    @media (max-width: 660px) {
+    @media (max-width: 415px) {
+      width: 87%;
+      min-width: 273px;
+    }
+    @media (max-width: 400px) {
+      width: 79%;
+      min-width: 273px;
+    }
+    @media (max-width: 321px) {
       width: 68%;
     }
     &:hover {

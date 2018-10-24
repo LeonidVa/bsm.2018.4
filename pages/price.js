@@ -101,7 +101,7 @@ const page = () => (
                     [<Link href="/razrabotka-diplomnogo-proekta"><a className="none">Дипломный проект</a></Link>, "21 000"],
                     [<Link href="/dorabotka-diplomnoj-raboty"><a className="none">Доработка дипломной работы</a></Link>, "по оценке"],
                     ["", ""],
-                    [<span className="strint">Также мы с удовольствием поможем подготовиться к консультации и защите:</span>],
+                    [<span className="strint">Также мы с удовольствием поможем подготовиться к защите и консультации:</span>],
                     ["", ""],
                     ["Сдача по главам", "по оценке"],
                     ["Оформление по ГОСТ", "по оценке"],

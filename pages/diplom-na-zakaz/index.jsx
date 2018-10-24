@@ -162,11 +162,8 @@ const page = () => (
             </section>
 
             <Video>
-                <iframe
-                    src="//vk.com/video_ext.php?oid=372065572&id=456239031&hash=a7e75ba37906d972&hd=2"
-                    frameBorder="0"
-                    allowfullscreen
-                />
+                <iframe src="https://www.youtube.com/embed/KM6vU-TKPoE" frameBorder="0"
+                        allow="autoplay; encrypted-media" allowFullScreen></iframe>
             </Video>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>

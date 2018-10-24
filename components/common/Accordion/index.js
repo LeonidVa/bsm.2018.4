@@ -66,8 +66,8 @@ class Accordion extends Component {
                     <table className="block-accordion__table">
                         <tbody>
                         <tr>
-                            <th>Вид работы</th>
-                            <th>Цена, руб</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         {this.tableRows(rows)}
                         </tbody>

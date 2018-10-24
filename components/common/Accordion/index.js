@@ -67,7 +67,7 @@ class Accordion extends Component {
                         <tbody>
                         <tr>
                             <th></th>
-                            <th></th>
+
                         </tr>
                         {this.tableRows(rows)}
                         </tbody>

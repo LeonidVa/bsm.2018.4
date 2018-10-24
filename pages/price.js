@@ -85,19 +85,19 @@ const page = () => (
                 buttonLabel="Нажми меня"
                 buttonURL="#form"
                 rows={[
-                    [<span style={{fontWeight: "500",color: "black"}}>Результатом обучения в высшем учебном<br/> заведении является написание дипломной<br/>
+                    [<span className="strint">Результатом обучения в высшем учебном<br/> заведении является написание дипломной<br/>
                                 работы. <br/>Наша компания выполняет работы по всем<br/> дисциплинам для разных учебных заведений.</span>],
                     [<Link href="/diplom-na-zakaz"><a className="none">Дипломная работа</a></Link>, "от, рублей"],
-                    ["Стандартный вуз", "12 000"],
-                    ["Вуз с повышенными требованиями", "15 000"],
+                    ["Стандартный ВУЗ", "12 000"],
+                    ["ВУЗ с повышенными требованиями", "15 000"],
                     ["Европейский ВУЗ", "35 000"],
                     ["Колледж", "8 900"],
-                    [<span style={{fontWeight: "500",color: "black"}}>Если у Вас:</span>],
+                    [<span className="strint">Если у Вас:</span>],
                     ["Техническая специальность", "19 000"],
                     ["Иностранный язык", "20 000"],
                     [<Link href="/razrabotka-diplomnogo-proekta"><a className="none">Дипломный проект</a></Link>, "21 000"],
                     [<Link href="/dorabotka-diplomnoj-raboty"><a className="none">Доработка дипломной работы</a></Link>, "по оценке"],
-                    [<span style={{fontWeight: "500",color: "black"}}>Также мы с удовольствием поможем <br/>подготовиться к консультации и защите:</span>],
+                    [<span className="strint">Также мы с удовольствием поможем <br/>подготовиться к консультации и защите:</span>],
                     ["Сдача по главам", "по оценке"],
                     ["Оформление по ГОСТ", "по оценке"],
                     ["Консультация с автором", "1 500"],
@@ -115,7 +115,7 @@ const page = () => (
                 buttonLabel="Нажми меня"
                 buttonURL="#form"
                 rows={[
-                    [<span style={{fontWeight: "500",color: "black"}}>Вид работы <span className="spacePricePage">Цена, руб</span></span>],
+                    [<span className="strint">Вид работы<span className="spacepricepage">Цена, руб</span></span>],
                     ["Стандартный вуз", "12 000"],
                     ["Вуз с повышенными требованиями", "15 000"],
                     ["Техническая специальность", "19 000"],
@@ -142,7 +142,7 @@ const page = () => (
                 buttonLabel="Нажми меня"
                 buttonURL="#form"
                 rows={[
-                    [<span style={{fontWeight: "500",color: "black"}}>Вид работы <span className="spacePricePage">Цена, руб</span></span>],
+                    [<span className="strint">Вид работы<span className="spacepricepage">Цена, руб</span></span>],
                     ["Написание диплома mba", "25 000"],
                     ["Кейсы mba", "5 000"],
                     ["Эссе mbа", "1 500"],
@@ -164,7 +164,7 @@ const page = () => (
                 buttonLabel="Нажми меня"
                 buttonURL="#form"
                 rows={[
-                    [<span style={{fontWeight: "500",color: "black"}}>Вид работы <span className="spacePricePage">Цена, руб</span></span>],
+                    [<span className="strint">Вид работы<span className="spacepricepage">Цена, руб</span></span>],
                     ["Теоретическая", "2 000"],
                     ["С практикой", "3 500"],
                     ["Курсовой проект", "5 000"],
@@ -188,7 +188,7 @@ const page = () => (
                 buttonLabel="Нажми меня"
                 buttonURL="#form"
                 rows={[
-                    [<span style={{fontWeight: "500",color: "black"}}>Вид работы <span className="spacePricePage">Цена, руб</span></span>],
+                    [<span className="strint">Вид работы<span className="spacepricepage">Цена, руб</span></span>],
                     ["Докторская", "450 000"],
                     ["Кандидатская", "180 000"],
                     ["Магистерская", "24 000"],
@@ -218,7 +218,7 @@ const page = () => (
                 buttonLabel="Нажми меня"
                 buttonURL="#form"
                 rows={[
-                    [<span style={{fontWeight: "500",color: "black"}}>Вид работы <span className="spacePricePage">Цена, руб</span></span>],
+                    [<span className="strint">Вид работы<span className="spacepricepage">Цена, руб</span></span>],
                     ["Производственный отчет", "3 000"],
                     ["Преддипломный отчет", "3 000"],
                     ["Дневник практиканта", ""],
@@ -231,7 +231,7 @@ const page = () => (
                 buttonLabel="Нажми меня"
                 buttonURL="#form"
                 rows={[
-                    [<span style={{fontWeight: "500",color: "black"}}>Вид работы <span className="spacePricePage">Цена, руб</span></span>],
+                    [<span className="strint">Вид работы<span className="spacepricepage">Цена, руб</span></span>],
                     ["Теоретический", "1 500"],
                     ["С практикой", "1 500"],
                     ["На иностранном языке", ""],
@@ -244,7 +244,7 @@ const page = () => (
                 buttonLabel="Нажми меня"
                 buttonURL="#form"
                 rows={[
-                    [<span style={{fontWeight: "500",color: "black"}}>Вид работы <span className="spacePricePage">Цена, руб</span></span>],
+                    [<span className="strint">Вид работы<span className="spacepricepage">Цена, руб</span></span>],
                     ["Подготовка к успешной защите", ""],
                     ["Консультация с автором"],
                     ["Повышение оригинальности"],

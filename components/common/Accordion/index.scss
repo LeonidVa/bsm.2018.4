@@ -26,6 +26,9 @@
     color: #4a4a4a;
     transition: all .4s;
     width: 90%;
+    @media (max-width: 660px) {
+        font-size: 127%;
+      }
   }
   &.contacts {
     .block-accordion__header {
@@ -39,6 +42,21 @@
     td:last-child.single {
       text-align: left;
     }
+    a.none {
+      text-decoration: none;
+      color: #4a4a4a;
+      &:hover  {
+        color: #f4511e;
+      }
+    }
+    span.spacepricepage {
+      padding-left: 301px;
+    }
+    span.strint {
+      color: #4a4a4a;
+      font-weight: bold;
+      line-height: 147%;
+    }
   }
   &__table {
     width: 100%;
@@ -50,9 +68,9 @@
     }
     th:last-child {text-align: right;}
     td {
-      width: 50%;
+      width: 60%;
       text-align: left;
-      padding-bottom: 1.875em;
+      padding-bottom: 0.875em;
     }
     td:last-child {
       text-align: right;
@@ -100,6 +118,9 @@
     margin: 3.12rem 0 0 -2.18rem;
     background-color: #f4511e;
     transition: all .4s;
+    @media (max-width: 660px) {
+      width: 68%;
+    }
     &:hover {
       background-color: #922d0e;
     }

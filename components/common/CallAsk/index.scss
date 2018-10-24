@@ -21,6 +21,9 @@
         color: #4a4a4a;
         margin-bottom: .94em;
         line-height: 0.4;
+        @media (max-width: 660px) {
+            font-size: 95%;
+        }
     }
     &__buttons {
         cursor: pointer;

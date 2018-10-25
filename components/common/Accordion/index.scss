@@ -62,6 +62,14 @@
       font-size: 99%;
       @media (max-width: 660px) {
         display: block;
+        width: 70%;
+      }
+      @media (max-width: 361px) {
+        display: block;
+        width: 66%;
+      }
+      @media (max-width: 321px) {
+        display: block;
         width: 53%;
       }
     }
@@ -89,6 +97,10 @@
       @media (max-width: 415px) {
         text-align: left;
         width: 24%;
+      }
+      @media (max-width: 361px) {
+        text-align: left;
+        width: 28%;
       }
       @media (max-width: 321px) {
         text-align: left;

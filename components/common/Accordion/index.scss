@@ -70,7 +70,7 @@
       }
       @media (max-width: 321px) {
         display: block;
-        width: 53%;
+        width: 54%;
       }
     }
   }
@@ -96,7 +96,11 @@
       text-align: right;
       @media (max-width: 415px) {
         text-align: left;
-        width: 24%;
+        width: 20%;
+      }
+      @media (max-width: 376px) {
+        text-align: left;
+        width: 26%;
       }
       @media (max-width: 361px) {
         text-align: left;
@@ -104,7 +108,7 @@
       }
       @media (max-width: 321px) {
         text-align: left;
-        width: 44%;
+        width: 41%;
       }
     }
   }

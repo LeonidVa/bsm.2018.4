@@ -101,6 +101,10 @@
     margin-bottom: 1rem;
     line-height: 1.5;
     color: #4a4a4a;
+      @media (max-width: 321px) {
+        width: 102%;
+        line-height: 144%;
+      }
     &.italic {
       font-style: italic;
     }
@@ -120,6 +124,10 @@
     }
     &.center {
       text-align: center;
+      @media (max-width: 321px) {
+        text-align: center;
+        padding-top: 4%;
+      }
     }
     span.tel1 {
       white-space: nowrap;

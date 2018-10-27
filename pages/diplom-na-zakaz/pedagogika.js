@@ -36,10 +36,7 @@ const page = () => (
   <Wrapper title="Дипломная работа по педагогике на заказ – цена и сроки написания, сколько стоит заказать диплом в Москве" description="В компании «BeSmarter!» можно срочно и недорого заказать дипломную работу по педагогике по выгодной цене в Москве. Тел. +7 (495) 772-40-90.">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Дипломная работа по дошкольной социальной коррекционной педагогике"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

@@ -37,10 +37,6 @@ const page = () => (
   <Wrapper title="Заказать эссе срочно и недорого – написание эссе на заказ по философии в Москве и РФ – цены и сроки под ключ" description="Заказать эссе. Напишем эссе на заказ недорого в Москве. Срочная помощь в написании эссе от надежных профессионалов в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
     <div className="wrapper bg bg-c2 bg-img bg-img1">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Заказать эссе на заказ недорого помощь в написании срочно где"/>
-      </MetaTags>
 
       <section className="breadcrumbs">
         <div className="inner">

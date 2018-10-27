@@ -27,10 +27,6 @@ const page = () => (
   <Wrapper title="Разработка и написание дипломного проекта в Москве и РФ – цены, сроки написания под ключ" description="Разработка и написание дипломного проекта. Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <div className="wrapper bg bg-c2 bg-img bg-img5">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="заказать дипломный проект купить цена стоимость"/>
-      </MetaTags>
 
       <section className="breadcrumbs">
         <div className="inner">

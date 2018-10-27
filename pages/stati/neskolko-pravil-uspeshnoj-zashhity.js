@@ -36,11 +36,7 @@ const page = () => (
            description="Самообладанием может похвастаться не каждый, особенно при таком важном процессе, как защита дипломной работы, от которой зависит будущее. Зачастую, волнительным бывает не только процесс защиты, но и написания. Поэтому, чтобы оградить себя от лишних переживаний, стоит незамедлительно сделать диплом на заказ и быть уверенным в успехе.">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="" content/>
-        <meta name="keywords" content=""/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

@@ -32,10 +32,7 @@ const page = () => (
            description="Многие студенты в настоящее время отказываются от самостоятельного написания диплома и предпочитают поручать написание дипломного проекта профессиональным исполнителям. Почему так происходит, почему многие предпочитают диплом на заказ?">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content=""/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

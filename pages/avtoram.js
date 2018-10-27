@@ -29,10 +29,6 @@ const page = () => (
                  комплексные услуги по подготовке дипломных проектов и диссертаций, консультируем и разъясняем непонятные моменты, даем советы по защите и выступлению.">
     <div className="wrapper bg bg-c2 bg-img bg-img2">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content=""/>
-      </MetaTags>
 
       <section className="breadcrumbs">
         <div className="inner">

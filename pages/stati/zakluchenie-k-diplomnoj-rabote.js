@@ -34,10 +34,6 @@ const page = () => (
            description="В статье раскрыта тема: «Как правильно написать заключение к дипломной работе», приведены общие рекомендации, примеры и образцы заключений дипломных работ.">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Заключение в дипломной работе пример как написать образец написание пишется что правильно структура"/>
-      </MetaTags>
 
       <section className="breadcrumbs">
         <div className="inner">

@@ -37,10 +37,7 @@ const page = () => (
            description="Хотите узнать сколько стоит написать курсовую работу на заказ в Москве? Примерная стоимость курсовой работы – 2000 рублей! Звоните в компанию BeSmarter! И мы вам скажем точно сколько стоит написать курсовую работу.">
     <div className="wrapper bg bg-c2 bg-img bg-img1">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Стоимость цена курсовой работы сколько стоит написать заказать  написание на заказ сделать купить в Москве"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

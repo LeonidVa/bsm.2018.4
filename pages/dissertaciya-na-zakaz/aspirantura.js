@@ -35,10 +35,6 @@ const page = () => (
   <Wrapper title="Аспирантура в Москве | «BeSmarter!». Тел. +7 (495) 772-40-90." description="В наше время диплом о высшем образовании есть практически у всех, включая продавцов розничной торговли; тем самым нивелируется звание дипломированного специалиста.">
     <div className="wrapper bg bg-c2 bg-img bg-img2">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Аспирантура в Москве,поступление в Аспирантуру,купить Аспирантура"/>
-      </MetaTags>
 
       <section className="breadcrumbs">
         <div className="inner">

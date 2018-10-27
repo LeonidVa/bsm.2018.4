@@ -36,10 +36,7 @@ const page = () => (
   <Wrapper title="Диплом по психологии на заказ – цена и сроки написания, сколько стоит заказать дипломную работу в Москве" description="В компании «BeSmarter!» можно срочно и недорого заказать дипломную работу по психологии по выгодной цене в Москве. Тел. +7 (495) 772-40-90.">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="дипломная работа по психологии заказать купить написать на заказ"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

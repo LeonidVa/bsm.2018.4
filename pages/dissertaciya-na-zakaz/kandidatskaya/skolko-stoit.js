@@ -40,10 +40,7 @@ const page = () => (
            description="Хотите узнать, сколько стоит кандидатская диссертация? Позвоните нам по тел. +7 (495) 772-40-90, и мы вам скажем, сколько стоит написать кандидатскую диссертацию в компании «BeSmarter!».">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Написать кандидатскую диссертацию стоимость сколько стоит купить цена написание"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

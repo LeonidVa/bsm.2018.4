@@ -38,10 +38,7 @@ const page = () => (
 
     <div className="wrapper bg bg-c2 bg-img bg-img4">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Заказать отчет по практике купить недорого с печатью где помощь в написании на заказ сколько стоит преддипломную производственную учебную"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

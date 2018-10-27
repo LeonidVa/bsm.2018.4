@@ -37,10 +37,7 @@ const page = () => (
            description="Заказать диссертацию. В компании  BeSmarter! Вы сможете заказать помощь в написании диссертации от надежных и проверенных кандидатов и докторов наук, недорогие цены только в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
     <div className="wrapper bg bg-c2 bg-img bg-img2">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Заказать диссертацию помощь в написании на заказ в Москве написать в короткие сроки срочно под заказ"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

@@ -26,10 +26,7 @@ class page extends Component {
         <div className="wrapper bg bg-c2 bg-img bg-img5">
           <Title>Контакты</Title>
 
-          <MetaTags>
-            {/* <title></title> */}
-            <meta name="keywords" content=""/>
-          </MetaTags>
+
 
           <section className="breadcrumbs">
             <div className="inner">

@@ -36,10 +36,7 @@ const page = () => (
   <Wrapper title="Магистерская диссертация на заказ в Москве и РФ – цены, сколько стоит, сроки написания диплома под ключ" description="Магистерская диссертация на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <div className="wrapper bg bg-c2 bg-img bg-img2">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Заказать магистерскую диссертацию на заказ работу в Москве купить помощь в написании написать цена"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

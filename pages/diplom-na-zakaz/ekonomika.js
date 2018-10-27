@@ -35,10 +35,7 @@ const page = () => (
   <Wrapper title="Диплом по экономике на заказ – цена и сроки написания, сколько стоит заказать дипломную работу в Москве" description="Диплом по экономике на заказ! Быстро и профессионально – компания BeSmarter!. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="дипломная работа по экономике заказать написать купить цена сколько стоит на заказ"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

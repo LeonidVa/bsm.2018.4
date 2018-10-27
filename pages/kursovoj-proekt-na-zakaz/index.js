@@ -37,10 +37,7 @@ const page = () => (
   <Wrapper title="Заказать курсовой проект – курсовые проекты на заказ в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90" description="Заказать курсовой проект в Москве, курсовые проекты на заказ срочно по недорогой цене в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
     <div className="wrapper bg bg-c2 bg-img bg-img1">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Заказать курсовой проект купить на заказ написание сколько стоит стоимость цена"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

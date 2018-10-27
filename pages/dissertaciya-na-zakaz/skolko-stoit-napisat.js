@@ -36,10 +36,7 @@ const page = () => (
            description="Хотите узнать, сколько стоит написать диссертацию? Позвоните нам по тел. +7 (495) 772-40-90, и мы вам скажем точную стоимость диссертации - BeSmarter!">
     <div className="wrapper bg bg-c2 bg-img bg-img2">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Сколько стоит написать диссертацию цена на заказ стоимость цена написание сколько стоит заказать"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

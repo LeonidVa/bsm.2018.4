@@ -37,10 +37,7 @@ const page = () => (
            description="Чтобы закончить ВУЗ с красным дипломом, недостаточно быть наделенным природным умом, большинство необходимых личностных качеств нужно развивать в себе самостоятельно. Это упорный ежедневный труд, но результат того стоит.">
     <div className="wrapper bg bg-c2 bg-img bg-img1">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content=""/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

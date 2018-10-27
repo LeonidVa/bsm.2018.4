@@ -36,10 +36,7 @@ const page = () => (
   <Wrapper title="Заказать реферат недорого онлайн – сколько стоит написать реферат на заказ в Москве и РФ – цены, сроки под ключ" description="Написание рефератов недорого на заказ! Быстро и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <div className="wrapper bg bg-c2 bg-img bg-img5">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Заказать реферат купить срочно на заказ написать написание онлайн напишу москва где"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

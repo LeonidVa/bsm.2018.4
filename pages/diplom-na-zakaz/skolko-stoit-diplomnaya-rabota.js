@@ -37,10 +37,7 @@ const page = () => (
            description="Интересуетесь сколько стоит написать дипломную работу на заказ в Москве? Хотите разобраться сколько стоит заказать диплом? Звоните в компанию BeSmarter! И мы вам скажем точную стоимость дипломной работы!">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Стоимость цена дипломной работы сколько стоит написать заказать диплом написание на заказ сделать купить в Москве"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

@@ -36,10 +36,6 @@ const page = () => (
            description="Хотите узнать, сколько стоит заказать реферат в Москве? Звоните в компанию BeSmarter! и мы вам скажем сколько стоит написать реферат | Звоните: +7 (495) 772-40-90.">
     <div className="wrapper bg bg-c2 bg-img bg-img5">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="сколько стоит написать заказать реферат на заказ цена напсиание купить сделать стоимость"/>
-      </MetaTags>
 
       <section className="breadcrumbs">
         <div className="inner">

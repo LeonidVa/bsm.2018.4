@@ -37,10 +37,6 @@ const page = () => (
   <Wrapper title="Заказать отчет по педагогической практике – купить отчет по практике в Москве и РФ срочно – цены, сроки написания под ключ" description="Предлагаем заказать отчет по педагогической практике! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <div className="wrapper bg bg-c2 bg-img bg-img4">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content=""/>
-      </MetaTags>
 
       <section className="breadcrumbs">
         <div className="inner">

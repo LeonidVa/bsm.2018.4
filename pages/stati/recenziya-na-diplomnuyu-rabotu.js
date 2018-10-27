@@ -32,10 +32,6 @@ const page = () => (
   <Wrapper title="Как написать рецензию на дипломную работу образец – пример рецензии дипломной работы на сайте компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В статье раскрыта тема: «Как написать рецензию на дипломную работу», приведены общие рекомендации, примеры и образцы заключений дипломных работ.">
     <div className="wrapper bg bg-c2 bg-img bg-img3">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content=""/>
-      </MetaTags>
 
       <section className="breadcrumbs">
         <div className="inner">

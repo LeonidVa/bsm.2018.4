@@ -36,10 +36,7 @@ const page = () => (
   <Wrapper title="Где заказать курсовую работу – можно заказать курсовую работу в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="Ищите где заказать курсовую работу надежно и быстро? Не можете решить где лучше купить курсовую? BeSmarter!– лучший сайт для заказа вашей курсовой работы в Москве!">
     <div className="wrapper bg bg-c2 bg-img bg-img1">
 
-      <MetaTags>
-        {/* <title></title> */}
-        <meta name="keywords" content="Где можно заказать курсовую работу лучше купить сайты по выполнению посоветуйте"/>
-      </MetaTags>
+
 
       <section className="breadcrumbs">
         <div className="inner">

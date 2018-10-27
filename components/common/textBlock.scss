@@ -61,6 +61,9 @@
     color: #4a4a4a;
     margin-top: 3rem;
     margin-bottom: 1rem;
+    @media (max-width: 660px) {
+      font-size: 1.5rem;
+    }
     &.center {
       text-align: center;
     }
@@ -101,6 +104,15 @@
     margin-bottom: 1rem;
     line-height: 1.5;
     color: #4a4a4a;
+    @media (max-width: 415px) {
+      width: 102%;
+    }
+    @media (max-width: 376px) {
+      font-size: 106%;
+    }
+    @media (max-width: 361px) {
+      width: 100%;
+    }
       @media (max-width: 321px) {
         width: 102%;
         line-height: 144%;

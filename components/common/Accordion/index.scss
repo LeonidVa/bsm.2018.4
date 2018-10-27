@@ -26,9 +26,18 @@
     color: #4a4a4a;
     transition: all .4s;
     width: 90%;
-    @media (max-width: 660px) {
-        font-size: 127%;
+    @media (max-width: 415px) {
+      font-size: 139%;
+    }
+    @media (max-width: 376px) {
+      font-size: 117%;
+    }
+    @media (max-width: 361px) {
+        font-size: 120%;
       }
+    @media (max-width: 321px) {
+      font-size: 97%;
+    }
   }
   &.contacts {
     .block-accordion__header {
@@ -122,6 +131,15 @@
     top: 55%;
     margin-top: -0.875rem;
     right: 2rem;
+    @media (max-width: 415px) {
+      right: 28%;
+    }
+    @media (max-width: 376px) {
+      right: 36%;
+    }
+    @media (max-width: 321px) {
+      right: 44%;
+    }
     div {
       font-size: 2rem;
       width: 0.625rem;

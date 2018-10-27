@@ -14,12 +14,13 @@ import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'data/dopraboty'
 import MagisDisPricePage from "components/common/ServiceBlock/ready-made/MagisDisPricePage";
 import MatZashGirl from "../components/common/ServiceBlock/ready-made/MatZashGirl";
+import Title from "../components/common/Title";
 
 
 const page = () => (
     <Wrapper title="Услуги и цены" description="На этой странице представлены цены на дипломные, курсовые работы и многие другие услуги компании.">
         <div className="wrapper bg bg-c2 bg-img bg-img2">
-
+            <Title><span className="black">Стоимость услуг</span></Title>
 
 
             <section className="breadcrumbs">
@@ -37,19 +38,21 @@ const page = () => (
 
 
             <section className="block-text">
-                <h1 className="block-text__title">Стоимость услуг</h1>
+                <h1 className="block-text__title">Цена вашей работы</h1>
                 <p className="block-text__par">
-                    Ваша работа пишется только для вас, на ваших условиях и строго по вашим требованиям.
+                    Ваша работа индивидуальна, она пишется преподавателем только для вас!
                 </p>
                 <p className="block-text__par">
-                    В прайс-листе мы указываем лишь ориентировочный ценовой диапазон.
+                    Поэтому здесь мы показываем стоимость работы ориентировочно.
                 </p>
                 <p className="block-text__par">
-                    Чтобы узнать точную стоимость вашего заказа, свяжитесь с нами по телефону <b>8 495 772 40 90</b>, а лучше
-                    приезжайте к нам в <b>офис</b> в центре Москвы (пер. Большой Кисловский, дом 1, стр. 2, оф.211). Мы ждем Вас!
+                    Точно определит цену вашей работы менеджер, когда вы уточните все ваши требования и пожелания. При необходимости, менеджер срочно переговорит с преподавателем.
                 </p>
-                <p className="block-text__par center"><b>
-                    Экономьте ваши деньги – <Link href="#form"><a>заказывайте</a></Link> прямо сейчас!
+                <p className="block-text__par">
+                    Обращайтесь к нам сразу, как только вы получили темы работ. Мы подберем самый выгодный вариант!
+                </p>
+                <p className="block-text__par"><b>
+                    Чтобы узнать точную стоимость вашего заказа, свяжитесь с нами по телефону &nbsp;+7 495 772 40 90, а лучше приезжайте с заданием к нам в офис в центре Москвы (пер. Большой Кисловский, дом 1, стр. 2, оф.211).
                 </b></p>
             </section>
 
@@ -299,7 +302,7 @@ const page = () => (
                     </li>
                 </ul>
                 <p className="block-text__par center"><b>
-                    Экономьте ваши деньги – заказывайте прямо сейчас!</b>
+                    Экономьте ваши деньги – <Link href="#form"><a>заказывайте</a></Link> прямо сейчас!</b>
                 </p>
             </section>
 

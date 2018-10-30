@@ -8,7 +8,7 @@ class Form extends BaseForm {
 
     render() {
         return (
-            <form className="block-form__form" onSubmit={this.handleSubmit}>
+            <form className="block-form__form" onSubmit={this.handleSubmit()}>
                 <div className="block-form__item">
                     <label htmlFor="form-name">Имя*</label>
                     <input type="text"

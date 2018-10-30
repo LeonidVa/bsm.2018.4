@@ -6,9 +6,15 @@ class PhoneAndSubmit extends BaseForm {
         super(props)
     }
 
+  successCallBack = () => {
+      const { toggleNotify, closeNotifyAfterTimeOut } = this.props;
+      toggleNotify();
+      closeNotifyAfterTimeOut();
+    };
+
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit(this.successCallBack)}>
                 <input type="text"
                        placeholder={this.props.placeholder}
                        required

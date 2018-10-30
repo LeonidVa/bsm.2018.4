@@ -67,7 +67,6 @@ class BaseForm extends Component {
       .then(function (response) {
         const {data = {}} = response;
         const {error = false, id, msg} = data;
-        // alert("SO good");
         if (error) {
           /* ошибка со стороны сервера */
           _this.setState({
@@ -91,7 +90,6 @@ class BaseForm extends Component {
         //console.log('',response);
       })
       .catch(function (response) {
-        // alert("SO BAD");
         //handle error
         console.log(response);
         errorCallBack && errorCallBack();

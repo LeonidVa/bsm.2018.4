@@ -58,7 +58,7 @@ class BaseForm extends Component {
     if (config.publicRuntimeConfig.runtime.development) {
       url = ' http://localhost:3001/api/form_data'
     }
-    return axios({
+    axios({
       method: "POST",
       url: url,
       data: formData,

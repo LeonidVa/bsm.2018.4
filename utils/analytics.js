@@ -1,5 +1,4 @@
 import ReactGA from 'react-ga';
-import ym from 'react-yandex-metrika';
 
 import getConfig from 'next/config';
 import ReactPixel from 'react-facebook-pixel';
@@ -17,7 +16,7 @@ class StatInstance {
             }
             this.ReactGA.pageview(url); //обычно window.location.pathname + window.location.search
             this.ReactPixel.pageView();
-            this.ym('hit', url);
+
         },
         phoneClicked: () => {
             if (!this.isClient()) {
@@ -25,7 +24,7 @@ class StatInstance {
             }
             const value = 10000;
             this.ReactGAEvent({category: "contacts", action: "phone_click", value});
-            this.ym('reachGoal', 'phone_click', {value});
+
             this.ReactPixelEventCustom('phone_click', {value})
         },
         emailClicked: () => {
@@ -33,7 +32,7 @@ class StatInstance {
                 return null;
             }
             const value = 10000;
-            this.ym('reachGoal', 'email_click', {value});
+
             this.ReactGAEvent({category: "contacts", action: "email_click", value});
             this.ReactPixelEventCustom('email_click', {value})
         },
@@ -42,7 +41,7 @@ class StatInstance {
                 return null;
             }
             const value = 10000;
-            this.ym('reachGoal', 'messenger_click', {category: "chat", label: targetID, value});
+
             this.ReactGAEvent({category: "chat", action: "messenger_click", label: targetID, value});
             this.ReactPixelEventCustom('messenger_click', {messenger: targetID, value})
         },
@@ -51,7 +50,7 @@ class StatInstance {
                 return null;
             }
             const value = 20000;
-            this.ym('reachGoal', targetID, {category: "form", value});
+
             this.ReactGAEvent({category: "form", action: targetID, value});
             this.ReactPixelEventCustom(targetID, {category: "form", value})
         },
@@ -65,14 +64,6 @@ class StatInstance {
         }
     };
 
-    ym(method, target, params) {
-        try {
-            ym(method, target, params);
-        } catch (e) {
-            console.log('ym call failed', e);
-        }
-    };
-
     ReactGAEvent(params) {
         try {
             this.ReactGA.event(params);
@@ -82,11 +73,40 @@ class StatInstance {
     };
 
     isClient() {
-        if (typeof window !== 'undefined' && window !== null && window !== false) {
-            return true;
-        }
-        return false;
+        return typeof window !== 'undefined' && window !== null && window !== false;
     };
+
+    getMetricsScript() {
+        return `(function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter132186 = new Ya.Metrika2({
+                    id:132186,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");`;
+    }
+
+    getMetricsNoscript() {
+        return `<div><img src="https://mc.yandex.ru/watch/132186" style="position:absolute; left:-9999px;" alt="" /></div>`;
+    }
 
     init() {
         if (!this.isClient()) {

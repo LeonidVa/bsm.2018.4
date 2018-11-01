@@ -11,7 +11,7 @@ class BaseForm extends Component {
   verifyCallback = value => {
     this.setState({verified: value});
   };
-  handleSubmit = async e => {
+  handleSubmit = (successCallBack, errorCallBack) => async e => {
     e.preventDefault();
     const {targetID = "form submit"} = this.props;
     stat.triggerTarget.formSubmit(targetID);
@@ -66,7 +66,7 @@ class BaseForm extends Component {
     })
       .then(function (response) {
         const {data = {}} = response;
-        const {error = true, id, msg} = data;
+        const {error = false, id, msg} = data;
         if (error) {
           /* ошибка со стороны сервера */
           _this.setState({
@@ -84,6 +84,7 @@ class BaseForm extends Component {
               number: id
             }
           }, _this.onSent);
+          successCallBack && successCallBack();
         }
         _this.clearFormData();
         //console.log('',response);
@@ -91,6 +92,7 @@ class BaseForm extends Component {
       .catch(function (response) {
         //handle error
         console.log(response);
+        errorCallBack && errorCallBack();
       });
   };
 

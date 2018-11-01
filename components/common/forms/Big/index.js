@@ -259,7 +259,7 @@ class OrderForm extends BaseForm {
                     <h2 className="block-form__title">Спасибо!</h2>
                     <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
                 </div>
-                <form onSubmit={this.handleSubmit} className="block-form__form" style={{display: this.state.formSent.bool ? "none" : "block"}}>
+                <form onSubmit={this.handleSubmit()} className="block-form__form" style={{display: this.state.formSent.bool ? "none" : "block"}}>
                     <h2 className="block-form__title">{title}</h2>
                     {this.renderForm()}
                     <a

@@ -28,7 +28,6 @@
     "react-google-recaptcha": "^1.0.4",
     "react-meta-tags": "^0.7.1",
     "react-slick": "^0.23.1",
-    "react-yandex-maps": "2.2.1",
-    "react-yandex-metrika": "^2.4.2"
+    "react-yandex-maps": "2.2.1"
   }
 }

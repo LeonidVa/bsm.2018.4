@@ -268,7 +268,7 @@ class OrderForm extends BaseForm {
                     >
                         {this.state.Extended
                             ? "Cкрыть дополнительные поля"
-                            : "Дополнительная информация"}
+                            : "Показать все поля▾"}
                     </a>
                     <div
                         style={{

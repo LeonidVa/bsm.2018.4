@@ -24,7 +24,7 @@ class StatInstance {
             }
             const value = 10000;
             this.ReactGAEvent({category: "contacts", action: "phone_click", value});
-
+            this.reachGoal('phone_click', {value});
             this.ReactPixelEventCustom('phone_click', {value})
         },
         emailClicked: () => {
@@ -32,7 +32,7 @@ class StatInstance {
                 return null;
             }
             const value = 10000;
-
+            this.reachGoal('email_click', {value});
             this.ReactGAEvent({category: "contacts", action: "email_click", value});
             this.ReactPixelEventCustom('email_click', {value})
         },
@@ -41,7 +41,7 @@ class StatInstance {
                 return null;
             }
             const value = 10000;
-
+            this.reachGoal('messenger_click', {category: "chat", label: targetID, value});
             this.ReactGAEvent({category: "chat", action: "messenger_click", label: targetID, value});
             this.ReactPixelEventCustom('messenger_click', {messenger: targetID, value})
         },
@@ -50,7 +50,7 @@ class StatInstance {
                 return null;
             }
             const value = 20000;
-
+            this.reachGoal(targetID, {category: "form", value});
             this.ReactGAEvent({category: "form", action: targetID, value});
             this.ReactPixelEventCustom(targetID, {category: "form", value})
         },
@@ -73,7 +73,15 @@ class StatInstance {
     };
 
     isClient() {
-        return typeof window !== 'undefined' && window !== null && window !== false;
+        return process.browser;
+    };
+
+    reachGoal(target, params) {
+        try {
+            window.yaCounter132186(target, params);
+        } catch (e) {
+            console.log('reachGoal call failed', e);
+        }
     };
 
     getMetricsScript() {

@@ -2,6 +2,7 @@ import {Component} from 'react';
 import Timer from 'components/common/Timer';
 import PhoneAndSubmit from 'components/common/forms/PhoneAndSubmit';
 import './index.scss'
+import Close from "../../../modals/Close";
 
 
 class FormWithTimer extends Component {
@@ -12,7 +13,7 @@ class FormWithTimer extends Component {
     toggleNotify = () => this.setState(state => ({ notifyOpen: !state.notifyOpen}));
 
     closeNotifyAfterTimeOut = () => {
-      setTimeout(this.toggleNotify, 3000);
+      setTimeout(() => this.setState({ notifyOpen: false }), 15000);
     };
 
     render() {
@@ -33,6 +34,7 @@ class FormWithTimer extends Component {
           <div className="block-form__message form_notification"
                style={{display: notifyOpen ? "flex" : "none"}}
           >
+            <Close onClick={this.toggleNotify} inverse/>
             <img width="100%" src={require("static/images/fox-logo.png")}/>
             <h2 className="block-form__title">Спасибо!</h2>
             <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>

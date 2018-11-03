@@ -33,8 +33,8 @@
       font-size: 117%;
     }
     @media (max-width: 361px) {
-        font-size: 120%;
-      }
+      font-size: 120%;
+    }
     @media (max-width: 321px) {
       font-size: 97%;
     }
@@ -51,13 +51,13 @@
     td:last-child.single {
       text-align: left;
     }
-    a.none {
-      text-decoration: none;
+    a {
       color: #4a4a4a;
-      &:hover  {
+      &:hover {
         color: #f4511e;
       }
     }
+    a.none { text-decoration: none; }
     span.spacepricepage {
       padding-left: 309px;
       @media (max-width: 660px) {
@@ -89,9 +89,8 @@
       font-size: 1.125em;
       font-weight: bold;
       text-align: left;
-
     }
-    th:last-child {text-align: right;}
+    th:last-child { text-align: right; }
     td {
       width: 60%;
       text-align: left;

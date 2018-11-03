@@ -6,7 +6,7 @@ module.exports = {
     apps: [
         {
             name: 'website',
-            script: './node_modules/next/dist/bin/next',
+            script: 'server.js',
             args: "start",
             env: {
                 NODE_ENV: "production",

@@ -86,7 +86,7 @@ const config = [
     },
     {
         client: {
-            avatar: require('static/images/reviews/otziv8.jpg'),
+            avatar: require('static/images/reviews/otziv8.png'),
             name: "Светлана Анатольевна",
             text: "Спасибо за помощь моему сыну. Не ожидала такого понимания нашей сложной ситуации. Теперь я спокойна, что он защитит диплом.",
         },

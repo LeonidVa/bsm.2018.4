@@ -56,7 +56,7 @@ class BaseForm extends Component {
     formData.set("verified", verified);
     let url = "/api/form_data";
     if (config.publicRuntimeConfig.runtime.development) {
-      url = ' http://localhost:3001/api/form_data'
+      url = 'http://localhost:3001/api/form_data'
     }
     axios({
       method: "POST",

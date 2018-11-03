@@ -16,7 +16,7 @@ class Wrapper extends Component {
         if (typeof window === 'undefined' || window.location === undefined || window.location === null) {
             return;
         }
-        const url = window.location.pathname + window.location.search;
+        const url = window.location.href;
         stat.triggerTarget.pageView(url);
     }
 

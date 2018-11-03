@@ -1,4 +1,5 @@
 import BaseForm from 'components/common/forms/BaseForm'
+import stat from 'utils/analytics';
 
 class Form extends BaseForm {
     constructor(props) {
@@ -41,7 +42,7 @@ class Form extends BaseForm {
                     />
                 </div>
 
-                <button type="submit" className="block-form__btn">Позвоните мне!</button>
+                <button type="submit" className="block-form__btn" onClick={() => stat.triggerTarget.phoneClicked()}>Позвоните мне!</button>
             </form>
         );
     }

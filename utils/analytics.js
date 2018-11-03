@@ -24,7 +24,7 @@ class StatInstance {
             }
             const value = 10000;
             this.ReactGAEvent({category: "contacts", action: "phone_click", value});
-            this.reachGoal('phone_click', {value});
+            this.yaReachGoal('phone_click', {value});
             this.ReactPixelEventCustom('phone_click', {value})
         },
         emailClicked: () => {
@@ -32,7 +32,7 @@ class StatInstance {
                 return null;
             }
             const value = 10000;
-            this.reachGoal('email_click', {value});
+            this.yaReachGoal('email_click', {value});
             this.ReactGAEvent({category: "contacts", action: "email_click", value});
             this.ReactPixelEventCustom('email_click', {value})
         },
@@ -41,7 +41,7 @@ class StatInstance {
                 return null;
             }
             const value = 10000;
-            this.reachGoal('messenger_click', {category: "chat", label: targetID, value});
+            this.yaReachGoal('messenger_click', {category: "chat", label: targetID, value});
             this.ReactGAEvent({category: "chat", action: "messenger_click", label: targetID, value});
             this.ReactPixelEventCustom('messenger_click', {messenger: targetID, value})
         },
@@ -50,7 +50,7 @@ class StatInstance {
                 return null;
             }
             const value = 20000;
-            this.reachGoal(targetID, {category: "form", value});
+            this.yaReachGoal(targetID, {category: "form", value});
             this.ReactGAEvent({category: "form", action: targetID, value});
             this.ReactPixelEventCustom(targetID, {category: "form", value})
         },
@@ -76,20 +76,23 @@ class StatInstance {
         return process.browser;
     };
 
-    reachGoal(target, params) {
+    yaReachGoal(target, params) {
         try {
-            window.yaCounter132186(target, params);
+            const counterId = publicRuntimeConfig.analytics.yaID;
+            const paramName = `yaCounter${counterId}`;
+            window[paramName].reachGoal(target, params);
         } catch (e) {
-            console.log('reachGoal call failed', e);
+            console.log('yaReachGoal call failed', e);
         }
     };
 
     getMetricsScript() {
+        const counterId = publicRuntimeConfig.analytics.yaID;
         return `(function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {
-                w.yaCounter132186 = new Ya.Metrika2({
-                    id:132186,
+                w.yaCounter${counterId} = new Ya.Metrika2({
+                    id:${counterId},
                     clickmap:true,
                     trackLinks:true,
                     accurateTrackBounce:true,

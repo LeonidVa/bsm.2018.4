@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import stat from "utils/analytics";
 import axios from "axios";
 import getConfig from 'next/config';
-
+import { toast } from "react-toastify"
 const config = getConfig();
 
 
@@ -92,6 +92,9 @@ class BaseForm extends Component {
       .catch(function (response) {
         //handle error
         console.log(response);
+        toast.error("Произошка ошибка! Позвоните по номеру +7 495 772 40 90.", {
+            position: toast.POSITION.TOP_RIGHT
+        });
         errorCallBack && errorCallBack();
       });
   };

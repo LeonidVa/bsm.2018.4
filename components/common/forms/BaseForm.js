@@ -92,7 +92,7 @@ class BaseForm extends Component {
       .catch(function (response) {
         //handle error
         console.log(response);
-        toast.error("Произошка ошибка! Позвоните по номеру +7 495 772 40 90.", {
+        toast.error("Ой! Что-то пошло не так и заявка не отправилась. Пожалуйста, позвоните нам по +7 495 772 40 90.", {
             position: toast.POSITION.TOP_RIGHT
         });
         errorCallBack && errorCallBack();

@@ -1,5 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
+import { ToastContainer } from 'react-toastify';
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -18,6 +19,7 @@ export default class MyApp extends App {
     return (
       <Container>
         <Component {...pageProps} />
+        {process.browser && <ToastContainer />}
       </Container>
     );
   }

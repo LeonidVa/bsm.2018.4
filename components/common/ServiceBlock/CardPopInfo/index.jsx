@@ -15,6 +15,14 @@ class CardPopInfo extends Component {
 
     render() {
         const {title = "", text = "", url = "", description = []} = this.props;
+        if (Array.isArray(text)) {
+            for (let i = 0; i < text.length; i++) {
+                if (text[i] instanceof Object && text[i].key === undefined){
+                    text[i].key = i;
+                }
+            }
+        }
+
         if (description.length > 0) {
             let dsc = <div className="b-item__hovered-text">{description}</div>;
             let btn = "";

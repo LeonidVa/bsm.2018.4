@@ -10,7 +10,7 @@ const handle = app.getRequestHandler();
 
 // This is where we cache our rendered HTML pages
 const ssrCache = new LRUCache({
-    max: 100 * 1024 * 1024, /* 100MB */
+    max: 100 * 1024 * 1024, /* cache size will be 100 MB using `return n.length` as length() function */
     length: function (n, key) {
         return n.length
     },
@@ -21,10 +21,9 @@ app.prepare()
     .then(() => {
         const server = express();
 
-        // Use the `renderAndCache` utility defined below to serve pages
         server.get('*', (req, res) => {
             if (req.url.substring(0, 7) === "/_next/") {
-                /* serving _next static content */
+                /* serving _next static content using next.js handler */
                 handle(req, res);
                 return;
             }

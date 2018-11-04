@@ -1,3 +1,4 @@
+const redirectList = require('./utils/redirect');
 const express = require('express');
 const next = require('next');
 const LRUCache = require('lru-cache');
@@ -9,8 +10,10 @@ const handle = app.getRequestHandler();
 
 // This is where we cache our rendered HTML pages
 const ssrCache = new LRUCache({
-    max: 100*1024*1024, /* 100MB */
-    length: function(n, key){return n.length},
+    max: 100 * 1024 * 1024, /* 100MB */
+    length: function (n, key) {
+        return n.length
+    },
     maxAge: 1000 * 60 * 60 * 24 * 30
 });
 
@@ -21,18 +24,21 @@ app.prepare()
         // Use the `renderAndCache` utility defined below to serve pages
         server.get('*', (req, res) => {
             if (req.url.substring(0, 7) === "/_next/") {
-                //console.log('serving _next static content');
+                /* serving _next static content */
                 handle(req, res);
-            } else {
-                //console.log('serving page');
-                renderAndCache(req, res)
+                return;
             }
+            const redirUrl = redirectList[req.path];
+            if (redirUrl !== undefined) {
+                res.status(301).redirect(redirUrl);
+                res.end();
+                return;
+            }
+            /* serving page */
+            return renderAndCache(req, res)
         });
 
-        /*        server.get('*', (req, res) => {
-                    return handle(req, res)
-                });*/
-
+        /* starting server */
         server.listen(port, (err) => {
             if (err) throw err;
             console.log(`> Ready on http://localhost:${port}`)

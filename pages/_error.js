@@ -56,14 +56,6 @@ export default class Error extends React.Component {
     const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;
     const url = (req && req.url) || null;
     /* check if redirect is required and if yes - do it and exit */
-    const newUrl = redirect(url);
-    if (newUrl) {
-      if (res) {
-        res.writeHead(301, {Location: newUrl});
-        res.end();
-        return {}
-      }
-    }
 
     if (isInitialClientRender) {
       telega('Error rendering on page ' + url + '```' + err.message + '``` and ```' + err.toString() + '```');

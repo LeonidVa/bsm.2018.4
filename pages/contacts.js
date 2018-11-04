@@ -46,7 +46,7 @@ class page extends Component {
 
             <div itemScope itemType="http://schema.org/Organization">
           <section className="block-text">
-            <h2 itemprop="name" className="block-text__title">
+            <h2 itemProp="name" className="block-text__title">
               Офис
             </h2>
               <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
@@ -67,8 +67,8 @@ class page extends Component {
               Телефон
             </h2>
             <p className="block-text__subtitle subtitle-orange">
-              <span itemprop="telephone" className="phone">+7 (495) 772-40-90</span>
-              <span itemprop="telephone" className="phone">+7 (495) 772-90-40</span>
+              <span itemProp="telephone" className="phone">+7 (495) 772-40-90</span>
+              <span itemProp="telephone" className="phone">+7 (495) 772-90-40</span>
             </p>
             <p className="block-text__par">
               Понедельник - пятница <span className="bold">с 10:00 до 19:30</span><br/>
@@ -80,7 +80,7 @@ class page extends Component {
             <h2 className="block-text__title">
               Почта
             </h2>
-            <p itemprop="email" className="block-text__subtitle subtitle-orange">
+            <p itemProp="email" className="block-text__subtitle subtitle-orange">
               <a href="mailto:zakaz@besmarter.ru?subject=Новая заявка" onClick={() => {
                 stat.triggerTarget.emailClicked();
                 return true;

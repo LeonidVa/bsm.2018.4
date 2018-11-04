@@ -5,7 +5,7 @@ const LRUCache = require('lru-cache');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({dev: false});
+const app = next({dev});
 const handle = app.getRequestHandler();
 
 // This is where we cache our rendered HTML pages
@@ -21,12 +21,12 @@ app.prepare()
     .then(() => {
         const server = express();
 
+        server.get('/_next/*', (req, res) => {
+            /* serving _next static content using next.js handler */
+            handle(req, res);
+        });
+
         server.get('*', (req, res) => {
-            if (req.url.substring(0, 7) === "/_next/") {
-                /* serving _next static content using next.js handler */
-                handle(req, res);
-                return;
-            }
             const redirUrl = redirectList[req.path];
             if (redirUrl !== undefined) {
                 res.status(301).redirect(redirUrl);

@@ -15,13 +15,22 @@ class CardPopInfo extends Component {
 
     render() {
         const {title = "", text = "", url = "", description = []} = this.props;
+/*
         if (Array.isArray(text)) {
             for (let i = 0; i < text.length; i++) {
-                if (text[i] instanceof Object && text[i].key === undefined){
-                    text[i].key = i;
+                console.log(text);
+                if (typeof text[i] === 'object' || typeof text[i] === 'symbol') {
+
+                    if (text[i].key === undefined || text[i].key === null || text[i].key === false) {
+                        let item = text[i];
+                        item.key = i;
+                        text[i] = item;
+                        console.log(`key ${i} added`);
+                    }
                 }
             }
         }
+*/
 
         if (description.length > 0) {
             let dsc = <div className="b-item__hovered-text">{description}</div>;

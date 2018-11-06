@@ -8,7 +8,7 @@ import Recaptcha from "react-google-recaptcha";
 import DatePicker from "components/common/DatePicker";
 
 import "./index.scss"
-import Close from "../../../modals/Close";
+import Close from "components/modals/Close";
 
 /*   fields are stored in /data/main.js   */
 

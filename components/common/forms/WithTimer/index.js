@@ -1,8 +1,8 @@
 import {Component} from 'react';
 import Timer from 'components/common/Timer';
 import PhoneAndSubmit from 'components/common/forms/PhoneAndSubmit';
-import './index.scss'
-import Close from "../../../modals/Close";
+import './index.scss';
+import Close from "components/modals/Close";
 
 
 class FormWithTimer extends Component {

@@ -45,7 +45,7 @@ class ExitPopup extends Component {
                              style={{display: 'block'}}
                              onClick={() => context.hide()}
                         >
-                            <div className="modal-sale__body modal__body"
+                            <div className={"modal-sale__body modal__body" + (this.state.sent ? " body-white" : "")}
                                  onClick={(e) => e.stopPropagation()}
                             >
                                 <div className="block-form__message form_alert" style={{display: this.state.sent ? "flex" : "none"}}>

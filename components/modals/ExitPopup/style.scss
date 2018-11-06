@@ -8,6 +8,22 @@
     font-size: 1em;
     z-index: 4;
     font-family: "Ubuntu-Regular", sans-serif;
+    .body-white {
+        background: #fff;
+        border: 2px solid #d84315;
+    }
+    .form_alert {
+        //min-height: 250px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #4A4A4A;
+    }
+    .block-form__title {
+        font-size: 2em;
+    }
     &.modal-sale2 {
         .modal-sale__body {
             background-image: url(~static/images/modal/1.jpg);
@@ -106,7 +122,6 @@
         }
     }
     p {
-        color: #fff;
         font-size: 1em;
         line-height: 1.5;
         margin-bottom: .5em;

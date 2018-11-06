@@ -8,6 +8,7 @@ import Recaptcha from "react-google-recaptcha";
 import DatePicker from "components/common/DatePicker";
 
 import "./index.scss"
+import Close from "components/modals/Close";
 
 /*   fields are stored in /data/main.js   */
 
@@ -17,6 +18,8 @@ class OrderForm extends BaseForm {
         super(props);
         this.state.Extended = false;
     }
+
+    closeAlert = () => this.setState({ formSent: false });
 
     showFullForm = () => {
         this.setState({Extended: !this.state.Extended});
@@ -253,6 +256,7 @@ class OrderForm extends BaseForm {
                     }}
                 />
                 <div className="block-form__message" style={{display: this.state.formSent.bool ? "block" : "none"}}>
+                    <Close onClick={this.closeAlert} inverse/>
                     <img width="100%" src={require("static/images/fox-logo.png")}/>
                     <br/>
                     <br/>

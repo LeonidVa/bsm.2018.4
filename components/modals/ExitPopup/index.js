@@ -45,14 +45,16 @@ class ExitPopup extends Component {
                              style={{display: 'block'}}
                              onClick={() => context.hide()}
                         >
-                            <div className="modal-sale__body modal__body"
+                            <div className={"modal-sale__body modal__body" + (this.state.sent ? " body-white" : "")}
                                  onClick={(e) => e.stopPropagation()}
                             >
-                                <Close onClick={() => {
+                                <div className="block-form__message form_alert" style={{display: this.state.sent ? "flex" : "none"}}>
+                                  <Close onClick={() => {
                                     context.hide()
-                                }}/>
-                                <div className="block-form__message" style={{display: this.state.sent ? "block" : "none"}}>
-                                    abc
+                                  }} inverse/>
+                                  <img width="100%" src={require("static/images/fox-logo.png")}/>
+                                  <h2 className="block-form__title">Спасибо!</h2>
+                                  <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
                                 </div>
                                 <div className="block-form__message" style={{display: this.state.sent ? "none" : "block"}}>
                                     <div className="modal-sale__top">

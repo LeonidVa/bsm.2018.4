@@ -1,8 +1,8 @@
 import './index.scss'
 
-const ImageBlock = ({imageSrc})=>(
+const ImageBlock = ({imageSrc, altText})=>(
     <section className="block-img">
-        <img src={imageSrc} alt="" />
+        <img src={imageSrc} alt={altText} />
 	</section>
 )
 

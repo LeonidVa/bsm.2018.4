@@ -10,7 +10,7 @@ const callPopupState = {
     show: () => {
     },
     hide: () => {
-    },
+    }
 };
 
 const callPopupContext = createContext(callPopupState);
@@ -50,7 +50,7 @@ class CallPopup extends Component {
                                 <div className="block-form__message" style={{display: context.sent ? "none" : "block"}}>
                                     <Form
                                         question={context.question}
-                                        targetID="call_me_top"
+                                        targetID={context.targetID}
                                         formType={context.question ? 'Вопрос' : 'Заказ обратного звонка'}
                                         onSent={context.onSent}
                                     />
@@ -73,11 +73,12 @@ class ToggleCallPopup extends Component {
                     if (context === undefined || context === null) {
                         return null
                     }
-                    context.targetID = this.props.targetID;
-                    let oncl = context.show;
-                    if (context.isShown) {
+                      let oncl = () => {
+                        context.show(this.props.targetID);
+                      };
+                      if (context.isShown) {
                         oncl = context.hide;
-                    }
+                      }
                     return <div onClick={oncl}>{this.props.children}</div>
                 }}
             </callPopupContext.Consumer>
@@ -94,10 +95,12 @@ class ToggleQuestionPopup extends Component {
                     if (context === undefined || context === null) {
                         return null
                     }
-                    let oncl = context.showWithQuestion;
-                    if (context.isShown) {
+                      let oncl = () => {
+                        context.show(this.props.targetID);
+                      };
+                      if (context.isShown) {
                         oncl = context.hide;
-                    }
+                      }
                     return <div onClick={oncl}>{this.props.children}</div>
                 }}
             </callPopupContext.Consumer>

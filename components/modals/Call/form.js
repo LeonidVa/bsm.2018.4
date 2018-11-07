@@ -8,6 +8,8 @@ class Form extends BaseForm {
     }
 
     render() {
+      // тут уже актуальный targetID
+      // console.log("FORM TARGET ID", this.props.targetID);
         return (
             <form className="block-form__form" onSubmit={this.handleSubmit()}>
                 <div className="block-form__item">

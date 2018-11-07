@@ -260,11 +260,11 @@ class OrderForm extends BaseForm {
                     <img width="100%" src={require("static/images/fox-logo.png")}/>
                     <br/>
                     <br/>
-                    <h2 className="block-form__title">Спасибо!</h2>
+                    <div className="block-form__title">Спасибо!</div>
                     <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
                 </div>
                 <form onSubmit={this.handleSubmit()} className="block-form__form" style={{display: this.state.formSent.bool ? "none" : "block"}}>
-                    <h2 className="block-form__title">{title}</h2>
+                    <div className="block-form__title">{title}</div>
                     {this.renderForm()}
                     <a
                         className="block-form__more-info"

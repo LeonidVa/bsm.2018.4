@@ -20,191 +20,187 @@ import stat from 'utils/analytics';
 import ContactsPage from "components/common/ServiceBlock/ready-made/ContactsPage";
 
 class page extends Component {
-  render() {
-    return (
-      <Wrapper title="BeSmarter - Контакты" description="На этой страницы указан наш адрес офиса, наша почта и телефоны в Москве, звоните, приезжайте в компанию.">
-        <div className="wrapper bg bg-c2 bg-img bg-img5">
-          <Title>Контакты</Title>
+    render() {
+        return (
+            <Wrapper title="BeSmarter - Контакты" description="На этой страницы указан наш адрес офиса, наша почта и телефоны в Москве, звоните, приезжайте в компанию.">
+                <div className="wrapper bg bg-c2 bg-img bg-img5">
+                    <Title>Контакты</Title>
 
+                    <section className="breadcrumbs">
+                        <div className="inner">
+                            <Link href="/">
+                                <a>Главная</a>
+                            </Link>
+                            <span> / </span>
+                            <Link href="/contacts">
+                                <a>Контакты</a>
+                            </Link>
+                        </div>
+                    </section>
 
+                    <section className="block-nav">
+                        <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
+                    </section>
 
-          <section className="breadcrumbs">
-            <div className="inner">
-              <Link href="/">
-                <a>Главная</a>
-              </Link>
-              <span> / </span>
-              <Link href="/contacts">
-                <a>Контакты</a>
-              </Link>
-            </div>
-          </section>
+                    <div itemScope itemType="http://schema.org/Organization">
+                        <section className="block-text">
+                            <h2 itemProp="name" className="block-text__title">Офис</h2>
+                            <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+                                <p className="block-text__subtitle subtitle-orange__micro">
+                                    <span itemProp="addressLocality">Москва, </span>
+                                    <span itemProp="streetAddress">Большой Кисловский переулок д. 1, стр. 2, офис 211</span>
+                                </p>
+                            </div>
+                            <p className="block-text__par">
+                                Понедельник - Суббота <span className="bold">с 10:00 до 18:30</span><br/>
+                                Воскресенье <span className="bold">- выходной</span>
+                            </p>
+                            <p className="block-text__par finish-text">
+                                Приходите – мы ждём Вас!
+                            </p>
 
-          <section className="block-nav">
-            <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-          </section>
+                            <h2 className="block-text__title">
+                                Телефон
+                            </h2>
+                            <p className="block-text__subtitle subtitle-orange">
+                                <span itemProp="telephone" className="phone">+7 (495) 772-40-90</span>
+                                <span itemProp="telephone" className="phone">+7 (495) 772-90-40</span>
+                            </p>
+                            <p className="block-text__par">
+                                Понедельник - пятница <span className="bold">с 10:00 до 19:30</span><br/>
+                                Суббота, воскресенье <span className="bold">с 10:00 до 18:30</span>
+                            </p>
+                            <p className="block-text__par finish-text">
+                                Звоните – будем рады поговорить!
+                            </p>
+                            <h2 className="block-text__title">
+                                Почта
+                            </h2>
+                            <p itemProp="email" className="block-text__subtitle subtitle-orange">
+                                <a href="mailto:zakaz@besmarter.ru?subject=Новая заявка" onClick={() => {
+                                    stat.triggerTarget.emailClicked();
+                                    return true;
+                                }} style={{color: "#f4511e"}}>zakaz@besmarter.ru</a>
+                            </p>
+                            <p className="block-text__par">
+                                Возникли вопросы?
+                            </p>
+                            <p className="block-text__par finish-text">
+                                Пишите – ответим!
+                            </p>
+                            <div className="block-callask__buttons">
+                                <ToggleQuestionPopup targetID="question_contacts"><a className="block-callask__button">Задать вопрос</a></ToggleQuestionPopup>
+                                <ToggleCallPopup targetID="call_me_contacts"><a className="block-callask__button">Заказать звонок</a></ToggleCallPopup>
+                            </div>
+                        </section>
+                    </div>
 
-            <div itemScope itemType="http://schema.org/Organization">
-          <section className="block-text">
-            <h2 itemProp="name" className="block-text__title">
-              Офис
-            </h2>
-              <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-            <p className="block-text__subtitle subtitle-orange__micro">
-                <span itemProp="addressLocality">Москва, </span>
-                <span itemProp="streetAddress">Большой Кисловский переулок д. 1, стр. 2, офис 211</span>
-            </p>
-              </div>
-            <p className="block-text__par">
-              Понедельник - Суббота <span className="bold">с 10:00 до 18:30</span><br/>
-              Воскресенье <span className="bold">- выходной</span>
-            </p>
-            <p className="block-text__par finish-text">
-              Приходите – мы ждём Вас!
-            </p>
+                    <MapBlock/>
+                    <section className="block-text">
+                        <h2 className="block-text__title">
+                            Как пройти
+                        </h2>
+                        <Address
+                            handleMaps={this.handleMaps}
+                            metro="м. Арбатская"
+                            schema={schemaSrc}
+                            time="5 минут"
+                            distance="420 метров"
+                        >
+                            <p className="block-text__par">
+                                Выход к кинотеатру «Художественный».
+                            </p>
+                            <p className="block-text__par">
+                                Из метро направо по ул. Воздвиженка в подземный переход напротив «Детского мира».
+                                Из перехода в переулок между салоном «Мерседес» и «Детским миром» - Вы уже на Большом Кисловском.
+                            </p>
+                            <p className="block-text__par">
+                                На левой стороне дом с кафе – это уже наш: дом 1, строение 2.
+                                Проходите мимо всех кафе в коричневую дверь бизнес-центра.
+                            </p>
+                            <p className="block-text__par">
+                                Мимо охраны на второй этаж направо.
+                                Комната 211 с лисенком - это уже мы.
+                            </p>
+                            <p className="block-text__par">Рады видеть Вас!</p>
 
-            <h2 className="block-text__title">
-              Телефон
-            </h2>
-            <p className="block-text__subtitle subtitle-orange">
-              <span itemProp="telephone" className="phone">+7 (495) 772-40-90</span>
-              <span itemProp="telephone" className="phone">+7 (495) 772-90-40</span>
-            </p>
-            <p className="block-text__par">
-              Понедельник - пятница <span className="bold">с 10:00 до 19:30</span><br/>
-              Суббота, воскресенье <span className="bold">с 10:00 до 18:30</span>
-            </p>
-            <p className="block-text__par finish-text">
-              Звоните – будем рады поговорить!
-            </p>
-            <h2 className="block-text__title">
-              Почта
-            </h2>
-            <p itemProp="email" className="block-text__subtitle subtitle-orange">
-              <a href="mailto:zakaz@besmarter.ru?subject=Новая заявка" onClick={() => {
-                stat.triggerTarget.emailClicked();
-                return true;
-              }} style={{color: "#f4511e"}}>zakaz@besmarter.ru</a>
-            </p>
-            <p className="block-text__par">
-              Возникли вопросы?
-            </p>
-            <p className="block-text__par finish-text">
-              Пишите – ответим!
-            </p>
-            <div className="block-callask__buttons">
-              <ToggleQuestionPopup targetID="question_contacts"><a className="block-callask__button">Задать вопрос</a></ToggleQuestionPopup>
-              <ToggleCallPopup targetID="call_me_contacts"><a className="block-callask__button">Заказать звонок</a></ToggleCallPopup>
-            </div>
-          </section>
-            </div>
+                        </Address>
+                        <Address
+                            metro="м. Александровский сад"
+                            schema={schemaSrc}
+                            time="5 минут"
+                            distance="420 метров"
+                        >
 
-            <MapBlock/>
-          <section className="block-text">
-            <h2 className="block-text__title">
-              Как пройти
-            </h2>
-            <Address
-              handleMaps={this.handleMaps}
-              metro="м. Арбатская"
-              schema={schemaSrc}
-              time="5 минут"
-              distance="420 метров"
-            >
-              <p className="block-text__par">
-                Выход к кинотеатру «Художественный».
-              </p>
-              <p className="block-text__par">
-                Из метро направо по ул. Воздвиженка в подземный переход напротив «Детского мира».
-                Из перехода в переулок между салоном «Мерседес» и «Детским миром» - Вы уже на Большом Кисловском.
-              </p>
-              <p className="block-text__par">
-                На левой стороне дом с кафе – это уже наш: дом 1, строение 2.
-                Проходите мимо всех кафе в коричневую дверь бизнес-центра.
-              </p>
-              <p className="block-text__par">
-                Мимо охраны на второй этаж направо.
-                Комната 211 с лисенком - это уже мы.
-              </p>
-              <p className="block-text__par">Рады видеть Вас!</p>
+                            <p className="block-text__par">Выход на ул. Воздвиженка.
+                            </p>
+                            <p className="block-text__par">Из метро налево по ул. Воздвиженка в подземный переход напротив «Детского мира».
+                                Из перехода в переулок между салоном «Мерседес» и «Детским миром» - Вы уже на Большом Кисловском.
+                            </p>
+                            <p className="block-text__par">На левой стороне дом с кафе – это уже наш: дом 1, строение 2.
+                                Проходите мимо всех кафе в коричневую дверь бизнес-центра.
+                            </p>
+                            <p className="block-text__par">Мимо охраны на второй этаж направо.
+                                Комната 211 с лисенком - это уже мы.
+                            </p>
+                            <p className="block-text__par">Рады видеть Вас!
+                            </p>
+                        </Address>
+                        <Address
+                            metro="м. Библиотека им. Ленина"
+                            schema={schemaSrc}
+                            time="5 минут"
+                            distance="420 метров"
+                        >
 
-            </Address>
-            <Address
-              metro="м. Александровский сад"
-              schema={schemaSrc}
-              time="5 минут"
-              distance="420 метров"
-            >
+                            <p className="block-text__par">Идём по указателям «Выход в город на ул. Воздвиженка».
 
-              <p className="block-text__par">Выход на ул. Воздвиженка.
-              </p>
-              <p className="block-text__par">Из метро налево по ул. Воздвиженка в подземный переход напротив «Детского мира».
-                Из перехода в переулок между салоном «Мерседес» и «Детским миром» - Вы уже на Большом Кисловском.
-              </p>
-              <p className="block-text__par">На левой стороне дом с кафе – это уже наш: дом 1, строение 2.
-                Проходите мимо всех кафе в коричневую дверь бизнес-центра.
-              </p>
-              <p className="block-text__par">Мимо охраны на второй этаж направо.
-                Комната 211 с лисенком - это уже мы.
-              </p>
-              <p className="block-text__par">Рады видеть Вас!
-              </p>
-            </Address>
-            <Address
-              metro="м. Библиотека им. Ленина"
-              schema={schemaSrc}
-              time="5 минут"
-              distance="420 метров"
-            >
+                            </p>
+                            <p className="block-text__par">Из стеклянных дверей метро по подземному переходу вперед до упора и наверх.
+                                Вы на Воздвиженке: сзади Кремль, слева Библиотека, впереди «Детский мир».
+                                Из перехода в переулок между салоном «Мерседес» и «Детским миром» - Вы уже на Большом Кисловском.
+                            </p>
+                            <p className="block-text__par">На левой стороне дом с кафе – это уже наш: дом 1, строение 2.
+                                Проходите мимо всех кафе в коричневую дверь бизнес-центра.
+                            </p>
+                            <p className="block-text__par">Мимо охраны на второй этаж направо.
+                                Комната 211 с лисенком - это уже мы.
+                            </p>
+                            <p className="block-text__par">Рады видеть Вас!
+                            </p>
+                        </Address>
+                        <Address
+                            metro="м. Боровицкая"
+                            schema={schemaSrc}
+                            time="8 минут"
+                            distance="690 метров"
+                        >
 
-              <p className="block-text__par">Идём по указателям «Выход в город на ул. Воздвиженка».
+                            <p className="block-text__par">В метро переходим на станцию Арбатская.
+                                Выход к кинотеатру «Художественный»
+                            </p>
+                            <p className="block-text__par">Из метро направо по ул. Воздвиженка в подземный переход напротив «Детского мира».
+                                Из перехода в переулок между салоном «Мерседес» и «Детским миром» - Вы уже на Большом Кисловском.
+                            </p>
+                            <p className="block-text__par">На левой стороне дом с кафе – это уже наш: дом 1, строение 2.
+                                Проходите мимо всех кафе в коричневую дверь бизнес-центра.
+                            </p>
+                            <p className="block-text__par">Мимо охраны на второй этаж направо.
+                                Комната 211 с лисенком - это уже мы.
+                            </p>
+                            <p className="block-text__par">Рады видеть Вас!
+                            </p>
+                        </Address>
+                    </section>
 
-              </p>
-              <p className="block-text__par">Из стеклянных дверей метро по подземному переходу вперед до упора и наверх.
-                Вы на Воздвиженке: сзади Кремль, слева Библиотека, впереди «Детский мир».
-                Из перехода в переулок между салоном «Мерседес» и «Детским миром» - Вы уже на Большом Кисловском.
-              </p>
-              <p className="block-text__par">На левой стороне дом с кафе – это уже наш: дом 1, строение 2.
-                Проходите мимо всех кафе в коричневую дверь бизнес-центра.
-              </p>
-              <p className="block-text__par">Мимо охраны на второй этаж направо.
-                Комната 211 с лисенком - это уже мы.
-              </p>
-              <p className="block-text__par">Рады видеть Вас!
-              </p>
-            </Address>
-            <Address
-              metro="м. Боровицкая"
-              schema={schemaSrc}
-              time="8 минут"
-              distance="690 метров"
-            >
+                    <ContactsPage/>
 
-              <p className="block-text__par">В метро переходим на станцию Арбатская.
-                Выход к кинотеатру «Художественный»
-              </p>
-              <p className="block-text__par">Из метро направо по ул. Воздвиженка в подземный переход напротив «Детского мира».
-                Из перехода в переулок между салоном «Мерседес» и «Детским миром» - Вы уже на Большом Кисловском.
-              </p>
-              <p className="block-text__par">На левой стороне дом с кафе – это уже наш: дом 1, строение 2.
-                Проходите мимо всех кафе в коричневую дверь бизнес-центра.
-              </p>
-              <p className="block-text__par">Мимо охраны на второй этаж направо.
-                Комната 211 с лисенком - это уже мы.
-              </p>
-              <p className="block-text__par">Рады видеть Вас!
-              </p>
-            </Address>
-          </section>
-
-          <ContactsPage/>
-
-          <FormOrder/>
-          <LinksBlock links={links}/>
-        </div>
-      </Wrapper>
-    )
-  }
+                    <FormOrder/>
+                    <LinksBlock links={links}/>
+                </div>
+            </Wrapper>
+        )
+    }
 }
 
 

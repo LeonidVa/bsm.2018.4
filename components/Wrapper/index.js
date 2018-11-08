@@ -30,9 +30,15 @@ class Wrapper extends Component {
         this.state.exitPopupState = exitPopupState;
         this.state.callPopupState = callPopupState;
 
-        this.state.callPopupState.show = () => {
-            this.setState({callPopupState: {...this.state.callPopupState, isShown: true, question: false}})
+        this.state.callPopupState.show = targetID => {
+            this.setState({callPopupState: {
+                ...this.state.callPopupState,
+                isShown: true,
+                question: false,
+                targetID
+            }})
         };
+
         this.state.callPopupState.showWithQuestion = () => {
             this.setState({callPopupState: {...this.state.callPopupState, isShown: true, question: true}})
         };
@@ -47,8 +53,13 @@ class Wrapper extends Component {
         this.state.exitPopupState.show = () => {
             this.setState({exitPopupState: {...this.state.exitPopupState, isShown: true}});
         };
+
         this.state.exitPopupState.hide = () => {
-            this.setState({exitPopupState: {...this.state.exitPopupState, isShown: false}});
+            this.setState({exitPopupState: {
+                ...this.state.exitPopupState,
+                isShown: false,
+                targetID: null
+              }});
         };
 
         if (process.browser) {

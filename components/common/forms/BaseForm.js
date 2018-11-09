@@ -39,21 +39,21 @@ class BaseForm extends Component {
     }
     const _this = this;
     let formData = new FormData();
-    formData.set("form", formType);
-    formData.set("source", wloc);
-    formData.set("name", name);
-    formData.set("phone", phone);
-    formData.set("email", email);
-    formData.set("theme", theme);
-    formData.set("worktype", worktype.value);
-    formData.set("discipline", discipline);
-    formData.set("deadline", deadline);
-    formData.set("size", size);
-    formData.set("comment", comment);
+    formData.append("form", formType);
+    formData.append("source", wloc);
+    formData.append("name", name);
+    formData.append("phone", phone);
+    formData.append("email", email);
+    formData.append("theme", theme);
+    formData.append("worktype", worktype.value);
+    formData.append("discipline", discipline);
+    formData.append("deadline", deadline);
+    formData.append("size", size);
+    formData.append("comment", comment);
     files.forEach(file => {
       formData.append("files", file);
     });
-    formData.set("verified", verified);
+    formData.append("verified", verified);
     let url = "/api/form_data";
     if (config.publicRuntimeConfig.runtime.development) {
       url = 'http://localhost:3001/api/form_data'
@@ -87,7 +87,6 @@ class BaseForm extends Component {
           successCallBack && successCallBack();
         }
         _this.clearFormData();
-        //console.log('',response);
       })
       .catch(function (response) {
         //handle error

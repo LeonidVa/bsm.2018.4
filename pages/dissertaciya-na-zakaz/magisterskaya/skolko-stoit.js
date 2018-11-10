@@ -82,7 +82,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/mag-ckolko.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/mag-ckolko.jpg')} altText="Сколько стоит магистерская диссертация"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

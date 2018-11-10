@@ -111,7 +111,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <ImageBlock imageSrc={require('static/images/block/dissertaciya-na-zakaz.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/dissertaciya-na-zakaz.jpg')} altText="Докторская диссертация по педагогике на заказ"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

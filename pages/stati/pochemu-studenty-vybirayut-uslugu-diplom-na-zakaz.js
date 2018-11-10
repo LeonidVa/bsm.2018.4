@@ -101,7 +101,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/19(11).jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/19(11).jpg')} altText="Почему студенты выбирают услугу «диплом на заказ»?"/>
 
       <section className="block-text">
         <ol className="fitted">

@@ -76,7 +76,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/zakazat-esse.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/zakazat-esse.jpg')} altText="Заказать эссе"/>
 
       <section className="block-text">
         <h2 className="block-text__title">
@@ -131,7 +131,7 @@ const page = () => (
         </ul>
       </section>
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
-      <ImageBlock imageSrc={require('static/images/block/zakazar-esse2.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/zakazar-esse2.jpg')} altText="эссе на заказ"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

@@ -88,7 +88,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/dip-po-buch.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/dip-po-buch.jpg')} altText="Заказать дипломную работу по бухгалтерскому учёту"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

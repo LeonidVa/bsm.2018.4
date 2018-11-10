@@ -106,7 +106,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/19(16).jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/19(16).jpg')} altText="Как правильно заказать диплом?"/>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 

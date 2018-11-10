@@ -77,7 +77,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/postup-v-aspir.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/postup-v-aspir.jpg')} altText="Как подготовиться и поступить в аспирантуру"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

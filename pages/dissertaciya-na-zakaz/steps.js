@@ -88,7 +88,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <ImageBlock imageSrc={require('static/images/block/kand-uri.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/kand-uri.jpg')} altText="Защитить диссертацию"/>
 
       <section className="block-text">
 
@@ -249,7 +249,7 @@ const page = () => (
         </ol>
       </section>
 
-      <ImageBlock imageSrc={require('static/images/block/dis-shagi-3.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/dis-shagi-3.jpg')} altText="Как успешно защитить свою диссертацию"/>
 
       <section className="block-text">
         <h2 className="block-text__title">
@@ -473,7 +473,7 @@ const page = () => (
         </ol>
       </section>
 
-      <ImageBlock imageSrc={require('static/images/block/dis-shagi-2.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/dis-shagi-2.jpg')} altText="Как защитить диссертацию"/>
 
       <section className="block-text">
         <h2 className="block-text__title">
@@ -538,7 +538,7 @@ const page = () => (
         </ol>
       </section>
 
-      <ImageBlock imageSrc={require('static/images/block/dis-shagi.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/dis-shagi.jpg')} altText="Материалы для успешной работы"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

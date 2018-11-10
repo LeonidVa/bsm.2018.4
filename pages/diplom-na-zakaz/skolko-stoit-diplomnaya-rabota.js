@@ -79,7 +79,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/skolko-stoit-dip-rab.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/skolko-stoit-dip-rab.jpg')} altText="Сколько стоит дипломная работа"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

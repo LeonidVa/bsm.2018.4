@@ -91,7 +91,7 @@ const page = () => (
 
       <FormOrder/>
 
-      <ImageBlock imageSrc={require('static/images/block/kandidatskie.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/kandidatskie.jpg')} altText="Кандидатская диссертация "/>
 
       <section className="block-text">
         <h2 className="block-text__title">
@@ -187,7 +187,7 @@ const page = () => (
         </p>
       </section>
 
-      <ImageBlock imageSrc={require('static/images/block/kandidatskie2.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/kandidatskie2.jpg')} altText="Кандидатская диссертация на заказ "/>
 
       <section className="block-text">
         <h2 className="block-text__title">

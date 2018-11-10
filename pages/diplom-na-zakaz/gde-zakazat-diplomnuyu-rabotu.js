@@ -84,7 +84,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/gde-zak-dip-rabotu.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/gde-zak-dip-rabotu.jpg')} altText="Где заказать дипломную работу"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

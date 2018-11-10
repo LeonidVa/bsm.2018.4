@@ -104,7 +104,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/19(4).jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/19(4).jpg')} altText="Как составить план дипломной работы"/>
 
       <section className="block-text">
         <h2 className="block-text__title">
@@ -193,7 +193,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <ImageBlock imageSrc={require('static/images/block/19-(5).jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/19-(5).jpg')} altText="Пример содержания дипломной работы"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

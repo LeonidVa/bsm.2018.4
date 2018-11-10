@@ -75,7 +75,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/ideal-stud.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/ideal-stud.jpg')} altText="Идеальный студент и идеальный аспирант: как ими стать?"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

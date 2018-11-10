@@ -11,7 +11,7 @@ const Review = ({ faceImg, reviewText, bottom, name, prof }) => (
                 {reviewText}
             </p>
             <div className="reviews-author">
-                <img src={faceImg} alt="" />
+                <img src={faceImg} alt={"Студент " + name} />
                 <div className="reviews-author__data">
                     <span className="reviews-name">{name}</span>
                     <span className={`reviews-job ${bottom ? 'job-orange': ''}`}>{prof}</span>

@@ -170,7 +170,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/stat_.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/stat_.jpg')} altText="Разные статьи о том, как подготовиться студенту!"/>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 

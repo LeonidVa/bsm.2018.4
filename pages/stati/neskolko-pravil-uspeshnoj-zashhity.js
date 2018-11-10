@@ -106,7 +106,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/19(10).jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/19(10).jpg')} altText="Несколько правил удачной защиты"/>
 
       <section className="block-text">
         <p className="block-text__par">

@@ -88,7 +88,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/pedagogicheskaya-praktika.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/pedagogicheskaya-praktika.jpg')} altText="Заказать отчет по педагогической практике"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

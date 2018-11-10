@@ -84,7 +84,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      <ImageBlock imageSrc={require('static/images/block/ddoc.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/ddoc.jpg')} altText="Докторская диссертация"/>
 
       <section className="block-text">
         <h2 className="block-text__title">
@@ -181,7 +181,7 @@ const page = () => (
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-      <ImageBlock imageSrc={require('static/images/block/docto-watch.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/docto-watch.jpg')} altText="Докторская диссертация на заказ"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

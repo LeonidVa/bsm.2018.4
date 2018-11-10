@@ -80,7 +80,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/mag-gde-z.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/mag-gde-z.jpg')} altText="Где заказать магистерскую диссертацию"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

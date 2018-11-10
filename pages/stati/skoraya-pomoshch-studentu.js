@@ -78,7 +78,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/20.jpeg')}/>
+      <ImageBlock imageSrc={require('static/images/block/20.jpeg')} altText="Диплом на заказ – «скорая помощь» студенту"/>
 
       <section className="block-text">
         <p className="block-text__par">

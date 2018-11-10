@@ -107,7 +107,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/zakluchenie-k-diplomnoy-rabote.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/zakluchenie-k-diplomnoy-rabote.jpg')} altText="Как написать заключение к дипломной работе (образец)"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

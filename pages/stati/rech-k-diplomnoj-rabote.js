@@ -115,7 +115,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/19(13).jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/19(13).jpg')} altText="Как написать речь к дипломной работе"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

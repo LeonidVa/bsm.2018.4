@@ -95,7 +95,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/mag-po-ekon.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/mag-po-ekon.jpg')} altText="Магистерская диссертация по экономике"/>
 
       <section className="block-text">
         <h2 className="block-text__title">
@@ -186,7 +186,7 @@ const page = () => (
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-      <ImageBlock imageSrc={require('static/images/block/mag-eko.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/mag-eko.jpg')} altText="Магистерская диссертация по экономике на заказ"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

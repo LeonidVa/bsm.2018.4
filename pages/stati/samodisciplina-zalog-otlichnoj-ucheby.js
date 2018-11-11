@@ -75,7 +75,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/19(3).jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/19(3).jpg')} altText="Самодисциплина – залог отличной учебы"/>
 
       <section className="block-text">
         <p className="block-text__par">

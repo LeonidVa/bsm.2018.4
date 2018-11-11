@@ -17,8 +17,6 @@ before_script:
 
 
 build_job:
-  only:
-  - master
   stage: build
   script:
   - yarn -v

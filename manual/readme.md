@@ -37,3 +37,6 @@ import telega from 'utils/telega';
 ...
 telega('текст сообщения');
 ```
+## Запуск приложения для разработки
+yarn
+yarn run dev

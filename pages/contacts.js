@@ -67,7 +67,7 @@ class page extends Component {
                                 <span itemProp="telephone" className="phone">+7 (495) 772-90-40</span>
                             </p>
                             <p className="block-text__par">
-                                Понедельник - пятница <span className="bold">с 09:00 до 19:30</span><br/>
+                                Понедельник - пятница <span className="bold">с 09:00 до 23:00</span><br/>
                                 Суббота - воскресенье <span className="bold">с 09:00 до 22:00</span>
                             </p>
                             <p className="block-text__par finish-text">

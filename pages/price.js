@@ -266,7 +266,7 @@ const page = () => (
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-            <ImageBlock imageSrc={require('static/images/block/g.jpg')}/>
+            <ImageBlock imageSrc={require('static/images/block/g.jpg')} altText="Цена вашей работы"/>
 
             <FormOrder/>
 

@@ -78,7 +78,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/kurs-skolko-stoit.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/kurs-skolko-stoit.jpg')} altText="Сколько стоит курсовая работа"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

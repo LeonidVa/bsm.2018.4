@@ -77,7 +77,7 @@ const page = () => (
 
       <FormEstimate/>
 
-      <ImageBlock imageSrc={require('static/images/block/kur-rab-sayt-s-rurs.jpg')}/>
+      <ImageBlock imageSrc={require('static/images/block/kur-rab-sayt-s-rurs.jpg')} altText="Где заказать курсовую работу"/>
 
       <section className="block-text">
         <h2 className="block-text__title">

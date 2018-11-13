@@ -12,7 +12,7 @@ export default (props) => (
         <div className="footer">
             <div className="inner">
                 <div className="footer__logo">
-                    <img src={foxLogo} alt=""/>
+                    <img src={foxLogo} alt="Лого BeSmarter!"/>
                 </div>
 
                 <div className="footer__center">

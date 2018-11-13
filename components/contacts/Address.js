@@ -25,7 +25,7 @@ class Address extends Component {
                     </p>
                 </div>
                 <div className="block-accordion__body active" style={{opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "1000px" : "0"}}>
-                    <img src={schema} alt="how-to-go"/>
+                    <img src={schema} alt="Карта проезда"/>
                     <p className="block-text__par">
                         {metro}<br/>
                         {time}<br/>

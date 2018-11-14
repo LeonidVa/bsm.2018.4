@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import stat from "utils/analytics";
 import axios from "axios";
 import getConfig from 'next/config';
-import { toast } from "react-toastify"
+import {toast} from "react-toastify"
+
 const config = getConfig();
 
 
@@ -88,11 +89,19 @@ class BaseForm extends Component {
         }
         _this.clearFormData();
       })
-      .catch(function (response) {
+      .catch(function (error) {
         //handle error
-        console.log('catch and toast', response);
+        if (error.response === undefined) {
+          // not an axios error
+          console.log('not an axios error, here is dump:', error);
+          return;
+        }
+        console.log('catch and toast', error);
+        /*catch and toast TypeError: t is not a function
+    at l (commons.85fc1ee1e428f389dabb.js:formatted:7842)
+    at commons.85fc1ee1e428f389dabb.js:formatted:6485*/
         toast.error(<span>Ой! Что-то пошло не так и заявка не отправилась. Пожалуйста, позвоните нам по <a className="" href='tel:+74957724090'>+7 495 772 40 90.</a></span>, {
-            position: toast.POSITION.TOP_RIGHT
+          position: toast.POSITION.TOP_RIGHT
         });
         errorCallBack && errorCallBack();
       });

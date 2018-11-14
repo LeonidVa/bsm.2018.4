@@ -90,7 +90,7 @@ class BaseForm extends Component {
       })
       .catch(function (response) {
         //handle error
-        console.log(response);
+        console.log('catch and toast', response);
         toast.error(<span>Ой! Что-то пошло не так и заявка не отправилась. Пожалуйста, позвоните нам по <a className="" href='tel:+74957724090'>+7 495 772 40 90.</a></span>, {
             position: toast.POSITION.TOP_RIGHT
         });

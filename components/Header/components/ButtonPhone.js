@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {ToggleCallPopup} from "components/modals/Call"
+import stat from "utils/analytics";
 
 import './ButtonPhone.scss';
 
@@ -9,7 +10,7 @@ class ButtonPhone extends Component {
   render() {
     const btnMobile = (
       <a className="header__telanckor" href="tel:+74957724090" onClick={() => {
-        triggerTarget("click_phone");
+        stat.triggerTarget.phoneClicked();
         return true;
       }}>
         <span className="header__tel">+7 495 772 40 90</span>

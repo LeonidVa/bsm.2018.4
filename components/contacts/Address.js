@@ -5,7 +5,7 @@ class Address extends Component {
         display: false
     }
     handleClick = () => {
-        const {handleMaps} = this.props
+        const {handleMaps=()=>{}} = this.props
         this.setState({open: !this.state.open})
         handleMaps()
     }

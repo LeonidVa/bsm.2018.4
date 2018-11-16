@@ -54,7 +54,7 @@ class page extends Component {
                             <p className="block-text__par">
                                 Понедельник - пятница <span className="bold">с 09:00 до 19:30</span><br/>
                                 Суббота <span className="bold">с 10:00 до 18:30</span><br/>
-                                Воскресенье <span className="bold">-выходной</span>
+                                Воскресенье <span className="bold">- выходной</span>
                             </p>
                             <p className="block-text__par finish-text">
                                 Приходите – мы ждём Вас!

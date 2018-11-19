@@ -20,7 +20,7 @@ import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'data/dopraboty'
 import ContactsPage from "components/common/ServiceBlock/ready-made/ContactsPage";
-import MagisDisAnother from "../components/common/ServiceBlock/ready-made/MagisDisAnother";
+import MagisDisAnother from "components/common/ServiceBlock/ready-made/MagisDisAnother";
 
 
 const page = () => (

@@ -135,6 +135,8 @@ class page extends Component {
               {label: 'Имя', name: "name", type: 'text', placeholder: 'Ваше имя', required: true},
               {label: 'Телефон', name: "phone", type: 'text', placeholder: 'Ваш телефон', required: true},
               {label: 'Почта', name: "email", type: 'email', placeholder: 'email', required: true},
+              {label: 'Предмет', name: "discipline", type: 'text', placeholder: 'Предмет или дисциплина', required: false},
+              {label: 'Комментарии', name: "comment", type: 'textarea', placeholder: 'Ваши комментарии', required: false},
             ]}
           />
 

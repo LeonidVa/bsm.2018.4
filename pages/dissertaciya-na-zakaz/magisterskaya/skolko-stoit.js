@@ -24,7 +24,7 @@ import links from 'data/linksBlockConfig';
 
 import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
-import ImageBlock from "../components/common/ImageBlock";
+import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 

@@ -48,9 +48,9 @@ function getIP(req) {
 export default class Error extends React.Component {
   static getInitialProps({err, res, xhr, req}) {
 
- /*   console.log('req.headers');
-    const {headers =[]}=req;
-    console.log(headers);*/
+    /*   console.log('req.headers');
+       const {headers =[]}=req;
+       console.log(headers);*/
     ////////////
 
     const statusCode = (res && res.statusCode) || (xhr && xhr.status) || null;
@@ -67,7 +67,11 @@ export default class Error extends React.Component {
       if (ip === "::1"
         || ip === "::ffff:127.0.0.1") {
       } else {
-        telega('Error ' + statusCode + ' on page ' + url + ' ip ' + req.connection.remoteAddress);
+        const {connection = null} = req;
+        if (connection !== null) {
+          const {remoteAddress = 'unknown'} = connection;
+          telega('Error ' + statusCode + ' on page ' + url + ' ip ' + remoteAddress);
+        }
       }
     }
     return {statusCode, url};

@@ -40,6 +40,7 @@ class BaseForm extends Component {
     }
     const _this = this;
     let formData = new FormData();
+    formData.append("brand", "besmarter");
     formData.append("form", formType);
     formData.append("source", wloc);
     formData.append("name", name);

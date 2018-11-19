@@ -11,3 +11,4 @@ package-lock.json
 pages/_helper.js
 Thumbs.db
 **/Thumbs.db
+out

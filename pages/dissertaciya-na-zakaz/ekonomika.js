@@ -23,13 +23,13 @@ import LinksBlock from 'components/common/LinksBlock';
 import disserNew from 'data/linksBlock/disserNew';
 
 import MetaTags from 'react-meta-tags';
-import ImageBlock from "../../components/common/ImageBlock";
+import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
-import KandidatDis from "../../components/common/ServiceBlock/ready-made/KandidatDis";
-import DoctorskayaDis from "../../components/common/ServiceBlock/ready-made/DoctorskayaDis";
+import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
+import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
 
 
 const page = () => (

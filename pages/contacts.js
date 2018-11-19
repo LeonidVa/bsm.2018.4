@@ -127,6 +127,7 @@ class page extends Component {
 
                         </Address>
                         <Address
+                            handleMaps={this.handleMaps}
                             metro="м. Александровский сад"
                             schema={schemaSrc}
                             time="5 минут"
@@ -148,6 +149,7 @@ class page extends Component {
                             </p>
                         </Address>
                         <Address
+                            handleMaps={this.handleMaps}
                             metro="м. Библиотека им. Ленина"
                             schema={schemaSrc}
                             time="5 минут"
@@ -171,6 +173,7 @@ class page extends Component {
                             </p>
                         </Address>
                         <Address
+                            handleMaps={this.handleMaps}
                             metro="м. Боровицкая"
                             schema={schemaSrc}
                             time="8 минут"

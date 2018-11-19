@@ -23,7 +23,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import disAvtoref from 'data/linksBlock/disAvtoref';
 
 import MetaTags from 'react-meta-tags';
-import ImageBlock from "../../components/common/ImageBlock";
+import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 

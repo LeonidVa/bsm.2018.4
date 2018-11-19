@@ -23,7 +23,7 @@ import LinksBlock from 'components/common/LinksBlock';
 import links from 'data/linksBlockConfig';
 
 import MetaTags from 'react-meta-tags';
-import ImageBlock from "../../../components/common/ImageBlock";
+import ImageBlock from "../components/common/ImageBlock";
 import disKandSkolko from "../../../data/linksBlock/disKandSkolko";
 
 

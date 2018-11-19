@@ -2,8 +2,7 @@ import React from 'react';
 
 export default class extends React.Component {
   static async getInitialProps({res}) {
-    if (!res) return {};
-    res.setHeader('Content-Type', 'application/javascript');
+    if (!res || res.end === undefined) return {};
     res.end(`<?xml version="1.0" encoding="UTF-8"?>
 <!--	created with www.mysitemapgenerator.com	-->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">

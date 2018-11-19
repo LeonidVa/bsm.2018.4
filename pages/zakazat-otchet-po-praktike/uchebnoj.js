@@ -30,7 +30,7 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
-import OtchPoPrak from "../../components/common/ServiceBlock/ready-made/OtchPoPrak";
+import OtchPoPrak from "components/common/ServiceBlock/ready-made/OtchPoPrak";
 
 
 const page = () => (

@@ -23,8 +23,8 @@ import MetaTags from 'react-meta-tags';
 import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
-import KandidatDis from "../../components/common/ServiceBlock/ready-made/KandidatDis";
-import MatZashDisser from "../../components/common/ServiceBlock/ready-made/MatZashDisser";
+import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
+import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 
 
 

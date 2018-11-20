@@ -12,7 +12,7 @@ export default {
   facebook: {
     icon: <FontAwesomeIcon icon={faFacebookF}/>,
     title: "Facebook",
-    url: "dddddd",
+    url: "https://www.facebook.com/besmarter.better",
     targetID: "facebook"
   },
   facebookMessenger: {
@@ -42,7 +42,7 @@ export default {
   youtube: {
     icon: <FontAwesomeIcon icon={faYoutube}/>,
     title: "Instagram",
-    url: "ddddd",
+    url: "https://www.youtube.com/channel/UCLlOZuoLW6knK1QTMf6yJ7g",
     targetID: "youtube"
   },
 }

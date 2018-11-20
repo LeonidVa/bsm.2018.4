@@ -56,7 +56,7 @@ class BaseForm extends Component {
       formData.append("files", file);
     });
     formData.append("verified", verified);
-    let url = "/api/form_data";
+    let url = "https://besmarter.ru/api/form_data";
     if (config.publicRuntimeConfig.runtime.development) {
       url = 'http://localhost:3001/api/form_data'
     }

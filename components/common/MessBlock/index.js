@@ -5,11 +5,11 @@ import './index.scss'
 
 const {vk, facebookMessenger, telegram, whatsapp, instagram} = socials;
 const colors = [
-  '#d84315',
-  '#e64a19',
-  '#f4511e',
-  '#ff7043',
   '#ff8a65',
+  '#ff7043',
+  '#f4511e',
+  '#e64a19',
+  '#d84315',
 ];
 
 class MessBlock extends Component {

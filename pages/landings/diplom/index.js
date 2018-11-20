@@ -1,43 +1,16 @@
 import React, {Component} from 'react'
 import Link from "next/link";
 import Wrapper from "components/Wrapper";
-
 import NavRow from "components/common/NavRow";
 import MessBlock from "components/common/MessBlock";
-
 import ProfitsBlockSlider from "components/common/ProfitsBlockSlider";
-import dopy from "data/dopraboty";
-
-import FormOrder from "components/common/forms/Big/Order";
 import Form from "components/common/forms/Big";
-import fields from "data/form/main";
-
-import InfoBlock from "components/common/InfoBlock";
-import infoBlockConfig from "data/infoBlock/diplom";
-
-import CurrentOffer from "components/content/offers/CurrentOffer";
-
-import reviewBlockConfig from "data/reviewBlockConfig";
-import ReviewBlockSlider from "components/common/ReviewBlockSlider";
-
-import LinksBlock from "components/common/LinksBlock";
-import links from "data/linksBlock/diplom";
-
-import Video from "components/common/VideoBlock";
-import MetaTags from "react-meta-tags";
-import ImageBlock from "components/common/ImageBlock";
-
-import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
-
-import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
-import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
 import MapBlock from 'components/common/MapBlock';
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
-import { faFacebookF, faYoutube, faTelegramPlane, faWhatsapp, faInstagram, faFacebookMessenger, faVk} from '@fortawesome/free-brands-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import socials from 'data/socials';
 
 class page extends Component {
   render() {
@@ -63,22 +36,20 @@ class page extends Component {
         footerNavButtons={
           <ul>
             <li>
-              <Link href="#about">
-                <a>О нас</a>
-              </Link>
+                <a href="#form">О нас</a>
             </li>
             <li>
               <Link href="#contacts">
                 <a>Контакты</a>
               </Link>
             </li>
-            <li><a target="_blank" href="https://vk.com/besmarter_ru"><FontAwesomeIcon icon={faVk}/></a></li>
-            <li><a target="_blank" href="https://www.messenger.com/t/besmarter.better"><FontAwesomeIcon icon={faFacebookMessenger}/></a></li>
-            <li><a target="_blank"><FontAwesomeIcon icon={faFacebookF}/></a></li>
-            <li><a target="_blank"><FontAwesomeIcon icon={faYoutube}/></a></li>
-            <li><a target="_blank" href="https://t.me/besmarter_ru"><FontAwesomeIcon icon={faTelegramPlane}/></a></li>
-            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=79257729045"><FontAwesomeIcon icon={faWhatsapp}/></a></li>
-            <li><a target="_blank" href="https://www.instagram.com/besmarter_ru/"><FontAwesomeIcon icon={faInstagram}/></a></li>
+            <li><a target="_blank" href={socials.vk.url}>{socials.vk.icon}</a></li>
+            <li><a target="_blank" href={socials.facebookMessenger.url}>{socials.facebookMessenger.icon}</a></li>
+            <li><a target="_blank" href={socials.facebook.url}>{socials.facebook.icon}</a></li>
+            <li><a target="_blank" href={socials.youtube.url}>{socials.youtube.icon}</a></li>
+            <li><a target="_blank" href={socials.telegram.url}>{socials.telegram.icon}</a></li>
+            <li><a target="_blank" href={socials.whatsapp.url}>{socials.whatsapp.icon}</a></li>
+            <li><a target="_blank" href={socials.instagram.url}>{socials.instagram.icon}</a></li>
           </ul>
         }
       >
@@ -178,7 +149,6 @@ class page extends Component {
             ]}
           />
 
-          <a name="about" style={{marginTop: "-3em", position: "absolute"}}/>
           <ProfitsBlockSlider profitBlockConfig={[
             {
               imageSrc: require('static/images/slide-profits/1.svg'),
@@ -225,7 +195,6 @@ class page extends Component {
               <p>Всего 5 минут пешком от метро</p>
             </div>}
           />
-          <a name="contacts" style={{marginTop: "-3em", position: "absolute"}}/>
           <div itemScope itemType="http://schema.org/Organization">
             <section className="block-text">
               <h2 itemProp="name" className="block-text__title">Офис</h2>

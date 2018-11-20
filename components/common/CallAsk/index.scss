@@ -51,7 +51,7 @@
         font-size: 1.2rem;
         width: 14rem;
         display: block;
-        color: #ffffff;
+        color: #ffffff !important; /* blockText a перебивает! */
         text-decoration: none;
         background-color: #f4511e;
         padding: .91em 0;

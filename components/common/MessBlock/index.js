@@ -1,83 +1,49 @@
 import React, {Component} from 'react'
+import socials from 'data/socials';
 import stat from 'utils/analytics';
-import facebookMessenger from 'static/images/messegers/facebook-messenger.svg'
-import telegram from 'static/images/messegers/telegram.svg'
-import whatsapp from 'static/images/messegers/whatsapp.svg'
-import vk from 'static/images/messegers/vk.svg'
-import instagram from 'static/images/messegers/instagram.svg'
 import './index.scss'
 
+const {vk, facebookMessenger, telegram, whatsapp, instagram} = socials;
 const colors = [
-    '#d84315',
-    '#e64a19',
-    '#f4511e',
-    '#ff7043',
-    '#ff8a65',
+  '#d84315',
+  '#e64a19',
+  '#f4511e',
+  '#ff7043',
+  '#ff8a65',
 ];
 
 class MessBlock extends Component {
-    drawList(messegersList) {
-        return <div className="block-mess__list">
-            {messegersList.map((item, index) => {
-                    const handleClick = () => {
-                        stat.triggerTarget.messengerClicked(item.targetID)
-                    };
-                    return (
-                        <a href={item.url}
-                           target="_blank"
-                           key={index}
-                           className="block-mess__item"
-                           style={{background: colors[index]}}
-                           title={item.title}
-                           rel="nofollow"
-                           onClick={handleClick}
-                        >
-                            <img src={item.icon} alt={item.title}/>
-                        </a>
-                    )
-                }
-            )
-            }
-        </div>
-    };
+  drawList(messegersList) {
+    return <div className="block-mess__list">
+      {messegersList.map((item, index) => {
+          const handleClick = () => {
+            stat.triggerTarget.messengerClicked(item.targetID)
+          };
+          return (
+            <a href={item.url}
+               target="_blank"
+               key={index}
+               className="block-mess__item"
+               style={{background: colors[index]}}
+               title={item.title}
+               rel="nofollow"
+               onClick={handleClick}
+            >
+              {item.icon}
+            </a>
+          )
+        }
+      )
+      }
+    </div>
+  };
 
-    render() {
-        return <section className="block-mess">
-            <span className="block-mess__title">Спроси нас:</span>
-            {this.drawList([
-                {
-                    icon: vk,
-                    title: "VK",
-                    url: "https://vk.com/besmarter_ru",
-                    targetID: "vk"
-                },
-                {
-                    icon: facebookMessenger,
-                    title: "Facebook Messenger",
-                    url: "https://www.messenger.com/t/besmarter.better",
-                    targetID: "facebook"
-                },
-                {
-                    icon: telegram,
-                    title: "Телеграм",
-                    url: "https://t.me/besmarter_ru",
-                    targetID: "telegram"
-                },
-                {
-                    icon: whatsapp,
-                    title: "WhatsApp",
-                    url: "https://api.whatsapp.com/send?phone=79257729045",
-                    targetID: "whatsapp"
-                },
-                {
-                    icon: instagram,
-                    title: "Instagram",
-                    url: "https://www.instagram.com/besmarter_ru/",
-                    targetID: "instagram"
-                },
-            ])}
-        </section>
-    }
+  render() {
+    return <section className="block-mess">
+      <span className="block-mess__title">Спроси нас:</span>
+      {this.drawList([vk, facebookMessenger, telegram, whatsapp, instagram])}
+    </section>
+  }
 }
 
 export default MessBlock

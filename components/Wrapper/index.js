@@ -153,9 +153,9 @@ class Wrapper extends Component {
                             <meta name="description" content={this.props.description}/>
                             <link rel="icon" href={require('static/favicon.ico')} type="image/x-icon"/>
                         </Head>
-                        <Header/>
+                        <Header navButtons={this.props.headerNavButtons} showHamburger={this.props.showHamburger}/>
                         {this.props.children}
-                        <Footer/>
+                        <Footer navButtons={this.props.footerNavButtons}/>
                         <script dangerouslySetInnerHTML={{__html: `window.recaptchaOptions = {lang: 'ru'}`}}/>
                         <ExitPopup className="modal-sale1"
                                    bonus={<div style={{position: "relative"}}>500<span

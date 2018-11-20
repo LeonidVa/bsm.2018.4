@@ -36,6 +36,8 @@ import MapBlock from 'components/common/MapBlock';
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
+import { faFacebookF, faYoutube, faTelegramPlane, faWhatsapp, faInstagram, faFacebookMessenger, faVk} from '@fortawesome/free-brands-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 class page extends Component {
   render() {
@@ -43,6 +45,42 @@ class page extends Component {
       <Wrapper
         title="Диплом на заказ – срочно заказать дипломную работу в Москве, помощь в написании и сопровождение до защиты"
         description="Написание диплома на заказ! Быстрая, недорогая и профессиональная помощь в подготовке дипломной работы – компания BeSmarter. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40."
+        showHamburger={false}
+        headerNavButtons={
+          <ul>
+            <li>
+              <Link href="#about">
+                <a>О нас</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#contacts">
+                <a>Контакты</a>
+              </Link>
+            </li>
+          </ul>
+        }
+        footerNavButtons={
+          <ul>
+            <li>
+              <Link href="#about">
+                <a>О нас</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="#contacts">
+                <a>Контакты</a>
+              </Link>
+            </li>
+            <li><a target="_blank" href="https://vk.com/besmarter_ru"><FontAwesomeIcon icon={faVk}/></a></li>
+            <li><a target="_blank" href="https://www.messenger.com/t/besmarter.better"><FontAwesomeIcon icon={faFacebookMessenger}/></a></li>
+            <li><a target="_blank"><FontAwesomeIcon icon={faFacebookF}/></a></li>
+            <li><a target="_blank"><FontAwesomeIcon icon={faYoutube}/></a></li>
+            <li><a target="_blank" href="https://t.me/besmarter_ru"><FontAwesomeIcon icon={faTelegramPlane}/></a></li>
+            <li><a target="_blank" href="https://api.whatsapp.com/send?phone=79257729045"><FontAwesomeIcon icon={faWhatsapp}/></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/besmarter_ru/"><FontAwesomeIcon icon={faInstagram}/></a></li>
+          </ul>
+        }
       >
         <div className="wrapper bg bg-c2 bg-img bg-img3">
 
@@ -126,11 +164,11 @@ class page extends Component {
           />
 
           <Form
-            formType="Узнай стоимость работы"
-            targetID="estimate"
-            title="Узнай стоимость работы прямо сейчас"
+            formType="Получить доступ к услугам"
+            targetID="order"
+            title="Получить доступ к услугам прямо сейчас"
             redForm={true}
-            buttonLabel="Оценить"
+            buttonLabel="Отправить"
             fields={[
               {label: 'Имя', name: "name", type: 'text', placeholder: 'Ваше имя', required: true},
               {label: 'Телефон', name: "phone", type: 'text', placeholder: 'Ваш телефон', required: true},
@@ -140,6 +178,7 @@ class page extends Component {
             ]}
           />
 
+          <a name="about" style={{marginTop: "-3em", position: "absolute"}}/>
           <ProfitsBlockSlider profitBlockConfig={[
             {
               imageSrc: require('static/images/slide-profits/1.svg'),
@@ -186,7 +225,7 @@ class page extends Component {
               <p>Всего 5 минут пешком от метро</p>
             </div>}
           />
-
+          <a name="contacts" style={{marginTop: "-3em", position: "absolute"}}/>
           <div itemScope itemType="http://schema.org/Organization">
             <section className="block-text">
               <h2 itemProp="name" className="block-text__title">Офис</h2>

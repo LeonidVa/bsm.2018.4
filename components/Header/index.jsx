@@ -36,6 +36,19 @@ class Header extends Component {
   }
 
   render() {
+    const navButtonsDefault = <ul>
+      <li>
+        <Link href="/price">
+          <a>Услуги и цены</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/contacts">
+          <a>Контакты</a>
+        </Link>
+      </li>
+    </ul>;
+    const {navButtons = navButtonsDefault, showHamburger = true} = this.props;
     return (
       <div>
         <div className="header">
@@ -47,20 +60,7 @@ class Header extends Component {
                   Be<span>Smarter!</span>
                 </a>
               </Link>
-              <nav className="nav">
-                <ul>
-                  <li>
-                    <Link href="/price">
-                      <a>Услуги и цены</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contacts">
-                      <a>Контакты</a>
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
+              <nav className="nav">{navButtons}</nav>
             </div>
             <div className="header__right">
               <ButtonPhone/>
@@ -71,11 +71,11 @@ class Header extends Component {
                   </span>
                 </a>
               </ToggleCallPopup>
-              <Hamburger
+              {showHamburger ? <Hamburger
                 open={this.state.menuMobileIsOpen || this.state.menuDesktopIsOpen}
                 mobileHandler={this.menuMobileToggle.bind(this)}
                 desktopHandler={this.menuDesktopToggle.bind(this)}
-              />
+              /> : ''}
             </div>
           </div>
         </div>

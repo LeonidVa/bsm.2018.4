@@ -47,7 +47,9 @@
         @media (max-width: 660px) {
             height: 4.5em;
         }
-        img {
+        img,svg {
+            color:white;
+            font-size: 3.5em;
             width: 2.69em;
             @media (max-width: 660px) {
                 width: 1.875em;

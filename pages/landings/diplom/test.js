@@ -1,1 +1,2 @@
-const page = () => ('hi');
+const page = () => ('hi from land');
+export default page;

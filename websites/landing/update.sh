@@ -14,7 +14,7 @@ readonly START_DIRECTORY=$(pwd)
 readonly REPOSITORY="git@gitlab.com:igordata/bsm.2018.4.git"
 
 # Directories
-readonly D_ROOT=/var/www/besmarter/landing
+readonly D_ROOT=/var/www/besmarter/main
 readonly D_TEST=${D_ROOT}/test
 readonly D_BUILD=${D_ROOT}/build
 
@@ -117,7 +117,7 @@ create_test_directory () {
 }
 
 clone_project () {
-    if git clone ${REPOSITORY} ${D_TEST}
+    if git clone --depth 1 ${REPOSITORY} ${D_TEST}
     then
         success "Project cloned"
     else

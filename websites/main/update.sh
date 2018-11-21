@@ -117,7 +117,7 @@ create_test_directory () {
 }
 
 clone_project () {
-    if git clone ${REPOSITORY} ${D_TEST}
+    if git clone --depth 1 ${REPOSITORY} ${D_TEST}
     then
         success "Project cloned"
     else

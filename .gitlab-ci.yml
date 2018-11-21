@@ -9,7 +9,6 @@ stages:
   - staging
 
 before_script:
-  # - ....
   - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
   - mkdir -p ~/.ssh
   - eval $(ssh-agent -s)
@@ -21,7 +20,8 @@ build_job:
   script:
   - yarn -v
   - yarn install
-  - yarn run build
+  - ./websites/main/build.sh
+  - ./websites/landing/build.sh
 
 stage_deploy:
   only:

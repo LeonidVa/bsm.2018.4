@@ -26,7 +26,7 @@ build_job:
   #- sh ./websites/landing/build.sh
   - ln -s ./websites/main/pages ./pages
   - ls -al
-  - cd -P ./pages
+  - cd "$(readlink ./pages)"
   - ls -al
 
 

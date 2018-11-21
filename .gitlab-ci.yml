@@ -32,7 +32,7 @@ build_job:
 
 stage_deploy:
   only:
-  - dmaster
+  - master
   stage: staging
   script:
   - ssh-add <(echo "$STAGING_PRIVATE_KEY")

@@ -1,6 +1,8 @@
 #!/bin/bash
 set -x
-echo ${BASH_SOURCE[0]}
+echo "in pages now"
+echo "bs0 is ${BASH_SOURCE[0]}"
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 BASENAME=`basename "${DIR}"`
 TARGET="${DIR}/pages"

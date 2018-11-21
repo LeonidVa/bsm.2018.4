@@ -21,14 +21,15 @@ build_job:
   #- yarn -v
   #- yarn install
   # gitlab has problem with DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )" and produces error "bad substitution"
-  - chmod +x ./websites/main/build.sh
-  - ./websites/main/build.sh
+  - readlink /bin/sh
+  #- chmod +x ./websites/main/build.sh
+  #- ./websites/main/build.sh
 
 
 
 stage_deploy:
   only:
-  - master
+  - dmaster
   stage: staging
   script:
   - ssh-add <(echo "$STAGING_PRIVATE_KEY")

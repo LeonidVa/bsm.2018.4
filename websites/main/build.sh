@@ -6,7 +6,4 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 echo i think im in ${DIR}
 sh "${DIR}/pages.sh"
 cd "${DIR}/../../"
-ls -al
-cd ./pages
-ls -al
 yarn run build

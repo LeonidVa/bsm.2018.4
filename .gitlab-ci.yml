@@ -23,14 +23,8 @@ build_job:
   #- cd ./websites/main
   #- chmod +x ./build.sh
   #- ./build.sh
-  #- sh ./websites/landing/build.sh
-  - ln -s ./websites/main/pages ./pages
-  - ls -al
-  - ls -al ./websites
-  - ls -al ./websites/main
-  - ls -al ./websites/main/pages
-  - cd "$(readlink ./pages)"
-  - ls -al
+  - sh ./websites/main/build.sh
+
 
 
 stage_deploy:

@@ -6,6 +6,7 @@
 
 set -e
 
+readonly WEBSITE="landing" # this file is designed to be used outside project and that variable defines which website to run
 
 readonly TS=`date "+%Y%m%d-%H%M%S"`
 readonly SLEEP_INTERVAL=3
@@ -13,8 +14,9 @@ readonly START_TIME=`date +%s`
 readonly START_DIRECTORY=$(pwd)
 readonly REPOSITORY="git@gitlab.com:igordata/bsm.2018.4.git"
 
+
 # Directories
-readonly D_ROOT=/var/www/besmarter/main
+readonly D_ROOT=/var/www/besmarter/${WEBSITE}
 readonly D_TEST=${D_ROOT}/test
 readonly D_BUILD=${D_ROOT}/build
 
@@ -40,15 +42,15 @@ readonly E_ALREADY_WAITING=6
 #########################################
 
 error () {
-    echo -en "${C_ERROR}ERROR: ${1}${C_RESET}\n"
+    echo -n "${C_ERROR}ERROR: ${1}${C_RESET}\n"
 }
 
 success () {
-    echo -en "${C_SUCCESS}${1}${C_RESET}\n"
+    echo -n "${C_SUCCESS}${1}${C_RESET}\n"
 }
 
 info () {
-    echo -en "${C_INFO}${1}${C_RESET}\n"
+    echo -n "${C_INFO}${1}${C_RESET}\n"
 }
 
 #########################################
@@ -106,12 +108,16 @@ remove_test_directory_if_exists () {
     fi
 }
 
+create_root_directory () {
+  mkdir -p ${D_ROOT}
+}
+
 create_test_directory () {
-    if mkdir ${D_TEST}
+    if mkdir -p ${D_TEST}
     then
-        success "Created folder for test"
+        success "Created folder to test the build"
     else
-        error "Can't create folder for test"
+        error "Can't create folder to test the build"
         finish ${E_CANT_CREATE_FOLDER}
     fi
 }
@@ -139,7 +145,7 @@ install_dependencies () {
 
 build_project () {
     rm -rf ${D_TEST}/.next/
-    if sh ${DIR}/build.sh
+    if sh "${D_BUILD}/websites/${WEBSITE}/build.sh"
     then
         success "Build successful"
     else
@@ -154,23 +160,31 @@ set_rights () {
 }
 
 restart_server () {
-    cd ${D_TEST}
-    sh ${DIR}/stop.sh
-    if mv "${D_BUILD}" "${D_BUILD}.before.${TS}"
-    then
-        success "Old build moved to ${D_BUILD}.before.${TS}"
-    else
-        error "Can't rename current build folder."
+    # stopping the old one using the old stop.sh file from current build dir
+    if [ -d "${D_BUILD}" ]; then
+      cd ${D_BUILD}
+      if [ -f "sh ${D_BUILD}/websites/${WEBSITE}/stop.sh" ]; then
+        sh "sh ${D_BUILD}/websites/${WEBSITE}/stop.sh"
+      fi
+      if mv "${D_BUILD}" "${D_BUILD}.before.${TS}"
+      then
+          success "Old build moved to ${D_BUILD}.before.${TS}"
+      else
+          error "Can't rename current build folder."
+      fi
     fi
-    mv "${D_TEST}" "${D_BUILD}"
+    if mv "${D_TEST}" "${D_BUILD}"; then
+      success "Current build updated, restarting"
+    fi
+    # after renaming test dir to build dir we use new start.sh version
     cd ${D_BUILD}
-    sh ${DIR}/start.sh
+    sh ${D_BUILD}/websites/${WEBSITE}/start.sh
 }
 
 #########################################
 # Update project
 #########################################
-
+create_root_directory
 exit_if_waiting
 wait_update
 create_update_indicator

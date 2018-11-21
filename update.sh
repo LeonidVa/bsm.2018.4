@@ -145,7 +145,8 @@ install_dependencies () {
 
 build_project () {
     rm -rf ${D_TEST}/.next/
-    if sh "${D_BUILD}/websites/${WEBSITE}/build.sh"
+    chmod +x "${D_TEST}/websites/${WEBSITE}/build.sh"
+    if "${D_TEST}/websites/${WEBSITE}/build.sh"
     then
         success "Build successful"
     else
@@ -163,8 +164,9 @@ restart_server () {
     # stopping the old one using the old stop.sh file from current build dir
     if [ -d "${D_BUILD}" ]; then
       cd ${D_BUILD}
-      if [ -f "sh ${D_BUILD}/websites/${WEBSITE}/stop.sh" ]; then
-        sh "sh ${D_BUILD}/websites/${WEBSITE}/stop.sh"
+      if [ -f "${D_BUILD}/websites/${WEBSITE}/stop.sh" ]; then
+        chmod +x "${D_BUILD}/websites/${WEBSITE}/stop.sh"
+        "${D_BUILD}/websites/${WEBSITE}/stop.sh"
       fi
       if mv "${D_BUILD}" "${D_BUILD}.before.${TS}"
       then
@@ -178,7 +180,8 @@ restart_server () {
     fi
     # after renaming test dir to build dir we use new start.sh version
     cd ${D_BUILD}
-    sh ${D_BUILD}/websites/${WEBSITE}/start.sh
+    chmod +x "${D_BUILD}/websites/${WEBSITE}/start.sh"
+    "${D_BUILD}/websites/${WEBSITE}/start.sh"
 }
 
 #########################################

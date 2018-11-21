@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 BASENAME=`basename "${DIR}"`
 TARGET="${DIR}/pages"

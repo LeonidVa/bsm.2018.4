@@ -1,7 +1,7 @@
 #!/bin/bash
 export NODE_ENV="production"
+chmod +x "${DIR}/*.sh"
 set -e
-set -x
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-/bin/bash "${DIR}/pages.sh"
+"${DIR}/pages.sh"
 yarn run build

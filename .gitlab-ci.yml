@@ -22,9 +22,11 @@ build_job:
   #- yarn install
   # gitlab has problem with DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )" and produces error "bad substitution"
   #- uname -a # coreos
-  - readlink /bin/sh # dash
-  #- chmod +x ./websites/main/build.sh
-  - /bin/bash ./websites/main/build.sh
+  #- readlink /bin/sh # dash
+  - chmod +x ./websites/main/build.sh
+  - ./websites/main/build.sh
+  - chmod +x ./websites/landing/build.sh
+  - ./websites/landing/build.sh
 
 
 

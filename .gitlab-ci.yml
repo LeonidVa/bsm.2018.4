@@ -20,10 +20,11 @@ build_job:
   script:
   #- yarn -v
   #- yarn install
+  # gitlab has problem with DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
   #- cd ./websites/main
   #- chmod +x ./build.sh
   #- ./build.sh
-  - sh ./websites/main/build.sh
+  - /bin/bash ./websites/main/build.sh
 
 
 

@@ -24,10 +24,10 @@ import links from 'data/linksBlockConfig';
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "components/common/ImageBlock";
-import disKandSkolko from "../../../data/linksBlock/disKandSkolko";
+import disKandSkolko from "data/linksBlock/disKandSkolko";
 
 
-import disser from "../../../data/linksBlock/disser";
+import disser from "data/linksBlock/disser";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";

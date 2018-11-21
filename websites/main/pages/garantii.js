@@ -20,7 +20,7 @@ import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'data/dopraboty'
 import MessBlock from "components/common/MessBlock";
-import infoBlockConfig from "../data/infoBlock/diplom";
+import infoBlockConfig from "data/infoBlock/diplom";
 import InfoBlock from "components/common/InfoBlock";
 import CurrentOffer from "components/content/offers/CurrentOffer";
 import MagisDisAnother from "components/common/ServiceBlock/ready-made/MagisDisAnother";

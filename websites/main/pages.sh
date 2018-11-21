@@ -10,7 +10,4 @@ echo removing "${DOTNEXT}"
 rm -rf "${DOTNEXT}"
 echo creating a link to "${TARGET}" at "${LINK}"
 ln -s "${TARGET}" "${LINK}"
-ls -al
-cd ./pages
-ls -al
 echo Switched to ${BASENAME}

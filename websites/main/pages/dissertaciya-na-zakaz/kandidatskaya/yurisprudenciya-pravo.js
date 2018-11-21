@@ -24,10 +24,10 @@ import links from 'data/linksBlockConfig'
 
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "components/common/ImageBlock";
-import disKanYuri from "../../../data/linksBlock/disKanYuri";
+import disKanYuri from "data/linksBlock/disKanYuri";
 
 
-import disser from "../../../data/linksBlock/disser";
+import disser from "data/linksBlock/disser";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 

@@ -18,10 +18,12 @@ before_script:
 build_job:
   stage: build
   script:
-  - yarn -v
-  - yarn install
-  - sh ./websites/main/build.sh
-  - sh ./websites/landing/build.sh
+  #- yarn -v
+  #- yarn install
+  - cd ./websites/main
+  - chmod +x ./build.sh
+  - ./build.sh
+  #- sh ./websites/landing/build.sh
 
 stage_deploy:
   only:

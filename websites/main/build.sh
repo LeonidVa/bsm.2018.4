@@ -1,7 +1,7 @@
 #!/bin/bash
 export NODE_ENV="production"
 set -e
-DIR="$( cd "$( dirname "${0}" )" >/dev/null && pwd )"
+DIR="$( dirname $( realpath "${0}" ) )"
 chmod +x "${DIR}/dev.sh"
 chmod +x "${DIR}/pages.sh"
 chmod +x "${DIR}/start.sh"

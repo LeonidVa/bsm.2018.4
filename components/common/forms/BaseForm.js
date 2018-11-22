@@ -16,10 +16,6 @@ class BaseForm extends Component {
     e.preventDefault();
     const {targetID = "form submit"} = this.props;
     stat.triggerTarget.formSubmit(targetID);
-    let wloc = "default server side location";
-    if (process.browser && window.location !== undefined) {
-      wloc = window.location.toString();
-    }
     let {
       name = "",
       phone = "",
@@ -33,16 +29,16 @@ class BaseForm extends Component {
       files = [],
       verified = false,
     } = this.state.data;
-    let {formType = "default formType at " + wloc} = this.state;
     if (!this.state.verified) {
       //window.alert('Пожалуйста, пройдите каптчу');
       //return
     }
+    let {formType = "unknown"} = this.state;
     const _this = this;
     let formData = new FormData();
     formData.append("brand", "besmarter");
     formData.append("form", formType);
-    formData.append("source", wloc);
+    formData.append("source", this.getSource());
     formData.append("name", name);
     formData.append("phone", phone);
     formData.append("email", email);
@@ -129,7 +125,6 @@ class BaseForm extends Component {
     this.state = {
       data: this.dataDefaults,
       formType: formType,
-      source: "server side default value",
       formSent: {bool: false, number: "", error: false}
     };
   }
@@ -226,6 +221,15 @@ class BaseForm extends Component {
     return (<div>Do not use me like this. Read the manual.</div>);
   }
 
+  getSource() {
+    if (process.env.SOURCE !== undefined) {
+      let envsource = process.env.SOURCE.toString();
+      if (envsource !== "") {
+        return envsource
+      }
+    }
+    return "unknown";
+  }
 }
 
 export default BaseForm;

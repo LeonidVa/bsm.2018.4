@@ -10,7 +10,8 @@ module.exports = {
       args: "start",
       env: {
         NODE_ENV: "production",
-        PORT: 3002
+        PORT: 3002,
+        SOURCE: "besmarter landing 20181122"
       },
     },
   ],

@@ -168,9 +168,12 @@ restart_server () {
         chmod +x "${D_BUILD}/websites/${WEBSITE}/stop.sh"
         "${D_BUILD}/websites/${WEBSITE}/stop.sh"
       fi
-      if mv "${D_BUILD}" "${D_BUILD}.before.${TS}"
+      rm -rf "${D_BUILD}.old.3"
+      mv "${D_BUILD}.old.2" "${D_BUILD}.old.3"
+      mv "${D_BUILD}.old.1" "${D_BUILD}.old.2"
+      if mv "${D_BUILD}" "${D_BUILD}.before.1"
       then
-          success "Old build moved to ${D_BUILD}.before.${TS}"
+          success "Old build moved to ${D_BUILD}.before.1"
       else
           error "Can't rename current build folder."
       fi

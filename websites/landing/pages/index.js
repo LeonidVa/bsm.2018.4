@@ -12,6 +12,7 @@ import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
 import socials from 'data/socials';
 
+/**/
 class page extends Component {
   render() {
     return (
@@ -36,7 +37,7 @@ class page extends Component {
         footerNavButtons={
           <ul>
             <li>
-                <a href="#form">О нас</a>
+              <a href="#about">О нас</a>
             </li>
             <li>
               <Link href="#contacts">
@@ -149,6 +150,7 @@ class page extends Component {
             ]}
           />
 
+          <a name="about" style={{position: "absolute", marginTop: "-2em"}}/>
           <ProfitsBlockSlider profitBlockConfig={[
             {
               imageSrc: require('static/images/slide-profits/1.svg'),
@@ -195,6 +197,8 @@ class page extends Component {
               <p>Всего 5 минут пешком от метро</p>
             </div>}
           />
+
+          <a name="contacts" style={{position: "absolute", marginTop: "-2em"}}/>
           <div itemScope itemType="http://schema.org/Organization">
             <section className="block-text">
               <h2 itemProp="name" className="block-text__title">Офис</h2>

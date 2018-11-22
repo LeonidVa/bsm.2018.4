@@ -1,6 +1,6 @@
 #!/bin/bash
-DIR="$( dirname $( realpath "${0}" ) )"
-BASENAME=`basename "${DIR}"`
+DIR="$( dirname "$( realpath "${0}" )" )"
+BASENAME="$( basename "${DIR}" )"
 TARGET="${DIR}/pages"
 LINK=`realpath "${DIR}/../../pages"`
 DOTNEXT=`realpath "${DIR}/../../.next"`

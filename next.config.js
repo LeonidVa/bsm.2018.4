@@ -13,6 +13,7 @@ module.exports = withSass({
   }
 });
 
+console.log('env.source', process.env.SOURCE);
 
 const nextConfig = {
   serverRuntimeConfig: {

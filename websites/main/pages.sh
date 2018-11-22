@@ -9,5 +9,5 @@ rm -rf "${LINK}"
 echo removing "${DOTNEXT}"
 rm -rf "${DOTNEXT}"
 echo creating a link to "${TARGET}" at "${LINK}"
-ln -s "${TARGET}" "${LINK}"
+ln -s "./websites/${BASENAME}/pages" "${LINK}"
 echo Switched to ${BASENAME}

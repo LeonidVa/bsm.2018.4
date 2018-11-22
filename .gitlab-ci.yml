@@ -18,8 +18,8 @@ before_script:
 build_job:
   stage: build
   script:
-  #- yarn -v
-  #- yarn install
+  - yarn -v
+  - yarn install
   #- uname -a # coreos
   #- readlink /bin/sh # dash
   - chmod +x ./websites/main/build.sh

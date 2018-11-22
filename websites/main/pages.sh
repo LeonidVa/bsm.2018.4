@@ -9,8 +9,8 @@ echo removing "${LINK}"
 rm -rf "${LINK}"
 echo removing "${DOTNEXT}"
 rm -rf "${DOTNEXT}"
-echo creating a link to "${TARGET}" at "${LINK}"
-cd "${DIR}/../../"
+cd "${DIR}"
+cd ../..
 ln -s "./websites/${BASENAME}/pages" "./pages"
 cd "${CURRENTDIR}"
 echo Switched to ${BASENAME}

@@ -168,9 +168,15 @@ restart_server () {
         chmod +x "${D_BUILD}/websites/${WEBSITE}/stop.sh"
         "${D_BUILD}/websites/${WEBSITE}/stop.sh"
       fi
-      rm -rf "${D_BUILD}.old.3" 2>/dev/null
-      mv "${D_BUILD}.old.2" "${D_BUILD}.old.3" 2>/dev/null
-      mv "${D_BUILD}.old.1" "${D_BUILD}.old.2" 2>/dev/null
+      if [ -d "${D_BUILD}.old.3" ]; then
+              rm -rf "${D_BUILD}.old.3"
+      fi
+      if [ -d "${D_BUILD}.old.2" ]; then
+        mv "${D_BUILD}.old.2" "${D_BUILD}.old.3"
+      fi
+      if [ -d "${D_BUILD}.old.1" ]; then
+        mv "${D_BUILD}.old.1" "${D_BUILD}.old.2"
+      fi
       if mv "${D_BUILD}" "${D_BUILD}.before.1"
       then
           success "Old build moved to ${D_BUILD}.before.1"

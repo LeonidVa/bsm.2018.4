@@ -222,11 +222,8 @@ class BaseForm extends Component {
   }
 
   getSource() {
-    if (process.env.SOURCE !== undefined) {
-      let envsource = process.env.SOURCE.toString();
-      if (envsource !== "") {
-        return envsource
-      }
+    if (config.publicRuntimeConfig.analytics.source) {
+      return config.publicRuntimeConfig.analytics.source;
     }
     return "unknown";
   }

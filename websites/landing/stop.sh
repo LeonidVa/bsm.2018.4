@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+DIR="$( cd "$( dirname "${0}" )" >/dev/null && pwd )"
 BASENAME=`basename "${DIR}"`
 set -e
 if pm2 stop ${BASENAME}

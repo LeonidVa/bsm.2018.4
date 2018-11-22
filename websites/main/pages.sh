@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+DIR="$( cd "$( dirname "${0}" )" >/dev/null && pwd )"
 BASENAME=`basename "${DIR}"`
 TARGET="${DIR}/pages"
 LINK=`realpath "${DIR}/../../pages"`

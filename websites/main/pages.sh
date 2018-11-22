@@ -1,4 +1,5 @@
 #!/bin/bash
+CURRENTDIR="$( pwd )"
 DIR="$( dirname $( realpath "${0}" ) )"
 BASENAME=`basename "${DIR}"`
 TARGET="${DIR}/pages"
@@ -9,5 +10,7 @@ rm -rf "${LINK}"
 echo removing "${DOTNEXT}"
 rm -rf "${DOTNEXT}"
 echo creating a link to "${TARGET}" at "${LINK}"
-ln -s "./websites/${BASENAME}/pages" "${LINK}"
+cd "${DIR}/../../"
+ln -s "./websites/${BASENAME}/pages" "./pages"
+cd "${CURRENTDIR}"
 echo Switched to ${BASENAME}

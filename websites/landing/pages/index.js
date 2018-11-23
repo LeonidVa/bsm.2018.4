@@ -205,7 +205,7 @@ class page extends Component {
               <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                 <p className="block-text__subtitle subtitle-orange__micro">
                   <span itemProp="addressLocality">Москва, </span>
-                  <span itemProp="streetAddress">Большой Кисловский переулок <br>д. 1, стр. 2, офис 211</span>
+                  <span itemProp="streetAddress">Большой Кисловский переулок {"\n"}д. 1, стр. 2, офис 211</span>
                 </p>
               </div>
               <p className="block-text__par">

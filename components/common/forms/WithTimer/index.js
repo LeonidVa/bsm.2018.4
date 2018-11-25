@@ -45,12 +45,11 @@ class FormWithTimer extends Component {
               {successNotification}
                 {abc}
                 <PhoneAndSubmit
-                    toggleNotify={this.toggleNotify}
-                    closeNotifyAfterTimeOut={this.closeNotifyAfterTimeOut}
-                    formType={this.props.formType}
-                    targetID={this.props.targetID}
-                    placeholder="+7 123 456 7890"
-                    submitLabel={buttonText}
+                  closeNotifyAfterTimeOut={this.closeNotifyAfterTimeOut}
+                  formType={this.props.formType}
+                  targetID={this.props.targetID}
+                  placeholder="+7 123 456 7890"
+                  submitLabel={buttonText}
                 />
             </div>
         )

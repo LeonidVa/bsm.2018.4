@@ -49,12 +49,12 @@ class page extends Component {
                                 <p className="block-text__subtitle subtitle-orange__micro">
                                     <span itemProp="addressLocality">Москва, </span>
                                     <span itemProp="streetAddress">Большой Кисловский переулок д. 1, стр. 2, офис 211</span>
+                                    <span itemProp="streetAddress">Большой Кисловский переулок {"\n"}д. 1, стр. 2, офис 211</span>
                                 </p>
                             </div>
                             <p className="block-text__par">
                                 Понедельник - пятница <span className="bold">с 09:00 до 19:30</span><br/>
-                                Суббота <span className="bold">с 10:00 до 18:30</span><br/>
-                                Воскресенье <span className="bold">- выходной</span>
+                                Суббота - Воскресенье <span className="bold">с 10:00 до 18:30</span><br/>
                             </p>
                             <p className="block-text__par finish-text">
                                 Приходите – мы ждём Вас!

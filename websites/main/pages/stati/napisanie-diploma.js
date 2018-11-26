@@ -18,7 +18,7 @@ import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
-
+import Video from 'components/common/VideoBlock';
 import MetaTags from 'react-meta-tags';
 import ImageBlock from "components/common/ImageBlock";
 import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
@@ -141,6 +141,10 @@ const page = () => (
           заказа</a> или наберите номер <b>+7 495 772-4090</b>, наши менеджеры предоставят детальную информацию относительно Вашей работы и рассчитают ее стоимость. Пусть учеба будет в радость, а BeSmarter! поможет Вам в этом!
         </p>
       </section>
+
+      <Video>
+        <iframe src="https://www.youtube.com/embed/Hf0lm60VUE8" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+      </Video>
 
       <a name="form" id="form"/>
       <FormOrder/>

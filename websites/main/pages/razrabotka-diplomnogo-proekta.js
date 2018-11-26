@@ -161,6 +161,11 @@ const page = () => (
         </p>
       </section>
 
+      <VideoBlock>
+          <iframe src="https://www.youtube.com/embed/vlRE-nF5CRo" frameBorder="0"
+              allow="autoplay; encrypted-media" allowFullScreen></iframe>
+      </VideoBlock>
+
       <section className="block-text">
         <h2 className="block-text__title">
           Хотите сэкономить?

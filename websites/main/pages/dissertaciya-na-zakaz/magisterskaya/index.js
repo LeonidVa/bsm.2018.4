@@ -132,6 +132,10 @@ const page = () => (
         </ul>
       </section>
 
+      <Video>
+        <iframe src="https://www.youtube.com/embed/ajkrUquzqB4" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+      </Video>
+
       <section className="block-text">
         <h2 className="block-text__title">
           От чего зависит цена

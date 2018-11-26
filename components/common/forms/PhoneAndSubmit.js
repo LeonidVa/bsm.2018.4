@@ -7,8 +7,7 @@ class PhoneAndSubmit extends BaseForm {
     }
 
   successCallBack = () => {
-      const { toggleNotify, closeNotifyAfterTimeOut } = this.props;
-      toggleNotify();
+      const { closeNotifyAfterTimeOut } = this.props;
       closeNotifyAfterTimeOut();
     };
 

@@ -14,10 +14,7 @@ import infoBlockConfig from 'data/infoBlock/diplom'
 
 import CurrentOffer from 'components/content/offers/CurrentOffer';
 
-import MetaTags from 'react-meta-tags';
 import ImageBlock from "components/common/ImageBlock";
-import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
-import ServiceBlock from "components/common/ServiceBlock";
 import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
 import KursovayaRabotaMain from "components/common/ServiceBlock/ready-made/KursovayaRabotaMain"
 import DisserRabotyMain from "components/common/ServiceBlock/ready-made/DisserRabotyMain"
@@ -52,7 +49,7 @@ const page = () => (
         </p>
       </section>
 
-      <FormEstimate/>
+      <FormEstimate />
 
       <ImageBlock imageSrc={require('static/images/block/main2.jpg')} altText="Помощь студентам"/>
 
@@ -160,7 +157,7 @@ const page = () => (
       </section>
 
       <a name="form" id="form"/>
-      <FormOrder/>
+      <FormOrder />
 
       <section className="block-text">
         <ul>

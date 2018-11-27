@@ -131,7 +131,7 @@ class Wrapper extends Component {
         // хочет закрыть вкладку или нажать на кнопку меню :)
         //
         // Показываем сообщение о скидке
-        if (diff > 50) {
+        if (diff > 60) {
             this.state.exitPopupState.show();
             document.removeEventListener('mousemove', this._mouseMoveCallback);
         }

@@ -17,7 +17,7 @@ class page extends Component {
   render() {
     return (
       <Wrapper
-        title="Диплом на заказ – срочно заказать дипломную работу в Москве, помощь в написании и сопровождение до защиты"
+        title="BeSmarter!"
         description="Написание диплома на заказ! Быстрая, недорогая и профессиональная помощь в подготовке дипломной работы – компания BeSmarter. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40."
         showHamburger={false}
         headerNavButtons={

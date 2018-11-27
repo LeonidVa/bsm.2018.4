@@ -20,13 +20,9 @@ class OrderForm extends BaseForm {
     this.state.Extended = false;
   }
 
-  closeAlert() {
-    this.setState({ formSent: false });
-  }
+  closeAlert = () => this.setState({ formSent: false });
 
-  showFullForm() {
-    this.setState({ Extended: !this.state.Extended });
-  }
+  showFullForm = () => this.setState({ Extended: !this.state.Extended });
 
   renderForm() {
     const { fields } = this.props;
@@ -229,12 +225,9 @@ class OrderForm extends BaseForm {
     }
 
     render() {
-      let { title, buttonLabel, redForm } = this.props;
-      if (buttonLabel === undefined || buttonLabel === '') {
-        buttonLabel = 'Заказать работу';
-      }
-      return (
+      let { title, buttonLabel = 'Заказать работу', redForm } = this.props;
 
+      return (
         <section className={`block-form ${redForm ? 'form-red' : ''}`}>
           <a
             name="form"

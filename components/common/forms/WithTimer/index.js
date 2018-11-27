@@ -20,7 +20,7 @@ class FormWithTimer extends Component {
     render() {
       const { notifyOpen } = this.state;
 
-        const { timerSize = 1.6, timerDuration } = this.props;
+        const {timerSize = 1.6, timerDuration, buttonText = 'Позвоните мне!' } = this.props;
 
         const abc = timerDuration !== undefined && timerDuration !== null && Number(timerDuration) > 0
           ? <React.Fragment>

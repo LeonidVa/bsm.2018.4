@@ -152,11 +152,16 @@ const page = () => (
             </section>
 
             <Video>
-                <iframe src="https://www.youtube.com/embed/KM6vU-TKPoE" frameBorder="0"
-                        allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                <iframe src="https://www.youtube.com/embed/aOWtDx1wAHY" frameBorder="0"
+                    allow="autoplay; encrypted-media" allowFullScreen></iframe>
             </Video>
 
             <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
+
+            <Video>
+                <iframe src="https://www.youtube.com/embed/KM6vU-TKPoE" frameBorder="0"
+                    allow="autoplay; encrypted-media" allowFullScreen></iframe>
+            </Video>
 
             <section className="block-text">
                 <h2 className="block-text__title">

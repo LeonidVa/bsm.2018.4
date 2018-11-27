@@ -122,6 +122,11 @@ const page = () => (
         </p>
       </section>
 
+      <Video>
+          <iframe src="https://www.youtube.com/embed/aOWtDx1wAHY" frameBorder="0"
+              allow="autoplay; encrypted-media" allowFullScreen></iframe>
+      </Video>
+
       <section className="block-text">
         <h2 className="block-text__title">
           Алгоритм сотрудничества

@@ -178,6 +178,11 @@ const page = () => (
         </p>
       </section>
 
+      <Video>
+          <iframe src="https://www.youtube.com/embed/FRUcAFM9y9M" frameBorder="0"
+              allow="autoplay; encrypted-media" allowFullScreen></iframe>
+      </Video>
+
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
       <Video>

@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import React from 'react';
-import BaseForm from 'components/common/forms/BaseForm';
+import { BaseForm, connect } from 'components/common/forms/BaseForm';
 import Link from 'next/link';
 import Dropzone from 'react-dropzone';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -72,7 +72,7 @@ class OrderForm extends BaseForm {
           id={field.id}
           placeholder={field.placeholder}
           required={field.required}
-          value={this.state.data[field.name]}
+          value={this.props.form[field.name]}
           onChange={e => this.saveData({ [field.name]: e.target.value })}
         />
       </div>
@@ -104,7 +104,7 @@ class OrderForm extends BaseForm {
 
           <DatePicker
             placeholder={field.placeholder}
-            value={this.state.data[field.name]}
+            value={this.props.form[field.name]}
             onDayChange={value => this.saveData({ [field.name]: value })}
           />
         </div>
@@ -140,7 +140,7 @@ class OrderForm extends BaseForm {
             id={field.id}
             placeholder={field.placeholder}
             required={field.required}
-            value={this.state.data[field.name]}
+            value={this.props.form[field.name]}
             onChange={e => this.saveData({ [field.name]: e.target.value })}
           />
         </div>
@@ -148,6 +148,7 @@ class OrderForm extends BaseForm {
     }
 
     nptDropDown(field) {
+      const { worktype: { label } } = this.props.form;
       return (
         <div
           className="block-form__item"
@@ -172,7 +173,7 @@ class OrderForm extends BaseForm {
           </label>
           <Dropdown
             onChange={e => this.saveData({ [field.name]: e })}
-            value={this.state.data.worktype.label}
+            value={label}
             options={field.options}
           />
         </div>
@@ -206,7 +207,7 @@ class OrderForm extends BaseForm {
           </div>
 
           <ul>
-            {(this.state.data.files || []).map((f, i) => (
+            {(this.props.form.files || []).map((f, i) => (
               <li
                 style={{ fontSize: '14px', display: 'flex', marginBottom: '5px' }}
                 key={i}
@@ -291,4 +292,4 @@ OrderForm.propTypes = {
   fields: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default OrderForm;
+export default connect(OrderForm);

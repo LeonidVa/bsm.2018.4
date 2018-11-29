@@ -1,4 +1,4 @@
-import BaseForm from 'components/common/forms/BaseForm'
+import { BaseForm, connect } from 'components/common/forms/BaseForm'
 
 class PhoneAndSubmit extends BaseForm {
     constructor(props) {
@@ -17,7 +17,7 @@ class PhoneAndSubmit extends BaseForm {
                 <input type="text"
                        placeholder={this.props.placeholder}
                        required
-                       value={this.state.data.phone}
+                       value={this.props.form.phone}
                        onChange={(e) => this.saveData({phone: e.target.value})}
                 />
                 <button type="submit">{this.props.submitLabel}</button>
@@ -27,4 +27,4 @@ class PhoneAndSubmit extends BaseForm {
 }
 
 
-export default PhoneAndSubmit
+export default connect(PhoneAndSubmit);

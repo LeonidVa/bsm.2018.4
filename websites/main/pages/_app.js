@@ -1,8 +1,12 @@
 import React from "react";
 import App, { Container } from "next/app";
+import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify';
+import { PersistGate } from 'redux-persist/lib/integration/react';
 
-export default class MyApp extends App {
+import { persistor, store } from '@store';
+
+class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {};
 
@@ -15,12 +19,20 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-
+  
     return (
       <Container>
-        <Component {...pageProps} />
-        {process.browser && <ToastContainer />}
+        <Provider store={store}>
+          <PersistGate loading={<span>Loading...</span>} persistor={persistor}>
+            <React.Fragment>
+              <Component {...pageProps} />
+              {process.browser && <ToastContainer />}
+            </React.Fragment>
+          </PersistGate>
+        </Provider>
       </Container>
     );
   }
 }
+
+export default MyApp;

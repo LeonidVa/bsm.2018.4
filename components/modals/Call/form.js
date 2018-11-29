@@ -1,4 +1,4 @@
-import BaseForm from 'components/common/forms/BaseForm'
+import { BaseForm, connect } from 'components/common/forms/BaseForm'
 import stat from 'utils/analytics';
 
 class Form extends BaseForm {
@@ -19,7 +19,7 @@ class Form extends BaseForm {
                            id="form-name"
                            placeholder="Ваше имя"
                            required
-                           value={this.state.data.name}
+                           value={this.props.form.name}
                            onChange={(e) => this.saveData({name: e.target.value})}
                     />
                 </div>
@@ -30,7 +30,7 @@ class Form extends BaseForm {
                            id="form-phone"
                            placeholder="Ваш телефон"
                            required
-                           value={this.state.data.phone}
+                           value={this.props.form.phone}
                            onChange={(e) => this.saveData({phone: e.target.value})}/>
                 </div>
                 <div className="block-form__item textarea" style={{display: this.props.question ? 'block' : 'none'}}>
@@ -39,7 +39,7 @@ class Form extends BaseForm {
                         type="textarea"
                         name=""
                         placeholder="Ваш вопрос"
-                        value={this.state.data.comment}
+                        value={this.props.form.comment}
                         onChange={(e) => this.saveData({comment: e.target.value})}
                     />
                 </div>
@@ -50,4 +50,4 @@ class Form extends BaseForm {
     }
 }
 
-export default Form
+export default connect(Form);

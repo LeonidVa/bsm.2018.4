@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 
-import { persistor, store } from '../store';
+import { persistor, store } from '@store';
 
 class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {

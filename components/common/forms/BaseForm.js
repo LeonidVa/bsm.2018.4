@@ -4,7 +4,7 @@ import axios from "axios";
 import getConfig from 'next/config';
 import {toast} from "react-toastify"
 import { connect as reduxConnect } from 'react-redux'
-import { changeField } from '../../../redux/data/form';
+import { changeField } from '@redux/form';
 
 const config = getConfig();
 

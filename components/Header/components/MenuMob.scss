@@ -12,12 +12,23 @@
     transition: all .5s;
     overflow-y: scroll;
     &__title {
-        display: block;
+        display: flex;
         color: #333;
         text-decoration: none;
         font-size: 2em;
         padding: .5em 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    a {
+      &:hover,
+      &:active {
+        color: #f4511e;
+      }
+    }
+
     ul li a {
         font-family: "Ubuntu", sans-serif;
         font-weight: 300;
@@ -48,5 +59,19 @@
         &:last-child {
             transform: rotate(-44deg);
         }
+    }
+}
+.menu-mob__drop-down {
+    width: 100%;
+    height: 100%;   
+    &-el {
+        display: flex;
+        color: #333;
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: .5em 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

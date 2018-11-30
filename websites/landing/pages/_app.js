@@ -23,12 +23,12 @@ class MyApp extends App {
     return (
       <Container>
         <Provider store={store}>
-          <PersistGate loading={<span>Loading...</span>} persistor={persistor}>
+          {/* <PersistGate persistor={persistor}> */}
             <React.Fragment>
               <Component {...pageProps} />
               {process.browser && <ToastContainer />}
             </React.Fragment>
-          </PersistGate>
+          {/* </PersistGate> */}
         </Provider>
       </Container>
     );

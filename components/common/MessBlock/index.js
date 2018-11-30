@@ -24,7 +24,7 @@ class MessBlock extends Component {
                target="_blank"
                key={index}
                className="block-mess__item"
-               style={{background: colors[index], padding: "2.9em"}}
+               style={{background: colors[index], padding: "2.33em"}}
                title={item.title}
                rel="nofollow"
                onClick={handleClick}

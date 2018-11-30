@@ -40,7 +40,7 @@ class MenuMob extends Component{
                       <Link href="/razrabotka-diplomnogo-proekta"><a className="menu-mob__title drop-down__title">Дипломный проект</a></Link>
                       <Link href="/kursovaya-rabota-na-zakaz"><a className="menu-mob__title drop-down__title">Курсовая работа</a></Link>
                       <Link href="/zakazat-otchet-po-praktike"><a className="menu-mob__title drop-down__title">Отчет по практике</a></Link>
-                      <Link href="/kontrolnaya-zakaz"><a className="menu-mob__title drop-down__title">Контрольная</a></Link>
+                      <Link href="/kontrolnaya-na-zakaz"><a className="menu-mob__title drop-down__title">Контрольная</a></Link>
                       <Link href="/referat-na-zakaz"><a className="menu-mob__title drop-down__title">Реферат</a></Link>
                       <Link href="/zakazat-esse"><a className="menu-mob__title drop-down__title">Эссе</a></Link>
                   </div>

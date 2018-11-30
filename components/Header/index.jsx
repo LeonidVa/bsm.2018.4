@@ -79,8 +79,8 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        <MenuMob showMenu={this.state.menuMobileIsOpen}/>
-        <MenuWide showMenu={this.state.menuDesktopIsOpen} handler={this.menuDesktopToggle.bind(this)}/>
+        {showHamburger ? <MenuMob showMenu={this.state.menuMobileIsOpen}/> : ''}
+        {showHamburger ? <MenuWide showMenu={this.state.menuDesktopIsOpen} handler={this.menuDesktopToggle.bind(this)}/> : ''}
       </div>
     )
   }

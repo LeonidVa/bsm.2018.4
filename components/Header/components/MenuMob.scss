@@ -18,8 +18,7 @@
         font-size: 2em;
         padding: .5em 0;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
 
     a {
@@ -60,18 +59,8 @@
             transform: rotate(-44deg);
         }
     }
-}
-.menu-mob__drop-down {
-    width: 100%;
-    height: 100%;   
-    &-el {
-        display: flex;
-        color: #333;
-        text-decoration: none;
-        font-size: 1.5em;
-        padding: .5em 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
+    .drop-down__title {
+      font-size: 1.4em;
     }
 }

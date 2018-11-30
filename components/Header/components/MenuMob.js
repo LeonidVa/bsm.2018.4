@@ -34,15 +34,15 @@ class MenuMob extends Component{
                 <a className="menu-mob__title" onClick={this.onShowDropDownMenu}>Услуги</a>
                 {this.state.isShownDropDownMenu &&
                   <div className="menu-mob__drop-down">
-                      <Link href="/diplom-mba-na-zakaz"><a className="menu-mob__drop-down-el">Диплом МБА</a></Link>
-                      <Link href="/dissertaciya-na-zakaz"><a className="menu-mob__drop-down-el">Магистерская</a></Link>
-                      <Link href="/diplom-na-zakaz"><a className="menu-mob__drop-down-el">Дипломная работа</a></Link>
-                      <Link href="/razrabotka-diplomnogo-proekta"><a className="menu-mob__drop-down-el">Дипломный проект</a></Link>
-                      <Link href="/kursovaya-rabota-na-zakaz"><a className="menu-mob__drop-down-el">Курсовая работа</a></Link>
-                      <Link href="/zakazat-otchet-po-praktike"><a className="menu-mob__drop-down-el">Отчет по практике</a></Link>
-                      <Link href="/kontrolnaya-rabota-na-zakaz"><a className="menu-mob__drop-down-el">Контрольная</a></Link>
-                      <Link href="/referat-na-zakaz"><a className="menu-mob__drop-down-el">Реферат</a></Link>
-                      <Link href="/zakazat-esse"><a className="menu-mob__drop-down-el">Эссе</a></Link>
+                      <Link href="/diplom-mba-na-zakaz"><a className="menu-mob__title drop-down__title">Диплом МБА</a></Link>
+                      <Link href="/dissertaciya-na-zakaz/magisterskaya "><a className="menu-mob__title drop-down__title">Магистерская</a></Link>
+                      <Link href="/diplom-na-zakaz"><a className="menu-mob__title drop-down__title">Дипломная работа</a></Link>
+                      <Link href="/razrabotka-diplomnogo-proekta"><a className="menu-mob__title drop-down__title">Дипломный проект</a></Link>
+                      <Link href="/kursovaya-rabota-na-zakaz"><a className="menu-mob__title drop-down__title">Курсовая работа</a></Link>
+                      <Link href="/zakazat-otchet-po-praktike"><a className="menu-mob__title drop-down__title">Отчет по практике</a></Link>
+                      <Link href="/kontrolnaya-zakaz"><a className="menu-mob__title drop-down__title">Контрольная</a></Link>
+                      <Link href="/referat-na-zakaz"><a className="menu-mob__title drop-down__title">Реферат</a></Link>
+                      <Link href="/zakazat-esse"><a className="menu-mob__title drop-down__title">Эссе</a></Link>
                   </div>
                 }
                

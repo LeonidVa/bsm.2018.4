@@ -45,7 +45,7 @@ class ServiceBlock extends Component {
             </a>
         );
         let cards = this.renderCards();
-        return <section className="block-service">{top}{cards}</section>
+        return <section className="block-service" style={{backgroundImage: "linear-gradient(to right, " + gradient + ")"}}>{top}{cards}</section>
     }
 }
 

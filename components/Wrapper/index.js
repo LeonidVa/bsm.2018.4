@@ -1,6 +1,6 @@
-import React, {Component, createContext, Fragment} from 'react';
+import React, {Component, Fragment} from 'react';
 import Head from 'next/head';
-
+import { connect as reduxConnect } from 'react-redux'
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
@@ -8,6 +8,8 @@ import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/Exi
 import CallPopup, {callPopupContext, callPopupState} from 'components/modals/Call'
 import getConfig from 'next/config';
 import stat from 'utils/analytics'
+import { sendForm } from '@redux/form';
+import { isStringEmpty } from '@helpers/isStringEmpty';
 
 const {publicRuntimeConfig = {}} = getConfig();
 
@@ -19,6 +21,8 @@ class Wrapper extends Component {
         const url = window.location.href;
         stat.triggerTarget.pageView(url);
     }
+
+    onSendFormAction;
 
     constructor(props) {
         super(props);
@@ -38,6 +42,8 @@ class Wrapper extends Component {
                 targetID
             }})
         };
+
+        this.onSendFormAction = this.props.onSendFormAction;
 
         this.state.callPopupState.showWithQuestion = () => {
             this.setState({callPopupState: {...this.state.callPopupState, isShown: true, question: true}})
@@ -72,6 +78,12 @@ class Wrapper extends Component {
             this._mouseMoveCallback = this.onMouseMove.bind(this);
             document.addEventListener('mousemove', this._mouseMoveCallback);
         }
+    }
+
+    onSendForm () {
+      if (isStringEmpty(this.props.form.email) || isStringEmpty(this.props.form.phone)) {
+        this.onSendFormAction(this.props.form);
+      }
     }
 
     onMouseMove(e) {
@@ -134,13 +146,21 @@ class Wrapper extends Component {
         if (diff > 60) {
             this.state.exitPopupState.show();
             document.removeEventListener('mousemove', this._mouseMoveCallback);
+            this.onSendForm();
         }
+    }
+
+    componentDidMount () {
+      window.addEventListener('beforeunload', this.onSendForm);
+    }
+
+    componentWillUnmount () {
+      window.removeEventListener('beforeunload', this.onSendForm);
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
         return nextProps;
     }
-
 
     render() {
         return (
@@ -176,5 +196,16 @@ class Wrapper extends Component {
     }
 }
 
+const mapStateToProps = ({ data: { form } }) => ({ form });
+const mapDispatchToProps = {
+  onSendFormAction: data => sendForm(data),
+};
 
-export default Wrapper;
+export function connect(Component) {
+  return reduxConnect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(Component);
+}
+
+export default connect(Wrapper);

@@ -148,7 +148,7 @@ class OrderForm extends BaseForm {
     }
 
     nptDropDown(field) {
-      const { worktype: { label } } = this.props.form;
+      const { worktype: { label = '' } = {} } = this.props.form;
       return (
         <div
           className="block-form__item"

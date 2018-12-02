@@ -1,11 +1,10 @@
-import React, {Component} from "react";
-import stat from "utils/analytics";
-import axios from "axios";
+import React, {Component} from 'react';
+import stat from 'utils/analytics';
+import axios from 'axios';
 import getConfig from 'next/config';
-import {toast} from "react-toastify"
 import { connect as reduxConnect } from 'react-redux'
-import { changeField } from '@redux/form';
 
+import { changeField } from '@redux/form';
 const config = getConfig();
 
 export class BaseForm extends Component {
@@ -39,7 +38,6 @@ export class BaseForm extends Component {
       verified = false,
     } = this.props.form;
     const { formType = 'unknown' } = this.state;
-    const _this = this;
     let formData = new FormData();
     formData.append("brand", "besmarter");
     formData.append("form", formType);
@@ -67,48 +65,44 @@ export class BaseForm extends Component {
       data: formData,
       config: {headers: {"Content-Type": "multipart/form-data"}}
     })
-      .then(function (response) {
+      .then(response => {
         const {data = {}} = response;
         const {error = false, id, msg} = data;
         if (error) {
           /* ошибка со стороны сервера */
-          _this.setState({
+          this.setState({
             formSent: {
-              ..._this.state.formSent,
+              ...this.state.formSent,
               error: msg
             }
-          });
+          }, this.props.onSentWithError);
         } else {
           /* ушло хорошо */
-          _this.setState({
+          this.setState({
             formSent: {
-              ..._this.state.formSent,
+              ...this.state.formSent,
               bool: true,
               number: id
             }
-          }, _this.onSent);
+          }, this.onSent);
           successCallBack && successCallBack();
         }
-        _this.clearFormData();
+        this.clearFormData();
       })
-      .catch(function (error) {
-        //handle error
+      .catch(error => {
         if (error.response === undefined) {
-          // not an axios error
           console.log('not an axios error, here is dump:', error);
-          return;
         }
-        console.log('catch and toast', error);
-        /*catch and toast TypeError: t is not a function
-    at l (commons.85fc1ee1e428f389dabb.js:formatted:7842)
-    at commons.85fc1ee1e428f389dabb.js:formatted:6485*/
-        toast.error(<span>Ой! Что-то пошло не так и заявка не отправилась. Пожалуйста, позвоните нам по <a className="" href='tel:+74957724090'>+7 495 772 40 90.</a></span>, {
-          position: toast.POSITION.TOP_RIGHT
-        });
+        this.setState({
+          formSent: {
+            ...this.state.formSent,
+            bool: true,
+            error: true,
+          }
+        }, this.props.onSentWithError);
         errorCallBack && errorCallBack();
       });
   };
-
 
   onSent() {
     console.log('BaseForm calls onSent');

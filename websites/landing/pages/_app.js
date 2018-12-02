@@ -1,7 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
 import { Provider } from 'react-redux'
-import { ToastContainer } from 'react-toastify';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 
 import { persistor, store } from '@store';
@@ -26,7 +25,6 @@ class MyApp extends App {
           {/* <PersistGate persistor={persistor}> */}
             <React.Fragment>
               <Component {...pageProps} />
-              {process.browser && <ToastContainer />}
             </React.Fragment>
           {/* </PersistGate> */}
         </Provider>

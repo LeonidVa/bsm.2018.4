@@ -58,7 +58,7 @@ export class BaseForm extends Component {
     formData.append("verified", verified);
     let url = "https://besmarter.ru/api/form_data";
     if (config.publicRuntimeConfig.runtime.development) {
-      url = 'http://localhost:30021/api/form_data'
+      url = 'http://localhost:3001/api/form_data'
     }
     axios({
       method: "POST",

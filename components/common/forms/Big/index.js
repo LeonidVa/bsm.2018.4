@@ -241,12 +241,23 @@ class OrderForm extends BaseForm {
             }}
           />
           <div className="block-form__message" style={{ display: this.state.formSent.bool ? 'block' : 'none' }}>
-            <Close onClick={this.closeAlert} inverse />
-            <img width="100%" src={require('static/images/fox-logo.png')} />
-            <br />
-            <br />
-            <div className="block-form__title">Спасибо!</div>
-            <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
+            {!this.state.formSent.error ?
+              <React.Fragment>
+                <Close onClick={this.closeAlert} inverse />
+                <img width="100%" src={require('static/images/fox-logo.png')} />
+                <br />
+                <br />
+                <div className="block-form__title">Спасибо!</div>
+                <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
+              </React.Fragment>
+              :
+              <React.Fragment>
+                <Close onClick={this.closeAlert} inverse />
+                  <div className="error__title">Ой! Что-то пошло не так и заявка не отправилась</div>
+                  <img className="error__image" src={require("static/images/fox-logo.png")}/>
+                  Пожалуйста, позвоните нам по <a className="" href='tel:+74957724090'>+7 495 772 40 90.</a>
+              </React.Fragment>
+            }
           </div>
           <form onSubmit={this.handleSubmit()} className="block-form__form" style={{ display: this.state.formSent.bool ? 'none' : 'block' }}>
             <div className="block-form__title">{title}</div>

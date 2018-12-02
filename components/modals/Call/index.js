@@ -7,6 +7,7 @@ const callPopupState = {
     question: false,
     isShown: false,
     sent: false,
+    error: false,
     show: () => {
     },
     hide: () => {
@@ -21,9 +22,7 @@ class CallPopup extends Component {
     constructor(props) {
         super(props);
         this.state = callPopupState;
-
-    }
-
+    };
 
     render() {
         return (
@@ -40,11 +39,21 @@ class CallPopup extends Component {
                             <div className="block-form block-form2 modal-form modal__body" onClick={(e) => e.stopPropagation()}>
                                 <Close onClick={context.hide} inverse/>
                                 <div className="block-form__message" style={{display: context.sent ? "block" : "none"}}>
-                                    <img width="100%" src={require("static/images/fox-logo.png")}/>
-                                    <br/>
-                                    <br/>
-                                    <div className="block-form__title">Спасибо!</div>
-                                    <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
+                                  {!context.error ?
+                                    <React.Fragment>
+                                      <img width="100%" src={require("static/images/fox-logo.png")}/>
+                                      <br/>
+                                      <br/>
+                                      <div className="block-form__title">Спасибо!</div>
+                                      <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
+                                    </React.Fragment>
+                                    :
+                                    <React.Fragment>
+                                      <div className="error__title">Ой! Что-то пошло не так и заявка не отправилась</div>
+                                      <img className="error__image" src={require("static/images/fox-logo.png")}/>
+                                      Пожалуйста, позвоните нам по <a className="" href='tel:+74957724090'>+7 495 772 40 90.</a>
+                                    </React.Fragment>
+                                  }
                                 </div>
                                 <div className="block-form__message" style={{display: context.sent ? "none" : "block"}}>
                                     <Form
@@ -52,6 +61,7 @@ class CallPopup extends Component {
                                         targetID={context.targetID}
                                         formType={context.question ? 'Вопрос' : 'Заказ обратного звонка'}
                                         onSent={context.onSent}
+                                        onSentWithError={context.onSentWithError}
                                     />
                                 </div>
                             </div>

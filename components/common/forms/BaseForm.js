@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import stat from 'utils/analytics';
 import axios from 'axios';
 import getConfig from 'next/config';
 import { connect as reduxConnect } from 'react-redux'
 
-import { changeField } from '@redux/form';
+import { showModal } from '@redux/ui/modal';
+import { changeField } from '@redux/data/form';
 const config = getConfig();
 
 export class BaseForm extends Component {
@@ -13,7 +14,7 @@ export class BaseForm extends Component {
     const {formType = "default formType" } = props;
     this.state = {
       formType: formType,
-      formSent: {bool: false, number: "", error: false}
+      formSent: {bool: false, number: "", error: false},
     };
   }
 
@@ -57,7 +58,7 @@ export class BaseForm extends Component {
     formData.append("verified", verified);
     let url = "https://besmarter.ru/api/form_data";
     if (config.publicRuntimeConfig.runtime.development) {
-      url = 'http://localhost:3001/api/form_data'
+      url = 'http://localhost:30021/api/form_data'
     }
     axios({
       method: "POST",
@@ -70,12 +71,7 @@ export class BaseForm extends Component {
         const {error = false, id, msg} = data;
         if (error) {
           /* ошибка со стороны сервера */
-          this.setState({
-            formSent: {
-              ...this.state.formSent,
-              error: msg
-            }
-          }, this.props.onSentWithError);
+          this.props.onShowModalAction();
         } else {
           /* ушло хорошо */
           this.setState({
@@ -93,13 +89,7 @@ export class BaseForm extends Component {
         if (error.response === undefined) {
           console.log('not an axios error, here is dump:', error);
         }
-        this.setState({
-          formSent: {
-            ...this.state.formSent,
-            bool: true,
-            error: true,
-          }
-        }, this.props.onSentWithError);
+        this.props.onShowModalAction();
         errorCallBack && errorCallBack();
       });
   };
@@ -204,7 +194,9 @@ export class BaseForm extends Component {
   }
 
   render() {
-    return (<div>Do not use me like this. Read the manual.</div>);
+    return (
+      <div>Do not use me like this. Read the manual.</div>
+    );
   }
 
   getSource() {
@@ -218,6 +210,7 @@ export class BaseForm extends Component {
 const mapStateToProps = ({ data: { form } }) => ({ form });
 const mapDispatchToProps = {
   onChangeFieldAction: field => changeField(field),
+  onShowModalAction: () => showModal(),
 };
 
 export function connect(Component) {

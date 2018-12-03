@@ -6,9 +6,10 @@ import Footer from 'components/Footer';
 
 import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/ExitPopup'
 import CallPopup, {callPopupContext, callPopupState} from 'components/modals/Call'
+import ErrorModal from 'components/modals/Error'
 import getConfig from 'next/config';
 import stat from 'utils/analytics'
-import { sendForm } from '@redux/form';
+import { sendForm } from '@redux/data/form';
 import { isStringEmpty } from '@helpers/isStringEmpty';
 
 const {publicRuntimeConfig = {}} = getConfig();
@@ -195,6 +196,7 @@ class Wrapper extends Component {
                                     text="При сумме заказа от 2 000 рублей"
                           />
                           <CallPopup/>
+                          <ErrorModal isShown={this.props.modal} />
                       </Fragment>
                 </exitPopupContext.Provider>
             </callPopupContext.Provider>
@@ -202,7 +204,12 @@ class Wrapper extends Component {
     }
 }
 
-const mapStateToProps = ({ data: { form } }) => ({ form });
+const mapStateToProps = ({data: { form }, ui: { modal }}) => {
+  return {
+    form,
+    modal,
+  }
+};
 const mapDispatchToProps = {
   onSendFormAction: data => sendForm(data),
 };

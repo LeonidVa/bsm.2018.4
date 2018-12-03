@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import Link from 'next/link';
-import MenuMob from './components/MenuMob'
-import MenuWide from './components/MenuWide'
-import ButtonPhone from './components/ButtonPhone'
-
-import {ToggleCallPopup} from "components/modals/Call"
+import MenuMob from './components/MenuMob';
+import MenuWide from './components/MenuWide';
+import ButtonPhone from './components/ButtonPhone';
+import Hamburger from './components/Hamburger';
+import { ToggleCallPopup } from 'components/modals/Call';
 
 import './header.scss';
 import 'components/index.scss';
 
-import triggerTarget from 'utils/analytics';
-import Hamburger from "./components/Hamburger";
 
 class Header extends Component {
   state = {

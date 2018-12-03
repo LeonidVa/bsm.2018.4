@@ -58,7 +58,7 @@ const page = () => (
         <Link href="#form">
           <a className="block-service__top" style={{backgroundImage: "url(" + require('static/images/block/j.jpg') + ")",}}>
             <div className="block-service__text gradient-l-white">
-              <span className="block-service__title">Дипломная работа</span>
+              <span className="block-service__top-title">Дипломная работа</span>
               <p className="block-service__par">Быстро и качественно!</p>
               <p className="block-service__par">С нами твоя защита пройдет легко!</p>
               <p className="block-service__par">От 14 000 руб.</p>

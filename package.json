@@ -41,6 +41,10 @@
     "redux-actions": "^2.6.4",
     "redux-devtools-extension": "^2.13.7",
     "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.9.2"
   }
 }

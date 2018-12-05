@@ -10,7 +10,7 @@ import ErrorModal from 'components/modals/Error'
 import getConfig from 'next/config';
 import stat from 'utils/analytics'
 import { sendForm } from '@redux/data/form';
-import { isStringEmpty } from '@helpers/isStringEmpty';
+import { isStringEmpty } from '../../helpers/isStringEmpty';
 
 const {publicRuntimeConfig = {}} = getConfig();
 

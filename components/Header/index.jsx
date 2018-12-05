@@ -9,7 +9,23 @@ import { ToggleCallPopup } from 'components/modals/Call';
 
 import './header.scss';
 import 'components/index.scss';
+import  { HeaderBlock } from './style.js';
 
+import  {
+  InnerBlock, 
+  HeaderHamburger,
+  HeaderLeftDiv,
+  HeaderLi,
+  HeaderLogoBlock,
+  HeaderUl,
+  HeaderOrderCall,
+  HeaderOrderTel,
+  HeaderNavA,
+  LogoSpan,
+  HeaderNav,
+  HeaderRightDiv,
+  ButtonPhoneS
+} from './style';
 
 class Header extends Component {
   state = {
@@ -34,55 +50,58 @@ class Header extends Component {
   }
 
   render() {
-    const navButtonsDefault = <ul>
-      <li>
+    const navButtonsDefault = 
+    <HeaderUl>
+      <HeaderLi>
         <Link href="/price">
-          <a>Услуги и цены</a>
+          <HeaderNavA>Услуги и цены</HeaderNavA>
         </Link>
-      </li>
-      <li>
+      </HeaderLi>
+      <HeaderLi>
         <Link href="/contacts">
-          <a>Контакты</a>
+          <HeaderNavA>Контакты</HeaderNavA>
         </Link>
-      </li>
-    </ul>;
+      </HeaderLi>
+    </HeaderUl>;
     const {navButtons = navButtonsDefault, showHamburger = true} = this.props;
     return (
-      <div>
-        <div className="header">
-          <div className="inner">
-            <div className="header__left">
-
+      <React.Fragment>
+        <HeaderBlock>
+          <InnerBlock>
+            <HeaderLeftDiv>
               <Link href="/">
-                <a className="header__logo">
-                  Be<span>Smarter!</span>
-                </a>
+                <HeaderLogoBlock>
+                  Be<LogoSpan>Smarter!</LogoSpan>
+                </HeaderLogoBlock>
               </Link>
-              <nav className="nav">{navButtons}</nav>
-            </div>
-            <div className="header__right">
+              <HeaderNav>{navButtons}</HeaderNav>
+            </HeaderLeftDiv>
+            <HeaderRightDiv>
+            <ButtonPhoneS>
               <ButtonPhone/>
-              <ToggleCallPopup targetID="call_me_top">
-                <a className="header__order-tel">
-                  <span style={{padding: "1em 0"}}>
-                    <span className="header__order-call">Заказать звонок</span>
-                  </span>
-                </a>
+            </ButtonPhoneS>
+                <ToggleCallPopup targetID="call_me_top">
+                <HeaderOrderTel>
+                  <LogoSpan style={{padding: "1em 0"}}>
+                    <HeaderOrderCall>Заказать звонок</HeaderOrderCall>
+                  </LogoSpan>
+                </HeaderOrderTel>
               </ToggleCallPopup>
+            <HeaderHamburger>
               {showHamburger ? <Hamburger
                 open={this.state.menuMobileIsOpen || this.state.menuDesktopIsOpen}
                 mobileHandler={this.menuMobileToggle.bind(this)}
                 desktopHandler={this.menuDesktopToggle.bind(this)}
               /> : ''}
-            </div>
-          </div>
-        </div>
+            </HeaderHamburger>
+          </HeaderRightDiv>
+        </InnerBlock>
+      </HeaderBlock>
         {showHamburger ? <MenuMob showMenu={this.state.menuMobileIsOpen}/> : ''}
         {showHamburger ? <MenuWide showMenu={this.state.menuDesktopIsOpen} handler={this.menuDesktopToggle.bind(this)}/> : ''}
-      </div>
+      </React.Fragment>
     )
   }
 }
 
 export default Header;
-

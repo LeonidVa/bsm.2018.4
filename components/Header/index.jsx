@@ -24,7 +24,8 @@ import  {
   LogoSpan,
   HeaderNav,
   HeaderRightDiv,
-  ButtonPhoneS
+  ButtonPhoneS,
+ 
 } from './style';
 
 class Header extends Component {

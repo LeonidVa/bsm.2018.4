@@ -216,41 +216,23 @@ export const ButtonPhoneS = styled.div`
 `;
 
 export const HeaderHamburger = styled.div`
-    width: 3em;
-    height: 3em;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    position: relative;
-    margin: 0.5em 2em 0;
-    @media (min-width: 1331px) {
-      margin: .66em -5em 0 2em;
-    }
-    @media (max-width: 1330px) {
-      position: relative;
-    }
-    @media (max-width: 900px) {
-      display: block;
-      margin: 0.5em 1em 0;
-    }
-    @media (max-width: 660px) {
-      position: absolute;
-      right: 1em;
-      top: 0.5em;
-    }
-    @media (max-width: 350px) {
-      position: absolute;
-      right: 0;
-    }
+// width: 3em;
+// height: 3em;
+// transform: rotate(0deg);
+// transition: .5s ease-in-out;
+// cursor: pointer;
+// position: relative;
+// margin: 0.5em 2em 0;
 
-    @media (max-width: 660px) {
-      &-mobile { display: block; }
-      &-desktop { display: none; }
-    }
-    @media (min-width: 661px) {
-      &-mobile { display: none; }
-      &-desktop { display: block; }
-    }
+
+// @media (max-width: 660px) {
+//   &-mobile { display: block; }
+//   &-desktop { display: none; }
+// }
+// @media (min-width: 661px) {
+//   &-mobile { display: none; }
+//   &-desktop { display: block; }
+// }
     & span {
       display: block;
       position: absolute;
@@ -301,4 +283,6 @@ export const HeaderHamburger = styled.div`
         left: 50%;
       }
     }
+  
 `;
+

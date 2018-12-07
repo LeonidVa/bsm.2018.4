@@ -45,7 +45,7 @@ const Img = styles.img `
     width: 1.56em;
 `;
 
-const Span = style.span `
+const Span = styles.span `
     display: block;
 `;
 

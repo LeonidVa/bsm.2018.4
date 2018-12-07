@@ -1,5 +1,16 @@
 import Link from 'next/link';
 import './index.scss'
+import styles from "styled-components"
+
+
+
+const UlBlockTextLinksList = styles.ul `
+list-style: disc;
+@media (max-width: 660px) {
+
+}
+`;
+
 
 const renderLinks=(links)=>(
     links.map((item, index)=>{
@@ -17,10 +28,11 @@ const renderLinks=(links)=>(
 )
 
 const LinksBlock = ({links})=>(
+    
     <section className="block-text">
-        <ul className="block-text__links-list">
+        <UlBlockTextLinksList className="block-text__links-list">
             {renderLinks(links)}
-        </ul>
+        </UlBlockTextLinksList>
     </section>
 )
 

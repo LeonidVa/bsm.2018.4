@@ -7,7 +7,6 @@ import ButtonPhone from './components/ButtonPhone';
 import Hamburger from './components/Hamburger';
 import { ToggleCallPopup } from 'components/modals/Call';
 
-import './header.scss';
 import 'components/index.scss';
 import  { HeaderBlock } from './style.js';
 

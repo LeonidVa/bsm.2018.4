@@ -7,85 +7,56 @@ import styles from "styled-components"
 
 
 const BlockSlider = styles.section `
-margin: 1.56em auto 0;
-font-size: 2em;
-
-@media (max-width: 900px) {
-  width: 100%;
-  max-width: 100%;
-  justify-content: space-around;
-  margin: 0.5em auto;
-}
+  margin: 1.56em auto 0;
+  font-size: 2em;
+  @media (max-width: 900px) {
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-around;
+    margin: 0.5em auto;
+  }
 `;
 
-
 const BlockSliderSlide = styles.div`
-font-size: 1em;
-margin: 0 auto;
-padding: 0 0.5em;
-display: flex;
-display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
-justify-content: space-around;
--webkit-box-pack: justify;
--webkit-justify-content: space-around;
--ms-flex-pack: justify;
-align-items: flex-start;
--webkit-box-align: flex-start;
--webkit-align-items: flex-start;
--ms-flex-align: flex-start;
+  font-size: 1em;
+  margin: 0 auto;
+  padding: 0 0.5em;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: justify;
+  align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
 `;
 
 const BlockProfitsItem = styles.div`
-width: 8.59em;
-padding: 1em;
-@media (max-width: 470px) {
-}
+  width: 8.59em;
+  padding: 1em;
 `;
 
 const Img = styles.img`
-display: block;
-      margin: 0 auto .625em;
-      height: 3.125em;
-`;
-
-
-const BlockProfitsTitle = styles.span`
-font-family: "Ubuntu", sans-serif;
-font-weight: 500;
-font-size: .625em;
-color: #4a4a4a;
-margin-bottom: .5em;
-position: relative;
-transition: all .4s;
-display: inline-block;
-&::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 1px;
-  background-color: #f4511e;
-  top: 100%;
-  left: 50%;
-  transition: all .4s;
-}
+  display: block;
+  margin: 0 auto .625em;
+  height: 3.125em;
 `;
 
 const BlockProfitsPar = styles.p`
-    font-size: .5em;
-    line-height: 1.5em;
-    transition: all .4s;
+  font-size: .5em;
+  line-height: 1.5em;
+  transition: all .4s;
 `; 
-
-
 
 const Block = (props) => {
 
     const {imageSrc, title, description, url} = props;
 
     return (
-
         <BlockSliderSlide className="block-slider__slide">
             <BlockProfitsItem className="block-profits__item">
                 <Img src={imageSrc} alt="profit" style={{objectFit: 'contain'}}/>
@@ -95,8 +66,6 @@ const Block = (props) => {
                 </BlockProfitsPar>
             </BlockProfitsItem>
         </BlockSliderSlide>
-
-
     )
 }
 

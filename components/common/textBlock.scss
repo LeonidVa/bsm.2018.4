@@ -64,6 +64,21 @@
     @media (max-width: 660px) {
       font-size: 1.5rem;
     }
+    &__h2 {
+      font-size: 2rem;
+      font-family: "Ubuntu", sans-serif;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      font-weight: bold;
+      line-height: 1.19;
+      color: #4a4a4a;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      @media (max-width: 660px) {
+        font-size: 1.5rem;
+      }
+    }
     &.center {
       text-align: center;
     }
@@ -106,6 +121,7 @@
     margin-bottom: 1rem;
     line-height: 1.5;
     color: #4a4a4a;
+    margin-top: 1rem;
     @media (max-width: 415px) {
       width: 102%;
     }

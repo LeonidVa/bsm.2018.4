@@ -2,46 +2,46 @@ import Link from 'next/link';
 
 import './index.scss';
 import foxLogo from 'static/images/fox-logo.png'
-import BottomHelper from 'components/common/CallAsk'
+import BottomHelper from 'components/common/CallAskH2'
 
 
 export default (props) => {
   const navButtonsDefault = <ul>
-      <li>
-        <Link href="/contacts">
-          <a>Контакты</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/about">
-          <a>О нас</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/price">
-          <a>Услуги и Цены</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/avtoram">
-          <a>Авторам</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/garantii">
-          <a>Гарантии</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/stati">
-          <a>Статьи</a>
-        </Link>
-      </li>
-    </ul>;
-  const { navButtons = navButtonsDefault } = props;
-  return (
-    <div>
+                <li>
+                  <Link href="/contacts">
+                    <a>Контакты</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about">
+                    <a>О нас</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/price">
+                    <a>Услуги и Цены</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/avtoram">
+                    <a>Авторам</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/garantii">
+                    <a>Гарантии</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/stati">
+                    <a>Статьи</a>
+                  </Link>
+                </li>
+              </ul>;
+  const {navButtons = navButtonsDefault} = props;
+  return (    <div>
       <BottomHelper/>
+
       <div className="footer">
         <div className="inner">
           <div className="footer__logo">
@@ -51,6 +51,24 @@ export default (props) => {
           <div className="footer__center">
             <nav className="nav">{navButtons}</nav>
           </div>
+
+          {/* <div className="footer__socials">
+                    <Link href="#">
+                        <a>
+                            <FontAwesomeIcon icon={faTwitter} />
+                        </a>
+                    </Link>
+                    <Link href="#">
+                        <a>
+                            <FontAwesomeIcon icon={faFacebookF} />
+                        </a>
+                    </Link>
+                    <Link href="#">
+                        <a>
+                            <FontAwesomeIcon icon={faTumblr} />
+                        </a>
+                    </Link>
+                </div> */}
         </div>
         <p className="copyright">
 
@@ -66,6 +84,7 @@ export default (props) => {
           <span>© 2004-{1900 + new Date().getYear()}</span>
           <br/>
           <span><Link href="/map"><a>Карта сайта</a></Link></span>
+
         </p>
       </div>
     </div>

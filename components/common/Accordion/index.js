@@ -3,9 +3,6 @@ import Link from 'next/link';
 import './index.scss'
 import styles from 'styled-components'
 
-
-
-
 const SectionBlockAccordion = styles.section `
     width: 34em;
     margin: 3rem auto 0;

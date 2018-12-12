@@ -11,6 +11,12 @@ import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
 import socials from 'data/socials';
+import  {
+  HeaderLi,
+  HeaderUl,
+  HeaderNavA,
+  } from '/components/Header/style.js';
+
 
 /**/
 class page extends Component {
@@ -21,18 +27,30 @@ class page extends Component {
         description="Написание диплома на заказ! Быстрая, недорогая и профессиональная помощь в подготовке дипломной работы – компания BeSmarter. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40."
         showHamburger={false}
         headerNavButtons={
-          <ul>
-            <li>
-              <Link href="#about">
-                <a>О нас</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="#contacts">
-                <a>Контакты</a>
-              </Link>
-            </li>
-          </ul>
+                    // <ul>
+          //   <li>
+          //     <Link href="#price">
+          //       <a>Услуги и цены</a>
+          //     </Link>
+          //   </li>
+          //   <li>
+          //     <Link href="#contacts">
+          //       <a>Контакты</a>
+          //     </Link>
+          //   </li>
+          // </ul>
+          <HeaderUl>
+      <HeaderLi>
+        <Link href="#price">
+          <HeaderNavA>Услуги и цены</HeaderNavA>
+        </Link>
+      </HeaderLi>
+      <HeaderLi>
+        <Link href="#contacts">
+          <HeaderNavA>Контакты</HeaderNavA>
+        </Link>
+      </HeaderLi>
+    </HeaderUl>
         }
         footerNavButtons={
           <ul>

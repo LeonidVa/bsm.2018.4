@@ -69,7 +69,7 @@ class OrderForm extends BaseForm {
         <input
           type={field.type}
           name={field.name}
-          id={field.id}
+          id={field.name}
           placeholder={field.placeholder}
           required={field.required}
           value={this.props.form[field.name]}
@@ -82,7 +82,7 @@ class OrderForm extends BaseForm {
       return (
         <div
           className="block-form__item"
-          key={field.id}
+          key={field.name}
           style={{
             opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
             maxHeight: field.required
@@ -97,7 +97,7 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor={field.id}>
+          <label htmlFor={field.name}>
             {field.label}
             {field.rlabel}
           </label>
@@ -115,7 +115,7 @@ class OrderForm extends BaseForm {
       return (
         <div
           className="block-form__item textarea"
-          key={field.id}
+          key={field.name}
           style={{
             opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
             maxHeight: field.required
@@ -130,14 +130,14 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor={field.id}>
+          <label htmlFor={field.name}>
             {field.label}
             {field.rlabel}
           </label>
           <textarea
             type={field.type}
             name=""
-            id={field.id}
+            id={field.name}
             placeholder={field.placeholder}
             required={field.required}
             value={this.props.form[field.name]}
@@ -152,7 +152,7 @@ class OrderForm extends BaseForm {
       return (
         <div
           className="block-form__item"
-          key={field.id}
+          key={field.name}
           style={{
             opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
             maxHeight: field.required
@@ -167,7 +167,7 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor={field.id}>
+          <label htmlFor={field.name}>
             {field.label}
             {field.rlabel}
           </label>
@@ -184,7 +184,7 @@ class OrderForm extends BaseForm {
       return (
         <div
           className="block-form__item"
-          key={field.id}
+          key={field.name}
           style={{
             opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
             maxHeight: field.required

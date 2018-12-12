@@ -113,7 +113,7 @@ export default class Error extends React.Component {
             </FormWithTimer>
           </section>
 
-          <a name="form" id="form"/>
+          
           <OrderForm />
 
         </div>

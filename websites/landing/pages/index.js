@@ -16,7 +16,7 @@ import  {
   HeaderUl,
   HeaderNavA,
   } from '/components/Header/style.js';
-
+import { SiteMapBlock } from "components/Footer/index.js"
 
 /**/
 class page extends Component {
@@ -25,7 +25,6 @@ class page extends Component {
       <Wrapper
         title="BeSmarter!"
         description="Написание диплома на заказ! Быстрая, недорогая и профессиональная помощь в подготовке дипломной работы – компания BeSmarter. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40."
-        showHamburger={false}
         headerNavButtons={
                     // <ul>
           //   <li>
@@ -370,7 +369,7 @@ class page extends Component {
               </p>
             </Address>
           </section>
-
+          <SiteMapBlock  />
         </div>
       </Wrapper>
     )

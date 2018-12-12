@@ -5,7 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint components/Header/ButtonPhone.js",
+    "lint": "eslint components/Footer/index.js",
     "stylelint": "stylelint src/**/*.css",
     "hooks:commit": "lint-staged"
   },

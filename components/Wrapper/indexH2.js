@@ -182,7 +182,7 @@ class Wrapper extends Component {
                           </Head>
                           <Header navButtons={this.props.headerNavButtons} showHamburger={this.props.showHamburger}/>
                           {this.props.children}
-                          <Footer navButtons={this.props.footerNavButtons}/>
+                          <Footer navButtons={this.props.footerNavButtons} isSiteMapShown={this.props.isSiteMapShown} />
                           <script dangerouslySetInnerHTML={{__html: `window.recaptchaOptions = {lang: 'ru'}`}}/>
                           <ExitPopup className="modal-sale1"
                                     bonus={<div style={{position: "relative"}}>500<span

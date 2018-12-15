@@ -55,7 +55,7 @@ class ExitPopup extends Component {
                                   <Close onClick={() => {
                                     context.hide()
                                   }} inverse/>
-                                  <img width="100%" src={require("static/images/fox-logo.png")}/>
+                                  <img width="100%" src={require("static/images/fox-circle.svg")}/>
                                   <div className="block-form__title">Спасибо!</div>
                                   <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
                                 </div>

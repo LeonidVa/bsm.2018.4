@@ -8,7 +8,7 @@ const config = [
             prof: "студент",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Будем и дальше работать над вашей трудной магистерской. Всё будет отлично!",
             prof: "Менеджер",
@@ -22,7 +22,7 @@ const config = [
             prof: "студент",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Вы стопроцентно защититесь, если пойдете на защиту с нашей полной подготовкой. Наши преподаватели сами принимают защиты. Просто слушайтесь их. Расскажем в офисе, что нужно делать именно вам. Приходите сегодня!",
             prof: "Менеджер",
@@ -36,7 +36,7 @@ const config = [
             prof: "студент",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Спасибо, что цените это. Приходите чаще!",
             prof: "Менеджер",
@@ -50,7 +50,7 @@ const config = [
             prof: "студент",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Спасибо!",
             prof: "Менеджер",
@@ -64,7 +64,7 @@ const config = [
             prof: "студент",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Опытный автор дешево не стоит, а мы делаем только хорошие работы. Оно того стоит.",
             prof: "Менеджер",
@@ -78,7 +78,7 @@ const config = [
             prof: "студент",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Пожалуйста, мы рады помогать по всем вопросам. У нас такой большой опыт, что мы сразу видим, как что сделать, чтобы было легче. Если трудно – сразу к нам!",
             prof: "Менеджер",
@@ -91,7 +91,7 @@ const config = [
             text: "Спасибо за помощь моему сыну. Не ожидала такого понимания нашей сложной ситуации. Теперь я спокойна, что он защитит диплом.",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Трудный был случай, но мы умеем справляться. У нас огромный успешный опыт, и очень умные менеджеры. Всё теперь будет хорошо!",
             prof: "Менеджер",
@@ -105,7 +105,7 @@ const config = [
             prof: "студент",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Вы уже знаете, что мы помогаем не только с текстом, но и с защитой. Приезжайте с темой диплома. Расскажем, как успешно защититься именно по ней. Отличная будет защита!",
             prof: "Менеджер",
@@ -118,7 +118,7 @@ const config = [
             text: "Вы помогли моей девочке написать на пятерку все сочинения с 9 по 11 класс. Спасибо!",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Пожалуйста. Поступайте в университет и приходите снова. Всегда поможем!",
             prof: "Менеджер",
@@ -132,7 +132,7 @@ const config = [
             prof: "студент",
         },
         manager: {
-            avatar: require('static/images/reviews/lis.png'),
+            avatar: require('static/images/fox-circle.svg'),
             name: "Мария",
             text: "Всегда рады помочь. Обращайтесь с любым вопросом по учебе!",
             prof: "Менеджер",

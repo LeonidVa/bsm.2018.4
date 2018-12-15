@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import React, {Component} from 'react';
 
-import Wrapper from 'components/Wrapper';
+import Wrapper from 'components/Wrapper/indexH2';
 import NavRow from 'components/common/NavRow';
 
 import ImageBlock from 'components/common/ImageBlock'

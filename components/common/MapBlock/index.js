@@ -58,7 +58,7 @@ class FillContainer extends Component {
                         }}
                         options={{
                             iconLayout: 'default#image',
-                            iconImageHref: require('static/images/fox-logo.128.png'),
+                            iconImageHref: require('static/images/fox-circle.svg'),
                             iconImageSize: [48, 48],
                             iconImageOffset: [-24, -24]
                         }}

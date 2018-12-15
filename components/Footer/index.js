@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 
 import './index.scss';
-import foxLogo from 'static/images/fox-logo.png';
-import BottomHelper from 'components/common/CallAsk';
+import foxLogo from 'static/images/fox-circle.svg'
+import BottomHelper from 'components/common/CallAsk'
 
 export const SiteMapBlock = ({
   isSiteMapShown,
@@ -74,8 +74,7 @@ export default (props) => {
           <br />
           <span>ИНН 7725765120 ОГРН 1127746632276</span>
           <span>
-© 2004-
-            {1900 + new Date().getYear()}
+            © 2004-{1900 + new Date().getYear()}
           </span>
           <br />
           <SiteMapBlock isSiteMapShown={isSiteMapShown} />

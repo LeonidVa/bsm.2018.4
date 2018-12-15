@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper';
+import Wrapper from 'components/Wrapper/indexH2';
 
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';
@@ -64,6 +64,7 @@ const page = () => (
       <section className="block-nav">
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
       </section>
+
       <MessBlock/>
 
         <DipMBA/>

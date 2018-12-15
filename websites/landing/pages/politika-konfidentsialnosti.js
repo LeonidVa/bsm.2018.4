@@ -1,18 +1,36 @@
+import React from "react";
 import Wrapper from 'components/Wrapper/indexH2';
 import Title from 'components/common/Title';
 import Link from 'next/link';
 import FormOrder from 'components/common/forms/Big/Order';
-
-import React from "react";
-
+import  {
+  HeaderLi,
+  HeaderUl,
+  HeaderNavA,
+} from '/components/Header/style.js';
 
 const page = () => (
-  <Wrapper title="Согласие на обработку персональных данных Пользователей | Компания «BeSmarter!». Тел. +7 (495) 772-40-90." description="Согласие на обработку персональных данных пользователей компанией «BeSmarter!». Тел. +7 (495) 772-40-90."
-  navButtons={false} showHamburger={false}
+  <Wrapper
+    title="Согласие на обработку персональных данных Пользователей | Компания «BeSmarter!». Тел. +7 (495) 772-40-90."
+    description="Согласие на обработку персональных данных пользователей компанией «BeSmarter!». Тел. +7 (495) 772-40-90."
+    navButtons={false}
+    showHamburger={false}
+    headerNavButtons={
+      <HeaderUl>
+        <HeaderLi>
+          <Link href="#about">
+            <HeaderNavA>О нас</HeaderNavA>
+          </Link>
+        </HeaderLi>
+        <HeaderLi>
+          <Link href="#contacts">
+            <HeaderNavA>Контакты</HeaderNavA>
+          </Link>
+        </HeaderLi>
+      </HeaderUl>
+    }
   >
     <div className="wrapper bg bg-c2 bg-img bg-img4">
-
-
       <section className="breadcrumbs">
         <div className="inner">
           <Link href="/">

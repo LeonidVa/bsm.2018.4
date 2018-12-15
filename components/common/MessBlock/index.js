@@ -86,7 +86,7 @@ class MessBlock extends Component {
                className="block-mess__item"
                style={{background: colors[index], padding: "2.25em"}}
                title={item.title}
-               rel="nofollow"
+               rel="nofollow noopener"
                onClick={handleClick}
             >
               {item.icon}

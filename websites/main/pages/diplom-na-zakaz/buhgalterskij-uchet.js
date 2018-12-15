@@ -1,5 +1,5 @@
  import Link from 'next/link';
-import Wrapper from 'components/Wrapper';
+import Wrapper from 'components/Wrapper/indexH2';
 
 import NavRow from 'components/common/NavRow';
 import MessBlock from 'components/common/MessBlock';

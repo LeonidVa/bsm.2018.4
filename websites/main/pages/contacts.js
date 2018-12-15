@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Link from 'next/link';
 import 'components/contacts/style.scss'
 
-import Wrapper from 'components/Wrapper';
+import Wrapper from 'components/Wrapper/indexH2';
 import NavRow from 'components/common/NavRow';
 
 import Title from 'components/common/Title'

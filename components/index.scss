@@ -71,7 +71,7 @@ table {
   padding-bottom: 4rem;
   position: relative;
   &.main {
-    background-image: url(~static/images/header/bg.jpg);
+    background-image: url(~static/images/header/bg.svg);
     background-size: 100% 100vh;
     background-attachment: fixed;
     padding-bottom: 50px;
@@ -96,19 +96,19 @@ table {
     background-position: center 0;
   }
   &.bg-img1::before {
-    background-image: url(~static/images/header/bg1.jpg);
+    background-image: url(~static/images/header/bg1.svg);
   }
   &.bg-img2::before {
-    background-image: url(~static/images/header/bg2.jpg);
+    background-image: url(~static/images/header/bg2.svg);
   }
   &.bg-img3::before {
-    background-image: url(~static/images/header/bg3.jpg);
+    background-image: url(~static/images/header/bg3.svg);
   }
   &.bg-img4::before {
-    background-image: url(~static/images/header/bg4.jpg);
+    background-image: url(~static/images/header/bg4.svg);
   }
   &.bg-img5::before {
-    background-image: url(~static/images/header/bg5.jpg);
+    background-image: url(~static/images/header/bg5.svg);
   }
   &.bg-c1::before {
     background-color: #857a95;

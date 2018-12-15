@@ -16,7 +16,7 @@ import  {
   HeaderUl,
   HeaderNavA,
   } from '/components/Header/style.js';
-import { SiteMapBlock } from "components/Footer/index.js"
+
 
 /**/
 class page extends Component {
@@ -25,31 +25,20 @@ class page extends Component {
       <Wrapper
         title="BeSmarter!"
         description="Написание диплома на заказ! Быстрая, недорогая и профессиональная помощь в подготовке дипломной работы – компания BeSmarter. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40."
+        showHamburger={false}
         headerNavButtons={
-                    // <ul>
-          //   <li>
-          //     <Link href="#price">
-          //       <a>Услуги и цены</a>
-          //     </Link>
-          //   </li>
-          //   <li>
-          //     <Link href="#contacts">
-          //       <a>Контакты</a>
-          //     </Link>
-          //   </li>
-          // </ul>
           <HeaderUl>
-      <HeaderLi>
-        <Link href="#price">
-          <HeaderNavA>Услуги и цены</HeaderNavA>
-        </Link>
-      </HeaderLi>
-      <HeaderLi>
-        <Link href="#contacts">
-          <HeaderNavA>Контакты</HeaderNavA>
-        </Link>
-      </HeaderLi>
-    </HeaderUl>
+            <HeaderLi>
+              <Link href="#about">
+                <HeaderNavA>О нас</HeaderNavA>
+              </Link>
+            </HeaderLi>
+            <HeaderLi>
+              <Link href="#contacts">
+                <HeaderNavA>Контакты</HeaderNavA>
+              </Link>
+            </HeaderLi>
+          </HeaderUl>
         }
         footerNavButtons={
           <ul>
@@ -369,7 +358,7 @@ class page extends Component {
               </p>
             </Address>
           </section>
-          <SiteMapBlock  />
+
         </div>
       </Wrapper>
     )

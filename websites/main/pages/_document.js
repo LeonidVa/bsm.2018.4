@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
   }
     render() {
         return (
-            <html>
+            <html lang="ru">
             <Head>
                 <script dangerouslySetInnerHTML={{ __html: analytics.getMetricsScript()}}/>
                 <noscript dangerouslySetInnerHTML={{ __html: analytics.getMetricsNoscript()}} />

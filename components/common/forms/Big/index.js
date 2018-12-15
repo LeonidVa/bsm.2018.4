@@ -136,7 +136,6 @@ class OrderForm extends BaseForm {
           </label>
           <textarea
             type={field.type}
-            name=""
             id={field.name}
             placeholder={field.placeholder}
             required={field.required}
@@ -242,7 +241,7 @@ class OrderForm extends BaseForm {
           />
           <div className="block-form__message" style={{ display: this.state.formSent.bool ? 'block' : 'none' }}>
             <Close onClick={this.closeAlert} inverse />
-            <img width="100%" src={require('static/images/fox-circle.svg')} />
+            <img style="width:100%" src={require('static/images/fox-circle.svg')} alt=""/>
             <br />
             <br />
             <div className="block-form__title">Спасибо!</div>

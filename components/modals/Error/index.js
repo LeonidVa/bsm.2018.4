@@ -30,8 +30,8 @@ class ErrorModal extends Component {
                   <div className="block-form__message form_alert">
                     <Close onClick={onHideModalAction} inverse/>
                     <p className="block-form__title">Ой! Что-то пошло не так и заявка не отправилась</p>
-                    <img className="error__image" src={require("static/images/fox-logo.png")}/>
-                    <p className="error__subtitle">Пожалуйста, позвоните нам по <a className="" href='tel:+74957724090'>+7 495 772 40 90.</a></p>
+                    <img className="error__image" src={require("static/images/fox-logo.png")} alt=""/>
+                    <p className="error__subtitle">Пожалуйста, позвоните нам по <a href='tel:+74957724090'>+7 495 772 40 90.</a></p>
                   </div>
               </div>
           </div>

@@ -12,7 +12,7 @@ class Timer extends Component {
             secondsLeft: 0,
             size: 1.6,
             duration: 0,
-            color: "#fffff",
+            color: "#ffffff",
         };
 
         if (props.size !== undefined && props.size !== null) {

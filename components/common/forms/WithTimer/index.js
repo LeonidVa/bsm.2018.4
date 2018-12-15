@@ -37,7 +37,7 @@ class FormWithTimer extends Component {
             style={{display: notifyOpen ? "flex" : "none"}}
           >
             <Close onClick={this.toggleNotify} inverse/>
-            <img width="100%" src={require("static/images/fox-circle.svg")}/>
+            <img style="width:100%" src={require("static/images/fox-circle.svg")} alt=""/>
             <div className="block-form__title">Спасибо!</div>
             <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
           </div>;

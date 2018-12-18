@@ -241,7 +241,7 @@ class OrderForm extends BaseForm {
           />
           <div className="block-form__message" style={{ display: this.state.formSent.bool ? 'block' : 'none' }}>
             <Close onClick={this.closeAlert} inverse />
-            <img style="width:100%" src={require('static/images/fox-circle.svg')} alt=""/>
+            <img style={{ width: "100%" }}  src={require('static/images/fox-circle.svg')} alt=""/>
             <br />
             <br />
             <div className="block-form__title">Спасибо!</div>

@@ -17,22 +17,22 @@ export default (props) => {
   const navButtonsDefault = (
     <ul>
       <li>
-        <Link href="/contacts">Контакты</Link>
+        <Link href="/contacts"><a>Контакты</a></Link>
       </li>
       <li>
-        <Link href="/about">О нас</Link>
+        <Link href="/about"><a>О нас</a></Link>
       </li>
       <li>
-        <Link href="/price">Услуги и Цены</Link>
+        <Link href="/price"><a>Услуги и Цены</a></Link>
       </li>
       <li>
-        <Link href="/avtoram">Авторам</Link>
+        <Link href="/avtoram"><a>Авторам</a></Link>
       </li>
       <li>
-        <Link href="/garantii">Гарантии</Link>
+        <Link href="/garantii"><a>Гарантии</a></Link>
       </li>
       <li>
-        <Link href="/stati">Статьи</Link>
+        <Link href="/stati"><a>Статьи</a></Link>
       </li>
     </ul>
   );

@@ -6,7 +6,7 @@ export default {
   vk: {
     icon: <FontAwesomeIcon icon={faVk}/>,
     title: "VK",
-    url: "https://vk.com/besmarter_ru",
+    url: "https://vk.com/id372065572",
     targetID: "vk"
   },
   facebook: {

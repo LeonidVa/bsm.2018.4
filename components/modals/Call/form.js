@@ -39,8 +39,14 @@ class Form extends BaseForm {
                         onChange={(e) => this.saveData({comment: e.target.value})}
                     />
                 </div>
-
-                <button type="submit" className="block-form__btn" onClick={() => stat.triggerTarget.phoneClicked()}>Позвоните мне!</button>
+                <button
+                  type="submit"
+                  disabled={this.props.spinner}
+                  className="block-form__btn"
+                  onClick={() => stat.triggerTarget.phoneClicked()}
+                >
+                  Позвоните мне!
+                </button>
             </form>
         );
     }

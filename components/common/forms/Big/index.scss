@@ -116,7 +116,7 @@
         transition: all .4s;
         position: relative;
         z-index: 100;
-        &:hover {
+        &:not(:disabled):hover {
             background-color: #922d0e;
         }
     }

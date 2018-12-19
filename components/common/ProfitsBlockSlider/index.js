@@ -59,7 +59,7 @@ const Block = (props) => {
     return (
         <BlockSliderSlide className="block-slider__slide">
             <BlockProfitsItem className="block-profits__item">
-                <Img src={imageSrc} alt="profit" style={{objectFit: 'contain'}} alt=""/>
+                <Img src={imageSrc} alt="profit" style={{objectFit: 'contain'}}/>
                 <span className="block-profits__title">{title}</span>
                 <BlockProfitsPar className="block-profits__par">
                     {description}

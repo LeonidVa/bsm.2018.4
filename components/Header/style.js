@@ -118,7 +118,7 @@ export const HeaderNavA = styled.a`
     font-size: 1.125em;
     color: #4a4a4a;
     text-decoration: none;
-   
+    cursor: pointer;
     transition: all .4s;
     position: relative;
     margin-left: 2.44em;

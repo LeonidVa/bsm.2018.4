@@ -1,6 +1,8 @@
 import Document, {Head, Main, NextScript} from 'next/document'
 import analytics from "utils/analytics";
-import { ServerStyleSheet } from 'styled-components'
+import { ServerStyleSheet } from 'styled-components';
+import { GA_TRACKING_ID } from 'lib/gtag';
+
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -12,6 +14,20 @@ export default class MyDocument extends Document {
         return (
             <html lang="ru">
             <Head>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}');
+              `
+                }}
+              />
                 <script dangerouslySetInnerHTML={{ __html: analytics.getMetricsScript()}}/>
                 <noscript dangerouslySetInnerHTML={{ __html: analytics.getMetricsNoscript()}} />
                 <meta name="yandex-verification" content="49e34bd8a11a83fb"/>

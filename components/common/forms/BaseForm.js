@@ -5,6 +5,7 @@ import getConfig from 'next/config';
 import { connect as reduxConnect } from 'react-redux'
 
 import { showModal } from '@redux/ui/modal';
+import { hideSpinner, showSpinner } from '@redux/ui/spinner';
 import { changeField } from '@redux/data/form';
 const config = getConfig();
 
@@ -60,6 +61,7 @@ export class BaseForm extends Component {
     if (config.publicRuntimeConfig.runtime.development) {
       url = 'http://localhost:3001/api/form_data'
     }
+    this.props.onShowSpinnerAction();
     axios({
       method: "POST",
       url: url,
@@ -72,7 +74,9 @@ export class BaseForm extends Component {
         if (error) {
           /* ошибка со стороны сервера */
           this.props.onShowModalAction();
+          this.props.onHideSpinnerAction();
         } else {
+          this.props.onHideSpinnerAction();
           /* ушло хорошо */
           this.setState({
             formSent: {
@@ -89,6 +93,7 @@ export class BaseForm extends Component {
         if (error.response === undefined) {
           console.log('not an axios error, here is dump:', error);
         }
+        this.props.onHideSpinnerAction();
         this.props.onShowModalAction();
         errorCallBack && errorCallBack();
       });
@@ -207,10 +212,17 @@ export class BaseForm extends Component {
   }
 }
 
-const mapStateToProps = ({ data: { form } }) => ({ form });
+const mapStateToProps = ({data: { form }, ui: { spinner }}) => {
+  return {
+    form,
+    spinner
+  }
+};
 const mapDispatchToProps = {
   onChangeFieldAction: field => changeField(field),
   onShowModalAction: () => showModal(),
+  onShowSpinnerAction: () => showSpinner(),
+  onHideSpinnerAction: () => hideSpinner(),
 };
 
 export function connect(Component) {

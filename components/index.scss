@@ -119,8 +119,13 @@ table {
   &.bg-c3::before {
     background-color: #25b9a9;
   }
-
 }
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .inner {
   width: 100%;
   max-width: 990px;

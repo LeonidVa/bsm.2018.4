@@ -20,6 +20,7 @@ class Form extends BaseForm {
                            required
                            value={this.props.form.name}
                            onChange={(e) => this.saveData({name: e.target.value})}
+                           aria-label="name"
                     />
                 </div>
                 <div className="block-form__item">
@@ -29,7 +30,9 @@ class Form extends BaseForm {
                            placeholder="Ваш телефон"
                            required
                            value={this.props.form.phone}
-                           onChange={(e) => this.saveData({phone: e.target.value})}/>
+                           onChange={(e) => this.saveData({phone: e.target.value})}
+                           aria-label="telephone"
+                           />
                 </div>
                 <div className="block-form__item textarea" style={{display: this.props.question ? 'block' : 'none'}}>
                     <label htmlFor="form-phone">Вопрос</label>
@@ -44,6 +47,7 @@ class Form extends BaseForm {
                   disabled={this.props.spinner}
                   className="block-form__btn"
                   onClick={() => stat.triggerTarget.phoneClicked()}
+                  aria-label="submit"
                 >
                   Позвоните мне!
                 </button>

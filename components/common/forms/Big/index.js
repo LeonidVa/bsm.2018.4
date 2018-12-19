@@ -62,9 +62,10 @@ class OrderForm extends BaseForm {
               : 'hidden',
         }}
       >
-        <label htmlFor={field.id}>
+        <label htmlFor={field.name} >
           {field.label}
           {field.rlabel}
+          
         </label>
         <input
           type={field.type}
@@ -97,7 +98,7 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor={field.name}>
+          <label htmlFor={field.name} >
             {field.label}
             {field.rlabel}
           </label>
@@ -130,9 +131,10 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor={field.name}>
+          <label htmlFor={field.name} >
             {field.label}
             {field.rlabel}
+           
           </label>
           <textarea
             type={field.type}
@@ -166,7 +168,7 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor={field.name}>
+          <label htmlFor="worktype">
             {field.label}
             {field.rlabel}
           </label>
@@ -174,6 +176,7 @@ class OrderForm extends BaseForm {
             onChange={e => this.saveData({ [field.name]: e })}
             value={label}
             options={field.options}
+            id="worktype"
           />
         </div>
       );

@@ -8,7 +8,7 @@ import close from '@fortawesome/fontawesome-free-solid/faWindowClose';
 import Dropdown from 'react-dropdown';
 import Recaptcha from 'react-google-recaptcha';
 import DatePicker from 'components/common/DatePicker';
-
+import Fox from 'static/images/fox-circle.svg';
 import './index.scss';
 import Close from 'components/modals/Close';
 
@@ -67,6 +67,7 @@ class OrderForm extends BaseForm {
           {field.rlabel}    
         </label>
         <input
+          aria-label={field.label}
           type={field.type}
           name={field.name}
           id={field.name}
@@ -135,6 +136,7 @@ class OrderForm extends BaseForm {
             {field.rlabel}
           </label>
           <textarea
+            aria-label={field.label}
             type={field.type}
             id={field.name}
             placeholder={field.placeholder}
@@ -200,7 +202,7 @@ class OrderForm extends BaseForm {
           }}
         >
           <div className="dropzone" style={{ fontSize: '14px' }}>
-            <Dropzone onDrop={this.onDrop.bind(this)} multiple>
+            <Dropzone onDrop={this.onDrop.bind(this)}  multiple>
               <a>Добавить файл</a>
             </Dropzone>
           </div>
@@ -241,7 +243,7 @@ class OrderForm extends BaseForm {
           />
           <div className="block-form__message" style={{ display: this.state.formSent.bool ? 'block' : 'none' }}>
             <Close onClick={this.closeAlert} inverse />
-            <img style={{ width: '100%' }} src={require('static/images/fox-circle.svg')} alt="Fox"/>
+            <img style={{ width: '100%' }} src={Fox} alt="Fox"/>
             <br />
             <br />
             <div className="block-form__title">Спасибо!</div>

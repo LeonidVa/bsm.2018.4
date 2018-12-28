@@ -15,25 +15,28 @@ class Form extends BaseForm {
                 <div className="block-form__item">
                     <label htmlFor="form-name">Имя*</label>
                     <input type="text"
-                           id="form-name"
-                           placeholder="Ваше имя"
-                           required
-                           value={this.props.form.name}
-                           onChange={(e) => this.saveData({name: e.target.value})}
+                        aria-label="Ваше имя"
+                        id="form-name"
+                        placeholder="Ваше имя"
+                        required
+                        value={this.props.form.name}
+                        onChange={(e) => this.saveData({name: e.target.value})}
                     />
                 </div>
                 <div className="block-form__item">
                     <label htmlFor="form-phone">Телефон*</label>
                     <input type="text"
-                           id="form-phone"
-                           placeholder="Ваш телефон"
-                           required
-                           value={this.props.form.phone}
-                           onChange={(e) => this.saveData({phone: e.target.value})}/>
+                        aria-label="Ваш телефон"
+                        id="form-phone"
+                        placeholder="Ваш телефон"
+                        required
+                        value={this.props.form.phone}
+                        onChange={(e) => this.saveData({phone: e.target.value})}/>
                 </div>
                 <div className="block-form__item textarea" style={{display: this.props.question ? 'block' : 'none'}}>
                     <label htmlFor="form-phone">Вопрос</label>
                     <textarea
+                        aria-label="Ваш вопрос"
                         placeholder="Ваш вопрос"
                         value={this.props.form.comment}
                         onChange={(e) => this.saveData({comment: e.target.value})}

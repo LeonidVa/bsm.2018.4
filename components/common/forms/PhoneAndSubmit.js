@@ -18,12 +18,10 @@ class PhoneAndSubmit extends BaseForm {
           required
           value={this.props.form.phone}
           onChange={(e) => this.saveData({phone: e.target.value})}
-          aria-label="telephone"
         />
           <button
             disabled={this.props.spinner}
             type="submit"
-            aria-label="submit"
           >
             {this.props.submitLabel}
           </button>

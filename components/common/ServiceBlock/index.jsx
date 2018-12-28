@@ -23,7 +23,6 @@ class ServiceBlock extends Component {
                     text={button.text}
                     description={button.description}
                     url={button.url}
-                    aria-label={button.title}
                 />;
             });
             cardsKey++;

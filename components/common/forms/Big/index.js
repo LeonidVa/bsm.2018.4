@@ -62,10 +62,9 @@ class OrderForm extends BaseForm {
               : 'hidden',
         }}
       >
-        <label htmlFor={field.name} >
+        <label htmlFor={field.name}>
           {field.label}
-          {field.rlabel}
-          
+          {field.rlabel}    
         </label>
         <input
           type={field.type}
@@ -75,8 +74,7 @@ class OrderForm extends BaseForm {
           required={field.required}
           value={this.props.form[field.name]}
           onChange={e => this.saveData({ [field.name]: e.target.value })}
-          aria-label={field.name}
-          />
+        />
       </div>
     );
 
@@ -99,7 +97,7 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor={field.name} >
+          <label htmlFor={field.name}>
             {field.label}
             {field.rlabel}
           </label>
@@ -108,7 +106,6 @@ class OrderForm extends BaseForm {
             placeholder={field.placeholder}
             value={this.props.form[field.name]}
             onDayChange={value => this.saveData({ [field.name]: value })}
-            aria-label={field.name}
           />
         </div>
       );
@@ -133,10 +130,9 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor={field.name} >
+          <label htmlFor={field.name}>
             {field.label}
             {field.rlabel}
-           
           </label>
           <textarea
             type={field.type}
@@ -145,7 +141,6 @@ class OrderForm extends BaseForm {
             required={field.required}
             value={this.props.form[field.name]}
             onChange={e => this.saveData({ [field.name]: e.target.value })}
-            aria-label={field.name}
           />
         </div>
       );
@@ -171,7 +166,7 @@ class OrderForm extends BaseForm {
                 : 'hidden',
           }}
         >
-          <label htmlFor="worktype">
+        <label htmlFor={field.name}>
             {field.label}
             {field.rlabel}
           </label>
@@ -179,8 +174,6 @@ class OrderForm extends BaseForm {
             onChange={e => this.saveData({ [field.name]: e })}
             value={label}
             options={field.options}
-            id="worktype"
-            aria-label={field.name}
           />
         </div>
       );
@@ -289,7 +282,6 @@ class OrderForm extends BaseForm {
               type="submit"
               className="block-form__btn"
               disabled={this.props.spinner}
-              aria-label="submit"
             >
               {buttonLabel}
             </button>

@@ -1,4 +1,4 @@
-const redirectList = require('./utils/redirect');
+const redirectionUtils = require('./utils/redirect');
 const express = require('express');
 const next = require('next');
 const LRUCache = require('lru-cache');
@@ -27,10 +27,12 @@ app.prepare()
         });
 
         server.get('*', (req, res) => {
-            const redirUrl = redirectList[req.path];
+            const redirUrl = redirectionUtils.redirectList[req.path];
             if (redirUrl !== undefined) {
-                res.status(301).redirect(redirUrl);
-                res.end();
+                res.redirect(301, redirUrl);
+                return;
+            } else if (redirectionUtils.pathMatches(req.path, /.+\/+$/g, ['/'])) {
+                res.redirect(301, redirectionUtils.removeTrailingSlash(req.path));
                 return;
             }
             /* serving page */

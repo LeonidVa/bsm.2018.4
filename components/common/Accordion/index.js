@@ -162,9 +162,7 @@ class Accordion extends Component {
             <SectionBlockAccordion className="block-accordion" data-accordion="open" style={{paddingBottom: 0}}>
                 <BlockAccordionHeader className="block-accordion__header" onClick={() => this.setState({open: !this.state.open})}>
                     <BlockAccordionTitle className="block-accordion__title">{title}</BlockAccordionTitle>
-                    <Div className={classes}>
-                        <Div></Div>
-                    </Div>
+                    <Div className={classes}></Div>
                 </BlockAccordionHeader>
                 <BlockAccordionBody className="block-accordion__body" style={{opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "100000px" : "0"}}>
                     <BlockTextPar className="block-text__par">{this.props.children}</BlockTextPar>

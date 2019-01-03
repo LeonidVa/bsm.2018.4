@@ -1,4 +1,7 @@
-.wrapper > .inner {
+import React, {Component} from 'react';
+import styled from 'styled-components';
+
+const Title = styled.div`
   width: 100%;
   max-width: 34rem;
 
@@ -21,4 +24,12 @@
       font-size: 1.375rem;
     }
   }
+  `;
+
+class Comp extends Component {
+    render() {
+        return <Title className={`inner ${this.props.className}`}><h1>{this.props.children}</h1></Title>
+    };
 }
+
+export default Comp

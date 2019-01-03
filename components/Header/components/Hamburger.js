@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 
-import './Hamburger.scss';
 import styled from 'styled-components';
 
 const HamburgerWrapper = styled.div`

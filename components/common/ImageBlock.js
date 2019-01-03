@@ -1,8 +1,8 @@
-import './index.scss'
-import styles from 'styled-components'
+import React from 'react';
+import styled from 'styled-components'
 
 
-const BlockImg = styles.section `
+const BlockImg = styled.section `
     font-size: 2em;
     width: 30.94em;
     max-width: 100%;
@@ -12,22 +12,19 @@ const BlockImg = styles.section `
     @media (max-width: 900px) {
         width: 100%;
     }
-`;
-
-
-
-const Img = styles.img `
+    img {
         display: block;
         width: 100%;
+    }
 `;
 
 
 
 
-const ImageBlock = ({imageSrc, altText})=>(
+const ImageBlock = ({imageSrc, altText}) => (
     <BlockImg className="block-img">
-        <Img src={imageSrc} alt={altText} />
-	</BlockImg>
-)
+        <img src={imageSrc} alt={altText}/>
+    </BlockImg>
+);
 
 export default ImageBlock

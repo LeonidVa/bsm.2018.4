@@ -1,5 +1,8 @@
-.block-info {
-    font-size: 1em;
+import React from 'react';
+
+import styled from "styled-components"
+
+const BlockInfoWrapper = styled.section `
     width: 17em;
     margin: 1.56em auto 0;
     background-color: #fff;
@@ -18,7 +21,7 @@
         // font-size: 1.4em;
         padding: 1.56em 0.5em .94em;
     }
-    &__item {
+    .item {
         display: flex;
         display: -webkit-box;
         display: -webkit-flex;
@@ -40,14 +43,30 @@
             display: block;
         }
     }
-    &__title {
+    .title {
         font-family: "Ubuntu", sans-serif;
         font-weight: bold;
         font-size: .625em;
         line-height: 1.15;
     }
-    &__par {
+    .par {
         font-size: .5em;
         line-height: 1.13;
     }
-}
+`;
+
+const renderInfoItems = (infoBlockConfig)=>(
+    infoBlockConfig.map((item, index)=>(
+      <div className="item" key={index}>
+        <img src={item.icon} alt="" />
+            <div className="text">
+              <span className="title">{item.title}</span>
+              <span className="par">{item.desc}</span>
+            </div>
+        </div>
+    ))
+);
+
+const InfoBlock = ({infoBlockConfig})=> (<BlockInfoWrapper>{renderInfoItems(infoBlockConfig)}</BlockInfoWrapper>);
+
+export default InfoBlock;

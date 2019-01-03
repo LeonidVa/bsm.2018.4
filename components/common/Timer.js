@@ -1,8 +1,21 @@
 import React, {Component} from 'react'
 import countdown from 'countdown';
-import './index.scss'
+import styled from 'styled-components';
 
-class Timer extends Component {
+const Timer = styled.div`
+    margin: .10em 0;
+    margin-right: 0.33em;
+    align-items: center;
+    color: #ffffff;
+    @media (max-width: 900px) {
+        font-size: 1.2em;
+    }
+    @media (max-width: 660px) {
+        font-size: 1em;
+    }
+`;
+
+class Comp extends Component {
     constructor(props) {
         super(props);
 
@@ -69,17 +82,17 @@ class Timer extends Component {
             const m = minutesLeft < 10 ? "0" + minutesLeft : minutesLeft;
             const s = secondsLeft < 10 ? "0" + secondsLeft : secondsLeft;
             return (
-                <div className="timer" style={{fontSize: `${this.state.size}em`, display: 'flex', color: this.state.color}}>
+                <Timer className="timer" style={{fontSize: `${this.state.size}em`, display: 'flex', color: this.state.color}}>
                     <div className="timer-numbers">{h}</div>
                     <div className="timer-separator">:</div>
                     <div className="timer-numbers">{m}</div>
                     <div className="timer-separator">:</div>
                     <div className="timer-numbers">{s}</div>
-                </div>
+                </Timer>
             )
         }
 
     }
 }
 
-export default Timer
+export default Comp

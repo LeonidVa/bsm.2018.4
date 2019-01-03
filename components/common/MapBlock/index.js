@@ -2,10 +2,10 @@ import {YMaps, Map, Placemark} from 'react-yandex-maps';
 
 import {Component} from 'react';
 import './MapBlock.scss'
-import styles from "styled-components"
+import styled from "styled-components"
 
 
-const BlockMap = styles.section `
+const BlockMap = styled.section `
     display: flex;
     display: -webkit-box;
     display: -webkit-flex;

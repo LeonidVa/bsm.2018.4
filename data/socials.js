@@ -1,47 +1,45 @@
 
-import { faFacebookF, faYoutube, faTelegramPlane, faWhatsapp, faInstagram, faFacebookMessenger, faVk} from '@fortawesome/free-brands-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 export default {
   vk: {
-    icon: <FontAwesomeIcon icon={faVk}/>,
+    icon: require('static/images/messegers/vk.svg'),
     title: "VK",
     url: "https://vk.com/id372065572",
     targetID: "vk"
   },
   facebook: {
-    icon: <FontAwesomeIcon icon={faFacebookF}/>,
+    icon: require('static/images/messegers/facebook-logo.svg'),
     title: "Facebook",
     url: "https://www.facebook.com/besmarter.better",
     targetID: "facebook"
   },
   facebookMessenger: {
-    icon: <FontAwesomeIcon icon={faFacebookMessenger}/>,
+    icon: require('static/images/messegers/facebook-messenger.svg'),
     title: "Facebook Messenger",
     url: "https://www.messenger.com/t/besmarter.better",
     targetID: "facebook"
   },
   telegram: {
-    icon: <FontAwesomeIcon icon={faTelegramPlane}/>,
+    icon: require('static/images/messegers/telegram.svg'),
     title: "Телеграм",
     url: "https://t.me/besmarter_ru",
     targetID: "telegram"
   },
   whatsapp: {
-    icon: <FontAwesomeIcon icon={faWhatsapp}/>,
+    icon: require('static/images/messegers/whatsapp.svg'),
     title: "WhatsApp",
     url: "https://api.whatsapp.com/send?phone=79257729045",
     targetID: "whatsapp"
   },
   instagram: {
-    icon: <FontAwesomeIcon icon={faInstagram}/>,
+    icon: require('static/images/messegers/instagram.svg'),
     title: "Instagram",
     url: "https://www.instagram.com/besmarter_ru/",
     targetID: "instagram"
   },
   youtube: {
-    icon: <FontAwesomeIcon icon={faYoutube}/>,
-    title: "Instagram",
+    icon: require('static/images/messegers/youtube.svg'),
+    title: "Youtube",
     url: "https://www.youtube.com/channel/UCLlOZuoLW6knK1QTMf6yJ7g",
     targetID: "youtube"
   },

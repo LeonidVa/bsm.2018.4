@@ -202,7 +202,7 @@ class OrderForm extends BaseForm {
           }}
         >
           <div className="dropzone" style={{ fontSize: '14px' }}>
-            <Dropzone onDrop={this.onDrop.bind(this)}  multiple>
+            <Dropzone onDrop={this.onDrop.bind(this)} multiple>
               <a>Добавить файл</a>
             </Dropzone>
           </div>

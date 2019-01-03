@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import Link from 'next/link';
 import './index.scss'
-import styles from 'styled-components'
+import styled from 'styled-components'
 
 
 
 
-const SectionBlockAccordion = styles.section `
+const SectionBlockAccordion = styled.section `
     width: 34em;
     margin: 3rem auto 0;
     padding: 0;
@@ -16,13 +16,13 @@ const SectionBlockAccordion = styles.section `
     z-index: 0;
 `;
 
-const BlockAccordionHeader = styles.div`
+const BlockAccordionHeader = styled.div`
     position: relative;
     cursor: pointer;
     padding: 3em 2em 2em;
 `;
 
-const BlockAccordionTitle = styles.h2`
+const BlockAccordionTitle = styled.h2`
     // font-size: 1.9rem;
     // font-family: "Ubuntu", sans-serif;
     // font-style: normal;
@@ -50,13 +50,13 @@ const BlockAccordionTitle = styles.h2`
     //   }
 `;
 
-const BlockAccordionBody = styles.div`
+const BlockAccordionBody = styled.div`
     max-height: 0;
     padding: 0 2.18rem;
     transition: all .5s linear;
 `;
 
-const Div = styles.div `
+const Div = styled.div `
     // font-size: 2rem;
     //   width: 0.625rem;
     //   height: 0.625rem;
@@ -72,7 +72,7 @@ const Div = styles.div `
 `;
 
 
-const BlockTextPar = styles.p `
+const BlockTextPar = styled.p `
     transition: all .4s;
     &:hover {
     color: #f4511e;
@@ -80,11 +80,11 @@ const BlockTextPar = styles.p `
 `;
 
 
-const BlockAccordionTable = styles.table `
+const BlockAccordionTable = styled.table `
 `;
 
 
-const BlockAccordionArrow= styles.div`
+const BlockAccordionArrow= styled.div`
     // font-size: 2rem;
     // width: 2rem;
     // height: 2rem;
@@ -105,7 +105,7 @@ const BlockAccordionArrow= styles.div`
     // }
 `;
 
-const BigBtn = styles.a `
+const BigBtn = styled.a `
     // display: block;
     // width: calc(100% + 4.36rem);
     // text-align: center;

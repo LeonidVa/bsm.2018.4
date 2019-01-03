@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import {isMobile} from 'react-device-detect';
 import "./index.scss"
 import '../slick.scss'
-import styles from "styled-components"
+import styled from "styled-components"
 
 
-const BlockSlider = styles.section `
+const BlockSlider = styled.section `
   margin: 1.56em auto 0;
   font-size: 2em;
   @media (max-width: 900px) {
@@ -17,7 +17,7 @@ const BlockSlider = styles.section `
   }
 `;
 
-const BlockSliderSlide = styles.div`
+const BlockSliderSlide = styled.div`
   font-size: 1em;
   margin: 0 auto;
   padding: 0 0.5em;
@@ -35,18 +35,18 @@ const BlockSliderSlide = styles.div`
   -ms-flex-align: flex-start;
 `;
 
-const BlockProfitsItem = styles.div`
+const BlockProfitsItem = styled.div`
   width: 8.59em;
   padding: 1em;
 `;
 
-const Img = styles.img`
+const Img = styled.img`
   display: block;
   margin: 0 auto .625em;
   height: 3.125em;
 `;
 
-const BlockProfitsPar = styles.p`
+const BlockProfitsPar = styled.p`
   font-size: .5em;
   line-height: 1.5em;
   transition: all .4s;

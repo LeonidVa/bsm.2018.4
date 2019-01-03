@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import Head from 'next/head';
-import Router from 'next/router';
 import { connect as reduxConnect } from 'react-redux'
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -12,10 +11,6 @@ import getConfig from 'next/config';
 import stat from 'utils/analytics'
 import { sendForm } from '@redux/data/form';
 import { isStringEmpty } from '@helpers/isStringEmpty';
-
-import * as gtag from 'lib/gtag'
-
-Router.events.on('routeChangeComplete', url => gtag.pageview(url))
 
 const {publicRuntimeConfig = {}} = getConfig();
 
@@ -180,13 +175,6 @@ class Wrapper extends Component {
                 <exitPopupContext.Provider value={this.state.exitPopupState}>
                       <Fragment>
                           <Head>
-                            <script dangerouslySetInnerHTML={{__html: `(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-                              ga('create', 'UA-119183335-1', 'auto');
-                              ga('send', 'pageview');`}}
-                            />
                             <title>{this.props.title}</title>
                             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
                             <meta name="description" content={this.props.description}/>
@@ -194,7 +182,7 @@ class Wrapper extends Component {
                           </Head>
                           <Header navButtons={this.props.headerNavButtons} showHamburger={this.props.showHamburger}/>
                           {this.props.children}
-                          <Footer navButtons={this.props.footerNavButtons} isSiteMapShown={this.props.isSiteMapShown}/>
+                          <Footer navButtons={this.props.footerNavButtons} isSiteMapShown={this.props.isSiteMapShown} />
                           <script dangerouslySetInnerHTML={{__html: `window.recaptchaOptions = {lang: 'ru'}`}}/>
                           <ExitPopup className="modal-sale1"
                                     bonus={<div style={{position: "relative"}}>500<span

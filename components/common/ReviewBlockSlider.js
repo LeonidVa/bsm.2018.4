@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import styles from 'styled-components';
-import "./index.scss";
+import styled from 'styled-components';
 
-const BlockSliderReviewsItem = styles.div`
+const BlockSliderReviewsItem = styled.div`
   padding: .38em;
 `; 
 
-const ReviewBlock = styles.p`
+const ReviewBlock = styled.p`
   font-size: .5em;
   color: #4a4a4a;
   line-height: 1.5;
@@ -17,7 +16,7 @@ const ReviewBlock = styles.p`
   }
 `;
 
-const ReviwsAuthor = styles.div`
+const ReviwsAuthor = styled.div`
   display: flex;
   display: -webkit-box;
   display: -webkit-flex;
@@ -33,25 +32,25 @@ const ReviwsAuthor = styles.div`
   padding-top: 0.5rem;
 `;
 
-const Img = styles.img`
+const Img = styled.img`
   margin: 0;
   font-size: 1em;
   width: 1.72em;
   height: 1.72em;
 `;
 
-const ReviewsAuthorData = styles.div`
+const ReviewsAuthorData = styled.div`
   padding-left: 0.5rem;
 `;
 
-const ReviewsName = styles.span`
+const ReviewsName = styled.span`
   display: block;
   font-size: .59em;
   color: #191919;
   line-height: normal;
 `;
 
-const ReviewsJob = styles.span`
+const ReviewsJob = styled.span`
   display: block;
   font-size: .5em;
   color: #c0c0c0;
@@ -61,11 +60,11 @@ const ReviewsJob = styles.span`
   }
 `;
 
-const BlockSliderSlideReview = styles.div`
+const BlockSliderSlideReview = styled.div`
   max-width: 100% !important;
 `;
 
-const BlockSliderReview = styles.section `
+const BlockSliderReview = styled.section `
   max-width: 100%;
 `;
 
@@ -75,7 +74,7 @@ const Review = ({ faceImg, reviewText, bottom, name, prof }) => (
         {reviewText}
     </ReviewBlock>
     <ReviwsAuthor className="reviews-author">
-        <Img src={faceImg} alt={"Студент " + name} />
+        <Img src={faceImg} alt={prof + ' ' + name} />
         <ReviewsAuthorData className="reviews-author__data">
             <ReviewsName className="reviews-name">{name}</ReviewsName>
             <ReviewsJob className={`reviews-job ${bottom ? 'job-orange': ''}`}>{prof}</ReviewsJob>

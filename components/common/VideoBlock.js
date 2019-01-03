@@ -1,5 +1,8 @@
+import playIcon from 'static/images/play-icon.svg'
+import React, {Component} from 'react';
+import styled from 'styled-components';
 
-.block-video {
+const VideoSection = styled.section`
     display: flex;
     display: -webkit-box;
     display: -webkit-flex;
@@ -43,6 +46,19 @@
         width: 100% !important;
         height: 100% !important;
     }
+`;
+class VideoBlock extends Component {
+    render() {
+        if (this.props.children) {
+            return <VideoSection className="block-video">{this.props.children}</VideoSection>
+        }
+
+        return <VideoSection className="block-video">
+            <div className="block-video__play">
+                <img src={playIcon} alt=""/>
+            </div>
+        </VideoSection>
+    }
 }
 
-
+export default VideoBlock

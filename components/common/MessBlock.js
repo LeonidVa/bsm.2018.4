@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
 import socials from 'data/socials';
 import stat from 'utils/analytics';
-import './index.scss'
-import styles from "styled-components"
+import styled from "styled-components"
 
 
-const BlockMess = styles.section `
+const BlockMess = styled.section `
     font-size: 1em;
     width: 34em;
     margin: 1em auto 0;
@@ -23,7 +22,8 @@ const BlockMess = styles.section `
 `;
 
 
-const BlockMessItem = styles.a `
+const BlockMessItem = styled.a `
+color: white;
 width: 20%;
 display: flex;
 display: -webkit-box;
@@ -39,19 +39,22 @@ justify-content: center;
 -ms-flex-pack: justify;
 height: 7em;
 transition: all .3s;
+svg { font-size: 33%; }
+img { width: 33%; }
 @media (max-width: 660px) {
-    height: 4.5em;
+  height: 17vw;
+  min-height: 4em;
 }
 `;
 
-const BlockMessList = styles.div `
+const BlockMessList = styled.div `
     display: flex;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
 `;
 
-const BlockMessTitle = styles.span`
+const BlockMessTitle = styled.span`
 font-size: 2em;
 display: block;
 padding: 0.625em 1.06em 0.56em;
@@ -84,12 +87,12 @@ class MessBlock extends Component {
                target="_blank"
                key={index}
                className="block-mess__item"
-               style={{background: colors[index], padding: "2.25em"}}
+               style={{background: colors[index]}}
                title={item.title}
                rel="nofollow noopener"
                onClick={handleClick}
             >
-              {item.icon}
+              <img src={item.icon}/>
             </BlockMessItem>
           )
         }

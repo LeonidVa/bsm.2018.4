@@ -1,4 +1,8 @@
-.block-callask {
+import React, {Component} from 'react';
+import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
+import styled from 'styled-components'
+
+const CallAskDiv = styled.div`
     font-size: 2em;
     width: 100%;
     background-color: #ffffff;
@@ -13,7 +17,7 @@
             max-width: none;
         }
     }
-    &__title {
+    .title {
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
         text-align: center;
@@ -25,7 +29,7 @@
             font-size: 95%;
         }
     }
-    &__buttons {
+    .buttons {
         cursor: pointer;
         display: flex;
         display: -webkit-box;
@@ -47,7 +51,7 @@
             -ms-flex-align: center;
         }
     }
-    &__button {
+    .button {
         font-size: 1.2rem;
         width: 14rem;
         display: block;
@@ -65,4 +69,25 @@
             margin-bottom: 10px;
         }
     }
+`;
+class BottomHelper extends Component {
+
+    render() {
+        return (
+            <CallAskDiv>
+                <section className="block-callask">
+                    <div className="inner">
+                        <div className="title">Остались вопросы?</div>
+                        <div className="title">Мы ответим!</div>
+                        <div className="buttons">
+                            <ToggleQuestionPopup targetID="question"><a className="button">Задай вопрос</a></ToggleQuestionPopup>
+                            <ToggleCallPopup targetID="call_me_bottom"><a className="button">Закажи звонок</a></ToggleCallPopup>
+                        </div>
+                    </div>
+                </section>
+            </CallAskDiv>
+        )
+    }
 }
+
+export default BottomHelper

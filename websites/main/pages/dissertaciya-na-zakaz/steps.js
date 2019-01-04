@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -30,11 +33,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 const page = () => (
   <Wrapper title="Как защитить диссертацию | «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Компания BeSmarter! окажет Вам все виды помощи, которые могут потребоваться аспирантам и соискателям ученых степеней кандидата и доктора наук на любом этапе от принятия решения о поступлении в аспирантуру до написания диссертации, вплоть до ее защиты.">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
       <MetaTags>
         {/* <title></title> */}
@@ -57,47 +62,34 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/steps">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Как защитить</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/steps" name="Как защитить" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KandidatDis/>
 
         <DoctorskayaDis/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Как защитить диссертацию
         </h1>
-        <h2 className="block-text__title">
+        <h2 className="title">
           Как комфортно и успешно защитить свою диссертацию
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Компания BeSmarter! окажет Вам все виды помощи, которые могут потребоваться аспирантам и соискателям ученых степеней кандидата и доктора наук на любом этапе от принятия решения о поступлении в аспирантуру до написания диссертации, вплоть до ее защиты.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -111,23 +103,23 @@ const page = () => (
 
       <ImageBlock imageSrc={require('static/images/block/kand-uri.jpg')} altText="Защитить диссертацию"/>
 
-      <section className="block-text">
+      <TextBlock>
 
-        <h2 className="block-text__title">
+        <h2 className="title">
           Этапы процесса подготовки кандидатской диссертации
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           На примере процесса выполнения кандидатской диссертации рассмотрим главные этапы написания и основные виды помощи, которые может предоставить Вам команда профессионалов научно-консалтингового центра компании BeSmarter!.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           I. Организационно-подготовительный этап
         </h2>
         <ol>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Прикрепление научного руководителя
             </h3>
             <p>
@@ -138,7 +130,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Сопроводительное научное руководство
             </h3>
             <p>
@@ -153,7 +145,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Календарный план-график
             </h3>
             <p>
@@ -161,7 +153,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Выбор и обоснование темы диссертации
             </h3>
             <p>
@@ -179,7 +171,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Определение структуры диссертации
             </h3>
             <p>
@@ -187,7 +179,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Корректировка структуры
             </h3>
             <p>
@@ -195,7 +187,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Составление плана диссертации
             </h3>
             <p>
@@ -203,7 +195,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Утверждение плана
             </h3>
             <p>
@@ -211,7 +203,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Библиотеки и архивы
             </h3>
             <p>
@@ -219,7 +211,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Составление библиографии и прочих приложений
             </h3>
             <p>
@@ -236,7 +228,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Перевод
             </h3>
             <p>
@@ -244,7 +236,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Сбор фактического материала
             </h3>
             <p>
@@ -252,7 +244,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Анализ и распределение собранного материала
             </h3>
             <p>
@@ -260,7 +252,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Окончательное уточнение структуры
             </h3>
             <p>
@@ -268,17 +260,17 @@ const page = () => (
             </p>
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
       <ImageBlock imageSrc={require('static/images/block/dis-shagi-3.jpg')} altText="Как успешно защитить свою диссертацию"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           II. Этап написания диссертационной работы
         </h2>
         <ol>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Объем и структура текста диссертации
             </h3>
             <p>
@@ -295,7 +287,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Введение: актуальность
             </h3>
             <p>
@@ -309,7 +301,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Введение: научная новизна
             </h3>
             <p>
@@ -320,7 +312,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Введение: цель и задачи исследования
             </h3>
             <p>
@@ -334,7 +326,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Введение: практическая значимость
             </h3>
             <p>
@@ -345,7 +337,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Введение: положения, выносимые на защиту
             </h3>
             <p>
@@ -356,7 +348,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Введение (либо часть первой главы): теоретические источники исследования
             </h3>
             <p>
@@ -364,7 +356,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Введение (либо часть первой главы): эмпирические источники исследования
             </h3>
             <p>
@@ -372,7 +364,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Введение (либо часть первой главы): методология и инструменты исследования
             </h3>
             <p>
@@ -380,7 +372,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Статистический анализ
             </h3>
             <p>
@@ -388,7 +380,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Основные главы
             </h3>
             <p>
@@ -399,7 +391,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Заключение
             </h3>
             <p>
@@ -407,7 +399,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Выполнение корректировок по рекомендациям научного руководителя по главам и по всей работе
             </h3>
             <p>
@@ -415,7 +407,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Автореферат
             </h3>
             <p>
@@ -435,7 +427,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Написание статей для научного журнала
             </h3>
             <p>
@@ -464,7 +456,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Научная конференция и тезисы доклада на ней
             </h3>
             <p>
@@ -478,7 +470,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Апробация
             </h3>
             <p>
@@ -492,17 +484,17 @@ const page = () => (
             </p>
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
       <ImageBlock imageSrc={require('static/images/block/dis-shagi-2.jpg')} altText="Как защитить диссертацию"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           III. Этап подготовки процедуры защиты
         </h2>
         <ol>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Оформление диссертации и автореферата
             </h3>
             <p>
@@ -510,7 +502,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Редактирование
             </h3>
             <p>
@@ -518,7 +510,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Корректура
             </h3>
             <p>
@@ -526,7 +518,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Печатание текста диссертации
             </h3>
             <p>
@@ -538,7 +530,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Верстка
             </h3>
             <p>
@@ -546,7 +538,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Переплет
             </h3>
             <p>
@@ -557,19 +549,19 @@ const page = () => (
             </p>
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
       <ImageBlock imageSrc={require('static/images/block/dis-shagi.jpg')} altText="Материалы для успешной работы"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           IV. Этап предзащиты
           <br/><br/>
           1. Подготовка к предзащите
         </h2>
         <ol>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Представление работы научному руководителю
             </h3>
             <p>
@@ -580,7 +572,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Допуск научного руководителя к предварительной защите
             </h3>
             <p>
@@ -588,7 +580,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Рецензенты
             </h3>
             <p>
@@ -596,7 +588,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Отзывы научного руководителя и рецензентов
             </h3>
             <p>
@@ -610,12 +602,12 @@ const page = () => (
             </p>
           </li>
         </ol>
-        <h2 className="block-text__title">
+        <h2 className="title">
           2. Предзащита
         </h2>
         <ol>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Текст доклада и презентация на предзащите
             </h3>
             <p>
@@ -626,7 +618,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Вопросы и ответы на предзащите
             </h3>
             <p>
@@ -634,7 +626,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Репетиция предзащиты
             </h3>
             <p>
@@ -642,7 +634,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Итоги предварительной защиты
             </h3>
             <p>
@@ -664,12 +656,12 @@ const page = () => (
             </p>
           </li>
         </ol>
-        <h2 className="block-text__title">
+        <h2 className="title">
           3. Действия после предзащиты
         </h2>
         <ol>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Доработка диссертации по результатам предзащиты
             </h3>
             <p>
@@ -683,7 +675,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Подготовка заключения по рекомендации к защите
             </h3>
             <p>
@@ -694,21 +686,21 @@ const page = () => (
             </p>
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
       <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           V. Этап защиты
           <br/><br/>
           1. Предварительная экспертиза
         </h2>
         <ol>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Подготовка документов для сдачи диссертации в Диссертационный совет
             </h3>
             <p>
@@ -719,7 +711,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Предварительное рассмотрение работы в Диссертационном совете
             </h3>
             <p>
@@ -733,12 +725,12 @@ const page = () => (
             </p>
           </li>
         </ol>
-        <h2 className="block-text__title">
+        <h2 className="title">
           2. Действия после допуска диссертации к защите
         </h2>
         <ol>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Назначение оппонентов и ведущей внешней организации
             </h3>
             <p>
@@ -749,7 +741,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Отзывы оппонентов и ведущей организации
             </h3>
             <p>
@@ -772,7 +764,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Списочная рассылка автореферата
             </h3>
             <p>
@@ -783,7 +775,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Дополнительные отзывы
             </h3>
             <p>
@@ -794,7 +786,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Слово научного руководителя
             </h3>
             <p>
@@ -805,7 +797,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Составление доклада
             </h3>
             <p>
@@ -813,7 +805,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Электронная презентация и раздаточный материал
             </h3>
             <p>
@@ -825,7 +817,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Ответы на предполагаемые вопросы и заключительное слово
             </h3>
             <p>
@@ -833,7 +825,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Репетиция доклада
             </h3>
             <p>
@@ -844,7 +836,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Чтение доклада на защите
             </h3>
             <p>
@@ -859,7 +851,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Отзыв Диссертационного совета
             </h3>
             <p>
@@ -882,7 +874,7 @@ const page = () => (
             </p>
           </li>
           <li>
-            <h3 className="block-text__title">
+            <h3 className="title">
               Прием гостей после защиты
             </h3>
             <p>
@@ -890,31 +882,31 @@ const page = () => (
             </p>
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <p className="block-text__par">
+      <TextBlock>
+        <p className="par">
           Благодаря профессиональной помощи команды научно-консалтингового центра компании BeSmarter! защита диссертационной работы пройдет благополучно и с минимальными нервными затратами.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           В ожидании получения кандидатского диплома, пока работа свежа в Вашей памяти, предлагаем структурировать, подготовить к печати и опубликовать все ценное, что получено в ходе работы над диссертацией, но не было опубликовано до защиты.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Через некоторое время Вы, наконец, получаете бланк с водяными знаками с Вашим именем.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           <b>Поздравляем, Вы кандидат наук!</b>
         </p>
-        <p className="block-text__par">
+        <p className="par">
           <b>Можно приступать к докторской!</b>
         </p>
-        <p className="block-text__par">
+        <p className="par">
           <b>Отбросьте сомнения, <a href="#form">заполните форму заказа</a>, или позвоните нам сегодня же по телефону +7 495 772 40 90!</b>
         </p>
-        <p className="block-text__par">
+        <p className="par">
           <b>Мы ждем Вас, мы всегда с Вами!</b>
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -922,7 +914,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={disSteps}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

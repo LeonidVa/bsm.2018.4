@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -33,12 +36,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
-
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 const page = () => (
   <Wrapper title="Сколько стоит кандидатская диссертация – цена кандидатской диссертации от 150 000 рублей | Закажите кандидатскую диссертацию по выгодной стоимости, в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Хотите узнать, сколько стоит кандидатская диссертация? Позвоните нам по тел. +7 (495) 772-40-90, и мы вам скажем, сколько стоит написать кандидатскую диссертацию в компании «BeSmarter!».">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
 
 
@@ -62,54 +66,37 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Кандидатская</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya/skolko-stoit">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Стоимость</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "4"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya" name="Кандидатская" position="3" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya/skolko-stoit" name="Стоимость" position="4" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KandidatDis/>
 
         <DoctorskayaDis/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+
+      <TextBlock>
+        <h1 className="title">
           Сколько стоит кандидатская диссертация
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Качественно написанная кандидатская диссертация – цена успеха на защите и шанс обеспечить безоблачное профессиональное будущее молодого ученого. К сожалению, далеко не всегда долгие месяцы кропотливой работы приводят к ожидаемому результату. Не каждый аспирант владеет соответствующими навыками для написания оригинальной и
           актуальной работы.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Иногда бывает проще купить кандидатскую диссертацию – цена ее будет намного меньше в сравнении со стоимостью напрасно потерянного времени, нервов и сил. Квалифицированную помощь в написании работы вы сможете получить в компании BeSmarter! Мы сделаем все качественно и недорого, просто доверьтесь нам!
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -122,11 +109,11 @@ const page = () => (
 
       <ImageBlock imageSrc={require('static/images/block/kandidatskie2.jpg')}/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Какова цена кандидатской диссертации?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Мы понимаем, что вас в первую очередь интересует, сколько стоит написать кандидатскую диссертацию. Ее цена обуславливается следующими факторами.
         </p>
         <ul>
@@ -140,33 +127,33 @@ const page = () => (
             <b>Оперативность.</b> Если вам нужно срочно написать кандидатскую диссертацию, стоимость ее будет тем выше, чем ближе день защиты. Желаете сэкономить – оформите свой заказ как можно раньше!
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Алгоритм сотрудничества
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           На первом этапе вы выбираете удобный для себя способ связи и оформляете заявку. Далее наши менеджеры проводят с вами собеседования и подписывают официальный договор. Данный документ фиксирует все детали – день, когда должна быть сдана кандидатская диссертация на заказ, цена услуги, исполнитель, ваши требования к работе и
           так далее.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Следующий этап – написание. После 50% предоплаты утвержденный ваш автор пишет диссертацию и по главам сдает ее вам на согласование. В случае необходимости вносятся бесплатные правки. После полной оплаты и приемки работы исполнитель помогает вам подготовиться к успешной защите.
         </p>
-        <p className="block-text__par italic center">
+        <p className="par italic center">
           Теперь вам известен алгоритм, осталось позвонить нашим менеджерам!
         </p>
-      </section>
+      </TextBlock>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
       <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как узнать точную стоимость кандидатской диссертации?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Это можно сделать любым из трех способов:
         </p>
         <ul>
@@ -183,10 +170,10 @@ const page = () => (
             посетив <b><Link href="/contacts"><a>нас</a></Link></b> по адресу: Москва, пер. Большой Кисловский, д. 1, стр. 2, офис 211.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Не теряйте времени – сделайте свой заказ прямо сейчас и избавьте себя от лишних проблем.
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -195,7 +182,7 @@ const page = () => (
 
       <LinksBlock links={disKandSkolko}/>
 
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

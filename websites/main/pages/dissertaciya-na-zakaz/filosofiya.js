@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -30,10 +33,12 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 const page = () => (
   <Wrapper title="Диссертация по философии на заказ в Москве и РФ – цены, сроки написания под ключ" description="Диссертация по философии на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-    <div className="wrapper bg bg-c2 bg-img bg-img2">
+    <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
       <section className="breadcrumbs">
@@ -52,41 +57,28 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/filosofiya">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По философии</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/filosofiya" name="По философии" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KandidatDis/>
 
         <DoctorskayaDis/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Диссертация по философии
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           В каких случаях обращаются к нам за помощью с написанием работы? Вы можете заказать диссертацию по философии в компании BeSmarter!, если не успеваете со сроками. Обычно приходится жертвовать либо учебой, либо работой, а распределить время между двумя этими занятиями не получается. В этом случае мы поможем собрать и
           структурировать материал так, что клиент успешно пройдет защиту. Чаще всего заказывают диссертацию, если:
         </p>
@@ -101,7 +93,7 @@ const page = () => (
             готовы к защите только отдельные части диссертации.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -115,11 +107,11 @@ const page = () => (
 
       <ImageBlock imageSrc={require('static/images/block/dis-eko.jpg')}/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           В чем преимущества написания на заказ?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Итак, вы можете заказать диссертацию по философии абсолютно анонимно, что гарантирует сохранность репутации. Есть и другие выгоды и преимущества:
         </p>
         <ul>
@@ -133,42 +125,42 @@ const page = () => (
             вы гарантированно получаете работу в срок и не переживаете из-за времени! Написание под заказ всегда сопровождается консультацией личного менеджера.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Почему лучше не покупать готовую работу? Если вы делаете заказ в BeSmarter!, то исследование пишется под ключ. Вы можете заказать диссертацию, дипломную, курсовую по философии без опасения, что вам продадут частично или полностью скопированный материал.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Также заказ под ключ позволяет учитывать рекомендации, правки и требования научного руководителя. Естественно, полной степени соответствия его пожеланиям невозможно добиться, если покупать готовый материал.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Этапы сотрудничества с BeSmarter!
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Вы заполняете форму заявки на сайте, указывая исходные данные. Все детали обсуждаются лично с менеджером компании, после чего подписывается договор на оказание услуг. Вы также можете просто позвонить по телефону <br/>+7 (495) 772-40-90 или <span className="tel1">+7 (495) 772-90-40</span>, чтобы сэкономить время на
           заполнение онлайн-анкеты.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Можно договориться как о выполнении всего заказа полностью, так и о написании частями.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Лучше всего, конечно, сразу иметь на руках полностью готовый и оформленный по ГОСТ материал, ведь так вы всегда сможете ответить на вопросы научного руководителя.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Если вас интересует заказ диссертации по философии, обращайтесь к нам – мы гарантированно поможем с выполнением всех заданий, а также сэкономим вам массу времени. Агентство BeSmarter! тщательно отбирает авторов, чтобы вы остались довольны.
         </p>
-      </section>
+      </TextBlock>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
       <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           От чего зависит цена услуги
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Стоимость зависит от сложности работы, а также объемов и сроков исполнения:
         </p>
         <ul>
@@ -179,13 +171,13 @@ const page = () => (
             Докторская диссертация стоит от 450 до 950 тыс. рублей (средний объем – 250 страниц).
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как можно сэкономить?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Воспользуйтесь этими советами, если вам критически важно не переплачивать:
         </p>
         <ul>
@@ -208,7 +200,7 @@ const page = () => (
             Чтобы заказать диссертацию по философии приходите к нам в офис по адресу: г. Москва, пер. Большой Кисловский, дом 1, стр. 2, офис 211
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -216,7 +208,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={disserNew}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

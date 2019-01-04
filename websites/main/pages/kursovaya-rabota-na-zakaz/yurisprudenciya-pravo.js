@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/kurs-na-zakaz-arch';
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -30,11 +33,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import KursovayaRabota from "components/common/ServiceBlock/ready-made/KursovayaRabota";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Заказать курсовую работу по праву в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В компании «BeSmarter!» можно срочно и недорого заказать курсовую работу по праву по выгодной цене в Москве. Тел. +7 (495) 772-40-90">
-    <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <PageWrapper className="bg bg-c2 bg-img bg-img1">
 
 
       <section className="breadcrumbs">
@@ -53,54 +58,41 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Курсовая работа</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz/yurisprudenciya-pravo">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По праву</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz" name="Курсовая работа" position="2" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz/yurisprudenciya-pravo" name="По праву" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KursovayaRabota/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать курсовую работу по праву
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Курсовые работы по праву – тип проекта, обязательный для всех студентов юридических специальностей. Их написание требует умения пользоваться материалами судебной практики и другой информацией из различных профильных источников, а также глубоко разбираться в нюансах актуального российского законодательства.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Далеко не каждый студент владеет достаточным количеством свободного времени и опытом для качественного решения подобных задач. Компания BeSmarter! предлагает не рисковать своим профессиональным будущим и заручиться помощью опытных экспертов. Заказать курсовую работу по праву у нас можно срочно и с гарантией качества.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/kursovayz-rab-po-uris.jpg')} altText="Заказать курсовую работу по праву"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Наши преимущества
         </h2>
         <ul>
@@ -117,28 +109,28 @@ const page = () => (
             <b>Доступная стоимость.</b> Мы придерживаемся политики прозрачных цен и индивидуально подходим к каждому клиенту. У нас действительно недорого – убедитесь в этом сами!
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Алгоритм сотрудничества
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Чтобы купить курсовую по праву, вам следует оформить заявку одним из перечисленных ниже способов. Мы оперативно ее рассмотрим и обсудим с вами все детали заказа. По итогам собеседования будет подписан официальный договор.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Далее вы вносите 50%-ную предоплату, и наш автор приступает к выполнению работы. Готовая курсовая сдается вам на проверку в оговоренный срок. По вашему требованию вносятся бесплатные корректировки. Финальный этап – подготовка к защите работы, автор консультирует и отвечает на ваши вопросы.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Главный козырь BeSmarter! – ответственность. Личный менеджер сопровождает клиента вплоть до получения оценки, оперативно решая все вопросы. От вас нужно только желание – остальное сделаем мы!
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -147,11 +139,11 @@ const page = () => (
                     allow="autoplay; encrypted-media" allowFullScreen></iframe>
         </Video>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как купить курсовую работу по праву?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Оставьте заявку удобным для себя способом:
         </p>
         <ul>
@@ -165,16 +157,16 @@ const page = () => (
             зайдите к нам в <b><Link href="/contacts"><a>офис</a></Link></b> по адресу: Москва, пер. Большой Кисловский, дом 1, стр. 2, оф. 211.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Курсовая работа по праву на заказ в компании BeSmarter! – это выгодно, надежно и качественно. Поручите ее настоящим специалистам!
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
       <LinksBlock links={links}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

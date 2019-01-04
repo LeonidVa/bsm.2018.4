@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main'
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/magisterskaya'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -30,11 +33,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import MagisDisGdeZakazat from "components/common/ServiceBlock/ready-made/MagisDisGdeZakazat"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Магистерская диссертация по экономике на заказ в Москве и РФ – цены, сроки написания под ключ" description="Магистерская диссертация по экономике на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-    <div className="wrapper bg bg-c2 bg-img bg-img2">
+    <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
 
@@ -58,47 +63,29 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Магистерская</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya/ekonomika">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По экономике</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "4"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya" name="Магистерская" position="3" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya/ekonomika" name="По экономике" position="4" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <MagisDisGdeZakazat/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Магистерская диссертация по экономике
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Если вам срочно нужна магистерская диссертация по экономике, а самостоятельно вы никак не укладываетесь в сроки, обратитесь за помощью в агентство BeSmarter! Мы занимаемся подготовкой научных работ по индивидуальным запросам клиентов. Чаще всего к нам обращаются, когда:
         </p>
         <ul>
@@ -118,21 +105,21 @@ const page = () => (
             вы слишком заняты практической работой, поэтому нет времени и сил на сбор данных, аналитику и формулирование собственных выводов.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/mag-po-ekon.jpg')} altText="Магистерская диссертация по экономике"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Преимущества написания диссертации на заказ
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Можно попасть в очень неприятную ситуацию, если вы покупаете готовый материал, а не делаете заказ на написание под ключ. Любая магистерская диссертация по экономике должна иметь высокий процент уникальности, новизну, отличительную особенность изложения и обладать прочими аспектами качественно выполненной исследовательской
           работы.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Конкретные преимущества при заказе BeSmarter:
         </p>
         <ul>
@@ -146,30 +133,30 @@ const page = () => (
             всегда есть возможность договориться о внесении правок.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           <b>
             Почему лучше заказать, а не купить готовую работу?
           </b>
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Мы работаем с каждым клиентом по индивидуальной схеме, начиная от разработки плана и заканчивая оформлением по ГОСТу. Гарантирована высокая уникальность работы, поэтому никто не сможет уличить вас в том, что материал скопирован, вы занимаетесь плагиатом и из-за этого не можете защитить проект.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Нами используются только свежие и актуальные источники данных, а наши авторы – преподаватели из Москвы и других городов России, что позволяет удерживать невысокие цены при достойном уровне услуг.
         </p>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           От чего зависит цена
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           На формирование окончательной стоимости работы влияет целый ряд различных факторов:
         </p>
         <ul>
@@ -186,16 +173,16 @@ const page = () => (
             Сложность темы и глубина исследований, которые необходимо будет провести.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как сэкономить и если в этом есть необходимость?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Обычно магистерские диссертации по экономике должны содержать данные исследований. Вы можете сэкономить на заказе, если напишете теорию сами, а практическую часть доверите агентству BeSmarter!
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Другие способы сэкономить:
         </p>
         <ul>
@@ -209,14 +196,14 @@ const page = () => (
             чем выше оригинальность (уникальность), тем дороже может обойтись услуга.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
       <ImageBlock imageSrc={require('static/images/block/mag-eko.jpg')} altText="Магистерская диссертация по экономике на заказ"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Этапы сотрудничества
         </h2>
         <ol>
@@ -230,16 +217,16 @@ const page = () => (
             Вы можете заказать написание магистерской диссертации по экономике по частям, но лучше всего всегда иметь полную версию работы на руках, ведь тогда можно легко ответить на любой вопрос научного руководителя.
           </li>
         </ol>
-        <p className="block-text__par">
+        <p className="par">
           Обратитесь в агентство BeSmarter!, если вам нужна помощь в написании любого научного труда, требуется срочно поступать или дальше заниматься развитием своей карьеры. Наши авторы (практикующие преподаватели) не только учтут все пожелания, но и структурируют материал так, что во время защиты не возникнет никаких проблем.
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
       <LinksBlock links={links}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

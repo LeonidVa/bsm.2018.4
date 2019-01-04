@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main'
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/mba'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -29,12 +32,15 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 import servicecards from "data/serviceBlock/matzash";
 import DipMBA from "components/common/ServiceBlock/ready-made/DipMBA"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
+
 
 
 const page = () => (
   <Wrapper title="Диплом MBA (мва, мба) – заказать диплом MBA! Помощь в написании дипломной работы mba | Диплом mba на заказ в Москве – Besmarter!"
            description="Многие задаются вопросом: «Как успеть написать диплом МВА срочно и при этом уделить достаточно времени работе?» Оптимальным решением в такой ситуации становится диплом MBA на заказ в Москве от компании BeSmarter!: мы выполняем для Вас эту трудоёмкую работу на самом высоком уровне, а Вы в это время спокойно занимаетесь своим делом и зарабатываете деньги.">
-    <div className="wrapper bg bg-c2 bg-img bg-img2">
+    <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
 
@@ -46,26 +52,17 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/diplom-mba-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диплом MBA</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/diplom-mba-na-zakaz" name="Диплом MBA" position="2" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-
-      <MessBlock/>
+      </BlockNav>
+ <MessBlock/>
 
         <DipMBA/>
 
@@ -96,8 +93,8 @@ const page = () => (
         ]}
       />
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Диплом MBA на заказ
         </h1>
         <ul>
@@ -122,54 +119,54 @@ const page = () => (
             С помощью нашего сайта заказать диплом MBA можно не только в Москве, но и в любом регионе России.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/diplom MBA.jpg')} altText="Диплом MBA на заказ"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как мы работаем?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Вы оформляете заявку на помощь в написании дипломной работы MBA удобным для себя способом – онлайн, по телефону (<b>+7 495 772-40-90</b>) или в нашем <a href="/contacts">офисе</a> (Москва, пер. Большой Кисловский, д. 1, стр. 2, оф. 211).
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Мы проводим с вами собеседование и уточняем все детали заказа. Определяется стоимость услуги и согласовывается автор. По результатам переговоров подписывается официальный договор с указанием всех ваших требований и наших обязательств.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Согласованный исполнитель пишет диплом МВА на заказ и сдает его в оговоренные сроки. При необходимости вы можете заказать бесплатные корректировки. Далее автор консультирует вас и помогает подготовиться к защите.
         </p>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Кто наши авторы?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Они – наша главная гордость! Компания BeSmarter! принципиально не пользуется услугами фрилансеров-копирайтеров и прочих ненадежных кадров. В нашем штате – исключительно действующие преподаватели вузов различных дисциплин, имеющие научную степень как минимум кандидата наук.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Более того, мы предоставляем вам уникальную возможность предварительно удостовериться в компетентности потенциального исполнителя и переговорить с ним. Благодаря такому профессиональному подходу более 98% наших клиентов защищаются на «отлично»!
         </p>
-      </section>
+      </TextBlock>
 
       <Video>
         <iframe src="https://www.youtube.com/embed/mzDkG6XRKuc" frameBorder="0" allowFullScreen></iframe>
       </Video>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как сэкономить при заказе диплома MBA?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Хотите <b>написать диплом MBA недорого</b>? Вот три простых способа экономии:
         </p>
         <ol>
@@ -183,10 +180,10 @@ const page = () => (
             Предложите свои наработки. Если вы уже приступили к написанию работы, принесите эти материалы, и мы снизим цену.
           </li>
         </ol>
-        <p className="block-text__par italic">
+        <p className="par italic">
           <b>Воспользуйтесь услугами специалистов BeSmarter!, и вы не пожалеете об этом!</b>
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -199,7 +196,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={links}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

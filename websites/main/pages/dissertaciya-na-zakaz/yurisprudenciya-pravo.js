@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main'
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/disser'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -30,11 +33,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 const page = () => (
   <Wrapper title="Заказать диссертацию по юриспруденции – сколько стоит написать диссертацию по юриспруденции в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Заказать диссертацию по юриспруденции. В компании  BeSmarter! Вы сможете заказать помощь в написании диссертации по юриспруденции от надежных и проверенных кандидатов и докторов наук, недорогие цены только в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
       <MetaTags>
         {/* <title></title> */}
@@ -57,38 +62,25 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/yurisprudenciya-pravo">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По юриспруденции</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/yurisprudenciya-pravo" name="По юриспруденции" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KandidatDis/>
 
         <DoctorskayaDis/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать диссертацию по юриспруденции
         </h1>
         <ul>
@@ -109,7 +101,7 @@ const page = () => (
             Мы не только предлагаем помощь в написании диссертации, но и оказываем содействие в подготовке к защите, включая изготовление дополнительных материалов;
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -122,33 +114,33 @@ const page = () => (
 
       <ImageBlock imageSrc={require('static/images/block/dis-uri.jpg')} altText="Заказать диссертацию по юриспруденции"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Почему мы – лучшие?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Главный козырь BeSmarter! – наши авторы. Мы сотрудничаем с ведущими учеными, преподавателями вузов с научной степенью не ниже кандидатской. Это очень важно, поскольку юриспруденция является одной из наиболее «изменчивых» наук.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Чтобы написать хорошую диссертацию по праву, нужно тонко разбираться в хитросплетениях современного законодательства и умело применять его для решения задач. Кто может сделать это лучше, чем профессиональный юрист?
         </p>
-        <p className="block-text__par">
+        <p className="par">
           При этом, даже работая с лучшими кадрами, мы контролируем каждый этап выполнения заказа. Вы получаете личного менеджера, который следит за всеми нюансами и доступен для связи в любой момент.
         </p>
-        <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
+        <p className="par" style={{fontStyle: 'italic', textAlign: 'center'}}>
           Воспользуйтесь нашими услугами, и сами поймете, почему мы – лучшие!
         </p>
-      </section>
+      </TextBlock>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           От чего зависит стоимость написания диссертации по юриспруденции?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Конечно же, вас интересует, сколько стоит написать диссертацию по юриспруденции под заказ. Ориентировочные цены указаны в прайс-листе. Точную стоимость услуги мы озвучим после собеседования. Она будет зависеть от объективных факторов:
         </p>
         <ul>
@@ -162,13 +154,13 @@ const page = () => (
             времени – если вам нужна диссертация срочно – за дополнительную плату мы ускорим ее написание, и наоборот, если оформите заказ заранее – мы напишем работу недорого.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как заказать диссертацию по юриспруденции?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Все просто:
         </p>
         <ol>
@@ -182,10 +174,10 @@ const page = () => (
             Согласованный автор пишет диссертацию и поглавно сдает ее вам на проверку, вносит бесплатные правки и помогает подготовиться к защите.
           </li>
         </ol>
-        <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
+        <p className="par" style={{fontStyle: 'italic', textAlign: 'center'}}>
           Попробуйте, и вы не пожалеете о сотрудничестве!
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -193,7 +185,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={disserNew}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

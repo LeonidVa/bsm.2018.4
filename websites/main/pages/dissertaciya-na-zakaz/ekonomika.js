@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -30,12 +33,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
-
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 const page = () => (
   <Wrapper title="Заказать диссертацию по экономике – сколько стоит написать диссертацию по экономике в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Заказать диссертацию по экономике. В компании  BeSmarter! Вы сможете заказать помощь в написании диссертации по экономике от надежных и проверенных кандидатов и докторов наук, недорогие цены только в компании «BeSmarter!». Тел. +7 (495) 772-40-90.">
-    <div className="wrapper bg bg-c2 bg-img bg-img2">
+    <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
 
@@ -55,38 +59,25 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/ekonomika">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По экономике</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/ekonomika" name="По экономике" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KandidatDis/>
 
         <DoctorskayaDis/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать диссертацию по экономике
         </h1>
         <ul>
@@ -107,7 +98,7 @@ const page = () => (
             Наши цены прозрачны и объективны. Узнать, сколько стоит диссертация по экономике под заказ, вы сможете из прайс-листа.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -120,23 +111,23 @@ const page = () => (
 
       <ImageBlock imageSrc={require('static/images/block/dis-eko.jpg')} altText="Заказать диссертацию по экономике"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Можно ли сэкономить?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Конечно! Существует несколько способов недорого заказать диссертацию. Прежде всего, помните, что наше время – это ваши деньги. Чем больше вы нам дадите времени на написание диссертации, тем дешевле она будет. И, наоборот, за срочность придется доплатить.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Еще один способ экономии – выбор «правильной» темы. Дело в том, что сложность, а значит и стоимость диссертации, насыщенной математическими выкладками, намного выше в сравнении с теоретическим исследованием. Если есть возможность выбора – воспользуйтесь ею.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Наконец, можно сэкономить, приложив собственные знания. Принесите нам свои наработки по теме диссертации, и мы учтем это, снизив стоимость заказа.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Этапы сотрудничества
         </h2>
         <ol>
@@ -153,17 +144,17 @@ const page = () => (
             <b>Защита.</b> Автор ответит на любые ваши вопросы и поможет качественно подготовиться к защите.
           </li>
         </ol>
-        <p className="block-text__par" style={{fontStyle: 'italic'}}>
+        <p className="par" style={{fontStyle: 'italic'}}>
           Сотрудничество с BeSmarter! – гарантия вашего успеха, убедитесь в этом сами!
         </p>
-      </section>
+      </TextBlock>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
       <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Итак, что вы получаете:
         </h2>
         <ul>
@@ -183,7 +174,7 @@ const page = () => (
             несколько способов связи – онлайн, по телефону <br/>+7 (495) 772-4090 или личная встреча (Москва, пер. Большой Кисловский, д. 1, стр. 2, оф. 211). Выбирайте самый удобный и не тратьте времени на поиски лучших условий!
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -191,7 +182,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={disserNew}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

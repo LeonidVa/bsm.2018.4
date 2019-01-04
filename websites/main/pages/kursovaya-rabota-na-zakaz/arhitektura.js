@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/kurs-na-zakaz-arch';
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -30,11 +33,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import KursovayaRabota from "components/common/ServiceBlock/ready-made/KursovayaRabota"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Заказать курсовую работу по архитектуре в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В компании «BeSmarter!» можно срочно и недорого заказать курсовую работу по архитектуре по выгодной цене в Москве. Тел. +7 (495) 772-40-90">
-    <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <PageWrapper className="bg bg-c2 bg-img bg-img1">
 
 
 
@@ -54,55 +59,42 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Курсовая работа</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz/arhitektura">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По архитектуре</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz" name="Курсовая работа" position="2" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz/arhitektura" name="По архитектуре" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KursovayaRabota/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать курсовую работу по архитектуре
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           У студентов строительных специальностей курсовые работы по архитектуре традиционно вызывают повышенные трудности. Здесь нельзя отделаться абстракциями и теоретическими опусами. Каждый проект представляет собой совокупность индивидуальных решений по внешнему виду, компоновке, планировке, применяемым материалам и другим
           параметрам, которыми отличается конкретный объект.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Найти идентичный вариант в Интернете или попытаться переделать чужой проект практически невозможно. Нужно или выполнить работу самостоятельно, или прибегнуть к экспертной помощи. Если у вас не хватает времени или навыков, предлагаем недорого заказать курсовой проект по архитектуре в компании BeSmarter!
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/kurs-po-arh.jpg')} altText="Заказать курсовую работу по архитектуре"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Какие мы даем гарантии?
         </h2>
         <ul>
@@ -116,28 +108,28 @@ const page = () => (
             <b>Гарантия оригинальности.</b> Курсовая работа по архитектуре на заказ от BeSmarter! – это проект, выполненный с нуля без малейшей доли плагиата или заимствований. Уникальность текста проверяется в нескольких онлайн сервисах (eTXT, Advego, АП.вуз).
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Желаете гарантировать себе успешную защиту? Достаточно заказать курсовую работу по архитектуре в BeSmarter!
         </p>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Стоимость курсового проекта по архитектуре?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Цена курсового проекта по архитектуре определяется несколькими объективными факторами. Прежде всего – это трудоемкость, которая зависит от конкретного объекта. Чем он сложнее, тем больше труда потребуется для выполнения расчетов и построения чертежей.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Вторым важным критерием ценообразования является срочность, поэтому для экономии средств выгоднее будет оформить заказ заранее. Также на стоимость влияют специфические требования к оформлению. Чтобы прикинуть ориентировочную сумму, откройте наш прайс-лист или свяжитесь с менеджером.
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -146,11 +138,11 @@ const page = () => (
                   allow="autoplay; encrypted-media" allowFullScreen></iframe>
       </Video>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Готовы купить курсовую работу по архитектуре?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Тогда оформите заявку удобным способом:
         </p>
         <ul>
@@ -164,16 +156,16 @@ const page = () => (
             посетив наш <b><Link href="/contacts"><a>офис</a></Link></b> в Москве (пер. Большой Кисловский, дом 1, стр. 2, оф. 211).
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Купить курсовую по архитектуре в BeSmarter! – грамотное решение, которое избавит вас от лишних забот.
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
       <LinksBlock links={links}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

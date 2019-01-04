@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/kontrol-na-zakaz';
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -26,12 +29,14 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import Kontrolnaya from "components/common/ServiceBlock/ready-made/Kontrolnaya"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Заказать контрольную работу – решение контрольных работ на заказ недорого онлайн в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Хотите заказать контрольную работу недорого онлайн? Нужно срочно решение контрольных работ?  И тогда на выручку придет BeSmarter! – компания, где сделать контрольную работу можно недорого, срочно и с качественным результатом.">
-    <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <PageWrapper className="bg bg-c2 bg-img bg-img1">
 
 
       <section className="breadcrumbs">
@@ -46,45 +51,37 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kontrolnaya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Контрольная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/kontrolnaya-na-zakaz" name="Контрольная" position="2" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <Kontrolnaya/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать контрольную работу
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Сторонняя помощь в написании контрольных работ может понадобиться даже прилежному студенту. Никто не застрахован от нехватки времени, недопонятой темы или даже плохого самочувствия. И тогда на выручку придет BeSmarter! – компания, где заказать контрольную работу можно недорого, срочно и с качественным результатом.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/kontrol-rab.jpg')} altText="Заказать контрольную работу "/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Что вы получаете, заказывая у нас контрольную работу?
         </h2>
         <ul>
@@ -104,41 +101,41 @@ const page = () => (
             <b>Удобство.</b> У нас можно заказать контрольную онлайн, поэтому услуга доступна для жителей всех регионов России.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           От чего зависит цена контрольных работ на заказ
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Разумеется, вас интересует, сколько стоит сделать контрольную работу. К сожалению, назвать точную сумму заранее невозможно. Ориентировочно узнать, сколько стоит заказать контрольную работу, можно в соответствующем разделе нашего сайта.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Точная цена будет определена после собеседования на основании конкретной дисциплины, темы, сроков, требований и т. д.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Если вы желаете заказать контрольную недорого, есть два простых способа экономии. Во-первых, можно частично сделать работу самостоятельно – то, что сумеете или успеете. А во-вторых, следует заказать выполнение контрольной работы заранее, например, за неделю.
         </p>
-        <p className="block-text__par italic">
+        <p className="par italic">
           Чем больше вы выделите нам времени, тем ниже будет стоимость услуги.
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
       <ImageBlock imageSrc={require('static/images/block/kontrolnaya.jpg')} altText="Контрольная работа на заказ"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Хотите заказать контрольную работу онлайн или в офисе?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Выберите удобный для себя вариант:
         </p>
         <ol>
@@ -152,15 +149,15 @@ const page = () => (
             В <b><Link href="/contacts"><a>офисе</a></Link></b> – наш адрес: Москва, Большой Кисловский переулок, д. 1 стр. 2, офис 211
           </li>
         </ol>
-        <p className="block-text__par italic">
+        <p className="par italic">
           Не теряйте времени! BeSmarter! – это ваша готовая контрольная работа на заказ, недорого и с гарантией качества!
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

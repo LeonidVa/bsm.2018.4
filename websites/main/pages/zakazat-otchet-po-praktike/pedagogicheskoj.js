@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main'
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/otchet-po-prak'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -31,11 +34,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import OtchPoPrak from "components/common/ServiceBlock/ready-made/OtchPoPrak"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Заказать отчет по педагогической практике – купить отчет по практике в Москве и РФ срочно – цены, сроки написания под ключ" description="Предлагаем заказать отчет по педагогической практике! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-    <div className="wrapper bg bg-c2 bg-img bg-img4">
+    <PageWrapper className="bg bg-c2 bg-img bg-img4">
 
 
       <section className="breadcrumbs">
@@ -54,44 +59,32 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/zakazat-otchet-po-praktike">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Отчёт по практике</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/zakazat-otchet-po-praktike/pedagogicheskoj">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Педагогической</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/zakazat-otchet-po-praktike" name="Отчёт по практике" position="2" />
+            <ItemListElement url="https://besmarter.ru/zakazat-otchet-po-praktike/pedagogicheskoj" name="Педагогической" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <OtchPoPrak/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать отчет по педагогической практике
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Прохождение педагогический практики – это один из последних этапов обучения и «предвестник» написания и защиты дипломной работы. От того, насколько качественно будет подготовлен отчет по педагогической практике и проведена его защита, во многом зависит общий результат окончания учебного заведения.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           У студентов возникает множество трудностей с прохождением педагогической практики и подготовкой отчета о ней. Основными из них являются:
         </p>
         <ul>
@@ -105,21 +98,21 @@ const page = () => (
             Болезнь и иные личные обстоятельства.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/pedagogicheskaya-praktika.jpg')} altText="Заказать отчет по педагогической практике"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Поможем вам не сойти с дистанции!
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Обидно, когда возникает угроза отчисления по независящим от студента причинам, особенно в самом конце обучения. Такая ситуация возможна именно с педагогической практикой. Конечно, можно самостоятельно подготовить отчет и не проходя практику в реальности, но тогда любой опытный преподаватель может это выявить на этапе
           защиты. Сложность заключается в том, что необходимо знать все нюансы работы учебного заведения и тонкости работы педагога в том или ином коллективе.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Оказать всеобъемлющую помощь готова компания BeSmarter!, которая выполняет научные работы для студентов и аспирантов. У нас можно заказать отчет по педагогической практике. Преимущества такого варианта:
         </p>
         <ul>
@@ -130,35 +123,35 @@ const page = () => (
             Введение в тему, оказание помощи и консультирование вплоть до защиты отчета.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Можно ли сэкономить? Да!
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Для того чтобы получить готовый отчет по педагогической практике, его лучше заказать в специализированной компании. Этапы действий студента при этом аналогичны шагам при заказе курсовой или дипломной работы. Сэкономить при этом можно, если студент самостоятельно подготовит план работы и увеличит время написания для
           исполнителя. Чем меньше сроки при заказе отчета по педагогической практике, тем выше стоимость услуги.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Важное преимущество сотрудничества с нами
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Специалисты BeSmarter! имеют подтвержденный опыт педагогической работы, готовы подробно раскрыть любую тему и описать реальные нюансы труда педагога. При этом проблемные вопросы, выводы и предложения по их решению не будут выглядеть оторванными от жизни. Это обстоятельство положительно скажется на уникальности отчета и
           восприятии преподавателем проделанной студентом работы.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Не отказывайтесь от обучения на финишном этапе! Заказав в BeSmarter! отчет по педагогической практике, вы сможете уверенно готовиться к дипломной работе и государственным экзаменам.
         </p>
-      </section>
+      </TextBlock>
 
       <Video>
           <iframe src="https://www.youtube.com/embed/ZhQiOLUDwWk" frameBorder="0"
@@ -171,7 +164,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={otchet}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

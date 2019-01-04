@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -31,10 +34,12 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import DoctorskayaDis2 from "components/common/ServiceBlock/ready-made/DoctorskayaDis2";
 import KandidatDisForm from "components/common/ServiceBlock/ready-made/KandidatDisForm";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 const page = () => (
   <Wrapper title="Заказать автореферат диссертации в Москве и РФ – цены, сроки написания под ключ" description="Заказать автореферат диссертации недорого! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-    <div className="wrapper bg bg-c2 bg-img bg-img2">
+    <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
       <section className="breadcrumbs">
@@ -53,45 +58,32 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Автореферат</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii" name="Автореферат" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KandidatDisForm/>
 
         <DoctorskayaDis2/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Автореферат диссертации на заказ
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Автореферат представляет собой краткую выдержку из диссертации, докторской или кандидатской. Это документ, имеющий юридическую силу. Без его написания диссертационная работа не будет принята к защите. Изначально получается право на размножение автореферата, после чего следует допуск соискателя к защите. Компания
           BeSmarter! предлагает вам заказать написание автореферата диссертации под ключ.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -104,8 +96,8 @@ const page = () => (
 
       <ImageBlock imageSrc={require('static/images/block/aspirant.jpg')}/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Вопросы, освещаемые в автореферате
         </h2>
         <ul>
@@ -119,16 +111,16 @@ const page = () => (
             Значимость путей и методов решения поставленных задач для использования на практике.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Содержание, структура и объем автореферата определяются Высшей аттестационной комиссией (ВАК). Его написание – трудоемкая и кропотливая работа, требующая специальных знаний. Если у вас не хватает времени на выполнение, обратитесь в нашу компанию.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Преимущества написания на заказ
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Заказывая услугу по написанию автореферата в нашей компании, вы получаете такие выгоды:
         </p>
         <ul>
@@ -145,7 +137,7 @@ const page = () => (
             Возможность самостоятельного выбора компетентного исполнителя.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Почему лучше заказать написание, а не купить готовый автореферат? Приобретение готового автореферата сопряжено с определенными рисками:
         </p>
         <ul>
@@ -159,20 +151,20 @@ const page = () => (
             Несоблюдение стандартов ГОСТ.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Беспроигрышный вариант – узнать точные требования к оформлению и лишь после этого оформлять заказ автореферата диссертации. Этим вы повышаете вероятность успешной защиты.
         </p>
-      </section>
+      </TextBlock>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
       <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           От чего зависит цена
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           На стоимость подготовки автореферата влияют:
         </p>
         <ul>
@@ -186,13 +178,13 @@ const page = () => (
             Срочность написания.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Этапы сотрудничества с BeSmarter!
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Работа по написанию автореферата к кандидатской или докторской диссертации выполняется по такому алгоритму:
         </p>
         <ul>
@@ -206,10 +198,10 @@ const page = () => (
             Вы получаете написанный автореферат. На протяжении 2 месяцев все правки выполняются бесплатно.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Чтобы оформить заказ в BeSmarter!, заполните специальную контактную форму на сайте или позвоните нам по телефону: +7 (495) 772-40-90, +7 (495) 772-90-40. В самом скором времени наш специалист свяжется с вами. Сотрудничество с проверенной командой специалистов – залог вашего успеха на защите.
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -217,7 +209,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={disAvtoref}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

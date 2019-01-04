@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from "components/common/NavRow";
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from "components/common/MessBlock";
 
 import ProfitsBlockSlider from "components/common/ProfitsBlockSlider";
@@ -14,7 +17,7 @@ import FormEstimate from "components/common/forms/Big/Estimate";
 import InfoBlock from "components/common/InfoBlock";
 import infoBlockConfig from "data/infoBlock/diplom";
 
-import CurrentOfferH2 from "components/content/offers/CurrentOfferH2";
+import CurrentOffer from "components/content/offers/CurrentOffer";
 
 import reviewBlockConfig from "data/reviewBlockConfig";
 import ReviewBlockSlider from "components/common/ReviewBlockSlider";
@@ -27,6 +30,8 @@ import ImageBlock from "components/common/ImageBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
@@ -34,7 +39,7 @@ const page = () => (
         title="Диплом на заказ – срочно заказать дипломную работу в Москве, помощь в написании диплома и сопровождение до защиты"
         description="Написание диплома на заказ! Быстрая, недорогая и профессиональная помощь в подготовке дипломной работы – компания BeSmarter. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40."
     >
-        <div className="wrapper bg bg-c2 bg-img bg-img3">
+        <PageWrapper className="wrapper bg bg-c2 bg-img bg-img3">
 
 
             <section className="breadcrumbs">
@@ -49,38 +54,31 @@ const page = () => (
                 </div>
             </section>
 
-            <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/diplom-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Дипломная работа</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-        </span>
+            <ItemScope type="http://schema.org/BreadcrumbList">
+                <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+                <ItemListElement url="https://besmarter.ru/diplom-na-zakaz" name="Дипломная работа" position="2" />
+            </ItemScope>
 
-            <section className="block-nav">
+
+
+
+            <BlockNav>
                 <NavRow
                     url="#form"
                     scroll={false}
                     title="Заказать работу"
                     description="Узнай цену твоей работы"
                 />
-            </section>
-            <MessBlock/>
+            </BlockNav>
+ <MessBlock/>
 
             <Diplom/>
 
             <MatZashGirl/>
 
-            <section className="block-text">
-                <h1 className="block-text__title">Написание диплома на заказ</h1>
-                <p className="block-text__par">
+            <TextBlock>
+                <h1 className="title">Написание диплома на заказ</h1>
+                <p className="par">
                     Вам срочно нужен грамотный и толковый специалист, у которого можно
                     заказать написание дипломной работы? Компания BeSmarter! предлагает
                     свои услуги по подготовке диплома за короткое время под ключ. Наши авторы
@@ -88,7 +86,7 @@ const page = () => (
                     на «отлично» справимся даже с самой сложной темой – гуманитарной, узкотехнической
                     или любой другой.
                 </p>
-                <p className="block-text__par">
+                <p className="par">
                     Помощь в написании диплома на заказ – это лишь половина дела.
                     Проект нужно еще защитить, к тому же дотошные научные руководители
                     часто требуют внести в него исправления. Мы не просто напишем вашу
@@ -96,14 +94,14 @@ const page = () => (
                     внося правки и корректируя текст в случае необходимости, разработаем
                     раздаточные и другие материалы для защиты.
                 </p>
-            </section>
+            </TextBlock>
 
             <FormEstimate/>
 
             <ImageBlock imageSrc={require("static/images/block/dip-na-zakaz.jpg")} altText="Диплом на заказ"/>
 
-            <section className="block-text">
-                <h2 className="block-text__title">
+            <TextBlock>
+                <h2 className="title">
                     5 причин для заказа дипломной работы в BeSmarter!
                 </h2>
                 <ul>
@@ -129,16 +127,16 @@ const page = () => (
                         Однако срочная помощь в написании от наших авторов стоит немного дороже.
                     </li>
                 </ul>
-            </section>
+            </TextBlock>
 
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
             <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-            <CurrentOfferH2/>
+            <CurrentOffer/>
 
-            <section className="block-text">
-                <h2 className="block-text__title">
+            <TextBlock>
+                <h2 className="title">
                     Хотите сэкономить при заказе диплома? Учитывайте несколько факторов:
                 </h2>
                 <ul>
@@ -161,7 +159,7 @@ const page = () => (
                         <b>Специальные предложения и акции.</b> Ищите информацию о скидках на нашем сайте!
                     </li>
                 </ul>
-            </section>
+            </TextBlock>
 
             <Video>
                 <iframe src="https://www.youtube.com/embed/aOWtDx1wAHY" frameBorder="0"
@@ -175,8 +173,8 @@ const page = () => (
                     allow="autoplay; encrypted-media" allowFullScreen></iframe>
             </Video>
 
-            <section className="block-text">
-                <h2 className="block-text__title">
+            <TextBlock>
+                <h2 className="title">
                     Как и где заказать дипломную работу в Москве?
                 </h2>
                 <ol className="fitted">
@@ -200,10 +198,10 @@ const page = () => (
                         (пер. Большой Кисловский, дом 1 стр. 2, офис 211).
                     </li>
                 </ol>
-                <p className="block-text__par">
+                <p className="par">
                     Общение с нашими менеджерами вызовет у вас только приятные эмоции! Обращайтесь, BeSmarter! – это грамотная дипломная работа на заказ в Москве на самых выгодных условиях.
                 </p>
-            </section>
+            </TextBlock>
 
             <Video>
                 <iframe
@@ -217,7 +215,7 @@ const page = () => (
             <FormOrder/>
 
             <LinksBlock links={links}/>
-        </div>
+        </PageWrapper>
     </Wrapper>
 );
 

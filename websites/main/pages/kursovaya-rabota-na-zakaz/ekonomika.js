@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main'
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/kurs-na-zakaz-arch'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -30,11 +33,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import KursovayaRabota from "components/common/ServiceBlock/ready-made/KursovayaRabota";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Заказать курсовую работу по экономике в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В компании «BeSmarter!» можно срочно и недорого заказать курсовую работу по экономике по выгодной цене в Москве. Тел. +7 (495) 772-40-90]">
-    <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <PageWrapper className="bg bg-c2 bg-img bg-img1">
 
 
 
@@ -54,55 +59,42 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Курсовая</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz/ekonomika">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По экономике</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz" name="Курсовая" position="2" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz/ekonomika" name="По экономике" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KursovayaRabota/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать курсовую работу по экономике
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Хорошая курсовая работа по экономике – цель, достичь которой не так просто. Во-первых, как и любой серьезный научный труд, она требует немалых затрат времени, которого у студента всегда не хватает. А во-вторых, сам предмет предполагает наличие умения применять полученные знания к актуальным экономическим реалиям.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Курсач по экономике нельзя скачать из интернета, поскольку если он там появился, то, скорее всего, давно потерял актуальность (в отличие от сопромата или теормеха). Его нужно написать здесь и сейчас (если вы, конечно, рассчитываете на высокую оценку). Или же можно недорого заказать курсовую работу по экономике в компании
           BeSmarter!
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/kur-rab-po-ekonomike.jpg')} altText="Заказать курсовую работу по экономике"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Что мне это даст?
         </h2>
         <ul>
@@ -116,31 +108,31 @@ const page = () => (
             <b>Оперативность. </b>Если вас поджимает время, курсовая на заказ по экономике будет выполнена срочно, при необходимости даже за одни сутки. День сдачи фиксируется в официальном договоре.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Хотите узнать больше – проконсультируйтесь с нашими менеджерами, они всегда рады помочь!
         </p>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как мы работаем?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Если вы решите купить курсовую работу по экономике, следует оформить заявку одним из перечисленных ниже способов. Мы проведем с вами предварительное собеседование и подпишем официальный договор с указанием всех деталей (цена, сроки, требования…).
         </p>
-        <p className="block-text__par">
+        <p className="par">
           После 50%-ной предоплаты согласованный с вами автор приступает к выполнению заказа. Готовая курсовая на заказ по экономике сдается вам после уплаты полной стоимости услуги. В случае необходимости исполнитель вносит бесплатные правки, отвечает на вопросы и помогает подготовиться к успешной защите.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Наша главная цель – результат, а именно высокая оценка за курсовую работу. И мы достигаем этой цели почти в 100% случаев, поэтому обязательно оправдаем ваше доверие!
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -149,11 +141,11 @@ const page = () => (
                     allow="autoplay; encrypted-media" allowFullScreen></iframe>
         </Video>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как купить курсовую работу по экономике?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Выберите удобный для себя вариант:
         </p>
         <ul>
@@ -167,16 +159,16 @@ const page = () => (
             в офисе – <Link href="/contacts"><b><a>наш адрес</a></b></Link>: Москва, пер. Большой Кисловский, дом 1, стр. 2, оф. 211.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Услуги компании BeSmarter! – это залог вашего спокойствия и успешной защиты курсовой работы по экономике.
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
       <LinksBlock links={links}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

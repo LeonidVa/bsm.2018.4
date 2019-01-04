@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
-import NavRow from 'components/common/NavRow';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -12,7 +15,7 @@ import FormEstimate from 'components/common/forms/Big/Estimate';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/diplom'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import ImageBlock from "components/common/ImageBlock";
 import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
@@ -26,56 +29,57 @@ const page = () => (
     title="Помощь студентам в написании работ - заказать дипломную, курсовую, магистерскую и другие работы в Москве в компании «BeSmarter!». Тел. +7 (495) 772-40-90"
     description="Компания BeSmarter! профессионально оказывает помощь студентам в написании работ! Дипломные и курсовые работы на заказ, написание магистерских диссертаций, а также можно заказать рефераты, контрольные, отчеты по пратике в Москве, звоните Тел. +7 (495) 772-40-90"
   >
-    <div className="wrapper main">
+    <PageWrapper className="main">
 
 
 
-      <section className="block-nav">
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
         <NavRow url='/price' title="Услуги и цены" description="Все для твоей учебы"/>
         <NavRow url='/contacts' title="Контакты" description="Узнай, где нас найти"/>
-      </section>
+      </BlockNav>
+
       <MessBlock/>
 
         <Diplom/>
         <KursovayaRabotaMain/>
         <DisserRabotyMain/>
 
-      <section className="block-text">
-        <div className="block-text__title">Сделаем всё как надо!</div>
-        <p className="block-text__par">
+      <TextBlock>
+        <div className="title">Сделаем всё как надо!</div>
+        <p className="par">
           Опытные авторы напишут дипломную работу в полном соответствии с требованиями вашего научного руководителя.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Скажем даже больше: часто научным руководителям настолько нравится глубина раскрытия темы,
           приведенные аргументы и четкие формулировки диплома, что никаких доработок не требуется.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate />
 
       <ImageBlock imageSrc={require('static/images/block/main2.jpg')} altText="Помощь студентам"/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Помощь студентам
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Наш сервис максимально направлен на качественное выполнение заказов.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Оказывать помощь студентам мы начинаем уже в первые минуты вашего звонка или сообщения на наш сайт.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           После поступления заявки наши менеджеры просчитывают все этапы написания, сложность и объем.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Вы получаете оперативный ответ, вносите предоплату и наши авторы начинают написание студенческих работ сразу же.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Какие мы даем гарантии
         </h2>
         <ul>
@@ -95,35 +99,35 @@ const page = () => (
             <b>Конфиденциальность.</b> Мы никому не раскрываем ваши контактные данные, сохраняя столь важную в современном мире анонимность.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Помощь студентам в&nbsp;написании работ
         </h2>
 
-        <p className="block-text__par">
+        <p className="par">
           Наша команда работает для успешной защиты каждого студента.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Мы направляем усилия лучших специалистов для успешной сдачи ваших работ: у вас будет свой менеджер, свой автор и своя цена. Это по-настоящему индивидуальный подход при выполнении каждого заказа!</p>
-        <p className="block-text__par  italic bold">
+        <p className="par  italic bold">
           Не теряйте времени – заказывайте сейчас!
         </p>
 
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Наша команда
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Каждый из наших сотрудников достиг успехов в своей отрасли и теперь помогает нам добиваться лучших результатов. Максимум нашей эффективности достигается усилиями трех отделов:
         </p>
         <ul>
@@ -137,32 +141,32 @@ const page = () => (
             менеджеры, ответственные за контроль качества материала, усердно проверяют все студенческие работы на заказ, контролируя уровень уникальности и качества.
           </li>
         </ul>
-        <p className="block-text__par italic bold">
+        <p className="par italic bold">
           Обращаясь в нашу компанию выполнения студенческих работ на заказ, будьте уверены – Вам помогают прфессионалы!
         </p>
-      </section>
+      </TextBlock>
 
       <ImageBlock imageSrc={require('static/images/block/main.jpg')} altText="Помощь в написании работ"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Этапы выполнения студенческих работ
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           После согласования всех важных моментов, наши эксперты проводят обработку материала, определяется план и начинается помощь студентам в написании работ.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Каждый этап, в независимости от сложности, тщательно контролируется менеджерами из отдела контроля качества. Если у нас возникают вопросы, мы срочно связываемся с вами и уточняем все моменты, делая тем самым выполнение студенческих работ на заказ простым и удобным.
         </p>
-        <p className="block-text__par italic bold">
+        <p className="par italic bold">
           Оставляйте заявку в нашем колл-центре, мы сделаем все, чтобы вы получили самый высокий балл!
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder />
 
-      <section className="block-text">
+      <TextBlock>
         <ul>
           <li>
             <Link href="/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu">
@@ -195,9 +199,9 @@ const page = () => (
             </Link>
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

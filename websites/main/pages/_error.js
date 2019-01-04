@@ -2,7 +2,10 @@ import React from 'react';
 import Router from 'next/router';
 import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
-import NavRow from 'components/common/NavRow';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 import FormOrder from 'components/common/forms/Big/Order';
 import FormWithTimer from 'components/common/forms/WithTimer';
@@ -82,7 +85,7 @@ export default class Error extends React.Component {
     const {statusCode} = this.props;
     return (
       <Wrapper title="Главная">
-        <div className="wrapper bg bg-c2 bg-img bg-img4">
+        <PageWrapper className="bg bg-c2 bg-img bg-img4">
 
           <section className="breadcrumbs">
             <div className="inner">
@@ -96,13 +99,12 @@ export default class Error extends React.Component {
 
           <Title>Не найдена страница? Попробуй другую</Title>
 
-          <section className="block-nav">
+          <BlockNav>
             <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
             <NavRow url='/price' title="Услуги и цены" description="Все для твоей учебы"/>
             <NavRow url='/contacts' title="Контакты" description="Узнай, где нас найти"/>
-          </section>
-
-          <MessBlock/>
+          </BlockNav>
+ <MessBlock/>
 
           <section className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
             <h2 className="block-form-timer__title">
@@ -117,7 +119,7 @@ export default class Error extends React.Component {
           <a name="form" id="form"/>
           <FormOrder/>
 
-        </div>
+        </PageWrapper>
       </Wrapper>
     )
   }

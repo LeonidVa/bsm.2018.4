@@ -1,14 +1,20 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
-import NavRow from 'components/common/NavRow';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 import FormOrder from 'components/common/forms/Big/Order';
 import MetaTags from 'react-meta-tags';
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
+import React from "react";
 
 
 const page = () => (
   <Wrapper title="Карта сайта" description="Карта сайта BeSmarter!">
-    <div className="wrapper bg bg-c2 bg-img bg-img4">
+    <PageWrapper className="bg bg-c2 bg-img bg-img4">
 
 
       <section className="breadcrumbs">
@@ -23,28 +29,20 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/map">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Карта сайта</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/map" name="Карта сайта" position="2" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
-      <section className="block-text">
-        <h1 className="block-text__title center">
+      <TextBlock>
+        <h1 className="title center">
           Карта сайта
         </h1>
         <ul className="style-none">
@@ -496,12 +494,12 @@ const page = () => (
             </ul>
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

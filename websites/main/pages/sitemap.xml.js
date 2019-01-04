@@ -7,437 +7,437 @@ export default class extends React.Component {
 <!--	created with www.mysitemapgenerator.com	-->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://2018.besmarter.ru/</loc>
+        <loc>https://besmarter.ru/</loc>
         <lastmod>2018-06-29T22:01:25+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/price</loc>
+        <loc>https://besmarter.ru/price</loc>
         <lastmod>2018-06-29T22:01:25+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/contacts</loc>
+        <loc>https://besmarter.ru/contacts</loc>
         <lastmod>2018-06-29T22:01:25+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/map</loc>
+        <loc>https://besmarter.ru/map</loc>
         <lastmod>2018-06-29T22:01:26+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz</loc>
         <lastmod>2018-06-29T22:01:26+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/razrabotka-diplomnogo-proekta</loc>
+        <loc>https://besmarter.ru/razrabotka-diplomnogo-proekta</loc>
         <lastmod>2018-06-29T22:01:27+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/magisterskaya</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya</loc>
         <lastmod>2018-06-29T22:01:27+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-mba-na-zakaz</loc>
+        <loc>https://besmarter.ru/diplom-mba-na-zakaz</loc>
         <lastmod>2018-06-29T22:01:28+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz</loc>
         <lastmod>2018-06-29T22:01:29+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/kandidatskaya</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya</loc>
         <lastmod>2018-06-29T22:01:29+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/doktorskaya</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/doktorskaya</loc>
         <lastmod>2018-06-29T22:01:30+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz</loc>
         <lastmod>2018-06-29T22:01:31+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/zakazat-otchet-po-praktike</loc>
+        <loc>https://besmarter.ru/zakazat-otchet-po-praktike</loc>
         <lastmod>2018-06-29T22:01:31+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovoj-proekt-na-zakaz</loc>
+        <loc>https://besmarter.ru/kursovoj-proekt-na-zakaz</loc>
         <lastmod>2018-06-29T22:01:32+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/politika-konfidentsialnosti</loc>
+        <loc>https://besmarter.ru/politika-konfidentsialnosti</loc>
         <lastmod>2018-06-29T22:01:33+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/about</loc>
+        <loc>https://besmarter.ru/about</loc>
         <lastmod>2018-06-29T22:01:34+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/avtoram</loc>
+        <loc>https://besmarter.ru/avtoram</loc>
         <lastmod>2018-06-29T22:01:35+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/garantii</loc>
+        <loc>https://besmarter.ru/garantii</loc>
         <lastmod>2018-06-29T22:01:35+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati</loc>
+        <loc>https://besmarter.ru/stati</loc>
         <lastmod>2018-06-29T22:01:36+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu</loc>
         <lastmod>2018-06-29T22:01:37+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz/skolko-stoit-diplomnaya-rabota</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz/skolko-stoit-diplomnaya-rabota</loc>
         <lastmod>2018-06-29T22:01:38+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz/buhgalterskij-uchet</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz/buhgalterskij-uchet</loc>
         <lastmod>2018-06-29T22:01:38+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz/yurisprudenciya-pravo</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz/yurisprudenciya-pravo</loc>
         <lastmod>2018-06-29T22:01:39+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz/ekonomika</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz/ekonomika</loc>
         <lastmod>2018-06-29T22:01:40+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz/psihologiya</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz/psihologiya</loc>
         <lastmod>2018-06-29T22:01:40+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz/menedjment</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz/menedjment</loc>
         <lastmod>2018-06-29T22:01:41+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/diplom-na-zakaz/pedagogika</loc>
+        <loc>https://besmarter.ru/diplom-na-zakaz/pedagogika</loc>
         <lastmod>2018-06-29T22:01:42+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dorabotka-diplomnoj-raboty</loc>
+        <loc>https://besmarter.ru/dorabotka-diplomnoj-raboty</loc>
         <lastmod>2018-06-29T22:01:42+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz/sait-kursovyh-rabot</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz/sait-kursovyh-rabot</loc>
         <lastmod>2018-06-29T22:01:43+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz/skolko-stoit</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz/skolko-stoit</loc>
         <lastmod>2018-06-29T22:01:44+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz/psihologiya</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz/psihologiya</loc>
         <lastmod>2018-06-29T22:01:44+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz/ekonomika</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz/ekonomika</loc>
         <lastmod>2018-06-29T22:01:45+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz/buhgalterskiy-uchet</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz/buhgalterskiy-uchet</loc>
         <lastmod>2018-06-29T22:01:46+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz/yurisprudenciya-pravo</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz/yurisprudenciya-pravo</loc>
         <lastmod>2018-06-29T22:01:46+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz/pedagogika</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz/pedagogika</loc>
         <lastmod>2018-06-29T22:01:47+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovaya-rabota-na-zakaz/arhitektura</loc>
+        <loc>https://besmarter.ru/kursovaya-rabota-na-zakaz/arhitektura</loc>
         <lastmod>2018-06-29T22:01:48+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kursovoj-proekt-na-zakaz/po-detalyam-mashin</loc>
+        <loc>https://besmarter.ru/kursovoj-proekt-na-zakaz/po-detalyam-mashin</loc>
         <lastmod>2018-06-29T22:01:48+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/doktorskaya/medicina</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/doktorskaya/medicina</loc>
         <lastmod>2018-06-29T22:01:49+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/doktorskaya/pedagogika</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/doktorskaya/pedagogika</loc>
         <lastmod>2018-06-29T22:01:50+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/kandidatskaya/skolko-stoit</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya/skolko-stoit</loc>
         <lastmod>2018-06-29T22:01:50+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/kandidatskaya/yurisprudenciya-pravo</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya/yurisprudenciya-pravo</loc>
         <lastmod>2018-06-29T22:01:51+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/magisterskaya/skolko-stoit</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya/skolko-stoit</loc>
         <lastmod>2018-06-29T22:01:52+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/magisterskaya/gde-zakazat</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya/gde-zakazat</loc>
         <lastmod>2018-06-29T22:01:52+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/magisterskaya/yurisprudenciya-pravo</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya/yurisprudenciya-pravo</loc>
         <lastmod>2018-06-29T22:01:54+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/magisterskaya/psihologiya</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya/psihologiya</loc>
         <lastmod>2018-06-29T22:01:55+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/magisterskaya/ekonomika</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya/ekonomika</loc>
         <lastmod>2018-06-29T22:01:55+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/magisterskaya/menedzhment</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/magisterskaya/menedzhment</loc>
         <lastmod>2018-06-29T22:01:56+01:00</lastmod>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/soiskatelstvo</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/soiskatelstvo</loc>
         <lastmod>2018-06-29T22:01:57+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/aspirantura</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/aspirantura</loc>
         <lastmod>2018-06-29T22:01:57+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/steps</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/steps</loc>
         <lastmod>2018-06-29T22:01:58+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/gde-zakazat-dissertaciyu</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/gde-zakazat-dissertaciyu</loc>
         <lastmod>2018-06-29T22:01:59+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/skolko-stoit-napisat</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/skolko-stoit-napisat</loc>
         <lastmod>2018-06-29T22:01:59+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/medicina</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/medicina</loc>
         <lastmod>2018-06-29T22:02:00+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/ekonomika</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/ekonomika</loc>
         <lastmod>2018-06-29T22:02:01+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/yurisprudenciya-pravo</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/yurisprudenciya-pravo</loc>
         <lastmod>2018-06-29T22:02:01+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/redaktirovanie</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/redaktirovanie</loc>
         <lastmod>2018-06-29T22:02:02+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/zakazat-otchet-po-praktike/proizvodstvennoj</loc>
+        <loc>https://besmarter.ru/zakazat-otchet-po-praktike/proizvodstvennoj</loc>
         <lastmod>2018-06-29T22:02:03+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/zakazat-otchet-po-praktike/preddiplomnoj</loc>
+        <loc>https://besmarter.ru/zakazat-otchet-po-praktike/preddiplomnoj</loc>
         <lastmod>2018-06-29T22:02:03+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/zakazat-otchet-po-praktike/uchebnoj</loc>
+        <loc>https://besmarter.ru/zakazat-otchet-po-praktike/uchebnoj</loc>
         <lastmod>2018-06-29T22:02:04+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/esse-na-zakaz</loc>
+        <loc>https://besmarter.ru/esse-na-zakaz</loc>
         <lastmod>2018-06-29T22:02:05+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/kontrolnaya-na-zakaz</loc>
+        <loc>https://besmarter.ru/kontrolnaya-na-zakaz</loc>
         <lastmod>2018-06-29T22:02:06+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/referat-na-zakaz</loc>
+        <loc>https://besmarter.ru/referat-na-zakaz</loc>
         <lastmod>2018-06-29T22:02:07+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/referat-na-zakaz/skolko-stoit-referat</loc>
+        <loc>https://besmarter.ru/referat-na-zakaz/skolko-stoit-referat</loc>
         <lastmod>2018-06-29T22:02:07+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/referat-na-zakaz/filosofiya</loc>
+        <loc>https://besmarter.ru/referat-na-zakaz/filosofiya</loc>
         <lastmod>2018-06-29T22:02:08+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/skoraya-pomoshch-studentu</loc>
+        <loc>https://besmarter.ru/stati/skoraya-pomoshch-studentu</loc>
         <lastmod>2018-06-29T22:02:09+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/idealnyj-student-i-idealnyj-aspirant-kak-imi-stat</loc>
+        <loc>https://besmarter.ru/stati/idealnyj-student-i-idealnyj-aspirant-kak-imi-stat</loc>
         <lastmod>2018-06-29T22:02:09+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/kak-naladit-otnosheniya-s-nauchnym-rukovoditelem</loc>
+        <loc>https://besmarter.ru/stati/kak-naladit-otnosheniya-s-nauchnym-rukovoditelem</loc>
         <lastmod>2018-06-29T22:02:10+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/kak-podgotovitsya-i-postupit-v-aspiranturu</loc>
+        <loc>https://besmarter.ru/stati/kak-podgotovitsya-i-postupit-v-aspiranturu</loc>
         <lastmod>2018-06-29T22:02:11+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/kak-podgotovitsya-k-ekzamenu</loc>
+        <loc>https://besmarter.ru/stati/kak-podgotovitsya-k-ekzamenu</loc>
         <lastmod>2018-06-29T22:02:11+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/kak-pravilno-zakazat-diplom</loc>
+        <loc>https://besmarter.ru/stati/kak-pravilno-zakazat-diplom</loc>
         <lastmod>2018-06-29T22:02:13+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/kak-uspeshno-zashhitit-diplomnuyu-rabotu</loc>
+        <loc>https://besmarter.ru/stati/kak-uspeshno-zashhitit-diplomnuyu-rabotu</loc>
         <lastmod>2018-06-29T22:02:14+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/napisanie-diploma</loc>
+        <loc>https://besmarter.ru/stati/napisanie-diploma</loc>
         <lastmod>2018-06-29T22:02:14+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/napisanie-kursovyh-rabot</loc>
+        <loc>https://besmarter.ru/stati/napisanie-kursovyh-rabot</loc>
         <lastmod>2018-06-29T22:02:15+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/napisanie-referatov</loc>
+        <loc>https://besmarter.ru/stati/napisanie-referatov</loc>
         <lastmod>2018-06-29T22:02:16+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/neskolko-pravil-uspeshnoj-zashhity</loc>
+        <loc>https://besmarter.ru/stati/neskolko-pravil-uspeshnoj-zashhity</loc>
         <lastmod>2018-06-29T22:02:16+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/pochemu-studenty-vybirayut-uslugu-diplom-na-zakaz</loc>
+        <loc>https://besmarter.ru/stati/pochemu-studenty-vybirayut-uslugu-diplom-na-zakaz</loc>
         <lastmod>2018-06-29T22:02:17+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/samodisciplina-zalog-otlichnoj-ucheby</loc>
+        <loc>https://besmarter.ru/stati/samodisciplina-zalog-otlichnoj-ucheby</loc>
         <lastmod>2018-06-29T22:02:18+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/sovmestit-rabotu-i-uchebu-realno</loc>
+        <loc>https://besmarter.ru/stati/sovmestit-rabotu-i-uchebu-realno</loc>
         <lastmod>2018-06-29T22:02:18+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/stan-luchshim-studentom-v-vuze</loc>
+        <loc>https://besmarter.ru/stati/stan-luchshim-studentom-v-vuze</loc>
         <lastmod>2018-06-29T22:02:19+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/vybiraem-vuz-svoej-mechty</loc>
+        <loc>https://besmarter.ru/stati/vybiraem-vuz-svoej-mechty</loc>
         <lastmod>2018-06-29T22:02:20+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/kak-sostavit-plan-diplomnoj-raboty</loc>
+        <loc>https://besmarter.ru/stati/kak-sostavit-plan-diplomnoj-raboty</loc>
         <lastmod>2018-06-29T22:02:20+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/zakluchenie-k-diplomnoj-rabote</loc>
+        <loc>https://besmarter.ru/stati/zakluchenie-k-diplomnoj-rabote</loc>
         <lastmod>2018-06-29T22:02:21+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/gipoteza-v-diplomnoj-rabote</loc>
+        <loc>https://besmarter.ru/stati/gipoteza-v-diplomnoj-rabote</loc>
         <lastmod>2018-06-29T22:02:22+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/recenziya-na-diplomnuyu-rabotu</loc>
+        <loc>https://besmarter.ru/stati/recenziya-na-diplomnuyu-rabotu</loc>
         <lastmod>2018-06-29T22:02:22+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/stati/rech-k-diplomnoj-rabote</loc>
+        <loc>https://besmarter.ru/stati/rech-k-diplomnoj-rabote</loc>
         <lastmod>2018-06-29T22:02:23+01:00</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/zakazat-diplomnyj-proekt</loc>
+        <loc>https://besmarter.ru/zakazat-diplomnyj-proekt</loc>
         <lastmod>2018-06-29T22:02:24+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://2018.besmarter.ru/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii</loc>
+        <loc>https://besmarter.ru/dissertaciya-na-zakaz/avtoreferat-dlya-dissertacii</loc>
         <lastmod>2018-06-29T22:02:24+01:00</lastmod>
         <priority>0.8</priority>
     </url>

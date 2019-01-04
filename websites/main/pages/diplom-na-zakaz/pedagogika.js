@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main'
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/diplom'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -31,10 +34,12 @@ import ServiceBlock from "components/common/ServiceBlock";
 import React from "react";
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 const page = () => (
   <Wrapper title="Дипломная работа по педагогике на заказ – цена и сроки написания, сколько стоит заказать диплом в Москве" description="В компании «BeSmarter!» можно срочно и недорого заказать дипломную работу по педагогике по выгодной цене в Москве. Тел. +7 (495) 772-40-90.">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
 
 
@@ -54,30 +59,17 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/diplom-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Дипломная работа</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/diplom-na-zakaz/pedagogika">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По педагогике</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/diplom-na-zakaz" name="Дипломная работа" position="2" />
+            <ItemListElement url="https://besmarter.ru/diplom-na-zakaz/pedagogika" name="По педагогике" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
+      </BlockNav>
       <MessBlock/>
 
         <Diplom/>
@@ -85,8 +77,8 @@ const page = () => (
 <MatZashGirl/>
 
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать дипломную работу по педагогике
         </h1>
         <ul style={{listStyle: 'none'}}>
@@ -100,26 +92,26 @@ const page = () => (
             Вам требуется качественная и интересно написанная дипломная работа по педагогике?
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Тогда Вам просто необходимо обратиться в компанию BeSmarter!
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Наши специалисты охотно подготовят для Вас диплом по коррекционной педагогике и другим педагогическим дисциплинам!
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/dip-po-ped.jpg')} altText="Заказать дипломную работу по педагогике"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Дипломная работа по педагогике
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Если у Вас не достаточного количества времени для написания главного студенческого труда, то специалисты нашей компании подготовят для Вас дипломные работы по социальной педагогике в наиболее сжатые сроки.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Обратившись в BeSmarter!, Вы получаете:
         </p>
         <ul style={{listStyle: 'none'}}>
@@ -148,30 +140,30 @@ const page = () => (
             Мы готовы вносить правки в работу в течение гарантийного срока совершенно бесплатно. Но и после этого мы продолжаем сотрудничать с Вами до Вашей успешной защиты.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Заказать диплом по педагогике
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Если Вы решили заказать дипломную работу по педагогике, то мы охотно принимаем Вашу заявку и подготавливаем техническое задание, по которому наш специалист пишет работу. В задании мы перечисляем предпочитаемые Вами методики, желаемый возраст и количество детей в группах, а также другие важные детали проекта.
           Нужен качественный диплом по педагогике?
 
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Нужен качественный дипломный проект по педагогике? Напишем!
         </p>
-        <p className="block-text__par">
+        <p className="par">
           звоните нам +7 495 772 40 90, воспользуйтесь удобной формой заказа или сразу приезжайте в наш <Link href="/contacts"><b><a>офис</a></b></Link>, который находится на Арбате!
         </p>
-      </section>
+      </TextBlock>
 
         <Video>
             <iframe src="https://www.youtube.com/embed/KM6vU-TKPoE" frameBorder="0"
@@ -184,7 +176,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={links}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

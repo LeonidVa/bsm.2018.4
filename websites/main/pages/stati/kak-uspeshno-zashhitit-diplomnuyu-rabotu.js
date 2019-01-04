@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/diplom';
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -25,12 +28,15 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
+import React from "react";
 
 
 const page = () => (
   <Wrapper title="Как успешно защитить дипломную работу | «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Многие из студентов ведущих вузов защищают в первый раз (и частенько в последний) в своей жизни дипломный проект. Поэтому только одно упоминание о защите дипломной работы и недостаток опыта в данном деле приводит в ужас. Еще бы, ведь испытание для дипломника предстоит не из легких! Возникает мысль – купить диплом на заказ. Однако не стоит бояться, страх Вам отнюдь не товарищ. А вот сведущие специалисты с высшим образованием, написавшие не одну сотню дипломов – как раз наоборот, верные помощники и опора. Ведь кто кроме их знает досконально все правила написания дипломного проекта или работы.">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
 
       <section className="breadcrumbs">
@@ -49,31 +55,18 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/stati">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Статьи</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/stati/kak-uspeshno-zashhitit-diplomnuyu-rabotu">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Как успешно защитить дипломную работу</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/stati" name="Статьи" position="2" />
+            <ItemListElement url="https://besmarter.ru/stati/kak-uspeshno-zashhitit-diplomnuyu-rabotu" name="Как успешно защитить дипломную работу" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
       <section className="block-service">
         <Link href="#form">
@@ -110,16 +103,16 @@ const page = () => (
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Как успешно защитить дипломную работу
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Многие из студентов ведущих вузов защищают в первый раз (и частенько в последний) в своей жизни дипломный проект. Поэтому только одно упоминание о защите дипломной работы и недостаток опыта в данном деле приводит в ужас. Еще бы, ведь испытание для дипломника предстоит не из легких! Возникает мысль – купить <Link
           href="/diplom-na-zakaz"><b><a>диплом на заказ</a></b></Link>. Однако не стоит бояться, страх Вам отнюдь не товарищ. А вот сведущие специалисты с высшим образованием, написавшие не одну сотню дипломов – как раз наоборот, верные помощники и опора. Ведь кто кроме их знает досконально все правила написания дипломного проекта
           или работы.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -129,10 +122,10 @@ const page = () => (
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Основные правила написания диплома
         </h2>
         <ul>
@@ -153,19 +146,19 @@ const page = () => (
             что нужно обратить более пристальное внимание, а чего лучше не касаться вовсе.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Защита диплома – самая ответственная часть Вашего обучения. Ведь она показывает итоги всей учебы в вузе. По ней понятно, какой из Вас получится специалист. Многие компании набирают в свой штат сотрудников по результатам защиты дипломной работы. Поэтому стоит <Link href="/diplom-na-zakaz"><b><a>заказать
           диплом</a></b></Link> у проверенных специалистов, которыми являются сотрудники нашей компании. Тысячи довольных выпускников, с блеском защитившие свои дипломные работы – тому яркое подтверждение. Мы пишем, мы творим, мы делаем дипломы быстро, качественно, разбираясь досконально в самых сложнейших темах – от истории
           межэтнических конфликтов до создания двигателя Николы Тесла.
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

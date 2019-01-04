@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/kurs-na-zakaz-arch';
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -30,11 +33,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import KursovayaRabota from "components/common/ServiceBlock/ready-made/KursovayaRabota";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Где заказать курсовую работу – можно заказать курсовую работу в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="Ищите где заказать курсовую работу надежно и быстро? Не можете решить где лучше купить курсовую? BeSmarter!– лучший сайт для заказа вашей курсовой работы в Москве!">
-    <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <PageWrapper className="bg bg-c2 bg-img bg-img1">
 
 
 
@@ -54,78 +59,64 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Курсовая работа</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz/sait-kursovyh-rabot">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Сайт</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz" name="Курсовая работа" position="2" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz/sait-kursovyh-rabot" name="Сайт" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KursovayaRabota/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Где заказать курсовую работу
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Где лучше купить курсовую работу? Этот вопрос мучает в конце года многих студентов. Причем недостатка в предложениях нет – сайтов для заказа курсовых работ в Интернете хватает. Однако далеко не везде выполнить подобный заказ смогут срочно, недорого, и главное – качественно.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Поэтому вам нужны лучшие сайты для заказа курсовых работ!
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/kur-rab-sayt-s-rurs.jpg')} altText="Где заказать курсовую работу"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           BeSmarter!
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Вас приветствует лучший сайт написания курсовых работ в Интернете! Почему мы так уверены в этом? Дело в том, что на большинстве сайтов, где можно заказать курсовую работу, в качестве исполнителей задействуют фрилансеров – обычно таких же студентов.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           И все, на что там можно рассчитывать, – это плагиат (рерайт) старой чужой работы. Наш сайт по написанию курсовых устроен принципиально иначе.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Компания BeSmarter! не сотрудничает с неквалифицированными кадрами. В нашем штате – действующие преподаватели вузов, имеющие кандидатскую степень по различным направлениям. Они обладают огромным опытом написания научных трудов и способны выполнить заказ быстро и качественно.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Именно поэтому наша компания – это лучшее место, где заказать курсовую работу можно с гарантией качества.
         </p>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Почему мы лучший сайт для заказа курсовых работ?
         </h2>
         <ul>
@@ -140,10 +131,10 @@ const page = () => (
             теме.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как мы работаем?
         </h2>
         <ul className="fitted">
@@ -157,7 +148,7 @@ const page = () => (
             3. Вы оплачиваете остаток суммы и получаете полностью готовый курсач. Автор отвечает на вопросы и помогает вам подготовиться к защите.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -166,11 +157,11 @@ const page = () => (
                     allow="autoplay; encrypted-media" allowFullScreen></iframe>
         </Video>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как и где купить курсовую работу в Москве?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Итак, вы решили, где лучше заказать курсовую работу, осталось уладить формальности. Выберите удобный для себя способ связи.
         </p>
         <ul>
@@ -184,10 +175,10 @@ const page = () => (
             Визит – наш <b><Link href="/contacts"><a>адрес</a></Link></b> в Москве: Большой Кисловский переулок, д. 1 стр. 2, офис 211.
           </li>
         </ul>
-        <p className="block-text__par italic">
+        <p className="par italic">
           Если вам понравилась работать с нами, посоветуйте, где заказать курсовую работу своим знакомым, и они вам будут благодарны!
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
@@ -198,7 +189,7 @@ const page = () => (
           {url: "/kursovoj-proekt-na-zakaz", text: "Заказать курсовой проект"},
         ]
       }/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

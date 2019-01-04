@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -34,12 +37,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
 import KandidatDisForm from "components/common/ServiceBlock/ready-made/KandidatDisForm";
-
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Кандидатская диссертация по праву – заказать в Москве и РФ, цены, сроки написания под ключ" description="Кандидатская диссертация по праву на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
 
 
@@ -63,58 +67,40 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Кандидатская</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya/yurisprudenciya-pravo">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По юриспруденция</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "4"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya" name="Кандидатская" position="3" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/kandidatskaya/yurisprudenciya-pravo" name="По юриспруденции" position="4" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KandidatDisForm/>
 
         <DoctorskayaDis/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Кандидатская диссертация по праву на заказ
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Успешная защита кандидатской диссертации в области права требует значительных усилий. Важно, чтобы подготовленный научный труд соответствовал требованиям ВАК, а тема была актуальной и пригодной для практического применения. От этого во многом зависит успешность защиты. Заказать кандидатскую диссертацию по праву – один из
           лучших способов решения этого вопроса.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Реалии современного общества таковы, что в нормативные акты часто вносятся дополнения и изменения. Поэтому необходимо написать диссертационную работу в как можно более короткие сроки. Для специалиста с плотным рабочим графиком это непростая задача. Разумный выход в подобной ситуации – заказать написание кандидатской
           диссертации в проверенной компании. Компания BeSmarter! предлагает свои услуги по подготовке подобных работ. Вы получите результат под ключ с учетом всех требований ВАК.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           К выполнению кандидатской диссертации по праву будут привлечены высококвалифицированные специалисты с учеными степенями в области юриспруденции. Вы можете заказать как написание всей работы полностью, так и часть научного труда, по собственному выбору. Заказ будет выполнен строго в оговоренный срок за разумную сумму.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -127,8 +113,8 @@ const page = () => (
 
       <ImageBlock imageSrc={require('static/images/block/kand-uri.jpg')}/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Преимущества написания диссертации
         </h2>
         <ul>
@@ -145,39 +131,39 @@ const page = () => (
             Умеренная стоимость.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Возможно, покупка готового диссертационного труда в интернете стоит несколько дешевле, но заказать кандидатскую диссертацию по вопросам права значительно безопаснее. Вы утверждаете план работы, а затем, по мере подготовки, выполняете согласование отдельных глав. Возможно также написание всей работы под ключ. Вы сможете
           заранее сказать научному руководителю, над какими вопросами вам предстоит работать. Таким образом, вы сотрудничаете с научным руководителем, он указывает на возможные недочеты, а мы их оперативно исправляем.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           От чего зависит стоимость
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Цена написания кандидатской в области права зависит от объема работы и сложности выбранной темы. Кроме того, наши специалисты выполняют срочные задания. Естественно, это стоит дороже.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Есть ли возможность сэкономить?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Чтобы заказ обошелся в меньшую сумму, вы можете заказать частичное написание диссертации. Кроме того, мы предлагаем воспользоваться актуальными спецпредложениями компании. В итоге вы получаете возможность заказа не только качественной, но и по-настоящему недорогой работы.
         </p>
-      </section>
+      </TextBlock>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
       <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Этапы сотрудничества с BeSmarter!
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Написание на заказ состоит из таких этапов:
         </p>
         <ul>
@@ -194,7 +180,7 @@ const page = () => (
             Все правки и дополнения в течение гарантийного срока вносятся бесплатно.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -202,7 +188,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={disKanYuri}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/kurs-na-zakaz-arch';
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -30,12 +33,14 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import KursovayaRabota from "components/common/ServiceBlock/ready-made/KursovayaRabota";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Сколько стоит курсовая работа – стоимость курсовой работы в Москве - 2000 рублей, звоните в компанию «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Хотите узнать сколько стоит написать курсовую работу на заказ в Москве? Примерная стоимость курсовой работы – 2000 рублей! Звоните в компанию BeSmarter! И мы вам скажем точно сколько стоит написать курсовую работу.">
-    <div className="wrapper bg bg-c2 bg-img bg-img1">
+    <PageWrapper className="bg bg-c2 bg-img bg-img1">
 
 
 
@@ -55,72 +60,60 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Курсовая работа</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/kursovaya-rabota-na-zakaz/skolko-stoit">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Стоимость</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz" name="Курсовая работа" position="2" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz/skolko-stoit" name="Стоимость" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <KursovayaRabota/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Сколько стоит курсовая работа
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Сколько стоит курсовая работа в Москве? Данным вопросом каждый год интересуются десятки тысяч студентов столичных вузов. Не потому, что они ленивы или недостаточно прилежны – просто времени на все не хватает.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Если вы относитесь к числу таких студентов, то мы надеемся, что данная статья поможет вам узнать, сколько стоит написать курсовую работу в Москве сегодня. А также как сэкономить на данной услуге и найти ответственного и грамотного исполнителя.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/kurs-skolko-stoit.jpg')} altText="Сколько стоит курсовая работа"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как определяется стоимость курсовой работы?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Прежде всего, следует понимать, что регион проживания никак не влияет на цены. Если вам нужна курсовая работа на заказ, цена в Москве, Калининграде или Владивостоке будет одинаковой. Благодаря интернету расстояния исчезли, поэтому клиент и исполнитель могут находиться где угодно и эффективно сотрудничать.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Тем не менее, расценки все же варьируются. На то, сколько стоит курсовая работа, оказывают влияние несколько объективных факторов. В частности: дисциплина (технические специальности дороже), сложность конкретной темы, срочность заказа, фактический объем текста, необходимость написания на иностранном языке и т. д.
         </p>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Сколько стоит курсовая работа в компании BeSmarter!
         </h2>
         <ul>
@@ -140,10 +133,10 @@ const page = () => (
             Заказать курсовую работу на иностранном языке будет стоить примерно в 1,5-2 раза дороже стандартных расценок.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Преимущества сотрудничества с нами
         </h2>
         <ul>
@@ -163,7 +156,7 @@ const page = () => (
             Конфиденциальность. Все аспекты нашего сотрудничества останутся между нами.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -172,11 +165,11 @@ const page = () => (
                     allow="autoplay; encrypted-media" allowFullScreen></iframe>
         </Video>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как заказать?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Выберите наиболее удобный для себя способ связи:
         </p>
         <ol>
@@ -190,7 +183,7 @@ const page = () => (
             Лично – наш <b><Link href="/contacts"><a>адрес</a></Link></b>: Москва, пер. Большой Кисловский, дом 1 строение 2, офис 211.
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
@@ -201,7 +194,7 @@ const page = () => (
           {url: "/kursovoj-proekt-na-zakaz", text: "Заказать курсовой проект"},
         ]
       }/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

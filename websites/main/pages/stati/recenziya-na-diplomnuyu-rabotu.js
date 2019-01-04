@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/diplom';
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -26,11 +29,14 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
+import React from "react";
 
 
 const page = () => (
   <Wrapper title="Как написать рецензию на дипломную работу образец – пример рецензии дипломной работы на сайте компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В статье раскрыта тема: «Как написать рецензию на дипломную работу», приведены общие рекомендации, примеры и образцы заключений дипломных работ.">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
 
       <section className="breadcrumbs">
@@ -49,31 +55,18 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/stati">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Статьи</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/stati/recenziya-na-diplomnuyu-rabotu">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Рецензия на дипломную работу</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/stati" name="Статьи" position="2" />
+            <ItemListElement url="https://besmarter.ru/stati/recenziya-na-diplomnuyu-rabotu" name="Рецензия на дипломную работу" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
       <section className="block-service">
         <Link href="/stati/recenziya-na-diplomnuyu-rabotu#form">
@@ -111,22 +104,22 @@ const page = () => (
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Рецензия на дипломную работу (образец)
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Первоначальное предназначение рецензии состоит в создании внешней объективной оценки исследовательской деятельности, которую провел студент при написании дипломной работы. В этом дополнении к работе пишется мнение независимого рецензента (другого преподавателя, представителя предприятия, где выпускник проходил практику) о
           дипломной работе после ознакомления с материалом. Таким образом, исключается субъективность мнения, что позволяет дать правильную оценку проделанной работе.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/19(12).jpg')} altText="Рецензия на дипломную работу (образец)"/>
 
-      <section className="block-text">
-        <p className="block-text__par">
+      <TextBlock>
+        <p className="par">
           По правилам рецензент должен полностью ознакомиться со всеми частями работы:
         </p>
         <ul>
@@ -143,46 +136,46 @@ const page = () => (
             прочесть каждый раздел работы.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           К счастью или к прискорбию студента, преподаватели далеко в каждом случае имеют достаточно времени, чтобы тратить по несколько часов, а то и дней на тщательное изучение напечатанного. По этой причине студенту важно знать, как писать рецензию на дипломную работу, ведь в некоторых случаях именно ему придется составлять
           данный документ. А преподаватель, если его устроит содержание рецензии, просто подписавшись под готовым документом.
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Оформление рецензии на дипломную работу
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Строгих требований о том, как должна быть оформлена дипломная работа, нет. Но некоторые негласные правила профессионального структурирования документа все же существуют. В большей степени строгость оформления рецензии зависит от того, на какую оценку рассчитывает студент.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Если анализ диплома сводится к рекомендации поставить наивысший балл, необходимо глубоко оценить все части исследовательской работы, аргументировано доказать достижение всех поставленных задач, оценить качество подачи материала, уделить внимание влиянию на материал собственных идей и мыслей автора. Необходимости в таком
           строгом подходе нет, если предполагается более низкая оценка за дипломную работу.
         </p>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как написать рецензию на дипломную работу?
         </h2><br/>
-        <p className="block-text__par italic center">
+        <p className="par italic center">
           "Рецензия – структурированный отзыв одного или нескольких преподавателей вуза, который суммирует и подводит итоговую оценку работе студента. Написание рецензии является обязательным этапом защиты выпускного исследовательского проекта."
         </p><br/>
-        <p className="block-text__par">
+        <p className="par">
           Особых проблем с самостоятельным написанием анализа работы у вас возникнуть не должно, ведь, кто как не вы должен знать сильные и слабые стороны научной работы. Но даже если было решено <a href="/diplom-na-zakaz">заказать дипломную работу</a>, вы все равно будете иметь преимущества перед преподавателем-рецензентом, так
           как, как минимум, у вас будет больше времени на изучение материала.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Обычно рецензия пишется простым, свободным языком. Рекомендуется только избегать разговорных размытых фраз, включая: «отличная дипломная работа», «проведены серьезные исследования», «полностью раскрыта тема», «проделана большая работа» и т.д. Отзыв должен писаться максимально сжато, четко и основываясь на реальные факты.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Базовая структура рецензии следующая:
         </p>
         <ol>
@@ -196,7 +189,7 @@ const page = () => (
             Короткий вывод обо всей дипломной работе в целом, где необходимо указать, допускается ли работа к защите, какова рекомендуемая оценка от автора документа.
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
@@ -207,8 +200,8 @@ const page = () => (
         <iframe src="https://www.youtube.com/embed/-heyiD9tCLc" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
       </Video>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Рецензия включает следующие составные части:
         </h2>
         <ol>
@@ -237,19 +230,19 @@ const page = () => (
             </ul>
           </li>
         </ol>
-        <p className="block-text__par">
+        <p className="par">
           Важно грамотно заполнить каждую часть рецензии, в том числе, указать недостатки. Можно указать нейтральные, не влияющие на оценку недостатки. К примеру, написать, что в материале имеется малое число графиков, диаграмм и изображений или, что в некоторых частях материала не до конца выдержать строгий научный стиль
           повествования.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Обязательно нужно самостоятельно указать, что данные неточности не влияют на качественный уровень научно-исследовательской работы. Если у вас возникнут сложности в написании рецензии, эту задачу можно всегда поручить более опытному рецензенту.
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

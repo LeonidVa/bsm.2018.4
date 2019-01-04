@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -30,97 +33,78 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
+
+
+import Breadcrumbs from 'components/common/Breadcrumbs';
 
 const page = () => (
   <Wrapper title="Где заказать дипломную работу – лучше заказать дипломную работу в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Ищите, где заказать лучше дипломную работу на выгодных условиях? Конечно в BeSmarter! – это единственный ресурс, где можно заказать дипломную работу и быть уверенным в отличном качестве! Звоните Тел. +7 (495) 772-40-90.">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
+
+      <Breadcrumbs links={[
+        {url:'/', text:'Главная'},
+        {url:'/diplom-na-zakaz', text:'Дипломная работа'},
+        {url:'#', text:'Где заказать'},
+      ]}/>
+
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/diplom-na-zakaz" name="Дипломная работа" position="2" />
+            <ItemListElement url="https://besmarter.ru/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu" name="Где заказать" position="3" />
+        </ItemScope>
 
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/diplom-na-zakaz">
-            <a>Дипломная работа</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Где заказать</a>
-          </Link>
-        </div>
-      </section>
-
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/diplom-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Дипломная работа</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/diplom-na-zakaz/gde-zakazat-diplomnuyu-rabotu">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Где заказать</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
-
-      <section className="block-nav">
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
+      </BlockNav>
+        
       <MessBlock/>
 
         <Diplom/>
 
      <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Где заказать дипломную работу
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Где заказать дипломную работу? Каждый год данный вопрос ставят перед собой тысячи студентов вузов. И вовсе не потому, что в России низкий уровень образования – просто времени на подготовку диплома критически не хватает.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Ведь параллельно нужно ходить на пары, сдавать экзамены, проходить практику, а кто-то еще и подрабатывает. И при этом должно еще остаться время на личную жизнь.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           С другой стороны, заказать диплом где угодно – это прямой путь к провалу на защите. Именно поэтому не стоит в целях ложной экономии пользоваться услугами многочисленных фрилансеров, предлагающих написать работу «за 3 копейки». Это почти гарантированно будет плагиат с рерайтом текстов из интернета, что всплывет на
           проверке.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           В таком случае, назревает вопрос: где лучше заказать дипломную работу?
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/gde-zak-dip-rabotu.jpg')} altText="Где заказать дипломную работу"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Где заказать дипломную работу
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Наша компания занимается написанием научных трудов на профессиональной основе. Мы принципиально не сотрудничаем с фрилансерами и прочими копирайтерами, а исключительно с действующими преподавателями вузов, имеющими кандидатскую научную степень.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           BeSmarter! – это единственный ресурс, где можно заказать дипломную работу и быть уверенным в отличном качестве!
         </p>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Наши преимущества:
         </h2>
         <ul>
@@ -143,7 +127,7 @@ const page = () => (
             доступность – где купить дипломную работу высокого качества недорого? Ответ очевиден – в BeSmarter!
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
@@ -151,8 +135,8 @@ const page = () => (
 
       <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Этапы сотрудничества
         </h2>
         <ol>
@@ -166,7 +150,7 @@ const page = () => (
             Результат. В согласованные сроки вы получаете хороший, уникальный диплом. Автор поможет вам подготовиться к успешной защите.
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -175,8 +159,8 @@ const page = () => (
                     allow="autoplay; encrypted-media" allowFullScreen></iframe>
         </Video>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Оформляем заявку (Москва и другие города России)
         </h2>
         <ul style={{listStyle: 'none'}}>
@@ -191,13 +175,13 @@ const page = () => (
           </li>
           <li>визит – наш адрес офиса в Москве – Большой Кисловский переулок, д. 1 стр. 2, офис 211.</li>
         </ul>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
       <LinksBlock links={links}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

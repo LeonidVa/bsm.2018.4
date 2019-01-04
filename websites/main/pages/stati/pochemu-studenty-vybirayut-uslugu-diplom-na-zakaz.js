@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main';
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/diplom';
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -25,12 +28,15 @@ import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
 import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
+import React from "react";
 
 
 const page = () => (
   <Wrapper title="Почему студенты выбирают услугу «диплом на заказ»? | «BeSmarter!». Тел. +7 (495) 772-40-90."
            description="Многие студенты в настоящее время отказываются от самостоятельного написания диплома и предпочитают поручать написание дипломного проекта профессиональным исполнителям. Почему так происходит, почему многие предпочитают диплом на заказ?">
-    <div className="wrapper bg bg-c2 bg-img bg-img3">
+    <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
 
 
@@ -50,31 +56,18 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/stati">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Статьи</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/stati/pochemu-studenty-vybirayut-uslugu-diplom-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Почему студенты выбирают услугу «диплом на заказ»?</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/stati" name="Статьи" position="2" />
+            <ItemListElement url="https://besmarter.ru/stati/pochemu-studenty-vybirayut-uslugu-diplom-na-zakaz" name="Почему студенты выбирают услугу «диплом на заказ»?" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
       <section className="block-service">
         <Link href="/stati/pochemu-studenty-vybirayut-uslugu-diplom-na-zakaz#form">
@@ -111,20 +104,20 @@ const page = () => (
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Почему студенты выбирают услугу «диплом на заказ»?
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Многие студенты в настоящее время отказываются от самостоятельного написания диплома и предпочитают поручать написание дипломного проекта профессиональным исполнителям. Почему так происходит, почему многие предпочитают <a href="/diplom-na-zakaz" target="_blank">диплом на заказ</a>?
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
       <ImageBlock imageSrc={require('static/images/block/19(11).jpg')} altText="Почему студенты выбирают услугу «диплом на заказ»?"/>
 
-      <section className="block-text">
+      <TextBlock>
         <ol className="fitted">
           <li>
             <b>1. </b>Нехватка времени. Многие студенты давно успешно работают и времени на подготовку проекта просто не остается. Немногие родители могут обеспечить учебу ребенка в платном вузе. Отсутствие интереса к кропотливому муторному труду, исправление многочисленных ошибок и замечаний научного руководителя - также является
@@ -140,34 +133,34 @@ const page = () => (
             человека). В этом случае проект диплома на заказ становится спасением.
           </li>
         </ol>
-        <p className="block-text__par">
+        <p className="par">
           Причины могут быть разные. Но каждый студент понимает важность дипломной работы. Если у Вас нет времени, если Вы не уверены в своих силах – обращайтесь к проверенным специалистам. Таковыми специалистами являемся мы - высококвалифицированные специалисты с большим преподавательским стажем.
         </p>
-      </section>
+      </TextBlock>
 
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <p className="block-text__par">
+      <TextBlock>
+        <p className="par">
           Каждый из сотрудников, работающих над Вашими дипломными проектами, обладает огромным опытом создания теоретических работ и написанием отчётов по наработанной обширной практической базе. Готовый дипломный проект по правоведению, дизайну, экономике, международным отношениям или любой другой профилирующей дисциплине пишется
           легко, качественно и быстро, избавляя Вас от ненужного волнения. Поэтому стоит <b><Link href="/diplom-na-zakaz"><b><a>заказать диплом</a></b></Link></b> у нас!
         </p>
-        <p className="block-text__par">
+        <p className="par">
           На защите дипломного проекта часто присутствуют руководители из предприятий по выбранной специальности. В момент презентации диплома многие присматриваются к Вам, как к потенциальному сотруднику. Мы сделаем Вашу дипломную работу интересной, качественной, максимально полно раскрывающей выбранную вами тематику. Ведь именно
           от этих характеристик и зависит итоговая оценка за диплом и итоговое решение – решение в Вашу пользу.
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

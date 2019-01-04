@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main'
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/disser-doc'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -28,10 +31,12 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashDisser from "components/common/ServiceBlock/ready-made/MatZashDisser";
 import DoctorskayaDis1 from "components/common/ServiceBlock/ready-made/DoctorskayaDis1";
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 const page = () => (
   <Wrapper title="Докторская диссертация по медицине на заказ в Москве и РФ – цены, сроки написания под ключ" description="Докторские диссертации по медицине на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-    <div className="wrapper bg bg-c2 bg-img bg-img4">
+    <PageWrapper className="bg bg-c2 bg-img bg-img4">
 
       <section className="breadcrumbs">
         <div className="inner">
@@ -53,37 +58,19 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Диссертация</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/doktorskaya">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Докторская</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/dissertaciya-na-zakaz/doktorskaya/medicina">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">По медицине</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "4"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/doktorskaya" name="Докторская" position="3" />
+            <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz/doktorskaya/medicina" name="По медицине" position="4" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <DoctorskayaDis1/>
 
@@ -91,18 +78,18 @@ const page = () => (
 
 
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Докторские диссертации по медицине
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           Для присвоения ученой степени по медицинской специальности в России необходимо выполнить квалификационную работу – докторскую диссертацию по медицине. В основу научного труда закладываются разработки соискателя, эксперименты, новшества, аналитика уже известных сведений по теме исследования.
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Для написания диссертации нужны время, знания и опыт. И здесь могут возникнуть проблемы, особенно это касается свободного времени. Если его катастрофически не хватает, то написание докторской диссертации по медицине нужно доверить профессионалам. Компания BeSmarter! решит ваши проблемы за короткий срок. Над подготовкой
           исследования будет работать штат опытных авторов.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
 
@@ -116,11 +103,11 @@ const page = () => (
 
       <ImageBlock imageSrc={require('static/images/block/doc-med2.jpg')} altText="Докторская диссертация по медицине"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Преимущества написания в BeSmarter!
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Заказ докторской диссертации – это правильный и оптимальный шаг для соискателей ученой степени. У написания научного труда специалистами есть масса преимуществ:
         </p>
         <ul>
@@ -134,20 +121,20 @@ const page = () => (
             Соответствие оформления работы ГОСТам и требованиям научного руководителя.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Наши исполнители имеют большой опыт в сфере написания докторских работ, дипломных и других проектов. Авторы знают тонкости оформления и все секреты успешной защиты.
         </p>
-      </section>
+      </TextBlock>
 
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Почему лучше заказать работу, а не купить готовую?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Покупка готовой диссертации для соискателя ученой степени по медицине грозит обернуться неудачей по нескольким причинам:
         </p>
         <ol>
@@ -167,13 +154,13 @@ const page = () => (
             Вы не выбираете исполнителя и уровень его профессионализма. Кем и когда написана диссертация в готовом виде, узнать сложно.
           </li>
         </ol>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           От чего зависит цена
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Стоимость докторской диссертации по медицине зависит от:
         </p>
         <ul>
@@ -187,20 +174,20 @@ const page = () => (
             Сложности темы и новизны исследования.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Если вы сами составили план, начали выполнять введение или основные главы, и требуется только доработка, то цена снижается. Стоимость докторской диссертации по медицине в BeSmarter! определяется индивидуально, исходя из тонкостей выполнения задания.
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
       <ImageBlock imageSrc={require('static/images/block/doc-med.jpg')} altText="Докторская диссертация по медицине на заказ"/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как можно сэкономить?
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Снизить затраты на докторскую диссертацию можно следующим образом:
         </p>
         <ul>
@@ -214,13 +201,13 @@ const page = () => (
             Согласуйте с руководителем конечный вариант плана докторской, чтобы избежать доработок впоследствии.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Этапы сотрудничества
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Авторы BeSmarter! сотрудничают с заказчиками по следующему плану:
         </p>
         <ul>
@@ -243,16 +230,16 @@ const page = () => (
             Подготовка плана защиты.
           </li>
         </ul>
-        <p className="block-text__par">
+        <p className="par">
           Чтобы сделать докторскую диссертацию по медицине, свяжитесь с нами по телефону в Москве +7 (495) 772-90-40 или через форму онлайн-заказа на сайте. Компания BeSmarter! заключает официальный договор с клиентами и гарантирует успешную сдачу работы.
         </p>
-      </section>
+      </TextBlock>
 
       <a name="form" id="form"/>
       <FormOrder/>
 
       {/* <LinksBlock links={links}/> */}
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import Wrapper from 'components/Wrapper/indexH2';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
 
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import MessBlock from 'components/common/MessBlock';
 
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
@@ -14,7 +17,7 @@ import fields from 'data/form/main'
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/otchet-po-prak'
 
-import CurrentOfferH2 from 'components/content/offers/CurrentOfferH2';
+import CurrentOffer from 'components/content/offers/CurrentOffer';
 
 import reviewBlockConfig from 'data/reviewBlockConfig'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider';
@@ -31,11 +34,13 @@ import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import OtchPoPrak from "components/common/ServiceBlock/ready-made/OtchPoPrak";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
   <Wrapper title="Заказать отчет по учебной практике – купить отчет по учебной практике в Москве и РФ срочно – цены, сроки написания под ключ" description="Предлагаем заказать отчет по учебной практике! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
-    <div className="wrapper bg bg-c2 bg-img bg-img4">
+    <PageWrapper className="bg bg-c2 bg-img bg-img4">
 
 
       <section className="breadcrumbs">
@@ -54,53 +59,40 @@ const page = () => (
         </div>
       </section>
 
-        <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/zakazat-otchet-po-praktike">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Отчёт по практике</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/zakazat-otchet-po-praktike/uchebnoj">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Учебной</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "3"/>
-            </span>
-        </span>
+        <ItemScope type="http://schema.org/BreadcrumbList">
+            <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+            <ItemListElement url="https://besmarter.ru/zakazat-otchet-po-praktike" name="Отчёт по практике" position="2" />
+            <ItemListElement url="https://besmarter.ru/zakazat-otchet-po-praktike/uchebnoj" name="Учебной" position="3" />
+        </ItemScope>
 
-      <section className="block-nav">
+
+
+      <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
-      </section>
-      <MessBlock/>
+      </BlockNav>
+            <MessBlock/>
 
         <OtchPoPrak/>
 
 <MatZashGirl/>
 
-      <section className="block-text">
-        <h1 className="block-text__title">
+      <TextBlock>
+        <h1 className="title">
           Заказать отчет по учебной практике
         </h1>
-        <p className="block-text__par">
+        <p className="par">
           В нашей компании собран лучший преподавательский состав, состоящий из действующих специалистов разных дисциплин с учеными степенями, начиная от преподавателей вузов до кандидатов наук. Вы будете довольны результатом!
         </p>
-        <p className="block-text__par">
+        <p className="par">
           Перед совершением заказа клиент может лично пообщаться с возможными исполнителями и выбрать на свой взгляд лучшего кандидата. Более 98% наших заказчиков защищаются на «отлично» вследствие такого профессионального подхода.
         </p>
-      </section>
+      </TextBlock>
 
       <FormEstimate/>
       <ImageBlock imageSrc={require('static/images/block/otchet-po-uchebnoy-praktike.jpg')} altText="Заказать отчет по учебной практике"/> 
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как заказать отчет по учебной практике недорого
         </h2>
         <ul>
@@ -117,14 +109,14 @@ const page = () => (
             Особые требования. Мы поможем, если вам требуется заказать написание отчета по учебной практике на другом иностранном языке или 100% уникальность текста (при стандартных 80-98%).
           </li>
         </ul>
-      </section>
+      </TextBlock>
       <InfoBlock infoBlockConfig={infoBlockConfig}/>
       <ProfitsBlockSlider profitBlockConfig={dopy}/>
 
-      <CurrentOfferH2/>
+      <CurrentOffer/>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Какие гарантии предоставляет компания BeSmarter!
         </h2>
         <ul>
@@ -141,13 +133,13 @@ const page = () => (
             <b>Конфиденциальность</b>. Факт сотрудничества остается втайне. В юридически заверенном договоре прописываются обязательства о неразглашении. В нашей компании вы сможете заказать отчет по учебной практике недорого, срочно и с гарантией качества.
           </li>
         </ul>
-      </section>
+      </TextBlock>
 
-      <section className="block-text">
-        <h2 className="block-text__title">
+      <TextBlock>
+        <h2 className="title">
           Как купить отчет по учебной практике в Москве
         </h2>
-        <p className="block-text__par">
+        <p className="par">
           Есть несколько способов заказать работу:
         </p>
         <ul>
@@ -161,10 +153,10 @@ const page = () => (
             Либо встретиться лично у нас - в удобном офисе, в центре столицы по адресу, указанному в наших <Link href="/contacts"><b><a>контактах</a></b></Link>.
           </li>
         </ul>
-        <p className="block-text__par" style={{fontStyle: 'italic', textAlign: 'center'}}>
+        <p className="par" style={{fontStyle: 'italic', textAlign: 'center'}}>
           BeSmarter! – это качественные, уникальные, грамотно оформленные работы под заказ в Москве на выгодных условиях!
         </p>
-      </section>
+      </TextBlock>
 
       <ReviewBlockSlider reviewBlockConfig={reviewBlockConfig}/>
 
@@ -177,7 +169,7 @@ const page = () => (
       <FormOrder/>
 
       <LinksBlock links={otchet}/>
-    </div>
+    </PageWrapper>
   </Wrapper>
 );
 

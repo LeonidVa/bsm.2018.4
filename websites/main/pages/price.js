@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import React, {Component} from 'react';
-import Wrapper from 'components/Wrapper/indexH2';
-import NavRow from 'components/common/NavRow';
+import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
+import TextBlock from 'components/common/TextBlock';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 import ImageBlock from 'components/common/ImageBlock'
 import Accordion from 'components/common/Accordion'
 import FormOrder from 'components/common/forms/Big/Order';
@@ -15,11 +18,13 @@ import dopy from 'data/dopraboty'
 import MagisDisPricePage from "components/common/ServiceBlock/ready-made/MagisDisPricePage";
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl";
 import Title from "components/common/Title";
+import ItemScope from "components/common/schema.org/ItemScope"
+import ItemListElement from "components/common/schema.org/ItemListElement"
 
 
 const page = () => (
     <Wrapper title="Услуги и цены" description="На этой странице представлены цены на дипломные, курсовые работы и многие другие услуги компании.">
-        <div className="wrapper bg bg-c2 bg-img bg-img2">
+        <PageWrapper className="bg bg-c2 bg-img bg-img2">
             <Title><span className="black">Стоимость услуг</span></Title>
 
 
@@ -35,41 +40,35 @@ const page = () => (
                 </div>
             </section>
 
-            <span visibility = "hidden" height = "0" weidht = "0" itemScope itemType = "http://schema.org/BreadcrumbList">
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href = "https://besmarter.ru/">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Главная</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "1"/>
-            </span>
-            <span visibility = "hidden" height = "0" width = "0" itemProp = "itemListElement" itemScope
-                  itemType = "http://schema.org/ListItem">
-                <a visibility = "hidden" height = "0" width = "0" itemProp = "item" href= "https://besmarter.ru/price">
-                    <span visibility = "hidden" height = "0" width = "0" itemProp = "name">Услуги и цены</span></a>
-                <meta visibility = "hidden" height = "0" width = "0" itemProp = "position" content = "2"/>
-            </span>
-        </span>
+
+            <ItemScope type="http://schema.org/BreadcrumbList">
+                <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
+                <ItemListElement url="https://besmarter.ru/price" name="Услуги и цены" position="2" />
+            </ItemScope>
 
 
 
-            <section className="block-text">
-                <span className="block-text__title__h2">Цена вашей работы</span>
-                <p className="block-text__par">
+
+
+
+            <TextBlock>
+                <span className="title__h2">Цена вашей работы</span>
+                <p className="par">
                     Ваша работа индивидуальна, она пишется преподавателем только для вас!
                 </p>
-                <p className="block-text__par">
+                <p className="par">
                     Поэтому здесь мы показываем стоимость работы ориентировочно.
                 </p>
-                <p className="block-text__par">
+                <p className="par">
                     Точно определит цену вашей работы менеджер, когда вы уточните все ваши требования и пожелания. При необходимости, менеджер срочно переговорит с преподавателем.
                 </p>
-                <p className="block-text__par">
+                <p className="par">
                     Обращайтесь к нам сразу, как только вы получили темы работ. Мы подберем самый выгодный вариант!
                 </p>
-                <p className="block-text__par">
+                <p className="par">
                     Чтобы узнать точную стоимость вашего заказа, свяжитесь с нами по телефону &nbsp;+7 495 772 40 90, а лучше приезжайте с заданием к нам в офис в центре Москвы (пер. Большой Кисловский, дом 1, стр. 2, оф.211).
                 </p>
-            </section>
+            </TextBlock>
 
 
             <Accordion
@@ -285,9 +284,9 @@ const page = () => (
 
             <FormOrder/>
 
-            <section className="block-text">
-                <span className="block-text__title__h2">У разных работ – разная стоимость</span>
-                <p className="block-text__par">
+            <TextBlock>
+                <span className="title__h2">У разных работ – разная стоимость</span>
+                <p className="par">
                     Стоимость заказа зависит от нескольких объективных факторов:
                 </p>
                 <ul>
@@ -316,10 +315,10 @@ const page = () => (
                         чем больше вы нам даете времени на написание, тем дешевле будет заказ.
                     </li>
                 </ul>
-                <p className="block-text__par center"><b>
+                <p className="par center"><b>
                     Экономьте ваши деньги – <Link href="#form"><a>заказывайте</a></Link> прямо сейчас!</b>
                 </p>
-            </section>
+            </TextBlock>
 
             <MatZashGirl/>
 
@@ -330,7 +329,7 @@ const page = () => (
 
             <LinksBlock links={links}/>
 
-        </div>
+        </PageWrapper>
     </Wrapper>
 );
 

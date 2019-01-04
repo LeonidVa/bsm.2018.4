@@ -27,15 +27,13 @@ app.prepare()
         });
 
         server.get('*', (req, res) => {
-            const redirUrl = redirectionUtils.redirectList[req.path];
-            if (redirUrl !== undefined) {
+            const redirUrl = redirectionUtils.redirectURL(req);
+            if (redirUrl !== null) {
                 res.redirect(301, redirUrl);
-                return;
-            } else if (redirectionUtils.pathMatches(req.path, /.+\/+$/g, ['/'])) {
-                res.redirect(301, redirectionUtils.removeTrailingSlash(req.path));
                 return;
             }
             /* serving page */
+            //res.setHeader('Link', '<https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i&subset=cyrillic>; rel=prefetch');
             return renderAndCache(req, res)
         });
 

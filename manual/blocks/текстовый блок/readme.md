@@ -19,16 +19,18 @@
 `<ul className="block-text__list2">`
 
 ### Пример использования
-```js
-<section className="block-text">
-    <h2 className="block-text__title">
+```jsx
+import TextBlock from 'components/common/TextBlock'
+
+<TextBlock>
+    <h2 className="title">
         Дипломная работа на заказ
     </h2>
-    <p className="block-text__par">
+    <p className="par">
         Хотите заказать дипломную работу, но не знаете, куда следует обратиться?
     </p>
-    <p className="block-text__par">
+    <p className="par">
         Не желаете тратить большое количество времени на самостоятельную разработку заданной темы, и хотите заказать диплом у профессионалов?
     </p>
-</section>
+</TextBlock>
 ```

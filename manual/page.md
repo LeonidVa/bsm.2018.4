@@ -46,11 +46,11 @@ const page = () => (
                 </div>
             </section>
 
-            <section className="block-nav">
+            <BlockNav>
                 <NavRow title="Оценить работу" description="Узнайте сроки и цену вашей работы" url='#'/>
                 <NavRow title="Почесать репу" description="Почеши сейчас совершенно бесплатно" url='/'/>
-            </section>
-            <MessBlock/>
+            </BlockNav>
+ <MessBlock/>
             <InfoBlock infoBlockConfig={infoBlockConfig}/>
 
             <ImageBlock imageSrc={require('static/images/block/a.jpg')}/>

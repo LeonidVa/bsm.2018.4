@@ -22,10 +22,11 @@
 
 ### Пример использования
 ```jsx
-import NavRow from 'components/common/NavRow';
+import BlockNav from 'components/common/BlockNav';
+import NavRow from 'components/common/BlockNav/NavRow';
 
-<section className="block-nav">
+<BlockNav>
     <NavRow title="Оценить работу" description="Узнайте сроки и цену вашей работы" url='#'/>
     <NavRow title="Почесать репу" description="Почеши сейчас совершенно бесплатно" url='/'/>
-</section>
+</BlockNav>
 ```

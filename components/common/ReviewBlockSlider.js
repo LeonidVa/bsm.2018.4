@@ -18,17 +18,8 @@ const ReviewBlock = styled.p`
 
 const ReviwsAuthor = styled.div`
   display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   justify-content: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: justify;
   align-items: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   padding-top: 0.5rem;
 `;
 

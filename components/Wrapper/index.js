@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { connect as reduxConnect } from 'react-redux'
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-
 import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/ExitPopup'
 import CallPopup, {callPopupContext, callPopupState} from 'components/modals/Call'
 import ErrorModal from 'components/modals/Error'
@@ -11,7 +10,6 @@ import getConfig from 'next/config';
 import stat from 'utils/analytics'
 import { sendForm } from '@redux/data/form';
 import { isStringEmpty } from '@helpers/isStringEmpty';
-
 const {publicRuntimeConfig = {}} = getConfig();
 
 class Wrapper extends Component {

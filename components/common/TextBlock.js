@@ -1,27 +1,8 @@
 import React, {Component} from 'react';
 
 import styled from "styled-components"
-/*
-*       <section className="block-text">
-        <h1 className="block-text__title">
-          Помощь студентам
-        </h1>
-        <p className="block-text__par">
-          Наш сервис максимально направлен на качественное выполнение заказов.
-        </p>
-        <p className="block-text__par">
-          Оказывать помощь студентам мы начинаем уже в первые минуты вашего звонка или сообщения на наш сайт.
-        </p>
-        <p className="block-text__par">
-          После поступления заявки наши менеджеры просчитывают все этапы написания, сложность и объем.
-        </p>
-        <p className="block-text__par">
-          Вы получаете оперативный ответ, вносите предоплату и наши авторы начинают написание студенческих работ сразу же.
-        </p>
-      </section>
-* */
 
-const BlockText = styled.div  `
+const BlockText = styled.div`
   font-size: 1rem;
   width: 34em;
   margin: 3rem auto 0;
@@ -30,7 +11,7 @@ const BlockText = styled.div  `
   color: #4a4a4a;
   position: relative;
   z-index: 0;
-
+  box-sizing: border-box;
   a {
     text-decoration: none;
     @media (max-width: 660px) {
@@ -45,7 +26,6 @@ const BlockText = styled.div  `
   b {
     font-weight: 700;
   }
-
   @media (max-width: 900px) {
     width: 70%;
     min-width: 273px;
@@ -243,7 +223,6 @@ const BlockText = styled.div  `
       }
     }
   }
-
 `;
 
 class TextBlock extends Component{

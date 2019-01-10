@@ -46,23 +46,3 @@ const Breadcrumbs = ({links}) => (<BreadcrumbsWrapper>
 
 export default Breadcrumbs
 
-/*      <section className="breadcrumbs">
-        <div className="inner">
-
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-
-          <span> / </span>
-
-          <Link href="/diplom-na-zakaz">
-            <a>Дипломная работа</a>
-          </Link>
-
-          <span> / </span>
-          <Link href="#">
-            <a>Где заказать</a>
-          </Link>
-
-        </div>
-      </section>*/

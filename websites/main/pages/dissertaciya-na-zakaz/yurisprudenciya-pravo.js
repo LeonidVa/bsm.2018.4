@@ -42,7 +42,7 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
       <MetaTags>
-        {/* <title></title> */}
+       
         <meta name="keywords" content="Заказать диссертацию по юриспруденции помощь в написании на заказ в Москве написать в короткие сроки срочно под заказ сколько стоит написать"/>
       </MetaTags>
 

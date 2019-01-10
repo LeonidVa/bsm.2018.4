@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-
 import styled from 'styled-components';
-
 
 const PageWrapper = styled.div`
   font-family: "Ubuntu", sans-serif;

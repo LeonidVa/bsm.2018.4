@@ -69,7 +69,6 @@ const BlockFormRed = styled.section`
   }
 `;
 
-
 const BlockFormBtn = styled.button`
 font-family: "Ubuntu", sans-serif;
 font-size: .56em;
@@ -116,7 +115,6 @@ const BlockFormTitle = styled.div`
   margin-bottom: .625em;
   letter-spacing: -1px;
 `;
-
 
 const BlockFormMessage = styled.div`
   text-align: center;
@@ -173,7 +171,6 @@ const FormInput = styled.input`
   }
 `;
 
-
 const FormTextarea = styled.textarea`
   display: block;
   font-size: .44em;
@@ -189,7 +186,6 @@ const FormTextarea = styled.textarea`
     border: 1px solid #f4511e;
 }
 `;
-
 
 /*   fields are stored in /data/main.js   */
 

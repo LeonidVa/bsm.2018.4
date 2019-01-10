@@ -35,8 +35,6 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import MagisDisGdeZakazat from "components/common/ServiceBlock/ready-made/MagisDisGdeZakazat"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
-import Breadcrumbs from "components/common/Breadcrumbs";
-import React from "react";
 
 const page = () => (
   <Wrapper title="Сколько стоит магистерская диссертация – цена написания магистерской диссертации на заказ – от 24 000 руб. | «BeSmarter!». Тел. +7 (495) 772-40-90."
@@ -45,13 +43,25 @@ const page = () => (
 
 
 
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
-            {url:'/dissertaciya-na-zakaz/magisterskaya', text:'Магистерская'},
-            {url:'#', text:'Стоимость'},
-        ]}/>
-
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная </a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz">
+            <a>Диссертация</a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz/magisterskaya">
+            <a>Магистерская</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>Стоимость</a>
+          </Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

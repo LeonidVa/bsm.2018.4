@@ -35,8 +35,6 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import MagisDisGdeZakazat from "components/common/ServiceBlock/ready-made/MagisDisGdeZakazat"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
-import Breadcrumbs from "components/common/Breadcrumbs";
-import React from "react";
 
 const page = () => (
   <Wrapper title="Где заказать (купить) магистерскую диссертацию – можно заказать диссертацию магистра в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="Где заказать магистерскую диссертацию? Лучшее место в Москве, где заказать магистерскую диссертацию можно с гарантией успешной защиты – компания BeSmarter!">
@@ -44,13 +42,25 @@ const page = () => (
 
 
 
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
-            {url:'/dissertaciya-na-zakaz/magisterskaya', text:'Магистерская'},
-            {url:'#', text:'Где заказать'},
-        ]}/>
-
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная </a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz">
+            <a>Диссертация</a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz/magisterskaya">
+            <a>Магистерская</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>Где заказать</a>
+          </Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

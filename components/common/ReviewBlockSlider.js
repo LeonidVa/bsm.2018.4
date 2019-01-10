@@ -3,69 +3,69 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 
 const BlockSliderReviewsItem = styled.div`
-  padding: .38em;
+padding: .38em;
 `; 
 
 const ReviewBlock = styled.p`
-  font-size: .5em;
-  color: #4a4a4a;
-  line-height: 1.5;
-  margin-bottom: .31em;
-  &-bottom {
-    font-weight: 700;
-  }
+font-size: .5em;
+color: #4a4a4a;
+line-height: 1.5;
+margin-bottom: .31em;
+&-bottom {
+  font-weight: 700;
+}
 `;
 
 const ReviwsAuthor = styled.div`
-  display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  justify-content: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: justify;
-  align-items: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  padding-top: 0.5rem;
+display: flex;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+justify-content: flex-start;
+-webkit-box-pack: justify;
+-webkit-justify-content: flex-start;
+-ms-flex-pack: justify;
+align-items: center;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+padding-top: 0.5rem;
 `;
 
 const Img = styled.img`
-  margin: 0;
-  font-size: 1em;
-  width: 1.72em;
-  height: 1.72em;
+margin: 0;
+font-size: 1em;
+width: 1.72em;
+height: 1.72em;
 `;
 
 const ReviewsAuthorData = styled.div`
-  padding-left: 0.5rem;
+padding-left: 0.5rem;
 `;
 
 const ReviewsName = styled.span`
-  display: block;
-  font-size: .59em;
-  color: #191919;
-  line-height: normal;
+display: block;
+font-size: .59em;
+color: #191919;
+line-height: normal;
 `;
 
 const ReviewsJob = styled.span`
-  display: block;
-  font-size: .5em;
-  color: #c0c0c0;
-  line-height: normal;
-  &.job-orange {
-    color: #f4511e;
-  }
+display: block;
+font-size: .5em;
+color: #c0c0c0;
+line-height: normal;
+&.job-orange {
+  color: #f4511e;
+}
 `;
 
 const BlockSliderSlideReview = styled.div`
-  max-width: 100% !important;
+max-width: 100% !important;
 `;
 
 const BlockSliderReview = styled.section `
-  max-width: 100%;
+max-width: 100%;
 `;
 
 const Review = ({ faceImg, reviewText, bottom, name, prof }) => (

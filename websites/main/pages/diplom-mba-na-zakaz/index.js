@@ -34,7 +34,7 @@ import servicecards from "data/serviceBlock/matzash";
 import DipMBA from "components/common/ServiceBlock/ready-made/DipMBA"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
-import Breadcrumbs from 'components/common/Breadcrumbs';
+
 
 
 const page = () => (
@@ -43,11 +43,14 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/diplom-mba-na-zakaz', text:'Диплом MBA'},
-        ]}/>
-        
+
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/"><a>Главная</a></Link>
+          <span> / </span>
+          <Link href="/diplom-mba-na-zakaz"><a>Диплом MBA</a></Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

@@ -11,7 +11,7 @@ import getConfig from 'next/config';
 import stat from 'utils/analytics'
 import { sendForm } from '@redux/data/form';
 import { isStringEmpty } from '@helpers/isStringEmpty';
-
+import styled from 'styled-components';
 const {publicRuntimeConfig = {}} = getConfig();
 
 class Wrapper extends Component {
@@ -23,7 +23,7 @@ class Wrapper extends Component {
         stat.triggerTarget.pageView(url);
     }
 
-    onSendFormAction(){};
+    onSendFormAction;
 
     constructor(props) {
         super(props);

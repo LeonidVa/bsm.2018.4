@@ -38,8 +38,6 @@ import DoctorskayaDis from "components/common/ServiceBlock/ready-made/Doctorskay
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
-import Breadcrumbs from "../../../../../components/common/Breadcrumbs";
-import React from "react";
 
 const page = () => (
   <Wrapper title="Сколько стоит кандидатская диссертация – цена кандидатской диссертации от 150 000 рублей | Закажите кандидатскую диссертацию по выгодной стоимости, в компании «BeSmarter!». Тел. +7 (495) 772-40-90."
@@ -48,13 +46,25 @@ const page = () => (
 
 
 
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
-            {url:'/dissertaciya-na-zakaz/kandidatskaya', text:'Кандидатская'},
-            {url:'#', text:'Стоимость'},
-        ]}/>
-
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная </a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz">
+            <a>Диссертация</a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz/kandidatskaya">
+            <a>Кандидатская</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>Стоимость</a>
+          </Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

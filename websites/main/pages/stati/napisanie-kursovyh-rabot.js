@@ -32,7 +32,6 @@ import KursovayaRabota from "components/common/ServiceBlock/ready-made/Kursovaya
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
 import React from "react";
-import Breadcrumbs from "components/common/Breadcrumbs";
 
 
 const page = () => (
@@ -42,13 +41,21 @@ const page = () => (
 
 
 
-
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/stati', text:'Статьи'},
-            {url:'#', text:'Написание курсовых работ'},
-        ]}/>
-
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная</a>
+          </Link>
+          <span> / </span>
+          <Link href="/stati">
+            <a>Статьи</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>Написание курсовых работ</a>
+          </Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

@@ -2,6 +2,100 @@ import React, {Component, createContext} from 'react';
 import './style.scss';
 import Close from "../Close/index";
 import PhoneAndSubmit from 'components/common/forms/PhoneAndSubmit';
+import styled from 'styled-components';
+
+
+const ModalSale = styled.div`
+position: fixed;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,.5);
+top: 0;
+left: 0;
+font-size: 1em;
+z-index: 4;
+font-family: "Ubuntu-Regular", sans-serif;
+`;
+
+const BodyWhite = styled.div`
+    background: #fff;
+    border: 2px solid #d84315;
+    margin-left: -17.5em;
+`; 
+
+const FormAlert = styled.div`
+//min-height: 250px;
+background: #fff;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #4A4A4A;
+`;
+
+const BlockFormTitle = styled.div`
+font-size: 2em;
+`;
+
+
+const ModalSaleTop = styled.div`
+ display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        justify-content: space-between;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        margin-bottom: .4em;
+`;
+const Percent = styled.span`
+text-align: center;
+`;
+
+const ModalSaleBody=styled.div`
+    width: 34.18em;
+    max-width: 100%;
+    left: 50%;
+    top: 50%;
+    margin-left: -17.09em;
+    transform: translateY(-50%);
+    padding: 1.5em 2.18em 2.5em;
+    background-color: #FF8A65;
+    background-size: cover;
+    background-position: 50% 0%;
+    font-size: 1em;
+    @media (max-width: 550px) {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        font-size: .8em;
+    }
+    @media (max-width: 420px) {
+        font-size: .7em;
+    }
+    @media (max-width: 370px) {
+        font-size: .6em;
+    }
+`;
+
+const P = styled.p`
+text-align: center;
+`;
+
+const TopText = styled.span`
+font-size: 1.5em;
+`;
+
+const PText = styled.p`
+font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: .5em;
+`;
 
 
 const exitPopupState = {
@@ -40,31 +134,31 @@ class ExitPopup extends Component {
                         return null
                     }
                     return (
-                        <div id="modal_sale"
+                        <ModalSale id="modal_sale"
                              className={`modal-sale ${className}`}
                              style={{display: 'block'}}
                              onClick={() => context.hide()}
                         >
-                            <div className={"modal-sale__body modal__body" + (this.state.sent ? " body-white" : "")}
+                            <ModalSaleBody className={"modal-sale__body modal__body" + (this.state.sent ? " body-white" : "")}
                                  onClick={(e) => e.stopPropagation()}
                             >
                               <Close onClick={() => {
                                 context.hide()
                               }}/>
-                                <div className="block-form__message form_alert" style={{display: this.state.sent ? "flex" : "none"}}>
+                                <FormAlert className="block-form__message form_alert" style={{display: this.state.sent ? "flex" : "none"}}>
                                   <Close onClick={() => {
                                     context.hide()
                                   }} inverse/>
                                   <img style={{ width: '100%' }} src={require("static/images/fox-circle.svg")} alt="Fox"/>
-                                  <div className="block-form__title">Спасибо!</div>
-                                  <p>Мы получили Ваше сообщение и скоро свяжемся с Вами!</p>
-                                </div>
+                                  <BlockFormTitle className="block-form__title">Спасибо!</BlockFormTitle>
+                                  <P>Мы получили Ваше сообщение и скоро свяжемся с Вами!</P>
+                                </FormAlert>
                                 <div className="block-form__message" style={{display: this.state.sent ? "none" : "block"}}>
-                                    <div className="modal-sale__top">
-                                        <span className="percent">{bonus}</span>
-                                        <span className="top-text">{message}</span>
-                                    </div>
-                                    <p>{text}</p>
+                                    <ModalSaleTop className="modal-sale__top">
+                                        <Percent className="percent">{bonus}</Percent>
+                                        <TopText className="top-text">{message}</TopText>
+                                    </ModalSaleTop>
+                                    <PText>{text}</PText>
                                     <PhoneAndSubmit
                                         formType="Бонус при заказе 500р"
                                         targetID="sale_500"
@@ -73,8 +167,8 @@ class ExitPopup extends Component {
                                         onSent={this.onSent}
                                     />
                                 </div>
-                            </div>
-                        </div>
+                            </ModalSaleBody>
+                        </ModalSale>
                     )
                 }}
             </exitPopupContext.Consumer>

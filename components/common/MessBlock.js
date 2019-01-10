@@ -1,24 +1,24 @@
 import React, {Component} from 'react'
 import socials from 'data/socials';
 import stat from 'utils/analytics';
-import styled from "styled-components"
+import styled from "styled-components";
 
 
 const BlockMess = styled.section `
-    font-size: 1em;
-    width: 34em;
-    margin: 1em auto 0;
-    background-color: #fff;
-    position: relative;
-    z-index: 1;
-    @media (max-width: 900px) {
-        width: 70%;
-        min-width: 273px;
-    }
-    @media (max-width: 660px) {
-        width: 100%;
-        // font-size: 1.4em;
-    }
+font-size: 1em;
+width: 34em;
+margin: 1em auto 0;
+background-color: #fff;
+position: relative;
+z-index: 1;
+@media (max-width: 900px) {
+    width: 70%;
+    min-width: 273px;
+}
+@media (max-width: 660px) {
+    width: 100%;
+    // font-size: 1.4em;
+}
 `;
 
 
@@ -26,9 +26,6 @@ const BlockMessItem = styled.a `
 color: white;
 width: 20%;
 display: flex;
-display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
 align-items: center;
 -webkit-box-align: center;
 -webkit-align-items: center;
@@ -48,10 +45,7 @@ img { width: 33%; }
 `;
 
 const BlockMessList = styled.div `
-    display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+display: flex;
 `;
 
 const BlockMessTitle = styled.span`

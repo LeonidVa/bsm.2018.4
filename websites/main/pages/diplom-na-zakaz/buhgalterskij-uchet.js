@@ -35,20 +35,29 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
  import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
  import ItemScope from "components/common/schema.org/ItemScope"
  import ItemListElement from "components/common/schema.org/ItemListElement"
- import Breadcrumbs from 'components/common/Breadcrumbs';
+
 
 const page = () => (
   <Wrapper title="Заказать дипломную работу по бухгалтерскому учёту в Москве, в компании «BeSmarter!». Тел. +7 (495) 772-40-90." description="В компании «BeSmarter!» можно срочно и недорого заказать дипломную работу по бухгалтерскому учету по выгодной цене в Москве. Тел. +7 (495) 772-40-90.">
     <PageWrapper className="bg bg-c2 bg-img bg-img5">
 
 
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/diplom-na-zakaz', text:'Дипломная работа'},
-            {url:'#', text:'По бухгалтерскому учёту'},
-        ]}/>
 
-
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная</a>
+          </Link>
+          <span> / </span>
+          <Link href="/diplom-na-zakaz">
+            <a>Дипломная работа</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>По бухгалтерскому учёту</a>
+          </Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

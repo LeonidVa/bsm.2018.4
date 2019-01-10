@@ -28,7 +28,7 @@ class page extends Component {
     return (
       <Wrapper
         title="BeSmarter!"
-        description="Консультация студентов по любым вопросам! Быстрая и профессиональная помощь в подготовке к защите."
+        description="Написание диплома на заказ! Быстрая, недорогая и профессиональная помощь в подготовке дипломной работы – компания BeSmarter. Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40."
         showHamburger={false}
         headerNavButtons={
           <HeaderUl>
@@ -44,7 +44,6 @@ class page extends Component {
             </HeaderLi>
           </HeaderUl>
         }
-        /*
         footerNavButtons={
           <ul>
             <li>
@@ -55,18 +54,17 @@ class page extends Component {
                 <a>Контакты</a>
               </Link>
             </li>
-            <li><a target="_blank" href={socials.vk.url}><img src={socials.vk.icon}/></a></li>
-            <li><a target="_blank" href={socials.facebookMessenger.url}><img src={socials.facebookMessenger.icon}/></a></li>
-            <li><a target="_blank" href={socials.facebook.url}><img src={socials.facebook.icon}/></a></li>
-            <li><a target="_blank" href={socials.youtube.url}><img src={socials.youtube.icon}/></a></li>
-            <li><a target="_blank" href={socials.telegram.url}><img src={socials.telegram.icon}/></a></li>
-            <li><a target="_blank" href={socials.whatsapp.url}><img src={socials.whatsapp.icon}/></a></li>
-            <li><a target="_blank" href={socials.instagram.url}><img src={socials.instagram.icon}/></a></li>
+            <li><a target="_blank" href={socials.vk.url}>{socials.vk.icon}</a></li>
+            <li><a target="_blank" href={socials.facebookMessenger.url}>{socials.facebookMessenger.icon}</a></li>
+            <li><a target="_blank" href={socials.facebook.url}>{socials.facebook.icon}</a></li>
+            <li><a target="_blank" href={socials.youtube.url}>{socials.youtube.icon}</a></li>
+            <li><a target="_blank" href={socials.telegram.url}>{socials.telegram.icon}</a></li>
+            <li><a target="_blank" href={socials.whatsapp.url}>{socials.whatsapp.icon}</a></li>
+            <li><a target="_blank" href={socials.instagram.url}>{socials.instagram.icon}</a></li>
           </ul>
-        }*/
+        }
       >
-
-          <PageWrapper className="bg bg-c2 bg-img bg-img3">
+        <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
           <BlockNav>
             <NavRow
@@ -82,10 +80,8 @@ class page extends Component {
               description="Адрес, телефон и время работы"
             />
           </BlockNav>
+ <MessBlock/>
 
-            {/*
-                <MessBlock/>
-            */}
           <ServiceBlock
             color="#333333"
             url="#pricing"
@@ -227,6 +223,15 @@ class page extends Component {
                 Суббота - Воскресенье <span className="bold">с 10:00 до 18:30</span><br/>
               </p>
               <p className="par finish-text">
+                  График работы в новогодние праздники:
+              </p>
+              <ul className='schedule'>
+                  <li>28 декабря с 9-00 до 15-30</li>
+                  <li>29 декабря, 3, 4 и 8 января с 10-00 до 19-00</li>
+                  <li>30 декабря с 10-00 до 15-00 </li>
+                  <li>31 декабря и 1,2,5,6,7 января - выходной</li>
+              </ul>
+              <p className="par finish-text">
                 Приходите – мы ждём Вас!
               </p>
 
@@ -241,6 +246,16 @@ class page extends Component {
                 Понедельник - пятница <span className="bold">с 09:00 до 23:00</span><br/>
                 Суббота - воскресенье <span className="bold">с 09:00 до 22:00</span>
               </p>
+              <p className="par finish-text">
+                  График работы в новогодние праздники:
+              </p>
+              <ul className='schedule'>
+                  <li>28 декабря с 9-00 до 19-00</li>
+                  <li>29, 30 декабря с 9-00 до 22-00 </li>
+                  <li>31 декабря, 1,2,5,6,7 января с 12-00 до 18-00  </li>
+                  <li>3,4 января с 10-00 до 22-00 </li>
+                  <li>8 января – с 10-00 до 19-00</li>
+              </ul>
               <p className="par finish-text">
                 Звоните – будем рады поговорить!
               </p>
@@ -265,6 +280,8 @@ class page extends Component {
               </div>
             </TextBlock>
           </div>
+
+          <ImageBlock imageSrc={require('static/images/block/happy-new-year.jpg')}/>
 
           <MapBlock/>
           <TextBlock>

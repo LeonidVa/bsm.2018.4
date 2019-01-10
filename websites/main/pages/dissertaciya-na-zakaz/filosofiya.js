@@ -35,21 +35,27 @@ import DoctorskayaDis from "components/common/ServiceBlock/ready-made/Doctorskay
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
-import Breadcrumbs from "components/common/Breadcrumbs";
-import React from "react";
 
 const page = () => (
   <Wrapper title="Диссертация по философии на заказ в Москве и РФ – цены, сроки написания под ключ" description="Диссертация по философии на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
-
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
-            {url:'#', text:'По философии'},
-        ]}/>
-
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная </a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz">
+            <a>Диссертация</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>По философии</a>
+          </Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

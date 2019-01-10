@@ -35,8 +35,6 @@ import DoctorskayaDis from "components/common/ServiceBlock/ready-made/Doctorskay
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
-import Breadcrumbs from "components/common/Breadcrumbs";
-import React from "react";
 
 const page = () => (
   <Wrapper title="Соискательство | «BeSmarter!». Тел. +7 (495) 772-40-90." description="Если у Вас нет времени учиться в аспирантуре, а Вы хотите защитить кандидатскую диссертацию, то Вы можете стать соискателем ученой степени кандидата наук.">
@@ -44,13 +42,21 @@ const page = () => (
 
 
 
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
-            {url:'#', text:'Соискательство'},
-        ]}/>
-
-
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная </a>
+          </Link>
+          <span> / </span>
+          <Link href="/dissertaciya-na-zakaz">
+            <a>Диссертация</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>Соискательство</a>
+          </Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

@@ -32,21 +32,27 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import Referat from "components/common/ServiceBlock/ready-made/Referat"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
-import Breadcrumbs from "components/common/Breadcrumbs";
-import React from "react";
 
 
 const page = () => (
-  <Wrapper title="Заказать реферат по философии в Москве и РФ – цены, сроки написания реферата по философии под ключ" description="Написание реферата по философии на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
+  <Wrapper title="Заказать реферат по философии в Москве и РФ – цены, сроки написания под ключ" description="Написание реферата по философии на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <PageWrapper className="bg bg-c2 bg-img bg-img5">
 
-
-        <Breadcrumbs links={[
-            {url:'/', text:'Главная'},
-            {url:'/referat-na-zakaz', text:'Реферат'},
-            {url:'#', text:'По философии'},
-        ]}/>
-
+      <section className="breadcrumbs">
+        <div className="inner">
+          <Link href="/">
+            <a>Главная</a>
+          </Link>
+          <span> / </span>
+          <Link href="/referat-na-zakaz">
+            <a>Реферат</a>
+          </Link>
+          <span> / </span>
+          <Link href="#">
+            <a>По философии</a>
+          </Link>
+        </div>
+      </section>
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
@@ -90,9 +96,6 @@ const page = () => (
             Другие личные причины
           </li>
         </ul>
-        <p className="par">
-          Выход в этих и многих других ситуациях – заказать реферат по философии у опытных преподавателей.
-        </p>
       </TextBlock>
 
       <FormEstimate/>
@@ -117,7 +120,7 @@ const page = () => (
             Точное соответствие содержания теме
           </li>
           <li>
-            Возможность написания реферата по главам для периодических консультаций с научным руководителем
+            Возможность написания работы по главам для периодических консультаций с научным руководителем
           </li>
         </ul>
         <p className="par">

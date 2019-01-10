@@ -16,7 +16,7 @@ export const DivInner = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-    @media (max-width: 660px) {
+  @media (max-width: 660px) {
     display: block;
   }
 `;

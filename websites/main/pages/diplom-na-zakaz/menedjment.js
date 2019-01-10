@@ -41,8 +41,6 @@ const page = () => (
     <Wrapper title="Дипломная работа по менеджменту на заказ – цена и сроки написания, сколько стоит заказать диплом в Москве" description="В компании «BeSmarter!» можно срочно и недорого заказать дипломную работу по менеджменту по выгодной цене в Москве. Тел. +7 (495) 772-40-90.">
         <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
-
-
             <section className="breadcrumbs">
                 <div className="inner">
                     <Link href="/">
@@ -64,8 +62,6 @@ const page = () => (
                 <ItemListElement url="https://besmarter.ru/diplom-na-zakaz" name="Дипломная работа" position="2" />
                 <ItemListElement url="https://besmarter.ru/diplom-na-zakaz/menedjment" name="По менеджменту" position="3" />
             </ItemScope>
-
-
 
             <BlockNav>
                 <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>

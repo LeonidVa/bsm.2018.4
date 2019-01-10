@@ -39,11 +39,19 @@ const ButtonMobile = styled.a`
   &:hover {
     color: #f4511e !important;
   }
-  @media (max-width: 660px) { display: block; }
-  @media (min-width: 661px) { display: none; }
+  @media (max-width: 660px) { 
+    display: block; 
+  }
+  @media (min-width: 661px) { 
+    display: none; 
+  }
 `;
 
 const ButtonDesktop = styled.a`
-  @media (max-width: 660px) { display: none; }
-  @media (min-width: 661px) { display: block; }
+  @media (max-width: 660px) { 
+    display: none; 
+  }
+  @media (min-width: 661px) { 
+    display: block; 
+  }
 `;

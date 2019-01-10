@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import styled from 'styled-components'
 import './index.scss';
 import foxLogo from 'static/images/fox-circle.svg'
 import BottomHelper from 'components/common/CallAsk'
@@ -15,7 +14,7 @@ import  {
   PFooterCopyright,
   SpanFooter,
   UlFooter,
-   } from './style';
+} from './style';
 
    
 export default (props) => {
@@ -64,24 +63,7 @@ export default (props) => {
           <DivFooterCenter className="footer__center">
             <DivFooterNav className="nav">{navButtons}</DivFooterNav>
           </DivFooterCenter>
-
-          {/* <div className="footer__socials">
-                    <Link href="#">
-                        <a>
-                            <FontAwesomeIcon icon={faTwitter} />
-                        </a>
-                    </Link>
-                    <Link href="#">
-                        <a>
-                            <FontAwesomeIcon icon={faFacebookF} />
-                        </a>
-                    </Link>
-                    <Link href="#">
-                        <a>
-                            <FontAwesomeIcon icon={faTumblr} />
-                        </a>
-                    </Link>
-                </div> */}
+          
         </DivInner>
         <PFooterCopyright className="copyright">
 

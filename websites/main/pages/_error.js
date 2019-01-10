@@ -12,7 +12,6 @@ import FormWithTimer from 'components/common/forms/WithTimer';
 import Title from 'components/common/Title'
 import telega from 'utils/telega';
 import redirect from 'utils/redirect';
-
 // Script errors occuring during initial client render can cause the server-rendered
 // content to be hidden by an error page. Track router events to determine if the
 // error being handled happened during initial render, and throw within

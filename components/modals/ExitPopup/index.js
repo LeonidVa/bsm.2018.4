@@ -93,7 +93,6 @@ const exitPopupState = {
 
 const exitPopupContext = createContext(exitPopupState);
 
-
 class ExitPopup extends Component {
 
     constructor(props) {

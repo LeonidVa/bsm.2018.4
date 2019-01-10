@@ -10,7 +10,7 @@ const Timer = styled.div`
   @media (max-width: 900px) {
     font-size: 1.2em;
   }
-@media (max-width: 660px) {
+  @media (max-width: 660px) {
     font-size: 1em;
 }
 `;

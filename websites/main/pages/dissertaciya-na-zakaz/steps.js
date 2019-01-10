@@ -42,7 +42,7 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
       <MetaTags>
-        {/* <title></title> */}
+        
         <meta name="keywords" content=""/>
       </MetaTags>
 

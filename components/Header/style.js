@@ -29,7 +29,6 @@ export const HeaderLeftDiv = styled.div`
   justify-content: center;
 `;
 
-
 export const HeaderRightDiv = styled.div`
   display: flex;
   align-items: center;

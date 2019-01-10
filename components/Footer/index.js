@@ -16,7 +16,6 @@ import  {
   UlFooter,
 } from './style';
 
-   
 export default (props) => {
   const navButtonsDefault = <UlFooter>
                 <LiFooter>

@@ -225,7 +225,7 @@ const page = () => (
       <a name="form" id="form"/>
       <FormOrder/>
 
-      {/* <LinksBlock links={links}/> */}
+     
     </PageWrapper>
   </Wrapper>
 );

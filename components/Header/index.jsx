@@ -9,7 +9,6 @@ import { ToggleCallPopup } from 'components/modals/Call';
 
 import 'components/index.scss';
 import  { HeaderBlock } from './style.js';
-
 import  {
   InnerBlock, 
   HeaderHamburger,
@@ -24,8 +23,7 @@ import  {
   HeaderNav,
   HeaderRightDiv,
   ButtonPhoneS,
- 
-} from './style';
+ } from './style';
 
 class Header extends Component {
   state = {

@@ -1,4 +1,3 @@
-
 import React, {Component, createContext} from 'react';
 import { connect as reduxConnect } from 'react-redux'
 import './style.scss';

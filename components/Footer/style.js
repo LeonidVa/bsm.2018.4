@@ -105,7 +105,7 @@ export const PFooterCopyright = styled.p`
   margin-top: -11px;
   @media (max-width: 660px) {
     margin-top: 0;
-}
+  }
 `;
 
 export const SpanFooter = styled.span`

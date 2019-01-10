@@ -21,7 +21,7 @@ class CallPopup extends Component {
     constructor(props) {
         super(props);
         this.state = callPopupState;
-    };
+    }
 
     render() {
         return (

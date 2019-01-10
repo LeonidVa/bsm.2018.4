@@ -27,6 +27,7 @@ import DipProekt from "components/common/ServiceBlock/ready-made/DipProekt"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
 import React from "react";
+import Breadcrumbs from "components/common/Breadcrumbs";
 
 
 const page = () => (
@@ -34,17 +35,11 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img5">
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/razrabotka-diplomnogo-proekta">
-            <a>Дипломный проект</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/razrabotka-diplomnogo-proekta', text:'Дипломный проект'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

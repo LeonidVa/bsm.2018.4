@@ -35,6 +35,8 @@ import DoctorskayaDis from "components/common/ServiceBlock/ready-made/Doctorskay
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+import React from "react";
 
 
 const page = () => (
@@ -43,6 +45,11 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
+
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'#', text:'Диссертация'},
+        ]}/>
 
       <section className="breadcrumbs">
         <div className="inner">

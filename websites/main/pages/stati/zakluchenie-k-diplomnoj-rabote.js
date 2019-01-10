@@ -33,6 +33,7 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
 import React from "react";
+import Breadcrumbs from "components/common/Breadcrumbs";
 
 
 const page = () => (
@@ -41,21 +42,13 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img3">
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/stati">
-            <a>Статьи</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Заключение к дипломной работе</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/stati', text:'Статьи'},
+            {url:'#', text:'Заключение к дипломной работе'},
+        ]}/>
+
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

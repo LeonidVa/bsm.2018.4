@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, {Component} from 'react';
 
 import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
 import BlockNav from 'components/common/BlockNav';
 import NavRow from 'components/common/BlockNav/NavRow';
 
@@ -16,7 +17,7 @@ import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
 import fields from 'data/form/main';
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import links from 'data/linksBlockConfig';
-
+import TextBlock from 'components/common/TextBlock';
 import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'data/dopraboty'
@@ -24,6 +25,7 @@ import ContactsPage from "components/common/ServiceBlock/ready-made/ContactsPage
 import MagisDisAnother from "components/common/ServiceBlock/ready-made/MagisDisAnother";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
 
 
 const page = () => (
@@ -32,17 +34,11 @@ const page = () => (
 
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>О нас</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'#', text:'О нас'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

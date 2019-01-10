@@ -23,7 +23,7 @@ class Wrapper extends Component {
         stat.triggerTarget.pageView(url);
     }
 
-    onSendFormAction;
+    onSendFormAction(){};
 
     constructor(props) {
         super(props);

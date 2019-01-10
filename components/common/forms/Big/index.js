@@ -1,5 +1,7 @@
 import { PropTypes } from 'prop-types';
 import React from 'react';
+import getConfig from 'next/config';
+
 import { BaseForm, connect } from 'components/common/forms/BaseForm';
 import Link from 'next/link';
 import Dropzone from 'react-dropzone';
@@ -11,7 +13,6 @@ import DatePicker from 'components/common/DatePicker';
 import Fox from 'static/images/fox-circle.svg';
 import './index.scss';
 import Close from 'components/modals/Close';
-
 /*   fields are stored in /data/main.js   */
 
 class OrderForm extends BaseForm {
@@ -270,7 +271,7 @@ class OrderForm extends BaseForm {
               <Recaptcha
                 ref="recaptcha"
                 onChange={this.verifyCallback}
-                sitekey="6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS"
+                sitekey={getConfig().publicRuntimeConfig.analytics.recaptcha || '6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS'}
               />
             </div>
             <span className="block-form__agree">

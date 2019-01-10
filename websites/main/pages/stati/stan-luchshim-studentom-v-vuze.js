@@ -36,6 +36,7 @@ import Diplom from "components/common/ServiceBlock/ready-made/Diplom"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
 import React from "react";
+import Breadcrumbs from "components/common/Breadcrumbs";
 
 const page = () => (
   <Wrapper title="Стань лучшим студентом в вузе! | «BeSmarter!». Тел. +7 (495) 772-40-90."
@@ -44,21 +45,13 @@ const page = () => (
 
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/stati">
-            <a>Статьи</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Стань лучшим студентом в вузе!</a>
-          </Link>
-        </div>
-      </section>
+
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/stati', text:'Статьи'},
+            {url:'#', text:'Стань лучшим студентом в вузе!'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

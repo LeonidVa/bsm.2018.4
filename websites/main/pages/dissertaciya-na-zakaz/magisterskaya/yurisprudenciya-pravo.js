@@ -35,6 +35,8 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import MagisDisGdeZakazat from "components/common/ServiceBlock/ready-made/MagisDisGdeZakazat"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+import React from "react";
 
 const page = () => (
   <Wrapper title="Магистерская диссертация по юриспруденции на заказ в Москве и РФ – цены, сроки написания под ключ" description="Магистерская диссертация по юриспруденции на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
@@ -42,25 +44,14 @@ const page = () => (
 
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная </a>
-          </Link>
-          <span> / </span>
-          <Link href="/dissertaciya-na-zakaz">
-            <a>Диссертация</a>
-          </Link>
-          <span> / </span>
-          <Link href="/dissertaciya-na-zakaz/magisterskaya">
-            <a>Магистерская</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>По юриспруденции</a>
-          </Link>
-        </div>
-      </section>
+
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
+            {url:'/dissertaciya-na-zakaz/magisterskaya', text:'Магистерская'},
+            {url:'#', text:'По юриспруденции'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
@@ -86,14 +77,14 @@ const page = () => (
         </h1>
         <p className="par">
           В каких случаях стоит обращаться к нам за помощью? Если у вас катастрофически не хватает свободного времени, то магистерская диссертация по юриспруденции может быть написана сотрудниками агентства, где работают преподаватели-практики с опытом. Обратитесь в компанию BeSmarter! – мы специализируемся на услугах высокого
-          качества исполнения. К нам приходят, когда с написанием работы совсем сложно:
+          качества исполнения. К нам приходят, когда с написанием работы по праву совсем сложно:
         </p>
         <ul>
           <li>
             если вы постоянно заняты и не можете разработать план;
           </li>
           <li>
-            когда написаны отдельные части, но закончить диссертацию не получается, а сроки поджимают;
+            когда написаны отдельные части, но закончить магистерскую диссертацию по юриспруденции не получается, а сроки поджимают;
           </li>
           <li>
             если нет возможности проводить исследования, а также писать теоретическую часть;
@@ -173,7 +164,7 @@ const page = () => (
             - Обращайтесь сразу, как только возникла необходимость в помощи.
           </li>
           <li>
-            - Можете написать часть сами, а часть – поручить авторам.
+            - Можете написать часть магистерской диссертации по юриспруденции сами, а часть – поручить авторам.
           </li>
           <li>
             - Чем больше практических исследований в проекте, тем выше цена, ведь дополнительные данные под ключ всегда обходятся дороже.
@@ -203,7 +194,7 @@ const page = () => (
             Внесение предоплаты.
           </li>
           <li>
-            Начало работы над проектом.
+            Начало работы над магистерской диссертацией по юриспруденции.
           </li>
         </ol>
         <p className="par">

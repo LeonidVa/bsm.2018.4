@@ -26,6 +26,7 @@ import MetaTags from "react-meta-tags";
 import MagisDisAnother from "components/common/ServiceBlock/ready-made/MagisDisAnother";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
 
 
 const page = () => (
@@ -35,22 +36,18 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Авторам</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'#', text:'Авторам'},
+        ]}/>
+
 
       <ItemScope type="http://schema.org/BreadcrumbList">
           <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
           <ItemListElement url="https://besmarter.ru/avtoram" name="Авторам" position="2" />
       </ItemScope>
+
+
       <BlockNav>
         <NavRow url='#form' scroll={false} title="Заказать работу" description="Узнай цену твоей работы"/>
       </BlockNav>

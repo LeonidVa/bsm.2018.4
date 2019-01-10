@@ -8,22 +8,19 @@ import FormOrder from 'components/common/forms/Big/Order';
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
 import React from "react";
+import Breadcrumbs from "../../../components/common/Breadcrumbs";
 
 
 const page = () => (
   <Wrapper title="Как точно защититься | Компания «BeSmarter!». Тел. +7 (495) 772-40-90." description="Комфортная и успешная защита обеспечена!">
     <PageWrapper className="bg bg-c2 bg-img bg-img4">
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Как защититься</a>
-          </Link>
-        </div>
-      </section>
+
+
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'#', text:'Как защититься'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

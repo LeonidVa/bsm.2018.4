@@ -4,99 +4,81 @@ import Close from "../Close/index";
 import PhoneAndSubmit from 'components/common/forms/PhoneAndSubmit';
 import styled from 'styled-components';
 
-
 const ModalSale = styled.div`
-position: fixed;
-width: 100%;
-height: 100%;
-background-color: rgba(0,0,0,.5);
-top: 0;
-left: 0;
-font-size: 1em;
-z-index: 4;
-font-family: "Ubuntu-Regular", sans-serif;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  top: 0;
+  left: 0;
+  font-size: 1em;
+  z-index: 4;
+  font-family: "Ubuntu-Regular", sans-serif;
 `;
 
-const BodyWhite = styled.div`
-    background: #fff;
-    border: 2px solid #d84315;
-    margin-left: -17.5em;
-`; 
-
 const FormAlert = styled.div`
-//min-height: 250px;
-background: #fff;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-color: #4A4A4A;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #4A4A4A;
 `;
 
 const BlockFormTitle = styled.div`
 font-size: 2em;
 `;
 
-
 const ModalSaleTop = styled.div`
- display: flex;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        justify-content: space-between;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        align-items: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        margin-bottom: .4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .4em;
 `;
+
 const Percent = styled.span`
-text-align: center;
+  text-align: center;
 `;
 
 const ModalSaleBody=styled.div`
-    width: 34.18em;
-    max-width: 100%;
-    left: 50%;
-    top: 50%;
-    margin-left: -17.09em;
-    transform: translateY(-50%);
-    padding: 1.5em 2.18em 2.5em;
-    background-color: #FF8A65;
-    background-size: cover;
-    background-position: 50% 0%;
-    font-size: 1em;
-    @media (max-width: 550px) {
-        width: 100%;
-        left: 0;
-        margin-left: 0;
-        font-size: .8em;
-    }
-    @media (max-width: 420px) {
-        font-size: .7em;
-    }
-    @media (max-width: 370px) {
-        font-size: .6em;
-    }
+  width: 34.18em;
+  max-width: 100%;
+  left: 50%;
+  top: 50%;
+  margin-left: -17.09em;
+  transform: translateY(-50%);
+  padding: 1.5em 2.18em 2.5em;
+  background-color: #FF8A65;
+  background-size: cover;
+  background-position: 50% 0%;
+  font-size: 1em;
+  @media (max-width: 550px) {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    font-size: .8em;
+  }
+  @media (max-width: 420px) {
+    font-size: .7em;
+  }
+  @media (max-width: 370px) {
+    font-size: .6em;
+  }
 `;
 
 const P = styled.p`
-text-align: center;
+  text-align: center;
 `;
 
 const TopText = styled.span`
-font-size: 1.5em;
+  font-size: 1.5em;
 `;
 
 const PText = styled.p`
-font-size: 1em;
-        line-height: 1.5;
-        margin-bottom: .5em;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: .5em;
 `;
-
 
 const exitPopupState = {
     isShown: false,

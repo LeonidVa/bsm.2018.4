@@ -5,47 +5,30 @@ import Form from './form'
 import styled from 'styled-components'; 
 
 const ModalOrderCallDiv = styled.div`
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,.8);
-    z-index: 5;
-
-    font-family: "Ubuntu", sans-serif;
-    overflow-y: scroll;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.8);
+  z-index: 5;
+  font-family: "Ubuntu", sans-serif;
+  overflow-y: scroll;
 `;
-
-
 
 const BlockForm = styled.div`
-box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -8.5em;
-    margin-top: 0;
-    transform: translateY(-50%);
-    @media (max-width: 660px) {
-        margin-left: 0;
-        left: 0;
-    }
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -8.5em;
+  margin-top: 0;
+  transform: translateY(-50%);
+  @media (max-width: 660px) {
+    margin-left: 0;
+    left: 0;
+  }
 `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const callPopupState = {
     question: false,

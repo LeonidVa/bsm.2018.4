@@ -1,16 +1,10 @@
 import styled from "styled-components"
 
 
-export const BlockMap = styled.section `
+export const BlockMap = styled.section`
 display: flex;
 align-items: center;
--webkit-box-align: center;
--webkit-align-items: center;
--ms-flex-align: center;
 justify-content: center;
--webkit-box-pack: justify;
--webkit-justify-content: center;
--ms-flex-pack: justify;
 width: 30.94em;
 height: 12.5em;
 background-color: #f5f5f5;

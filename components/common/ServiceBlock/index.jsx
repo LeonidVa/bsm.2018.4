@@ -3,7 +3,6 @@ import CardPopInfo from "./CardPopInfo";
 import "./serviceBlock.scss";
 import styled from 'styled-components';
 
-
 const BlockServiceTop = styled.a`
   min-height: 10rem;
   height: auto;
@@ -26,33 +25,32 @@ const BlockServiceTop = styled.a`
 `;
 
 const BlockServiceText = styled.div`
-& p {
-      font-size: 1.4rem;
-      max-width: 24rem;
-      line-height: normal;
-      margin-bottom: 1rem;
+  & p {
+    font-size: 1.4rem;
+    max-width: 24rem;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+  padding: 3rem;
+  @media (max-width: 660px) {
+    padding: 3rem 1rem 1.5rem;
+    &.gradient-l-white {
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.66),
+        rgba(255, 255, 255, 0.5),
+        transparent
+      );
     }
-    padding: 3rem;
-    
-    @media (max-width: 660px) {
-      padding: 3rem 1rem 1.5rem;
-      &.gradient-l-white {
-        background-image: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.66),
-            rgba(255, 255, 255, 0.5),
-            transparent
-        );
-      }
-      &.gradient-l-black {
-        background-image: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.66),
-            rgba(0, 0, 0, 0.5),
-            transparent
-        );
-      }
+    &.gradient-l-black {
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.66),
+        rgba(0, 0, 0, 0.5),
+        transparent
+      );
     }
+  }
 `;
 
 const BlockServiceTopTitle = styled.span`
@@ -62,7 +60,6 @@ const BlockServiceTopTitle = styled.span`
   margin-bottom: 1rem;
   position: relative;
   font-size: 2rem;
-  
 `;
 
 const BlockServiceTopTitleUnderline = styled.span`
@@ -73,7 +70,6 @@ const BlockServiceTopTitleUnderline = styled.span`
   left: 50%;
   top: 100%;
   transition: all 0.5s ease;
-     
 `;
 
 const BlockService = styled.section`
@@ -114,31 +110,29 @@ const BlockServiceList = styled.div`
     }
   }
   &.list-3 {
-  .block-service__list-item {
-    width: 33.3333%;
-    @media (max-width: 660px) {
-      width: 100%;
+    .block-service__list-item {
+      width: 33.3333%;
+      @media (max-width: 660px) {
+        width: 100%;
+      }
     }
-  }
   }
   &.list-4 {
-  .block-service__list-item {
-    width: 25%;
-    @media (max-width: 660px) {
-      width: 100%;
+    .block-service__list-item {
+      width: 25%;
+      @media (max-width: 660px) {
+        width: 100%;
+      }
     }
-  }
-  .block-service__list-title {
-
-  }
   }
   &.list-5 {
-  .block-service__list-item {
-    width: 20%;
-    @media (max-width: 660px) {
-      width: 100%;
+    .block-service__list-item {
+      width: 20%;
+      @media (max-width: 660px) {
+        width: 100%;
+      }
     }
-  }}
+  }
 `;
 
 class ServiceBlock extends Component {

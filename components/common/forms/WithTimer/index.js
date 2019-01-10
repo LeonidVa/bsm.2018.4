@@ -7,115 +7,66 @@ import styled from 'styled-components'
 import './index.scss';
 
 const FormTimer = styled.div`
-@media (max-width: 660px) {
-  display: inline-block;
+  @media (max-width: 660px) {
+    display: inline-block;
   }
 `;
 
 const BlockFormTimerMessage = styled.div`
-display: flex;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        justify-content: space-between;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        align-items: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        font-size: 1em;
-        width: 14.9em;
-        margin-bottom: .875em;
-        @media (max-width: 660px) {
-            display: block;
-        }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  width: 14.9em;
+  margin-bottom: .875em;
+  @media (max-width: 660px) {
+    display: block;
+  }
 `;
-
 
 const BlockFormMessage = styled.div`
-        text-align: center;
-        img { width: 7em; margin-left: 41px;}
-        p {  font-size: 1rem; margin-bottom: 7px;}
-
-        
+  text-align: center;
+  img { 
+    width: 7em; 
+    margin-left: 41px;
+  }
+  p {  
+    font-size: 1rem; 
+    margin-bottom: 7px;
+  }
 `;
 
-
 const Notification = styled.div`
-
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #fff;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #4A4A4A;
-            border: 2px solid #d84315;
-        
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #4A4A4A;
+  border: 2px solid #d84315;
 `;
 
 const BlockFormTitle = styled.div`
-color: #f4511e;
-        font-size: 1em;
-        font-family: "Ubuntu", sans-serif;
-        font-weight: bold;
-        line-height: 1.19;
-        text-align: center;
-        margin-bottom: .625em;
-        letter-spacing: -1px;
+  color: #f4511e;
+  font-size: 1em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  line-height: 1.19;
+  text-align: center;
+  margin-bottom: .625em;
+  letter-spacing: -1px;
 `;
 
 const FormP = styled.p`
-font-size: .688em;
-            line-height: normal;
-            // width: 11.62em;
-            width: 100%;
+  font-size: .688em;
+  line-height: normal;
+  width: 100%;
 `;
-
-
-const FormInput = styled.input`
-font-size: 1rem;
-            width: 14rem;
-            height: 3rem;
-            padding: 0 .67em;
-            color: #4a4a4a;
-            border: none;
-            margin-right: 3em;
-            &:focus {
-                border: 1px solid #f4511e;
-            }
-            @media (max-width: 660px) {
-                padding: 0 .33em;
-                font-size: 0.75em;
-                width: 12rem;
-                margin-bottom: 1em;
-            }
-`;
-
-const Button = styled.button`
-  font-size: 1rem;
-            width: 14rem;
-            height: 3rem;
-            color: #ffffff;
-            border: none;
-            background-color: #f4511e;
-            cursor: pointer;
-            transition: all .4s;
-            &:hover {
-                background-color: #922d0e;
-            }
-            @media (max-width: 660px) {
-                font-size: .75em;
-                width: 12rem;
-            }
-`;
-
 
 class FormWithTimer extends Component {
     state = {

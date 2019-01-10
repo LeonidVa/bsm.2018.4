@@ -5,104 +5,94 @@ import "./index.scss"
 import '../slick.scss'
 import styled from "styled-components"
 
-
 const BlockSlider = styled.section `
-margin: 1.56em auto 0;
-font-size: 2em;
-@media (max-width: 900px) {
+  margin: 1.56em auto 0;
+  font-size: 2em;
+  @media (max-width: 900px) {
     width: 100%;
     max-width: 100%;
     justify-content: space-around;
     margin: 0.5em auto;
-}
+  }
 `;
 
 const BlockSliderSlide = styled.div`
-font-size: 1em;
-margin: 0 auto;
-padding: 0 0.5em;
-display: flex;
-display: -webkit-box;
-display: -webkit-flex;
-display: -ms-flexbox;
-justify-content: space-around;
--webkit-box-pack: justify;
--webkit-justify-content: space-around;
--ms-flex-pack: justify;
-align-items: flex-start;
--webkit-box-align: flex-start;
--webkit-align-items: flex-start;
--ms-flex-align: flex-start;
+  font-size: 1em;
+  margin: 0 auto;
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 `;
 
 const BlockProfitsItem = styled.div`
-display: block;
-text-decoration: none;
-color: #4a4a4a;
-font-size: 1em;
-width: 9.59em;
-padding: 1.562em;
-background-color: #ffffff;
-&:nth-child(1) img,
-    &:nth-child(3) img {
-      width: 3.125em;
+  display: block;
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 1em;
+  width: 9.59em;
+  padding: 1.562em;
+  background-color: #ffffff;
+  &:nth-child(1) img,
+  &:nth-child(3) img {
+    width: 3.125em;
+  }
+  &:nth-child(2) img {
+    width: 2.28em;
+  }
+  @media (max-width: 960px) {
+    &:nth-child(3) {
+      margin-bottom: 0;
     }
-    &:nth-child(2) img {
-      width: 2.28em;
-    }
-    @media (max-width: 960px) {
-        &:nth-child(3) {
-          margin-bottom: 0;
-        }
-      }
-display: block;
-text-decoration: none;
-color: #4a4a4a;
-font-size: 1em;
-width: 9.59em;
-padding: 1.562em;
-background-color: #ffffff;
-img {
+  }
+  display: block;
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 1em;
+  width: 9.59em;
+  padding: 1.562em;
+  background-color: #ffffff;
+  img {
     display: block;
     margin: 0 auto .625em;
     height: 3.125em;
-}
-&:nth-child(1) img,
-&:nth-child(3) img {
+  }
+  &:nth-child(1) img,
+  &:nth-child(3) img {
     width: 3.125em;
-}
-&:nth-child(2) img {
+  }
+  &:nth-child(2) img {
     width: 2.28em;
-}
-@media (max-width: 660px) {
+  }
+  @media (max-width: 660px) {
     &:nth-child(3) {
-    margin-bottom: 0;
-}
+      margin-bottom: 0;
     }
+  }
 `;
 
 const Img = styled.img`
-display: block;
-margin: 0 auto .625em;
-height: 3.125em;
+  display: block;
+  margin: 0 auto .625em;
+  height: 3.125em;
 `;
 
 const BlockProfitsPar = styled.p`
-font-size: .5em;
-line-height: 1.5em;
-transition: all .4s;
+  font-size: .5em;
+  line-height: 1.5em;
+  transition: all .4s;
 `; 
 
 const BlockProfitsTitle = styled.span`
-font-family: "Ubuntu", sans-serif;
-font-weight: 500;
-font-size: .625em;
-color: #4a4a4a;
-margin-bottom: .5em;
-position: relative;
-transition: all .4s;
-display: inline-block;
-&::after {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: .625em;
+  color: #4a4a4a;
+  margin-bottom: .5em;
+  position: relative;
+  transition: all .4s;
+  display: inline-block;
+  &::after {
     content: "";
     position: absolute;
     width: 0%;
@@ -111,9 +101,8 @@ display: inline-block;
     top: 100%;
     left: 50%;
     transition: all .4s;
-}
+  }
 `;
-
 
 const Block = (props) => {
 

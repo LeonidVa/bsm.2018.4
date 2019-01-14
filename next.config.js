@@ -38,6 +38,7 @@ const nextConfig = {
       mode: process.env.NODE_ENV,
       production: process.env.NODE_ENV === "production",
       development: process.env.NODE_ENV === "development",
+      testing: process.env.NODE_ENV === "testing",
     },
     analytics: {
       gaID: 'UA-119183335-1',

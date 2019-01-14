@@ -26,7 +26,7 @@ const FormAlert = styled.div`
 `;
 
 const BlockFormTitle = styled.div`
-font-size: 2em;
+  font-size: 2em;
 `;
 
 const ModalSaleTop = styled.div`

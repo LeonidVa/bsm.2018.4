@@ -20,6 +20,7 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl";
 import Title from "components/common/Title";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
 
 
 const page = () => (
@@ -28,17 +29,11 @@ const page = () => (
             <Title><span className="black">Стоимость услуг</span></Title>
 
 
-            <section className="breadcrumbs">
-                <div className="inner">
-                    <Link href="/">
-                        <a>Главная</a>
-                    </Link>
-                    <span> / </span>
-                    <Link href="/price">
-                        <a>Услуги и цены</a>
-                    </Link>
-                </div>
-            </section>
+            <Breadcrumbs links={[
+                {url:'/', text:'Главная'},
+                {url:'#', text:'Услуги и цены'},
+            ]}/>
+
 
 
             <ItemScope type="http://schema.org/BreadcrumbList">

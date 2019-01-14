@@ -17,38 +17,39 @@ import  {
 } from './style';
 
 export default (props) => {
-  const navButtonsDefault = <UlFooter>
-                <LiFooter>
-                  <Link href="/contacts">
-                    <AFooter>Контакты</AFooter>
-                  </Link>
-                </LiFooter>
-                <LiFooter>
-                  <Link href="/about">
-                    <AFooter>О нас</AFooter>
-                  </Link>
-                </LiFooter>
-                <LiFooter>
-                  <Link href="/price">
-                    <AFooter>Услуги и Цены</AFooter>
-                  </Link>
-                </LiFooter>
-                <LiFooter>
-                  <Link href="/avtoram">
-                    <AFooter>Авторам</AFooter>
-                  </Link>
-                </LiFooter>
-                <LiFooter>
-                  <Link href="/garantii">
-                    <AFooter>Гарантии</AFooter>
-                  </Link>
-                </LiFooter>
-                <LiFooter>
-                  <Link href="/stati">
-                    <AFooter>Статьи</AFooter>
-                  </Link>
-                </LiFooter>
-              </UlFooter>;
+  const navButtonsDefault = 
+    <UlFooter>
+      <LiFooter>
+        <Link href="/contacts">
+          <AFooter>Контакты</AFooter>
+        </Link>
+      </LiFooter>
+      <LiFooter>
+        <Link href="/about">
+          <AFooter>О нас</AFooter>
+        </Link>
+      </LiFooter>
+      <LiFooter>
+        <Link href="/price">
+          <AFooter>Услуги и Цены</AFooter>
+        </Link>
+      </LiFooter>
+      <LiFooter>
+        <Link href="/avtoram">
+          <AFooter>Авторам</AFooter>
+        </Link>
+      </LiFooter>
+      <LiFooter>
+        <Link href="/garantii">
+          <AFooter>Гарантии</AFooter>
+        </Link>
+      </LiFooter>
+      <LiFooter>
+        <Link href="/stati">
+          <AFooter>Статьи</AFooter>
+        </Link>
+      </LiFooter>
+    </UlFooter>;
   const {navButtons = navButtonsDefault} = props;
   return (    <div>
       <BottomHelper/>

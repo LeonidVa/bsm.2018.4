@@ -447,11 +447,21 @@ class OrderForm extends BaseForm {
                 margin: '0.75em',
               }}
             >
-              <Recaptcha
-                ref="recaptcha"
-                onChange={this.verifyCallback}
-                sitekey="6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS"
-              />
+              {getConfig().publicRuntimeConfig.testing.recaptcha ?
+                <button
+                  type="button"
+                  id="captcha"
+                  onClick={this.verifyCallback}
+                >
+                  Recaptcha
+                </button>
+                :
+                <Recaptcha
+                  ref="recaptcha"
+                  onChange={this.verifyCallback}
+                  sitekey={getConfig().publicRuntimeConfig.analytics.recaptcha || '6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS'}
+                />
+              }
             </div>
             <BLockFormAgree className="block-form__agree">
               Отправляя эти данные, я принимаю

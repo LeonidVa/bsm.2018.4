@@ -3,7 +3,6 @@ import Link from "next/link";
 import "./CardPopInfo.scss"
 import styled from 'styled-components'
 
-
 const BItem = styled.div`
   display: flex;
   flex-direction: column;
@@ -149,62 +148,62 @@ const BlockServiceListTitle=styled.div`
 `;
 
 class CardPopInfo extends Component {
-    state = {
-        isOpen: false
-    };
+  state = {
+    isOpen: false
+  };
 
-    handleClick = () => {
-        this.setState({isOpen: !this.state.isOpen});
-    };
+  handleClick = () => {
+    this.setState({isOpen: !this.state.isOpen});
+  };
 
 
-    render() {
-        const {title = "", text = "", url = "", description = []} = this.props;
+  render() {
+    const {title = "", text = "", url = "", description = []} = this.props;
 
-        if (description.length > 0) {
-            let dsc = <BItemHoveredText className="b-item__hovered-text">{description}</BItemHoveredText>;
-            let btn = "";
-            if (url !== "") {
-                btn = (
-                    <BItemHoveredButtomWrapper className="b-item__hovered-button-wrapper">
-                        <Link href={url}>
-                            <BItemHoveredButton className="b-item__hovered-button">Кнопка</BItemHoveredButton>
-                        </Link>
-                    </BItemHoveredButtomWrapper>
-                );
-            }
-            let hovered = (
-                <BItemHovered className="b-item__hovered">{dsc}{btn}</BItemHovered>
-            );
-            return (
-                <BlockServiceListItem className={"block-service__list-item b-list-item" + (this.state.isOpen ? " open" : "")}>
-                    <BItem className="b-item" onClick={this.handleClick}>
-                        <BItem_Content className="b-item__content">
-                            <BlockServiceListTitle className="block-service__list-title">{title}</BlockServiceListTitle>
-                            {text}
-                        </BItem_Content>
-                        {hovered}
-                    </BItem>
-                </BlockServiceListItem>
-            );
-        } else {
-            let el = (
-                <BItem className="b-item">
-                    <BItem_Content className="b-item__content">
-                        <BlockServiceListTitle className="block-service__list-title">{title}</BlockServiceListTitle>
-                        {text}
-                    </BItem_Content>
-                </BItem>
-            );
-            let elClass = "block-service__list-item b-list-item";
-            if (url !== "") {
-                elClass += " link";
-                el = <Link href={url}>{el}</Link>;
-            }
-            el = <BlockServiceListItem className={elClass}>{el}</BlockServiceListItem>;
-            return el;
-        }
+    if (description.length > 0) {
+      let dsc = <BItemHoveredText className="b-item__hovered-text">{description}</BItemHoveredText>;
+      let btn = "";
+      if (url !== "") {
+          btn = (
+              <BItemHoveredButtomWrapper className="b-item__hovered-button-wrapper">
+                  <Link href={url}>
+                      <BItemHoveredButton className="b-item__hovered-button">Кнопка</BItemHoveredButton>
+                  </Link>
+              </BItemHoveredButtomWrapper>
+          );
+      }
+      let hovered = (
+          <BItemHovered className="b-item__hovered">{dsc}{btn}</BItemHovered>
+      );
+      return (
+        <BlockServiceListItem className={"block-service__list-item b-list-item" + (this.state.isOpen ? " open" : "")}>
+          <BItem className="b-item" onClick={this.handleClick}>
+            <BItem_Content className="b-item__content">
+              <BlockServiceListTitle className="block-service__list-title">{title}</BlockServiceListTitle>
+              {text}
+            </BItem_Content>
+            {hovered}
+          </BItem>
+        </BlockServiceListItem>
+      );
+    } else {
+      let el = (
+          <BItem className="b-item">
+              <BItem_Content className="b-item__content">
+                  <BlockServiceListTitle className="block-service__list-title">{title}</BlockServiceListTitle>
+                  {text}
+              </BItem_Content>
+          </BItem>
+      );
+      let elClass = "block-service__list-item b-list-item";
+      if (url !== "") {
+          elClass += " link";
+          el = <Link href={url}>{el}</Link>;
+      }
+        el = <BlockServiceListItem className={elClass}>{el}</BlockServiceListItem>;
+        return el;
     }
+  }
 }
 
 export default CardPopInfo;

@@ -54,10 +54,10 @@ const renderInfoItems = (infoBlockConfig)=>(
     infoBlockConfig.map((item, index)=>(
       <Item className="item" key={index}>
         <Img src={item.icon} alt="" />
-            <div className="text">
-              <Span className="title"><Title>{item.title}</Title></Span>
-              <Span className="par"><Par>{item.desc}</Par></Span>
-            </div>
+          <div className="text">
+            <Span className="title"><Title>{item.title}</Title></Span>
+            <Span className="par"><Par>{item.desc}</Par></Span>
+          </div>
         </Item>
     ))
 );

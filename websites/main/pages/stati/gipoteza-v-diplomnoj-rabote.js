@@ -34,6 +34,8 @@ import ServiceBlock from "components/common/ServiceBlock";
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+import React from "react";
 
 
 const page = () => (
@@ -42,21 +44,13 @@ const page = () => (
 
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/stati">
-            <a>Статьи</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Гипотеза в дипломной работе</a>
-          </Link>
-        </div>
-      </section>
+
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/stati', text:'Статьи'},
+            {url:'#', text:'Гипотеза в дипломной работе'},
+        ]}/>
+
 
 
         <ItemScope type="http://schema.org/BreadcrumbList">

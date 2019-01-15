@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
 import PageWrapper from 'components/common/PageWrapper';
 import TextBlock from 'components/common/TextBlock';
@@ -12,7 +11,6 @@ import dopy from 'data/dopraboty'
 
 import FormOrder from 'components/common/forms/Big/Order';
 import FormEstimate from 'components/common/forms/Big/Estimate';
-import fields from 'data/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/otchet-po-prak'
@@ -26,16 +24,15 @@ import LinksBlock from 'components/common/LinksBlock';
 import otchet from 'data/linksBlock/otchet';
 
 import Video from 'components/common/VideoBlock';
-import MetaTags from 'react-meta-tags';
 
 import ImageBlock from 'components/common/ImageBlock';
-import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
-import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import OtchPoPrak from "components/common/ServiceBlock/ready-made/OtchPoPrak"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+import React from "react";
 
 
 const page = () => (
@@ -43,21 +40,12 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img4">
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/zakazat-otchet-po-praktike">
-            <a>Отчёт по практике</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Педагогической</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/zakazat-otchet-po-praktike', text:'Отчёт по практике'},
+            {url:'#', text:'Педагогической'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

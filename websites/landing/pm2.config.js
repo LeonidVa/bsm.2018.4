@@ -11,7 +11,8 @@ module.exports = {
       env: {
         NODE_ENV: "production",
         PORT: 3002,
-        SOURCE: "besmarter landing 20181122"
+        SOURCE: "besmarter landing 20181122",
+        RECAPTCHA: "6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS"
       },
     },
   ],

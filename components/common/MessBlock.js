@@ -62,8 +62,6 @@ const colors = [
   '#d84315',
 ];
 
-
-
 class MessBlock extends Component {
   drawList(messegersList) {
     return <BlockMessList className="block-mess__list">

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Title = styled.div`
   width: 100%;
   max-width: 34rem;
+
   @media (max-width: 900px) {
     width: 70%;
     max-width: none;
@@ -12,6 +13,7 @@ const Title = styled.div`
     width: 100%;
     padding: 0 0.675rem;
   }
+
   h1 {
     color: #ffffff;
     font-size: 2rem;
@@ -22,7 +24,7 @@ const Title = styled.div`
       font-size: 1.375rem;
     }
   }
-`;
+  `;
 
 class Comp extends Component {
     render() {

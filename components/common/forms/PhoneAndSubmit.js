@@ -56,12 +56,12 @@ class PhoneAndSubmit extends BaseForm {
           value={this.props.form.phone}
           onChange={(e) => this.saveData({phone: e.target.value})}
         />
-          <Button
-            disabled={this.props.spinner}
-            type="submit"
-          >
-            {this.props.submitLabel}
-          </Button>
+        <Button
+          disabled={this.props.spinner}
+          type="submit"
+        >
+          {this.props.submitLabel}
+        </Button>
       </form>
     )
   }

@@ -22,11 +22,11 @@ class MyApp extends App {
     return (
       <Container>
         <Provider store={store}>
-          
+          {/* <PersistGate persistor={persistor}> */}
             <React.Fragment>
               <Component {...pageProps} />
             </React.Fragment>
-         
+          {/* </PersistGate> */}
         </Provider>
       </Container>
     );

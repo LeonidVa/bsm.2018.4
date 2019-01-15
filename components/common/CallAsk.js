@@ -66,20 +66,18 @@ const Button = styled.a`
 class BottomHelper extends Component {
 
     render() {
-        return (
-            
-                <CallAskSection className="block-callask">
-                    <Inner className="inner">
-                        <Title className="title">Остались вопросы?</Title>
-                        <Title className="title">Мы ответим!</Title>
-                        <Buttons className="buttons">
-                            <ToggleQuestionPopup targetID="question"><Button className="button">Задай вопрос</Button></ToggleQuestionPopup>
-                            <ToggleCallPopup targetID="call_me_bottom"><Button className="button">Закажи звонок</Button></ToggleCallPopup>
-                        </Buttons>
-                    </Inner>
-                </CallAskSection>
-            
-        )
+      return (
+        <CallAskSection className="block-callask">
+            <Inner className="inner">
+                <Title className="title">Остались вопросы?</Title>
+                <Title className="title">Мы ответим!</Title>
+                <Buttons className="buttons">
+                    <ToggleQuestionPopup targetID="question"><Button className="button">Задай вопрос</Button></ToggleQuestionPopup>
+                    <ToggleCallPopup targetID="call_me_bottom"><Button className="button">Закажи звонок</Button></ToggleCallPopup>
+                </Buttons>
+            </Inner>
+        </CallAskSection>
+      )
     }
 }
 

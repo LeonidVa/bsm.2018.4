@@ -225,15 +225,15 @@ class OrderForm extends BaseForm {
         className="block-form__item"
         key={field.id}
         style={{
-          opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
+          opacity: field.required ? 1 : this.props.isForm || this.state.Extended ? 1 : 0,
           maxHeight: field.required
             ? '1000px'
-            : this.state.Extended
+            : this.props.isForm || this.state.Extended
               ? '1000px'
               : '0',
           visibility: field.required
             ? 'visible'
-            : this.state.Extended
+            : this.props.isForm || this.state.Extended
               ? 'visible'
               : 'hidden',
         }}
@@ -261,15 +261,15 @@ class OrderForm extends BaseForm {
           className="block-form__item"
           key={field.name}
           style={{
-            opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
+            opacity: field.required ? 1 : this.props.isForm || this.state.Extended ? 1 : 0,
             maxHeight: field.required
               ? '1000px'
-              : this.state.Extended
+              : this.props.isForm || this.state.Extended
                 ? '1000px'
                 : '0',
             visibility: field.required
               ? 'visible'
-              : this.state.Extended
+              : this.props.isForm || this.state.Extended
                 ? 'visible'
                 : 'hidden',
           }}
@@ -295,15 +295,15 @@ class OrderForm extends BaseForm {
           className="block-form__item textarea"
           key={field.name}
           style={{
-            opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
+            opacity: field.required ? 1 :this.props.isForm || this.state.Extended ? 1 : 0,
             maxHeight: field.required
               ? '1000px'
-              : this.state.Extended
+              : this.props.isForm || this.state.Extended
                 ? '1000px'
                 : '0',
             visibility: field.required
               ? 'visible'
-              : this.state.Extended
+              : this.props.isForm || this.state.Extended
                 ? 'visible'
                 : 'hidden',
           }}
@@ -334,15 +334,15 @@ class OrderForm extends BaseForm {
           className="block-form__item"
           key={field.name}
           style={{
-            opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
+            opacity: field.required ? 1 : this.props.isForm || this.state.Extended ? 1 : 0,
             maxHeight: field.required
               ? '1000px'
-              : this.state.Extended
+              : this.props.isForm || this.state.Extended
                 ? '1000px'
                 : '0',
             visibility: field.required
               ? 'visible'
-              : this.state.Extended
+              : this.props.isForm || this.state.Extended
                 ? 'visible'
                 : 'hidden',
           }}
@@ -366,15 +366,15 @@ class OrderForm extends BaseForm {
           className="block-form__item"
           key={field.name}
           style={{
-            opacity: field.required ? 1 : this.state.Extended ? 1 : 0,
+            opacity: field.required ? 1 : this.props.isForm || this.state.Extended ? 1 : 0,
             maxHeight: field.required
               ? '1000px'
-              : this.state.Extended
+              : this.props.isForm || this.state.Extended
                 ? '1000px'
                 : '0',
             visibility: field.required
               ? 'visible'
-              : this.state.Extended
+              : this.props.isForm || this.state.Extended
                 ? 'visible'
                 : 'hidden',
             height: 'auto',
@@ -408,7 +408,7 @@ class OrderForm extends BaseForm {
     }
 
     render() {
-      let { title, buttonLabel = 'Заказать работу', redForm } = this.props;
+      let { title, buttonLabel = 'Заказать работу', redForm, isForm } = this.props;
 
       return (
         <BlockFormRed className={`block-form ${redForm ? 'form-red' : ''}`}>
@@ -433,6 +433,7 @@ class OrderForm extends BaseForm {
           <form onSubmit={this.handleSubmit()} className="block-form__form" style={{ display: this.state.formSent.bool ? 'none' : 'block' }}>
             <BlockFormTitle className="block-form__title">{title}</BlockFormTitle>
             {this.renderForm()}
+            {!isForm && <React.Fragment>
             <BlockFormMoreInfo
               className="block-form__more-info"
               onClick={() => this.showFullForm()}
@@ -441,6 +442,7 @@ class OrderForm extends BaseForm {
                 ? 'Cкрыть дополнительные поля'
                 : 'Показать все поля▾'}
             </BlockFormMoreInfo>
+            </React.Fragment>}
             <div
               style={{
                 display: 'flex',

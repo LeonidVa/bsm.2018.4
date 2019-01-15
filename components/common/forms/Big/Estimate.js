@@ -9,5 +9,6 @@ export default () => (
         redForm={true}
         buttonLabel="Оценить"
         fields={fields}
+        isForm
     />
 );

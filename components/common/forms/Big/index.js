@@ -12,6 +12,7 @@ import Fox from 'static/images/fox-circle.svg';
 import './index.scss';
 import Close from 'components/modals/Close';
 import styled from 'styled-components';
+import getConfig from 'next/config'
 
 const BlockFormItem = styled.div`
   height: 2.5em;

@@ -20,16 +20,10 @@ const BlockFormItem = styled.div`
   &-flex {
     display: flex;
     justify-content: space-between;
-      .block-form__item {
-        max-width: 48%;
-      }
   }   
   &__file {
     opacity: 0;
     height: 0;
-  }
-  &.textarea {
-    height: 4.33em;
   }
 `;
 
@@ -290,7 +284,6 @@ class OrderForm extends BaseForm {
 
     nptTextarea(field) {
       return (
-        <FormTextarea>
         <BlockFormItem
           className="block-form__item textarea"
           key={field.name}
@@ -322,8 +315,7 @@ class OrderForm extends BaseForm {
             value={this.props.form[field.name]}
             onChange={e => this.saveData({ [field.name]: e.target.value })}
           />
-        </BlockFormItem>
-        </FormTextarea>
+          </BlockFormItem>
       );
     }
 

@@ -9,7 +9,6 @@ const BlockFormItem = styled.div`
     display: flex;
     justify-content: space-between;
   }
-  max-width: 48%;
 `;
 
 const TextArea = styled.div`
@@ -41,10 +40,6 @@ const Input = styled.input`
   &:focus {
     border: 1px solid #f4511e;
   }
-`;
-
-const Classtextarea = styled.div`
-  height: 4.33em;
 `;
 
 const Label = styled.label`
@@ -107,7 +102,7 @@ class Form extends BaseForm {
                         value={this.props.form.phone}
                         onChange={(e) => this.saveData({phone: e.target.value})}/>
                 </BlockFormItem>
-                <Classtextarea><BlockFormItem className="block-form__item textarea" style={{display: this.props.question ? 'block' : 'none'}}>
+                <BlockFormItem className="block-form__item textarea" style={{display: this.props.question ? 'block' : 'none'}}>
                     <Label htmlFor="form-phone">Вопрос</Label>
                     <TextArea
                         aria-label="Ваш вопрос"
@@ -116,7 +111,6 @@ class Form extends BaseForm {
                         onChange={(e) => this.saveData({comment: e.target.value})}
                     />
                 </BlockFormItem>
-                </Classtextarea>
                 <BlockFormBtn
                   type="submit"
                   disabled={this.props.spinner}

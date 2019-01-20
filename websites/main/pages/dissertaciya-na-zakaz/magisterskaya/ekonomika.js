@@ -35,6 +35,8 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import MagisDisGdeZakazat from "components/common/ServiceBlock/ready-made/MagisDisGdeZakazat"
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+import React from "react";
 
 
 const page = () => (
@@ -43,25 +45,13 @@ const page = () => (
 
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная </a>
-          </Link>
-          <span> / </span>
-          <Link href="/dissertaciya-na-zakaz">
-            <a>Диссертация</a>
-          </Link>
-          <span> / </span>
-          <Link href="/dissertaciya-na-zakaz/magisterskaya">
-            <a>Магистерская</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>По экономике</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
+            {url:'/dissertaciya-na-zakaz/magisterskaya', text:'Магистерская'},
+            {url:'#', text:'По экономике'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
@@ -93,7 +83,7 @@ const page = () => (
             нет времени писать и проводить исследования;
           </li>
           <li>
-            материал собран, но оформить его и структурировать нет возможности;
+            материал для магистерской диссертации по экономике собран, но оформить его и структурировать нет возможности;
           </li>
           <li>
             срочно нужно поступать в иностранный ВУЗ, а готовиться к защите не получается;
@@ -135,7 +125,7 @@ const page = () => (
         </ul>
         <p className="par">
           <b>
-            Почему лучше заказать, а не купить готовую работу?
+            Почему лучше заказать, а не купить готовую магистерскую диссертацию по экономике?
           </b>
         </p>
         <p className="par">
@@ -193,7 +183,7 @@ const page = () => (
             если есть план работы и его не нужно разрабатывать с нуля, заказ обойдется дешевле;
           </li>
           <li>
-            чем выше оригинальность (уникальность), тем дороже может обойтись услуга.
+            чем выше оригинальность (уникальность), тем дороже может обойтись написание магистерской диссертации по экономике.
           </li>
         </ul>
       </TextBlock>

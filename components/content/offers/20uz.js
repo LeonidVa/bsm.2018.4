@@ -36,7 +36,7 @@ const Offer20uz = () => (
     <BlockFormTimer className="block-form-timer" style={{backgroundImage: "url(" + require('static/images/block/h.jpg') + ")"}}>
         <BlockFormTitleH className="block-form-timer__title__h2" style={{lineHeight: "initial"}}>
             <span style={{fontSize: "2em", marginTop: "-2em"}}>20%</span><br/>
-            Успей получить<br/> скидку на пакет <br/> «Успешная Защита»
+            Успей получить скидку<br/> на пакет «Успешная Защита»
         </BlockFormTitleH>
         <FormWithTimer
             timerDuration={155555}

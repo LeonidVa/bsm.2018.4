@@ -35,6 +35,8 @@ import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import KursovayaRabota from "components/common/ServiceBlock/ready-made/KursovayaRabota";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+import React from "react";
 
 
 const page = () => (
@@ -43,25 +45,16 @@ const page = () => (
 
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/kursovaya-rabota-na-zakaz">
-            <a>Курсовая</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>По экономике</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/kursovaya-rabota-na-zakaz', text:'Курсовая работа'},
+            {url:'#', text:'По экономике'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
-            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz" name="Курсовая" position="2" />
+            <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz" name="Курсовая работа" position="2" />
             <ItemListElement url="https://besmarter.ru/kursovaya-rabota-na-zakaz/ekonomika" name="По экономике" position="3" />
         </ItemScope>
 

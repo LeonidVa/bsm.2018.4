@@ -9,8 +9,9 @@ Disallow: *zakaz?type=
 Disallow: *humour
 Disallow: *upload?token=
 
+Host: https://besmarter.ru/
 Sitemap: https://besmarter.ru/sitemap.xml
-Host: https://besmarter.ru/`;
+`;
 
     res.end(robots, 'utf8');
     return {}

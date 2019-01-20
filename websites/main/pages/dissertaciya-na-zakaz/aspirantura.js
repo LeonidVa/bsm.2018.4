@@ -33,6 +33,8 @@ import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 import DoctorskayaDis from "components/common/ServiceBlock/ready-made/DoctorskayaDis";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+import React from "react";
 
 
 const page = () => (
@@ -40,21 +42,12 @@ const page = () => (
     <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/dissertaciya-na-zakaz">
-            <a>Диссертация</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Аспирантура</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
+            {url:'#', text:'Аспирантура'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

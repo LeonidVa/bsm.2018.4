@@ -1,17 +1,23 @@
 import Link from 'next/link';
+
 import React, {Component} from 'react';
+
 import Wrapper from 'components/Wrapper';
+import PageWrapper from 'components/common/PageWrapper';
 import BlockNav from 'components/common/BlockNav';
 import NavRow from 'components/common/BlockNav/NavRow';
+
 import ImageBlock from 'components/common/ImageBlock'
 import Accordion from 'components/common/Accordion'
 import FormOrder from 'components/common/forms/Big/Order';
 import FormEstimate from 'components/common/forms/Big/Estimate';
 import LinksBlock from 'components/common/LinksBlock'
 import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
+
 import fields from 'data/form/main';
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import links from 'data/linksBlockConfig';
+import TextBlock from 'components/common/TextBlock';
 import MetaTags from 'react-meta-tags';
 import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
 import dopy from 'data/dopraboty'
@@ -19,22 +25,20 @@ import ContactsPage from "components/common/ServiceBlock/ready-made/ContactsPage
 import MagisDisAnother from "components/common/ServiceBlock/ready-made/MagisDisAnother";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+
 
 const page = () => (
   <Wrapper title="О компании BeSmarter!" description="Информация о компании BeSmarter! Тел. +7 (495) 772-40-90.">
     <PageWrapper className="bg bg-c2 bg-img bg-img2">
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>О нас</a>
-          </Link>
-        </div>
-      </section>
+
+
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'#', text:'О нас'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

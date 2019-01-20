@@ -36,6 +36,7 @@ import DiplomDorabotka from "components/common/ServiceBlock/ready-made/DiplomDor
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
 import React from "react";
+import Breadcrumbs from "components/common/Breadcrumbs";
 
 const page = () => (
   <Wrapper title="Доработка дипломной работы срочно в Москве, заказать исправление диплома – цены и сроки" description="Доработка дипломной работы срочно! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
@@ -43,21 +44,12 @@ const page = () => (
 
 
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная</a>
-          </Link>
-          <span> / </span>
-          <Link href="/diplom-na-zakaz">
-            <a>Дипломная работа</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Доработка</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+            {url:'/', text:'Главная'},
+            {url:'/diplom-na-zakaz', text:'Дипломная работа'},
+            {url:'#', text:'Доработка'},
+        ]}/>
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />

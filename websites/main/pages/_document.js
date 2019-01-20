@@ -31,7 +31,6 @@ export default class MyDocument extends Document {
                 <script dangerouslySetInnerHTML={{ __html: analytics.getMetricsScript()}}/>
                 <noscript dangerouslySetInnerHTML={{ __html: analytics.getMetricsNoscript()}} />
                 <meta name="yandex-verification" content="49e34bd8a11a83fb"/>
-                <meta name="google-site-verification" content="f1gUUKPO-dFrcV5NVW5w7qX8C25fbJ5awHvDofRkQyE" />
           {this.props.styleTags}
             </Head>
             <body>

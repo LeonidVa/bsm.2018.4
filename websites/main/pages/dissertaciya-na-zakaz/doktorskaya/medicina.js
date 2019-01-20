@@ -33,30 +33,21 @@ import DoctorskayaDis1 from "components/common/ServiceBlock/ready-made/Doctorska
 import KandidatDis from "components/common/ServiceBlock/ready-made/KandidatDis";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
+import Breadcrumbs from "components/common/Breadcrumbs";
+import React from "react";
 
 const page = () => (
   <Wrapper title="Докторская диссертация по медицине на заказ в Москве и РФ – цены, сроки написания под ключ" description="Докторские диссертации по медицине на заказ! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <PageWrapper className="bg bg-c2 bg-img bg-img4">
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная </a>
-          </Link>
-          <span> / </span>
-          <Link href="/dissertaciya-na-zakaz">
-            <a>Диссертация</a>
-          </Link>
-          <span> / </span>
-          <Link href="/dissertaciya-na-zakaz/doktorskaya">
-            <a>Докторская</a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>По медицине</a>
-          </Link>
-        </div>
-      </section>
+        <Breadcrumbs links={[
+        {url:'/', text:'Главная'},
+        {url:'/dissertaciya-na-zakaz', text:'Диссертация'},
+        {url:'/dissertaciya-na-zakaz/doktorskaya', text:'Докторская'},
+        {url:'#', text:'По медицине'},
+    ]}/>
+
+
 
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
@@ -108,7 +99,7 @@ const page = () => (
           Преимущества написания в BeSmarter!
         </h2>
         <p className="par">
-          Заказ докторской диссертации – это правильный и оптимальный шаг для соискателей ученой степени. У написания научного труда специалистами есть масса преимуществ:
+          Заказ докторской диссертации по медицине – это правильный и оптимальный шаг для соискателей ученой степени. У написания научного труда специалистами есть масса преимуществ:
         </p>
         <ul>
           <li>
@@ -135,7 +126,7 @@ const page = () => (
           Почему лучше заказать работу, а не купить готовую?
         </h2>
         <p className="par">
-          Покупка готовой диссертации для соискателя ученой степени по медицине грозит обернуться неудачей по нескольким причинам:
+          Покупка готовой докторской диссертации для соискателя ученой степени по медицине грозит обернуться неудачей по нескольким причинам:
         </p>
         <ol>
           <li>
@@ -175,7 +166,7 @@ const page = () => (
           </li>
         </ul>
         <p className="par">
-          Если вы сами составили план, начали выполнять введение или основные главы, и требуется только доработка, то цена снижается. Стоимость докторской диссертации по медицине в BeSmarter! определяется индивидуально, исходя из тонкостей выполнения задания.
+          Если вы сами составили план, начали выполнять введение или основные главы, и требуется только доработка, то цена снижается. Стоимость докторских диссертаций по медицине в BeSmarter! определяется индивидуально, исходя из тонкостей выполнения задания.
         </p>
       </TextBlock>
 
@@ -192,7 +183,7 @@ const page = () => (
         </p>
         <ul>
           <li>
-            Выполните часть диссертации самостоятельно.
+            Выполните часть работы по медицине самостоятельно.
           </li>
           <li>
             Обратитесь за помощью к профессионалам заранее.

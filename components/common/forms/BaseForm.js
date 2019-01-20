@@ -7,7 +7,6 @@ import { connect as reduxConnect } from 'react-redux'
 import { showModal } from '@redux/ui/modal';
 import { hideSpinner, showSpinner } from '@redux/ui/spinner';
 import { changeField } from '@redux/data/form';
-import { PersistGate } from 'redux-persist/integration/react';
 const config = getConfig();
 
 export class BaseForm extends Component {
@@ -62,11 +61,6 @@ export class BaseForm extends Component {
     if (config.publicRuntimeConfig.runtime.development) {
       url = 'http://localhost:3001/api/form_data'
     }
-    
-    if (config.publicRuntimeConfig.runtime.testing) {
-      let stringForm = JSON.parse(localStorage.getItem("persist:root"));
-      console.log(JSON.parse(stringForm.data));
-    }
 
     this.props.onShowSpinnerAction();
     axios({
@@ -78,6 +72,9 @@ export class BaseForm extends Component {
       .then(response => {
         const {data = {}} = response;
         const {error = false, id, msg} = data;
+        if (config.publicRuntimeConfig.runtime.testing) {
+          console.warn(JSON.stringify(data));
+        }
         if (error) {
           /* ошибка со стороны сервера */
           this.props.onShowModalAction();
@@ -112,8 +109,6 @@ export class BaseForm extends Component {
       this.props.onSent()
     }
   }
-
-
 
   saveData(changes) {
     let data = this.props.form;
@@ -240,7 +235,5 @@ export function connect(Component) {
     mapDispatchToProps,
   )(Component);
 }
-
-
 
 export default connect(BaseForm)

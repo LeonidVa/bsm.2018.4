@@ -12,6 +12,7 @@ import dopy from 'data/dopraboty'
 
 import FormOrder from 'components/common/forms/Big/Order';
 import FormEstimate from 'components/common/forms/Big/Estimate';
+import fields from 'data/form/main'
 
 import InfoBlock from 'components/common/InfoBlock';
 import infoBlockConfig from 'data/infoBlock/otchet-po-prak'
@@ -25,8 +26,11 @@ import LinksBlock from 'components/common/LinksBlock';
 import otchet from 'data/linksBlock/otchet';
 
 import Video from 'components/common/VideoBlock';
+import MetaTags from 'react-meta-tags';
 
 import ImageBlock from 'components/common/ImageBlock';
+import CardPopInfo from "components/common/ServiceBlock/CardPopInfo";
+import ServiceBlock from "components/common/ServiceBlock";
 
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl"
 import OtchPoPrak from "components/common/ServiceBlock/ready-made/OtchPoPrak";
@@ -39,6 +43,8 @@ import React from "react";
 const page = () => (
   <Wrapper title="Заказать отчет по учебной практике – купить отчет по учебной практике в Москве и РФ срочно – цены, сроки написания под ключ" description="Предлагаем заказать отчет по учебной практике! Быстро, недорого и профессионально – компания BeSmarter! Звоните: +7 (495) 772-40-90 или +7 (495) 772-90-40.">
     <PageWrapper className="bg bg-c2 bg-img bg-img4">
+
+
         <Breadcrumbs links={[
             {url:'/', text:'Главная'},
             {url:'/zakazat-otchet-po-praktike', text:'Отчёт по практике'},

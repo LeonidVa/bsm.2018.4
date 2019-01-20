@@ -20,6 +20,8 @@ import  {
 import ImageBlock from 'components/common/ImageBlock';
 import PageWrapper from 'components/common/PageWrapper';
 import TextBlock from 'components/common/TextBlock';
+import InfoBlock from "components/common/InfoBlock";
+import infoBlockConfig from "data/infoBlock/diplom";
 
 
 /**/
@@ -72,8 +74,8 @@ class page extends Component {
             <NavRow
               url="#form"
               scroll={true}
-              title="Получить доступ"
-              description="Получи доступ к нашему сервису"
+              title="Оформить заявку"
+              description="Получить консультацию"
             />
             <NavRow
               url="#contacts"
@@ -93,9 +95,10 @@ class page extends Component {
             gradient="rgba(199, 212, 229, 0.95), rgba(199, 212, 229, 0.7)"
             title="BeSmarter!"
             text={<div>
-              <p>Профессиональный проект<br/>для студентов</p>
-              <p>Мы знаем, чем и как помочь!</p>
-              <p>Приходи, мы ждем тебя!</p>
+                <p>Профессиональный сервис<br/>для студентов</p>
+                <p>Быстро и качественно!</p>
+                <p>С нами твоя учеба <br/>пройдет легко!</p>
+                <p>Срочно от 2 часов</p>
             </div>}
             cards={[
               [
@@ -152,7 +155,7 @@ class page extends Component {
           <Form
             formType="Получить доступ к услугам"
             targetID="order"
-            title="Получить доступ к услугам прямо сейчас"
+            title="Узнай стоимость прямо сейчас"
             redForm={true}
             buttonLabel="Отправить"
             fields={[
@@ -163,6 +166,61 @@ class page extends Component {
               {label: 'Комментарии', name: "comment", type: 'textarea', placeholder: 'Ваши комментарии', required: false},
             ]}
           />
+
+              <TextBlock>
+                  <h1 className="title">
+                      Помощь студентам
+                  </h1>
+                  <p className="par">
+                      Наш сервис направлен на качественное консультирование студентов по вопросам учебы и защиты.
+                  </p>
+
+                  <p className="par">
+                      Мы начинаем оказывать помощь с первых минут твоего обращения.
+                  </p>
+
+                  <p className="par">
+                      Как только  мы получаем твою заявку, наш менеджер-консультант просчитывает оптимальные варианты решения поставленных задач.
+                  </p>
+
+                  <p className="par">
+                      После согласования задания мы заключаем договор и наш эксперт-преподаватель приступает к работе.
+                  </p>
+              </TextBlock>
+
+              <TextBlock>
+                  <h1 className="title">
+                      Какие мы даем гарантии
+                  </h1>
+                  <ul>
+                  <li>
+                      <b>Качество.</b> Итогом твоего обращения к нам станет качественно предоставленная подробная  и понятная консультация по твоим учебным вопросам.
+                  </li>
+
+                  <li>
+                      <b>Уникальность.</b> Каждый  ответ на вопрос разрабатывается и предоставляется индивидуально для тебя.
+                  </li>
+
+                  <li>
+                      <b>Оперативность.</b> Мы понимаем, как ты спешишь, поэтому наш менеджер-консультант всегда на связи с тобой по телефону, в офисе и по другим сервисам связи.
+                  </li>
+
+                  <li>
+                      <b>Конфиденциальность.</b> Мы никому не раскрываем твои контактные и персональные данные, сохраняя столь важную в современном мире анонимность.
+                  </li>
+                  </ul>
+              </TextBlock>
+
+              <InfoBlock infoBlockConfig={[
+                  {icon: require("static/images/info/1.svg"), title: 'Стоимость консультации', desc: 'Индивидуально по запросу' },
+                  {icon: require("static/images/info/2.svg"), title: 'Срок выполнения', desc: 'От 2 часов' },
+                  {icon: require("static/images/info/3.svg"), title: 'Гарантии', desc: 'Сделаем все, о чем договорились'},
+                  {icon: require("static/images/info/4.svg"), title: 'Договор', desc: 'Внесение дополнений и пожеланий'},
+                  {icon: require("static/images/info/5.svg"), title: 'Материалы для защиты', desc: 'Полный комплект для успешной защиты'},
+                  {icon: require("static/images/info/6.svg"), title: 'Эксперт-преподаватель', desc: 'Проверенный специалист с опытом' },
+                  {icon: require("static/images/info/7.svg"), title: 'Уникальность', desc: 'Проверка в разных системах' },
+                  {icon: require("static/images/info/8.svg"), title: 'Язык', desc: 'Русский, английский, французский, немецкий, и др.' },
+              ]}/>
 
           <a name="about" style={{position: "absolute", marginTop: "-2em"}}/>
           <ProfitsBlockSlider profitBlockConfig={[
@@ -197,20 +255,110 @@ class page extends Component {
               description: "Те, кому мы помогли, становятся нашими постоянными клиентами",
             },
           ]}/>
-
           <ServiceBlock
             color="#333333"
             url="#contacts"
-            image={require('static/images/block/g.jpg')}
+            image={require('static/images/block/7.jpg')}
             gradient="rgba(199, 212, 229, 0.95), rgba(199, 212, 229, 0.7)"
-            title="Удобный офис в центре"
-            text={<div>
-              <p>Всегда на связи 9:00 – 22:00</p>
-              <p>Работаем в выходные и праздники</p>
-              <p>4 линии метро</p>
-              <p>Всего 5 минут пешком от метро</p>
-            </div>}
+            title="Консультации"
+            text={
+              <div>
+                <p>по любым типам работ!</p>
+                <p>От поступления до защиты</p>
+                <p>От 3 000 рублей</p>
+                <p>Срочно от 2 часов</p>
+              </div>
+            }
           />
+
+          <Form
+            isFull
+            formType="Получить доступ к услугам"
+            targetID="order"
+            title="Заказать помощь"
+            redForm={true}
+            buttonLabel="Отправить"
+            fields={[
+              { id: 1, label: 'Имя', name: 'name', type: 'text', placeholder: 'Ваше имя', required: true },
+              { id: 2, label: 'Телефон', name: 'phone', type: 'text', placeholder: 'Ваш телефон', required: true },
+              { id: 3, label: 'Почта', name: 'email', type: 'email', placeholder: 'email', required: false },
+              { id: 4, label: 'Тема', name: 'theme', type: 'text', placeholder: 'Тема работы', required: false },
+              { id: 5, label: 'Вид работы', name: 'worktype', type: 'text', placeholder: 'Укажите тип', required: false },
+              { id: 6, label: 'Предмет', name: 'discipline', type: 'text', placeholder: 'Предмет или дисциплина', required: false },
+              { id: 7, label: 'Срок', name: 'deadline', type: 'date', placeholder: 'Укажите срок', required: false },
+              { id: 9, label: 'Комментарии', name: 'comment', type: 'textarea', placeholder: 'Ваши комментарии', required: false },
+              { id: 10, label: 'Прикрепить Файл', name: 'file', type: 'file', placeholder: 'Добавить файл', required: false }
+            ]}
+          />
+
+              <TextBlock>
+                  <h2 className="title">
+                      5 причин для заказа в BeSmarter!
+                  </h2>
+                  <ul>
+                      <li>
+                          <b>Компетентность.</b> В BeSmarter! ты  получишь подготовку  работы любой сложности
+                          с преподавателем московского или другого российского ВУЗа.
+                      </li>
+                      <li>
+                          <b>Оперативность.</b> Возможна срочная консультация от 2-х часов. Такая оперативность
+                          достигается благодаря использованию фирменного подхода, созданного в нашей компании.
+                          Вы можете не тратить время на сбор материалов, разработку плана и так далее, а сделать заказ и спокойно заниматься своими делами.
+                      </li>
+                      <li>
+                          <b>Универсальность.</b> Мы на одинаково высоком уровне консультируем по проектам
+                          любых специальностей – экономических, технических, юридических и т. д. Сложность вопроса не играет роли – проблематика будет выявлена, глубоко раскрыта и проработана.
+                      </li>
+                      <li>
+                          <b>Доступная цена.</b> Команда BeSmarter! понимает сложность жизненных ситуаций клиентов, поэтому стоимость услуг у нас невысока.
+                      </li>
+                      <li>
+                          <b>Удобный офис.</b> Для твоего удобства наш офис расположен в Центре Москвы, в пешей доступности от 4-х линий метро.
+                          Мы работаем без выходных и праздников. Приходи в любое удобное для тебя время с  вопросом любой сложности.
+                      </li>
+                  </ul>
+              </TextBlock>
+
+              <TextBlock>
+                  <h2 className="title">
+                      Этапы сотрудничества
+                  </h2>
+                  <ul className="fitted">
+                      <li>
+                          Согласование задания. Прием всех необходимых материалов.
+                      </li>
+                      <li>
+                          Подписание договора в офисе или онлайн.
+                      </li>
+                      <li>
+                          Процесс работы начинается после утверждения тобой плана.
+                      </li>
+                      <li>
+                          Точно в указанный срок ты получаешь полную консультацию.
+                      </li>
+                      <li>
+                          Все правки и дополнения вносятся до успешной сдачи.
+                      </li>
+
+                  </ul>
+                  <p className="par">
+                      Оформите заказ на нашем сайте прямо сейчас и будьте спокойны за свою учебу!
+                  </p>
+              </TextBlock>
+
+              <ServiceBlock
+                  color="#333333"
+                  url="#contacts"
+                  image={require('static/images/block/g.jpg')}
+                  gradient="rgba(199, 212, 229, 0.95), rgba(199, 212, 229, 0.7)"
+                  title="Удобный офис в центре"
+                  text={<div>
+                      <p>Всегда на связи 9:00 - 22:00</p>
+                      <p>Работаем в выходные и праздники</p>
+                      <p>4 линии метро</p>
+                      <p>Всего 5 минут пешком от метро</p>
+                  </div>}
+              />
 
           <a name="contacts" style={{position: "absolute", marginTop: "-2em"}}/>
           <div itemScope itemType="http://schema.org/Organization">
@@ -234,7 +382,7 @@ class page extends Component {
                 Телефон
               </h2>
               <p className="subtitle subtitle-orange">
-                <span itemProp="telephone" className="phone">+7 (495) 772-40-90</span>
+                <span itemProp="telephone" className="phone">+7 (495) 772-40-90</span><br/>
                 <span itemProp="telephone" className="phone">+7 (495) 772-90-40</span>
               </p>
               <p className="par">

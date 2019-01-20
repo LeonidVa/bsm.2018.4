@@ -11,7 +11,8 @@ module.exports = {
       env: {
         NODE_ENV: "production",
         PORT: 3000,
-        SOURCE: "besmarter main"
+        SOURCE: "besmarter main",
+        RECAPTCHA: "6LdEPVcUAAAAADLIyn6B2QGmxCGxED0Os2ElIwWS"
       },
     },
   ],

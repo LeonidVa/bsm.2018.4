@@ -43,7 +43,6 @@ export const HeaderRightDiv = styled.div`
 
 export const HeaderLogoBlock = styled.a`
   font-size: 2em;
-  font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   color: #f05638;
   text-decoration: none;
@@ -153,7 +152,6 @@ export const HeaderOrderCall = styled.span`
 `;
 
 export const ButtonPhoneS = styled.div`
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
   color: #4a4a4a;

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 
 const PageWrapper = styled.div`
-  font-family: "Ubuntu", sans-serif;
   background-color: #eceff1;
   background-repeat: no-repeat;
   background-size: contain;

@@ -21,7 +21,6 @@ const BlockAccordionHeader = styled.div`
 
 const BlockAccordionTitle = styled.h2`
   font-size: 1.9rem;
-  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;

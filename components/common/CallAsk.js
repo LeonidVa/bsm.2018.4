@@ -22,7 +22,6 @@ const Inner = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   text-align: center;
   font-size: 1em;

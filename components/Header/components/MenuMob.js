@@ -13,7 +13,6 @@ const MenuDiv = styled.div`
   background-color: #ffffff;
   padding: 80px 20px 0;
   font-size: 1.25rem;
-  font-family: "Ubuntu", sans-serif;
   transition: all .5s;
   overflow-y: scroll;
   .item {
@@ -37,7 +36,6 @@ const MenuDiv = styled.div`
     }
   }
   ul li a {
-    font-family: "Ubuntu", sans-serif;
     display: inline-block;
     font-size: 1.5em;
     color: #f4511e;
@@ -88,7 +86,6 @@ const AItemTitle = styled.a`
 `;
 
 const AItemListItem = styled.a`
-  font-family: "Ubuntu", sans-serif;
   display: inline-block;
   font-size: 1.5em;
   color: #f4511e;

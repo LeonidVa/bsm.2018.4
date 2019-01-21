@@ -7,7 +7,6 @@ export const DivFooter = styled.div`
   position: relative;
   width: 100%;
   z-index: 1;
-  font-family: "Ubuntu", sans-serif;
 `;
 
 export const DivInner = styled.div`

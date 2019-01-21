@@ -84,7 +84,6 @@ const BlockProfitsPar = styled.p`
 `; 
 
 const BlockProfitsTitle = styled.span`
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: .625em;
   color: #4a4a4a;

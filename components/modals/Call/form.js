@@ -14,7 +14,6 @@ const BlockFormItem = styled.div`
 const TextArea = styled.div`
   display: block;
   font-size: .44em;
-  font-family: "Ubuntu", sans-serif;
   width: 100%;
   height: 7em;
   padding: 0 .31em;
@@ -30,7 +29,6 @@ const TextArea = styled.div`
 const Input = styled.input`
   display: block;
   font-size: .44em;
-  font-family: "Ubuntu", sans-serif;
   width: 100%;
   height: 3.21em;
   padding: 0 .31em;
@@ -48,11 +46,9 @@ const Label = styled.label`
   color: #4a4a4a;
   display: block;
   margin-bottom: .16em;
-  font-family: "Ubuntu", sans-serif;
 `;
 
 const BlockFormBtn = styled.button`
-  font-family: "Ubuntu", sans-serif;
   font-size: .56em;
   display: block;
   margin: 1.33em auto 0;

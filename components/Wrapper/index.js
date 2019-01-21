@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { connect as reduxConnect } from 'react-redux'
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-
+import styled from 'styled-components'
 import ExitPopup, {exitPopupContext, exitPopupState} from 'components/modals/ExitPopup'
 import CallPopup, {callPopupContext, callPopupState} from 'components/modals/Call'
 import ErrorModal from 'components/modals/Error'
@@ -13,6 +13,12 @@ import { sendForm } from '@redux/data/form';
 import { isStringEmpty } from '@helpers/isStringEmpty';
 
 const {publicRuntimeConfig = {}} = getConfig();
+
+
+const FontFamily = styled.div`
+font-family: "Ubuntu", sans-serif;
+`;
+
 
 class Wrapper extends Component {
     static getInitialProps({req}) {
@@ -173,7 +179,7 @@ class Wrapper extends Component {
         return (
             <callPopupContext.Provider value={this.state.callPopupState}>
                 <exitPopupContext.Provider value={this.state.exitPopupState}>
-                      <Fragment>
+                      <FontFamily>
                           <Head>
                             <title>{this.props.title}</title>
                             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -197,7 +203,7 @@ class Wrapper extends Component {
                           />
                           <CallPopup/>
                           <ErrorModal isShown={this.props.modal} />
-                      </Fragment>
+                        </FontFamily>
                 </exitPopupContext.Provider>
             </callPopupContext.Provider>
         )

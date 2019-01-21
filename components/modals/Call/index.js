@@ -12,7 +12,6 @@ const ModalOrderCallDiv = styled.div`
   left: 0;
   background-color: rgba(0,0,0,.8);
   z-index: 5;
-  font-family: "Ubuntu", sans-serif;
   overflow-y: scroll;
 `;
 

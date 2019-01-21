@@ -56,7 +56,6 @@ const BlockText = styled.div`
     }
     .header {
       font-size: 2rem;
-      font-family: "Ubuntu", sans-serif;
       font-style: normal;
       font-stretch: normal;
       letter-spacing: normal;
@@ -75,7 +74,6 @@ const BlockText = styled.div`
   }
   .subtitle {
     font-size: 1.25rem;
-    font-family: "Ubuntu", sans-serif;
     font-weight: bold;
     line-height: 1.2;
     color: #4a4a4a;
@@ -206,7 +204,6 @@ const BlockText = styled.div`
     color: #4a4a4a;
     th {
       width: 50%;
-      font-family: "Ubuntu", sans-serif;
       font-weight: bold;
       text-align: left;
       padding-bottom: 1.55em;

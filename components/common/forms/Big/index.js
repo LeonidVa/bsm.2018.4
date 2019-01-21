@@ -71,7 +71,6 @@ const BlockFormRed = styled.section`
 `;
 
 const BlockFormBtn = styled.button`
-font-family: "Ubuntu", sans-serif;
 font-size: .56em;
 display: block;
 margin: 1.33em auto 0;
@@ -109,7 +108,6 @@ const BlockFormMoreInfo = styled.a`
 const BlockFormTitle = styled.div`
   color: #f4511e;
   font-size: 1em;
-  font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   line-height: 1.19;
   text-align: center;
@@ -154,13 +152,11 @@ const FormLabel = styled.label`
   color: #4a4a4a;
   display: block;
   margin-bottom: .16em;
-  font-family: "Ubuntu", sans-serif;
 `;
 
 const FormInput = styled.input`
   display: block;
   font-size: .44em;
-  font-family: "Ubuntu", sans-serif;
   width: 100%;
   height: 3.21em;
   padding: 0 .31em;
@@ -175,7 +171,6 @@ const FormInput = styled.input`
 const FormTextarea = styled.textarea`
   display: block;
   font-size: .44em;
-  font-family: "Ubuntu", sans-serif;
   width: 100%;
   height: 7em;
   padding: 0 .31em;

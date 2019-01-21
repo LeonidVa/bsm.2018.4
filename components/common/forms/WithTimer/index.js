@@ -54,7 +54,6 @@ const Notification = styled.div`
 const BlockFormTitle = styled.div`
   color: #f4511e;
   font-size: 1em;
-  font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   line-height: 1.19;
   text-align: center;

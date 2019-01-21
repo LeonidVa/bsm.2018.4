@@ -39,7 +39,6 @@ const Span = styled.span`
 `;
 
 const Title = styled.span`
-  font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   font-size: .625em;
   line-height: 1.15;

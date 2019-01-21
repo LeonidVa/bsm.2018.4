@@ -15,7 +15,7 @@ import { isStringEmpty } from '@helpers/isStringEmpty';
 const {publicRuntimeConfig = {}} = getConfig();
 
 
-const FontFamily = styled.div`
+const MainBlockStyle = styled.div`
 font-family: "Ubuntu", sans-serif;
 `;
 
@@ -179,7 +179,7 @@ class Wrapper extends Component {
         return (
             <callPopupContext.Provider value={this.state.callPopupState}>
                 <exitPopupContext.Provider value={this.state.exitPopupState}>
-                      <FontFamily>
+                      <MainBlockStyle>
                           <Head>
                             <title>{this.props.title}</title>
                             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -203,7 +203,7 @@ class Wrapper extends Component {
                           />
                           <CallPopup/>
                           <ErrorModal isShown={this.props.modal} />
-                        </FontFamily>
+                        </MainBlockStyle>
                 </exitPopupContext.Provider>
             </callPopupContext.Provider>
         )

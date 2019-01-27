@@ -1,22 +1,5 @@
 .block-form {
-    font-size: 2em;
-    width: 17em;
-    margin: 1.56em auto 0;
-    border: none;
-    background-color: #ffffff;
-    padding: 1.56em 2.3em;
-    position: relative;
-    z-index: 1;
-    transition: all .4s;
-    &.form-red {
-        border: solid 2px #f4511e;
-        .block-form__title {
-            color: #f4511e;
-        }
-        .block-form__more-info {
-            margin: 1.25em 0 2.25em;
-        }
-    }
+    
     &__title {
         color: #f4511e;
         font-size: 1em;

@@ -5,7 +5,7 @@ import "./index.scss"
 import '../slick.scss'
 import styled from "styled-components"
 
-const BlockSlider = styled.section `
+const BlockSlider = styled.section`
   margin: 1.56em auto 0;
   font-size: 2em;
   @media (max-width: 900px) {
@@ -103,6 +103,15 @@ const BlockProfitsTitle = styled.span`
   }
 `;
 
+const DivSlick = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 1023px) {
+    max-width: 100%;
+  }
+`;
+
+
 const Block = (props) => {
 
     const {imageSrc, title, description, url} = props;
@@ -182,11 +191,11 @@ class ProfitSlider extends Component {
         };
         return (
             <BlockSlider className="block-slider" style={{maxWidth: (profitBlockConfig !== undefined && profitBlockConfig.length) < 5 ? '60%' : '100%'}}>
-                <div className="slick">
+                <DivSlick className="slick">
                     <Slider {...settings}>
                         {renderBlocks(profitBlockConfig)}
                     </Slider>
-                </div>
+                </DivSlick>
             </BlockSlider>
         )
     }

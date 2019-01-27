@@ -51,6 +51,8 @@ const BItemHoveredButtomWrapper = styled.div`
 `;
 
 const BlockServiceListItem = styled.div`
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: default;
   display: block;
   text-decoration: none;
   color: #ffffff;

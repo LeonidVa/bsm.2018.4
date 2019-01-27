@@ -16,17 +16,32 @@ const ModalOrderCallDiv = styled.div`
 `;
 
 const BlockForm = styled.div`
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -8.5em;
-  margin-top: 0;
-  transform: translateY(-50%);
-  @media (max-width: 660px) {
-    margin-left: 0;
-    left: 0;
-  }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8.5em;
+    margin-top: 0;
+    transform: translateY(-50%);
+    @media (max-width: 660px) {
+        margin-left: 0;
+        left: 0;
+    }
+    font-size: 2em;
+    width: 17em;
+    border: none;
+    background-color: #ffffff;
+    padding: 1.56em 2.3em;
+    z-index: 1;
+    transition: all .4s;
+    &.form-red {
+        border: solid 2px #f4511e;
+        .block-form__title {
+            color: #f4511e;
+        }
+        .block-form__more-info {
+            margin: 1.25em 0 2.25em;
+        }
+    }
 `;
 
 const callPopupState = {

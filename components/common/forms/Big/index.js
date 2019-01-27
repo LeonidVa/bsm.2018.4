@@ -12,7 +12,7 @@ import DatePicker from 'components/common/DatePicker';
 import Fox from 'static/images/fox-circle.svg';
 import './index.scss';
 import Close from 'components/modals/Close';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const BlockFormItem = styled.div`
   height: 2.5em;
@@ -183,6 +183,8 @@ const FormTextarea = styled.textarea`
 }
 `;
 
+
+
 /*   fields are stored in /data/main.js   */
 
 class OrderForm extends BaseForm {
@@ -274,11 +276,13 @@ class OrderForm extends BaseForm {
             {field.rlabel}
           </FormLabel>
 
+          
           <DatePicker
             placeholder={field.placeholder}
             value={this.props.form[field.name]}
             onDayChange={value => this.saveData({ [field.name]: value })}
           />
+          
         </BlockFormItem>
       );
     }

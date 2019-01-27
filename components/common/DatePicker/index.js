@@ -7,6 +7,9 @@ import MomentLocaleUtils, {
 } from 'react-day-picker/moment';
 import './DatePicker.scss';
 
+
+
+
 class DatePicker extends Component {
     onDayChange = (day, modifiers) => {
         // для отправки на сервер

@@ -2,6 +2,7 @@ import { BaseForm, connect } from 'components/common/forms/BaseForm'
 import styled from 'styled-components'
 
 const Input = styled.input`
+  margin-right: 3em;
   font-size: 1rem;
   width: 14rem;
   height: 3rem;

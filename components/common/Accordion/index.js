@@ -86,6 +86,44 @@ const BigBtn = styled.a `
   }
 `;
 
+const BlockAccordionArrow = styled.div`
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: solid 0.125rem #f4511e;
+    border-radius: 50%;
+    position: absolute;
+    top: 55%;
+    margin-top: -0.875rem;
+    right: 2rem;
+    @media (max-width: 415px) {
+      right: 28%;
+    }
+    @media (max-width: 376px) {
+      right: 36%;
+    }
+    @media (max-width: 321px) {
+      right: 44%;
+    }
+    div {
+      font-size: 2rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-right: 0.125rem solid #f4511e;
+      border-bottom: 0.125rem solid #f4511e;
+      transform: ${props => props.isOpen ? "rotate(225deg)" :  "rotate(45deg)"};
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -0.375rem;
+      margin-top: ${props => props.isOpen ? "-0.18rem" :  "-0.375rem"};
+      margin-left: -0.31rem;
+      transition: all 0.4s ease-out;
+    }
+`;
+
+
+
 class Accordion extends Component {
 
     state = {
@@ -128,7 +166,7 @@ class Accordion extends Component {
     };
 
     render() {
-        const {title, rows, button, buttonLabel, buttonURL} = this.props;
+        const {title, rows, button, buttonLabel, buttonURL, isOpen} = this.props;
         let classes = "block-accordion__arrow";
         if (this.state.open) {
             classes += " up"
@@ -141,9 +179,9 @@ class Accordion extends Component {
             <SectionBlockAccordion className="block-accordion" data-accordion="open" style={{paddingBottom: 0}}>
                 <BlockAccordionHeader className="block-accordion__header" onClick={() => this.setState({open: !this.state.open})}>
                     <BlockAccordionTitle className="block-accordion__title">{title}</BlockAccordionTitle>
-                    <div className={classes}>
+                    <BlockAccordionArrow className={classes} isOpen={this.state.open ? true : false} >
                         <div></div>
-                    </div>
+                    </BlockAccordionArrow>
                 </BlockAccordionHeader>
                 <BlockAccordionBody className="block-accordion__body" style={{opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "100000px" : "0"}}>
                     <BlockTextPar className="block-text__par">{this.props.children}</BlockTextPar>

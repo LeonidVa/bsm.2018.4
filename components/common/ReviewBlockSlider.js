@@ -3,7 +3,16 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 
 const BlockSliderReviewsItem = styled.div`
-  padding: .38em;
+   padding: .78em;
+    .review {
+      font-size: .5em;
+      color: #4a4a4a;
+      line-height: 1.5;
+      margin-bottom: .31em;
+      &-bottom {
+        font-weight: 700;
+      }
+    }
 `; 
 
 const ReviewBlock = styled.p`
@@ -56,7 +65,25 @@ const BlockSliderSlideReview = styled.div`
 `;
 
 const BlockSliderReview = styled.section `
-  max-width: 100%;
+   margin: 1.56em auto 0;
+  font-size: 2em;
+  @media (max-width: 900px) {
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-around;
+    margin: 0.5em auto;
+  }
+  
+`;
+
+const BlockSliderReviwsBlock=styled.div`
+padding: .78em;
+    background-color: #ffffff;
+    width: 9.59em;
+    @media (min-width: 661px) and (max-width: 720px) {
+      width: 8.5em;
+      padding: .4em;
+    }
 `;
 
 const Review = ({ faceImg, reviewText, bottom, name, prof }) => (
@@ -79,7 +106,7 @@ const Block = (props)=> {
   const { client, manager } = props;
   return (
     <BlockSliderSlideReview className="block-slider__slide review">
-      <div className="block-slider__reviews-block">
+      <BlockSliderReviwsBlock className="block-slider__reviews-block">
         <Review faceImg={client.avatar}
           reviewText={client.text}
           name={client.name}
@@ -92,7 +119,7 @@ const Block = (props)=> {
           prof={manager.prof}
           bottom={true}
         />
-      </div>
+      </BlockSliderReviwsBlock>
     </BlockSliderSlideReview>
   )
 }

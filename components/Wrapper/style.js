@@ -1,5 +1,7 @@
-@import './common/textBlock';
-@import './common/qualityBlock';
+import { createGlobalStyle }  from "styled-components";
+
+
+export const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,6 +23,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 html {
+  font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   @media (min-width: 661px) and (max-width: 800px) {
     font-size: 12px;
@@ -134,3 +137,4 @@ input {
     text-decoration: none;
   }
 }
+`;

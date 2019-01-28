@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import './index.scss';
 import foxLogo from 'static/images/fox-circle.svg'
 import BottomHelper from 'components/common/CallAsk'
 import  {

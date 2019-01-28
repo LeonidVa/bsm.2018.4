@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import CardPopInfo from "./CardPopInfo";
-import "./serviceBlock.scss";
+
 import styled from 'styled-components';
 
 const BlockServiceTop = styled.a`
@@ -21,6 +21,13 @@ const BlockServiceTop = styled.a`
   }
   @media (max-width: 660px) {
     background-position-x: 72%;
+  }
+
+  &:hover {
+    position: relative;
+    z-index: 3;
+    transform: scale(1.03);
+    transition: all 0.33s ease;
   }
 `;
 
@@ -60,6 +67,11 @@ const BlockServiceTopTitle = styled.span`
   margin-bottom: 1rem;
   position: relative;
   font-size: 2rem;
+  &:hover {
+    transition: all 0.5s ease;
+    left: 0;
+    width: 100%;
+  }
 `;
 
 const BlockServiceTopTitleUnderline = styled.span`

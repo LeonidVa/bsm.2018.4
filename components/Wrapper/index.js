@@ -12,18 +12,9 @@ import stat from 'utils/analytics'
 import { sendForm } from '@redux/data/form';
 import { isStringEmpty } from '@helpers/isStringEmpty';
 
-import  {
-      GlobalStyle
- } from './style';
-
-
-
-
+import  { GlobalStyle } from './style';
 
 const {publicRuntimeConfig = {}} = getConfig();
-
-
-
 
 class Wrapper extends Component {
     static getInitialProps({req}) {

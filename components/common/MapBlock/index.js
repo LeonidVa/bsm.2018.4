@@ -1,7 +1,7 @@
 import {YMaps, Map, Placemark} from 'react-yandex-maps';
 
 import {Component} from 'react';
-import './MapBlock.scss'
+
 import  {
 BlockMap
 } from './style';

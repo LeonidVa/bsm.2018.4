@@ -1,5 +1,5 @@
 import {Component, createContext} from 'react';
-import './style.scss';
+
 import Close from '../Close';
 import Form from './form'
 import styled from 'styled-components'; 
@@ -16,6 +16,7 @@ const ModalOrderCallDiv = styled.div`
 `;
 
 const BlockForm = styled.div`
+    position: relative;
     position: absolute;
     top: 50%;
     left: 50%;

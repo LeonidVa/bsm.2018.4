@@ -4,7 +4,7 @@ import Timer from 'components/common/Timer';
 import Close from 'components/modals/Close';
 import PhoneAndSubmit from 'components/common/forms/PhoneAndSubmit';
 import styled from 'styled-components'
-import './index.scss';
+
 
 const FormTimer = styled.div`
   @media (max-width: 660px) {
@@ -66,6 +66,7 @@ const FormP = styled.p`
   line-height: normal;
   width: 100%;
 `;
+
 
 class FormWithTimer extends Component {
     state = {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Link from 'next/link';
-import './index.scss'
+
 import styled from 'styled-components'
 
 const SectionBlockAccordion = styled.section `
@@ -87,42 +87,40 @@ const BigBtn = styled.a `
 `;
 
 const BlockAccordionArrow = styled.div`
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border: solid 0.125rem #f4511e;
+  border-radius: 50%;
+  position: absolute;
+  top: 55%;
+  margin-top: -0.875rem;
+  right: 2rem;
+  @media (max-width: 415px) {
+    right: 28%;
+  }
+  @media (max-width: 376px) {
+    right: 36%;
+  }
+  @media (max-width: 321px) {
+    right: 44%;
+  }
+  div {
     font-size: 2rem;
-    width: 2rem;
-    height: 2rem;
-    border: solid 0.125rem #f4511e;
-    border-radius: 50%;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-right: 0.125rem solid #f4511e;
+    border-bottom: 0.125rem solid #f4511e;
+    transform: ${props => props.isOpen ? "rotate(225deg)" :  "rotate(45deg)"};
     position: absolute;
-    top: 55%;
-    margin-top: -0.875rem;
-    right: 2rem;
-    @media (max-width: 415px) {
-      right: 28%;
-    }
-    @media (max-width: 376px) {
-      right: 36%;
-    }
-    @media (max-width: 321px) {
-      right: 44%;
-    }
-    div {
-      font-size: 2rem;
-      width: 0.625rem;
-      height: 0.625rem;
-      border-right: 0.125rem solid #f4511e;
-      border-bottom: 0.125rem solid #f4511e;
-      transform: ${props => props.isOpen ? "rotate(225deg)" :  "rotate(45deg)"};
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -0.375rem;
-      margin-top: ${props => props.isOpen ? "-0.18rem" :  "-0.375rem"};
-      margin-left: -0.31rem;
-      transition: all 0.4s ease-out;
-    }
+    top: 50%;
+    left: 50%;
+    margin-top: -0.375rem;
+    margin-top: ${props => props.isOpen ? "-0.18rem" :  "-0.375rem"};
+    margin-left: -0.31rem;
+    transition: all 0.4s ease-out;
+  }
 `;
-
-
 
 class Accordion extends Component {
 

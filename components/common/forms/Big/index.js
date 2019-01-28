@@ -10,9 +10,9 @@ import Dropdown from 'react-dropdown';
 import Recaptcha from 'react-google-recaptcha';
 import DatePicker from 'components/common/DatePicker';
 import Fox from 'static/images/fox-circle.svg';
-import './index.scss';
+
 import Close from 'components/modals/Close';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 const BlockFormItem = styled.div`
   height: 2.5em;

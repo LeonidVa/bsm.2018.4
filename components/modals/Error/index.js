@@ -1,6 +1,5 @@
 import React, {Component, createContext} from 'react';
 import { connect as reduxConnect } from 'react-redux'
-import './style.scss';
 import Close from "../Close/index";
 import { hideModal } from '@redux/ui/modal';
 import styled from 'styled-components';
@@ -35,6 +34,7 @@ const BlockFormTitle = styled.p`
 `;
 
 const ModalSaleBody = styled.div`
+  position: relative;
   width: 34.18em;
   max-width: 100%;
   left: 50%;

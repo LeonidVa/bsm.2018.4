@@ -21,22 +21,29 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
-  font-size: 1rem;
-  width: 14rem;
-  height: 3rem;
-  color: #ffffff;
-  border: none;
-  background-color: #f4511e;
-  cursor: pointer;
-  transition: all .4s;
-  &:hover {
-    background-color: #922d0e;
-  }
-  @media (max-width: 660px) {
-  font-size: .75em;
-  width: 12rem;
-  }
+ font-size: .56em;
+            width: 12.28em;
+            height: 2.78em;
+            color: #fff;
+            border: none;
+            background-color: #f4511e;
+            cursor: pointer;
+            transition: all .4s;
+            &:hover {
+                background-color: #922d0e;
+            }
 `;
+
+const FormSubmit = styled.form`
+  display: flex;
+  font-size: 1em;
+  width: 14.9em;
+  @media (max-width: 660px) {
+      flex-direction: column;
+  }
+     
+`;
+
 
 class PhoneAndSubmit extends BaseForm {
   constructor(props) {
@@ -50,7 +57,7 @@ class PhoneAndSubmit extends BaseForm {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit(this.successCallBack)}>
+      <FormSubmit onSubmit={this.handleSubmit(this.successCallBack)}>
         <Input type="text"
           placeholder={this.props.placeholder}
           required
@@ -63,7 +70,7 @@ class PhoneAndSubmit extends BaseForm {
         >
           {this.props.submitLabel}
         </Button>
-      </form>
+      </FormSubmit>
     )
   }
 }

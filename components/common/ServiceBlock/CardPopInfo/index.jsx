@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Link from "next/link";
-import "./CardPopInfo.scss"
+
 import styled from 'styled-components'
 
 const BItem = styled.div`

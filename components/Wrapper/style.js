@@ -1,6 +1,5 @@
 import { createGlobalStyle }  from "styled-components";
 
-
 export const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -68,7 +67,7 @@ export const GlobalStyle = createGlobalStyle`
     cursor: not-allowed;
   }
   .inner {
-    width: 100%;
+   
     max-width: 990px;
     margin: 0 auto;
     @media (max-width: 900px) {

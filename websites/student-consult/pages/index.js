@@ -3,7 +3,7 @@ import Link from "next/link";
 import Wrapper from 'components/Wrapper';
 import BlockNav from 'components/common/BlockNav';
 import NavRow from 'components/common/BlockNav/NavRow';
-import MessBlock from "components/common/MessBlock";
+import MessBlock from "components/common/MessBlock/index.js";
 import ProfitsBlockSlider from "components/common/ProfitsBlockSlider";
 import Form from "components/common/forms/Big";
 import ServiceBlock from "components/common/ServiceBlock";
@@ -17,10 +17,10 @@ import  {
   HeaderUl,
   HeaderNavA,
   } from '/components/Header/style.js';
-import ImageBlock from 'components/common/ImageBlock';
-import PageWrapper from 'components/common/PageWrapper';
-import TextBlock from 'components/common/TextBlock';
-import InfoBlock from "components/common/InfoBlock";
+import ImageBlock from 'components/common/ImageBlock/index.js';
+import PageWrapper from 'components/common/PageWrapper/index.js';
+import TextBlock from 'components/common/TextBlock/index.js';
+import InfoBlock from "components/common/InfoBlock/index.js";
 import infoBlockConfig from "data/infoBlock/diplom";
 
 

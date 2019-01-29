@@ -1,86 +1,5 @@
 import {Component} from 'react';
-import styled from "styled-components"
-
-const MenuDiv = styled.div`
-  position: fixed;
-  width: 100%;
-  overflow: hidden;
-  background-color: #fafafa;
-  top: -200%;
-  left: 0;
-  z-index: 3;
-  padding: 3.25em 0 5.125em;
-  transition: all .5s;
-  &.open {
-    top: 3em;
-  }
-  .inner {
-    display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-  }
-  .item {
-    border-right: 0.0625em solid #cfd8dc;
-    margin-right: 1em;
-    padding-right: 1em;
-    &:last-child {
-      border-right: none;
-      margin-right: 0;
-      .lists .list {
-        width: 50%;
-        &:first-child {
-          padding-right: 0.75em;
-        }
-      }
-    }
-  }
-
-  .lists {
-    margin-bottom: 2.125em;
-    display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  .list {
-    font-size: 1rem;
-    width: 100%;
-    min-width: 14rem;
-    padding-right: 10px;
-    &--item {
-      margin-bottom: 1em;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      a {
-        color: #4a4a4a;
-        text-decoration: none;
-        &:hover {
-          color: #d84315;
-          text-decoration: underline;
-        }
-      }
-      &-header {
-        display: none;
-        font-size: 120%;
-        a {
-          margin-left: 0;
-          color: #f4511e;
-        }
-      }
-      &-subheader {
-        font-size: 110%;
-        a { margin-left: 0; color: #f4511e; }
-      }
-    }
-
-  }
-`;
+import {MenuDivBlock} from "./style.js"
 
 class MenuWide extends Component {
 
@@ -96,12 +15,8 @@ class MenuWide extends Component {
 
     render() {
         return (
-            <MenuDiv className={"menu-desk " + ( this.state.showMenu ? "open" : "")} onMouseLeave={this.props.handler}>
+            <MenuDivBlock className={"menu-desk " + ( this.state.showMenu ? "open" : "")} onMouseLeave={this.props.handler}>
                 <div className="inner">
-
-
-
-
                     <div className="item">
                         <div className="lists">
                             <ul className="list">
@@ -156,10 +71,6 @@ class MenuWide extends Component {
                             </ul>
                         </div>
                     </div>
-
-
-
-
                     <div className="item">
                         <div className="lists">
                             <ul className="list">
@@ -202,11 +113,6 @@ class MenuWide extends Component {
                             </ul>
                         </div>
                     </div>
-
-
-
-
-
                     <div className="item">
                         <div className="lists">
                             <ul className="list">
@@ -240,9 +146,6 @@ class MenuWide extends Component {
                             </ul>
                         </div>
                     </div>
-
-
-
                     <div className="item">
                         <div className="lists">
                             <ul className="list">
@@ -277,7 +180,7 @@ class MenuWide extends Component {
                         </div>
                     </div>
                 </div>
-            </MenuDiv>
+            </MenuDivBlock>
 
         )
     }

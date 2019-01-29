@@ -2,13 +2,13 @@ import React from 'react';
 import Router from 'next/router';
 import Link from 'next/link';
 import Wrapper from 'components/Wrapper';
-import PageWrapper from 'components/common/PageWrapper';
+import PageWrapper from 'components/common/PageWrapper/index.js';
 import BlockNav from 'components/common/BlockNav';
 import NavRow from 'components/common/BlockNav/NavRow';
-import MessBlock from 'components/common/MessBlock';
+import MessBlock from 'components/common/MessBlock/index.js';
 import OrderForm from 'components/common/forms/Big/Order';
 import FormWithTimer from 'components/common/forms/WithTimer';
-import Title from 'components/common/Title'
+import Title from 'components/common/Title/index.js'
 import telega from 'utils/telega';
 import styled from 'styled-components'
 // Script errors occuring during initial client render can cause the server-rendered

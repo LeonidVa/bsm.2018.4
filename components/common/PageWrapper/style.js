@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const PageWrapper = styled.div`
+export const PageWrapper = styled.div`
   background-color: #eceff1;
   background-repeat: no-repeat;
   background-size: contain;
@@ -50,13 +49,3 @@ const PageWrapper = styled.div`
     background-color: #25b9a9;
   }
 `;
-/**/
-class Comp extends Component {
-
-    render() {
-        return (<PageWrapper className={`wrapper ${this.props.className}`}>{this.props.children}</PageWrapper>)
-    }
-
-}
-
-export default Comp;

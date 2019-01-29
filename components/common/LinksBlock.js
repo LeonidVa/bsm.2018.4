@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import TextBlock from 'components/common/TextBlock'
+import TextBlock from 'components/common/TextBlock/index.js'
 
 
 const renderLinks = (links) => (

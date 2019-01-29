@@ -1,98 +1,27 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import styled from 'styled-components';
-
-const BlockSliderReviewsItem = styled.div`
-  padding: .78em;
-  .review {
-    font-size: .5em;
-    color: #4a4a4a;
-    line-height: 1.5;
-    margin-bottom: .31em;
-    &-bottom {
-      font-weight: 700;
-    }
-  }
-`; 
-
-const ReviewBlock = styled.p`
-  font-size: .5em;
-  color: #4a4a4a;
-  line-height: 1.5;
-  margin-bottom: .31em;
-  &-bottom {
-    font-weight: 700;
-  }
-`;
-
-const ReviwsAuthor = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 0.5rem;
-`;
-
-const Img = styled.img`
-  margin: 0;
-  font-size: 1em;
-  width: 1.72em;
-  height: 1.72em;
-`;
-
-const ReviewsAuthorData = styled.div`
-  padding-left: 0.5rem;
-`;
-
-const ReviewsName = styled.span`
-  display: block;
-  font-size: .59em;
-  color: #191919;
-  line-height: normal;
-`;
-
-const ReviewsJob = styled.span`
-  display: block;
-  font-size: .5em;
-  color: #c0c0c0;
-  line-height: normal;
-  &.job-orange {
-    color: #f4511e;
-  }
-`;
-
-const BlockSliderSlideReview = styled.div`
-  max-width: 100% !important;
-`;
-
-const BlockSliderReview = styled.section `
-  margin: 1.56em auto 0;
-  font-size: 2em;
-  @media (max-width: 900px) {
-    width: 100%;
-    max-width: 100%;
-    justify-content: space-around;
-    margin: 0.5em auto;
-  }
-  
-`;
-
-const BlockSliderReviwsBlock=styled.div`
-  padding: .78em;
-  background-color: #ffffff;
-  width: 9.59em;
-  @media (min-width: 661px) and (max-width: 720px) {
-    width: 8.5em;
-    padding: .4em;
-  }
-`;
+import {
+  BlockSliderReviewsItem,
+  ReviewBlock,
+  ReviwsAuthor,
+  ImgBlock,
+  ReviewsAuthorData,
+  ReviewsName,
+  ReviewsJob,
+  BlockSliderSlideReview,
+  BlockSliderReview,
+  BlockSliderReviwsBlock
+} from './style.js';
 
 const Review = ({ faceImg, reviewText, bottom, name, prof }) => (
   <BlockSliderReviewsItem className="block-slider__reviews-item">
-    <ReviewBlock className={`review ${bottom ? 'review-bottom': ''}`}>
+    <ReviewBlock className={`review ${bottom ? 'review-bottom': ''}`}
+    bottomreview = {bottom ? true : false}
+    >
         {reviewText}
     </ReviewBlock>
     <ReviwsAuthor className="reviews-author">
-        <Img src={faceImg} alt={prof + ' ' + name} />
+        <ImgBlock src={faceImg} alt={prof + ' ' + name} />
         <ReviewsAuthorData className="reviews-author__data">
             <ReviewsName className="reviews-name">{name}</ReviewsName>
             <ReviewsJob className={`reviews-job ${bottom ? 'job-orange': ''}`}>{prof}</ReviewsJob>

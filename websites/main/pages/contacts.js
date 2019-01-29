@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Link from 'next/link';
-import 'components/contacts/style.scss'
+
 
 import Wrapper from 'components/Wrapper';
 import PageWrapper from 'components/common/PageWrapper';

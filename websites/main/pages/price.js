@@ -1,26 +1,26 @@
 import Link from 'next/link';
 import React, {Component} from 'react';
 import Wrapper from 'components/Wrapper';
-import PageWrapper from 'components/common/PageWrapper';
-import TextBlock from 'components/common/TextBlock';
+import PageWrapper from 'components/common/PageWrapper/index.js';
+import TextBlock from 'components/common/TextBlock/index.js';
 import BlockNav from 'components/common/BlockNav';
 import NavRow from 'components/common/BlockNav/NavRow';
-import ImageBlock from 'components/common/ImageBlock'
+import ImageBlock from 'components/common/ImageBlock/index.js'
 import Accordion from 'components/common/Accordion'
 import FormOrder from 'components/common/forms/Big/Order';
 import LinksBlock from 'components/common/LinksBlock'
-import ReviewBlockSlider from 'components/common/ReviewBlockSlider'
+import ReviewBlockSlider from 'components/common/ReviewBlockSlider/index.js'
 import reviewBlockConfig from 'data/reviewBlockConfig';
 import links from 'data/linksBlockConfig';
 import MetaTags from 'react-meta-tags';
-import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider';
+import ProfitsBlockSlider from 'components/common/ProfitsBlockSlider/index.js';
 import dopy from 'data/dopraboty'
 import MagisDisPricePage from "components/common/ServiceBlock/ready-made/MagisDisPricePage";
 import MatZashGirl from "components/common/ServiceBlock/ready-made/MatZashGirl";
-import Title from "components/common/Title";
+import Title from "components/common/Title/index.js";
 import ItemScope from "components/common/schema.org/ItemScope"
 import ItemListElement from "components/common/schema.org/ItemListElement"
-import Breadcrumbs from "components/common/Breadcrumbs";
+import Breadcrumbs from "components/common/Breadcrumbs/index.js";
 
 
 const page = () => (

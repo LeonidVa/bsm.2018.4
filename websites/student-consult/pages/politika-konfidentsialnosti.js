@@ -1,8 +1,8 @@
 import React from "react";
 import Wrapper from 'components/Wrapper';
-import PageWrapper from 'components/common/PageWrapper';
-import TextBlock from 'components/common/TextBlock';
-import Title from 'components/common/Title';
+import PageWrapper from 'components/common/PageWrapper/index.js';
+import TextBlock from 'components/common/TextBlock/index.js';
+import Title from 'components/common/Title/index.js';
 import Link from 'next/link';
 import FormOrder from 'components/common/forms/Big/Order';
 import  {

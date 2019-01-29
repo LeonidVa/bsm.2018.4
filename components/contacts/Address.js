@@ -1,4 +1,10 @@
 import React, {Component} from 'react';
+import {
+    BlockAccordionContacts,
+    BlockAccordionHeader,
+    BlockTextPar,
+    BlockAccordionBody,
+} from "./style.js"
 
 class Address extends Component {
     state = {
@@ -18,22 +24,22 @@ class Address extends Component {
     render() {
         const {metro, time, distance, route, officeRoute, schema} = this.props
         return (
-            <div className="block-accordion contacts">
-                <div className="block-accordion__header" onClick={() => this.handleClick()}>
-                    <p className="block-text__par big-bold">
+            <BlockAccordionContacts className="block-accordion contacts">
+                <BlockAccordionHeader className="block-accordion__header" onClick={() => this.handleClick()}>
+                    <BlockTextPar className="block-text__par big-bold">
                         {metro}
-                    </p>
-                </div>
-                <div className="block-accordion__body active" style={{opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "1000px" : "0"}}>
+                    </BlockTextPar>
+                </BlockAccordionHeader>
+                <BlockAccordionBody className="block-accordion__body active" style={{opacity: this.state.open ? 1 : 0, maxHeight: this.state.open ? "1000px" : "0"}}>
                     <img src={schema} alt="Карта проезда"/>
-                    <p className="block-text__par">
+                    <BlockTextPar className="block-text__par">
                         {metro}<br/>
                         {time}<br/>
                         {distance}
-                    </p>
+                    </BlockTextPar>
                     {this.props.children}
-                </div>
-            </div>
+                </BlockAccordionBody>
+            </BlockAccordionContacts>
         )
     }
 }

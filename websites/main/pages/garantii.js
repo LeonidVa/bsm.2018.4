@@ -64,7 +64,7 @@ const page = () => (
       <ImageBlock imageSrc={require('static/images/block/gar.jpg')} altText="Наши гарантии"/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Гарантии
         </h1>
         <p className="par">

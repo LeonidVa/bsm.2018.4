@@ -99,7 +99,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Как написать заключение к дипломной работе (образец)
         </h1>
         <p className="par">

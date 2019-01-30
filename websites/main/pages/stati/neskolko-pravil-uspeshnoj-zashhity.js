@@ -101,7 +101,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Несколько правил удачной защиты
         </h1>
         <p className="par">

@@ -70,7 +70,7 @@ const page = () => (
 
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Докторские диссертации по медицине
         </h1>
         <p className="par">

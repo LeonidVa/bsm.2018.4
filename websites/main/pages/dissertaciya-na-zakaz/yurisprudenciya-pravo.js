@@ -74,7 +74,7 @@ const page = () => (
         <DoctorskayaDis/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Заказать диссертацию по юриспруденции
         </h1>
         <ul>

@@ -67,7 +67,7 @@ const page = () => (
         <MatZashDisser/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Как подготовиться и поступить в аспирантуру
         </h1>
         <p className="par">

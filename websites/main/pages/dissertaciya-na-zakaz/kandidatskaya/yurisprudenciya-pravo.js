@@ -76,7 +76,7 @@ const page = () => (
         <DoctorskayaDis/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Кандидатская диссертация по праву на заказ
         </h1>
         <p className="par">

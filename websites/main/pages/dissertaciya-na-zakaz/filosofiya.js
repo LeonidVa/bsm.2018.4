@@ -69,7 +69,7 @@ const page = () => (
         <DoctorskayaDis/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Диссертация по философии
         </h1>
         <p className="par">

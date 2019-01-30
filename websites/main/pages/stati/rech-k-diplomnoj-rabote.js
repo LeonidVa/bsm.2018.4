@@ -97,7 +97,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Как написать речь к дипломной работе
         </h1>
         <p className="par">

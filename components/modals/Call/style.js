@@ -76,7 +76,6 @@ export const ModalOrderCallDiv = styled.div`
 `;
 
 export const BlockForm = styled.div`
-  position: relative;
   position: absolute;
   top: 50%;
   left: 50%;

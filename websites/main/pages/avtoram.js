@@ -53,7 +53,7 @@ const page = () => (
       </BlockNav>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Работа для авторов
         </h1>
         <p className="par">

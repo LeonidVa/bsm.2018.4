@@ -98,7 +98,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Как составить план дипломной работы (образец)
         </h1>
         <p className="par italic">

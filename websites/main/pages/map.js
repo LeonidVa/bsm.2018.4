@@ -38,7 +38,7 @@ const page = () => (
             <MessBlock/>
 
       <TextBlock>
-        <h1 className="title center">
+        <h1>
           Карта сайта
         </h1>
         <ul className="style-none">

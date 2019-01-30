@@ -51,18 +51,6 @@ const page = () => (
             {url:'#', text:'Диссертация'},
         ]}/>
 
-      <section className="breadcrumbs">
-        <div className="inner">
-          <Link href="/">
-            <a>Главная </a>
-          </Link>
-          <span> / </span>
-          <Link href="#">
-            <a>Диссертация</a>
-          </Link>
-        </div>
-      </section>
-
         <ItemScope type="http://schema.org/BreadcrumbList">
             <ItemListElement url="https://besmarter.ru/" name="Главная" position="1" />
             <ItemListElement url="https://besmarter.ru/dissertaciya-na-zakaz" name="Диссертация" position="2" />
@@ -102,7 +90,7 @@ const page = () => (
 
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
             Написание диссертации на заказ
         </h1>
         <ul>

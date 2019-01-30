@@ -67,7 +67,7 @@ const page = () => (
         <KandidatDis/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Докторская диссертация по педагогике на заказ
         </h1>
         <p className="par">

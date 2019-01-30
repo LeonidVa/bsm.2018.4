@@ -69,7 +69,7 @@ const page = () => (
 
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Заказать дипломную работу по педагогике
         </h1>
         <ul style={{listStyle: 'none'}}>

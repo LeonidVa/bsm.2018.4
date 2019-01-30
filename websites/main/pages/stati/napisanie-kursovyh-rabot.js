@@ -69,7 +69,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Написание курсовых работ
         </h1>
         <p className="par">

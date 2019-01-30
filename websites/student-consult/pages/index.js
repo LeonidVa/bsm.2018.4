@@ -3,7 +3,6 @@ import Link from "next/link";
 import Wrapper from 'components/Wrapper';
 import BlockNav from 'components/common/BlockNav';
 import NavRow from 'components/common/BlockNav/NavRow';
-import MessBlock from "components/common/MessBlock/index.js";
 import ProfitsBlockSlider from "components/common/ProfitsBlockSlider";
 import Form from "components/common/forms/Big";
 import ServiceBlock from "components/common/ServiceBlock";
@@ -11,17 +10,14 @@ import MapBlock from 'components/common/MapBlock';
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
 import schemaSrc from 'static/images/contacts/how-to-go.jpg';
 import Address from 'components/contacts/Address'
-import socials from 'data/socials';
 import  {
   HeaderLi,
   HeaderUl,
   HeaderNavA,
   } from '/components/Header/style.js';
-import ImageBlock from 'components/common/ImageBlock/index.js';
 import PageWrapper from 'components/common/PageWrapper/index.js';
 import TextBlock from 'components/common/TextBlock/index.js';
 import InfoBlock from "components/common/InfoBlock/index.js";
-import infoBlockConfig from "data/infoBlock/diplom";
 
 
 /**/
@@ -84,10 +80,6 @@ class page extends Component {
               description="Адрес, телефон и время работы"
             />
           </BlockNav>
-
-            {/*
-                <MessBlock/>
-            */}
           <ServiceBlock
             color="#333333"
             url="#pricing"
@@ -168,7 +160,7 @@ class page extends Component {
           />
 
               <TextBlock>
-                  <h1 className="title">
+                  <h1>
                       Помощь студентам
                   </h1>
                   <p className="par">
@@ -189,7 +181,7 @@ class page extends Component {
               </TextBlock>
 
               <TextBlock>
-                  <h1 className="title">
+                  <h1>
                       Какие мы даем гарантии
                   </h1>
                   <ul>

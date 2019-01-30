@@ -50,7 +50,7 @@ const page = () => (
       </BlockNav>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           О компании BeSmarter!
         </h1>
         <p className="par">

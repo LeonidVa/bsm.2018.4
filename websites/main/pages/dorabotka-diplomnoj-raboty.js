@@ -74,7 +74,7 @@ const page = () => (
       <ImageBlock imageSrc={require('static/images/block/dip-rabota.jpg')} altText="Доработка дипломной работы"/>
 
         <TextBlock>
-            <h1 className="title">
+            <h1>
                 Доработка дипломной работы
             </h1>
             <p className="par">

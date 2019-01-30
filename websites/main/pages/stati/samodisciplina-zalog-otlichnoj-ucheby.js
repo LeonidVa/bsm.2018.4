@@ -70,7 +70,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Самодисциплина – залог отличной учебы
         </h1>
         <p className="par">

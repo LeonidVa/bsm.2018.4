@@ -103,7 +103,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Гипотеза в дипломной работе (пример)
         </h1>
         <p className="par italic">

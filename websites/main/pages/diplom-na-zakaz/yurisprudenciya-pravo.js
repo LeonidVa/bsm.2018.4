@@ -71,7 +71,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Заказать дипломную работу по юриспруденции
         </h1>
         <ul style={{listStyle: 'none'}}>

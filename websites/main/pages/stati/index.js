@@ -64,7 +64,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Разные статьи о том, как подготовиться студенту!
         </h1>
         <ul style={{listStyle: 'none'}}>

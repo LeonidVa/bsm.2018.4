@@ -91,7 +91,7 @@ const page = () => (
       />
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Диплом MBA на заказ
         </h1>
         <ul>

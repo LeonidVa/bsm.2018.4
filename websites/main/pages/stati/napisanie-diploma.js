@@ -97,7 +97,7 @@ const page = () => (
 
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Написание диплома
         </h1>
         <p className="par">

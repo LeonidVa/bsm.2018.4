@@ -97,7 +97,7 @@ const page = () => (
 <MatZashGirl/>
 
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Как правильно заказать диплом?
         </h1>
         <p className="par">

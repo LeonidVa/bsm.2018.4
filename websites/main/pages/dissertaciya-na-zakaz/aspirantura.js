@@ -68,7 +68,7 @@ const page = () => (
 
       <a name="form-block" id="form-block"/>
       <TextBlock>
-        <h1 className="title">
+        <h1>
           Аспирантура
         </h1>
         <p className="par">

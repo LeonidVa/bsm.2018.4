@@ -21,19 +21,17 @@ export const BItem_Content = styled.div`
 `;
 
 export const BItemHovered = styled.div`
-  left: 0;
-  width: inherit;
-  height: inherit;
-  overflow: hidden;
-  &::-webkit-scrollbar {
-    width: 2px;
+  transition: opacity 0.33s cubic-bezier(0, 1, 1, 1);
+  position: absolute;
+  top: 90%;
+  max-height: 0;
+  width: 100%;
+  margin-top: -1px; /* есть узкая щель при рендеринге над этим блоком. если сдвинуть блок вверх она пропадает. */
+  &-fat {
+    font-weight: bold;
   }
-  &::-webkit-scrollbar-track {
-    width: 2px;
-  }
-  &::-webkit-scrollbar-thumb {
-    width: 2px;
-    background: red;
+  & * {
+    opacity: 0;
   }
 `;
 
@@ -122,6 +120,20 @@ export const BlockServiceListItem = styled.div`
   }
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   cursor: default;
+  &:hover {
+    z-index: 3;
+    animation: z-in 0.33s;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
+    & .b-item__hovered {
+      transition: all 0.15s cubic-bezier(0, 1, 1, 1);
+      max-height: 50em;
+      box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
+      & * {
+        transition: all 0.15s cubic-bezier(0, 1, 1, 1);
+        opacity: 1;
+      }
+    }
+  }
 `;
 
 export const BItemHoveredButton = styled.a`
@@ -143,5 +155,20 @@ export const BlockServiceListTitle = styled.div`
     transition: all 0.3s ease-in-out;
     width: 100%;
     left: 0;
+  }
+  display: block;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: .75em;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    left: 50%;
+    top: 100%;
   }
 `;

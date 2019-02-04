@@ -10,7 +10,6 @@ import {
   BItem_Content,
   BItem
 } from "./style.js"
-import './CardPopInfo.scss';
 
 class CardPopInfo extends Component {
   state = {

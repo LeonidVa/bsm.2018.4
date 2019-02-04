@@ -24,6 +24,11 @@ export const BlockServiceTop = styled.a`
     z-index: 3;
     transform: scale(1.03);
     transition: all 0.33s ease;
+    .block-service__top-title-underline{
+      transition: all 0.5s ease;
+      left: 0;
+      width: 100%; 
+    }
   }
 `;
 
@@ -139,6 +144,23 @@ export const BlockServiceList = styled.div`
       @media (max-width: 660px) {
         width: 100%;
       }
+    }
+  }
+  &-title {
+    display: block;
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    margin-bottom: .75em;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background-color: #ffffff;
+      left: 50%;
+      top: 100%;
     }
   }
 `;

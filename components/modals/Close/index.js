@@ -3,7 +3,7 @@ import{ СloseDivBlock }from "./style.js"
 
 class Close extends Component {
     render() {
-        return <СloseDivBlock  isClose = { this.props.inverse ?  true : false} onClick={ this.props.onClick }/>;
+        return <СloseDivBlock name="close" isClose = { this.props.inverse ?  true : false} onClick={ this.props.onClick }/>;
     }
 }
 

@@ -31,6 +31,13 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 14px;
     }
   }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: rgb(74,74,74);
+    line-height: 1.3;
+  }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {

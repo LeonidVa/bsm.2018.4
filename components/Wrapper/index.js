@@ -149,9 +149,8 @@ class Wrapper extends Component {
         //
         // Показываем сообщение о скидке
         if (diff > 60) {
-            this.state.exitPopupState.show();
-            document.removeEventListener('mousemove', this._mouseMoveCallback);
-            this.onSendForm();
+          this.state.exitPopupState.show();
+          document.removeEventListener('mousemove', this._mouseMoveCallback);
         }
     }
 

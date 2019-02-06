@@ -17,63 +17,29 @@
 
 ### Пример использования
 ```jsx
-<section className="block-quality">
-    <ul className="quality-list">
-        <li className="quality-list__item">
-            <div className="quality-list__inner">
-                <div className="quality-list__title-block">
-                    <img src="/static/images/slide-profits/6.svg" alt="" />
-                    <span className="quality-list__title">Высокое качество</span>
-                </div>
-                <p>
-                    100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
-                </p>
-            </div>
-        </li>
-        <li className="quality-list__item w50">
-            <div className="quality-list__inner">
-                <div className="quality-list__title-block">
-                    <img src="/static/images/slide-profits/6.svg" alt="" />
-                    <span className="quality-list__title">Высокое качество</span>
-                </div>
-                <p>
-                   50 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
-                </p>
-            </div>
-        </li>
-        <li className="quality-list__item w50">
-            <div className="quality-list__inner">
-                <div className="quality-list__title-block">
-                    <img src="/static/images/slide-profits/6.svg" alt="" />
-                    <span className="quality-list__title">Высокое качество</span>
-                </div>
-                <p>
-                   50 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
-                </p>
-            </div>
-        </li>
-        <li className="quality-list__item w33">
-            <a className="quality-list__inner" href="ya.ru">
-                <div className="quality-list__title-block">
-                    <img src="/static/images/slide-profits/6.svg" alt="" />
-                    <span className="quality-list__title">Высокое качество</span>
-                </div>
-                <p>
-                   33 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
-                </p>
-            </a>
-        </li>
-        <li className="quality-list__item w66">
-            <div className="quality-list__inner">
-                <div className="quality-list__title-block">
-                    <img src="/static/images/slide-profits/6.svg" alt="" />
-                    <span className="quality-list__title">Высокое качество</span>
-                </div>
-                <p>
-                   66 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!
-                </p>
-            </div>
-        </li>
-    </ul>
-</section>
+import QualityBlock from "components/common/QualityBlock/index.js"
+
+<QualityBlock 
+  img="/static/images/slide-profits/6.svg"
+  text="100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
+  title="Высокое качество"
+/>
+<QualityBlock 
+  img="/static/images/slide-profits/6.svg"
+  text="100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
+  title="Высокое качество"
+  Class="w33"
+/>
+<QualityBlock 
+  img="/static/images/slide-profits/6.svg"
+  text="100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
+  title="Высокое качество"
+  Class="w66"
+/>
+<QualityBlock 
+  img="/static/images/slide-profits/6.svg"
+  text="100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
+  title="Высокое качество"
+  Class="w50"
+/>
 ```

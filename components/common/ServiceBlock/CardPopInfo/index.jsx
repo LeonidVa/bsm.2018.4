@@ -11,6 +11,8 @@ import {
   BItem
 } from "./style.js"
 
+import './index.scss';
+
 class CardPopInfo extends Component {
   state = {
     isOpen: false
@@ -25,46 +27,46 @@ class CardPopInfo extends Component {
     const {title = "", text = "", url = "", description = []} = this.props;
 
     if (description.length > 0) {
-      let dsc = <BItemHoveredText className="b-item__hovered-text">{description}</BItemHoveredText>;
+      let dsc = <div className="b-item__hovered-text">{description}</div>;
       let btn = "";
       if (url !== "") {
           btn = (
-              <BItemHoveredButtomWrapper className="b-item__hovered-button-wrapper">
+              <div className="b-item__hovered-button-wrapper">
                   <Link href={url}>
-                      <BItemHoveredButton className="b-item__hovered-button">Кнопка</BItemHoveredButton>
+                      <a className="b-item__hovered-button">Кнопка</a>
                   </Link>
-              </BItemHoveredButtomWrapper>
+              </div>
           );
       }
       let hovered = (
-          <BItemHovered className="b-item__hovered">{dsc}{btn}</BItemHovered>
+          <div className="b-item__hovered">{dsc}{btn}</div>
       );
       return (
-        <BlockServiceListItem className={"block-service__list-item b-list-item" + (this.state.isOpen ? " open" : "")}>
-          <BItem className="b-item" onClick={this.handleClick}>
-            <BItem_Content className="b-item__content">
-              <BlockServiceListTitle className="block-service__list-title">{title}</BlockServiceListTitle>
+        <div className={"block-service__list-item b-list-item" + (this.state.isOpen ? " open" : "")}>
+          <div className="b-item" onClick={this.handleClick}>
+            <div className="b-item__content">
+              <div className="block-service__list-title">{title}</div>
               {text}
-            </BItem_Content>
+            </div>
             {hovered}
-          </BItem>
-        </BlockServiceListItem>
+          </div>
+        </div>
       );
     } else {
       let el = (
-          <BItem className="b-item">
-              <BItem_Content className="b-item__content">
-                  <BlockServiceListTitle className="block-service__list-title">{title}</BlockServiceListTitle>
+          <div className="b-item">
+              <div className="b-item__content">
+                  <div className="block-service__list-title">{title}</div>
                   {text}
-              </BItem_Content>
-          </BItem>
+              </div>
+          </div>
       );
       let elClass = "block-service__list-item b-list-item";
       if (url !== "") {
           elClass += " link";
           el = <Link href={url}>{el}</Link>;
       }
-        el = <BlockServiceListItem className={elClass}>{el}</BlockServiceListItem>;
+        el = <div className={elClass}>{el}</div>;
         return el;
     }
   }

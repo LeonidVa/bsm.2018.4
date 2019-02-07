@@ -5,6 +5,7 @@ import BlockNav from 'components/common/BlockNav';
 import NavRow from 'components/common/BlockNav/NavRow';
 import ProfitsBlockSlider from "components/common/ProfitsBlockSlider";
 import Form from "components/common/forms/Big";
+import FormsData from 'data/form/main';
 import ServiceBlock from "components/common/ServiceBlock";
 import MapBlock from 'components/common/MapBlock';
 import {ToggleCallPopup, ToggleQuestionPopup} from "components/modals/Call"
@@ -270,17 +271,7 @@ class page extends Component {
             title="Заказать помощь"
             redForm={true}
             buttonLabel="Отправить"
-            fields={[
-              { id: 1, label: 'Имя', name: 'name', type: 'text', placeholder: 'Ваше имя', required: true },
-              { id: 2, label: 'Телефон', name: 'phone', type: 'text', placeholder: 'Ваш телефон', required: true },
-              { id: 3, label: 'Почта', name: 'email', type: 'email', placeholder: 'email', required: false },
-              { id: 4, label: 'Тема', name: 'theme', type: 'text', placeholder: 'Тема работы', required: false },
-              { id: 5, label: 'Вид работы', name: 'worktype', type: 'text', placeholder: 'Укажите тип', required: false },
-              { id: 6, label: 'Предмет', name: 'discipline', type: 'text', placeholder: 'Предмет или дисциплина', required: false },
-              { id: 7, label: 'Срок', name: 'deadline', type: 'date', placeholder: 'Укажите срок', required: false },
-              { id: 9, label: 'Комментарии', name: 'comment', type: 'textarea', placeholder: 'Ваши комментарии', required: false },
-              { id: 10, label: 'Прикрепить Файл', name: 'file', type: 'file', placeholder: 'Добавить файл', required: false }
-            ]}
+            fields={FormsData}
           />
 
               <TextBlock>

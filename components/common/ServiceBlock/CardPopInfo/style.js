@@ -18,6 +18,9 @@ export const BItem_Content = styled.div`
   p { 
     font-size: 1rem; 
   }
+  @media (max-width: 660px) {
+    padding: 0.5em 0;
+  }
 `;
 
 export const BItemHovered = styled.div`

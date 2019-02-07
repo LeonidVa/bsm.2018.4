@@ -31,6 +31,11 @@ export const Button = styled.button`
   &:hover {
     background-color: #922d0e;
   }
+  @media (max-width: 660px) {
+    font-size: 0.75em;
+    height: 3rem;
+    width: 12rem;
+  }     
 `;
 
 export const FormSubmit = styled.form`
@@ -41,5 +46,7 @@ font-size: ${props => props.formfontsize || "2em"};
 width: 14.9em;
 @media (max-width: 545px) {
   width: 100%;
+  flex-direction: column;
+  align-items: start;
 }     
 `;

@@ -24,7 +24,7 @@ export const BlockServiceTop = styled.a`
     z-index: 3;
     transform: scale(1.03);
     transition: all 0.33s ease;
-    .block-service__top-title-underline{
+    .block-service__top-title-underline {
       transition: all 0.5s ease;
       left: 0;
       width: 100%; 

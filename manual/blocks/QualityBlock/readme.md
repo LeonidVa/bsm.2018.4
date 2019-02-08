@@ -20,26 +20,32 @@
 import QualityBlock from "components/common/QualityBlock/index.js"
 
 <QualityBlock 
-  img="/static/images/slide-profits/6.svg"
-  text="100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
-  title="Высокое качество"
-/>
-<QualityBlock 
-  img="/static/images/slide-profits/6.svg"
-  text="100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
-  title="Высокое качество"
-  Class="w33"
-/>
-<QualityBlock 
-  img="/static/images/slide-profits/6.svg"
-  text="100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
-  title="Высокое качество"
+  text={
+    <ul>
+      <li>Элемент 1</li>
+      <li>Элемент 2</li>
+    </ul>}
+  title={<b>Заголовок</b>}
+  path="/price"
   Class="w66"
+  imageBlock = {<img src="static/images/slide-profits/1.svg"/>}
 />
 <QualityBlock 
-  img="/static/images/slide-profits/6.svg"
-  text="100 Вы получите отлично написанную и правильно оформленную работу. Закажите доклад и пару слайдов. Вы уверены в своей курсовой!"
-  title="Высокое качество"
+  text={
+    <ul>
+      <li>Элемент 1</li>
+      <li>Элемент 2</li>
+    </ul>}
+  title={<b>Заголовок</b>}
+  path="/price"
+  Class="w33"
+  imageBlock = {<img src="static/images/slide-profits/1.svg"/>}
+/>
+<QualityBlock 
+  text="Текст"  
+  title="Заголовок"
+  path="/price"
   Class="w50"
+  imageBlock = {<img src="static/images/slide-profits/1.svg"/>}
 />
 ```

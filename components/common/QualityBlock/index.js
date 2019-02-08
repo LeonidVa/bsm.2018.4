@@ -5,22 +5,28 @@ import {
   QualityListInner,
   QualityListItem,
   QualityListTitleBlock,
-  BlockQualityQualityListTitle
+  BlockQualityQualityListTitle,
+  TitleLink
 } from './style.js'
+import Link from 'next/link';
 
 const QualityBlock = ({
   Class,
   image,
   title,
-  text
+  text,
+  path,
+  imageBlock
 }) => (
   <BlockQuality>
     <QualityList>
       <QualityListItem className={Class}>
         <QualityListInner>
           <QualityListTitleBlock>
-            <img src={image} alt="" />
-            <BlockQualityQualityListTitle>{title}</BlockQualityQualityListTitle>
+            <React.Fragment>
+            {imageBlock}
+            <Link href={path}><TitleLink><BlockQualityQualityListTitle>{title}</BlockQualityQualityListTitle></TitleLink></Link>
+            </React.Fragment>
           </QualityListTitleBlock>
           <p>
             {text}

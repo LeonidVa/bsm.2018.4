@@ -5,7 +5,6 @@ export const BlockQuality = styled.section`
   font-size: 1rem;
   background-color: #ffffff;
   max-width: 62em;
-  margin: 1.56em auto 0;
   position: relative;
   z-index: 1;
 `;
@@ -100,4 +99,10 @@ export const QualityListTitleBlock = styled.div`
 export const BlockQualityQualityListTitle = styled.span`
   line-height: normal;
   font-weight: bold;
+`;
+
+
+export const TitleLink = styled.a`
+  text-decoration:none;
+  cursor: pointer;
 `;

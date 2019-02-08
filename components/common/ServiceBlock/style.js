@@ -103,7 +103,6 @@ export const BlockServiceList = styled.div`
   color: #ffffff;
   text-decoration: none;
   position: relative;
-  margin-bottom: .75em;
   color: #ffffff;
   text-align: center;
   @media (max-width: 660px) {

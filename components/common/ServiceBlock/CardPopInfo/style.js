@@ -1,55 +1,33 @@
 import styled from 'styled-components'
 
-export const BItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  text-align: center;
-  position: relative;
-  @media (min-width: 661px){
-    min-height: 10rem;
-  }
-`;
-
-export const BItem_Content = styled.div`
-  position: relative;
-  p { 
-    font-size: 1rem; 
-  }
-  @media (max-width: 660px) {
-    padding: 0.5em 0;
-  }
-`;
-
-export const BItemHovered = styled.div`
-  transition: opacity 0.33s cubic-bezier(0, 1, 1, 1);
-  position: absolute;
-  top: 90%;
-  max-height: 0;
-  width: 100%;
-  margin-top: -1px; /* есть узкая щель при рендеринге над этим блоком. если сдвинуть блок вверх она пропадает. */
-  &-fat {
-    font-weight: bold;
-  }
-  & * {
-    opacity: 0;
-  }
-`;
-
 export const BItemHoveredText = styled.div`
   padding: 0 1rem 1rem;
+  @media (max-width: 660px) {
+    padding: 0 1rem 1rem;
+  }
 `;
 
-export const BItemHoveredButtomWrapper = styled.div`
+export const BItemHoveredButtonWrapper = styled.div`
   display: block;
   width: 100%;
   padding: 1em;
 `;
 
+export const BItemHoveredButton = styled.a`
+  background-color: white;
+  width: 100%;
+  @media (max-width: 660px) {
+    display: block;
+    padding: 0.5em 3em 0.7em;
+}
+  @media (min-width: 661px) {
+  display: inline-block;
+  padding: 0.4em 0 0.5em;
+  }
+`;
+
 export const BlockServiceListItem = styled.div`
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   cursor: default;
   display: block;
   text-decoration: none;
@@ -121,27 +99,92 @@ export const BlockServiceListItem = styled.div`
     flex-direction: column;
     justify-content: space-between;
   }
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  cursor: default;
-  &:hover {
-    z-index: 3;
-    animation: z-in 0.33s;
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
-    & .b-item__hovered {
-      transition: all 0.15s cubic-bezier(0, 1, 1, 1);
-      max-height: 50em;
-      box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
+  @media (max-width: 660px) {
+    &.open{
+      .b-item__hovered {
+        transition: all 0.5s ease;
+        max-height: 30em;
+      }
+    }
+  }
+  &.link { 
+    cursor: pointer; 
+  }
+  @media (max-width: 660px) {
+    .b-item__hovered {
+      box-shadow: none;
+      transition: all 0.33s ease;
+      max-height: 0;
+      &-text {
+        padding: 0 1rem 1rem;
+      }
+    }
+  }
+  @media (min-width: 661px) {
+    .b-item__hovered {
+      /* transition: all 0.33s ease-in;
+      отвечает за разворачивание description.
+      Варианты:
+      - all, height+opacity - разворачиваться, но это не очень красиво;
+      - только opacity - не разворачиваться, а просто появляться; */
+      transition: opacity 0.33s cubic-bezier(0, 1, 1, 1);
+      position: absolute;
+      top: 90%;
+      max-height: 0;
+      width: 100%;
+      margin-top: -1px;
+      &-fat {
+        font-weight: bold;
+      }
       & * {
+        opacity: 0;
+      }
+    }
+    &:hover {
+      z-index: 3;
+      animation: z-in 0.33s;
+      box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
+      & .b-item__hovered {
         transition: all 0.15s cubic-bezier(0, 1, 1, 1);
-        opacity: 1;
+        max-height: 50em;
+        box-shadow: 0 25px 50px -5px rgba(51, 51, 51, 0.5);
+        & * {
+          transition: all 0.15s cubic-bezier(0, 1, 1, 1);
+          opacity: 1;
+        }
       }
     }
   }
 `;
 
-export const BItemHoveredButton = styled.a`
-  background-color: white;
-  width: 100%;
+export const BItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  @media (min-width: 661px) {
+    min-height: 10rem;
+  }
+`;
+
+export const BItemContent = styled.div`
+  p {
+    font-size: 0.6em;
+  }
+  position: relative;
+  p { 
+    font-size: 1rem; 
+  }
+  @media (max-width: 660px) {
+    padding: 0.5em 0;
+  }
+  @media (min-width: 661px) {
+    padding: 0 1em;
+    transition: all 0.5s cubic-bezier(0, 1, 1, 1);
+  }
 `;
 
 export const BlockServiceListTitle = styled.div`

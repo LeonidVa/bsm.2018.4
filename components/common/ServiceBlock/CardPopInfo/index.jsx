@@ -10,7 +10,7 @@ import {
   BlockServiceListTitle,
   BItemhovered
 } from "./style.js"
-import './index.scss'
+
 
 class CardPopInfo extends Component {
   state = {

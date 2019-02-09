@@ -7,10 +7,10 @@ import {
   BlockServiceListItem,
   BItem,
   BItemContent,
-  BlockServiceListTitle
-
+  BlockServiceListTitle,
+  BItemhovered
 } from "./style.js"
-
+import './index.scss'
 
 class CardPopInfo extends Component {
   state = {
@@ -38,7 +38,7 @@ class CardPopInfo extends Component {
           );
       }
       let hovered = (
-          <div className="b-item__hovered">{dsc}{btn}</div>
+          <BItemhovered className="b-item__hovered">{dsc}{btn}</BItemhovered>
       );
       return (
         <BlockServiceListItem className={"block-service__list-item b-list-item" + (this.state.isOpen ? " open" : "")}>

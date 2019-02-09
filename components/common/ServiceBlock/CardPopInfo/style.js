@@ -155,6 +155,13 @@ export const BlockServiceListItem = styled.div`
       }
     }
   }
+  @media (min-width: 661px) {
+    .b-list-item {
+      z-index: 0;
+      animation: z-out 0.33s;
+      transition: all 0.33s cubic-bezier(0, 1, 1, 1);
+    }
+  }
 `;
 
 export const BItem = styled.div`
@@ -216,5 +223,34 @@ export const BlockServiceListTitle = styled.div`
     background-color: #ffffff;
     left: 50%;
     top: 100%;
+  }
+`;
+
+export const BItemhovered = styled.div`
+  left: 0;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 2px;
+    background: red;
+  }
+  &-text {
+    padding: 0 1rem 1rem;
+  }
+  &-button-wrapper {
+    display: block;
+    width: 100%;
+    padding: 1em;
+  }
+  &-button {
+    background-color: white;
+    width: 100%;
   }
 `;

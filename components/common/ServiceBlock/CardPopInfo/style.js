@@ -143,6 +143,7 @@ export const BlockServiceListItem = styled.div`
     &:hover {
       z-index: 3;
       animation: z-in 0.33s;
+      transition: all 0.33s ease;
       box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
       & .b-item__hovered {
         transition: all 0.15s cubic-bezier(0, 1, 1, 1);
@@ -161,6 +162,16 @@ export const BlockServiceListItem = styled.div`
       animation: z-out 0.33s;
       transition: all 0.33s cubic-bezier(0, 1, 1, 1);
     }
+  }
+
+  @keyframes z-in {
+    0% { z-index: 3; }
+    100% { z-index: 3; }
+  }
+
+  @keyframes z-out {
+    0% { z-index: 2; }
+    100% { z-index: 2; }
   }
 `;
 

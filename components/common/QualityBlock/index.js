@@ -12,15 +12,14 @@ import Link from 'next/link';
 
 const QualityBlock = ({
   Class,
-  image,
   title,
   text,
   path,
   imageBlock
 }) => (
-  <BlockQuality>
+  <BlockQuality className={Class}>
     <QualityList>
-      <QualityListItem className={Class}>
+      <QualityListItem>
         <QualityListInner>
           <QualityListTitleBlock>
             <React.Fragment>

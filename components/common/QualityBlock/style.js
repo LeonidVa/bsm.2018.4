@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 
 export const BlockQuality = styled.section`
+  &.w33 { width: 33.33333333%; }
+  &.w66 { width: 66.66666666%; }
+  &.w50 { width: 50%; }
   width: 100%;
   font-size: 1rem;
   background-color: #ffffff;
   max-width: 62em;
   position: relative;
   z-index: 1;
+  display: inline-block;
 `;
 
 export const QualityList = styled.ul`
@@ -43,9 +47,6 @@ export const QualityListInner = styled.div`
 `;
 
 export const QualityListItem = styled.li`
-  &.w33 { width: 33.33333333%; }
-  &.w66 { width: 66.66666666%; }
-  &.w50 { width: 50%; }
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #cfd8dc;
@@ -100,7 +101,6 @@ export const BlockQualityQualityListTitle = styled.span`
   line-height: normal;
   font-weight: bold;
 `;
-
 
 export const TitleLink = styled.a`
   text-decoration:none;

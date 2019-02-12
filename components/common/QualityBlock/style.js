@@ -119,10 +119,22 @@ export const QualityListTitleBlock = styled.div`
 export const BlockQualityQualityListTitle = styled.span`
   line-height: normal;
   font-weight: bold;
+
 `;
 
 
 export const TitleLink = styled.a`
   text-decoration:none;
   cursor: pointer;
+`;
+
+export const TitleDiv = styled.div`
+width: 100%;
+display: flex;
+justify-content: center;
+`;
+
+export const TitleBlock = styled.div`
+display: flex;
+align-items: center;
 `;

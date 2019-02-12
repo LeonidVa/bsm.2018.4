@@ -108,7 +108,7 @@ const page = () => (
                     <QualityBlock 
                         text= {
                         <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "56px", display: "flex", justifyContent:"space-between" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
                             <p>● Управление: проектами; персоналом; качеством; производством и поставками</p>
                             <p>● Финансовый, стратегический, антикризисный, инновационный, бренд- и риск- менеджмент</p>
                             <p>● Маркетинг. Маркетинговые исследования и анализ. PR, социальные сети</p>
@@ -118,15 +118,15 @@ const page = () => (
                         </div>
                         }
                         title="Менеджмент и маркетинг"
-                        path="https://besmarter.ru/diplom-na-zakaz/menedjment"
-                        imageBlock = {<img src="/static/images/QualityBlock/presentation.svg"/>}
+                        path="/diplom-na-zakaz/menedjment"
+                        imageBlock = {<img src="/static/images/QualityBlock/presentation.svg" style={{ width: "25%", height: "25%" }}/>}
                         Class="w50"
                     />
 
                     <QualityBlock 
                         text= {
                         <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "56px", display: "flex", justifyContent:"space-between" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
                             <p>● Теория и практика. Прикладная экономика. Экономика предприятия</p>
                             <p>● Микро- и макроэкономика. Экономика РФ и зарубежных стран</p>
                             <p>● Финансы и инвестиции. Ценные бумаги. Налоги и налогообложение</p>
@@ -137,8 +137,8 @@ const page = () => (
                         </div>
                         }
                         title="Экономика"
-                        path="https://besmarter.ru/diplom-na-zakaz/ekonomika"
-                        imageBlock = {<img src="/static/images/QualityBlock/benefits.svg"/>}
+                        path="/diplom-na-zakaz/ekonomika"
+                        imageBlock = {<img src="/static/images/QualityBlock/benefits.svg" style={{ width: "25%", height: "25%" }}/>}
                         Class="w50"
                     />
                     </div>
@@ -147,7 +147,7 @@ const page = () => (
                     <QualityBlock 
                         text= {
                         <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "56px", display: "flex", justifyContent:"space-between" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
                             <p>● Теория информатики, статистика, модели</p>
                             <p>● Разработка ПО. Сети. Системный анализ. Базы данных</p>
                             <p>● Решение прикладных задач. 1С. CRM. СУБД</p>
@@ -158,15 +158,15 @@ const page = () => (
                         </div>
                         }
                         title="Программирование"
-                        path="https://besmarter.ru/diplom-na-zakaz/programmirovanie"
-                        imageBlock = {<img src="/static/images/QualityBlock/worker.svg"/>}
+                        path="/diplom-na-zakaz/programmirovanie"
+                        imageBlock = {<img src="/static/images/QualityBlock/worker.svg" style={{ width: "25%", height: "25%" }}/>}
                         Class="w50"
                     />
 
                     <QualityBlock 
                         text= {
                         <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "56px", display: "flex", justifyContent:"space-between" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
                             <p>● Гражданское, уголовное, административное право</p>
                             <p>● Конституционное и международное право</p>
                             <p>● Актуальное правоприменение</p>
@@ -175,8 +175,8 @@ const page = () => (
                         </div>
                         }
                         title="Юриспруденция"
-                        path="https://besmarter.ru/diplom-na-zakaz/yurisprudenciya-pravo"
-                        imageBlock = {<img src="/static/images/QualityBlock/meeting.svg"/>}
+                        path="/diplom-na-zakaz/yurisprudenciya-pravo"
+                        imageBlock = {<img src="/static/images/QualityBlock/meeting.svg" style={{ width: "25%", height: "25%" }}/>}
                         Class="w50"
                     />
                 </div>
@@ -185,7 +185,7 @@ const page = () => (
                     <QualityBlock 
                         text= {
                         <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "56px", display: "flex", justifyContent:"space-between" }}> <div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}> <div>от 2 часов</div> <div>от 16 000 рублей</div></p>
                             <p>● Общая, прикладная, клиническая, возрастная, криминальная</p>
                             <p>● Общеизвестные и авторские методики, все школы</p>
                             <p>● Обработка экспериментальных данных. Корреляционный анализ</p>
@@ -194,15 +194,15 @@ const page = () => (
                         </div>
                         }
                         title="Психология"
-                        path="https://besmarter.ru/diplom-na-zakaz/psihologiya"
-                        imageBlock = {<img src="/static/images/QualityBlock/idea.svg"/>}
+                        path="/diplom-na-zakaz/psihologiya"
+                        imageBlock = {<img src="/static/images/QualityBlock/idea.svg" style={{ width: "25%", height: "25%" }}/>}
                         Class="w50"
                     />
 
                     <QualityBlock 
                         text= {
                         <div>
-                            <p className="up_string"  style={{ paddingTop: "56px", display: "flex", justifyContent:"space-between", width: "100%" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                            <p className="up_string"  style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between", width: "100%",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
                             <p>● Бухгалтерский учет, налоги и налогообложение</p>
                             <p>● Анализ и аудит</p>
                             <p>● Бюджетирование и управленческий учет</p>
@@ -211,8 +211,8 @@ const page = () => (
                         </div>
                         }
                         title="Бухгалтерский учет"
-                        path="https://besmarter.ru/diplom-na-zakaz/buhgalterskij-uchet"
-                        imageBlock = {<img src="/static/images/QualityBlock/planning.svg"/>}
+                        path="/diplom-na-zakaz/buhgalterskij-uchet"
+                        imageBlock = {<img src="/static/images/QualityBlock/planning.svg" style={{ width: "25%", height: "25%" }}/>}
                         Class="w50"
                     />
                 </div>

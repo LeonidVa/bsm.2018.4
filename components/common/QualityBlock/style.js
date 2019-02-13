@@ -122,7 +122,6 @@ export const BlockQualityQualityListTitle = styled.span`
 
 `;
 
-
 export const TitleLink = styled.a`
   text-decoration:none;
   cursor: pointer;

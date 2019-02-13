@@ -10,7 +10,6 @@ import Dropdown from 'react-dropdown';
 import Recaptcha from 'react-google-recaptcha';
 import DatePicker from 'components/common/DatePicker';
 import Fox from 'static/images/fox-circle.svg';
-import "./index.scss"
 import Close from 'components/modals/Close';
 import {
   BlockFormItem,

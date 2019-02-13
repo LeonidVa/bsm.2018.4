@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
 import {isMobile} from 'react-device-detect';
-import "./index.scss"
-import '../slick.scss'
+
 import {
     BlockSlider,
     BlockSliderSlide,

@@ -95,13 +95,22 @@ const page = () => (
             <FormEstimate/>
             <div style={{ width: "100%", maxWidth: "62em", margin: "1.56em auto 0" }}>
                 <QualityBlock 
-                text="Мы делаем работы отличного качества по множеству специальностей. Как нам это удается?
-                Секрет прост: по каждой из них мы после проверки отобрали лучших из лучших специалистов. В современном мире требования к работам всё выше и выше, объем специальной
-                литературы растет с каждым днем. Мы учитываем все тонкости и нюансы в каждой тематике. Мы в курсе всех новостей и изменений по вашей специальности.
-                Именно большое количество менеджеров и экспертов, работающих в нашей команде, позволяет быть настоящим профессионалом в узкой сфере знаний.
-                Мы помогли тысячам студентов. Поможем и вам! Звоните и приходите к нам!
-                Делаем работы по самым трудным специальностям, которые вы видите на этой странице, и по многим другим.
-                Не нашли свою специальность, &mdash; просто звоните нам, и все будет хорошо!"   
+                    text={
+                        <div style={{ textAlign: "center" }}>
+                            <div>
+                                Мы делаем работы отличного качества по множеству специальностей. Как нам это удается?
+                                Секрет прост: по каждой из них мы после проверки отобрали лучших из лучших специалистов. В современном мире требования к работам всё выше и выше, объем специальной
+                                литературы растет с каждым днем. Мы учитываем все тонкости и нюансы в каждой тематике. Мы в курсе всех новостей и изменений по вашей специальности.
+                                Именно большое количество менеджеров и экспертов, работающих в нашей команде, позволяет быть настоящим профессионалом в узкой сфере знаний.
+                                Мы помогли тысячам студентов. Поможем и вам! Звоните и приходите к нам!
+                            </div> 
+                            <br/>
+                            <div style={{ paddingTop: "10px" }}>
+                                Делаем работы по самым трудным специальностям, которые вы видите на этой странице, и по многим другим.
+                                Не нашли свою специальность, &mdash; просто звоните нам, и все будет хорошо!
+                            </div> 
+                        </div>
+                    }   
                 />
 
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
@@ -120,63 +129,78 @@ const page = () => (
                         title="Менеджмент и маркетинг"
                         path="/diplom-na-zakaz/menedjment"
                         imageBlock = {<img src="/static/images/QualityBlock/presentation.svg" style={{ width: "25%", height: "25%" }}/>}
-                        Class="w50"
+                        Class="w33"
                     />
 
                     <QualityBlock 
                         text= {
-                        <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
-                            <p>● Теория и практика. Прикладная экономика. Экономика предприятия</p>
-                            <p>● Микро- и макроэкономика. Экономика РФ и зарубежных стран</p>
-                            <p>● Финансы и инвестиции. Ценные бумаги. Налоги и налогообложение</p>
-                            <p>● Экономический анализ. Математические методы в экономике</p>
-                            <p>● Финансовые ресурсы предприятия. Бизнес-план</p>
-                            <p>● Экономические расчеты на примере реальной организации</p>
-                            <p>● Статистика, аналитика, рекомендации</p>
-                        </div>
+                            <div>
+                                <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                                <p>● Теория и практика. Прикладная экономика. Экономика предприятия</p>
+                                <p>● Микро- и макроэкономика. Экономика РФ и зарубежных стран</p>
+                                <p>● Финансы и инвестиции. Ценные бумаги. Налоги и налогообложение</p>
+                                <p>● Экономический анализ. Математические методы в экономике</p>
+                                <p>● Финансовые ресурсы предприятия. Бизнес-план</p>
+                                <p>● Экономические расчеты на примере реальной организации</p>
+                                <p>● Статистика, аналитика, рекомендации</p>
+                            </div>
                         }
                         title="Экономика"
                         path="/diplom-na-zakaz/ekonomika"
                         imageBlock = {<img src="/static/images/QualityBlock/benefits.svg" style={{ width: "25%", height: "25%" }}/>}
-                        Class="w50"
+                        Class="w33"
                     />
-                    </div>
-
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
                     <QualityBlock 
                         text= {
-                        <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
-                            <p>● Теория информатики, статистика, модели</p>
-                            <p>● Разработка ПО. Сети. Системный анализ. Базы данных</p>
-                            <p>● Решение прикладных задач. 1С. CRM. СУБД</p>
-                            <p>● Веб-программирование. Создание сайтов. Веб-дизайн</p>
-                            <p>● Блокчейн. ИИ</p>
-                            <p>● Проектирование, тестирование и отладка программ</p>
-                            <p>● Все языки программирования</p>
-                        </div>
+                            <div>
+                                <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                                <p>● Теория информатики, статистика, модели</p>
+                                <p>● Разработка ПО. Сети. Системный анализ. Базы данных</p>
+                                <p>● Решение прикладных задач. 1С. CRM. СУБД</p>
+                                <p>● Веб-программирование. Создание сайтов. Веб-дизайн</p>
+                                <p>● Блокчейн. ИИ</p>
+                                <p>● Проектирование, тестирование и отладка программ</p>
+                                <p>● Все языки программирования</p>
+                            </div>
                         }
                         title="Программирование"
                         path="/diplom-na-zakaz/programmirovanie"
                         imageBlock = {<img src="/static/images/QualityBlock/worker.svg" style={{ width: "25%", height: "25%" }}/>}
-                        Class="w50"
+                        Class="w33"
                     />
+                </div>
 
+                <div style={{ display: "flex", flexWrap: "wrap" }}>
                     <QualityBlock 
                         text= {
-                        <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
-                            <p>● Гражданское, уголовное, административное право</p>
-                            <p>● Конституционное и международное право</p>
-                            <p>● Актуальное правоприменение</p>
-                            <p>● Действующие нормативные акты и законы</p>
-                            <p>● Реальные примеры из судебной практики</p>
-                        </div>
+                            <div>
+                                <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                                <p>● Гражданское, уголовное, административное право</p>
+                                <p>● Конституционное и международное право</p>
+                                <p>● Актуальное правоприменение</p>
+                                <p>● Действующие нормативные акты и законы</p>
+                                <p>● Реальные примеры из судебной практики</p>
+                            </div>
                         }
                         title="Юриспруденция"
                         path="/diplom-na-zakaz/yurisprudenciya-pravo"
                         imageBlock = {<img src="/static/images/QualityBlock/meeting.svg" style={{ width: "25%", height: "25%" }}/>}
+                        Class="w50"
+                    />
+                    <QualityBlock 
+                        text= {
+                            <div>
+                                <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}> <div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                                <p>● Общая, прикладная, клиническая, возрастная, криминальная</p>
+                                <p>● Общеизвестные и авторские методики, все школы</p>
+                                <p>● Обработка экспериментальных данных. Корреляционный анализ</p>
+                                <p>● Любые возрастные и численные группы</p>
+                                <p>● Реальные экспериментальные данные</p>
+                            </div>
+                        }
+                        title="Психология"
+                        path="/diplom-na-zakaz/psihologiya"
+                        imageBlock = {<img src="/static/images/QualityBlock/idea.svg" style={{ width: "25%", height: "25%" }}/>}
                         Class="w50"
                     />
                 </div>
@@ -184,31 +208,31 @@ const page = () => (
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
                     <QualityBlock 
                         text= {
-                        <div>
-                            <p className="up_string" align="left" style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between",paddingBottom: "10px" }}> <div>от 2 часов</div> <div>от 16 000 рублей</div></p>
-                            <p>● Общая, прикладная, клиническая, возрастная, криминальная</p>
-                            <p>● Общеизвестные и авторские методики, все школы</p>
-                            <p>● Обработка экспериментальных данных. Корреляционный анализ</p>
-                            <p>● Любые возрастные и численные группы</p>
-                            <p>● Реальные экспериментальные данные</p>
-                        </div>
+                            <div>
+                                <p className="up_string"  style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between", width: "100%",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 14 000 рублей</div></p>
+                                <p>● Общая, возрастная, отраслевая</p>
+                                <p>● Дошкольная, школьная, высшей школы</p>
+                                <p>● Дефектология. Коррекционная педагогика</p>
+                                <p>● Методические указания и поурочные разработки</p>
+                                <p>● Различные методики, тестирование, практика и реальные примеры</p>
+                            </div>
                         }
-                        title="Психология"
-                        path="/diplom-na-zakaz/psihologiya"
-                        imageBlock = {<img src="/static/images/QualityBlock/idea.svg" style={{ width: "25%", height: "25%" }}/>}
+                        title="Педагогика"
+                        path="/diplom-na-zakaz/pedagogika"
+                        imageBlock = {<img src="/static/images/QualityBlock/businessman.svg" style={{ width: "25%", height: "25%" }}/>}
                         Class="w50"
                     />
-
+                    
                     <QualityBlock 
                         text= {
-                        <div>
-                            <p className="up_string"  style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between", width: "100%",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
-                            <p>● Бухгалтерский учет, налоги и налогообложение</p>
-                            <p>● Анализ и аудит</p>
-                            <p>● Бюджетирование и управленческий учет</p>
-                            <p>● Актуальная нормативно-законодательная база</p>
-                            <p>● Расчеты и балансы реальной организации</p>
-                        </div>
+                            <div>
+                                <p className="up_string"  style={{ paddingTop: "10px", display: "flex", justifyContent:"space-between", width: "100%",paddingBottom: "10px" }}><div>от 2 часов</div> <div>от 16 000 рублей</div></p>
+                                <p>● Бухгалтерский учет, налоги и налогообложение</p>
+                                <p>● Анализ и аудит</p>
+                                <p>● Бюджетирование и управленческий учет</p>
+                                <p>● Актуальная нормативно-законодательная база</p>
+                                <p>● Расчеты и балансы реальной организации</p>
+                            </div>
                         }
                         title="Бухгалтерский учет"
                         path="/diplom-na-zakaz/buhgalterskij-uchet"
